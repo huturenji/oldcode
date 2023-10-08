@@ -1,0 +1,39 @@
+@import '../../styles/variables.less';
+.authorize-container[cust-style]{
+    .authorize-confirm{
+        header{
+            background: url('./img/bg_mall_circle1.svg') left top no-repeat,
+            url('./img/bg_mall_circle2.svg') right bottom no-repeat,
+            linear-gradient(143deg,#53aefd 0%,#478aee 100%);
+            .icon{
+                background: url('./img/icon_mall_fuwushouquan.svg') left top no-repeat;
+                background-size: contain;
+            }
+        }
+    
+        .btn.confirm-btn[cust-style], .uri[cust-style]{
+            color: @font-blue;
+        }
+
+        .auth-detail-link{
+            .icon.checked[cust-style]{
+                background: url('./img/btn_common_radio_sel2.svg') 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    
+}
+.no-auth{
+    .content{
+        .btn[cust-style]{
+            background: @font-blue !important;  
+        }
+    }
+}
+
+.auth-disagree-confirm[cust-style]{
+    .weui-dialog__btn_primary{
+        color: @font-blue;
+    }
+}

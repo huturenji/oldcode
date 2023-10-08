@@ -1,0 +1,309 @@
+{
+    "result": {
+        "productCategoryList": [
+            {
+                "productCategoryId": 670,
+                "productParentCategoryId": 0,
+                "productCategoryName": "电脑、办公",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 12259,
+                "productParentCategoryId": 0,
+                "productCategoryName": "酒类",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 1672,
+                "productParentCategoryId": 0,
+                "productCategoryName": "礼品",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 14065,
+                "productParentCategoryId": 0,
+                "productCategoryName": "工业品",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 652,
+                "productParentCategoryId": 0,
+                "productCategoryName": "数码",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 15901,
+                "productParentCategoryId": 0,
+                "productCategoryName": "家庭清洁/纸品",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 1620,
+                "productParentCategoryId": 0,
+                "productCategoryName": "家居日用",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 737,
+                "productParentCategoryId": 0,
+                "productCategoryName": "家用电器",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 9987,
+                "productParentCategoryId": 0,
+                "productCategoryName": "手机通讯",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 9847,
+                "productParentCategoryId": 0,
+                "productCategoryName": "家具",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 9855,
+                "productParentCategoryId": 0,
+                "productCategoryName": "家装建材",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 6728,
+                "productParentCategoryId": 0,
+                "productCategoryName": "汽车用品",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 1315,
+                "productParentCategoryId": 0,
+                "productCategoryName": "服饰内衣",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 1316,
+                "productParentCategoryId": 0,
+                "productCategoryName": "美妆护肤",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 1318,
+                "productParentCategoryId": 0,
+                "productCategoryName": "运动户外",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 1319,
+                "productParentCategoryId": 0,
+                "productCategoryName": "母婴",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 1320,
+                "productParentCategoryId": 0,
+                "productCategoryName": "食品饮料",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 1713,
+                "productParentCategoryId": 0,
+                "productCategoryName": "图书",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 4053,
+                "productParentCategoryId": 0,
+                "productCategoryName": "文娱",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 5025,
+                "productParentCategoryId": 0,
+                "productCategoryName": "钟表",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 5272,
+                "productParentCategoryId": 0,
+                "productCategoryName": "数字内容",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 6144,
+                "productParentCategoryId": 0,
+                "productCategoryName": "珠宝首饰",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 6196,
+                "productParentCategoryId": 0,
+                "productCategoryName": "厨具",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 6233,
+                "productParentCategoryId": 0,
+                "productCategoryName": "玩具乐器",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 6994,
+                "productParentCategoryId": 0,
+                "productCategoryName": "宠物生活",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 9192,
+                "productParentCategoryId": 0,
+                "productCategoryName": "医药保健",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 11729,
+                "productParentCategoryId": 0,
+                "productCategoryName": "鞋靴",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 12218,
+                "productParentCategoryId": 0,
+                "productCategoryName": "生鲜",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 12367,
+                "productParentCategoryId": 0,
+                "productCategoryName": "团购",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 12379,
+                "productParentCategoryId": 0,
+                "productCategoryName": "整车",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 12473,
+                "productParentCategoryId": 0,
+                "productCategoryName": "农资园艺",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 13314,
+                "productParentCategoryId": 0,
+                "productCategoryName": "处方药",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 13678,
+                "productParentCategoryId": 0,
+                "productCategoryName": "教育培训",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 13765,
+                "productParentCategoryId": 0,
+                "productCategoryName": "二手商品",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 13887,
+                "productParentCategoryId": 0,
+                "productCategoryName": "邮币",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 13996,
+                "productParentCategoryId": 0,
+                "productCategoryName": "IP",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 15083,
+                "productParentCategoryId": 0,
+                "productCategoryName": "房地产",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 15126,
+                "productParentCategoryId": 0,
+                "productCategoryName": "艺术品",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 15248,
+                "productParentCategoryId": 0,
+                "productCategoryName": "家纺",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 15980,
+                "productParentCategoryId": 0,
+                "productCategoryName": "京东服务",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 16750,
+                "productParentCategoryId": 0,
+                "productCategoryName": "个人护理",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 17329,
+                "productParentCategoryId": 0,
+                "productCategoryName": "箱包皮具",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            },
+            {
+                "productCategoryId": 18528,
+                "productParentCategoryId": 0,
+                "productCategoryName": "非遗",
+                "productCategoryType": 0,
+                "productChildrenCategories": null
+            }
+        ]
+    },
+    "resultMessage": "执行成功",
+    "resultCode": 0
+}
