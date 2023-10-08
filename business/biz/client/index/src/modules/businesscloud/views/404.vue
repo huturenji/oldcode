@@ -1,0 +1,22 @@
+<template>
+    <div>
+      <emptyPage tips='页面不见了'/>
+    </div>
+</template>
+<script>
+  import emptyPage from 'common/components/base/emptyPage.vue';
+  export default {
+    components: {
+      emptyPage
+    },
+    data: function () {
+    	return {}
+    },
+    created: function () {},
+    mounted: function () {},
+	  activated: function () {},
+    deactivated: function () {},
+    watch: {},
+    methods: {}
+  }
+</script>

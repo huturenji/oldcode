@@ -1,0 +1,16 @@
+{
+    "bslService": "https://bplussit.sinosun.com:18380",
+    "management": {
+        "default_bsl_switch": true,
+        "default_encryption_switch": true,
+        "sm2pubkey": "23C0F8DCD02606990A6B5C6F363D0B19870C2197B3885026DA704D5E60C60F5799C077E5A9EBAE30822B4E458FB28A0BDE539EA49ABE44963D9C12AF8B6B8DB0",
+        "kid": "ea1a8c40a3ea44e9b6e4b8a642637408",
+        "publicCloud": true
+    },
+    "app": {
+        "default_bsl_switch": false,
+        "default_encryption_switch": false,
+        "sm2pubkey": "23C0F8DCD02606990A6B5C6F363D0B19870C2197B3885026DA704D5E60C60F5799C077E5A9EBAE30822B4E458FB28A0BDE539EA49ABE44963D9C12AF8B6B8DB0",
+        "kid": "ea1a8c40a3ea44e9b6e4b8a642637408"
+    }
+}

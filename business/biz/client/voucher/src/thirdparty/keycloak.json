@@ -1,0 +1,8 @@
+{
+    "realm": "bplusdev",
+    "auth-server-url": "https://bplusdev.sinosun.com:18580/auth",
+    "ssl-required": "none",
+    "resource": "MALLBBCG2_member",
+    "public-client": true,
+    "confidential-port": 0
+  }

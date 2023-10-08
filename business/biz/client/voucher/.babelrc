@@ -1,0 +1,34 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "modules": false,
+                "corejs": 3,
+                "targets": {
+                  "browsers": [
+                    "> 1%",
+                    "last 2 versions",
+                    "not ie <= 8"
+                  ]
+                }
+              }
+        ]
+    ],
+  "plugins": [
+      "@babel/plugin-proposal-optional-chaining",
+      [
+        "@babel/plugin-transform-runtime",
+        {
+            "helper": false,
+            "corejs": 3 // 指定 runtime-corejs 的版本，目前有 2 3 两个版本
+        }
+    ]
+  ],
+  "env": {
+    "dev": {
+      "presets": ["env", "stage-2"],
+      "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
+    }
+  }
+}

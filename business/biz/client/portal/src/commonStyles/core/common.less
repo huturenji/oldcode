@@ -1,0 +1,332 @@
+@import '../themes/default.less';
+@import './normalize.less';
+@import '../mixins/mixinsStyle.less';
+@import '~themes/default/styles/authorization/index.less';
+[class$="-btn"]{
+    cursor: pointer;
+}
+
+//重写confirm弹窗的样式
+.weui-dialog{
+    border-radius: .2rem !important;
+    
+    //标题部分
+    .weui-dialog__hd{
+        .weui-dialog__title{
+            font-weight: 700;
+            font-size: .32rem;
+        }
+    }
+
+    //内容部分
+    .weui-dialog__bd{
+        font-size: .3rem;
+        color: @text-color;
+        line-height: .42rem;        
+    }
+
+    //按钮部分
+    .weui-dialog__ft{
+        height: .92rem;
+        line-height: .92rem;
+        font-size: .32rem;
+        cursor: pointer;
+        .weui-dialog__btn_primary{
+            color: @theme-color !important;
+            &:hover{
+                opacity: .4;;
+            }
+        }
+        .weui-dialog__btn_default{
+            color: @third-text-color;
+            &:hover{
+                opacity: .4;;
+            }
+        }
+    }
+}
+
+
+.num-font{
+    font-family: 'Alibaba Font', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', '宋体', Tahoma, Arial, Helvetica, STHeiti, sans-serif;
+}
+
+.icon-btn{
+    cursor: pointer;
+    &:active{
+        opacity: .4;
+    }
+}
+
+.normal-btn{
+    cursor: pointer;
+    &:active{
+        box-shadow: 100rem 100rem 0 rgba(0,0,0,0.1) inset;
+    }
+}
+
+.red-btn{
+    cursor: pointer;
+    &:active{
+        background: @theme-color!important;
+        background-color: @theme-color!important;
+        color: #fff!important;
+    }
+}
+
+.rmb{
+    font-family:Arial;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    &:before,&:after{
+        clear: both;
+        content:'';
+        display: block;
+        overflow: hidden;
+        line-height: 0px;
+        height: 0px;
+        zoom: 1;
+    }
+}
+
+.body-noscroll .child-view {
+    overflow: hidden;
+}
+.body-noscroll body {
+    position: relative;
+}
+.no-wrap{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 追加这一行代码 */
+}
+
+.none-select{
+    user-select: none;
+}
+
+.can-select {
+    user-select: initial;
+}
+
+.tb{
+    display: table;
+    width: 100%;
+    .cell{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .min{
+        display: table-cell;
+        width: 1%;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+    .max{
+        display: table-cell;
+        width: 100%;
+        vertical-align: middle;
+    }
+}
+
+.cursorp{
+    cursor: pointer;
+}
+
+//页面切换动画
+.slide-right-enter {
+    opacity: 0;
+    transition: all .25s;
+    transform: translate(-100%, 0);
+}
+
+.slide-right-leave-active {
+    opacity: 0;
+    transition: all .25s;
+    /*transform: translate(100%, 0);*/
+}
+
+.slide-left-enter {
+    opacity: 0;
+    transition: all .25s;
+    transform: translate(100%, 0);
+}
+
+.slide-left-leave-active {
+    opacity: 0;
+    transition: all .25s;
+    /*transform: translate(-100%, 0);*/
+}
+
+.slide-left-enter-active, .slide-right-enter-active{
+    transition: all .25s;
+}
+
+//child-view基础样式
+.child-view {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: @background-color;
+}
+/*手机端不显示滚动条*/
+::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (min-width: @screen-sm) {
+    body .child-view {
+        width: 100%;    
+        left: 0 !important;    
+    }
+    body .fixed-dom-part {
+        width: 100%;    
+        left: 0 !important;    
+    }
+    body{ 
+        .flex-box();
+        .justify-content(center);
+        width: 100%;
+        height: 100%;
+    }
+    body>div:first-of-type{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    body>.v-transfer-dom{
+        &>.pcDialog,&>.vux-popup-dialog,&>.bottomButWrap,&>.description-container,&>.btn-group,&>.price-detail-modal,&>.bottomBar,&>.hotelImg,&>.orderBottomButWrap,&>.btn-group-page,&>.bottomWrapUserList,&>.contact-bp,&>.btn-endorse{
+            width: 100%;    
+            left: 0 !important;
+        }
+    }
+    .pcDialog{
+        width: 100%;    
+        left: 0 !important;         
+    }
+    /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+    ::-webkit-scrollbar{
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 10px;
+    }
+    /*定义滚动条的轨道，内阴影及圆角*/
+    ::-webkit-scrollbar-track{
+        background-color: #fff;
+    }
+    /*定义滑块，内阴影及圆角*/
+    ::-webkit-scrollbar-thumb{
+        width: 7px;
+        height: 7px;
+        border-radius: 10px;
+        background-color: #cccccc;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: #969696;
+    }
+}
+@media screen and (min-width: @screen-lg) {
+    .child-view{
+        right: initial;
+        transition:none;
+    }
+    body .child-view {
+        width: @screen-lg !important;    
+        left: calc(~'(100vw - 960px) / 2') !important;
+    }
+    body .fixed-dom-part {
+        width: @screen-lg !important;    
+        left: calc(~'(100vw - 960px) / 2') !important;
+    }
+    body>div:first-of-type{
+        width: @screen-lg;
+        margin: 0 auto;
+    }
+    body>.v-transfer-dom{
+        &>.pcDialog,&>.vux-popup-dialog,&>.bottomButWrap,&>.description-container,&>.btn-group,&>.price-detail-modal,&>.bottomBar,&>.hotelImg,&>.orderBottomButWrap,&>.btn-group-page,&>.bottomWrapUserList,&>.contact-bp,&>.btn-endorse{
+            width: @screen-lg !important;    
+            left: calc(~'(100vw - 960px) / 2') !important;
+        }
+    }
+    .pcDialog{
+        width: @screen-lg !important;    
+        left: calc(~'(100vw - 960px) / 2') !important;   
+    }
+}
+
+.vux-dialog-enter-active,
+.vux-dialog-leave-active {
+  opacity: 0!important;
+  transition-duration: 0s!important;
+  animation-duration: 0s!important;
+  transform: translate(0%, 0%) scale(1) !important;
+}
+.vux-dialog-leave-active {
+  opacity: 0!important;
+  transition-duration: 0s!important;
+  animation-duration: 0s!important;
+  //transform: translate(0%, 0%) scale(1) !important;
+  }
+
+input::-webkit-input-placeholder{
+    color:@placeholder-color;
+  }
+  input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:@placeholder-color;
+  }
+  input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:@placeholder-color;
+  }
+  input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:@placeholder-color;
+  }
+/*
+* created by thomas at 2019/10/24.
+*/
+@-webkit-keyframes submitLoading {
+    0% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+              transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+              transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+  @keyframes submitLoading {
+    0% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+              transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+              transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+
+
+  //TODO 临时覆盖样式
+  .bis-dialog{
+    border-radius: .2rem !important;
+    .bis-dialog__bd{
+        font-size: .28rem !important;
+    }
+    .bis-dialog__ft{
+        .bis-btn_primary{
+            font-size: .3rem !important;
+            color: @price-color !important;
+        }
+    }
+  }

@@ -1,0 +1,1 @@
+(window.webpackJsonpsinosdk=window.webpackJsonpsinosdk||[]).push([[7],{196:function(n,i,t){"use strict";t.r(i);var u=t(9);t(3);i.default={BRIDGE_CODE:"5",LAUNCH_PRIORITY:[{type:"url",func:u.a.LAUNCH_FUNC.APP},{type:"url",func:u.a.LAUNCH_FUNC.H5}],SHARE_LINK:{deconstruction:function(n){return{productName:n.substring(n.indexOf("「")+1,n.indexOf("」")),originalText:n}}}}}}]);
