@@ -1,0 +1,52 @@
+.goods_info{
+    .goods_detail{
+      // height: 80px;
+      margin-left: 10px;
+      flex: 1;
+    }
+    .goods_img{
+      width:80px;
+      height:80px;
+      background:rgba(248,248,248,1);
+      border:1px solid rgba(226,229,246,1);
+      border-radius:3px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .goods_name{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /*! autoprefixer: off */
+      -webkit-box-orient: vertical;
+      word-break: break-word;
+      color:#333;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: left;
+      height: 34px;
+      flex-shrink: 0;
+    }
+    .goods_brief{
+      color: #666;
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: left;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  .text{
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  .p20{
+    :global .ant-modal-confirm-body-wrapper{
+      padding: 20px;
+    }
+  }

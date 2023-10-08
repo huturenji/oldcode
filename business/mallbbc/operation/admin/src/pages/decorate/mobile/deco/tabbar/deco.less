@@ -1,0 +1,138 @@
+@import '~antd/lib/style/themes/default.less';
+
+.form_part {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  .form_tittle {
+    color: #343434;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+}
+.wrap_box{
+  display: flex;
+}
+ 
+.center_wrap {
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  background: #ccc;
+  padding: 10px;
+  text-align: center;
+  .add_btn{
+    position: absolute;
+    left: 15px;
+    bottom: 80px;
+    padding: 2px 8px;
+    background: #FC701E;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  .tab_tips{
+    position: absolute;
+    left: 95px;
+    bottom: 80px;
+  }
+
+  .center_scroller {
+    // min-height: 600px;
+    height: 100%;
+    background: #F8F8F8;
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-between;
+    .tabbar{
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .tabbar_item{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .status_bar{
+    width: 375px;
+    height: 50px;
+  }
+
+}
+
+.right_wrap {
+  width: 650px;
+  height: 550px;
+  margin: 0 10px 0 10px;
+  .r_title {
+    padding: 10px 20px;
+    background: #f8f8f8;
+
+    .r_title_left_border {
+      display: inline-block;
+      width: 4px;
+      height: 14px;
+      background: #397ED3;
+    }
+
+    .r_title_text {
+      color: #FC701E;
+      font-size: 16px;
+      display: inline-block;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+  .two_part{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 17px;
+  }
+  .sub_part {
+    padding: 4px 0 4px;
+    // border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+
+    .subtitle {
+      color: #343434;
+      font-size: 14px;
+      margin-right: 10px;
+      // line-height: 40px;
+    }
+    .subimg{
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .tab_detail{
+    position: relative;
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    .tab_tittle{color: #222;font-size: 18px;}
+    .del_btn{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.color_picker_wrap {
+  position: absolute;
+  z-index: 2;
+
+  .color_picker_mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

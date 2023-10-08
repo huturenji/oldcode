@@ -1,0 +1,258 @@
+// add 样式
+.switch_radio{
+  margin-left: 150px !important;
+}
+
+.send_item{
+  width: 200px;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  .left{
+    flex: 1;
+  }
+  .right{
+    width: 20px;
+    color: #ff7e28;
+  }
+}
+
+.send_item:hover{
+  background: #FFFAF7;
+}
+
+.reselect{
+  cursor: pointer;
+  color:#ff7e28;
+  padding-left: 25px;
+}
+
+.add_day_title{
+  margin-bottom: 6px;
+  padding: 2px;
+  font-size: 14px;
+  color: #888;
+  width: 450px;
+  background: linear-gradient(to right,#fdece2,#FFFAF7,#fff);
+  display: flex;
+  align-items: center;
+  .title_left{
+    flex: 1;
+  }
+  .title_right{
+    width: 20px;
+    color: #e2211c;
+    display: none;
+  }
+}
+
+.add_day_title:hover{
+  .title_right{
+    display: block;
+  }
+}
+
+.label{
+  font-size: 12px;
+  color: #999;
+  margin-right: 10px;
+}
+
+.input_number{
+  width: 160px !important;
+  position: relative;
+  top:-1px
+}
+
+.extra_label{
+  width:90px;
+  font-size:12px;
+  color:#999;
+  margin-top:4px
+}
+
+// view 样式
+
+.view_item{
+  width: 400px;
+  margin-top: 8px;
+}
+
+.everyday-sign-head,
+.ladder-sign-head{
+  background-color: #FFFAF7;
+  border-color: #F3F3F3;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+.sign-name{
+  color: #222;
+  font-size: 15px;
+}
+.sign-summary{
+  color: #999;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.everyday-sign-body, 
+.ladder-sign-body{
+  border: 1px solid #F2F2F2;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px;
+}
+.coupon-body{
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  .img_coupon{
+    width: 40px;
+    height: 40px;
+    background-image: url("@/assets/img/marketing/promotion/sign_manage/voucher.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: heart 3s linear infinite;
+  }
+  .img_redpacket{
+    width: 40px;
+    height: 40px;
+    background-image: url("@/assets/img/marketing/promotion/sign_manage/redpack.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: shake 3s linear infinite;
+  }
+  .img_integral{
+    width: 40px;
+    height: 40px;
+    background-image: url("@/assets/img/marketing/promotion/sign_manage/integral.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: shake 3s linear infinite;
+  }
+  .name{
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    flex: 1;
+  }
+}
+.rank{
+  padding: 6px 0px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.send_name{
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height:60px ;
+  padding: 10px;
+  border-radius: 5px;
+  .img_coupon{
+    width: 40px;
+    height: 40px;
+    background-image: url("@/assets/img/marketing/promotion/sign_manage/voucher.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: heart 3s linear infinite;
+  }
+  .img_redpacket{
+    width: 40px;
+    height: 40px;
+    background-image: url("@/assets/img/marketing/promotion/sign_manage/redpack.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: shake 3s linear infinite;
+  }
+  .name{
+    flex: 1;
+    margin-left: 8px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+  }
+}
+.coupon_bg{
+  background-image: linear-gradient(160deg, #ffce00de 20%,#ff8b00 80%);
+}
+.redpacket_bg{
+  background-image: linear-gradient(160deg, #fdb586de 20%,#f8734e 80%);
+}
+
+@keyframes shake {
+
+  70%, 80% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+
+  65%,
+  85% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes shakeX {
+
+  70%, 80% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+
+  65%,
+  85% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes heart {
+
+  70%, 80% {
+    transform: scale(1.08);
+  }
+  75% {
+    transform: scale(0.92);
+  }
+
+  65%,
+  85% {
+    transform: scale(1);
+  }
+}
+
+// view 模态框
+.user_sign{
+  padding: 12px 12px 24px 12px;
+}
+.user_info{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  .info_item{
+    color: #999;
+    margin-right: 100px;
+  }
+  .scan_item{
+    color: #222
+  }
+
+  @keyframes move{
+    0% {
+      clip-path: ellipse(18px 18px at 0% 50%);
+    }
+    to {
+      clip-path: ellipse(18px 18px at 200% 50%);
+    }
+  }
+
+
+}

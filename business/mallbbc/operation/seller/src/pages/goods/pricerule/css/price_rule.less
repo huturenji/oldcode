@@ -1,0 +1,55 @@
+.price_rule_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price_rule_tips {
+  display: flex;
+  color: #555;
+  font-size: 13px;
+  border: 1px solid #f2f2f2;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 5px 0;
+}
+
+.price_rule_add_form {
+  color: #555;
+  font-size: 13px;
+  .item{
+    padding-top: 15px;
+    .left{
+      width: 200px;
+      height: 32px;
+      line-height: 32px;
+      text-align: right;
+      padding-right: 20px;
+      font-size: 13px;
+    }
+    .right{
+      .reset_sel{
+        font-size: 13px;
+        cursor: pointer;
+        color: #FF711E;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+.text_no_wrap{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.p20{
+  :global .ant-modal-confirm-body-wrapper{
+    padding: 20px;
+  }
+}
+
+.Popover{
+  max-width: 800px;
+  max-height: 600px;
+  overflow-y: auto;
+  word-break: break-all 
+}

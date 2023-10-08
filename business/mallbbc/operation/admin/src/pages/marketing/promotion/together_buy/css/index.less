@@ -1,0 +1,41 @@
+.date_box {
+
+    .date_group {
+        padding-right: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 88px);
+        // justify-content: center;
+    }
+
+    .date_item {
+        width: 88px;
+        height: 22px;
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        text-align: center;
+        line-height: 22px;
+        margin-bottom: 10px;
+        box-sizing: content-box;
+        cursor: pointer;
+
+        &:last-child {
+            position: relative;
+        }
+
+        .item_icon {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 1px;
+            right: -30px;
+
+        }
+    }
+
+    .date_item_check {
+        position: relative;
+        z-index: 2;
+        color: #fd6918;
+        border-color: #fd6918 !important;
+    }
+}

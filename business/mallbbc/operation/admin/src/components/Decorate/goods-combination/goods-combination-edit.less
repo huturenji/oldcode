@@ -1,0 +1,196 @@
+
+.editPanelTitle{
+    padding: 5px 0;
+    font-weight: bold;
+}
+.item_box {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #222;
+    width: 500px;
+    &:last-child {
+        margin-bottom: 200px;
+    }
+}
+.close_button{
+    position: absolute;
+    top:-8px;
+    right: -8px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.good_item_wrapper{
+    width: 100%;
+    height: auto;
+    // overflow-y: scroll;
+
+    .good_Item{
+        width:100%;
+        height: 124px;
+        display: flex;
+        padding: 12px 0;
+        margin-bottom: 19px;
+        background: #f8f8f8;
+
+        .good_image{
+            width: 100px;
+            height: 100px;
+        }
+
+        .good_info{
+            width: 230px;
+            height: 100px;
+            font-size: 14px;
+            padding-left: 12px;
+
+            .good_name{
+                line-height: 16px;
+                display: -webkit-box; // 特别显示模式
+                -webkit-box-orient: vertical;// 盒子中内容竖直排列
+                /* autoprefixer: off */
+                -webkit-line-clamp: 2; // 只显示两行
+                /*autoprefixer: on */
+                overflow: hidden; // 溢出内容隐藏
+            }
+
+            .good_price{
+                color: #F5222D;
+            }
+
+            .btn_wrapper{
+                button{
+                    width: 68px;
+                    height: 28px;
+                    line-height: 28px;
+                    font-size: 13px;
+                    border: 1px solid#FF7E28;
+                    color:#FF7E28;
+                    border-radius: 4px;
+                    background-color: #fff;
+                }
+            }
+        }
+
+    }
+
+    ::v-deep .ant-upload {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.icon_style_wrapper{
+
+    .icon_type_wrapper{
+        width: 100%;
+        font-size: 12px;
+        .type_group{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .icon_type{
+                width: 25%;
+            }
+
+        }       
+    }
+
+}
+// 公共配置块样式
+.common_setting_wrapper{
+    margin-bottom: 12px;
+    margin-right: 12px;
+    
+    .setting_title{
+        color: #555555;
+        font-size: 12px;
+        height: 32px;
+        line-height: 32px;    
+    }
+
+    .setting_input{
+        width: 50px;
+        margin-left: 5px;
+    }
+    
+}
+.common_setting_wrapper_box {
+    display: flex;
+}
+
+
+.show_symbol{
+    padding-left: 3px;
+    display: flex;
+    margin-bottom: 12px;
+}
+.symbol_setting {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon_content_wrapper{
+    .icon_text{
+        width: 150px;
+    }
+}
+
+.font_style_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.price_color_wrapper{
+    height: 90px;
+}
+
+.price_style_title{
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    margin:0 5px;
+}
+
+// 颜色拾色器
+.fzx_color_show {
+    margin-left: 5px;
+    .show_color {
+      display     : inline-block;
+      padding     : 5px;
+      width       : 50px;
+      height      : 30px;
+      border      : 1px solid #eee;
+      line-height : 0;
+      margin-right: 10px;
+      cursor      : pointer;
+    }
+
+    span {
+      display: inline-block;
+      width  : 100%;
+      height : 100%;
+    }
+}
+
+// 颜色选择面板区域样式
+.color_picker_wrap {
+    position: absolute;
+    z-index : 2;
+
+    .color_picker_mask {
+      position: fixed;
+      top     : -100px;
+      right   : 0;
+      bottom  : 0;
+      left    : 0;
+    }
+}
+
+.slider_style{
+    width: 200px;
+    margin: 0 10px;
+}

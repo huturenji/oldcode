@@ -1,0 +1,118 @@
+.right_nav {
+  position: fixed;
+  top: 20vh;
+  right: 10px;
+  width:120px;
+  background:rgba(255,255,255,1);
+  box-shadow:0 0 15px 0 rgba(153,153,153,0.15);
+  .nav_title{
+    height:38px;
+    line-height: 38px;
+    width: 100%;
+    display: inline-block;
+    background:rgba(236,245,255,1);
+    text-align:center;
+    color: #08A9B7;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .nav_item{
+    color: #999;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 9px 35px 9px 26px;
+    width:111px;
+    height:30px;
+    line-height: 12px;
+    background:#fff;
+    border-radius:15px 0 0 15px;
+    display: block;
+    margin: 10px 0 10px 9px;
+  }
+  .nav_item:hover,.nav_item.nav_sel{
+    color: #333;
+    background:rgba(65,157,253,.1);
+  }
+}
+
+.goods_detail_body{
+  border: 1px solid #F2F2F2;
+  padding: 15px;
+}
+
+.goods_info{
+  .goods_detail{
+    height: 80px;
+    margin-left: 10px;
+    flex: 1;
+  }
+  .goods_img{
+    width:80px;
+    height:80px;
+    background:rgba(248,248,248,1);
+    border:1px solid rgba(226,229,246,1);
+    border-radius:3px;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .goods_name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+    color:#333;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    height: 34px;
+    flex-shrink: 0;
+  }
+  .goods_brief{
+    color: #666;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.line_clamp2{
+  font-family: PingFangSC-Light;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-align: left;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /*! autoprefixer: on */
+}
+
+:global .move-table{
+  .ant-table-scroll ::-webkit-scrollbar{
+    display: block;
+  }
+  .ant-table-body {
+    overflow-y: scroll !important;
+  }
+}
+
+.sku_name_box{
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid #eee;
+   padding: 6px 0px
+}
+.sku_name_list{
+  flex: 1;
+  height: 32px;
+}

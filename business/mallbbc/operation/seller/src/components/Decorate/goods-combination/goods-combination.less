@@ -1,0 +1,138 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    
+    .good_item {
+        position:relative;
+        font-size: 14px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+    .good_box {
+        flex: 1;
+    }
+
+    .no_img_good{
+        background-image:url('@/assets/img/decorate/goodscombination/img_background.png');
+    }
+    .price_wrapper{
+        position: absolute;
+    
+        .good_item_origin_price {   
+            text-decoration: line-through;
+        }
+
+    }
+
+    .oblique_icon_wrapper{
+        width: 187px;
+        height: 187px;
+        position: absolute;
+        overflow: hidden;
+    }
+    
+    // 斜标
+    .oblique_icon_common_style {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        width:300px;
+        height:66px;
+        line-height: 66px;
+        background-color:red;
+        text-align:center;
+        color:white;
+        font-weight:bold;
+        font-size: 55px;
+        transform-origin:bottom center;
+    }
+
+    // 左斜标
+    .left_oblique_icon {
+        transform: translate(-50%,-100%) rotate(-45deg);
+    }
+
+    // 右斜标
+    .right_oblique_icon {
+        transform: translate(-50%,-100%) rotate(45deg)
+    }
+
+    // 火标
+    .heat_icon{
+        position: absolute;
+        width: 125px;
+        height: 170px;
+        background-image: url('@/assets/img/decorate/goodscombination/icon_huobiao.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        span{
+            position: absolute;
+            left:50%;
+            top: 50%;
+            transform: translate(-51%,-20%);
+            font-size: 39.77px;
+            writing-mode: vertical-lr;
+    
+        }
+    
+    }
+    // 书标
+    .book_icon {
+        position: absolute;
+        width: 125px;
+        height: 196px;
+        background-image: url('@/assets/img/decorate/goodscombination/icon_shuqianbiao.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        span{
+            position: absolute;
+            left:50%;
+            top: 44%;
+            transform: translate(-51%,-65%);
+            font-size: 54.69px;
+            writing-mode: vertical-lr;
+    
+        }
+    }
+    
+
+    // 圆标公共样式
+    .circle_icon_common_style {
+        position: absolute;
+        background-color:red;
+        text-align: center;
+    }
+
+    // 圆标
+    .circle_icon {
+        width: 125px;
+        height: 125px;
+        line-height: 125px;
+        border-radius: 50%;
+        font-size: 44.64px;
+    }
+
+    // 圆左标
+    .circle_left_icon {
+        width: 187px;
+        height: 80px;
+        line-height: 80px;
+        border-bottom-right-radius: 30px;
+        font-size: 48.3px;
+    }
+
+    // 圆中标
+    .circle_middle_icon {
+        width: 187px;
+        height: 58px;
+        line-height: 58px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        font-size: 41.91px;
+    }
+}
+

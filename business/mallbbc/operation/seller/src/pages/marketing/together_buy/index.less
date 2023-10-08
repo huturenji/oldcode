@@ -1,0 +1,138 @@
+.attention{
+    padding: 20px;
+    background: #fff5f0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    .attention_item{
+        width: 80%;
+        font-size: 12px;
+        font-family: PingFangSC, PingFangSC-Regular;
+        font-weight: 400;
+        text-align: left;
+        color: #db5609;
+        line-height: 17px;
+    }
+}
+
+.dot{
+    color: #696969;
+    text-align: left;
+    &::before{
+       content: '';
+       display: inline-block;
+       width: 8px;
+       height: 8px;
+       background: #faad14;
+       border-radius: 50%;
+       margin-right: 8px;
+    }
+}
+.dot_pending{
+    &::before{
+        background: #1890ff; 
+    }
+}
+.dot_over{
+    &::before{
+        background: #bfbfbf; 
+    }
+}
+.dot_suc{
+    &::before{
+        background: #52c41a; 
+    }
+}
+.dot_rej{
+    &::before{
+        background: #f5222d; 
+    }
+}
+.operation_text{
+    color: #ff6a12;
+    cursor: pointer;
+}
+.content_des{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    .des_item{
+        margin-right: 12px;
+        .des_item_title{
+            height: 18px;
+            font-size: 13px;
+            font-weight: 400;
+            text-align: left;
+            color: #555555;
+            line-height: 18px;
+        }
+        .des_item_content{
+            height: 18px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: left;
+            color: #333333;
+            line-height: 18px;
+            word-break: break-all;
+        }
+    }
+    .des_item_export{
+        color: #fd6918;
+        cursor: pointer;
+        position: absolute;
+        right: 2px;
+    }
+}
+
+.sku_name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    text-align: left;
+}
+
+.date_box{
+   
+    .date_group{
+        padding-right: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,88px);
+        // justify-content: center;
+    }
+    .date_item{
+        width: 88px;
+        height: 22px;
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        text-align: center;
+        line-height: 22px;
+        margin-bottom: 10px;
+        box-sizing: content-box;
+        cursor: pointer;
+        &:last-child{
+            position: relative;
+        }
+        .item_icon{
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top:1px;
+            right: -30px;
+
+        }
+    }
+    .date_item_check{
+        position: relative;
+        z-index: 2;
+        color: #fd6918 ;
+        border-color: #fd6918 !important;
+    }
+}
+
+.date_range{
+    height: 160px;
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+}

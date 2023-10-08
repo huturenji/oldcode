@@ -1,0 +1,22 @@
+.good_info_wrapper{
+    display: flex;
+    .good_img {
+        width: 50px;
+        height: 50px;
+        display: block;
+        border: 1 solid #ccc;
+        margin-right:5px
+    }
+
+    .good_info {
+        .good_introduction{
+            width: 300px;
+            display: -webkit-box; // 特别显示模式
+            -webkit-box-orient: vertical;// 盒子中内容竖直排列
+            /* autoprefixer: off */
+            -webkit-line-clamp: 2; // 只显示两行
+            /*autoprefixer: on */
+            overflow: hidden; // 溢出内容隐藏
+        }
+    }
+}
