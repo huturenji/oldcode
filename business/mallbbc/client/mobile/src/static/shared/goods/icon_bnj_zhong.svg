@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_bnj_zhong</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_bnj_zhong" fill-rule="nonzero">
+            <rect id="矩形" fill="#FFECDA" x="0" y="0" width="16" height="16" rx="8"></rect>
+            <g id="中" transform="translate(3.900000, 3.530000)" fill="#E17605">
+                <path d="M4.71,5.05 L4.71,2.9 L6.97,2.9 L6.97,5.05 L4.71,5.05 Z M1.2,5.05 L1.2,2.9 L3.45,2.9 L3.45,5.05 L1.2,5.05 Z M4.71,1.73 L4.71,0 L3.45,0 L3.45,1.73 L1.33226763e-15,1.73 L1.33226763e-15,6.77 L1.2,6.77 L1.2,6.22 L3.45,6.22 L3.45,9.34 L4.71,9.34 L4.71,6.22 L6.97,6.22 L6.97,6.72 L8.22,6.72 L8.22,1.73 L4.71,1.73 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,7 @@
+.history
+.temp
+node_modules
+src/pages/.umi/
+src/pages/.umi-production/
+dist/
+package-lock.json

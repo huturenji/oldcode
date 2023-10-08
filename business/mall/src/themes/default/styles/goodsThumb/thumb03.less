@@ -1,0 +1,92 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+.thumb-container{
+    width: 100%;
+    height: 100%;
+
+    .search_prolist_item {
+        display: block;
+        position: relative;
+        background-color: inherit;
+        min-height: 1.86rem;
+        .search_prolist_item_inner {
+            position: relative;
+            padding-left: 2.1rem;
+            .search_prolist_cover {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                left: 0;
+                top: 0;
+                width: 1.86rem;
+                height: 1.86rem;
+                overflow: hidden;
+                .goods-thumbnail-container{
+                    width: 1.86rem;
+                    height: 1.86rem;
+                    img{
+                        background: #fff;
+                        width: 100%;
+                    }
+                }
+                
+            }
+        }
+        .search_prolist_info {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            overflow: hidden;
+            line-height: 1;
+            min-height: 1.86rem;
+           
+            .search_prolist_title{
+                font-size: 0.28rem;
+                word-break: break-all;
+                color: @text-color;
+                line-height: 1.36;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .sub-text{
+                color: @third-text-color;
+            }
+
+            .price-content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .search_prolist_price {
+                    margin-right: .1rem;
+                    display: inline-block;
+                    height: .36rem;
+                    color: @danger-color-light;
+                    min-width: .8rem;
+    
+                    .no-price{
+                        font-weight: bold;
+                        font-size: .24rem;
+                    }
+    
+                    strong {
+                        font-size: .4rem;
+                        font-weight: 400;
+                        display: flex;
+                    }
+                }
+
+            }
+
+            .action{
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="94px" viewBox="0 0 70 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>icon_mall_touyin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="1" y="23" width="30" height="48"></rect>
+        <filter x="-50.0%" y="-31.2%" width="200.0%" height="162.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.732223732   0 0 0 0 0.229266394   0 0 0 0 0.229266394  0 0 0 0.162041084 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="06我" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04我" transform="translate(-265.000000, -104.000000)">
+            <g id="订单数" transform="translate(15.000000, 104.000000)">
+                <g id="icon_mall_touyin" transform="translate(259.000000, 0.000000)">
+                    <g id="矩形" fill="black" fill-opacity="1">
+                        <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M51,0 C56.5228475,-1.01453063e-15 61,4.4771525 61,10 L61,94 L0,94 L0,52 L0,52 C2.76142375,52 5,49.7614237 5,47 C5,44.2385763 2.76142375,42 0,42 L0,0 L51,0 Z" id="形状结合" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

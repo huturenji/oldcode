@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var errors_1=require("../util/errors");function checkP2s(e){if(!(e instanceof Uint8Array)||e.length<8)throw new errors_1.JWEInvalid("PBES2 Salt Input must be 8 or more octets")}exports.default=checkP2s;

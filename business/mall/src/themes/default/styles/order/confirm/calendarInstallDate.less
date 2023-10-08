@@ -1,0 +1,110 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.promise-date-container{
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    .express_name{
+        height: 1rem;
+        display: flex;
+        padding: 0 .3rem;
+        align-items: center;
+        .item{
+            text-align: center;
+            font-size: .28rem;
+            color: @text-color;
+            font-weight: bold;
+        }
+    }
+
+
+    .time_container{
+        background-color: #fff;
+        .btpx();
+        display: flex;
+        height: calc(~ '100% - 3.2rem');
+        .left_date{
+            background-color: background-color;
+            &.singleLeft{
+                background-color: #fff;
+                .item{
+                    padding: 0rem .3rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .btpx();
+                    span{
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+            flex: 1;
+            background-color: #f5f5f5;
+            max-height: 99.9%;
+            overflow-y: auto;
+            .item{
+                height: .88rem;
+                line-height: .88rem;
+                text-align: center;
+                font-size: .28rem;
+                color: @text-color;
+                cursor: pointer;
+                &.active{
+                    background-color: #fff;
+                }
+            }
+        }
+        .right_date{
+            flex: 2;
+            background-color: #fff;
+            max-height: 99.9%;
+            overflow-y: auto;
+            .item{
+                cursor: pointer;
+                padding-right: .3rem;
+                margin-left: .3rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: .88rem;
+                .bbpx();
+                font-size: .28rem;
+                color: @text-color;
+
+            }
+        }
+    }
+
+
+
+
+    .btn-box{
+        position: absolute;
+        z-index: 510;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.2rem 0.3rem;
+        height: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px .06rem .2rem 0px rgba(101,112,242,0.12);
+        .btn-handler{
+            border-radius: .4rem;
+            background: @theme-color;
+            height: .8rem;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn-text{
+                color: #fff;
+                font-size: .3rem;
+            }
+        }
+    }
+}

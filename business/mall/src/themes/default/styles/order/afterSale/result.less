@@ -1,0 +1,75 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+
+.after-sale-result {
+
+    .result-info {
+        padding: .78rem .3rem .7rem;
+        background-color: #ffffff;
+
+        .wrap-icon {
+            text-align: center;
+    
+            .success {
+                font-size: 1.1rem;
+                color: @success-color;
+            }
+        }
+    
+        .success-desc {
+            margin-top: .2rem;
+            text-align: center;
+            font-size: .3rem;
+            font-weight: bold;
+        }
+    
+        .btn-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .6rem .3rem 0;
+    
+            .sn-button {
+                width: 2.2rem;
+                height: .72rem;
+                font-size: .28rem;
+
+                &.sn-button-default {
+                    &:after {
+                        border-color: #d8d8d8;
+                    }
+                }
+
+                &.sn-button-primary {
+                    margin-left: .9rem;
+                    .linear-gra-mall-btn(140deg);
+                }
+            }
+    
+            .back {
+                margin-right: .4rem;
+            }
+        }
+    }
+
+    .order-info {
+        margin-top: .2rem;
+        padding: .21rem 0;
+        background-color: #ffffff;
+
+        .sn-list-item {
+            padding: .15rem .3rem;
+        }
+
+        .sn-list-item-title {
+            line-height: .4rem;
+            font-size: .28rem;
+            color: #999999;
+        }
+
+        .contract {
+            .btpx(@left: 1.8rem, @right: .5rem);
+        }
+    }
+}

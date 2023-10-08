@@ -1,0 +1,93 @@
+@import './common/variable';
+#suning{
+    /*首页*/
+    .index-container{
+        .search-banner-content{
+            &.noSwiper{
+                background: linear-gradient(315deg, #FF9301 0%, #FFB04F 100%);
+                background-size: 100% auto;
+            }
+        }
+        
+    }
+
+    /*购物车页面*/
+    .totle-option-car{
+        background-color: #FFFCF7;
+    }
+
+    .mine-wrap{
+        .bgbox{
+            background: url('~themes/suning/img/bg_mall_wode.png') no-repeat;
+            background-size: 100% 2.46rem;
+            .warp-item-section{
+                box-shadow: 0px 0px .26rem -.04rem rgba(125, 155, 250, 0.22);
+            }
+        }
+    }
+
+    /*订单详情*/
+    .order-detail-container{
+        .statu-area{
+            background: url('~themes/suning/img/bg_mall_dingdanxiangqing1@2x.png') 0 0 no-repeat,
+            url('~themes/suning/img/bg_mall_dingdanxiangqing2@2x.png') right .42rem no-repeat,
+            linear-gradient(337deg, #FF6A01 0%, #FFAA01 100%);
+            background-size: contain, contain;
+        }
+    }
+
+    /*商品详情*/
+    .goods-model-container{
+        .attributes-area{
+            li{
+                &.active{
+                    background: rgba(255, 128, 1, .2);
+                }
+            }
+        }
+    }
+
+    .detail-container{
+        .vux-tab .vux-tab-item.vux-tab-selected{
+            color: @text-color;
+        }
+        .vux-tab-ink-bar{
+            .vux-tab-bar-inner{
+                background-color: #262DD9;
+            }
+        } 
+    }
+
+    /**地址管理*/
+    .addEdit-address{
+        .tags-details{
+            .li-item.active{
+                background: @theme-color;
+                border-color: @theme-color;
+            }
+        }
+    }
+
+    /*授权*/
+    .authorize-container[cust-style]{
+        .authorize-confirm{
+            header{
+                background: url('~themes/default/img/authorization/bg_mall_circle1.png') left top no-repeat,
+                url('~themes/default/img/authorization/bg_mall_circle2.png') right bottom no-repeat,
+                linear-gradient(143deg, ~"var(--linearThemeColorStart)" 0%, ~"var(--linearThemeColorEnd)" 100%);
+                background-size: contain, contain;
+                .icon{
+                    background: url('~themes/default/img/authorization/icon_mall_fuwushouquan.png') left top no-repeat;
+                    background-size: contain;
+                }
+            }
+            .auth-detail-link{
+                .icon.checked[cust-style]{
+                    background: url('~themes/suning/img/btn_common_radio_sel2.svg') 0 0 no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        
+    }
+}

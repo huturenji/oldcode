@@ -1,0 +1,60 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+.block-part{
+    background-color: #fff;
+    padding: 0.3rem;
+    .item{
+        display: flex;
+        justify-content: space-between;
+        font-size: .3rem;
+        &.bold{
+            font-weight: bold;
+            color: @secondary-text-color;
+            line-height: .42rem;
+        }
+        .tips{
+            color: @third-text-color;
+            font-size: .24rem;
+            margin-left: .06rem;
+            font-style: normal;
+        }
+        .title{
+            flex: 1;
+            color: @third-text-color;
+        }
+        .content{
+            width: 3rem;
+            text-align: right;
+            &.special{
+                /deep/ .price-label{
+                    color: @text-color;
+                    font-size: .3rem;
+                }
+            }
+            /deep/ .price-label{
+                color: @danger-color-light;
+                font-size: .36rem;
+            }
+        }
+    }
+    
+}
+.margint20{
+    margin-top: .2rem;
+}
+.margint16{
+    margin-top: .16rem;
+}
+.margint24{
+    margin-top: .24rem;
+}
+.paddingb30{
+    padding-bottom: .3rem;
+}
+.paddingt30{
+    padding-top: .3rem;
+    border-top: dashed 1px @border-color-base;
+}
+.part.paddingb0.paddingb30{
+    padding-bottom: 0;
+}

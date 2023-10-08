@@ -1,0 +1,73 @@
+/* 
+tabbar 高度 = 内部元素高度 + 上padding + 不同平台的下padding(tab-bar-ios/tab-bar-android)
+
+*/
+
+.tab-bar {
+  padding: 12rpx 20rpx 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  border-radius: 30rpx 30rpx 0 0;
+  backdrop-filter: blur(20rpx);
+  -webkit-backdrop-filter: blur(20rpx);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.tab-bar-ios {
+  padding-bottom: env(safe-area-inset-bottom);
+  height: calc(12rpx + 90rpx + env(safe-area-inset-bottom));
+}
+
+.tab-bar-android {
+  padding-bottom: 18rpx;
+  height: calc(12rpx + 90rpx + 18rpx);
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+}
+
+.tab-bar-item .image-wrapper {
+  height: 60rpx;
+  position: relative;
+}
+
+.tab-bar-item .image-wrapper .cart-num {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 28rpx;
+  padding: 0 10rpx;
+  text-align: center;
+  background: #f30300;
+  border-radius: 20rpx;
+  font-size: 18rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  line-height: 28rpx;
+  box-shadow: 1px 2px 3px 0px rgba(249, 3, 0, 0.24);
+  opacity: 0.95;
+  z-index: 1000;
+}
+
+.tab-bar-item image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.tab-bar-item .txt {
+  height: 30rpx;
+  font-size: 24rpx;
+  color: #222222;
+}
+
+.tab-bar-item .active {
+  font-weight: bold;
+  color: #F30300;
+}

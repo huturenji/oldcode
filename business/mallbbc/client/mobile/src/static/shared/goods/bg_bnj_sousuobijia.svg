@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="298px" viewBox="0 0 375 298" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg_bnj_sousuobijia</title>
+    <defs>
+        <radialGradient cx="31.9440218%" cy="25.3908592%" fx="31.9440218%" fy="25.3908592%" r="133.338017%" gradientTransform="translate(0.319440,0.253909),scale(0.794667,1.000000),rotate(86.075256),translate(-0.319440,-0.253909)" id="radialGradient-1">
+            <stop stop-color="#E9C9D1" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#CEDFE5" stop-opacity="0.258249563" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="87.8653046%" cy="23.1223532%" fx="87.8653046%" fy="23.1223532%" r="102.083541%" gradientTransform="translate(0.878653,0.231224),scale(0.794667,1.000000),rotate(131.489870),translate(-0.878653,-0.231224)" id="radialGradient-2">
+            <stop stop-color="#C2D9E1" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FBEBEB" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="68.0337306%" cy="69.5569983%" fx="68.0337306%" fy="69.5569983%" r="63.8572684%" gradientTransform="translate(0.680337,0.695570),scale(0.794667,1.000000),rotate(148.979456),translate(-0.680337,-0.695570)" id="radialGradient-3">
+            <stop stop-color="#CFE0E4" stop-opacity="0.573645105" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-4" x="0" y="0" width="375" height="298"></rect>
+    </defs>
+    <g id="确定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bg_bnj_sousuobijia">
+            <use fill="#FFFFFF" xlink:href="#path-4"></use>
+            <use fill="url(#radialGradient-1)" xlink:href="#path-4"></use>
+            <use fill="url(#radialGradient-2)" xlink:href="#path-4"></use>
+            <use fill="url(#radialGradient-3)" xlink:href="#path-4"></use>
+        </g>
+    </g>
+</svg>

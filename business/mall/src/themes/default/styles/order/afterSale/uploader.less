@@ -1,0 +1,103 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+
+.after-sale-uploader {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: .52rem;
+
+    .upload-list-item {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: calc(~'(100vw - .3rem * 2 - .46rem * 4) /5');
+        height: calc(~'(100vw - .3rem * 2 - .46rem * 4) /5');
+        margin-right: .46rem;
+        margin-bottom: .36rem;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            border: 1px solid #c2c2c2;
+            border-radius: .16rem;
+            transform: translate3d(0, 0, 0) scale3d(.5, .5, 1);
+            transform-origin: 0 0;
+            z-index: 10;
+        }
+
+        &:nth-child(5n) {
+            margin-right: 0;
+        }
+
+        .del {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: .44rem;
+            color: #FF5959;
+            transform: translate3D(50%, -50%, 0);
+            z-index: 11;
+        }
+
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .upload-btn {
+        display: inline-flex;
+        flex-direction: column;
+        width: calc(~'(100vw - .3rem * 2 - .46rem * 4) /5');
+        margin-bottom: .36rem;
+        text-align: center;
+
+        .wrap-img {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            width: calc(~'(100vw - .3rem * 2 - .46rem * 4) /5');
+            height: calc(~'(100vw - .3rem * 2 - .46rem * 4) /5');
+            padding-bottom: .1rem;
+            line-height: .22rem;
+            font-size: .16rem;
+            color: #999999;
+            background-color: #F6F9FD;
+            border-radius: .08rem;
+
+            .icon {
+                width: .44rem;
+                height: .44rem;
+                margin-bottom: .1rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: @screen-sm) {
+
+        .upload-list-item {
+            width: 102px;
+            height: 102px;
+        }
+
+        .upload-btn {
+            width: 102px;
+
+            .wrap-img {
+                justify-content: center;
+                width: 102px;
+                height: 102px;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

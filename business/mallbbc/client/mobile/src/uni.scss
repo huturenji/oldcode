@@ -1,0 +1,62 @@
+// 此文件为uView的主题变量，这些变量目前只能通过uni.scss引入才有效，另外由于
+// uni.scss中引入的样式会同时混入到全局样式文件和单独每一个页面的样式中，造成微信程序包太大，
+// 故uni.scss只建议放scss变量名相关样式，其他的样式可以通过main.js或者App.vue引入
+@import 'uview-ui/theme.scss';
+
+
+
+/* 页面左右间距 */
+$page-row-spacing: 30upx;
+$page-color-base: #f8f8f8;
+$page-color-light: #f8f6fc;
+$base-color: #fa436a;
+
+/* 文字尺寸 */
+$font-sm: 24upx;
+$font-base: 28upx;
+$font-lg: 32upx;
+/*文字颜色*/
+$font-color-dark: #303133;
+$font-color-base: #606266;
+$font-color-light: #909399;
+$font-color-disabled: #C0C4CC;
+$font-color-spec: #4399fc;
+/* 边框颜色 */
+$border-color-dark: #DCDFE6;
+$border-color-base: #E4E7ED;
+$border-color-light: #EBEEF5;
+/* 图片加载中颜色 */
+$image-bg-color: #eee;
+/* 行为相关颜色 */
+$uni-color-primary:#fa436a;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+/* zokxc-设计规范 */
+$bg-color-split: #EFF2F5; //用于分割背景的底色,页面背景色
+$border-color-split: rgba(0,0,0,.1);//辅助分割线
+$main-color: #FC1C1C;//主体红色
+$com-v-border: 30rpx;//主体内容距离两边的距离
+$com-h-border: 20rpx;//主体内容距上下模块的间距
+$com-main-font-color: #2D2D2D;//主要内容字体颜色，eg:商品名称
+$mainnew-font-color: #222;//用于重要级文字信息、内页标题信息，如导航名称、大板块标题、类目名称等
+$main-font-color: #333;//用于重要级文字信息、内页标题信息，如导航名称、大板块标题、类目名称等
+$main-second-color: #666;//用于普通级段落信息引导词二级标题信息，如商品详情段落标题信息
+$main-third-color: #999;//用于辅助、次要的文字信息，如商品评论、规格标识
+
+/* 积分商城 颜色*/ 
+$point-good-price-color:#B64CFB;//用于积分商城商品价格背景颜色
+$point-btn-color:#9344FF;//用于积分商城兑换按钮背景颜色
+$point-index-title-color:#7B2AD0;//用于积分商城首页顶部背景颜色
+
+/*推手*/
+$ts-but:linear-gradient(270deg, #F04047 0%, #FE7951 100%);
+$ts-but2:linear-gradient(270deg, #FF2C40 0%, #FF3F5E 100%);
+$ts-ac:#FF3044;
+$ts-font-color:#E9323E;
+$ts-font-color2:#FF0000;
+
+
+
+

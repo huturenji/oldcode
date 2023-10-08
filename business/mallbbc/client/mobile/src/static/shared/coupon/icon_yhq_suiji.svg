@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_yhq_suiji</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="42" height="42"></rect>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_yhq_suiji">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="path-1"></g>
+            <g id="编组-17" mask="url(#mask-2)">
+                <g transform="translate(-15.128790, -16.118364)" id="编组">
+                    <polygon id="矩形" fill="#F30300" transform="translate(31.112698, 31.112698) rotate(-45.000000) translate(-31.112698, -31.112698) " points="-4.88730163 23.1126984 67.1126984 23.1126984 67.1126984 39.1126984 -4.88730163 39.1126984"></polygon>
+                    <g id="随机金额券" transform="translate(30.677830, 30.884937) rotate(-45.000000) translate(-30.677830, -30.884937) translate(11.677830, 26.884937)" fill="#FFFFFF" fill-rule="nonzero" font-family="SourceHanSansCN-Medium, Source Han Sans CN" font-size="7.5" font-weight="400">
+                        <text>
+                            <tspan x="3.55271368e-15" y="7">随机金额券</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

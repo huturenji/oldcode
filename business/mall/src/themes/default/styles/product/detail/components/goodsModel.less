@@ -1,0 +1,187 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+@import '~mallStyles/mixins/hairLine.less';
+.goods-model-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: @sub-background-color;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 2.7rem;
+  overflow: hidden;
+  -webkit-overflow-scrolling:auto;
+  .title-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 0.8rem;
+  }
+  .summary{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 .3rem 0;
+    height: 1.84rem;
+    .thumbnail{
+      width: 1.86rem;
+      height: 1.84rem;
+      overflow: hidden;
+      margin-right: .24rem;
+    }
+    .goos-price-box{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 0.7rem;
+    }
+    .price-content{
+        height: .4rem;
+        line-height: .4rem;  
+
+        .price{
+          font-size: .4rem;
+          color: @danger-color-light;
+          align-items: baseline;
+        }
+    }
+    .provider-num{
+      font-size: .26rem;
+      margin-top: .16rem;
+      color: @info-color;
+      background: @background-color;
+      height: 0.4rem;
+      line-height: 0.4rem;
+      padding: 0 0.18rem;
+      border-radius: 0.2rem;
+    }
+  }
+
+  .float-area{
+    padding: 0 .3rem .4rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .address-info{
+    display: flex;
+    align-items: center;
+    font-size: .28rem;
+    color: @text-color;
+    margin-bottom: .2rem;
+    .title-label{
+      font-weight:bolder;
+    }
+
+    .tips{
+      color: @placeholder-color;
+      font-size: 0.26rem
+    }
+    .goods-address{
+      padding-left: 0.1rem;
+    }
+  }
+
+  .attributes-area{
+    padding-top: .2rem;
+    overflow-y: auto;
+    &>ul{
+      &>li{
+        label{
+          font-size: .28rem;
+          margin-bottom: .4rem;
+          font-weight: bolder;
+        }
+
+        &>ul{
+          margin: .28rem 0 0;
+          display: flex;
+          flex-wrap: wrap;
+          &>li{
+            cursor: pointer;
+            min-width: 1.48rem;
+            max-width: 4.9rem;
+            height: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .26rem;
+            padding: 0 .38rem;
+            margin-right: .3rem;
+            margin-bottom: .3rem;
+            border-radius: .4rem;
+            background: #f5f5f5;
+            .inner-text{
+              display: inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              width: 100%;
+              text-align: center;
+            }
+            &:nth-child(4){
+              margin-right: 0;
+            }
+          }
+
+        }
+      }
+      li.active{
+        color: @theme-color;
+        background: #FFE6E5;
+      }
+      li.disable{
+        color:@disable-color;
+      }
+    }
+  }
+
+  .btn-group{
+    display: flex;
+    padding: 0.2rem 0.3rem;
+    font-size: 0.28rem;
+    box-shadow:0px 3px 10px 0px rgba(101,112,242,0.12);
+    &.disable > div{
+      opacity: 0.4;
+    }
+    &>div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      color: #fff;
+	    height: 0.8rem;
+
+      &.buy{
+        .linear-gra-mall-addFavorite(140deg);
+        border-radius: 2rem 0 0 2rem;
+      }
+      &.disable_btn{
+        border-radius: 2rem;
+        background-color: @theme-color;
+        opacity: .4;
+      }
+
+      &.add-cart{
+        border-radius: 0 2rem 2rem 0;
+        .linear-gra-add-cart-btn(140deg);
+      }
+    }    
+  }  
+}

@@ -1,0 +1,55 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+
+//商品下单时候缺货、下架、变价错误码的弹窗
+.productChange /deep/ .weui-dialog{
+    max-width: 350px;
+    width: 80%;
+    .weui-dialog__hd{
+        padding: 0.36rem 1.14rem;
+        line-height: 0.42rem;
+        .weui-dialog__title{
+            font-size: 0.3rem;
+            font-weight: 600;
+        }
+    }
+
+    .weui-dialog__bd{
+        padding: 0;
+        padding-bottom: 0.5rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 265px;
+        .goods-item-change{
+            margin-bottom: 0.24rem;
+            padding: 0 0.3rem;
+        }
+        .tips{
+            line-height: 0.6rem;
+            padding: 0 0.1rem;
+            width: 100%;
+            background:rgba(244,153,57,0.8);
+            font-size: 0.2rem;
+            color: #fff;
+            position: absolute;
+            bottom: 48px;
+            z-index: 100;
+        }
+    }
+
+    .weui-dialog__ft{
+        font-size: 0.3rem;
+        .weui-dialog__btn_primary{
+            background-color: #fff !important;
+            color: @theme-color !important;
+        }
+    }
+
+    
+}
+//购物车申请采购页面样式特殊处理
+.productChange.productChangeCart /deep/ .weui-dialog{
+    .weui-dialog__bd{
+        padding-bottom: 0;
+    }
+}

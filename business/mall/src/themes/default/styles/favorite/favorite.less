@@ -1,0 +1,127 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.favorite{
+    .favorite-box{
+        height: 100%;
+        /deep/ .mescrolltop{
+            padding-top: 0.82rem;
+        }
+        /deep/ .mescrollbottom{
+            padding-bottom: 1.1rem;
+        }
+        /deep/ .mescroll-empty{
+            margin-top: 4rem;
+        }
+    }
+    .list-box{
+        overflow-y: auto;
+        .good-item{
+            margin-bottom: .2rem;
+            border-radius: 0.16rem;
+            box-shadow:0px 4px 16px -4px rgba(125,155,250,0.1);
+        }
+        .favorite-item{
+            border-radius: 0.16rem;
+            
+        }
+        /deep/ .vux-swipeout-button-box{
+            margin: 0 0.2rem;
+            border-radius: 0.16rem;
+          }
+        /deep/ .vux-swipeout-content{
+            border-radius: 0.16rem;
+            margin: 0 0.2rem;
+        }
+        /deep/ .vux-swipeout-button{
+            border-radius: 0px 0.16rem 0.16rem 0px;
+        }
+        /deep/ .removeFavorite{
+            .linear-gra-mall-addFavorite();
+            border: 1px solid @background-color;
+            border-left: none;
+        }
+    }
+}
+
+.choose-all-deleteCollection{
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.3rem;
+    box-shadow:0px 6px 20px 0px rgba(101,112,242,0.12);
+    .cancle-btn{
+        width: 2.2rem;
+        height: 0.72rem;
+        line-height: 0.72rem;
+        text-align: center;
+        border-radius: 0.36rem;
+        color: #fff;
+        font-size: .28rem;
+    }
+    .choose-all{
+        display: flex;
+        align-items: center;
+        .text{
+            margin-left: .1rem;
+            font-size: .24rem;
+        }
+        .icon_mall_checkbox_sel{
+            color: @theme-color;
+          }
+    }
+}
+.item-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: .42rem 0.26rem;
+    border-radius: 0.16rem;
+    box-shadow:0px 4px 16px -4px rgba(125,155,250,0.1);
+    .choose-item{
+        width: 0.6rem;
+        i{
+            font-size: 0.45rem;
+            color: @third-text-color;
+            &.iconxuanze-duoxuan{
+                color: @theme-color;
+            }
+        }
+        .icon_mall_checkbox_sel{
+            color: @theme-color;
+        }
+    }
+    .list-one{
+        flex: 1;
+        min-height: 1.5rem;
+        .addCart-icon-section{ 
+            cursor: pointer;
+            .cart-icon {
+                display: block;
+                width: .52rem;
+                height: .52rem;
+                background: url('~themes/default/img/icon/add_cart.svg') center no-repeat;
+                border-radius: 100%;
+                background-size: 100%;
+                background-position: center;
+                background-color: @thumbnail-bg-color;
+                &:active{
+                    background-color: @theme-color;
+                    background: url('~themes/default/img/icon/cart_active.svg') center no-repeat;
+                    background-size: 100%;
+                }
+            }
+        }  
+    }
+}
+.cartThumb_box{
+    /deep/ .cart-thumb{
+        bottom: .6rem;
+    }
+}   

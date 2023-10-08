@@ -1,0 +1,68 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+  .goodslist-container{
+    .search_part{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      cursor: pointer;
+      background-color: #fff;
+      padding: .2rem;
+      /deep/ .search-container .search-box input{
+        background-color: @background-color;
+      }
+      /deep/ .search-container .search-box input:disabled{
+        background-color: @background-color;
+        opacity:1;  //默认的不透明级别为0.3
+        -webkit-opacity:1;   //不透明级别安卓与IOS适配 
+      }
+    }
+  }
+  .list-part{
+    padding-top: 1.08rem;
+    /deep/ .mescroll-empty{
+      margin-top: 3rem;
+    }
+
+    .view_more{
+      margin-top: .5rem;
+      color: @text-color;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      font-size: .26rem;
+      &:active{
+        opacity: .8;
+      }
+    }
+  }
+  //商品列表部分样式
+  .goods-list{
+      padding: 0 0.2rem;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .goods-item{
+          /deep/ .thumb-container{
+            img.full{
+              display: block;
+              border-radius: @border-radius-sm @border-radius-sm 0 0;
+            }
+          }
+          &:active{
+              background-color: @background-color;
+          }
+          border-radius: @border-radius-sm;
+          background-color: #fff;
+          width: calc(~'(100% - .2rem)/2');
+          box-shadow: @goods-shadow-color;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }   
+          margin-top: 0.2rem;
+      }
+  }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_common_wancheng</title>
+    <g id="鹅毛情" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02.2收礼物_填写地址" transform="translate(-48.000000, -98.000000)">
+            <g id="步骤器" transform="translate(30.000000, 98.000000)">
+                <g id="icon_common_duihao" transform="translate(18.000000, 0.000000)">
+                    <circle id="椭圆形" fill="#ffffff" cx="12" cy="12" r="12"></circle>
+                    <g id="轮廓" transform="translate(5.000000, 5.000000)">
+                        <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="14" height="14"></rect>
+                        <path d="M12.0995292,3.00071045 C12.3752792,2.7297474 12.8184777,2.733628 13.0894407,3.009378 C13.3410493,3.26543158 13.3556753,3.66586676 13.1357001,3.93871358 L13.0807732,3.99928955 L5.95710795,10.9992896 C5.6983054,11.2535994 5.29270173,11.2654401 5.02020926,11.0393847 L4.95981671,10.9829972 L1.18626873,7.02450459 C0.919516754,6.74467889 0.930115104,6.30159014 1.2099408,6.03483817 C1.46977896,5.78713991 1.87038984,5.77858555 2.13987082,6.00267138 L2.19960723,6.05851025 L5.48227273,9.50218182 L12.0995292,3.00071045 Z" id="路径-20" fill="#000"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

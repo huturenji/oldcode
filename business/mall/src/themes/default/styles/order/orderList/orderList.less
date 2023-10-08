@@ -1,0 +1,148 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+.order-list-container {
+    display: flex;
+    flex-direction: column;
+    .fix-box{
+        position: relative;
+        flex: none;
+        z-index: 99;
+        .search-bar{
+            .bbpx();
+            height: .92rem;
+            position: relative;
+            background: #fff;
+
+            .search-mask{
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 9;
+                background-color: rgba(0,0,0,.3);
+            }
+
+            .search-content{
+                position: relative;
+                padding: .16rem .2rem;
+                background: #fff;
+                z-index: 10;
+            }
+        }
+
+        &>nav{
+            width: 100%;
+            background-color: #fff;
+            height: .88rem;
+            line-height: .88rem;
+            // 自定义vux tab组件样式;
+            /deep/ .vux-tab .vux-tab-item{
+                cursor: pointer;
+                position: relative;
+                background: transparent;
+                font-size: .28rem;
+                color: @secondary-text-color;
+                &.vux-tab-selected{
+                    font-size: .3rem;
+                    color: @text-color;
+                    font-weight: bold;
+                }
+                .vux-tab-item-badge{
+                    background-color: @danger-color-light !important;
+                    top: -0.32rem;
+                    right: 0.15rem;
+                    border: 1px solid #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            /deep/ .vux-tab-ink-bar{
+                .vux-tab-bar-inner{
+                    border-radius: 2px;
+                    background-color: @theme-color;
+                }
+            }
+        }
+    }
+    .show-shadow{
+        &>nav{
+            box-shadow:0px 3px 10px 0px rgba(101,112,242,0.12);
+        }
+    }
+    .list{
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+
+        /deep/ .mescroll{
+            .mescroll-downwarp .downwarp-progress{
+                border: none 0;
+            }
+            height: auto;
+            .mescroll-empty{
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 9;
+            }
+
+            &>div:nth-child(2){
+                padding: .2rem;
+            }
+
+        }
+
+        .item{
+            margin-bottom: .2rem;
+            padding: .4rem .3rem;
+            background: #fff;
+            border-radius: .16rem;
+            box-shadow:0px 4px 16px -4px rgba(125,155,250,0.1);
+
+            .btn-group{
+                margin-top: .24rem;
+                /deep/ .order-btn{
+                    margin-left: .2rem;
+                    &:before{
+                        border-radius: 1rem;
+                    }
+                    &.order-btn-orderAgain, &.order-btn-pay{
+                        &:before{
+                            border-color: @theme-color;
+                        }
+                        color: @theme-color;
+                        border: none;
+
+                        &:active{
+                            background: @theme-color;
+                            color: #fff;
+                        }
+                    }
+
+                    &.order-btn-approval{
+                        &:before{
+                            border-color: @warning-color;
+                        }
+                        color: @warning-color;
+                        border: none;
+
+                        &:active{
+                            background: @warning-color;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                margin-bottom: .1rem;
+            }
+        }
+    }
+    /deep/ .mescroll-upwarp{
+        padding: 0;
+    }
+}

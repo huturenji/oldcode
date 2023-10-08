@@ -1,0 +1,7 @@
+{
+  "realm": "bplussit",
+  "auth-server-url": "https://bplussit.sinosun.com:18680/auth",
+  "ssl-required": "none",
+  "public-client": true,
+  "confidential-port": 0
+}

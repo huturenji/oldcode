@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn/common/radio_sel2</title>
+    <g id="btn/common/radio_sel2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="22" height="22"></rect>
+        <g id="选中" transform="translate(0.500000, 0.500000)">
+            <circle id="椭圆形" fill="#06c7c3" cx="10.5" cy="10.5" r="10.5"></circle>
+            <path d="M15.6917728,6.28672921 C16.0857014,5.89963915 16.7188421,5.90518285 17.1059322,6.29911143 C17.4632461,6.66273781 17.4860082,7.23018991 17.1775602,7.61979542 L17.09355,7.71327079 L9.96988477,14.7132708 C9.60235451,15.0744208 9.02758287,15.0932736 8.63838815,14.7762465 L8.54518298,14.689996 L4.771635,10.7315034 C4.39056076,10.3317524 4.40570126,9.69876845 4.80545226,9.3176942 C5.17445318,8.96593336 5.74218512,8.95177561 6.12707028,9.26609391 L6.21926144,9.35151146 L9.292,12.575 L15.6917728,6.28672921 Z" id="轮廓" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

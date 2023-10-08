@@ -1,0 +1,219 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+*{
+  box-sizing: border-box;
+}
+
+.invoice-assist{
+  max-height: calc(~'100% - 1.05rem');
+  .empty-page{
+    margin-top: 3.6rem;
+  }
+  
+  //缺损页样式修改
+  /deep/ .mescroll-empty{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1.12rem;
+  }
+}
+
+
+// 底部新增按钮
+.invoice-btn{
+  position: fixed;
+  z-index: 540;
+  bottom: 0;
+  left: 0rem;
+  right: 0rem;
+  background-color: #fff;
+  height: 1rem;
+  box-shadow: 0px .06rem .20rem 0px rgba(101,112,242,0.12); 
+  display: flex;
+  align-items: center;
+
+  &>div{
+    flex: 1;
+    line-height: 1rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: .32rem;
+    &:active{
+      opacity: .8;
+    }
+    &.import{
+      background-color: #fff;
+      color: @theme-color;
+    }
+    &.addNew{
+      background-color: @theme-color;
+      color: #fff;
+      &.radius{
+        border-radius: .5rem;
+        position: relative;
+        bottom: .2rem;
+        margin: 0 .2rem;
+        height: .88rem;
+        line-height: .88rem;
+      }
+    }
+  }
+}
+
+
+
+.invoice-assist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: @background-color;
+
+  .title-box{
+    height: 1rem;
+  }
+
+  .invoice-list{
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+  }
+
+
+  .receiptList {
+    margin: .2rem 0;
+    .openedClass{
+      /deep/ .vux-swipeout-content{
+        border-radius: 0rem;
+      }
+    }
+    /deep/ .vux-swipeout-button-box{
+      border-radius: 0.2rem;
+      margin: 0 .3rem;
+      padding-right: 1px;
+    }
+    /deep/ .vux-swipeout-content{
+      border-radius: 0.2rem;
+      margin: 0 .3rem;
+      box-shadow:0px 2px 8px -2px rgba(125,155,250,0.1);
+    }
+    /deep/ .delete_swipe{
+      border-radius:0 .2rem .2rem 0;
+      border-left: none;
+      font-size: 0.24rem;
+      background-color: @btn-danger-bg-color;
+    }
+    /deep/ .default_swipe{
+      font-size: 0.24rem;
+      background-color: @placeholder-color;
+      .icon{
+        color: #fff;
+      }
+    }
+
+    .checker {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-right: 0.3rem;
+      img {
+        width: .4rem;
+        height: .4rem;
+        margin-right: .3rem;
+      }
+      .icon_mall_checkbox_sel{
+        color: @theme-color;
+      }
+    }
+
+    .detail {
+      padding: .36rem .5rem;
+      border-radius: .2rem;
+      display: flex;
+      .list {
+        width: 100%;
+        .item {
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
+          justify-content: space-between;
+          font-size: .3rem;
+          &.tax-box{
+            display: flex;
+            justify-content: flex-start; 
+            margin-top: 0.3rem;    
+            .tax {
+              flex: 1;
+              color: #A4ACB2;
+              font-size: .26rem;
+              line-height: .36rem;
+            }
+          }
+
+          .main {
+            flex: 1;
+            padding-right: .2rem;
+            font-size: .3rem;
+            color: #000;
+            .symbol-company{
+                color: @address-color;
+                border-color: @address-color;
+            }
+            .symbol-default{
+                color: @theme-color;
+                border-color: @theme-color;
+            }
+            .symbol-container{
+              margin-right: .1rem;
+              &:last-child{
+                margin-right: 0;
+              }
+            }
+           
+            &.noPC {
+              max-width: calc(~'100% - .4rem');
+            }
+            .title {
+              text-align: justify;
+              max-width: 67%;
+              
+              &.noDefaultAndNoCompany{
+                max-width: 90%;
+              }
+            }
+          }
+
+
+          .buttonGroup {
+            width: 165px;
+            display: flex;
+            justify-content: space-between;
+
+            .disable {
+              color: @disable-color;
+            }
+          }
+        }
+      }
+
+      .edit {
+        display: flex;
+        justify-content: flex-end;
+        width: 0.4rem;
+        align-items: center;
+        .icon-container{
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

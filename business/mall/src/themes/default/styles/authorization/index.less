@@ -1,0 +1,43 @@
+@import '~themes/default/styles/common/variable.less';
+.authorize-container[cust-style]{
+    .authorize-confirm{
+        header{
+            background: url('~themes/default/img/authorization/bg_mall_circle1.png') left top no-repeat,
+            url('~themes/default/img/authorization/bg_mall_circle2.png') right bottom no-repeat,
+            linear-gradient(143deg,rgba(255,93,84,1) 0%,rgba(226,31,27,1) 100%);
+            background-size: contain, contain;
+            .icon{
+                background: url('~themes/default/img/authorization/icon_mall_fuwushouquan.png') left top no-repeat;
+                background-size: contain;
+            }
+        }
+    
+        .btn.confirm-btn[cust-style], .uri[cust-style]{
+            color: @theme-color;
+        }
+
+        .auth-detail-link{
+            .icon.checked[cust-style]{
+                background: url('~themes/default/img/authorization/btn_common_radio_sel2.svg') 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    
+}
+.no-auth{
+    .content{
+        .btn[cust-style]{
+            background: @theme-color !important;  
+        }
+    }
+}
+
+.auth-disagree-confirm[cust-style]{
+    .weui-dialog__btn_primary{
+        color: @theme-color;
+    }
+}
+.auth-close-btn{
+    display: none !important; 
+}

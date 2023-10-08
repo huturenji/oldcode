@@ -1,0 +1,495 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+@bg-color:#65BE7F;
+@tabbg-color:#FFFEF1;
+@tips-color:#F03B93;
+@redText-color:#F03B93;
+@price-color:#FFFF80;
+@fs-color:#333333;
+.activityOutWrap{
+    position: relative;
+    padding-bottom: 2rem;
+    background: @bg-color ;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    .activityWrap{
+        position: relative;
+        padding-top: 2.62rem;
+        background: url('~themes/default/img/activity/duanwu.png') no-repeat;
+        background-size: 100% auto;
+        // &::after{
+        //         z-index: 0;
+        //         position: absolute;
+        //         bottom: 0;
+        //         content: "";
+        //         left: 0;
+        //         right: 0;
+        //         height: 9.3rem;
+        //         background:url('~themes/default/img/activity/activitybgd.png') no-repeat bottom;
+        //     }
+        .tipsBut{
+            position: absolute;
+            top: 0.2rem;
+            right: 0;
+            width: 1.36rem;
+            padding-left: 0.08rem;
+            line-height: 0.54rem;
+            text-align: center;
+            font-size: 0.24rem;
+            color: @tips-color;
+            font-weight: bold;
+            background: url('~themes/default/img/activity/bg_shangyun_nvshenjie_hdsm@2x.png') no-repeat;
+            background-size:cover;
+        }
+        .cashBut{
+            position: absolute;
+            top: 18.64rem;
+            left: 50%;
+            margin-left: -1.38rem;
+            width: 2.76rem;
+            height: 0.86rem;
+            background: url('~themes/default/img/activity/btn_shangyun_nianhuojie_ljdh@2x.png') no-repeat;
+            background-size:cover;
+        }
+        .discountOutWrap{
+            padding: 0 0.6rem;
+            .discountWrap{
+                height: 6.5rem;
+                /deep/ .swiper-container{
+                    .swiper-pagination{
+                        bottom: 9px;
+                        .swiper-pagination-bullet{
+                            background: #EA8379;
+                            width: 4px;
+                            height: 4px;
+                            opacity: 1;
+                            margin: 0 2px;
+                            &.swiper-pagination-bullet-active{
+                                width: 20px;
+                                border-radius: 4px;
+                            }
+                        }
+                       
+                    }
+                }
+                .goodsList{
+                    .flex-box();
+                    .justify-content(flex-start);
+                    height: 6.5rem;
+                    padding: .15rem 0px;
+                    flex-wrap: wrap;
+                    .itemGoodWrap{
+                        .flex(0 0 33.33%);
+                        padding: 0rem 0.22rem 0.1rem 0.22rem;
+                        .itemGood{
+                            position: relative;
+                            .topImgWrap{
+                                background: @sub-background-color;
+                                padding: 0.18rem 0.12rem;
+                                height: 1.9rem;
+                                border-radius: 0.08rem;
+                                .topImg{
+                                    height: 100%;
+                                    width: 100%;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: contain;
+                                }
+                            }
+                            .itemName{
+                                color: @sub-background-color;
+                                font-size: .2rem;
+                                font-weight: 400;
+                                min-height: .48rem;
+                                margin: 0;
+                                padding-top: 0.04rem;
+                                line-height: 0.24rem;
+                                text-align: justify;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                word-break: break-all;
+                                white-space: normal;                            
+                            }
+                            .itemprice{
+                                font-size: .32rem;
+                                color:@price-color;
+                                text-align: center;
+                                height: 0.4rem;
+                                /deep/.price-label .rmb{
+                                    font-size: .2rem;
+                                }
+                            }
+                            .itemTips{
+                                position: absolute;
+                                left: -0.25rem;
+                                top: 0.06rem;
+                                width: 0.98rem;
+                                height: 0.52rem;
+                                background: url('~themes/default/img/activity/bg_shangyun_nvshenjie_jgbq@2x.png') no-repeat center;
+                                background-size: cover;
+                                color: @sub-background-color;
+                                font-size: .2rem;
+                                text-align: center;
+                                line-height: 0.4rem;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        .ruleTips{
+            padding:0.25rem 0.4rem 0 0.55rem;
+            height: 1.94rem;
+            font-size: 0.2rem;
+            font-weight: 500;
+            color: @sub-background-color;
+            line-height: 0.28rem;
+        }
+        .goodsOutWrap{
+            padding: 0.1rem 0.2rem 1rem;
+            position: relative;
+            width: 100%;
+            height: 10rem;
+            overflow: hidden;
+            
+            .goodsShowWrap{
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: flex;
+                width: 400%;
+                -webkit-transition: .5s;
+                transition: .5s;
+                .goods{
+                    .flex(1);
+                    height: 100%;
+                    padding: .2rem;
+                    width: 100%;
+                    .goodsItem{
+                        display: inline-block;
+                        border-radius: .08rem;
+                        background-color: @background-color;
+                        width: calc(~'(100% - .2rem)/2');
+                        margin-bottom: .2rem;
+                        box-shadow: -.02rem 0 .4rem -.04rem hsla(226,7%,64%,.1);
+                        &:active{
+                            background-color: @base-background-color;
+                        }
+                        &:nth-child(2n-1){
+                            margin-right: 0.2rem;
+                        }
+                        /deep/ .pic{
+                            border-top-left-radius: 0.08rem;
+                            border-top-right-radius: 0.08rem;
+                        }
+                    }
+                    .readMore{
+                        padding: 0.4rem;
+                        text-align: center;
+                        font-size: 0.26rem;
+                        color: @base-background-color;
+                        line-height: 0.36rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.tabWrap{
+    background: @tabbg-color;
+    margin: 0 0.2rem  0 0.18rem;
+    padding: 0 0 0.02rem;
+    border-radius: 0.08rem;
+    /deep/.vux-tab-wrap{
+        height: 1rem;
+        // padding-top: 0rem;
+        .vux-tab-container{
+            height: 1rem;
+            .vux-tab{
+                height: 1rem;
+                background: none;
+                .vux-tab-item{
+                    background: none;
+                    font-size: 0.28rem;
+                    font-weight: 600;
+                    padding: 0.28rem 0 0 0;
+                    line-height: 0.32rem;
+                }
+                .vux-tab-bar-inner{
+                    border-radius: 0.03rem;
+                }
+
+            }
+            .scrollable{
+                padding-bottom: 0;
+                .vux-tab-item{
+                    .flex(0 0 16.5%)
+                }
+            }
+            .scrollable .vux-tab-ink-bar{
+                bottom: 0;
+            }
+        }
+    }
+}
+
+// .tabWrap{
+//     background: @tabbg-color;
+//     margin: 0 0.2rem  0 0.2rem;
+//     // padding: 0 0 0.02rem;
+//     border-radius: 0.08rem;
+//     height: 1.84rem;
+//     .tab-wrap{
+//         padding: 0.1rem 0.08rem;
+//         width: 100%;
+//         color: #301396;
+//         display: flex;
+//         flex-wrap: wrap;
+//         align-items: center;
+//         .tab-container{
+//             width: 20%;
+//             margin: 0.1rem 0;
+//             padding: 0 0.04rem;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             .tab-item{
+//                 display: inline-block;
+//                 font-size: 0.28rem;
+//                 font-weight: 600;
+//                 width: 1.28rem;
+//                 height: 0.6rem;
+//                 line-height: 0.6rem;
+//                 text-align: center;
+                
+//             }
+//             &.active{
+//                 .tab-item{
+//                     background: linear-gradient(135deg,#7848dc 5%, #301396 98%);
+//                     border-radius: 0.08rem;
+//                     color: #fff;
+//                 }
+//             }
+//         }  
+//     }
+// }
+// .actfooter{
+//     position: fixed;
+//     height: 9.3rem;
+//     bottom: 0;
+//     background: url('~themes/default/img/activity/activitybgd.png') no-repeat;
+//     background-size: 100% auto;
+// }
+.tabOutWrap{
+    &.tabFixed{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        transition: all 0.3s;
+        transform: scaleY(0);
+        transform-origin: top;
+        .tabWrap{
+            width: 7.1rem;
+            margin: 0 auto;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &.tabFixedShow{
+            transform: scaleY(1);
+        }
+    }
+}
+.activityBackHome{
+    position: fixed;
+    bottom: .7rem;
+    right: 0.2rem;
+    z-index: 100;
+    width: 1rem;
+    height: 1rem;
+    background: url('~themes/default/img/activity/h5 svg_icon_mall_shangcheng_nor@2x.png') center no-repeat;
+    background-size: contain;
+    &:active{
+        background: url('~themes/default/img/activity/h5 svg_icon_mall_shangcheng_pre@2x.png') center no-repeat;
+        background-size: contain;
+    }
+}
+.cart-thumb.activityCartThumb{
+    bottom: 1.9rem;
+}
+.tipsWrapPopup{
+    .flex-box();
+    .align-items(center);
+    .justify-content(center);
+    background: transparent;
+    .tipsOutWrap{
+        .tipsWrap{
+            position: relative;
+            width: 5.6rem;
+            height: 6.52rem;
+            background: url('~themes/default/img/activity/bg_shangyun_nvshenjie_tanchuan@2x.png') no-repeat;
+            background-size:100% 100%;
+            padding: 1.76rem 1rem 0.72rem;
+            .textWrap{
+                max-height: 6.06rem;
+                overflow-y: auto;
+                color: @text-color;
+                .textTitle{
+                    font-size: 0.3rem;
+                    line-height: 0.56rem;
+                    margin-bottom: 0.2rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                .textLine{
+                    font-size: 0.3rem;
+                    line-height: 0.56rem;
+                    margin-bottom: 0.1rem;
+                }
+                /deep/.redText{
+                    color: @redText-color;
+                }
+            }
+            .closeBut{
+                position: absolute;
+                left: 50%;
+                bottom: -1.5rem;
+                margin-left: -0.3rem;
+                fill: #fff;
+            }
+        }
+    }
+}
+.noscroll{
+    overflow: hidden;
+}
+@media screen and (min-width: @screen-sm){
+    .activityOutWrap{
+        max-width: @screen-sm;
+        margin: 0 auto;
+        .activityWrap{
+            padding-top: 192px;
+            .cashBut{
+                top: 1363px;
+            }
+            .tabWrap.tabFixed{
+                max-width: 616px;
+                margin: 0 auto;
+            }
+            .discountOutWrap{
+                padding: 0 44px;
+                .discountWrap{
+                    /deep/ .swiper-container{
+                        .swiper-pagination{
+                            bottom: .09rem;
+                            .swiper-pagination-bullet{
+                                background: #EA8379;
+                                width: 6px;
+                                height: 6px;
+                                opacity: 1;
+                                margin: 0 3px;
+                                &.swiper-pagination-bullet-active{
+                                    width: 28px;
+                                    border-radius: .04rem;
+                                }
+                            }
+                        }
+                    }
+                    height: 477px;
+                    .goodsList{
+                        padding: 15px 0px;
+                        height: 477px;
+                        .itemGoodWrap{
+                            padding: 0rem 16px 7px 16px;
+                            .itemGood{
+                                .topImgWrap{
+                                    padding: 13px 9px;
+                                    height: 140px;
+                                    border-radius: 5px;
+                                    .topImg{
+                                        height: 100%;
+                                    }
+                                }
+                                .itemName{
+                                    min-height: 40px;
+                                    margin: 0;
+                                    font-size: 15px;
+                                    padding-top: 3px;
+                                    line-height: 18px;
+                                }
+                                .itemprice{
+                                    font-size: 24px;
+                                    height: 30px;
+                                    /deep/.price-label .rmb{
+                                        font-size: 15px;
+                                    }
+                                }
+                                .itemTips{
+                                    width: 72px;
+                                    height: 38px;
+                                    font-size: 15px;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ruleTips{
+                padding: 18px 40px 0;
+                height: 142px;
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+    }
+    .tipsWrapPopup{
+        .tipsOutWrap{
+            .tipsWrap{
+                width: 411px;
+                height: 478px;
+                padding: 129px 73px 53px;
+            }
+        }
+    }
+    .tabOutWrap{
+        &.tabFixed{
+            .tabWrap{
+                width: 616px;
+            }
+        }
+    } 
+    .tabWrap{
+        /deep/.vux-tab-wrap{
+            .vux-tab-container{
+                .vux-tab{
+                    .vux-tab-item{
+                        padding: 0.18rem 0.51rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//针对pc端样式调整 0.4rem 表示距离右侧边0.4rem
+@media screen and (min-width: @screen-lg) {
+    .activityBackHome{
+        right: calc(~'(100vw - 960px) / 2 + 3.8rem') !important;
+    }
+    .child-view .activityCartThumb{
+        right: calc(~'(100vw - 960px) / 2 + 3.8rem') !important;
+    }
+}
+

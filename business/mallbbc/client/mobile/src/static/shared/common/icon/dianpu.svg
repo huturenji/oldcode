@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/common/dianpu</title>
+    <defs>
+        <circle id="path-1" cx="11" cy="11" r="11"></circle>
+        <linearGradient x1="50%" y1="16.4942527%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FA6D6D" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="18.9654168%" cy="0%" fx="18.9654168%" fy="0%" r="182.818322%" gradientTransform="translate(0.189654,0.000000),scale(0.450000,1.000000),rotate(33.160836),translate(-0.189654,-0.000000)" id="radialGradient-4">
+            <stop stop-color="#FFECEC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </radialGradient>
+        <path d="M12.6939975,5.9453038 C12.4315872,6.0981429 12.1042996,6.1764019 11.7237193,6.17885453 C11.0181759,6.17885453 10.3752045,5.79800354 9.9998305,5.15155428 C9.97318411,5.09052493 9.92857494,4.98947698 9.8451585,4.89210797 C9.74958116,4.77810203 9.57581288,4.64314662 9.28965718,4.64314662 C9.05911886,4.64314662 8.85000138,4.7435814 8.73183127,4.89766724 C8.65362113,4.99133687 8.61076021,5.08439335 8.5800602,5.15216743 C8.20933535,5.79062525 7.57155107,6.17515517 6.88049322,6.18071443 C6.18073255,6.1764019 5.54123844,5.79309831 5.168189,5.1497148 C5.14211895,5.09301841 5.09866249,4.99748886 5.03090343,4.9167568 C4.75863767,4.5710396 4.14926722,4.58890283 3.91177432,4.8902685 C3.82430424,4.99195002 3.77854239,5.09424472 3.74899506,5.16389911 C3.37479293,5.8023365 2.73122598,6.18504738 2.02915992,6.1875 C1.65495779,6.1875 1.33462478,6.11291992 1.07626817,5.96625324 C0.412433061,5.59096154 0.00057634233,4.86130712 0,4.06263192 C0,3.82660813 0.0370782485,3.58872444 0.11121554,3.35701319 C0.116421864,3.34037626 0.121051846,3.32187942 0.125124692,3.30276941 L1.56285777,0.374065402 C1.5924051,0.281622071 1.68160422,0 2.12879094,0 L11.6623193,0 C11.8459431,0.0117112507 12.1622417,0.0462114392 12.2746099,0.398101074 L13.6208192,3.27689426 C13.6260448,3.30276941 13.6324038,3.32741823 13.6382057,3.34775455 C13.7129385,3.58007897 13.7500024,3.81610275 13.7500024,4.05030749 C13.7511502,4.8397241 13.346248,5.56567913 12.6939975,5.9453038 Z" id="path-5"></path>
+        <linearGradient x1="50%" y1="16.4942527%" x2="50%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#FA6D6D" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/common/dianpu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10图标/icon/common/jingdong">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="蒙版" fill="#FD301A" xlink:href="#path-1"></use>
+            <g id="编组" mask="url(#mask-2)">
+                <g transform="translate(4.125000, 4.812500)">
+                    <rect id="矩形" stroke="none" fill="url(#linearGradient-3)" fill-rule="nonzero" x="1.375" y="2.75" width="11" height="9.625" rx="1.375"></rect>
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <use id="蒙版" stroke="none" fill="url(#radialGradient-4)" fill-rule="nonzero" xlink:href="#path-5"></use>
+                    <polygon id="矩形" stroke="none" fill="url(#linearGradient-7)" fill-rule="nonzero" opacity="0.223292151" mask="url(#mask-6)" points="4.8125 -0.6875 8.9375 -0.6875 9.625 7.5625 4.125 7.5625"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

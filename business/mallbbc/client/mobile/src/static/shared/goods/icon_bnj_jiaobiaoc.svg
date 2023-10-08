@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_bnj_jiaobiaoc</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_bnj_jiaobiaoc" transform="translate(-0.000000, 0.000000)" fill-rule="nonzero">
+            <polygon id="路径-19" fill="#F30300" points="0 0 17.9998608 0 32 13.7305739 32 32"></polygon>
+            <g id="最低" transform="translate(17.942085, 12.705263) rotate(45.000000) translate(-17.942085, -12.705263) translate(8.942085, 5.705263)" fill="#FFFFFF" font-family="SourceHanSansCN-Medium, Source Han Sans CN" font-size="9" font-weight="400">
+                <text>
+                    <tspan x="-3.55271368e-15" y="8">最低</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

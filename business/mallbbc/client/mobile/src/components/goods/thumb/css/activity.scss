@@ -1,0 +1,85 @@
+.discount-label {
+    display      : inline-block;
+    height: 32rpx;
+    // line-height: 32rpx;
+    border: 1rpx solid #f30300;
+    border-radius: 4rpx;
+    padding: 0 16rpx;
+    text-align: center;
+    color: #f30300;
+    font-size: 20rpx;
+    font-weight: bold;
+    margin-right: 12rpx;
+    margin-bottom: 14rpx;
+
+    // .circle {
+    //     width           : 15rpx;
+    //     height          : 15rpx;
+    //     border-radius   : 50%;
+    //     position        : absolute;
+    //     background-color: #fff;
+    //     top             : 50%;
+    //     transform       : translateY(-50%);
+    //     z-index: 1;
+    // }
+
+    // .left_circle {
+    //     left: -11rpx;
+    // }
+
+    // .right_circle {
+    //     right: -11rpx;
+    // }
+}
+
+.secKill.fontScaleIgnore {
+    height          : 32rpx;
+    line-height     : 28rpx;
+    border          : 2rpx solid #f30300;
+    background-color: #f30300;
+    border-radius   : 8rpx;
+    overflow        : hidden;
+    position        : relative;
+    font-size       : 22rpx;
+    margin-right    : 12rpx;
+    margin-bottom   : 4rpx;
+    padding-right   : 6rpx;
+    display: flex;
+
+
+    .seckill_font_bg {
+        width           : 260rpx;
+        height          : 38rpx;
+        background-color: #fff;
+        text-align      : center;
+        transform       : skewX(-10deg);
+        position        : absolute;
+        top             : 0rpx;
+        left            : 60rpx;
+    }
+
+    .seckill_font.fontScaleIgnore {
+        height        : 28rpx;
+        line-height   : 30rpx;
+        color         : #fff;
+        letter-spacing: 4rpx;
+        margin-left: 6rpx;
+    }
+
+    .seckill_notice.fontScaleIgnore {
+        height     : 28rpx;
+        line-height: 30rpx;
+        color      : #F30300;
+        margin-left: 10rpx;
+        z-index: 1;
+    }
+
+    .seckill_time.fontScaleIgnore {
+        height     : 28rpx;
+        line-height: 30rpx;
+        color      : #F30300;
+        margin-left:6rpx;
+        z-index: 1;
+
+    }
+}

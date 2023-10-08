@@ -1,0 +1,290 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+
+//地址弹窗的背景图样式
+/deep/ .editAddress{
+    background-color: @background-color;
+}
+.invoice-choose-popup{
+    overflow: hidden;
+}
+
+.order-confirm-container{
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    
+    padding-bottom: 1.1rem;
+
+    .box-shadow{
+        box-shadow:0 .02rem 0.08rem -.02rem rgba(125,155,250,0.1);
+    }
+    .goods-list-part{
+        .goods-item{
+            background-color: #fff;
+            margin: 0.2rem 0.2rem 0 0.2rem;
+            padding: 0.4rem 0.24rem 0.42rem;
+            border-radius: 0.16rem;
+            .number{
+                color: @third-text-color;
+            }
+        }
+
+        .gift_part{
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            .left_part{
+                flex: 3;
+            }
+            .right_part{
+                margin-top: .4rem;
+                flex: 7;
+                text-align: right;
+                font-size: .22rem;
+                color: @third-text-color;
+                overflow: hidden;
+                .list_item{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: .12rem;
+                    height: .36rem;
+                    .symbol{
+                        min-width: .5rem;
+                        display: flex;
+                        align-items: center;
+                        /deep/ .detail-symbol{
+                            min-width: .5rem;
+                            height: .28rem;
+                            line-height: .28rem;
+                            font-size: .2rem;
+                        }
+                    }
+                    .name{
+                        flex: 1;
+                        padding: 0 .1rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        line-height: .32rem;
+                        text-align: left;
+                    }
+                    .num{
+                        min-width: .6rem;
+                    }
+                }
+            }
+        }
+
+
+        .stock_item{  
+            background: @background-color;
+            border-radius: .08rem;
+            padding: .16rem .24rem;
+            margin-top: .4rem;
+            font-size: .26rem;
+            color: @text-color;
+            display: flex;
+            .title{
+                width: 1.12rem;
+            }
+
+
+            span.content{
+                flex: 1;
+                margin-left: .12rem;
+                line-height: .36rem;
+            }
+        }
+    }
+    .express-part{
+        margin: .2rem .2rem 0 .2rem;
+        margin-right: .2rem;
+        padding: 0.36rem 0.24rem;
+        background-color: #fff;
+        border-radius: 0.16rem;
+        .cell{
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+        }
+        .stock_tips{
+            width: 100%;
+            text-align: right;
+            color: @third-text-color;
+            font-size: .28rem;
+            margin-top: .16rem;
+        }
+    }
+    .cell{
+        margin: 0.2rem 0.2rem 0 0.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 0.36rem 0.24rem;
+        border-radius: 0.16rem;
+        font-size: 0.28rem;
+        .title{
+            color: @third-text-color;
+            width: 2.3rem;
+        }
+        .content{
+            color: @text-color;
+            flex: 1;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden;
+            .time{
+                text-align: right;
+                &.calendar-time{
+                    padding-right: .08rem;
+                    margin-bottom: .15rem;
+                    &:last-child{
+                        margin-bottom: 0rem;
+                    }
+                    cursor: pointer;
+                    .str{
+                        i{
+                            color: red;
+                        }
+                    }
+                }   
+            }
+            .palceholder{
+                color: @placeholder-color;
+                padding-right: 0.08rem;
+            }
+            .content-item{
+                cursor: pointer;
+                overflow: hidden;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                padding-right: 0.08rem;
+                p{
+                    white-space: nowrap;
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+
+    /*************** 底部的金额显示部分开始****************/
+    .price-part{
+        margin: 0.2rem 0.2rem 0 0.2rem;
+        border-radius: 0.16rem;
+        padding: 0.32rem 0.24rem;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .price-cell{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            margin-bottom: 0.32rem;
+            font-size: 0.28rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .title-name{
+                color: @third-text-color;
+                // .weight{
+                    // color: @secondary-text-color;
+                // }
+            }
+            .content-details{
+                color: @danger-color-light;
+                &.one{
+                    color: @text-color;
+                   
+                }
+                .pay{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    /*************** 底部的金额显示部分结束****************/
+
+   
+}
+
+
+//提交订单的按钮
+.submit-order-btn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    max-width: 1080px;
+    height: 1rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow:0px 6px 20px 0px rgba(101,112,242,0.12);
+    overflow: hidden;
+    .totle-price{
+        flex: 1;
+        padding-left: 0.4rem;
+        .totle-title{
+            font-size: 0.26rem;
+            color: @text-color;
+        }
+        .no-price{
+            color: @theme-color;
+        }
+        .pay{
+            display: inline-block;
+            color: @danger-color-light;
+            font-size: 0.38rem;
+            /deep/ .rmb{
+                font-size: 0.28rem;
+            }
+        }
+    }
+    .confirm-order{
+        &.disable{
+            opacity: 0.4;
+        }
+        width: 1.84rem;
+        height: .68rem;
+        line-height: .68rem;
+        font-size: 0.26rem;
+        cursor: pointer;
+        color: #fff;
+        text-align: center;
+        margin-right: .2rem;
+        border-radius: .34rem;
+        box-sizing: border-box;
+        &.confirm-order-apply{
+            color: @theme-color;
+            border: 1px solid @theme-color;
+        }
+    }
+}
+
+// 商品规格的插槽样式
+.goods-format{
+    color: @third-text-color;
+    font-size: 0.22rem;
+    line-height: 0.36rem;
+    margin-top: 0.12rem;
+}
+
+/deep/ .radius10.vux-popup-dialog{
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s;
+}
+
+

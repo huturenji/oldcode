@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="355px" height="193px" viewBox="0 0 355 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg_dzm_kapian</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.233883304" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="确定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07.2都在买备份-4" transform="translate(-10.000000, -210.000000)">
+            <g id="bg_dzm_kapian" transform="translate(10.000000, 210.947944)">
+                <path d="M0,20.2775751 C0.863895789,17.0550082 1.81800693,14.9141925 2.86233341,13.8551279 C5.82407724,10.8515862 10.6268666,6.97787701 17.2707014,2.23400026 C19.3055891,0.781039072 21.7435131,4.59311031e-16 24.2438859,0 L329.363436,0 C331.88525,-2.78088294e-06 334.342972,0.794473188 336.387614,2.27061206 C344.926238,8.43511224 349.837339,12.0788877 351.120917,13.2019384 C352.554886,14.4565719 353.847914,16.8151175 355,20.2775751 L0,20.2775751 Z" id="路径-9" fill="url(#linearGradient-1)"></path>
+                <rect id="矩形" fill="#FFFFFF" x="0" y="12.0520558" width="355" height="180" rx="10"></rect>
+                <g id="个人_fill" transform="translate(249.000000, 158.052056)" fill="#000000" fill-rule="nonzero" opacity="0">
+                    <rect id="矩形" x="0" y="0" width="18" height="18"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

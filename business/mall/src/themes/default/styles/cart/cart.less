@@ -1,0 +1,336 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.shop-car-container{
+    padding-top: 0.8rem;
+    height: 100%;
+    &.noTop{
+        padding-top: 0rem;
+    }
+    &.needBottom{
+        padding-bottom: 1.6rem;
+    }
+    /deep/ .mescroll-empty{
+        margin-top: 3.8rem;
+    }
+
+
+    
+}
+
+
+.shop-car-box{
+    .right-menu{
+        /deep/ .icon{
+            color: #fff;
+        }
+    }
+    /deep/ .vux-swipeout-item{
+        box-shadow:0px 4px 16px -4px rgba(125,155,250,0.1);
+        border-radius: 0.16rem;
+    }
+    //加入收藏的背景样式    
+    /deep/ .addFavorite{
+        .linear-gra-mall-addFavorite();
+    }
+
+    /deep/ .delete{
+        background-color: @btn-danger-bg-color; 
+    }
+
+    &.noFooter{
+        padding-bottom: 1.4rem;
+    }
+
+    /deep/ .vux-swipeout-content{
+        border-radius: 0.16rem;
+    }
+    /deep/ .vux-swipeout-button-box{
+        margin: 0 0.2rem;
+        border-radius: 0.16rem;
+      }
+    /deep/ .vux-swipeout-content{
+        border-radius: 0.16rem;
+        margin: 0 0.2rem;
+    }
+    .item-wrap{
+        margin-bottom: .2rem;
+    }
+    .item{
+        background-color: #fff;
+        padding: 0.4rem 0.3rem 0.4rem 0.26rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.16rem;
+        .left-choose-icon{
+            width: 0.64rem;
+            cursor: pointer;
+            .icon_mall_checkbox_sel{
+                color: @theme-color;
+            }
+        }
+        .right-goods{
+            flex: 1;
+            .detail{
+                display: flex;
+                justify-content: space-between;
+                .goodsImg{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 0.16rem;
+                    overflow: hidden;
+                    img{
+                        width: auto;
+                        height: 100%;
+                        border-radius: 0.16rem;
+                    }
+                }
+                .content{
+                    flex: 1;
+                    margin-left: 0.2rem;
+                    .goods-name{
+                        margin-top: 0.1rem;
+                        font-size: 0.28rem;
+                        line-height: 0.36rem;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        display:-webkit-box;
+                        -webkit-box-orient:vertical;
+                        -webkit-line-clamp:2; 
+                    }
+                    .goods-code{
+                        font-size: 0.22rem;
+                        color: @third-text-color;
+                        margin-top: 0.12rem;
+                    }
+                    .goods-price{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 0.2rem;
+                        font-size: 0.4rem;
+                        color: @danger-color-light;
+                        .price-lable{
+                            display: block;
+                        }
+                        .option{
+                            display: flex;
+                            align-items: center;
+                            .symble{
+                                font-size: 0.4rem;
+                                cursor: pointer;
+                                font-weight: bold;
+                                &.dis{
+                                    color: @placeholder-color;
+                                }
+                            }
+                            .number{
+                                margin: 0 0.1rem;
+                                font-size: 0.26rem;
+                                display: inline-block;
+                                width: 0.8rem;
+                                height: 0.4rem;
+                                text-align: center;
+                                line-height: 0.4rem;
+                                background-color: #F6F9FD;
+                                border-radius: 0.06rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 商品赠品相关的样式
+    .gift_part{
+        width: 100%;
+        display: flex;
+        padding:0 .44rem .2rem.44rem;
+        &:last-of-type{
+            padding-bottom: .48rem;
+        }
+        .left{
+            min-width: .5rem;
+            /deep/ .detail-symbol{
+                height: .28rem;
+                line-height: .28rem;
+                font-size: .2rem;
+            }
+            flex: 3;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .right{
+            flex: 7;
+            margin-top: -.02rem;
+            .list_item{
+                font-size: .24rem;
+                color: @secondary-text-color;
+                display: flex;
+                margin-bottom: .12rem;
+                cursor: pointer;
+                .name{
+                    padding: 0 .1rem;
+                    flex: 1;
+                    text-overflow: -o-ellipsis-lastline;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    line-height: .34rem;
+                }
+                .num{
+                    min-width: .5rem;
+                    text-align: center;
+                    font-size: .28rem;
+                }
+                .icon_right{
+                    width: .2rem;
+                }
+            }
+            .view_more{
+                font-size: .24rem;
+                color: @secondary-text-color;
+                line-height: .34rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                span{
+                    margin-right: .08rem;
+                }
+                &:active{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+.totle-option-car{
+    &.noFooter{
+        bottom: 0;
+        z-index: 1000;
+    }
+    opacity:0.98;
+    height: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.2rem;
+    background-color: #FFF7F7;
+    position: fixed;
+    max-width: @max-content-width;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    .choose-all{
+        font-size: 0.24rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        width: 1.2rem;
+        .text{
+            margin-left: 0.15rem;
+        }
+        .icon_mall_checkbox_sel{
+            color: @theme-color;
+          }
+    }
+    .totle-and-topay{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        .middle-part{
+            margin-left: 0.2rem;
+            display: flex;
+            align-items: center;
+            .totle-price-title{
+                .text{
+                    font-size: 0.24rem;
+                }
+                .price{
+                    font-size: 0.28rem;
+                    color: @danger-color-light;
+                    margin-left: .1rem;
+                }
+            }
+            .promotionalPrice{
+                font-size: 0.24rem;
+                color: @danger-color-light;
+                .text{
+
+                }
+                .price{
+                    margin-left: .1rem;
+                }
+            }
+        }
+        .btn-box{
+            display: flex;
+        }
+        .btn{
+            width: 1.64rem;
+            height: 0.68rem;
+            line-height: 0.68rem;
+            border-radius: 0.6rem;
+            text-align: center;
+            color: #fff;
+            font-size: 0.26rem;
+            border-radius: 0.34rem;
+            cursor: pointer;
+            span.types{
+                font-size: 0.24rem;
+            }
+        }
+
+        .gotoBuy{
+            border: 1px solid @theme-color;
+            color: @theme-color;
+        }
+        .gotopay{
+            color: #fff;
+            margin-left: 0.2rem;
+        }
+    }
+    .addCollection-and-delete{
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        &>div{
+            width: 1.64rem;
+            height: 0.68rem;
+            line-height: 0.68rem;
+            text-align: center;
+            color: @theme-color;
+            border: 1px solid @theme-color;
+            background-color: transparent;
+            border-radius: 0.34rem;
+            font-size: 0.26rem;
+        }
+        .delete-btn{
+            margin-left: 0.2rem;
+        }
+    }
+}
+// 商品规格的插槽样式
+.goods-format{
+    color: @third-text-color;
+    font-size: 0.22rem;
+    line-height: 0.36rem;
+    margin-top: 0.12rem;
+}
+.purchaseApplyBox{
+    /deep/ .vux-popup-dialog{
+        border-radius: 10px 10px 0 0;
+      }
+}
+.addressPopupBox{
+    /deep/ .vux-popup-dialog{
+        background: @background-color;
+      }
+}
+

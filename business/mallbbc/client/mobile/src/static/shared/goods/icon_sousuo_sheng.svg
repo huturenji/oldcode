@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="44px" viewBox="0 0 50 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_sousuo_sheng</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="50" height="44"></rect>
+        <linearGradient x1="9.59207414%" y1="37.3661388%" x2="88.3480055%" y2="55.2381199%" id="linearGradient-3">
+            <stop stop-color="#FA0700" offset="0%"></stop>
+            <stop stop-color="#FF0300" offset="100%"></stop>
+        </linearGradient>
+        <path d="M4.15564297,0 L48.912804,0 L48.912804,0 L41.3509511,18.3797582 C41.3193894,18.4564719 41.3210002,18.5428299 41.355401,18.6183132 L43.6285994,23.6062408 C43.8547307,24.1024257 43.641665,24.6883012 43.1496212,24.9233068 L5.30148092,43 L5.30148092,43 L7.48772565,30.3696118 C7.63025296,29.546202 7.24581835,28.7209758 6.52374868,28.3003417 L1.18376401,25.1895894 C0.470258402,24.7739441 0.0855474513,23.9625337 0.215345421,23.1470561 L3.85937243,0.252843198 C3.88255486,0.107195649 4.00816201,-6.39042002e-16 4.15564297,0 Z" id="path-4"></path>
+        <filter x="-19.0%" y="-22.1%" width="146.6%" height="153.5%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.759765625   0 0 0 0 0.0760779032   0 0 0 0 0.0760779032  0 0 0 0.329190341 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-19.0%" y="-22.1%" width="146.6%" height="153.5%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="4" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.630640719   0 0 0 0 0.364710366  0 0 0 0.879889642 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="91.7785671%" y1="44.6922022%" x2="31.8012531%" y2="44.6922022%" id="linearGradient-8">
+            <stop stop-color="#FFFEEC" stop-opacity="0.427666084" offset="0%"></stop>
+            <stop stop-color="#FF2D2A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="搜索" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02.2搜素瀑布流" transform="translate(-124.000000, -721.000000)">
+            <g id="card1备份-4" transform="translate(10.000000, 481.000000)">
+                <g id="抢" transform="translate(10.000000, 240.000000)">
+                    <g id="icon_sousuo_sheng" transform="translate(104.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="蒙版"></g>
+                        <g id="省" mask="url(#mask-2)">
+                            <g transform="translate(-0.301481, 0.000000)">
+                                <path d="M48.9163571,0 L50.3014809,4.37464869 C49.7963312,3.52250828 48.8791704,3 47.8885547,3 L47.6586145,3 L47.6586145,3 L48.9163571,0 Z" id="路径-2" fill="#C80505"></path>
+                                <g id="路径-5" stroke-width="1" fill="none">
+                                    <mask id="mask-5" fill="white">
+                                        <use xlink:href="#path-4"></use>
+                                    </mask>
+                                    <g id="蒙版">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-4"></use>
+                                        <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-4"></use>
+                                    </g>
+                                    <polygon id="路径-3" fill="url(#linearGradient-8)" mask="url(#mask-5)" points="29.3014809 -6.99999999 21.3014809 18.5 25.8014809 23 5.30148092 43 -8.19851908 -13.5890943"></polygon>
+                                </g>
+                                <g id="05页签Tag/1线性/a2优惠券红色" stroke-width="1" fill="none" transform="translate(5.301481, 1.500000)">
+                                    <g id="05页签Tag/a面6" fill="#FFFFFF" fill-rule="nonzero">
+                                        <path d="M9.468,20.672 L9.468,17.612 L8.232,17.612 L8.232,20.672 L9.468,20.672 Z M6.768,28.748 L6.768,28.292 L11.916,28.292 L11.916,28.724 L13.14,28.724 L13.14,22.148 L9.108,22.148 C10.476,21.644 11.676,21.056 12.684,20.372 C13.044,20.696 13.356,21.02 13.644,21.332 L14.52,20.444 C13.68,19.616 12.648,18.776 11.436,17.924 L10.596,18.74 C11.028,19.04 11.424,19.34 11.808,19.64 C9.888,20.852 7.116,21.74 3.516,22.304 L4.032,23.432 L5.556,23.144 L5.556,28.748 L6.768,28.748 Z M4.632,21.356 C5.664,20.708 6.54,19.952 7.236,19.088 L6.36,18.308 C5.7,19.112 4.884,19.82 3.9,20.42 L4.632,21.356 Z M11.916,23.852 L6.768,23.852 L6.768,23.192 L11.916,23.192 L11.916,23.852 Z M11.916,25.484 L6.768,25.484 L6.768,24.836 L11.916,24.836 L11.916,25.484 Z M11.916,27.188 L6.768,27.188 L6.768,26.468 L11.916,26.468 L11.916,27.188 Z" id="省"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

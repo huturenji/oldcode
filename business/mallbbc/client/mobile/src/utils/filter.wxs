@@ -1,0 +1,104 @@
+var filters = {
+  toFix: function (value) {
+    return Number(value).toFixed(2); // 将字符串数字转成纯数字 此处2为保留两位小数，保留几位小数，这里写几    
+  },
+  toFixNum:function(value,num){
+	 return Number(value).toFixed(num); //将字符串转成纯数字，保留几位小数
+  },
+  toStr: function (value) {
+    return value.toString();
+  },
+  toNum: function (value) {
+    return Number(value);
+  },
+  toFloat: function (value) {
+    return parseFloat(value);
+  },
+  toLength: function (value) {
+    //获取字符传的长度
+    return value.toString().length;
+  },
+  // 价格分割
+  toSplit: function (value) {
+    return value.toString().split('.');
+  },
+  //将阿拉伯数字转换为文字
+  toReplace: function (value) {
+    var N = ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
+    return N[value];
+  },
+  //会员名称匿名显示
+  toAnonymous:function(value){
+	  return value.substring(0,1) + '****' + value.substring(value.length - 2,value.length - 1)
+  },
+  //时间戳转换为年月日
+  getDateTime: function (value) {
+    var value = value - 0; //如果是字符串，先转换成数字
+    //不能使用 new Date()
+
+    var time = getDate(value);
+    var year = time.getFullYear();
+    var month = time.getMonth() + 1;
+    var date = time.getDate();
+    var hour = time.getHours();
+    var minute = time.getMinutes();
+    var second = time.getSeconds();
+    month = month < 10 ? "0" + month : month;
+    date = date < 10 ? "0" + date : date;
+    hour = hour < 10 ? "0" + hour : hour;
+    minute = minute < 10 ? "0" + minute : minute;
+    second = second < 10 ? "0" + second : second;
+    return year + "-" + month + "-" + date;
+  },
+  //时间戳转换为年月日 时分秒
+  getDateTime1: function (value) {
+    var value = value - 0; //如果是字符串，先转换成数字
+    //不能使用 new Date()
+
+    var time = getDate(value * 1000);
+    var year = time.getFullYear();
+    var month = time.getMonth() + 1;
+    var date = time.getDate();
+    var hour = time.getHours();
+    var minute = time.getMinutes();
+    var second = time.getSeconds();
+    month = month < 10 ? "0" + month : month;
+    date = date < 10 ? "0" + date : date;
+    hour = hour < 10 ? "0" + hour : hour;
+    minute = minute < 10 ? "0" + minute : minute;
+    second = second < 10 ? "0" + second : second;
+    return year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+  },
+  //数组反转
+  toReverse: function (value) {
+    return value.reverse();
+  },
+  //字符串截取
+  toSubstring: function (value, start, end) {
+    return value.substring(start, end);
+  }
+};
+module.exports = {
+  toFix: filters.toFix,
+  toStr: filters.toStr,
+  toNum: filters.toNum,
+  //暴露接口调用
+  toLen: filters.toLen,
+  toSplit: filters.toSplit,
+  toReplace: filters.toReplace,
+  //将数字 1,2,3--->替换成 一 二 三
+  getDateTime: filters.getDateTime,
+  //将时间戳转换为年月日
+  getDateTime1: filters.getDateTime1,
+  //将时间戳转换为年月日 时分秒
+  toLength: filters.toLength,
+  //字符串的长度
+  toReverse: filters.toReverse,
+  //数组的反转
+  toFloat: filters.toFloat,
+  //数字字符串转数字
+  toSubstring: filters.toSubstring ,//字符串的截取
+  toFixNum:filters.toFixNum,//保留几位小数
+  toAnonymous:filters.toAnonymous, //会员名称匿名显示
+
+};

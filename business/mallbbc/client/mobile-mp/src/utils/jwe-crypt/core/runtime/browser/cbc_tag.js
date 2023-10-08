@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var buffer_utils_1=require("../../lib/buffer_utils");function cbcTag(e,u,t,r,i,c){u=(0,buffer_utils_1.concat)(e,u,t,(0,buffer_utils_1.uint64be)(e.length<<3));return require("../../util/sm3").hmacSm3(u,i).slice(0,c>>3)}exports.default=cbcTag;

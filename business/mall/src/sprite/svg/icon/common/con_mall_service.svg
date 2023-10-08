@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    
+    <defs>
+        <linearGradient x1="90.37082%" y1="80.3848706%" x2="10.3591748%" y2="11.5410342%" id="linearGradient-1">
+            <stop stop-color="#6829E4" offset="0%"></stop>
+            <stop stop-color="#A2A9F7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M9,0.5 C13.6944204,0.5 17.5,4.30557963 17.5,9 C17.5,13.6944204 13.6944204,17.5 9,17.5 C7.81985486,17.5 6.69588313,17.259493 5.67442502,16.8248192 C4.9379353,16.5114116 3.08379603,17.6989811 2.47126306,17.2010615 C1.93937192,16.7686945 2.63170578,14.6713947 2.21775167,14.1243712 C1.13956862,12.6995962 0.5,10.9244877 0.5,9 C0.5,4.30557963 4.30557963,0.5 9,0.5 Z M12.5,8.6 C12.0411788,8.6 11.6625482,8.94333667 11.6070123,9.38710591 L11.6,9.5 C11.6,10.6263609 10.4640877,11.6 9,11.6 C7.53591227,11.6 6.4,10.6263609 6.4,9.5 C6.4,9.00294373 5.99705627,8.6 5.5,8.6 C5.00294373,8.6 4.6,9.00294373 4.6,9.5 C4.6,11.6873476 6.59809448,13.4 9,13.4 C11.4019055,13.4 13.4,11.6873476 13.4,9.5 C13.4,9.00294373 12.9970563,8.6 12.5,8.6 Z" id="path-2"></path>
+        <filter x="-38.2%" y="-32.4%" width="176.5%" height="176.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.635294118   0 0 0 0 0.662745098   0 0 0 0 0.968627451  0 0 0 0.6 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="17商城" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02.1我的商城（线上版本）" transform="translate(-16.000000, -437.000000)">
+            <g id="h5-svg/icon/mall/kefu" transform="translate(16.000000, 437.000000)">
+                <g id="客服" transform="translate(2.500000, 2.000000)">
+                    <g id="形状结合">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

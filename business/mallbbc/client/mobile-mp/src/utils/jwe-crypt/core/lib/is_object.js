@@ -1,0 +1,1 @@
+"use strict";function isObject(e){return!!e&&e.constructor===Object}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=isObject;

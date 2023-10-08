@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn/common/zhiding</title>
+    <g id="btn/common/zhiding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="椭圆形" stroke="#FFFFFF" fill-opacity="0.94" fill="#F3F3F3" opacity="0.9" cx="24" cy="24" r="23.5"></circle>
+        <line x1="14.0498969" y1="19.3" x2="33.0498969" y2="19.3" id="路径-9" stroke="#000000" stroke-width="2" stroke-linecap="round"></line>
+        <line x1="23.5" y1="20" x2="23.5" y2="34.742335" id="路径-10" stroke="#000000" stroke-width="2" stroke-linecap="round"></line>
+        <line x1="23.3498812" y1="19.7" x2="18.353834" y2="24.6003685" id="路径-11" stroke="#000000" stroke-width="2" stroke-linecap="round"></line>
+        <line x1="28.3498812" y1="19.7" x2="23.353834" y2="24.6003685" id="路径-11备份" stroke="#000000" stroke-width="2" stroke-linecap="round" transform="translate(25.851858, 22.150184) scale(-1, 1) translate(-25.851858, -22.150184) "></line>
+    </g>
+</svg>

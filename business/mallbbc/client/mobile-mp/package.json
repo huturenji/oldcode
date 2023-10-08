@@ -1,0 +1,208 @@
+{
+  "name": "mini-program",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "weixindev": "npm run dev:custom weixin-dev-g2-jushihui",
+    "weixinsit": "npm run dev:custom weixin-sit-g2-jushihui",
+    "weixinuat": "npm run dev:custom weixin-uat-g2-jushihui",
+    "weixinbankuat": "npm run dev:custom weixin-uat-g2bank-jushihui",
+    "buildsit": "npm run build:custom weixin-sit-g2-jushihui",
+    "builduat": "npm run build:custom weixin-uat-g2-jushihui",
+    "buildpro": "npm run build:custom weixin-pro-g2-jushihui",
+    "buildbankuat": "npm run build:custom weixin-uat-g2bank-jushihui",
+    "buildbankpro": "npm run build:custom weixin-pro-g2bank-jushihui",
+    "serve": "npm run dev:custom h5-dev",
+    "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
+    "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
+    "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
+    "build:mp-360": "cross-env NODE_ENV=production UNI_PLATFORM=mp-360 vue-cli-service uni-build",
+    "build:mp-alipay": "cross-env NODE_ENV=production UNI_PLATFORM=mp-alipay vue-cli-service uni-build",
+    "build:mp-baidu": "cross-env NODE_ENV=production UNI_PLATFORM=mp-baidu vue-cli-service uni-build",
+    "build:mp-jd": "cross-env NODE_ENV=production UNI_PLATFORM=mp-jd vue-cli-service uni-build",
+    "build:mp-kuaishou": "cross-env NODE_ENV=production UNI_PLATFORM=mp-kuaishou vue-cli-service uni-build",
+    "build:mp-lark": "cross-env NODE_ENV=production UNI_PLATFORM=mp-lark vue-cli-service uni-build",
+    "build:mp-qq": "cross-env NODE_ENV=production UNI_PLATFORM=mp-qq vue-cli-service uni-build",
+    "build:mp-toutiao": "cross-env NODE_ENV=production UNI_PLATFORM=mp-toutiao vue-cli-service uni-build",
+    "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
+    "build:mp-xhs": "cross-env NODE_ENV=production UNI_PLATFORM=mp-xhs vue-cli-service uni-build",
+    "build:quickapp-native": "cross-env NODE_ENV=production UNI_PLATFORM=quickapp-native vue-cli-service uni-build",
+    "build:quickapp-webview": "cross-env NODE_ENV=production UNI_PLATFORM=quickapp-webview vue-cli-service uni-build",
+    "build:quickapp-webview-huawei": "cross-env NODE_ENV=production UNI_PLATFORM=quickapp-webview-huawei vue-cli-service uni-build",
+    "build:quickapp-webview-union": "cross-env NODE_ENV=production UNI_PLATFORM=quickapp-webview-union vue-cli-service uni-build",
+    "dev:app-plus": "cross-env NODE_ENV=development UNI_PLATFORM=app-plus vue-cli-service uni-build --watch",
+    "dev:custom": "cross-env NODE_ENV=development uniapp-cli custom",
+    "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
+    "dev:mp-360": "cross-env NODE_ENV=development UNI_PLATFORM=mp-360 vue-cli-service uni-build --watch",
+    "dev:mp-alipay": "cross-env NODE_ENV=development UNI_PLATFORM=mp-alipay vue-cli-service uni-build --watch",
+    "dev:mp-baidu": "cross-env NODE_ENV=development UNI_PLATFORM=mp-baidu vue-cli-service uni-build --watch",
+    "dev:mp-jd": "cross-env NODE_ENV=development UNI_PLATFORM=mp-jd vue-cli-service uni-build --watch",
+    "dev:mp-kuaishou": "cross-env NODE_ENV=development UNI_PLATFORM=mp-kuaishou vue-cli-service uni-build --watch",
+    "dev:mp-lark": "cross-env NODE_ENV=development UNI_PLATFORM=mp-lark vue-cli-service uni-build --watch",
+    "dev:mp-qq": "cross-env NODE_ENV=development UNI_PLATFORM=mp-qq vue-cli-service uni-build --watch",
+    "dev:mp-toutiao": "cross-env NODE_ENV=development UNI_PLATFORM=mp-toutiao vue-cli-service uni-build --watch",
+    "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
+    "dev:mp-xhs": "cross-env NODE_ENV=development UNI_PLATFORM=mp-xhs vue-cli-service uni-build --watch",
+    "dev:quickapp-native": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-native vue-cli-service uni-build --watch",
+    "dev:quickapp-webview": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-webview vue-cli-service uni-build --watch",
+    "dev:quickapp-webview-huawei": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-webview-huawei vue-cli-service uni-build --watch",
+    "dev:quickapp-webview-union": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-webview-union vue-cli-service uni-build --watch",
+    "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
+    "serve:quickapp-native": "node node_modules/@dcloudio/uni-quickapp-native/bin/serve.js",
+    "test:android": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=android jest -i",
+    "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
+    "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
+    "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+  },
+  "pre-commit": [],
+  "dependencies": {
+    "@dcloudio/uni-app-plus": "^2.0.1-33520211229002",
+    "@dcloudio/uni-h5": "^2.0.1-33520211229002",
+    "@dcloudio/uni-helper-json": "*",
+    "@dcloudio/uni-i18n": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-360": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-alipay": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-baidu": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-kuaishou": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-lark": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-qq": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-toutiao": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-vue": "^2.0.1-33520211229002",
+    "@dcloudio/uni-mp-weixin": "^2.0.1-33520211229002",
+    "@dcloudio/uni-quickapp-native": "^2.0.1-33520211229002",
+    "@dcloudio/uni-quickapp-webview": "^2.0.1-33520211229002",
+    "@dcloudio/uni-stat": "^2.0.1-33520211229002",
+    "@vue/shared": "^3.2.26",
+    "autoprefixer": "^8.0.0",
+    "compile-less": "^0.0.1",
+    "core-js": "^3.6.5",
+    "flyio": "^0.6.14",
+    "gm-crypto": "^0.1.7",
+    "less-loader": "^4.1.0",
+    "miniprogram-ci": "^1.9.5",
+    "pre-commit": "^1.2.2",
+    "regenerator-runtime": "^0.12.1",
+    "sass-loader": "^8.0.2",
+    "sass-resources-loader": "^2.2.4",
+    "uview-ui": "^2.0.33",
+    "vue": "^2.6.11",
+    "vuex": "^3.2.0",
+    "we-rich": "^1.0.2"
+  },
+  "devDependencies": {
+    "@babel/runtime": "~7.12.0",
+    "@dcloudio/types": "*",
+    "@dcloudio/uni-automator": "^2.0.1-33520211229002",
+    "@dcloudio/uni-cli-i18n": "^2.0.1-33520211229002",
+    "@dcloudio/uni-cli-shared": "^2.0.1-33520211229002",
+    "@dcloudio/uni-migration": "^2.0.1-33520211229002",
+    "@dcloudio/uni-template-compiler": "^2.0.1-33520211229002",
+    "@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.1-33520211229002",
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.1-33520211229002",
+    "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.1-33520211229002",
+    "@dcloudio/webpack-uni-mp-loader": "^2.0.1-33520211229002",
+    "@dcloudio/webpack-uni-pages-loader": "^2.0.1-33520211229002",
+    "@hyoga/uni-socket.io": "^1.0.1",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-plugin-import": "^1.13.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "jest": "^25.5.4",
+    "mini-types": "*",
+    "miniprogram-api-typings": "*",
+    "postcss-comment": "^2.0.0",
+    "sass": "^1.38.1",
+    "scss": "^0.2.4",
+    "uni-read-pages": "^1.0.5",
+    "uni-simple-router": "^2.0.7",
+    "vue-template-compiler": "^2.6.11",
+    "postcss-px-to-viewport": "^1.1.1"
+  },
+  "browserslist": [
+    "Android >= 4",
+    "ios >= 8"
+  ],
+  "uni-app": {
+    "scripts": {
+      "weixin-dev-g2-jushihui": {
+        "title": "微信小程序-dev巨拾惠环境",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin",
+          "ENV": "dev",
+          "SERVICE": "mallbbcg2",
+          "APPNAME": "jushihui"
+        },
+        "define": {
+          "JUSHIHUI": true
+        }
+      },
+      "weixin-sit-g2-jushihui": {
+        "title": "微信小程序-sit巨拾惠环境",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin",
+          "ENV": "sit",
+          "SERVICE": "mallbbcg2",
+          "APPNAME": "jushihui"
+        },
+        "define": {
+          "JUSHIHUI": true
+        }
+      },
+      "weixin-uat-g2-jushihui": {
+        "title": "微信小程序-uat巨拾惠环境",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin",
+          "ENV": "uat",
+          "SERVICE": "mallbbcg2",
+          "APPNAME": "jushihui"
+        },
+        "define": {
+          "JUSHIHUI": true
+        }
+      },
+      "weixin-pro-g2-jushihui": {
+        "title": "微信小程序-pro巨拾惠环境",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin",
+          "ENV": "pro",
+          "SERVICE": "mallbbcg2",
+          "APPNAME": "jushihui"
+        },
+        "define": {
+          "JUSHIHUI": true
+        }
+      },
+      "weixin-uat-g2bank-jushihui": {
+        "title": "微信小程序-pro巨拾惠环境",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin",
+          "ENV": "uat",
+          "SERVICE": "mallbbcg2bank",
+          "APPNAME": "jushihui"
+        },
+        "define": {
+          "JUSHIHUI": true
+        }
+      },
+      "weixin-pro-g2bank-jushihui": {
+        "title": "微信小程序-uat巨拾惠环境",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin",
+          "ENV": "pro",
+          "SERVICE": "mallbbcg2bank",
+          "APPNAME": "jushihui"
+        },
+        "define": {
+          "JUSHIHUI": true
+        }
+      }
+    }
+  }
+}

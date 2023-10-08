@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_sousuo_jiangjia</title>
+    <defs>
+        <polygon id="path-1" points="0 0 14 -6.69013644e-09 14.976428 1.99999999 14.976428 18 0 18"></polygon>
+        <linearGradient x1="43.1310051%" y1="0.729348776%" x2="39.2952161%" y2="89.4033384%" id="linearGradient-3">
+            <stop stop-color="#FFEF00" offset="0%"></stop>
+            <stop stop-color="#FFC1C1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M4.38459099,-6.69012934e-09 L14,-6.69012934e-09 L14,-6.69012934e-09 L10.1504024,6.61763428 C10.067091,6.76085044 10.1156534,6.94448732 10.2588695,7.02779875 C10.3046765,7.0544455 10.3567245,7.06848297 10.4097182,7.06848297 L12.1660784,7.06848297 C12.3317638,7.06848297 12.4660784,7.20279754 12.4660784,7.36848297 C12.4660784,7.45125157 12.4318829,7.53034276 12.3715838,7.58704075 L1.297263,18 L1.297263,18 L3.42863825,9.37194587 C3.46837286,9.21109556 3.37018919,9.04848936 3.20933888,9.00875475 C3.18579885,9.00293969 3.16164064,8.99999999 3.13739301,8.99999999 L1.05078688,8.99999999 C0.885101451,8.99999999 0.750786876,8.86568542 0.750786876,8.69999999 C0.750786876,8.66210573 0.757966185,8.62455453 0.77194502,8.58933284 L4.10574913,0.189332836 C4.15111008,0.0750393891 4.26162511,-6.69012909e-09 4.38459099,-6.69012934e-09 Z" id="path-4"></path>
+        <filter x="-10.1%" y="-8.3%" width="143.7%" height="127.8%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="2" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.580899004   0 0 0 0 0.116554677   0 0 0 0 0.0879539536  0 0 0 0.25904174 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="搜索" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02.1搜索" transform="translate(-245.000000, -1011.000000)">
+            <g id="列表" transform="translate(10.000000, 176.000000)">
+                <g id="list1备份-22" transform="translate(0.000000, 760.000000)">
+                    <g id="编组-2" transform="translate(144.000000, 72.000000)">
+                        <g id="05页签Tag/1线性/a2优惠券红色" transform="translate(91.000000, 3.000000)">
+                            <g id="icon_sousuo_jiangjia" transform="translate(0.000000, 0.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="蒙版"></g>
+                                <g id="路径-4" mask="url(#mask-2)">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                    <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                </g>
+                                <polygon id="路径-2" fill="#884100" mask="url(#mask-2)" points="14 -6.69012934e-09 14.976428 1.99999999 12.9148837 1.99999999"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

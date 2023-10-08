@@ -1,0 +1,155 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.mine-wrap{
+    background: #fff;
+
+    .tab{
+        width: 100%;
+        display: flex;
+        padding-top: .42rem;
+        padding-bottom: .2rem;
+        .item{
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+            line-height: .5rem;
+            font-size: .3rem;
+            color: #fff;
+            transition: all 0.3s;
+            &.active{
+                font-size: .34rem;
+                font-weight: 500;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: .52rem;
+                    height: .04rem;
+                    border-radius: .02rem;
+                    background-color: #fff;
+                    left: 50%;
+                    margin-left: -.26rem;
+                    bottom: -0.1rem;
+                }
+            }
+        }
+    }
+
+    ul{
+        margin-top: 0.3rem;
+        li{
+            width: 33%;
+            text-align: center;
+            font-size: 0.26rem;
+            color: @third-text-color;
+        }
+    }
+    .bgbox{
+        position: relative;
+        background:url(~themes/default/img/mine/bg_mall_wode.png) 0 0 no-repeat;
+        background-size: 100% 2.46rem;
+        height: 3.55rem;
+        .warp-item-section{
+            &.btm1{
+                bottom: 0rem;
+            }
+            position: absolute;
+            width: ~'calc(100% - .6rem)';
+            left: .3rem;
+            bottom: .3rem;
+            background: #FFFFFF;
+            border-radius: @border-radius-base;
+            box-shadow: 0px .06rem .4rem -.04rem rgba(250, 125, 125, 0.22);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 0.5rem 0.3rem 0.3rem;
+            .item-content{
+                .icon-box{
+                    position: relative;
+                }
+                /deep/ .cart-num{ //重写小气泡的样式
+                    right: -.2rem;
+                    &.middle{
+                        right: -.3rem;
+                    }
+                    &.big{
+                        right: -.46rem;
+                    }
+                }
+                position: relative;
+                cursor: pointer;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                align-items: center;
+                .item-content-text{
+                    position: relative;
+                    display: inline-block;
+                    color: @secondary-text-color;
+                    font-size: 0.24rem;
+                    padding-top: 0.08rem;
+                }
+                .item-content-text-small{
+                    color: @third-text-color;
+                    font-size: 0.2rem;
+                    padding-top: 0.03rem;
+                    white-space: nowrap;
+                }
+                .left-shadow{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background: url(~themes/default/img/mine/icon_mall_touyin.svg) no-repeat;
+                    background-position: -0.1rem center;
+                }
+            }
+            .more-flex{
+                flex: 1.2;
+            }
+
+        }
+    }
+
+    .section-mine{
+        margin-top: @white-space;
+        background: #fff;
+        padding: 0 0 0 0.3rem;
+        .mine-item{
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            p{
+                margin-left: 0.16rem;
+                flex: 1;
+                height: 1rem;
+                color: #000;
+                position: relative;
+                font-size: 0.3rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: 0.3rem;
+            }
+
+        }
+        .bt1px{
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 1px;
+                border-bottom: 1px solid @border-color-base;
+                transform: scaleY(0.5);
+                -webkit-transform: scaleY(0.5);
+            }
+        }
+
+
+    }
+}

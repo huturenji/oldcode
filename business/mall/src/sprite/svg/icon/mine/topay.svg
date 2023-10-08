@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+   
+    <defs>
+        <filter x="-50.0%" y="-50.0%" width="200.0%" height="200.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.685191068   0 0 0 0 0.681859756  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="14.0532257%" y1="24.0628543%" x2="88.0687684%" y2="75.9371457%" id="linearGradient-2">
+            <stop stop-color="#FF7A77" offset="0%"></stop>
+            <stop stop-color="#E82B29" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="25.3189851%" y1="31.0973017%" x2="88.0687684%" y2="78.125%" id="linearGradient-3">
+            <stop stop-color="#FF7A77" offset="0%"></stop>
+            <stop stop-color="#E82B29" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.0532257%" y1="0%" x2="88.0687684%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FF7A77" offset="0%"></stop>
+            <stop stop-color="#E82B29" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="h5-svg/icon/mall/daifukuai" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-2" filter="url(#filter-1)" transform="translate(2.857143, 1.571429)">
+            <path d="M4.18071433,1.85335918 L13.0378572,1.85335918 C13.9057332,1.85335918 14.6092858,2.55691172 14.6092858,3.42478775 L14.6092858,8.92478775 C14.6092858,9.79266379 13.9057332,10.4962163 13.0378572,10.4962163 L4.18071433,10.4962163 C3.3128383,10.4962163 2.60928576,9.79266379 2.60928576,8.92478775 L2.60928576,3.42478775 C2.60928576,2.55691172 3.3128383,1.85335918 4.18071433,1.85335918 Z" id="矩形" fill="url(#linearGradient-2)" opacity="0.369163876" transform="translate(8.609286, 6.174788) rotate(-15.000000) translate(-8.609286, -6.174788) "></path>
+            <rect id="矩形" fill="url(#linearGradient-3)" x="0" y="4" width="16" height="12" rx="1.57142857"></rect>
+            <path d="M10.5,7 L16,7 L16,7 L16,12 L10.5,12 C9.11928813,12 8,10.8807119 8,9.5 C8,8.11928813 9.11928813,7 10.5,7 Z" id="矩形" fill="#FCBEBE"></path>
+            <circle id="椭圆形" fill="url(#linearGradient-4)" cx="10.5" cy="9.5" r="1.5"></circle>
+        </g>
+    </g>
+</svg>

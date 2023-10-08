@@ -1,0 +1,17 @@
+var filters = {
+  toFix: function (value) {
+    return Number(value).toFixed(2); // 将字符串数字转成纯数字 此处2为保留两位小数，保留几位小数，这里写几    
+  },
+  toFixNum:function(value,num){
+	 return Number(value).toFixed(num); //将字符串转成纯数字，保留几位小数
+  },
+  // 价格分割
+  toSplit: function (value) {
+    return value.toString().split('.');
+  }
+};
+module.exports = {
+  toFix: filters.toFix,
+  toSplit: filters.toSplit,
+  toFixNum:filters.toFixNum,//保留几位小数
+};

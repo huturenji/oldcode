@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="BPLUS-APP-INFO" content="name=bbc-mobile">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <title>
+            <%= htmlWebpackPlugin.options.title %>
+        </title>
+        <link rel="icon" href="data:;base64,=">
+        <link rel="stylesheet" href="<%= BASE_URL %>static/index.<%= VUE_APP_INDEX_CSS_HASH %>.css" />
+		<!-- <link href="./thirdparty/video-js.min.css" rel="stylesheet"> -->
+		<style>.video-js .vjs-control-bar{z-index: 3;}</style>
+        <style>
+            *{box-sizing: border-box;}
+            @media screen and (max-width: 616px){ html {font-size: 13.33333333vw;} #htmlBg{padding-top: var(--titleBarFillHeight,0px);}}
+            @media screen and (min-width: 616px){ html {font-size: 50px;} #htmlBg{margin:0 auto; padding-top: var(--titleBarFillHeight,0px);}}
+            @media screen and (min-width: 960px){ html {font-size: 73.33333333px;} #htmlBg{margin:0 auto;width: 960px !important; padding-top: var(--titleBarFillHeight,0px);}}
+            #htmlBg .topbgbox{height:120px;padding-top: 35px;border-radius: 8px;}
+            #htmlBg .topbg{background: #eaeff4;height:120px;margin: 0 15px 32px;border-radius: 8px;}
+            #htmlBg .htmlbglist{margin: 0 15px 13px; display: flex;justify-content:space-between}
+            #htmlBg .htmlbgitem{flex: 1;background: #eaeff4;height:16px;border-radius: 2px;}
+            #htmlBg .left{margin-right: 16px;}
+        </style>
+        <script type="text/javascript">
+            //高德地图初始化获取安全密钥的参数
+            window._AMapSecurityConfig = {
+                securityJsCode:'9fe03dc70851a471269cc32592d6f37e'  
+            }        
+        </script>
+    </head>
+    <body style="background-color: #EFF2F5;">
+        <noscript>
+            <strong>Please enable JavaScript to continue.</strong>
+        </noscript>
+        <div id="app">
+		</div>
+        <div id='htmlBg'>
+        </div>
+        <script type="text/javascript">
+            try{//首页添加html骨架图
+                if(location.hash.substring(2,location.hash.length).trim().length==0 || location.hash.indexOf('#/?')==0){
+                    var bgdomWrap = document.getElementById('htmlBg');
+                    bgdomWrap.innerHTML = "<div class='topbgbox'><div class='topbg'></div><div class='htmlbglist'><div class='htmlbgitem left'></div><div class='htmlbgitem'></div></div><div class='htmlbglist' style='margin-Bottom:0.48rem;'><div class='htmlbgitem' style='width:100%;'></div></div></div>";
+                }else{
+                    document.getElementById('htmlBg').remove();
+                } 
+            }catch(error){}
+        </script>
+        <!-- built files will be auto injected -->
+        <script src="./thirdparty/vue.js?t=<%=TIMESTAMP_ENV%>"></script>
+        <script src="./thirdparty/vue-router.min.js?t=<%=TIMESTAMP_ENV%>"></script>
+        <script src="./thirdparty/vuex.min.js?t=<%=TIMESTAMP_ENV%>"></script>
+        <script src="./thirdparty/jweixin-1.6.0.js?t=<%=TIMESTAMP_ENV%>"></script>
+		<script src="./thirdparty/swp-utils.js?t=<%=TIMESTAMP_ENV%>"></script>
+		<script src="./thirdparty/sinosdk/sinosdk.js?t=<%=TIMESTAMP_ENV%>"></script>
+        <script src="./thirdparty/protocol/sino-protocol.js?t=<%=TIMESTAMP_ENV%>"></script>
+        <script src="https://webapi.amap.com/maps?v=1.4.15&key=135fabf79ec64c008690c4099109f48f"></script>
+        <!-- <script src="./thirdparty/video.min.js"></script> -->
+    </body>
+</html>

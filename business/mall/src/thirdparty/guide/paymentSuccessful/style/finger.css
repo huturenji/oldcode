@@ -1,0 +1,12 @@
+.finger{
+    background-image: url('finger.png');
+    background-repeat: no-repeat;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-size: 26rem 1.3rem;
+    animation: girlRun 2s steps(20,end) infinite;
+}
+@-webkit-keyframes girlRun{
+    0%{background-position: 0px 0;}
+    100%{background-position: -26rem 0;}	
+}

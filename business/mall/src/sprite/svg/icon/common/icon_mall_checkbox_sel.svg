@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+   
+    <g id="h5-svg/icon/mall/checkbox_sel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选中" transform="translate(-0.000000, 0.000000)">
+            <circle id="椭圆形" fill="currentColor" cx="11.1052632" cy="11.1052632" r="10.5263158"></circle>
+            <path d="M8.88884432,14.6838099 C8.50198307,14.7072091 8.20733889,15.0397909 8.23073811,15.4266521 C8.25413734,15.8135134 8.58671916,16.1081576 8.9735804,16.0847583 L14.1374535,15.7724225 C14.5213268,15.749204 14.8150006,15.4213467 14.7959811,15.0372425 L14.2999941,5.02062383 C14.2808266,4.63352985 13.9514866,4.33526651 13.5643926,4.35443401 C13.1772987,4.37360151 12.8790353,4.70294152 12.8982028,5.0900355 L13.3598614,14.4133813 L8.88884432,14.6838099 Z" id="Path-2" fill="#FFFFFF" transform="translate(11.513145, 10.219810) rotate(-315.000000) translate(-11.513145, -10.219810) "></path>
+        </g>
+    </g>
+</svg>

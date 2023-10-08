@@ -1,0 +1,86 @@
+
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+
+//针对pc端样式调整 0.4rem 表示距离右侧边0.4rem
+@media screen and (min-width: @screen-lg) {
+    .mescroll-toTop-btn{
+        right: calc(~'(100vw - 960px) / 2 + 0.4rem') !important;
+    }
+}
+.mescroll-toTop-btn{
+    position: fixed;
+    right: .2rem;
+    bottom: 1.76rem;
+    width: 1rem;
+    height: 1rem;
+    z-index: 99;
+
+    /********兼容ios端页面滚动到顶部，切换页面按钮还在的bug*******/
+    &.mescroll-fade-out{
+        opacity: 0;
+    }
+
+    .btn{
+        background: url('~themes/default/img/icon/icon_mall_zhiding_nor.svg') center no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+
+        &:active{
+            background: url('~themes/default/img/icon/icon_mall_zhiding_pre.svg') center no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.mescroll-downwarp .downwarp-tip, .mescroll-upwarp .upwarp-tip, .mescroll-upwarp .upwarp-nodata{
+    font-size: .24rem;
+    margin-left: .08rem;
+}
+
+.mescroll-upwarp-nodata{
+    color: @info-color;
+    font-size: .24rem;
+}
+
+
+.mescroll-downwarp .downwarp-progress, .mescroll-upwarp .upwarp-progress.noborder{
+    border: none;
+    background: url(~themes/default/img/icon/icon_mall_jiazai_gray.svg) 0 0 no-repeat;
+    background-size: contain;
+    width: .36rem;
+    height: .36rem;
+    border: none 0;
+}
+
+.mescroll-downwarp.white .downwarp-progress, .mescroll-upwarp.white .upwarp-progress.noborder{
+    background: url(~themes/default/img/icon/icon_mall_jiazai.svg) 0 0 no-repeat;
+    background-size: contain;
+    border: none 0;
+}
+.mescroll{
+    .mescroll-empty{
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .empty-icon{
+            height: 2.56rem;
+            width: 2.56rem;
+        }
+    
+        .empty-tip{
+            color: @placeholder-color;
+        }
+    }
+}
+
+/*旋转动画*/
+.mescroll-rotate {
+    -webkit-animation: mescrollRotate .6s infinite steps(12);
+    animation: mescrollRotate .6s infinite steps(12);
+}

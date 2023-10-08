@@ -1,0 +1,1 @@
+"use strict";function getGlobal(){if("undefined"!=typeof globalThis)return globalThis;if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;throw new Error("unable to locate global object")}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=getGlobal();

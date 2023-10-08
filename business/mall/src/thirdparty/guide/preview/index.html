@@ -1,0 +1,62 @@
+<!--
+ * @Description: 
+ * @Author: WangBinbin
+ * @LastEditTime: 2021-06-23 10:49:31
+ * @FilePath: \guide\preview\index.html
+-->
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>预览</title>
+    <link rel="stylesheet" href="./css/index.f11dceb5644e8fbebdcb.css">
+    <link rel="stylesheet" href="./css/app.5896d13d.css">
+    <link href="./css/chunk-vendors.68ea5abd.css" rel="stylesheet" as="style">
+    <link rel="stylesheet" href="../common/css/finger.css">
+    <style>
+        .container{background: #fff;}
+        .point{
+                position: absolute;
+                left: 0.4rem;
+                top: -.23rem;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div data-v-d43e4186="" class="container">
+        <div class="point"></div>
+            <div data-v-d43e4186="" id="shade" hidden=""></div>
+            <div data-v-d43e4186="" id="imgDiv">
+                <ul data-v-d43e4186="" id="dowebok">
+                    <li data-v-d43e4186=""><img data-v-d43e4186="" id="Imgbox"
+                            src="./img/invoice.png"
+                            width="auto" height="auto" style="margin-top: 121px;"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../common/js/swp-utils.js"></script>
+<script src="../common/js/WebViewJavascriptBridge.js"></script>
+<script>
+    // SnUtils
+    appBack(function(){
+        SnUtils.throttle(function() {
+        window.open("../approvalApplyedTwo/index.html")
+        }, 1000);
+    })
+    function appBack(func, context) {
+        try{
+            SnUtils.callHandler('notifyAppBackEvent', ''); //调用app，通知返回事件
+            SnUtils.registerHandler('notifyAppBack', function () { //点击app返回事件
+                func.call(context);
+            }.bind(this));
+        }catch(e){
+            console.error(e);
+        }
+    }
+</script>
+</html>

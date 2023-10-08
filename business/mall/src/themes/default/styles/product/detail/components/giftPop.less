@@ -1,0 +1,44 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.content-box{
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 0 .3rem;
+  display: flex;
+  .title{
+    width: .8rem;
+    padding-top: .3rem;
+  }
+  .list{
+    flex:1;
+    li{
+      cursor: pointer;
+      margin-bottom: .3rem;
+      &:first-child{
+        margin-top: .3rem;
+      }
+      &>div{
+        width: 100%;
+      }
+      .top-content{
+        display: flex;
+        justify-content: space-between;
+        .content{
+          flex: 1;
+          font-size: .26rem;
+          line-height: .36rem;
+          color: @text-color;
+        }
+        .right_icon{
+          width: .3rem;
+        }
+      }
+      .num{
+        font-weight: 600;
+        font-size: .28rem;
+      }
+      
+    }
+  }
+}

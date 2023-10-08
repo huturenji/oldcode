@@ -1,0 +1,426 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+body{
+  overflow: hidden;
+}
+.top{
+  padding-bottom: .2rem;
+  /deep/ .employee_wrap{
+    z-index: 100;
+    position: relative;
+    bottom: .3rem;
+  }
+  
+}
+@media screen and (min-width: @screen-sm) {
+  .top /deep/ .employee_wrap{
+    bottom: 84px;
+  }
+}
+
+// 内嵌京东页面的弹窗样式开始
+
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 2000;
+}
+.pop_wrap{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -160px;
+  margin-top: -197px;
+  z-index: 2010;
+  border-radius: .2rem;
+  background-color: #fff;
+  width: 320px;
+  height: 394px;
+}
+
+
+.icon-btn{
+  position: absolute;
+  bottom: -1.4rem;
+  left: 50%;
+  margin-left: -.3rem;
+}
+// 内嵌京东页面的弹窗样式结束
+
+.banner{
+  width: 100%;
+  // height: 100vw;
+  background: #fff;
+  // padding: 0.3rem 0.3rem 0 0.3rem;
+  overflow: hidden;
+  .image-container{
+    overflow: hidden;
+    margin: 0 auto;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: auto;
+        height: 100%;
+    }
+  }
+  /deep/ .swiper-pagination-bullet-active{
+    background: @theme-color;
+  }
+  /deep/ .swiper-pagination-content{
+    position: absolute;
+    bottom: .25rem;
+    right: .3rem;
+    background:rgba(14,14,14,0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.7rem;
+    height: 0.7rem;
+    z-index: 2000;
+  }
+  /deep/ .swiper-pagination.swiper-pagination-fraction{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: .26rem;
+    .swiper-pagination-current{
+      font-size: .26rem;
+    }
+    .swiper-pagination-total{
+      font-size: .18rem;
+      opacity: .8;
+    }
+  }
+
+}
+
+
+
+
+
+.price{
+  width: 100%;
+  padding: 0.3rem;
+  padding-bottom: 0;
+  background: #fff;
+  color: @danger-color-light;
+  font-size: 0.56rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /deep/.price-label{
+    .camelCase{
+      font-size: 0.36rem;
+    }
+  }
+}
+
+.goods-des{
+  width: 100%;
+  padding: 0.3rem;
+  background: #fff;
+  &.activityGoingOn{
+    margin-top: -.3rem;
+  }
+  
+  @media screen and (min-width: @screen-sm) {
+    &.activityGoingOn{
+      margin-top: -84px;
+    }
+  }
+  
+  .good-name{
+    color: @text-color;
+    font-size: 0.32rem;
+    font-weight: bold;
+    padding-right: .3rem;
+  }
+  .good-code{
+    margin-top: 0.29rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+      color: #A4ACB2;
+      font-size: 0.26rem;
+    }
+    .btns{
+      font-size: 0.26rem;
+      display: flex;
+      justify-content: space-between;
+      .btn-share{
+        width: 1.2rem;
+        height: .52rem;
+        line-height: .52rem;
+        text-align: center;
+        background: linear-gradient(180deg,#4ee5c2, #2dcb99);
+        border-radius: .32rem;
+        color: #fff;
+        cursor: pointer;
+        &:active{
+          opacity: .8;
+        }
+      }
+      .btn-more-goods{
+        width: 1.6rem;
+        height: .52rem;
+        line-height: .52rem;
+        text-align: center;
+        background: linear-gradient(180deg,#f2b654, #ff954b);
+        border-radius: .32rem;
+        color: #fff;
+        cursor: pointer;
+        margin-right: .4rem;
+        &:active{
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
+
+.goods-choose-address{
+  background-color: #fff;
+  margin-top: 0.2rem;
+  padding: 0 0.3rem;
+  .title{
+    color: @third-text-color;
+    font-size: 0.26rem;
+    display: inline-block;
+    width: 0.9rem;
+  }
+  .good-choose{
+    padding:0.34rem 0;
+    // height: 0.96rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.26rem;
+    font-weight: 400;
+    .content{
+      flex: 1;
+      overflow: hidden;
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 0.4rem;
+      cursor: pointer;
+    }
+    .formate-placeholder{
+      color: @placeholder-color;
+    }
+  }
+  .stock_tips{
+    font-size: .26rem;
+    color: @text-color;
+    padding-bottom: .36rem;
+    padding-left: .9rem;
+    margin-top: -.14rem;
+  }
+  .good-address{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0.44rem 0 0.34rem 0;
+    font-size: 0.28rem;
+    .right-content{
+      flex: 1;
+      overflow: hidden;
+      .address-des{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .address-name{
+          padding-right: 0.4rem;
+          overflow: hidden;
+          .address-content{
+            cursor: pointer;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 100%;
+            display: inline-block;
+          }
+          .address-placeholder{
+            color: @placeholder-color;
+          } 
+          font-size: 0.26rem;
+          flex: 1;
+          i{
+            color: @danger-color-light;
+            font-size: 0.34rem;
+          }
+        }
+        .iconarrow-right-copy-copy{
+          width: 0.3rem;
+          color: @placeholder-color;
+        }
+      }
+      .time{
+        margin-bottom: 0.2rem;
+        font-size: 0.26rem;
+        .express{
+          color: @danger-color-light;
+        }
+      }
+      .tips{
+        color: @third-text-color;
+        font-size: 0.24rem;
+      }
+    }
+  }
+}
+.good-gift{
+  background-color: #fff;
+  margin-top: 0.2rem;
+  padding: 0 0.3rem;
+
+  .good-gift-choose{
+    padding:0.34rem 0;
+    display: flex;
+    font-size: 0.26rem;
+    font-weight: 400;
+    .title{
+      color: @third-text-color;
+      font-size: 0.26rem;
+      display: inline-block;
+      width: 0.9rem;
+    }
+    .right-content{
+      flex: 1;
+      overflow: hidden;
+      .content{
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+        margin-bottom: .1rem;
+        width: 100%;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        .symble{
+          min-width: .68rem;
+          display: flex;
+          align-items: center;
+          /deep/ .detail-symbol{
+            min-width: .68rem;
+          }
+        }
+        .name{
+          flex: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 0 .1rem;
+        }
+      }
+      .right_icon{
+        display: flex;
+        align-items: center;
+        width: .28rem;
+      }
+    }
+  }
+}
+
+.goods-service{
+  padding: 0.24rem 0.3rem;
+  background-color: #fff;
+  font-size: 0.28rem;
+  display: flex;
+  justify-content: space-between;
+  .title{
+    color: @third-text-color;
+    font-size: 0.26rem;
+    display: inline-block;
+    width: 0.9rem;
+  }
+  .des{
+    flex: 1;
+    li{
+      font-size: 0.26rem;
+      margin-bottom: 0.16rem;
+      height: 0.36rem;
+      line-height: 0.36rem;
+      display: flex;
+      align-items: center;
+      i{
+        display: inline-block;
+        width: 0.24rem;
+        height: 0.24rem;
+      }
+      .correct{
+        color: @third-text-color;
+        font-size: 0.26rem;
+      }
+      .tips{
+        color: #ffa501;
+        font-size: 0.26rem;
+      }
+      .service_text{
+        padding-left: 0.1rem;
+      }
+    }
+  }
+}
+
+.goods-service-tips{
+  background-color: #fff;
+  padding: .24rem .3rem;
+  padding-top: 0;
+  .tips_content{
+    background-color: @background-color;
+    border-radius: .12rem;
+    color: @third-text-color;
+    padding: .16rem .24rem .08rem .24rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    li{
+      display: flex;
+      align-items: center;
+      font-size: .22rem;
+      height: .32rem;
+      line-height: .32rem;
+      margin-right: .28rem;
+      margin-bottom: .08rem;
+      &:last-child{
+        margin-right: 0;
+      }
+      span{
+        margin-left: .04rem;
+      }
+    }
+  }
+}
+
+/deep/ .vux-popup-dialog{
+  border-radius: 10px 10px 0 0;
+}
+
+.addressPopupBox{
+  /deep/ .vux-popup-dialog{
+    border-radius: 0;
+    background: @background-color
+  }
+}
+.addressPopupEditBox{
+  /deep/ .vux-popup-dialog{
+    border-radius: 0;
+  }
+}

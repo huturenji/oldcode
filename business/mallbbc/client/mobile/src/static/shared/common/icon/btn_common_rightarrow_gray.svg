@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn/common/rightarrow</title>
+    <g id="btn/common/rightarrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="22" height="22"></rect>
+        <path d="M7.138598,19.7295025 C6.66285881,20.2052417 6.66285881,20.9765673 7.138598,21.4523065 C7.61433719,21.9280457 8.38566281,21.9280457 8.861402,21.4523065 L18.4523065,11.861402 C18.9280457,11.3856628 18.9280457,10.6143372 18.4523065,10.138598 L8.861402,0.5476935 C8.38566281,0.0719543126 7.61433719,0.0719543126 7.138598,0.5476935 C6.66285881,1.02343269 6.66285881,1.79475831 7.138598,2.2704975 L15.8681005,11 L7.138598,19.7295025 Z" id="路径" fill="#999999"></path>
+    </g>
+</svg>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+        function reloadPage(){
+            window.location.reload(true);
+        }
+        function error(){
+            let activeDom = document.getElementById('errorPageIndex');
+            if(!!!activeDom){
+                console.log('缺损页的DOM不能为空');
+                return
+            }
+            activeDom.style.display = 'flex';
+        }
+
+        //addEventListener捕获网络请求错误
+        window.addEventListener(
+            "error",
+            t => {
+                try {
+                    var r = t.target ? t.target : t.srcElement
+                    var a = {
+                        type: "resourceError",
+                        target: {
+                            src: r && r.src,
+                            tagName: r && r.tagName,
+                            id: r && r.id,
+                            className: r && r.className,
+                            name: r && r.name,
+                            type: r && r.type
+                        }
+                    };
+                    if ( a.target.tagName.toUpperCase() == 'SCRIPT' && a.target.src && window.XMLHttpRequest) {
+                        try { 
+                            var u = new XMLHttpRequest();
+                            u.Fundebug = !0,
+                            u.open("HEAD", a.target.src),
+                            u.send(),
+                            u.onload = function(e) {
+                                if(e.target.status == '404'){
+                                    try {
+                                        //todu 2021-3-12兼容ios强制缓存html文件的场景，后续ios处理后此处理需删除
+                                        SnUtils.callHandler('ClearWebViewCacheHandler','').finally(res=>{
+                                            window.location.reload(true);
+                                        });
+                                    } catch (error) {
+                                        window.location.reload(true);
+                                    }
+                                }
+                            }
+                        } catch (error) {}
+                    }  
+                } catch (error) {}
+            },
+            true //网络错误，在捕获阶段获取，第三个参数为true
+        );
+    </script>
+
+    <meta http-equiv="expires" content="0">  
+    <meta http-equiv="pragma" content="no-cache">  
+    <meta http-equiv="cache-control" content="no-cache">  
+  
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <!-- 申明网页的favicon.ico，防止向网关根目录请求导致网关告警 -->
+    <link rel="icon" href="data:;base64,=">
+   
+	<style type="text/css">
+        @media screen and (max-width: 616px){html {font-size: 13.33333333vw;}}
+        @media screen and (min-width: 616px){#htmlBg {width: 100%;} html{font-size: 50px;}}
+        @media screen and (min-width: 960px){#htmlBg {width: 960px !important;margin: 0 auto;}}
+        *{padding: 0;margin: 0;box-sizing:border-box;}
+        html{background: #F6F9FD;font-size: 50px;font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', '\5B8B\4F53', Tahoma, Arial, Helvetica, STHeiti, sans-serif;}
+        /* 错误404页面相关的样式 */
+        #errorPageIndex{position:fixed;left:0;right:0;top:0;bottom:0;z-index:20000;background-color:#fff;width:100vw;height:100vh;overflow:hidden;display:flex;justify-content:center;align-items:center;} 
+        #errorPageIndex .content{text-align:center;color:#999;font-size:.3rem;cursor:pointer;} 
+        #errorPageIndex .content p{margin-top:.1rem;} 
+        #errorPageIndex .content img{width:2.56rem;height:auto;}
+
+        /* 首页显示简单dom的样式 */
+        #htmlBg{ background: #fff;position: absolute;top: var(--titleBarHeight,0px); left: 0;right: 0;}
+        #htmlBg .top-tips{width: 100%;display: flex;align-items: center;height: 0.6rem;}
+        #htmlBg .top-tips div{width: 33.33%;display: flex;justify-content: center;align-items: center;}
+        #htmlBg .top-tips div i{display: inline-block;width: .28rem;height: .28rem;}
+        #htmlBg .top-tips div span{font-size: 0.24rem;color: #999;}
+        #htmlBg .search_box{padding:.24rem .3rem;}
+        #htmlBg .search_bar{padding-left:.6rem;height: .68rem;border-radius: .2rem;background-color: #f5f5f5; color: #fff;line-height: .68rem;font-size:.24rem;}
+    </style>
+</head>
+<body ontouchstart="">
+    <div id="htmlBg"></div>
+    <script type="text/javascript">
+        try {//首页添加html骨架图
+            let versionArr = ((window.navigator.appVersion.match(/[^\/]+$/)||[])[0]||'').split(' ');
+            if(5<=versionArr.length){
+                try{document.body.style.setProperty('--titleBarHeight', (parseFloat(versionArr[3])+parseFloat(versionArr[4]))/window.devicePixelRatio + 'px');}catch(e){console.error(e)}
+            }
+            if(0==location.hash.indexOf('#/?') || 0==location.hash.indexOf('#/index') || 0==location.hash.indexOf('#/home') || 0==location.hash.indexOf('#/jd') || 0==location.hash.indexOf('#/sn')){
+                var bgdomWrap = document.getElementById('htmlBg');
+                bgdomWrap.innerHTML = "<div class='top-tips'><div><i></i><span>无需垫付</span></div><div><i></i><span>发票保障</span></div><div><i></i><span>合规透明</span></div></div><div class='search_box'><div class='search_bar'>输入商品名称搜索</div></div>";
+            } 
+        } catch (error) {
+        }
+    </script>
+
+	<div id="mall"></div>
+	<!-- 错误404页面相关的DOM -->
+	<div id="errorPageIndex" class="error-page" style="display: none;" onclick="reloadPage()"><div class="content"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEABAMAAACuXLVVAAAAFVBMVEUAAAD5+vvw8fX09ffo6+/N0Njf4uf3j4o2AAAAAXRSTlMAQObYZgAACtFJREFUeNrs0cEJAjEQheHYgXbgdqAge3f9mUqG9F+CiyBzW3JIGJa8/5Sc8vFSlFJKKaWUmqO1/nuUlgQQQAABBBBAAAFmBSxxzAHwvsYlBcAnBCmAEKQB2EKQAAhBIoDtVvq3unu1NgA8S/fW/XHzvWPAOMELaF8Alu4AMwO8WhuAZcAC7g4cAgYILvyK7o0ABOgOMPD8BYyJv0AAAQQ4BeDLjBnYuA3DUBRoF+gIB5EDFLwOUKjZf6aKX2S+hDiKk5yTY2TZ0gHh8xMVG6eqbwVo2WutJ30bQClFqzM4xmhmO/5+PUBLrEWd4vQeAC2lasNop/IeA4r06qepOF9mQCEB6zDM96LQVxjw5FqgYSrOqicFxfEGSr00oIrZ3CHvMaAoT2TXFocAINF1A4rmnxNMHLMLytIAGihcwseXA+jKQBLw6uN1BqrSAK9eZwBbg+kPNEDHk4ExK6/qUUuwZUBfagBtwwDbgQbYLufZygsM1HH+GxjgH+6tgdrjWQMb+WngR1lEvGCp1n2/A9l2GSBAvfLJF6yWXvtLxe9HloDTYyMA+LYOvmBhdGoESwCPbQPrJVBH3DyqN407wPkmgOu810BLcs1APFr4E7cDwNB/MuqYmIPRQNlKTwNlrwHDhxGlxPzjYDIA0UjJ890GMr9IkZFhhwFweVbNc6mP1QDSFzSbdvO6BnDT6PI8G6DANYAJDBQeNiBc3QU+umogJrKtlyCKEBgmXQY4SLJlgHOUjfuOegBWtCVAKoi7T5pi1joGa2A2gKT8/YnVgJWyz4BkEZg4y3Tzhp4x74I03hPBvScOmtwGuw1kBIb3QDDQpR4C6KUBLEZQKQYxvm0A6QBiefORNIYSg8HAtPBZiqQaZ9cGZFQAAiGDj7EsmLIRgAvPF9uAogFUwtoAghgUMBE5h/cE8Ml/LRVv+9JA1sV6CZgaFFn/OKEKhZCjAcQfb7ztDQOOtdsAgwZM/G+xPYQAJPOI5d4ycGMJpBjlSzQU4MSUdUgAAVLrhnjQgIUBpsKcxDTwcntMBrafH4OB/N/PEgC5oouWj6e5FG02gMmgxHUQKQqjJy87DPB3JgMT52koYF0QAFmBnQSAoA/NolgbaC8/BrsUkHdFuyyHeRvGLuks6GI556KoawBpDKBgCICQgQpwTQBMDAZiQcA/hd40IH6gQ7lF5ugjLg1gIsiyFZICKcqyrAHmkKGizHJZ8GU+mgxk5eIi69YHuI6B7AcwP9BDw6wSekcDmbLbCm1RjYZBwthuAyQx7xwCd3/GkYtdAD9T6cUAs2nlLgBCNArefnwXATINwjnz6dHrCJEvE/cCEMJD+NI6AYRowcVcsEjL2QcAGAIOQZVfNcCNa8LaQBmgexiAFOKd4V5YhFEDXZHnZ7GGF8PwKQNkMD8IILnI/YL74NyfgZ4HIMZoQITPQ5a8d3zL7pKeBmCcv+onFyBNJAt/jpPnEAAsC3MYMod+kHj0mcMAzLBJhc/OyMj3iN6OAoCEDpJ1Z5FdhO/TRy1BhvWjfEb9jXvBoOdYgAlEijF7hBxrYGbAmkzvmAD59UUA5X8759KnJgxF8dKZdk3Euq7AuC4wdT0+152pybp1TL7/R2h4HoJeYDDUjUf9taXI/XPuTXLnEbdKScGlUPvNJKEIsrKAAakZVgDCveB1ydOaXMTiOONNshq040Co+LkUEEg/Yn8wAB0eEjQCRunVKYj3SkhJIByCDoQ0G9cBhELJtPQ4IZhA6EqAndKi42uJqwC8KIra7FepuJC8RSK4AoBpeSzx2uJLTcA7CIYDlPI8Ir5EfKnWQcS8ODw1h0VwBQAUsciML1QmLtNBILZBbSqebM2sbK4FAIVn+i+UVKJw2VwLYgMhsAVQFIXWXtufEgjJVXBxMXquIQg7AFC0KApQKLEmV8MFCA6WAZ508OwptPsUgJGHN6sAz0UBKHmM2vuBXUXwbhHAE1l0rWOREQLASENgD+CpNOBolOZFABAcrAEs8+wrtWGmXADUtEQS7ABM8vpX6p31AgBBYAdgXxTAkZEATmSsH0+YDSwATAsDDqwFgKUChUQSKID+CFl0ragTQMuLvDqBsAAwKwyYnw/OcL9XXJ1Oc5YDgCKJea7fVwN4Ijfg/Sy65JA4Nv35yXNdDbDMDTg1w/OmmggSFgwHQAWYCXjml2SaNCmOojKHAXzLDPhrHFtQTXlkeJc7wFIl3vAiVFonw35Jd4PRWRJqRzxv8ChY1a1tbYnn9XdWBoBh2DxwJOJ3EexgQB3iowAzOTdLqzfBBAbU1RMA2pD5V7o1jreKrIMlswJgmIpAp6C8lGOMC8Eg2wA/a+EjYy3w9iB4Gw1givjzxmJkVOffYQDdWFWI48XVEHmIRgFAgA2xHC+RBPsASIBYkf3AM5JgHQAJWLU0JLMScgSAGdY8EgDj5NU+ANLbBsCeUIc2ASoDDqwVAJl6tQ0wxfhvB5igDO2mYIfLkgAog4OtGoA+p5el/tNpNiIrawCQLq/vTWMSf+snrAEwhQFWAGDBb/Oup7IxNWEkrCwCQEvjnVO6I/YObBQAp/73J27KjGkLgGaR5x3x/wRwdlRPPj4A4pMejA/w04hL9mLPUsrTfASAKSdkTpR7mdnybh3AMRpzZTTlLs5ayJJqWBim5zhGzIhoDfNT0QxiqpphnHwfEt8jPw7lsRr57oWqfCmnTTiDEwfsFXbpEWA6W/VixTsWikOvA+qsAFiRUxDimwRuZQAkhhhAWjAjbupb/fhMScmhlwEG0BZkI54qzhzYUUrya3LwXAFsPl28VfeSbYj0mMcXVSs9NAPIgRkIvjSS4xaMuQMA+GEDABZQndkuMwBjAAC/Ptj7tO9Mc6j7eShpVTMFrzYBuuUo2XAAnvXS4xZ6GdI9Sg6AXGMBOCxhLjVbjw/g5Nf/20T4cg7gjlEDjsQCYOgrDfAQboNugIct9KMzPgi6AZwQH3Y1eB7A1Au99UzBFNdsVVjFX5PnzMxmrB9AiLQOXYwwIZtyO1OA3G4+UAQ/uisAVYBheCZUN2xtU4gMDEjBw1l8YY7vXgOxexBSBiA98yc0qwQApSkqoMMCGAAVbG9sgsXogwDOJB2wuK8+8wD0rfpGFXoyogZoTTBhdFrwBwcxDOAA5iEMrW597h6ukup6HdQA5imbAE72+z1+WWKH1FZfK4m8/Eu/HYdQApgJhwMwTweuJkqea2tIsyRLYpZyYEA3QPj9bO2PQzPUrjDgXGcG4Eu+jdu3KXgx7txHcCjrfbcQ0Khp+mHTuytZv+DW/e1l7fXlT8YRoFX6bQD4vQHyFDheHPr0Q3Jx+VMHFgDw/SByq8z2Bpj6q8z5fI8c9Vrw4+U99yDw1ylRxD4KMPHnXlxt07v80nE48ckDYVgQpP9IWQsbPoe9AdLA5UbFkHaB+OQBDegvlKpv9VunP+l87AngePodIyia+G6f8CzObsHHdk/95/lLP8qtdeaW+VIxQpc79tY9ALLwmQMBnnHcfFWbl4pT9LHilZ+gn/kjO1yChQHrdD8/dx0GATb6EcLOstg46je2SVZbbFJfo1YTWJJLF00ymmgTnKSULv9kRLn07dMOjG8CS6A16YB9Aiw6Nem5IxlXzG3GN6RnMDa2XDq+BvDHBAAB4t9E7o3jg4DdTIh/KyEBN5J7s/ggYDfWHeAO8Omuu+6666677rq1/gFF6YHEM4tSpAAAAABJRU5ErkJggg=="><p>网络不给力，请点击屏幕重试</p></div></div>
+    
+    <script type="text/javascript" src="./thirdparty/WebViewJavascriptBridge.js"></script>
+	<script type="text/javascript" src="./thirdparty/vue.js" onerror="error()"></script>
+	<script type='text/javascript' src='./thirdparty/swp-utils.js' onerror="error()"> </script>
+    <script type='text/javascript' src='./thirdparty/sinosdk/sinosdk.js' onerror="error()"> </script>
+	<script type='text/javascript' src='./thirdparty/keycloak.sino.js' onerror="error()"> </script>
+	<script type='text/javascript' src='./thirdparty/jquery.min.js' onerror="error()"> </script>
+    <script type='text/javascript' src='./thirdparty/base64.min.js' onerror="error()"> </script>
+    <script type="text/javascript" src="https://res2.wx.qq.com/open/js/jweixin-1.6.0.js" onerror="error()"></script>
+    <script type='text/javascript' src='./thirdparty/swp-templateMake/swp-templateMake.js' onerror="error()"> </script>
+</body>
+
+</html>

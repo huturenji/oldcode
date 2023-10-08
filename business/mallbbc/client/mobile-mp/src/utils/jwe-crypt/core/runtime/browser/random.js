@@ -1,0 +1,1 @@
+"use strict";function getRandomValues(e){for(var t=0,o=e.length;t<o;t++)e[t]=Math.floor(256*Math.random());return e}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=getRandomValues;

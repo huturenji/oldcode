@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var validateAlgorithms=function(r,t){if(void 0!==t&&(!Array.isArray(t)||t.some(function(r){return"string"!=typeof r})))throw new TypeError('"'.concat(r,'" option must be an array of strings'));if(t)return new Set(t)};exports.default=validateAlgorithms;

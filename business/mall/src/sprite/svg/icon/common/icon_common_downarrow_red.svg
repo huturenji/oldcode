@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <desc>Created with Sketch.</desc>
+    <g id="控件/箭头/向下展开" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/common/downarrow" fill="#E82B29" fill-rule="nonzero">
+            <path d="M5.43641278,0.43641278 L17.7817936,0.43641278 C18.4545904,0.43641278 19,-0.108996799 19,-0.78179361 C19,-1.45459042 18.4545904,-2 17.7817936,-2 L4.21820639,-2 C3.54540958,-2 3,-1.45459042 3,-0.78179361 L3,12.7817936 C3,13.4545904 3.54540958,14 4.21820639,14 C4.8910032,14 5.43641278,13.4545904 5.43641278,12.7817936 L5.43641278,0.43641278 Z" id="Path" transform="translate(11.000000, 6.000000) rotate(-135.000000) translate(-11.000000, -6.000000) "></path>
+        </g>
+    </g>
+</svg>

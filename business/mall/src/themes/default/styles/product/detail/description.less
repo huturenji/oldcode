@@ -1,0 +1,77 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.des-box{
+    position: relative;
+    background: #fff;
+    min-height: 100%;
+}
+.goods-intro{
+  max-width: @max-content-width;;
+  padding: 0 0.5rem;
+  display: flex;
+  background-color: #fff;
+  font-size: 0.28rem;
+
+  &.fixed-dom-part{
+    position: fixed;
+    top: @title-bar-height;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  .active{
+    color: @theme-color;
+    font-size: 0.3rem;
+    font-weight: bolder;
+    &::after{
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 26px;
+      height: 2px;
+      background: @theme-color;
+      left: 50%;
+      bottom: -8px;
+      margin-left: -13px;
+    }
+  }
+  p{
+    color: @secondary-text-color;
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+  .tab-box{
+    width: 100%;
+    /deep/ .vux-tab{
+      .vux-tab-item{
+        background: none;
+        font-size: 0.28rem;
+        color: @secondary-text-color;
+      }
+    }
+    /deep/ .vux-tab-item{
+      cursor: pointer;
+    }
+    /deep/ .vux-tab .vux-tab-item.vux-tab-selected{
+      height: 100%;
+      font-size: 0.3rem;
+      font-weight: 600;
+      color: @theme-color;
+    }
+    /deep/.vux-tab-ink-bar{
+      bottom: .1rem;
+      border-radius: .02rem;
+      .vux-tab-bar-inner{
+        border-radius: .02rem;
+        background-color: @theme-color;
+      }
+    } 
+  }
+}
+.isComponent{
+  background-color: #fff;
+  padding: 0 0.2rem 1.2rem;
+}

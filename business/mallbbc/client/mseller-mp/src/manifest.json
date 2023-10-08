@@ -1,0 +1,186 @@
+{
+    "name" : "兆日java_bbc",
+    "appid" : "__UNI__4119B63",
+    "description" : "",
+    "versionName" : "3.0",
+    "versionCode" : 202,
+    "transformPx" : false,
+    "app-plus" : {
+        /* 5+App特有相关 */
+        "usingComponents" : true,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "modules" : {
+            "OAuth" : {},
+            "Payment" : {},
+            "Share" : {},
+            "VideoPlayer" : {},
+            "Geolocation" : {}
+        },
+        /* 模块配置 */
+        "distribute" : {
+            /* 应用发布信息 */
+            "android" : {
+                /* android打包配置 */
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "schemes" : "bbcjavabbcv2"
+            },
+            "ios" : {
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "APP想访问您的相册，为了把您想要下载的图片存到你手机里和上传图片等功能",
+                    "NSCameraUsageDescription" : "APP想访问您的相机，为了帮您扫描二维码或商品等功能",
+                    "NSLocalNetworkUsageDescription" : "是否允许app访问您的本地网络以便与服务器连接",
+                    "NSPhotoLibraryAddUsageDescription" : "是否允许APP保存图片到相册",
+                    "NSMicrophoneUsageDescription" : "是否允许App使用您的麦克风，为了帮您录制音频功能",
+                    "NSCalendarsUsageDescription" : "是否允许App使用您的日历",
+                    "NSBluetoothPeripheralUsageDescription" : "是否允许App使用您的蓝牙",
+                    "NSBluetoothAlwaysUsageDescription" : "是否允许App使用您的蓝牙",
+                    "NSSpeechRecognitionUsageDescription" : "语音识别权限",
+                    "NSLocationWhenInUseUsageDescription" : "我们需要获取您的地理位置以便获取您附近的商家",
+                    "NSLocationAlwaysUsageDescription" : "我们需要获取您的地理位置以便获取您附近的商家",
+                    "NSLocationAlwaysAndWhenInUseUsageDescription" : "是否允许APP使用您的地理位置",
+                    "NSSiriUsageDescription" : "是否允许App使用您的Siri",
+                    "NSContactsUsageDescription" : "是否允许App使用您的通讯录"
+                },
+                "urltypes" : "bbcjavabbcv2",
+                "idfa" : false
+            },
+            /* ios打包配置 */
+            "sdkConfigs" : {
+                "ad" : {},
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wxeeaa210bf966bd56",
+                        "appsecret" : "4953f951b9ebaaef8ccca5511d4b1c41",
+                        "UniversalLinks" : "https://www.sinosun.cn/wechat-auth/"
+                    }
+                },
+                "payment" : {
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "weixin" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appid" : "wxeeaa210bf966bd56",
+                        "UniversalLinks" : "https://www.sinosun.cn/wechat-auth/"
+                    }
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxeeaa210bf966bd56",
+                        "UniversalLinks" : "https://www.sinosun.cn/wechat-auth/"
+                    }
+                },
+                "geolocation" : {
+                    "amap" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "c2c7f7928a1d27dca1353ca48d756b86",
+                        "appkey_android" : "68c38f42b8a01604d48f0a1852b62534"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "androidStyle" : "common"
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "",
+                    "xhdpi" : "",
+                    "xxhdpi" : "",
+                    "xxxhdpi" : ""
+                },
+                "ios" : {
+                    
+                }
+            }
+        },
+        "privacy" : {
+            "prompt" : "template", //可取值template、custom、none  
+            "template" : {
+                //prompt取值为template时有效，用于配置模板提示框上显示的内容  
+                "title" : "感谢下载我们的APP",
+                // "message" : "<font style=\"fontSize:40px;lineHeight:60px;\">亲，感谢您对我们一直以来的信任</font>！我们依据最新的监管要求更新了我们的<a href=\"https://m.55sld.com/pages/privacyPolicy/privacyPolicy\">《用户注册协议及隐私政策》</a>了解详细信息，特向您说明：<br/>1.为向您提供交易相关基本功能，我们会收集、使用必要的信息；<br/>2.未经您同意,我们不会从第三方获取、共享或向其提供您的信息；<br/>3.你可以查询、更正、删除您的个人信息，我们也提供账户注销的渠道",
+                "message" : "<font style=\"fontSize:40px;lineHeight:60px;\">亲，感谢您对我们一直以来的信任</font>！我们依据最新的监管要求更新了我们的<a href=\"#\">《用户注册协议及隐私政策》</a>了解详细信息，特向您说明：<br/>1.为向您提供交易相关基本功能，我们会收集、使用必要的信息；<br/>2.未经您同意,我们不会从第三方获取、共享或向其提供您的信息；<br/>3.你可以查询、更正、删除您的个人信息，我们也提供账户注销的渠道",
+                "buttonAccept" : "同意",
+                "buttonRefuse" : "不同意",
+                "second" : {
+                    "title" : "您需要同意该隐私政策才能继续",
+                    "message" : "若不同意，很遗憾我们将无法为您提供服务",
+                    "buttonAccept" : "同意",
+                    "buttonRefuse" : "退出应用"
+                }
+            }
+        }
+    },
+    /* SDK配置 */
+    "quickapp" : {},
+    /* 快应用特有相关 */
+    "mp-weixin" : {
+        /* 小程序特有相关 */
+        "usingComponents" : true,
+        "appid" : "wx120882bc51ac4013",
+        "setting" : {
+            "urlCheck" : true,
+            "minified" : true,
+            "es6" : true,
+            "postcss" : true
+        },
+        "optimization" : {
+            "subPackages" : true
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "需要开启地理位置信息才能为您推荐更多好物"
+            }
+        },
+        "lazyCodeLoading": "requiredComponents"
+    },
+    "h5" : {
+        "title" : " ",
+        "domain" : "https://bplusdev.sinosun.com:18180/",
+        "devServer" : {
+            "https" : false
+        },
+        "sdkConfigs" : {
+            "maps" : {}
+        },
+        "template" : "template.h5.html",
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : false
+            }
+        },
+        "router" : {
+            "mode" : "hash",
+            "base" : "./"
+        }
+    }
+}

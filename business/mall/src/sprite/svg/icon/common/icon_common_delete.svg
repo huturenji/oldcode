@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <desc>Created with Sketch.</desc>
+    <g id="h5-svg/icon/common/delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" fill="#FF5858" fill-rule="nonzero">
+            <path d="M11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 Z M11,1.2 C5.58760945,1.2 1.2,5.58760945 1.2,11 C1.2,16.4123905 5.58760945,20.8 11,20.8 C16.4123905,20.8 20.8,16.4123905 20.8,11 C20.8,5.58760945 16.4123905,1.2 11,1.2 Z" id="Rectangle"></path>
+            <path d="M11.1,5.5 C11.3982338,5.5 11.6456468,5.71758961 11.692147,6.00267688 L11.7,6.1 L11.7,16.1 C11.7,16.4313708 11.4313708,16.7 11.1,16.7 C10.8017662,16.7 10.5543532,16.4824104 10.507853,16.1973231 L10.5,16.1 L10.5,6.1 C10.5,5.76862915 10.7686292,5.5 11.1,5.5 Z" id="路径-45" transform="translate(11.100000, 11.100000) rotate(-270.000000) translate(-11.100000, -11.100000) "></path>
+        </g>
+    </g>
+</svg>

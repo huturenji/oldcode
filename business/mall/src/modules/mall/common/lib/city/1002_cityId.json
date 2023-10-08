@@ -1,0 +1,2500 @@
+{
+	"codeList":  [
+	{
+		"id": "HHR",
+		"pId": "CN",
+		"level": "1",
+		"name": "测试省",
+		"secondPid": null,
+		"snId": "721"
+	},
+	{
+		"id": "230",
+		"pId": "CN",
+		"level": "1",
+		"name": "四川省",
+		"secondPid": null,
+		"snId": "722"
+	},
+	{
+		"id": "130",
+		"pId": "CN",
+		"level": "1",
+		"name": "浙江省",
+		"secondPid": null,
+		"snId": "723"
+	},
+	{
+		"id": "240",
+		"pId": "CN",
+		"level": "1",
+		"name": "云南省",
+		"secondPid": null,
+		"snId": "724"
+	},
+	{
+		"id": "250",
+		"pId": "CN",
+		"level": "1",
+		"name": "陕西省",
+		"secondPid": null,
+		"snId": "725"
+	},
+	{
+		"id": "140",
+		"pId": "CN",
+		"level": "1",
+		"name": "江西省",
+		"secondPid": null,
+		"snId": "726"
+	},
+	{
+		"id": "260",
+		"pId": "CN",
+		"level": "1",
+		"name": "甘肃省",
+		"secondPid": null,
+		"snId": "727"
+	},
+	{
+		"id": "270",
+		"pId": "CN",
+		"level": "1",
+		"name": "宁夏",
+		"secondPid": null,
+		"snId": "728"
+	},
+	{
+		"id": "320",
+		"pId": "CN",
+		"level": "1",
+		"name": "重庆市",
+		"secondPid": null,
+		"snId": "729"
+	},
+	{
+		"id": "HOK",
+		"pId": "CN",
+		"level": "1",
+		"name": "香港",
+		"secondPid": null,
+		"snId": "730"
+	},
+	{
+		"id": "MAC",
+		"pId": "CN",
+		"level": "1",
+		"name": "澳门",
+		"secondPid": null,
+		"snId": "731"
+	},
+	{
+		"id": "220",
+		"pId": "CN",
+		"level": "1",
+		"name": "贵州省",
+		"secondPid": null,
+		"snId": "732"
+	},
+	{
+		"id": "T01",
+		"pId": "CN",
+		"level": "1",
+		"name": "台湾省",
+		"secondPid": null,
+		"snId": "734"
+	},
+	{
+		"id": "100",
+		"pId": "CN",
+		"level": "1",
+		"name": "江苏省",
+		"secondPid": null,
+		"snId": "740"
+	},
+	{
+		"id": "170",
+		"pId": "CN",
+		"level": "1",
+		"name": "湖北省",
+		"secondPid": null,
+		"snId": "743"
+	},
+	{
+		"id": "150",
+		"pId": "CN",
+		"level": "1",
+		"name": "福建省",
+		"secondPid": null,
+		"snId": "752"
+	},
+	{
+		"id": "160",
+		"pId": "CN",
+		"level": "1",
+		"name": "湖南省",
+		"secondPid": null,
+		"snId": "753"
+	},
+	{
+		"id": "280",
+		"pId": "CN",
+		"level": "1",
+		"name": "青海省",
+		"secondPid": null,
+		"snId": "755"
+	},
+	{
+		"id": "180",
+		"pId": "CN",
+		"level": "1",
+		"name": "河南省",
+		"secondPid": null,
+		"snId": "756"
+	},
+	{
+		"id": "290",
+		"pId": "CN",
+		"level": "1",
+		"name": "新疆",
+		"secondPid": null,
+		"snId": "757"
+	},
+	{
+		"id": "190",
+		"pId": "CN",
+		"level": "1",
+		"name": "广东省",
+		"secondPid": null,
+		"snId": "758"
+	},
+	{
+		"id": "200",
+		"pId": "CN",
+		"level": "1",
+		"name": "海南省",
+		"secondPid": null,
+		"snId": "759"
+	},
+	{
+		"id": "300",
+		"pId": "CN",
+		"level": "1",
+		"name": "西藏自治区",
+		"secondPid": null,
+		"snId": "760"
+	},
+	{
+		"id": "110",
+		"pId": "CN",
+		"level": "1",
+		"name": "安徽省",
+		"secondPid": null,
+		"snId": "761"
+	},
+	{
+		"id": "120",
+		"pId": "CN",
+		"level": "1",
+		"name": "山东省",
+		"secondPid": null,
+		"snId": "762"
+	},
+	{
+		"id": "210",
+		"pId": "CN",
+		"level": "1",
+		"name": "广西",
+		"secondPid": null,
+		"snId": "763"
+	},
+	{
+		"id": "660",
+		"pId": "190",
+		"level": "2",
+		"name": "汕尾市",
+		"secondPid": null,
+		"snId": "10528"
+	},
+	{
+		"id": "662",
+		"pId": "190",
+		"level": "2",
+		"name": "阳江市",
+		"secondPid": null,
+		"snId": "10529"
+	},
+	{
+		"id": "663",
+		"pId": "190",
+		"level": "2",
+		"name": "揭阳市",
+		"secondPid": null,
+		"snId": "10530"
+	},
+	{
+		"id": "668",
+		"pId": "190",
+		"level": "2",
+		"name": "茂名市",
+		"secondPid": null,
+		"snId": "10532"
+	},
+	{
+		"id": "751",
+		"pId": "190",
+		"level": "2",
+		"name": "韶关市",
+		"secondPid": null,
+		"snId": "10563"
+	},
+	{
+		"id": "750",
+		"pId": "190",
+		"level": "2",
+		"name": "江门市",
+		"secondPid": null,
+		"snId": "10564"
+	},
+	{
+		"id": "752",
+		"pId": "190",
+		"level": "2",
+		"name": "惠州市",
+		"secondPid": null,
+		"snId": "10565"
+	},
+	{
+		"id": "753",
+		"pId": "190",
+		"level": "2",
+		"name": "梅州市",
+		"secondPid": null,
+		"snId": "10566"
+	},
+	{
+		"id": "754",
+		"pId": "190",
+		"level": "2",
+		"name": "汕头市",
+		"secondPid": null,
+		"snId": "10567"
+	},
+	{
+		"id": "755",
+		"pId": "190",
+		"level": "2",
+		"name": "深圳市",
+		"secondPid": null,
+		"snId": "10568"
+	},
+	{
+		"id": "757",
+		"pId": "190",
+		"level": "2",
+		"name": "佛山市",
+		"secondPid": null,
+		"snId": "10569"
+	},
+	{
+		"id": "756",
+		"pId": "190",
+		"level": "2",
+		"name": "珠海市",
+		"secondPid": null,
+		"snId": "10570"
+	},
+	{
+		"id": "759",
+		"pId": "190",
+		"level": "2",
+		"name": "湛江市",
+		"secondPid": null,
+		"snId": "10571"
+	},
+	{
+		"id": "758",
+		"pId": "190",
+		"level": "2",
+		"name": "肇庆市",
+		"secondPid": null,
+		"snId": "10572"
+	},
+	{
+		"id": "762",
+		"pId": "190",
+		"level": "2",
+		"name": "河源市",
+		"secondPid": null,
+		"snId": "10573"
+	},
+	{
+		"id": "763",
+		"pId": "190",
+		"level": "2",
+		"name": "清远市",
+		"secondPid": null,
+		"snId": "10574"
+	},
+	{
+		"id": "760",
+		"pId": "190",
+		"level": "2",
+		"name": "中山市",
+		"secondPid": null,
+		"snId": "10575"
+	},
+	{
+		"id": "768",
+		"pId": "190",
+		"level": "2",
+		"name": "潮州市",
+		"secondPid": null,
+		"snId": "10576"
+	},
+	{
+		"id": "769",
+		"pId": "190",
+		"level": "2",
+		"name": "东莞市",
+		"secondPid": null,
+		"snId": "10578"
+	},
+	{
+		"id": "766",
+		"pId": "190",
+		"level": "2",
+		"name": "云浮市",
+		"secondPid": null,
+		"snId": "10579"
+	},
+	{
+		"id": "020",
+		"pId": "190",
+		"level": "2",
+		"name": "广州市",
+		"secondPid": null,
+		"snId": "10712"
+	},
+	{
+		"id": "901",
+		"pId": "290",
+		"level": "2",
+		"name": "塔城地区",
+		"secondPid": null,
+		"snId": "10456"
+	},
+	{
+		"id": "902",
+		"pId": "290",
+		"level": "2",
+		"name": "哈密地区",
+		"secondPid": null,
+		"snId": "10457"
+	},
+	{
+		"id": "906",
+		"pId": "290",
+		"level": "2",
+		"name": "阿勒泰地区",
+		"secondPid": null,
+		"snId": "10458"
+	},
+	{
+		"id": "903",
+		"pId": "290",
+		"level": "2",
+		"name": "和田地区",
+		"secondPid": null,
+		"snId": "10459"
+	},
+	{
+		"id": "908",
+		"pId": "290",
+		"level": "2",
+		"name": "克孜勒苏州",
+		"secondPid": null,
+		"snId": "10461"
+	},
+	{
+		"id": "909",
+		"pId": "290",
+		"level": "2",
+		"name": "博尔塔拉州",
+		"secondPid": null,
+		"snId": "10462"
+	},
+	{
+		"id": "991",
+		"pId": "290",
+		"level": "2",
+		"name": "乌鲁木齐市",
+		"secondPid": null,
+		"snId": "10498"
+	},
+	{
+		"id": "992",
+		"pId": "290",
+		"level": "2",
+		"name": "伊犁州",
+		"secondPid": null,
+		"snId": "10499"
+	},
+	{
+		"id": "988",
+		"pId": "290",
+		"level": "2",
+		"name": "图木舒克市",
+		"secondPid": null,
+		"snId": "10500"
+	},
+	{
+		"id": "990",
+		"pId": "290",
+		"level": "2",
+		"name": "克拉玛依市",
+		"secondPid": null,
+		"snId": "10501"
+	},
+	{
+		"id": "989",
+		"pId": "290",
+		"level": "2",
+		"name": "五家渠市",
+		"secondPid": null,
+		"snId": "10502"
+	},
+	{
+		"id": "993",
+		"pId": "290",
+		"level": "2",
+		"name": "石河子市",
+		"secondPid": null,
+		"snId": "10503"
+	},
+	{
+		"id": "994",
+		"pId": "290",
+		"level": "2",
+		"name": "昌吉州",
+		"secondPid": null,
+		"snId": "10504"
+	},
+	{
+		"id": "996",
+		"pId": "290",
+		"level": "2",
+		"name": "巴音郭楞州",
+		"secondPid": null,
+		"snId": "10505"
+	},
+	{
+		"id": "997",
+		"pId": "290",
+		"level": "2",
+		"name": "阿克苏地区",
+		"secondPid": null,
+		"snId": "10506"
+	},
+	{
+		"id": "995",
+		"pId": "290",
+		"level": "2",
+		"name": "吐鲁番地区",
+		"secondPid": null,
+		"snId": "10507"
+	},
+	{
+		"id": "998",
+		"pId": "290",
+		"level": "2",
+		"name": "喀什地区",
+		"secondPid": null,
+		"snId": "10508"
+	},
+	{
+		"id": "999",
+		"pId": "290",
+		"level": "2",
+		"name": "阿拉尔市",
+		"secondPid": null,
+		"snId": "10509"
+	},
+	{
+		"id": "711",
+		"pId": "170",
+		"level": "2",
+		"name": "鄂州市",
+		"secondPid": null,
+		"snId": "10535"
+	},
+	{
+		"id": "710",
+		"pId": "170",
+		"level": "2",
+		"name": "襄阳市",
+		"secondPid": null,
+		"snId": "10536"
+	},
+	{
+		"id": "712",
+		"pId": "170",
+		"level": "2",
+		"name": "孝感市",
+		"secondPid": null,
+		"snId": "10537"
+	},
+	{
+		"id": "713",
+		"pId": "170",
+		"level": "2",
+		"name": "黄冈市",
+		"secondPid": null,
+		"snId": "10538"
+	},
+	{
+		"id": "716",
+		"pId": "170",
+		"level": "2",
+		"name": "荆州市",
+		"secondPid": null,
+		"snId": "10539"
+	},
+	{
+		"id": "714",
+		"pId": "170",
+		"level": "2",
+		"name": "黄石市",
+		"secondPid": null,
+		"snId": "10540"
+	},
+	{
+		"id": "715",
+		"pId": "170",
+		"level": "2",
+		"name": "咸宁市",
+		"secondPid": null,
+		"snId": "10541"
+	},
+	{
+		"id": "718",
+		"pId": "170",
+		"level": "2",
+		"name": "恩施州",
+		"secondPid": null,
+		"snId": "10542"
+	},
+	{
+		"id": "717",
+		"pId": "170",
+		"level": "2",
+		"name": "宜昌市",
+		"secondPid": null,
+		"snId": "10543"
+	},
+	{
+		"id": "722",
+		"pId": "170",
+		"level": "2",
+		"name": "随州市",
+		"secondPid": null,
+		"snId": "10544"
+	},
+	{
+		"id": "719",
+		"pId": "170",
+		"level": "2",
+		"name": "十堰市",
+		"secondPid": null,
+		"snId": "10545"
+	},
+	{
+		"id": "720",
+		"pId": "170",
+		"level": "2",
+		"name": "神农架",
+		"secondPid": null,
+		"snId": "10546"
+	},
+	{
+		"id": "728",
+		"pId": "170",
+		"level": "2",
+		"name": "湖北省直辖",
+		"secondPid": null,
+		"snId": "10547"
+	},
+	{
+		"id": "724",
+		"pId": "170",
+		"level": "2",
+		"name": "荆门市",
+		"secondPid": null,
+		"snId": "10548"
+	},
+	{
+		"id": "027",
+		"pId": "170",
+		"level": "2",
+		"name": "武汉市",
+		"secondPid": null,
+		"snId": "10750"
+	},
+	{
+		"id": "951",
+		"pId": "270",
+		"level": "2",
+		"name": "银川市",
+		"secondPid": null,
+		"snId": "10485"
+	},
+	{
+		"id": "952",
+		"pId": "270",
+		"level": "2",
+		"name": "石嘴山市",
+		"secondPid": null,
+		"snId": "10486"
+	},
+	{
+		"id": "954",
+		"pId": "270",
+		"level": "2",
+		"name": "固原市",
+		"secondPid": null,
+		"snId": "10487"
+	},
+	{
+		"id": "955",
+		"pId": "270",
+		"level": "2",
+		"name": "中卫市",
+		"secondPid": null,
+		"snId": "10488"
+	},
+	{
+		"id": "953",
+		"pId": "270",
+		"level": "2",
+		"name": "吴忠市",
+		"secondPid": null,
+		"snId": "10489"
+	},
+	{
+		"id": "591",
+		"pId": "150",
+		"level": "2",
+		"name": "福州市",
+		"secondPid": null,
+		"snId": "10515"
+	},
+	{
+		"id": "593",
+		"pId": "150",
+		"level": "2",
+		"name": "宁德市",
+		"secondPid": null,
+		"snId": "10516"
+	},
+	{
+		"id": "592",
+		"pId": "150",
+		"level": "2",
+		"name": "厦门市",
+		"secondPid": null,
+		"snId": "10517"
+	},
+	{
+		"id": "595",
+		"pId": "150",
+		"level": "2",
+		"name": "泉州市",
+		"secondPid": null,
+		"snId": "10518"
+	},
+	{
+		"id": "596",
+		"pId": "150",
+		"level": "2",
+		"name": "漳州市",
+		"secondPid": null,
+		"snId": "10519"
+	},
+	{
+		"id": "594",
+		"pId": "150",
+		"level": "2",
+		"name": "莆田市",
+		"secondPid": null,
+		"snId": "10520"
+	},
+	{
+		"id": "598",
+		"pId": "150",
+		"level": "2",
+		"name": "三明市",
+		"secondPid": null,
+		"snId": "10521"
+	},
+	{
+		"id": "599",
+		"pId": "150",
+		"level": "2",
+		"name": "南平市",
+		"secondPid": null,
+		"snId": "10523"
+	},
+	{
+		"id": "597",
+		"pId": "150",
+		"level": "2",
+		"name": "龙岩市",
+		"secondPid": null,
+		"snId": "10711"
+	},
+	{
+		"id": "910",
+		"pId": "250",
+		"level": "2",
+		"name": "咸阳市",
+		"secondPid": null,
+		"snId": "10460"
+	},
+	{
+		"id": "911",
+		"pId": "250",
+		"level": "2",
+		"name": "延安市",
+		"secondPid": null,
+		"snId": "10463"
+	},
+	{
+		"id": "912",
+		"pId": "250",
+		"level": "2",
+		"name": "榆林市",
+		"secondPid": null,
+		"snId": "10464"
+	},
+	{
+		"id": "913",
+		"pId": "250",
+		"level": "2",
+		"name": "渭南市",
+		"secondPid": null,
+		"snId": "10465"
+	},
+	{
+		"id": "914",
+		"pId": "250",
+		"level": "2",
+		"name": "商洛市",
+		"secondPid": null,
+		"snId": "10466"
+	},
+	{
+		"id": "915",
+		"pId": "250",
+		"level": "2",
+		"name": "安康市",
+		"secondPid": null,
+		"snId": "10467"
+	},
+	{
+		"id": "916",
+		"pId": "250",
+		"level": "2",
+		"name": "汉中市",
+		"secondPid": null,
+		"snId": "10468"
+	},
+	{
+		"id": "917",
+		"pId": "250",
+		"level": "2",
+		"name": "宝鸡市",
+		"secondPid": null,
+		"snId": "10469"
+	},
+	{
+		"id": "919",
+		"pId": "250",
+		"level": "2",
+		"name": "铜川市",
+		"secondPid": null,
+		"snId": "10470"
+	},
+	{
+		"id": "029",
+		"pId": "250",
+		"level": "2",
+		"name": "西安市",
+		"secondPid": null,
+		"snId": "10752"
+	},
+	{
+		"id": "579",
+		"pId": "130",
+		"level": "2",
+		"name": "金华市",
+		"secondPid": null,
+		"snId": "10513"
+	},
+	{
+		"id": "580",
+		"pId": "130",
+		"level": "2",
+		"name": "舟山市",
+		"secondPid": null,
+		"snId": "10514"
+	},
+	{
+		"id": "570",
+		"pId": "130",
+		"level": "2",
+		"name": "衢州市",
+		"secondPid": null,
+		"snId": "10701"
+	},
+	{
+		"id": "571",
+		"pId": "130",
+		"level": "2",
+		"name": "杭州市",
+		"secondPid": null,
+		"snId": "10703"
+	},
+	{
+		"id": "572",
+		"pId": "130",
+		"level": "2",
+		"name": "湖州市",
+		"secondPid": null,
+		"snId": "10704"
+	},
+	{
+		"id": "573",
+		"pId": "130",
+		"level": "2",
+		"name": "嘉兴市",
+		"secondPid": null,
+		"snId": "10705"
+	},
+	{
+		"id": "574",
+		"pId": "130",
+		"level": "2",
+		"name": "宁波市",
+		"secondPid": null,
+		"snId": "10706"
+	},
+	{
+		"id": "576",
+		"pId": "130",
+		"level": "2",
+		"name": "台州市",
+		"secondPid": null,
+		"snId": "10707"
+	},
+	{
+		"id": "575",
+		"pId": "130",
+		"level": "2",
+		"name": "绍兴市",
+		"secondPid": null,
+		"snId": "10708"
+	},
+	{
+		"id": "577",
+		"pId": "130",
+		"level": "2",
+		"name": "温州市",
+		"secondPid": null,
+		"snId": "10709"
+	},
+	{
+		"id": "578",
+		"pId": "130",
+		"level": "2",
+		"name": "丽水市",
+		"secondPid": null,
+		"snId": "10710"
+	},
+	{
+		"id": "832",
+		"pId": "230",
+		"level": "2",
+		"name": "内江市",
+		"secondPid": null,
+		"snId": "10413"
+	},
+	{
+		"id": "833",
+		"pId": "230",
+		"level": "2",
+		"name": "眉山市",
+		"secondPid": null,
+		"snId": "10414"
+	},
+	{
+		"id": "834",
+		"pId": "230",
+		"level": "2",
+		"name": "凉山州",
+		"secondPid": null,
+		"snId": "10415"
+	},
+	{
+		"id": "835",
+		"pId": "230",
+		"level": "2",
+		"name": "雅安市",
+		"secondPid": null,
+		"snId": "10416"
+	},
+	{
+		"id": "836",
+		"pId": "230",
+		"level": "2",
+		"name": "甘孜州",
+		"secondPid": null,
+		"snId": "10417"
+	},
+	{
+		"id": "837",
+		"pId": "230",
+		"level": "2",
+		"name": "阿坝州",
+		"secondPid": null,
+		"snId": "10418"
+	},
+	{
+		"id": "838",
+		"pId": "230",
+		"level": "2",
+		"name": "德阳市",
+		"secondPid": null,
+		"snId": "10419"
+	},
+	{
+		"id": "839",
+		"pId": "230",
+		"level": "2",
+		"name": "广元市",
+		"secondPid": null,
+		"snId": "10420"
+	},
+	{
+		"id": "840",
+		"pId": "230",
+		"level": "2",
+		"name": "资阳市",
+		"secondPid": null,
+		"snId": "10421"
+	},
+	{
+		"id": "841",
+		"pId": "230",
+		"level": "2",
+		"name": "乐山市",
+		"secondPid": null,
+		"snId": "10422"
+	},
+	{
+		"id": "812",
+		"pId": "230",
+		"level": "2",
+		"name": "攀枝花市",
+		"secondPid": null,
+		"snId": "10601"
+	},
+	{
+		"id": "813",
+		"pId": "230",
+		"level": "2",
+		"name": "自贡市",
+		"secondPid": null,
+		"snId": "10602"
+	},
+	{
+		"id": "816",
+		"pId": "230",
+		"level": "2",
+		"name": "绵阳市",
+		"secondPid": null,
+		"snId": "10605"
+	},
+	{
+		"id": "817",
+		"pId": "230",
+		"level": "2",
+		"name": "南充市",
+		"secondPid": null,
+		"snId": "10606"
+	},
+	{
+		"id": "818",
+		"pId": "230",
+		"level": "2",
+		"name": "达州市",
+		"secondPid": null,
+		"snId": "10607"
+	},
+	{
+		"id": "826",
+		"pId": "230",
+		"level": "2",
+		"name": "广安市",
+		"secondPid": null,
+		"snId": "10608"
+	},
+	{
+		"id": "825",
+		"pId": "230",
+		"level": "2",
+		"name": "遂宁市",
+		"secondPid": null,
+		"snId": "10609"
+	},
+	{
+		"id": "827",
+		"pId": "230",
+		"level": "2",
+		"name": "巴中市",
+		"secondPid": null,
+		"snId": "10610"
+	},
+	{
+		"id": "830",
+		"pId": "230",
+		"level": "2",
+		"name": "泸州市",
+		"secondPid": null,
+		"snId": "10611"
+	},
+	{
+		"id": "831",
+		"pId": "230",
+		"level": "2",
+		"name": "宜宾市",
+		"secondPid": null,
+		"snId": "10612"
+	},
+	{
+		"id": "028",
+		"pId": "230",
+		"level": "2",
+		"name": "成都市",
+		"secondPid": null,
+		"snId": "10751"
+	},
+	{
+		"id": "550",
+		"pId": "110",
+		"level": "2",
+		"name": "滁州市",
+		"secondPid": null,
+		"snId": "10683"
+	},
+	{
+		"id": "551",
+		"pId": "110",
+		"level": "2",
+		"name": "合肥市",
+		"secondPid": null,
+		"snId": "10686"
+	},
+	{
+		"id": "553",
+		"pId": "110",
+		"level": "2",
+		"name": "芜湖市",
+		"secondPid": null,
+		"snId": "10687"
+	},
+	{
+		"id": "552",
+		"pId": "110",
+		"level": "2",
+		"name": "蚌埠市",
+		"secondPid": null,
+		"snId": "10688"
+	},
+	{
+		"id": "555",
+		"pId": "110",
+		"level": "2",
+		"name": "马鞍山市",
+		"secondPid": null,
+		"snId": "10689"
+	},
+	{
+		"id": "554",
+		"pId": "110",
+		"level": "2",
+		"name": "淮南市",
+		"secondPid": null,
+		"snId": "10690"
+	},
+	{
+		"id": "556",
+		"pId": "110",
+		"level": "2",
+		"name": "安庆市",
+		"secondPid": null,
+		"snId": "10691"
+	},
+	{
+		"id": "558",
+		"pId": "110",
+		"level": "2",
+		"name": "阜阳市",
+		"secondPid": null,
+		"snId": "10692"
+	},
+	{
+		"id": "559",
+		"pId": "110",
+		"level": "2",
+		"name": "黄山市",
+		"secondPid": null,
+		"snId": "10693"
+	},
+	{
+		"id": "557",
+		"pId": "110",
+		"level": "2",
+		"name": "宿州市",
+		"secondPid": null,
+		"snId": "10694"
+	},
+	{
+		"id": "562",
+		"pId": "110",
+		"level": "2",
+		"name": "铜陵市",
+		"secondPid": null,
+		"snId": "10695"
+	},
+	{
+		"id": "563",
+		"pId": "110",
+		"level": "2",
+		"name": "宣城市",
+		"secondPid": null,
+		"snId": "10696"
+	},
+	{
+		"id": "561",
+		"pId": "110",
+		"level": "2",
+		"name": "淮北市",
+		"secondPid": null,
+		"snId": "10697"
+	},
+	{
+		"id": "560",
+		"pId": "110",
+		"level": "2",
+		"name": "亳州市",
+		"secondPid": null,
+		"snId": "10698"
+	},
+	{
+		"id": "564",
+		"pId": "110",
+		"level": "2",
+		"name": "六安市",
+		"secondPid": null,
+		"snId": "10699"
+	},
+	{
+		"id": "565",
+		"pId": "110",
+		"level": "2",
+		"name": "巢湖市",
+		"secondPid": null,
+		"snId": "10700"
+	},
+	{
+		"id": "566",
+		"pId": "110",
+		"level": "2",
+		"name": "池州市",
+		"secondPid": null,
+		"snId": "10702"
+	},
+	{
+		"id": "771",
+		"pId": "210",
+		"level": "2",
+		"name": "南宁市",
+		"secondPid": null,
+		"snId": "10577"
+	},
+	{
+		"id": "770",
+		"pId": "210",
+		"level": "2",
+		"name": "防城港市",
+		"secondPid": null,
+		"snId": "10580"
+	},
+	{
+		"id": "772",
+		"pId": "210",
+		"level": "2",
+		"name": "柳州市",
+		"secondPid": null,
+		"snId": "10581"
+	},
+	{
+		"id": "773",
+		"pId": "210",
+		"level": "2",
+		"name": "桂林市",
+		"secondPid": null,
+		"snId": "10582"
+	},
+	{
+		"id": "776",
+		"pId": "210",
+		"level": "2",
+		"name": "百色市",
+		"secondPid": null,
+		"snId": "10583"
+	},
+	{
+		"id": "774",
+		"pId": "210",
+		"level": "2",
+		"name": "梧州市",
+		"secondPid": null,
+		"snId": "10584"
+	},
+	{
+		"id": "780",
+		"pId": "210",
+		"level": "2",
+		"name": "崇左市",
+		"secondPid": null,
+		"snId": "10585"
+	},
+	{
+		"id": "777",
+		"pId": "210",
+		"level": "2",
+		"name": "钦州市",
+		"secondPid": null,
+		"snId": "10586"
+	},
+	{
+		"id": "775",
+		"pId": "210",
+		"level": "2",
+		"name": "贵港市",
+		"secondPid": null,
+		"snId": "10587"
+	},
+	{
+		"id": "779",
+		"pId": "210",
+		"level": "2",
+		"name": "北海市",
+		"secondPid": null,
+		"snId": "10588"
+	},
+	{
+		"id": "778",
+		"pId": "210",
+		"level": "2",
+		"name": "河池市",
+		"secondPid": null,
+		"snId": "10589"
+	},
+	{
+		"id": "783",
+		"pId": "210",
+		"level": "2",
+		"name": "玉林市",
+		"secondPid": null,
+		"snId": "10590"
+	},
+	{
+		"id": "781",
+		"pId": "210",
+		"level": "2",
+		"name": "来宾市",
+		"secondPid": null,
+		"snId": "10591"
+	},
+	{
+		"id": "782",
+		"pId": "210",
+		"level": "2",
+		"name": "贺州市",
+		"secondPid": null,
+		"snId": "10593"
+	},
+	{
+		"id": "HHR02",
+		"pId": "HHR",
+		"level": "2",
+		"name": "测试市",
+		"secondPid": null,
+		"snId": "10740"
+	},
+	{
+		"id": "HK1",
+		"pId": "HOK",
+		"level": "2",
+		"name": "香港岛",
+		"secondPid": null,
+		"snId": "10733"
+	},
+	{
+		"id": "HK2",
+		"pId": "HOK",
+		"level": "2",
+		"name": "九龙",
+		"secondPid": null,
+		"snId": "10734"
+	},
+	{
+		"id": "HK4",
+		"pId": "HOK",
+		"level": "2",
+		"name": "香港特别行政区",
+		"secondPid": null,
+		"snId": "10736"
+	},
+	{
+		"id": "HK3",
+		"pId": "HOK",
+		"level": "2",
+		"name": "新界区",
+		"secondPid": null,
+		"snId": "10737"
+	},
+	{
+		"id": "391",
+		"pId": "180",
+		"level": "2",
+		"name": "焦作市",
+		"secondPid": null,
+		"snId": "10613"
+	},
+	{
+		"id": "393",
+		"pId": "180",
+		"level": "2",
+		"name": "濮阳市",
+		"secondPid": null,
+		"snId": "10614"
+	},
+	{
+		"id": "394",
+		"pId": "180",
+		"level": "2",
+		"name": "周口市",
+		"secondPid": null,
+		"snId": "10615"
+	},
+	{
+		"id": "395",
+		"pId": "180",
+		"level": "2",
+		"name": "漯河市",
+		"secondPid": null,
+		"snId": "10616"
+	},
+	{
+		"id": "375",
+		"pId": "180",
+		"level": "2",
+		"name": "平顶山市",
+		"secondPid": null,
+		"snId": "10713"
+	},
+	{
+		"id": "398",
+		"pId": "180",
+		"level": "2",
+		"name": "三门峡市",
+		"secondPid": null,
+		"snId": "10714"
+	},
+	{
+		"id": "396",
+		"pId": "180",
+		"level": "2",
+		"name": "驻马店市",
+		"secondPid": null,
+		"snId": "10715"
+	},
+	{
+		"id": "392",
+		"pId": "180",
+		"level": "2",
+		"name": "鹤壁市",
+		"secondPid": null,
+		"snId": "10716"
+	},
+	{
+		"id": "378",
+		"pId": "180",
+		"level": "2",
+		"name": "开封市",
+		"secondPid": null,
+		"snId": "10717"
+	},
+	{
+		"id": "379",
+		"pId": "180",
+		"level": "2",
+		"name": "洛阳市",
+		"secondPid": null,
+		"snId": "10718"
+	},
+	{
+		"id": "376",
+		"pId": "180",
+		"level": "2",
+		"name": "信阳市",
+		"secondPid": null,
+		"snId": "10719"
+	},
+	{
+		"id": "377",
+		"pId": "180",
+		"level": "2",
+		"name": "南阳市",
+		"secondPid": null,
+		"snId": "10720"
+	},
+	{
+		"id": "373",
+		"pId": "180",
+		"level": "2",
+		"name": "新乡市",
+		"secondPid": null,
+		"snId": "10721"
+	},
+	{
+		"id": "399",
+		"pId": "180",
+		"level": "2",
+		"name": "济源市",
+		"secondPid": null,
+		"snId": "10722"
+	},
+	{
+		"id": "374",
+		"pId": "180",
+		"level": "2",
+		"name": "许昌市",
+		"secondPid": null,
+		"snId": "10723"
+	},
+	{
+		"id": "372",
+		"pId": "180",
+		"level": "2",
+		"name": "安阳市",
+		"secondPid": null,
+		"snId": "10724"
+	},
+	{
+		"id": "371",
+		"pId": "180",
+		"level": "2",
+		"name": "郑州市",
+		"secondPid": null,
+		"snId": "10725"
+	},
+	{
+		"id": "370",
+		"pId": "180",
+		"level": "2",
+		"name": "商丘市",
+		"secondPid": null,
+		"snId": "10726"
+	},
+	{
+		"id": "971",
+		"pId": "280",
+		"level": "2",
+		"name": "西宁市",
+		"secondPid": null,
+		"snId": "10490"
+	},
+	{
+		"id": "970",
+		"pId": "280",
+		"level": "2",
+		"name": "海北州",
+		"secondPid": null,
+		"snId": "10491"
+	},
+	{
+		"id": "972",
+		"pId": "280",
+		"level": "2",
+		"name": "海东地区",
+		"secondPid": null,
+		"snId": "10492"
+	},
+	{
+		"id": "973",
+		"pId": "280",
+		"level": "2",
+		"name": "黄南州",
+		"secondPid": null,
+		"snId": "10493"
+	},
+	{
+		"id": "979",
+		"pId": "280",
+		"level": "2",
+		"name": "海西州",
+		"secondPid": null,
+		"snId": "10494"
+	},
+	{
+		"id": "976",
+		"pId": "280",
+		"level": "2",
+		"name": "玉树州",
+		"secondPid": null,
+		"snId": "10495"
+	},
+	{
+		"id": "975",
+		"pId": "280",
+		"level": "2",
+		"name": "果洛州",
+		"secondPid": null,
+		"snId": "10496"
+	},
+	{
+		"id": "974",
+		"pId": "280",
+		"level": "2",
+		"name": "海南州",
+		"secondPid": null,
+		"snId": "10497"
+	},
+	{
+		"id": "730",
+		"pId": "160",
+		"level": "2",
+		"name": "岳阳市",
+		"secondPid": null,
+		"snId": "10549"
+	},
+	{
+		"id": "731",
+		"pId": "160",
+		"level": "2",
+		"name": "长沙市",
+		"secondPid": null,
+		"snId": "10550"
+	},
+	{
+		"id": "733",
+		"pId": "160",
+		"level": "2",
+		"name": "株洲市",
+		"secondPid": null,
+		"snId": "10551"
+	},
+	{
+		"id": "734",
+		"pId": "160",
+		"level": "2",
+		"name": "衡阳市",
+		"secondPid": null,
+		"snId": "10552"
+	},
+	{
+		"id": "732",
+		"pId": "160",
+		"level": "2",
+		"name": "湘潭市",
+		"secondPid": null,
+		"snId": "10553"
+	},
+	{
+		"id": "736",
+		"pId": "160",
+		"level": "2",
+		"name": "常德市",
+		"secondPid": null,
+		"snId": "10554"
+	},
+	{
+		"id": "735",
+		"pId": "160",
+		"level": "2",
+		"name": "郴州市",
+		"secondPid": null,
+		"snId": "10555"
+	},
+	{
+		"id": "737",
+		"pId": "160",
+		"level": "2",
+		"name": "益阳市",
+		"secondPid": null,
+		"snId": "10556"
+	},
+	{
+		"id": "738",
+		"pId": "160",
+		"level": "2",
+		"name": "娄底市",
+		"secondPid": null,
+		"snId": "10557"
+	},
+	{
+		"id": "739",
+		"pId": "160",
+		"level": "2",
+		"name": "邵阳市",
+		"secondPid": null,
+		"snId": "10558"
+	},
+	{
+		"id": "743",
+		"pId": "160",
+		"level": "2",
+		"name": "湘西州",
+		"secondPid": null,
+		"snId": "10559"
+	},
+	{
+		"id": "745",
+		"pId": "160",
+		"level": "2",
+		"name": "怀化市",
+		"secondPid": null,
+		"snId": "10560"
+	},
+	{
+		"id": "744",
+		"pId": "160",
+		"level": "2",
+		"name": "张家界市",
+		"secondPid": null,
+		"snId": "10561"
+	},
+	{
+		"id": "746",
+		"pId": "160",
+		"level": "2",
+		"name": "永州市",
+		"secondPid": null,
+		"snId": "10562"
+	},
+	{
+		"id": "930",
+		"pId": "260",
+		"level": "2",
+		"name": "临夏州",
+		"secondPid": null,
+		"snId": "10471"
+	},
+	{
+		"id": "931",
+		"pId": "260",
+		"level": "2",
+		"name": "兰州市",
+		"secondPid": null,
+		"snId": "10472"
+	},
+	{
+		"id": "933",
+		"pId": "260",
+		"level": "2",
+		"name": "平凉市",
+		"secondPid": null,
+		"snId": "10473"
+	},
+	{
+		"id": "932",
+		"pId": "260",
+		"level": "2",
+		"name": "定西市",
+		"secondPid": null,
+		"snId": "10474"
+	},
+	{
+		"id": "934",
+		"pId": "260",
+		"level": "2",
+		"name": "庆阳市",
+		"secondPid": null,
+		"snId": "10475"
+	},
+	{
+		"id": "935",
+		"pId": "260",
+		"level": "2",
+		"name": "武威市",
+		"secondPid": null,
+		"snId": "10476"
+	},
+	{
+		"id": "936",
+		"pId": "260",
+		"level": "2",
+		"name": "张掖市",
+		"secondPid": null,
+		"snId": "10477"
+	},
+	{
+		"id": "937",
+		"pId": "260",
+		"level": "2",
+		"name": "酒泉市",
+		"secondPid": null,
+		"snId": "10478"
+	},
+	{
+		"id": "938",
+		"pId": "260",
+		"level": "2",
+		"name": "天水市",
+		"secondPid": null,
+		"snId": "10479"
+	},
+	{
+		"id": "939",
+		"pId": "260",
+		"level": "2",
+		"name": "陇南市",
+		"secondPid": null,
+		"snId": "10480"
+	},
+	{
+		"id": "940",
+		"pId": "260",
+		"level": "2",
+		"name": "金昌市",
+		"secondPid": null,
+		"snId": "10481"
+	},
+	{
+		"id": "943",
+		"pId": "260",
+		"level": "2",
+		"name": "白银市",
+		"secondPid": null,
+		"snId": "10482"
+	},
+	{
+		"id": "941",
+		"pId": "260",
+		"level": "2",
+		"name": "甘南州",
+		"secondPid": null,
+		"snId": "10483"
+	},
+	{
+		"id": "942",
+		"pId": "260",
+		"level": "2",
+		"name": "嘉峪关市",
+		"secondPid": null,
+		"snId": "10484"
+	},
+	{
+		"id": "701",
+		"pId": "140",
+		"level": "2",
+		"name": "鹰潭市",
+		"secondPid": null,
+		"snId": "10533"
+	},
+	{
+		"id": "791",
+		"pId": "140",
+		"level": "2",
+		"name": "南昌市",
+		"secondPid": null,
+		"snId": "10592"
+	},
+	{
+		"id": "790",
+		"pId": "140",
+		"level": "2",
+		"name": "新余市",
+		"secondPid": null,
+		"snId": "10594"
+	},
+	{
+		"id": "792",
+		"pId": "140",
+		"level": "2",
+		"name": "九江市",
+		"secondPid": null,
+		"snId": "10595"
+	},
+	{
+		"id": "793",
+		"pId": "140",
+		"level": "2",
+		"name": "上饶市",
+		"secondPid": null,
+		"snId": "10596"
+	},
+	{
+		"id": "794",
+		"pId": "140",
+		"level": "2",
+		"name": "抚州市",
+		"secondPid": null,
+		"snId": "10597"
+	},
+	{
+		"id": "795",
+		"pId": "140",
+		"level": "2",
+		"name": "宜春市",
+		"secondPid": null,
+		"snId": "10598"
+	},
+	{
+		"id": "796",
+		"pId": "140",
+		"level": "2",
+		"name": "吉安市",
+		"secondPid": null,
+		"snId": "10599"
+	},
+	{
+		"id": "797",
+		"pId": "140",
+		"level": "2",
+		"name": "赣州市",
+		"secondPid": null,
+		"snId": "10600"
+	},
+	{
+		"id": "799",
+		"pId": "140",
+		"level": "2",
+		"name": "萍乡市",
+		"secondPid": null,
+		"snId": "10603"
+	},
+	{
+		"id": "798",
+		"pId": "140",
+		"level": "2",
+		"name": "景德镇市",
+		"secondPid": null,
+		"snId": "10604"
+	},
+	{
+		"id": "870",
+		"pId": "240",
+		"level": "2",
+		"name": "昭通市",
+		"secondPid": null,
+		"snId": "10431"
+	},
+	{
+		"id": "871",
+		"pId": "240",
+		"level": "2",
+		"name": "昆明市",
+		"secondPid": null,
+		"snId": "10433"
+	},
+	{
+		"id": "873",
+		"pId": "240",
+		"level": "2",
+		"name": "红河州",
+		"secondPid": null,
+		"snId": "10434"
+	},
+	{
+		"id": "872",
+		"pId": "240",
+		"level": "2",
+		"name": "大理州",
+		"secondPid": null,
+		"snId": "10435"
+	},
+	{
+		"id": "874",
+		"pId": "240",
+		"level": "2",
+		"name": "曲靖市",
+		"secondPid": null,
+		"snId": "10436"
+	},
+	{
+		"id": "875",
+		"pId": "240",
+		"level": "2",
+		"name": "保山市",
+		"secondPid": null,
+		"snId": "10437"
+	},
+	{
+		"id": "876",
+		"pId": "240",
+		"level": "2",
+		"name": "文山州",
+		"secondPid": null,
+		"snId": "10438"
+	},
+	{
+		"id": "878",
+		"pId": "240",
+		"level": "2",
+		"name": "楚雄州",
+		"secondPid": null,
+		"snId": "10439"
+	},
+	{
+		"id": "877",
+		"pId": "240",
+		"level": "2",
+		"name": "玉溪市",
+		"secondPid": null,
+		"snId": "10440"
+	},
+	{
+		"id": "879",
+		"pId": "240",
+		"level": "2",
+		"name": "普洱市",
+		"secondPid": null,
+		"snId": "10441"
+	},
+	{
+		"id": "883",
+		"pId": "240",
+		"level": "2",
+		"name": "临沧市",
+		"secondPid": null,
+		"snId": "10442"
+	},
+	{
+		"id": "888",
+		"pId": "240",
+		"level": "2",
+		"name": "丽江市",
+		"secondPid": null,
+		"snId": "10443"
+	},
+	{
+		"id": "886",
+		"pId": "240",
+		"level": "2",
+		"name": "怒江州",
+		"secondPid": null,
+		"snId": "10444"
+	},
+	{
+		"id": "887",
+		"pId": "240",
+		"level": "2",
+		"name": "迪庆州",
+		"secondPid": null,
+		"snId": "10446"
+	},
+	{
+		"id": "691",
+		"pId": "240",
+		"level": "2",
+		"name": "西双版纳州",
+		"secondPid": null,
+		"snId": "10531"
+	},
+	{
+		"id": "692",
+		"pId": "240",
+		"level": "2",
+		"name": "德宏州",
+		"secondPid": null,
+		"snId": "10534"
+	},
+	{
+		"id": "MA1",
+		"pId": "MAC",
+		"level": "2",
+		"name": "澳门半岛",
+		"secondPid": null,
+		"snId": "10735"
+	},
+	{
+		"id": "MA2",
+		"pId": "MAC",
+		"level": "2",
+		"name": "澳门离岛",
+		"secondPid": null,
+		"snId": "10738"
+	},
+	{
+		"id": "631",
+		"pId": "120",
+		"level": "2",
+		"name": "威海市",
+		"secondPid": null,
+		"snId": "10522"
+	},
+	{
+		"id": "632",
+		"pId": "120",
+		"level": "2",
+		"name": "枣庄市",
+		"secondPid": null,
+		"snId": "10524"
+	},
+	{
+		"id": "633",
+		"pId": "120",
+		"level": "2",
+		"name": "日照市",
+		"secondPid": null,
+		"snId": "10525"
+	},
+	{
+		"id": "635",
+		"pId": "120",
+		"level": "2",
+		"name": "聊城市",
+		"secondPid": null,
+		"snId": "10526"
+	},
+	{
+		"id": "634",
+		"pId": "120",
+		"level": "2",
+		"name": "莱芜市",
+		"secondPid": null,
+		"snId": "10527"
+	},
+	{
+		"id": "530",
+		"pId": "120",
+		"level": "2",
+		"name": "菏泽市",
+		"secondPid": null,
+		"snId": "10673"
+	},
+	{
+		"id": "531",
+		"pId": "120",
+		"level": "2",
+		"name": "济南市",
+		"secondPid": null,
+		"snId": "10674"
+	},
+	{
+		"id": "532",
+		"pId": "120",
+		"level": "2",
+		"name": "青岛市",
+		"secondPid": null,
+		"snId": "10675"
+	},
+	{
+		"id": "533",
+		"pId": "120",
+		"level": "2",
+		"name": "淄博市",
+		"secondPid": null,
+		"snId": "10676"
+	},
+	{
+		"id": "534",
+		"pId": "120",
+		"level": "2",
+		"name": "德州市",
+		"secondPid": null,
+		"snId": "10677"
+	},
+	{
+		"id": "535",
+		"pId": "120",
+		"level": "2",
+		"name": "烟台市",
+		"secondPid": null,
+		"snId": "10678"
+	},
+	{
+		"id": "536",
+		"pId": "120",
+		"level": "2",
+		"name": "潍坊市",
+		"secondPid": null,
+		"snId": "10679"
+	},
+	{
+		"id": "537",
+		"pId": "120",
+		"level": "2",
+		"name": "济宁市",
+		"secondPid": null,
+		"snId": "10680"
+	},
+	{
+		"id": "538",
+		"pId": "120",
+		"level": "2",
+		"name": "泰安市",
+		"secondPid": null,
+		"snId": "10681"
+	},
+	{
+		"id": "539",
+		"pId": "120",
+		"level": "2",
+		"name": "临沂市",
+		"secondPid": null,
+		"snId": "10682"
+	},
+	{
+		"id": "543",
+		"pId": "120",
+		"level": "2",
+		"name": "滨州市",
+		"secondPid": null,
+		"snId": "10684"
+	},
+	{
+		"id": "546",
+		"pId": "120",
+		"level": "2",
+		"name": "东营市",
+		"secondPid": null,
+		"snId": "10685"
+	},
+	{
+		"id": "851",
+		"pId": "220",
+		"level": "2",
+		"name": "贵阳市",
+		"secondPid": null,
+		"snId": "10423"
+	},
+	{
+		"id": "852",
+		"pId": "220",
+		"level": "2",
+		"name": "遵义市",
+		"secondPid": null,
+		"snId": "10424"
+	},
+	{
+		"id": "853",
+		"pId": "220",
+		"level": "2",
+		"name": "安顺市",
+		"secondPid": null,
+		"snId": "10425"
+	},
+	{
+		"id": "854",
+		"pId": "220",
+		"level": "2",
+		"name": "黔南州",
+		"secondPid": null,
+		"snId": "10426"
+	},
+	{
+		"id": "855",
+		"pId": "220",
+		"level": "2",
+		"name": "黔东南州",
+		"secondPid": null,
+		"snId": "10427"
+	},
+	{
+		"id": "856",
+		"pId": "220",
+		"level": "2",
+		"name": "铜仁市",
+		"secondPid": null,
+		"snId": "10428"
+	},
+	{
+		"id": "857",
+		"pId": "220",
+		"level": "2",
+		"name": "毕节市",
+		"secondPid": null,
+		"snId": "10429"
+	},
+	{
+		"id": "858",
+		"pId": "220",
+		"level": "2",
+		"name": "六盘水市",
+		"secondPid": null,
+		"snId": "10430"
+	},
+	{
+		"id": "859",
+		"pId": "220",
+		"level": "2",
+		"name": "黔西南州",
+		"secondPid": null,
+		"snId": "10432"
+	},
+	{
+		"id": "510",
+		"pId": "100",
+		"level": "2",
+		"name": "无锡市",
+		"secondPid": null,
+		"snId": "10662"
+	},
+	{
+		"id": "511",
+		"pId": "100",
+		"level": "2",
+		"name": "镇江市",
+		"secondPid": null,
+		"snId": "10663"
+	},
+	{
+		"id": "512",
+		"pId": "100",
+		"level": "2",
+		"name": "苏州市",
+		"secondPid": null,
+		"snId": "10664"
+	},
+	{
+		"id": "514",
+		"pId": "100",
+		"level": "2",
+		"name": "扬州市",
+		"secondPid": null,
+		"snId": "10665"
+	},
+	{
+		"id": "513",
+		"pId": "100",
+		"level": "2",
+		"name": "南通市",
+		"secondPid": null,
+		"snId": "10666"
+	},
+	{
+		"id": "515",
+		"pId": "100",
+		"level": "2",
+		"name": "盐城市",
+		"secondPid": null,
+		"snId": "10667"
+	},
+	{
+		"id": "516",
+		"pId": "100",
+		"level": "2",
+		"name": "徐州市",
+		"secondPid": null,
+		"snId": "10668"
+	},
+	{
+		"id": "517",
+		"pId": "100",
+		"level": "2",
+		"name": "淮安市",
+		"secondPid": null,
+		"snId": "10669"
+	},
+	{
+		"id": "518",
+		"pId": "100",
+		"level": "2",
+		"name": "连云港市",
+		"secondPid": null,
+		"snId": "10670"
+	},
+	{
+		"id": "519",
+		"pId": "100",
+		"level": "2",
+		"name": "常州市",
+		"secondPid": null,
+		"snId": "10671"
+	},
+	{
+		"id": "523",
+		"pId": "100",
+		"level": "2",
+		"name": "泰州市",
+		"secondPid": null,
+		"snId": "10672"
+	},
+	{
+		"id": "025",
+		"pId": "100",
+		"level": "2",
+		"name": "南京市",
+		"secondPid": null,
+		"snId": "10744"
+	},
+	{
+		"id": "527",
+		"pId": "100",
+		"level": "2",
+		"name": "宿迁市",
+		"secondPid": null,
+		"snId": "10778"
+	},
+	{
+		"id": "023",
+		"pId": "320",
+		"level": "2",
+		"name": "重庆市",
+		"secondPid": null,
+		"snId": "10748"
+	},
+	{
+		"id": "892",
+		"pId": "200",
+		"level": "2",
+		"name": "儋州市",
+		"secondPid": null,
+		"snId": "10445"
+	},
+	{
+		"id": "896",
+		"pId": "200",
+		"level": "2",
+		"name": "琼海市",
+		"secondPid": null,
+		"snId": "10447"
+	},
+	{
+		"id": "890",
+		"pId": "200",
+		"level": "2",
+		"name": "三沙市",
+		"secondPid": null,
+		"snId": "10448"
+	},
+	{
+		"id": "893",
+		"pId": "200",
+		"level": "2",
+		"name": "五指山市",
+		"secondPid": null,
+		"snId": "10449"
+	},
+	{
+		"id": "894",
+		"pId": "200",
+		"level": "2",
+		"name": "万宁市",
+		"secondPid": null,
+		"snId": "10450"
+	},
+	{
+		"id": "897",
+		"pId": "200",
+		"level": "2",
+		"name": "三亚市",
+		"secondPid": null,
+		"snId": "10451"
+	},
+	{
+		"id": "891",
+		"pId": "200",
+		"level": "2",
+		"name": "东方市",
+		"secondPid": null,
+		"snId": "10452"
+	},
+	{
+		"id": "895",
+		"pId": "200",
+		"level": "2",
+		"name": "文昌市",
+		"secondPid": null,
+		"snId": "10453"
+	},
+	{
+		"id": "898",
+		"pId": "200",
+		"level": "2",
+		"name": "海口市",
+		"secondPid": null,
+		"snId": "10454"
+	},
+	{
+		"id": "899",
+		"pId": "200",
+		"level": "2",
+		"name": "海南省直辖",
+		"secondPid": null,
+		"snId": "10455"
+	},
+	{
+		"id": "090",
+		"pId": "300",
+		"level": "2",
+		"name": "昌都地区",
+		"secondPid": null,
+		"snId": "10753"
+	},
+	{
+		"id": "089",
+		"pId": "300",
+		"level": "2",
+		"name": "拉萨市",
+		"secondPid": null,
+		"snId": "10754"
+	},
+	{
+		"id": "091",
+		"pId": "300",
+		"level": "2",
+		"name": "山南地区",
+		"secondPid": null,
+		"snId": "10755"
+	},
+	{
+		"id": "092",
+		"pId": "300",
+		"level": "2",
+		"name": "日喀则地区",
+		"secondPid": null,
+		"snId": "10756"
+	},
+	{
+		"id": "093",
+		"pId": "300",
+		"level": "2",
+		"name": "那曲地区",
+		"secondPid": null,
+		"snId": "10757"
+	},
+	{
+		"id": "095",
+		"pId": "300",
+		"level": "2",
+		"name": "林芝地区",
+		"secondPid": null,
+		"snId": "10758"
+	},
+	{
+		"id": "094",
+		"pId": "300",
+		"level": "2",
+		"name": "阿里地区",
+		"secondPid": null,
+		"snId": "10759"
+	}
+]
+}

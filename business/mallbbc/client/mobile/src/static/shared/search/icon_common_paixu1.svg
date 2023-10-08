@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/common/paixu1</title>
+    <defs>
+        <linearGradient x1="34.926331%" y1="-30.1190885%" x2="74.6562383%" y2="62.6543563%" id="linearGradient-1">
+            <stop stop-color="#FF9B93" offset="0%"></stop>
+            <stop stop-color="#F60000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/common/paixu1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/common/paixu" transform="translate(-0.500000, 0.000000)">
+            <path d="M4.5,0 L18.5,0 C19.6045695,-2.02906125e-16 20.5,0.8954305 20.5,2 L20.5,19.1926858 C20.5,20.2972553 19.6045695,21.1926858 18.5,21.1926858 C18.2776441,21.1926858 18.0568447,21.155606 17.8466865,21.0829719 L12.1533135,19.11525 C11.7300543,18.9689648 11.2699457,18.9689648 10.8466865,19.11525 L5.15331348,21.0829719 C4.1093373,21.443787 2.97052898,20.8899755 2.60971391,19.8459993 C2.53707985,19.6358411 2.5,19.4150417 2.5,19.1926858 L2.5,2 C2.5,0.8954305 3.3954305,2.02906125e-16 4.5,0 Z" id="矩形" fill="url(#linearGradient-1)"></path>
+            <polygon id="1" fill="#FFFFFF" fill-rule="nonzero" points="12.485 15.135 12.485 4.425 11 4.425 9.515 5.37 9.515 6.99 11 6.18 11 15.135"></polygon>
+        </g>
+    </g>
+</svg>

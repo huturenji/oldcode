@@ -1,0 +1,146 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages #eff2f5	
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#ffffff",
+		"rpxCalcMaxDeviceWidth": 640, // rpx 计算所支持的最大设备宽度，单位 px，默认值为 960
+		"rpxCalcBaseDeviceWidth": 375, // rpx 计算使用的基准设备宽度，设备实际宽度超出 rpx 计算所支持的最大设备宽度时将按基准宽度计算，单位 px，默认值为 375
+		"rpxCalcIncludeWidth": 749, // rpx 计算特殊处理的值，始终按实际的设备宽度计算，单位 rpx，默认值为 750
+		"scrollIndicator": "none"
+	},
+	"tabBar": {
+		
+	},
+	"subPackages": [
+		{
+			"root": "views",
+			"pages": [
+				{
+					"path": "login/index",
+					"style": {
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTitleText": "商户端",
+						"navigationStyle": "custom"
+					},
+					"meta": {
+						"titleBar": {
+							"title": {
+								"showBack": true,
+								"show": true,
+								"showTitle": false,
+								"themeMode": "dark",
+								"suspend": false,
+								"opacity": 0
+								
+							},
+							"status": {
+								"show": true,
+								"themeMode": "dark",
+								"suspend": false,
+								"opacity": 0
+							}
+						}
+					}
+				},
+				{
+					"path": "shop/index",
+					"style": {
+						"navigationBarBackgroundColor": "#eff2f5",
+						"navigationBarTitleText": "商户端",
+						"navigationStyle": "custom"
+					},
+					"meta": {
+						"titleBar": {
+							"title": {
+								"showBack": true,
+								"show": true,
+								"showTitle": true,
+								"themeMode": "light",
+								"suspend": true,
+								"opacity": 0,
+								"color": "#fff"
+								
+							},
+							"status": {
+								"show": true,
+								"themeMode": "light",
+								"suspend": true,
+								"opacity": 0
+							}
+						}
+					}
+				},
+				{
+					"path": "shop/cashDetail",
+					"style": {
+						"navigationBarBackgroundColor": "#eff2f5",
+						"navigationBarTitleText": "消费券详情",
+						"navigationStyle": "custom"
+					},
+					"meta": {
+						"titleBar": {
+							"title": {
+								"show": true,
+								"showTitle": true,
+								"themeMode": "dark",
+								"suspend": false,
+								"background": "#eff2f5"
+							},
+							"status": {
+								"show": true,
+								"themeMode": "dark",
+								"suspend": false,
+								"background": "#eff2f5"
+							}
+						}
+					}
+				},
+				{
+					"path": "shop/info",
+					"style": {
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTitleText": "门店信息",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "shop/cashResult",
+					"style": {
+						"navigationBarBackgroundColor": "#eff2f5",
+						"navigationBarTitleText": "核销结果",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "shop/mark",
+					"style": {
+						"navigationBarBackgroundColor": "#eff2f5",
+						"navigationBarTitleText": "核销备注",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "shop/cashInput",
+					"style": {
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTitleText": "手动核销",
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		}
+	]
+}

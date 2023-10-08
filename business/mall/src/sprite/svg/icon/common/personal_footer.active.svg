@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <defs>
+        <linearGradient x1="14.0532257%" y1="0%" x2="88.0687684%" y2="100%" id="linearGradient-1">
+            <stop stop-color="var(--linearThemeColorStart)" offset="0%"></stop>
+            <stop stop-color="var(--linearThemeColorEnd)" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.0532257%" y1="34.1796875%" x2="88.0687684%" y2="65.8203125%" id="linearGradient-2">
+            <stop stop-color="var(--linearThemeColorStart)" offset="0%"></stop>
+            <stop stop-color="var(--linearThemeColorEnd)" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/菜单栏/我的/选中" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="url(#linearGradient-1)" cx="13" cy="9" r="4.5"></circle>
+        <path d="M13,23 C16,23 21,22.4550038 21,19.8235294 C21,17.192055 17.418278,14 13,14 C8.581722,14 5,17.192055 5,19.8235294 C5,22.4550038 10,23 13,23 Z" id="Oval备份" fill="url(#linearGradient-2)"></path>
+    </g>
+</svg>

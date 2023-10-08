@@ -1,0 +1,89 @@
+@import "./hairLine.less";
+
+.linear-gra-mall-addFavorite(@angle: to bottom right){
+    background-image: linear-gradient(@angle, #FEC85C, #FF9B24);
+}
+.linear-gra-add-cart-btn(@angle: to bottom right){
+    background-image: linear-gradient(@angle, ~"var(--linearAddCartColorStart)", ~"var(--linearAddCartColorEnd)");
+}
+
+.linear-gra-mall-btn(@angle: to bottom right){
+    background-image: linear-gradient(@angle, ~"var(--linearThemeColorStart)", ~"var(--linearThemeColorEnd)");
+}
+
+.clear(){
+    &:before,&:after{
+        clear: both;
+        content:'';
+        display: block;
+        overflow: hidden;
+        line-height: 0px;
+        height: 0px;
+        zoom: 1;
+    }
+}
+
+.no-wrap(){
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 追加这一行代码 */
+}
+/**
+ * 添加中划线
+ */
+.del(){
+    padding: 0 0.1rem;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 1px;
+        background-color: @fc-info;
+    }
+}
+
+/**
+ * 显示@line行,超过的部分显示...
+ * @param  @line 显示的行数
+ */
+.line-clamp(@line){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.flex-box(){
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex(@value: 1){
+    -webkit-box-flex: @value;      
+    -moz-box-flex: @value;        
+    -webkit-flex: @value;          
+    -ms-flex: @value;              
+    flex: @value;                  
+}
+.justify-content(@value: center){
+    -webkit-box-pack: @value;
+    -webkit-justify-content: @value;
+    -moz-justify-content: @value;
+    -ms-justify-content: @value;
+    -o-justify-content: @value;
+    justify-content: @value;
+}
+.align-items(@value: center){
+    -ms-flex-align: @value;
+    -webkit-align-items: @value;
+    -moz-align-items: @value;
+    align-items: @value;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="36px" viewBox="0 0 31 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>icon_shangyun_common_inform</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="44.8624894%" gradientTransform="translate(0.500000,0.500000),scale(0.625000,1.000000),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="8.05015297%"></stop>
+            <stop stop-color="#FF8D8A" offset="51.8247378%"></stop>
+            <stop stop-color="#FE4A45" offset="100%"></stop>
+        </radialGradient>
+        <filter x="-87.5%" y="-140.0%" width="275.0%" height="380.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <radialGradient cx="58.5662164%" cy="50%" fx="58.5662164%" fy="50%" r="64.280308%" gradientTransform="translate(0.585662,0.500000),rotate(142.262040),scale(1.000000,0.819156),translate(-0.585662,-0.500000)" id="radialGradient-3">
+            <stop stop-color="#FF6466" offset="0%"></stop>
+            <stop stop-color="#FF9C9D" offset="66.266364%"></stop>
+            <stop stop-color="#FF6768" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="33.3337235%" cy="-20.4033706%" fx="33.3337235%" fy="-20.4033706%" r="313.501858%" gradientTransform="translate(0.333337,-0.204034),scale(0.233766,1.000000),rotate(110.287104),scale(1.000000,1.121569),translate(-0.333337,0.204034)" id="radialGradient-4">
+            <stop stop-color="#FEDCDC" offset="0%"></stop>
+            <stop stop-color="#F86F6F" offset="28.5457375%"></stop>
+            <stop stop-color="#F66B6B" offset="54.1703827%"></stop>
+            <stop stop-color="#F87374" offset="84.9380672%"></stop>
+            <stop stop-color="#FF696B" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="38.2026919%" cy="23.8403272%" fx="38.2026919%" fy="23.8403272%" r="110.140242%" gradientTransform="translate(0.382027,0.238403),scale(0.714286,1.000000),rotate(105.284324),scale(1.000000,1.217849),translate(-0.382027,-0.238403)" id="radialGradient-5">
+            <stop stop-color="#FEDCDC" offset="0%"></stop>
+            <stop stop-color="#FF8181" offset="33.2004554%"></stop>
+            <stop stop-color="#E00203" offset="70.7366981%"></stop>
+            <stop stop-color="#F9595B" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="15活动详情-未开始" transform="translate(-9.000000, -1903.000000)">
+            <g id="编组-2" transform="translate(0.000000, 1900.000000)">
+                <g id="编组-7" transform="translate(9.000000, 3.000000)">
+                    <g id="icon_shangyun_common_inform" transform="translate(2.000000, 8.000000)">
+                        <ellipse id="椭圆形备份-7" fill="url(#radialGradient-1)" opacity="0.900000036" filter="url(#filter-2)" cx="11.3673469" cy="15.5510204" rx="6.85714286" ry="4.28571429"></ellipse>
+                        <rect id="Rectangle-23备份" fill="url(#radialGradient-3)" x="5.48979592" y="7.95918367" width="11.0204082" height="11.0204082" rx="5.51020408"></rect>
+                        <rect id="Combined-Shape备份" fill="url(#radialGradient-4)" x="0" y="10.2857143" width="22" height="5.14285714" rx="2.57142857"></rect>
+                        <path d="M11,0 C14.5386856,-6.50046006e-16 17.5364527,2.60731524 18.0270838,6.11182335 L18.7142857,11.0204082 L18.7142857,11.0204082 L3.28571429,11.0204082 L3.97291616,6.11182335 C4.4635473,2.60731524 7.46131436,6.50046006e-16 11,0 Z" id="Rectangle-22" fill="url(#radialGradient-5)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

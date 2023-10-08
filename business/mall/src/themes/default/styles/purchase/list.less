@@ -1,0 +1,63 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.cart{
+  color: @secondary-text-color;
+  position: absolute;
+  right: 0.4rem;
+  top: 0;
+  font-size: 0.32rem;
+  font-weight: normal;
+  i{
+      font-size: 0.4rem;
+  }
+  .cart-num{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -0.26rem;
+    top: 0.1rem;
+    width: 0.4rem;
+    height: 0.3rem;
+    text-align: center;
+    line-height: 0.3rem;
+    border: 0.02rem solid @theme-color;
+    border-radius: 0.8rem;
+    font-size: 0.18rem;
+    color: @theme-color;
+    background-color: #fff;
+  }
+}
+.purchasedList-container{
+  background-color: #fff;
+}
+.purchasedList-box{
+
+  .list-box{
+    background-color: #fff;
+    padding: 0.3rem;
+    .maybe{
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+    ul{
+      .clear();
+      li{
+        width: 30%;
+        float: left;
+        margin-right: 0.333rem;
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+      }
+    }
+    .no-more{
+      padding: 0.3rem 0;
+      width: 100%;
+      text-align: center;
+      color: @third-text-color;
+      font-size: 0.26rem;
+      background-color: #fff;
+    }
+  }
+}

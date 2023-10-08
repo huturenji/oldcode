@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    
+    <defs>
+        <linearGradient x1="42.6582641%" y1="23.9975833%" x2="88.7463248%" y2="93.9453125%" id="linearGradient-1">
+            <stop stop-color="#FAC96B" offset="0%"></stop>
+            <stop stop-color="#F49939" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="44.1225439%" y1="20.4150281%" x2="81.018526%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#F9D287" offset="0%"></stop>
+            <stop stop-color="#F49939" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="h5-svg/icon/mall/daishenpi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(3.142857, 3.142857)" id="编组">
+            <g>
+                <rect id="矩形" fill="url(#linearGradient-2)" fill-rule="nonzero" x="0" y="0" width="13.3571429" height="14.9285714" rx="1.57142857"></rect>
+                <path d="M11.1964286,7.85714286 C12.1727891,7.85714286 12.9642857,8.64863946 12.9642857,9.625 C12.9642857,10.1923944 12.6969858,10.6973576 12.2814418,11.0208339 L12.6684286,12.5711429 L15.3214286,12.5714286 L15.3214286,14.9285714 L7.07142857,14.9285714 L7.07142857,12.5714286 L9.72342857,12.5711429 L10.1114153,11.0208339 C9.73162427,10.7251892 9.47566524,10.277944 9.43443182,9.76999177 L9.42857143,9.625 C9.42857143,8.64863946 10.220068,7.85714286 11.1964286,7.85714286 Z" id="Combined-Shape" stroke="#FFEDCC" stroke-width="0.5" fill="#FFA501" stroke-linejoin="round"></path>
+                <line x1="3.55466056" y1="3.75473136" x2="9.84037485" y2="3.75473136" id="Path-16" stroke="#FFEDCC" stroke-width="0.942857143" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="3.55466056" y1="7.46428571" x2="7.48323199" y2="7.46428571" id="Path-16-Copy" stroke="#FFEDCC" stroke-width="0.942857143" stroke-linecap="round" stroke-linejoin="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

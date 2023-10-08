@@ -1,0 +1,100 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+
+//地址弹窗的背景图样式
+/deep/ .editAddress{
+    background-color: @background-color;
+}
+.purchaseApply{
+    bottom: auto;
+	background-color: #fff;
+    .cell{
+        margin: 0 0.2rem 0 0.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 0.2rem 0.24rem;
+        border-radius: 0.16rem;
+        font-size: 0.28rem;
+        .title{
+            color: @third-text-color;
+            width: 2.5rem;
+        }
+        .content{
+            color: @text-color;
+            flex: 1;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden;
+            .time{
+                display: inline-block;
+                text-align: justify;
+            }
+            .palceholder{
+                color: @placeholder-color;
+            }
+            .content-item{
+                overflow: hidden;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                padding-right: 0.08rem;
+                p{
+                    white-space: nowrap;
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    .bottom-btns{
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        height: 1.1rem;
+        padding: 0.16rem 0.2rem;
+        & > p{
+            font-size: 0.28rem;        
+            width: 42%;
+            border-radius: 0.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clear-btn{
+            border: 1px solid @theme-color;
+            color: @theme-color;
+        }
+        .confirm-btn{
+            color: #fff;
+            .linear-gra-mall-btn(140deg);
+            &.disable{
+                opacity: 0.4;
+            }
+        }
+    }
+    /deep/ .address-detail-container{
+        padding-bottom: 0;
+    }
+}
+/deep/ .invoice-popup.vux-popup-dialog{
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s;
+}
+/deep/ .invoice-choose-popup.vux-popup-dialog{
+    border-radius: 10px 10px 0 0;
+}
+/deep/ .purchaseApplyAddress-part{
+	margin: 0.2rem;
+	.address-detail-container{
+		background: #fff;
+	}
+}

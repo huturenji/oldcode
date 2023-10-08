@@ -1,0 +1,38 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.address-detail-container{
+   padding: 0.36rem 0.2rem;
+   display: flex;
+   align-items: center;
+   width: 100%;
+   background: #fff url(~themes/default/img/icon/icon_mall_xuxian.svg)  repeat-x;
+   background-size: cover 0.08rem;
+   background-position: left bottom;
+   .address-detail{
+       flex: 1;
+       .address-area{
+           .symbol-container{
+               margin-right: 0.14rem;
+           }
+           display: flex;
+           align-items: center;
+           font-size: 0.26rem;
+           line-height: 0.36rem;
+           
+       }
+       .address-msg{
+           font-size: 0.32rem;
+           line-height: 0.44rem;
+           font-weight: bold;
+           margin: 0.12rem 0;
+        }
+        .person-msg{
+            font-size: 0.26rem;
+        }
+   }
+   .no-address{
+       flex: 1;
+       color: @placeholder-color;
+       font-size: 0.28rem;
+   }
+}

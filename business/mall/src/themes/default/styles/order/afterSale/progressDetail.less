@@ -1,0 +1,74 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+
+.progress-detail {
+    height: 100%;
+    padding: .4rem .22rem .4rem .48rem;
+    background-color: #ffffff;
+    overflow-y: scroll;
+
+    .timeline {
+        line-height: .4rem;
+        color: #C2C2C2;
+
+        &-item {
+            position: relative;
+            margin: 0;
+            padding-bottom: .4rem;
+
+            &:first-child {
+
+                .timeline-item-header {
+                    background-color: @theme-color;
+                }
+            }
+
+            &:last-child {
+
+                .timeline-item-tail {
+                    display: none;
+                }
+            }
+
+            &-tail {
+                position: absolute;
+                top: .16rem;
+                left: .06rem;
+                height: calc(~'100% - .16rem');
+                border-left: .04rem solid #E8E8E8;
+            }
+
+            &-header {
+                position: absolute;
+                width: .16rem;
+                height: .16rem;
+                background-color: #E8E8E8;
+                border-radius: 50%;
+            }
+
+            &-content {
+                position: relative;
+                top: -.12rem;
+                margin: 0 0 0 .42rem;
+                word-break: break-word;
+
+                .state {
+                    margin-bottom: .12rem;
+                    font-size: .3rem;
+                    color: #333333;
+                }
+
+                .desc {
+                    margin-bottom: .12rem;
+                    line-height: .34rem;
+                    font-size: .28rem;
+                }
+
+                .createtime {
+                    line-height: .34rem;
+                    font-size: .24rem;
+                }
+            }
+        }
+    }
+}

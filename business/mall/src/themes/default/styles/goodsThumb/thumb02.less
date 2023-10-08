@@ -1,0 +1,93 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+.thumb-container{
+    width: 100%;
+    height: 100%;
+
+    .search_prolist_item {
+        display: block;
+        position: relative;
+        padding: .1rem 0 .1rem .2rem;
+        background-color: inherit;
+
+        .search_prolist_item_inner {
+            position: relative;
+            padding-left: 2.4rem;
+
+            .search_prolist_cover {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 2.4rem;
+                height: 2.4rem;
+                overflow: hidden;
+
+                img{
+                    background: #fff;
+                    width: 100%;
+                }
+            }
+        }
+
+        .search_prolist_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 2.4rem;
+            padding-bottom: .16rem;
+            box-sizing: border-box;
+            padding: 0 .3rem;
+            overflow: hidden;
+            line-height: 1;
+
+            .search_prolist_title{
+                word-break: break-all;
+                margin-top: .16rem;
+                color: @text-color;
+                line-height: 1.36;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                height: .76rem;
+            }
+
+            
+            .price-content{
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                position: relative;
+                margin-bottom: .18rem;
+                .search_prolist_price {
+                    margin-right: .1rem;
+                    display: inline-block;
+                    height: .36rem;
+                    color: #e93b3d;
+                    min-width: .8rem;
+    
+                    .no-price{
+                        font-weight: bold;
+                        font-size: .24rem;
+                    }
+    
+                    strong {
+                        font-size: .36rem;
+                        font-weight: 400;
+                    }
+                }
+
+            }
+
+            .pd-buycar{
+                position: absolute;
+                right: .2rem;
+                bottom: .1rem;
+                z-index: 1;
+                cursor: pointer;
+                color: @third-text-color;
+            }
+        }
+    }
+}

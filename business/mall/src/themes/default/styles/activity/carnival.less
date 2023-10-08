@@ -1,0 +1,163 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+@bg-color:#F0514B;
+@tabbg-color:#FFFBE9;
+@tips-color:#dd412f;
+@redText-color:#FF5D38;
+@price-color:#FFFF80;
+.activityOutWrap{
+    position: relative;
+    padding-bottom: 2rem;
+    background: @bg-color;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .activityWrap{
+        position: relative;
+        padding-top: 2.6rem;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        .goodsOutWrap{
+            padding: 0.1rem 0.2rem 1rem;
+            position: relative;
+            width: 100%;
+            height: 10rem;
+            overflow: hidden;
+            .goodsShowWrap{
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: flex;
+                width: 400%;
+                -webkit-transition: .5s;
+                transition: .5s;
+                .goods{
+                    .flex(1);
+                    height: 100%;
+                    padding: .2rem;
+                    width: 100%;
+                    .goodsItem{
+                        display: inline-block;
+                        border-radius: .08rem;
+                        background-color: @background-color;
+                        width: calc(~'(100% - .2rem)/2');
+                        margin-bottom: .2rem;
+                        box-shadow: -.02rem 0 .4rem -.04rem hsla(226,7%,64%,.1);
+                        &:active{
+                            background-color: @base-background-color;
+                        }
+                        &:nth-child(2n-1){
+                            margin-right: 0.2rem;
+                        }
+                        /deep/ .pic{
+                            border-top-left-radius: 0.08rem;
+                            border-top-right-radius: 0.08rem;
+                        }
+                    }
+                    .readMore{
+                        padding: 0.4rem;
+                        text-align: center;
+                        font-size: 0.26rem;
+                        color: @base-background-color;
+                        line-height: 0.36rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.tabWrap{
+    background: @tabbg-color;
+    margin: 0 0.2rem 0.1rem;
+    padding: 0 0 0.06rem;
+    border-radius: 0.08rem;
+
+    /deep/ .vux-tab{
+        background: none;
+    }
+    /deep/ .scrollable .vux-tab-item{
+        .flex(0 0 20%)
+    }
+    /deep/ .vux-tab .vux-tab-item{
+        background: none;
+        font-size: 0.28rem;
+        font-weight: 600;
+    }
+    /deep/ .vux-tab-bar-inner{
+        border-radius: 0.03rem;
+    }
+}
+.tabOutWrap{
+    &.tabFixed{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        transition: all 0.3s;
+        transform: scaleY(0);
+        transform-origin: top;
+        .tabWrap{
+            width: 7.1rem;
+            margin: 0 auto;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &.tabFixedShow{
+            transform: scaleY(1);
+        }
+    }
+}
+.activityBackHome{
+    position: fixed;
+    bottom: .7rem;
+    right: 0.2rem;
+    z-index: 100;
+    width: 1rem;
+    height: 1rem;
+    background: url('~themes/default/img/activity/h5 svg_icon_mall_shangcheng_nor@2x.png') center no-repeat;
+    background-size: contain;
+    &:active{
+        background: url('~themes/default/img/activity/h5 svg_icon_mall_shangcheng_pre@2x.png') center no-repeat;
+        background-size: contain;
+    }
+}
+.cart-thumb.activityCartThumb{
+    bottom: 1.9rem;
+}
+.noscroll{
+    overflow: hidden;
+}
+@media screen and (min-width: @screen-sm){
+    .activityOutWrap{
+        max-width: @screen-sm;
+        margin: 0 auto;
+        .activityWrap{
+            padding-top: 191px;
+            .tabWrap.tabFixed{
+                max-width: 616px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .tabOutWrap{
+        &.tabFixed{
+            .tabWrap{
+                width: 616px;
+            }
+        }
+    }
+}
+
+//针对pc端样式调整 0.4rem 表示距离右侧边0.4rem
+@media screen and (min-width: @screen-lg) {
+    .activityBackHome{
+        right: calc(~'(100vw - 960px) / 2 + 0.4rem') !important;
+    }
+}
+

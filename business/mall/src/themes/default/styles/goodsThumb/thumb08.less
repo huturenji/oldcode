@@ -1,0 +1,106 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+.clear(){
+    &:before,&:after{
+        clear: both;
+        content:'';
+        display: block;
+        overflow: hidden;
+        line-height: 0px;
+        height: 0px;
+        zoom: 1;
+    }
+}
+.thumb-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.28rem;
+
+    &>div{
+        margin-bottom: .12rem;
+    }
+
+    .picture{
+        display: flex;
+    }
+    .label{
+        width: 1.2rem;
+        display: inline-block;
+        text-align-last: justify;
+    }
+    .content{
+        margin-left: .1rem;
+    }
+    .price{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: .4rem;
+    }
+    .order-no{
+        font-weight: bold;
+    }
+    .product-content{
+        position: relative;
+        flex: 1;
+        display: flex;
+        margin-left: .14rem;
+        //多图片时右侧的阴影
+        .shadow{
+            position: absolute;
+            right: -20px;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            width: 20px;
+            box-shadow: -14px 0px 10px -8px rgba(151,151,151,.67);
+        }
+        .img{
+            width: .88rem;
+            height: .88rem;
+            overflow: hidden;
+            //多个图片显示滑动的效果
+            &.moreImg{
+                flex: 1;
+                display: flex;
+                flex-wrap: nowrap;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: none;
+                overflow-x: auto;
+                
+                .img-comp{
+                    width: .88rem;
+                    height: .88rem;
+                    margin-right: 0.32rem;
+                    flex-shrink: 0;
+                    border-radius: .08rem;
+                }
+            }
+            
+        }
+        .des{
+            flex: 1;
+            margin: 0 .24rem;
+            .title{
+                font-size: 0.28rem;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                display:-webkit-box;
+                -webkit-box-orient:vertical;
+                -webkit-line-clamp:2;
+                line-height: .36rem;
+            }
+            .format{
+                overflow:hidden;
+                text-overflow:ellipsis;
+                display:-webkit-box;
+                -webkit-box-orient:vertical;
+                -webkit-line-clamp:1;
+                font-size: .22rem;
+                color: @third-text-color;
+                margin-top: .12rem;
+            }
+        }
+    }
+}

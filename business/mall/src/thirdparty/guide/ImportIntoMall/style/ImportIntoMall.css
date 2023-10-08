@@ -1,0 +1,149 @@
+[data-v-7a8ff9d8]:root {
+    --themeColor:#e82b29;--yellowColor:#ffa200;--successColor:#23cda7;--infoColor:#a4acb2;--warningColor:#f49939;--warningColorLight:#ffa501;--dangerColor:#e32d2d;--dangerColorLight:#ff4e3a;--normalColor:#d9d9d9;--textColor:#333;--secondaryTextColor:#666;--thirdTextColor:#999;--placeholderColor:#c2c2c2;--disableColor:#d3d3d3;--backgroundColor:#f6f9fd;--shareBackgroundColor:#f2f7fb;--subBackgroundColor:#fff;--infoBackground:#fcf5ef;--orderingBackground:var(--orderingBackground);--addressColor:#2942e8;--btnDangerBgColor:#e82b29;--linearThemeColorStart:#f49f5d;--linearThemeColorEnd:#e82b29;--linearAddCartColorStart:#e86729;--linearAddCartColorEnd:#e82b29;--baseThumbnailBgColor:#eaeff4;--titleBarHeight:0px}
+
+.search-container[data-v-7a8ff9d8] {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center
+}
+
+.search-container .search-box[data-v-7a8ff9d8] {
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.search-container .search-box .search-btn[data-v-7a8ff9d8] {
+    height: .68rem;
+    line-height: .68rem;
+    text-align: left;
+    margin-left: .3rem;
+    background-color: transparent;
+    color: var(--themeColor);
+    font-size: .28rem
+}
+
+.search-container .search-box .cancle-btn[data-v-7a8ff9d8] {
+    height: .68rem;
+    line-height: .68rem;
+    text-align: left;
+    margin-left: .3rem;
+    background-color: transparent;
+    color: var(--thirdTextColor);
+    border-radius: .1rem;
+    font-size: .28rem
+}
+
+.search-container .search-box .input-part[data-v-7a8ff9d8] {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    position: relative
+}
+
+.search-container .search-box .input-part .placeholder[data-v-7a8ff9d8] {
+    background: transparent;
+    position: absolute;
+    left: .6rem;
+    right: .6rem;
+    top: 0;
+    bottom: 0;
+    color: var(--placeholderColor);
+    opacity: .7;
+    font-size: .28rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    line-height: .68rem
+}
+
+.search-container .search-box input[data-v-7a8ff9d8] {
+    padding: 0 .6rem;
+    font-size: .24rem;
+    height: .68rem;
+    line-height: .68rem;
+    border-radius: .2rem;
+    background-color: #f5f5f5;
+    color: var(--textColor)
+}
+
+.search-container .search-box input[type=search][data-v-7a8ff9d8] {
+    -webkit-appearance: none
+}
+
+.search-container .search-box input[data-v-7a8ff9d8]::-webkit-search-cancel-button,.search-container .search-box input[data-v-7a8ff9d8]::-webkit-search-decoration {
+    display: none
+}
+
+.search-container .search-box[data-v-7a8ff9d8] ::-webkit-input-placeholder {
+    font-size: .28rem;
+    line-height: .68rem
+}
+
+.search-container .search-box[data-v-7a8ff9d8] ::-moz-placeholder {
+    font-size: .28rem;
+    line-height: .68rem
+}
+
+.search-container .search-box[data-v-7a8ff9d8] :-ms-input-placeholder {
+    font-size: .28rem;
+    line-height: .68rem
+}
+
+.search-container .search-box .icon-search[data-v-7a8ff9d8] {
+    position: absolute;
+    left: .24rem;
+    top: 50%;
+    margin-top: -.15rem;
+    color: var(--placeholderColor)
+}
+
+.search-container .search-box .icon-close[data-v-7a8ff9d8] {
+    position: absolute;
+    right: .24rem;
+    top: 50%;
+    margin-top: -.15rem;
+    width: .32rem;
+    height: .32rem;
+    color: var(--placeholderColor)
+}
+
+.search-container .search-box.transparent input[data-v-7a8ff9d8]:disabled {
+    background-color: hsla(0,0%,100%,.35);
+    opacity: 1;
+    -webkit-opacity: 1;
+    color: #fff
+}
+
+.search-container .search-box.transparent .icon-search[data-v-7a8ff9d8],.search-container .search-box.transparent .placeholder[data-v-7a8ff9d8] {
+    color: #fff
+}
+
+.search-container .search-box.transparent input[data-v-7a8ff9d8] {
+    background-color: hsla(0,0%,100%,.35);
+    color: #fff
+}
+
+.search-container .search-box.transparent[data-v-7a8ff9d8] ::-webkit-input-placeholder {
+    color: #fff
+}
+
+.search-container .search-box.transparent[data-v-7a8ff9d8] ::-moz-placeholder {
+    color: #fff
+}
+
+.search-container .search-box.transparent[data-v-7a8ff9d8] :-ms-input-placeholder {
+    color: #fff
+}

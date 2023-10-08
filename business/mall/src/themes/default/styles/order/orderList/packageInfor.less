@@ -1,0 +1,54 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+.orderTrack-packageInfor{
+   .title{
+       padding: .3rem 0 .16rem .3rem;
+       font-size: .26rem;
+       color: @text-color;
+   }
+   .content{
+       background-color: #fff;
+       font-size: .26rem;
+       line-height: .36rem;
+       display: flex;
+       padding: .36rem .3rem;
+       cursor: pointer;
+       &:active{
+           opacity: .8;
+       }
+       .icon_part{
+           width: .44rem;
+           margin-top: .02rem;
+       }
+       .detail_part{
+           /deep/ .call_phone{
+            color: @theme-color;
+            font-weight: 600;
+            cursor: pointer;
+            &:active{
+                opacity: .8;
+            }
+        }
+           flex: 1;
+           display: flex;
+           align-items: center;
+           div{
+               flex: 1;
+               line-height: .36rem;
+               span{
+                   color: @secondary-text-color;
+                   font-size: .26rem;
+                   &.bold{
+                        font-weight: bold;
+                        font-size: .32rem;
+                        color: @text-color;
+                   }
+               }
+           }
+           i{
+               width: .36rem;
+               text-align: right;
+           }
+       }
+   }
+}

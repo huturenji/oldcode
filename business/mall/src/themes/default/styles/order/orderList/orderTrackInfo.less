@@ -1,0 +1,115 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/hairLine.less';
+.trackInfo-wrap{
+    width: 100%;
+    .track_shipflow{
+        padding: 0 0.2rem 0.4rem;
+        background-color: #fff;
+        .track_shipflow_item{
+            position: relative;
+            overflow: visible;
+            display: flex;
+            line-height: .4rem;
+            .icon{
+                flex: none;
+                margin: 0.34rem 0.2rem 0 0;
+                color: @base-placeholder-color;
+                z-index: 2;
+            }
+            .track_shipflow_item_msg{
+                display: flex;
+                padding: 0.34rem 0 0 0;
+                .type_dot{
+                    position: relative;
+                    left: .12rem;
+                    margin: 0.24rem 0.38rem 0 0;
+                    width: 0.16rem;
+                    height: 0.16rem;
+                    border-radius: 0.1rem;
+                    background-color: @border-color-base;
+                    flex: none;
+                }
+                .content{
+                    display: block;
+                    width: 100%;
+                    flex: auto;
+                    color: @placeholder-color;
+                    .order_status{
+                        font-size: 0.3rem;
+                        font-weight: bolder;
+                        padding-bottom: 0.12rem;
+                    }
+                    .track_shipflow_item_msg_text{
+                        font-size: 0.28rem;
+                        line-height: 0.4rem;
+                        .postmanMes{
+                            color: @text-color;
+                            font-size: 0.3rem;
+                            font-weight: bold;
+                        }
+                        /deep/ .call_phone{
+                            color: @theme-color;
+                            font-weight: 600;
+                            cursor: pointer;
+                            &:active{
+                                opacity: .8;
+                            }
+                        }
+                    }
+                    .track_shipflow_item_msg_time{
+                        padding-top: 0.12rem;
+                        font-size: 0.24rem;
+                    }
+                }
+            }
+        }
+        .cur{
+            .icon{
+                color: @theme-color;
+            }
+        }
+        .track_shipflow_item.cur{
+            .track_shipflow_item_msg{
+                color: @text-color;
+            }
+        }
+        .track_shipflow_item.cur .track_shipflow_item_status.type_dot::after{
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            top: 50%;
+            left: 50%;
+            margin-top: -0.18rem;
+            margin-left: -0.18rem;
+        }
+        .track_shipflow_item{
+            &:after{
+                content: "";
+                position: absolute;
+                z-index: 1;
+                pointer-events: none;
+                background-color: @border-color-base;
+                width: 1px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                top: 0;
+                left: 0.2rem;
+                bottom: 0;
+                transform: scaleX(0.5);
+                -webkit-transform: scaleX(0.5);
+            }
+            &:first-of-type{
+                &:after{
+                    top: .74rem;
+                    bottom: -.74rem;
+                }
+            }
+            &:last-of-type{
+                &:after{
+                    bottom: 50%;
+                }
+            }
+        }
+    }
+}

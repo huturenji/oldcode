@@ -1,0 +1,114 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+@maxWrapWidth: 616px;
+
+.not_strat_tips{
+    position: fixed;
+    height: .86rem;
+    bottom: 0;
+    background: linear-gradient(320deg,#ffe3e3, #fff0f0 93%);
+    display: flex;
+    align-items: center;
+    padding: 0 .2rem;
+    z-index: 200;
+    width: 100%;
+    max-width: @maxWrapWidth;
+    .icon{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .icon1{
+        width: .64rem;
+    }
+    .icon2{
+        width: .44rem;
+        cursor: pointer;
+    }
+    .text_tips{
+        color: #333;
+        font-size: .26rem;
+        flex: 1;
+    }
+
+ 
+}
+
+
+@media screen and (min-width: @maxWrapWidth){
+
+}
+.activityOutWrap{
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    .activityWrap{
+        position: relative;
+
+
+        /************tab栏固定到顶部的样式开始*****************/
+        /deep/ .componentItem .tabs_goods_wrap .tabs_wrap.tab_fixed{
+            position: fixed;
+            top: @title-bar-height;
+            left: 0;
+            z-index: 200;
+            width: 100%;
+            max-width: @maxWrapWidth;
+        }
+        /deep/ .componentItem .wrap{
+            padding-bottom: .86rem;
+        }
+        @media screen and (min-width: @maxWrapWidth){
+            /deep/ .componentItem .tabs_goods_wrap .tabs_wrap.tab_fixed.fixed-dom-part {
+                width: @maxWrapWidth !important;
+                left: calc((100vw - @maxWrapWidth) / 2) !important;
+            }
+        }
+        /************tab栏固定到顶部的样式结束*****************/
+    }
+}
+
+
+
+.activityBackHome{
+    position: fixed;
+    bottom: .9rem;
+    right: 0.2rem;
+    z-index: 100;
+    width: 1rem;
+    height: 1rem;
+    background: url('~themes/default/img/activity/h5 svg_icon_mall_shangcheng_nor@2x.png') center no-repeat;
+    background-size: contain;
+    &:active{
+        background: url('~themes/default/img/activity/h5 svg_icon_mall_shangcheng_pre@2x.png') center no-repeat;
+        background-size: contain;
+    }
+}
+.cart-thumb.activityCartThumb{
+    bottom: 1.9rem;
+}
+
+.noscroll{
+    overflow: hidden;
+}
+
+@media screen and (min-width: @screen-sm){
+    .activityOutWrap{
+        max-width: @screen-sm;
+        margin: 0 auto;
+       
+    }
+}
+
+//针对pc端样式调整 0.4rem 表示距离右侧边0.4rem
+@media screen and (min-width: @screen-lg) {
+    .activityBackHome{
+        right: calc(~'(100vw - 960px) / 2 + 3.8rem') !important;
+    }
+    .child-view .activityCartThumb{
+        right: calc(~'(100vw - 960px) / 2 + 3.8rem') !important;
+    }
+}
+

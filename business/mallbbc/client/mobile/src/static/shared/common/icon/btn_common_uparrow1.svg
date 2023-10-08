@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn/common/uparrow1</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="22" height="22"></rect>
+    </defs>
+    <g id="btn/common/uparrow1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="蒙版" fill="#D8D8D8" opacity="0" xlink:href="#path-1"></use>
+        <path d="M11,8.1318995 L19.7295025,16.861402 C20.2052417,17.3371412 20.9765673,17.3371412 21.4523065,16.861402 C21.9280457,16.3856628 21.9280457,15.6143372 21.4523065,15.138598 L11.861402,5.5476935 C11.3856628,5.07195431 10.6143372,5.07195431 10.138598,5.5476935 L0.5476935,15.138598 C0.0719543126,15.6143372 0.0719543126,16.3856628 0.5476935,16.861402 C1.02343269,17.3371412 1.79475831,17.3371412 2.2704975,16.861402 L11,8.1318995 Z" id="路径" fill="#999999"></path>
+    </g>
+</svg>

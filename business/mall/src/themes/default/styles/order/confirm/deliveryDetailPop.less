@@ -1,0 +1,81 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+.promise-date-container{
+    background-color: #fff;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /deep/ .title-box{
+        height: 1rem;
+    }
+    .date-wrap{
+        flex: 1;
+        overflow: hidden;
+        max-height: 99%;
+        overflow-y: auto;
+        .item-container{ 
+            .bbpx(@left: .3rem); 
+            padding: .3rem;         
+            .imgList{
+                overflow-x: auto;
+                max-width: 98%;
+                white-space: nowrap;
+                span{
+                    display: inline-block;
+                    width: 1rem;
+                    height: 1rem;
+                    overflow: hidden;
+                    border-radius: .1rem;
+                    margin-right: .2rem;
+                    /deep/ img{
+                        width: 1rem;
+                        height: 1rem;
+
+                    }
+                }
+            }
+            .des-box{
+               cursor: pointer;
+               display: flex;
+               justify-content: space-between;
+               align-items: center; 
+               line-height: .36rem;
+               .des-content{
+                   margin-top: .2rem;
+                   .name{
+                       font-size: .22rem;
+                       color: @third-text-color;
+                   }
+                   .time{
+                       font-size: .28rem;
+                       color: @text-color;
+                   }
+               }
+            }
+        }
+    }
+
+    .btn-box{
+        padding: 0.2rem 0.3rem;
+        height: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px .06rem .2rem 0px rgba(101,112,242,0.12);
+        .btn-handler{
+            border-radius: .4rem;
+            background: @theme-color;
+            height: .8rem;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn-text{
+                color: #fff;
+                font-size: .3rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var errors_1=require("../util/errors"),iv_1=require("./iv"),checkIvLength=function(e,r){if(r.length<<3!==iv_1.bitLengths.get(e))throw new errors_1.JWEInvalid("Invalid Initialization Vector length")};exports.default=checkIvLength;

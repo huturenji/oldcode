@@ -1,0 +1,50 @@
+@import '~themes/default/styles/common/variable.less';
+@import '~mallStyles/mixins/mixinsStyle.less';
+
+ /****审批的界面样式开始*****/
+ .approve-box{
+     .approve-content{
+        box-sizing: border-box;
+        background-color: #fff;
+        padding: 1rem 0 1.6rem 0;
+        text-align: center;
+         img{
+             width: 1rem;
+             height: auto;
+         }
+        .tips{
+            font-size: .34rem;
+            margin-top: .29rem;
+            &.colorYellow{
+                color: @warning-color;
+            }
+            &.colorGreen{
+                color: @success-color;
+            }
+            &.colorRed{
+                color: @danger-color;
+            }
+            &.colorGray{
+                color: @third-text-color;
+            }
+        }
+        
+        .des{
+            font-size:.28rem;
+             margin-top: .3rem;
+        }
+     }
+    .confirmBtn{
+        width: 92%;
+        height: 0.92rem;
+        line-height: 0.92rem;
+        text-align: center;
+        color: #fff;
+        background-color: @theme-color;
+        cursor: pointer;
+        border-radius:0.08rem;
+        margin: 1rem auto;
+        font-size:0.3rem;
+    }
+ }
+/****审批的界面样式结束*****/

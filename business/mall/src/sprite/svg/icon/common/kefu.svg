@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    
+    <g id="17商城" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05.2商品详情滑动-加客服" transform="translate(-74.000000, -769.000000)">
+            <g id="底部标签" transform="translate(0.000000, 757.000000)">
+                <g id="菜单栏">
+                    <g id="编组-8" transform="translate(73.000000, 10.000000)">
+                        <g id="h5-svg/icon/mall/kefu">
+                            <g id="编组-10" transform="translate(2.000000, 3.000000)">
+                                <rect id="矩形" stroke="#666666" stroke-width="1.2" x="0" y="6" width="4" height="5" rx="2"></rect>
+                                <rect id="矩形备份" stroke="#666666" stroke-width="1.2" x="14" y="6" width="4" height="5" rx="2"></rect>
+                                <path d="M9,16 C11.947281,16 14.469136,13.9183257 15.5012799,10.9713031 M15.7808237,6.00602337 C15.0055834,2.5525131 12.2636167,0 9,0 C5.69799128,0 2.92997771,2.61292007 2.19263615,6.12827238" id="形状" stroke="#666666" stroke-width="1.2"></path>
+                                <circle id="椭圆形" fill="#666666" cx="9.5" cy="15.5" r="1.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
