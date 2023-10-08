@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_result_success</title>
+    <defs>
+        <linearGradient x1="23.6269774%" y1="13.3962006%" x2="76.2007114%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#0EE5E3" offset="0%"></stop>
+            <stop stop-color="#06C7C3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="03-手动开奖" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-现场抽奖-抽奖结果-中奖" transform="translate(-158.000000, -398.000000)">
+            <g id="编组" transform="translate(158.000000, 398.000000)">
+                <circle id="椭圆形" fill="url(#linearGradient-1)" cx="30" cy="30" r="30"></circle>
+                <path d="M36.3873902,10.9023239 C37.3303986,10.8556295 38.1444359,11.5177939 38.3127963,12.4208679 L38.3423161,12.6727822 L39.5976773,38.0252093 C39.644011,38.9609342 38.9920655,39.7710537 38.09729,39.9471042 L37.847582,39.9790152 L24.7776308,40.7695486 C23.7495129,40.8317341 22.8656473,40.0486911 22.8034618,39.0205732 C22.7464585,38.0781318 23.3996817,37.2569024 24.3008607,37.0786769 L24.5524372,37.0464043 L35.7802805,36.3675972 L34.6169319,12.8572498 C34.5702375,11.9142414 35.2324019,11.1002041 36.1354759,10.9318437 L36.3873902,10.9023239 Z" id="Path-2" fill="#FFFFFF" transform="translate(31.200000, 25.836505) rotate(-315.000000) translate(-31.200000, -25.836505) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

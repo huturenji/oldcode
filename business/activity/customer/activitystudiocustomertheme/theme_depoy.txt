@@ -1,0 +1,8 @@
+1、先把主题打包
+2、把主题包通过虚拟桌面，部署到10.1.6.101上面的主题部署地址 data/bizclouddev/keyclock/thems
+3、登录到Keycloak的管理后台 
+https://bplusdev.sinosun.com:18580/auth/realms/bplusdev/protocol/openid-connect/auth?client_id=security-admin-console&redirect_uri=https%3A%2F%2Fbplusdev.sinosun.com%3A18580%2Fauth%2Fadmin%2Fbplusdev%2Fconsole%2F%23%2Frealms%2Fbplusdev&state=73c19651-2d63-4999-8a5c-cf61861366a9&response_mode=fragment&response_type=code&scope=openid&nonce=2f0ee169-2600-47e7-a785-f8848a7db9c5&code_challenge=P1Pn_7J9DP2AVictbPiD7d24w9zsAx0cm7eU3vOiIC8&code_challenge_method=S256
+帐户密码 bplusdev/bplusdev
+https://bplussit.sinosun.com:18680/auth/admin/bplussit/console/#/realms/bplussit
+bplussit/bplussit
+4、登录到后台，找到对应的角色，更换主题并保存

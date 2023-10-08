@@ -1,0 +1,54 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "stage-2"
+  ],
+  "plugins": [
+    [
+      //处理es6+转换成es5
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ]
+    // ,
+    // [
+    //   "component",
+    //   {
+    //     "libraryName": "opcl"
+    //     // "styleLibraryName": "theme-chalk"
+    //   }
+    // ]
+    // ,
+    // [
+    //   "import",
+    //   {
+    //     "libraryName": "opcl",
+    //     "libraryDirectory": "", // default: lib
+    //     "style": "css",
+    //     "camel2DashComponentName": false, // 是否需要驼峰转短线
+    //     "camel2UnderlineComponentName": false // 是否需要驼峰转下划线
+    //   }
+    // ]
+  ],
+  "env": {
+    "dev": {
+      "presets": [
+        "env",
+        "stage-2"
+      ],
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "dynamic-import-node"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_toast_check</title>
+    <g id="01-首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02.1-线上抽奖-创建抽奖活动1" transform="translate(-619.000000, -3215.000000)">
+            <g id="编组备份-4" transform="translate(226.000000, 2565.000000)">
+                <g id="编组-3" transform="translate(204.000000, 648.000000)">
+                    <g id="icon_toast_check" transform="translate(189.000000, 2.000000)">
+                        <rect id="01_PC/01_Basic/19_check-circle" x="0" y="0" width="16" height="16"></rect>
+                        <circle id="Oval-2" fill="#23C343" cx="8" cy="8" r="6.66666667"></circle>
+                        <polygon id="Path-2" fill="#FFFFFF" points="6.9211657 8.8075601 10.3282591 5.39559879 11.2717409 6.33773454 6.92183898 10.6938515 4.66192881 8.4339413 5.60473785 7.49113226"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,142 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-popup-message": "@/components/uni-popup/components/uni-popup-message/uni-popup-message.vue",
+			"^uni-popup-dialog": "@/components/uni-popup/components/uni-popup-dialog/uni-popup-dialog.vue",
+			"^uni-(.*)": "@/components/uni-$1/components/uni-$1/uni-$1.vue",
+			"^l-(.*)": "@/components/lime-painter/components/l-$1/l-$1.vue"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/luck-draw/luck-draw",
+			"style": {
+				"navigationBarTitleText": "抽奖乐翻天",
+				"navigationStyle": "custom"
+			},
+			"meta": {
+				"titleBar": {
+					"title": {
+                        "show": false,
+                        "showTitle": true,
+						"color": "#fff",
+                        "themeMode": "light",
+						"suspend": true,
+						"opacity": 0
+                    },
+                    "status": {
+                        "show": true,
+                        "themeMode": "light",
+						"opacity": 0,
+						"suspend": true
+                    }
+                },
+                "sensorUseHref":true
+			}
+		},
+		{
+			"path": "pages/luck-draw/preview-luck-draw",
+			"style": {
+				"navigationBarTitleText": "抽奖乐翻天",
+				"navigationStyle": "custom"
+			},
+			"meta": {
+				"titleBar": {
+					"title": {
+                        "show": false,
+                        "showTitle": true,
+						"color": "#fff",
+                        "themeMode": "light",
+						"suspend": true,
+						"opacity": 0
+                    },
+                    "status": {
+                        "show": true,
+                        "themeMode": "light",
+						"opacity": 0,
+						"suspend": true
+                    }
+                }
+			}
+		},		
+		{
+			"path": "pages/result/result",
+			"style": {
+				"navigationBarTitleText": "抽奖结果",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/redeem-page/redeem-page",
+			"style": {
+				"navigationBarTitleText": "奖品详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/redeem-page/preview-redeem-page",
+			"style": {
+				"navigationBarTitleText": "预览详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/winprizelist/winprizelist",
+			"style": {
+				"navigationBarTitleText": "我的奖品",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/rule/rule",
+			"style": {
+				"navigationBarTitleText": "活动规则",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/address/index",
+			"style": {
+				"navigationBarTitleText": "填写兑奖地址",
+				"navigationStyle": "custom"
+			}
+		},
+        {
+			"path": "pages/rafflePages/index",
+			"style": {
+				"navigationBarTitleText": "现场抽奖",
+				"navigationStyle": "custom"
+			},
+            "meta": {
+				"titleBar": {
+					"title": {
+                        "show": true,
+                        "showTitle": true,
+						"suspend": true,
+                        "color": "#000"
+                    },
+                    "status": {
+                        "show": true,
+						"suspend": true
+                    }
+                }
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F6F9FD",
+		"backgroundColorBottom": "#fff",
+		"backgroundColorTop": "#fff",
+		"rpxCalcMaxDeviceWidth": 640, // rpx 计算所支持的最大设备宽度，单位 px，默认值为 960
+		"rpxCalcBaseDeviceWidth": 375, // rpx 计算使用的基准设备宽度，设备实际宽度超出 rpx 计算所支持的最大设备宽度时将按基准宽度计算，单位 px，默认值为 375
+		"rpxCalcIncludeWidth": 749, // rpx 计算特殊处理的值，始终按实际的设备宽度计算，单位 rpx，默认值为 750
+		"scrollIndicator": "none",
+		"app-plus": {
+			"scrollIndicator": "none" //全局 在APP页面都不显示滚动条
+		}
+	}
+}

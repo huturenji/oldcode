@@ -1,0 +1,110 @@
+{
+  "menu": [
+    {
+      "name": "客户管理",
+      "count": 0,
+      "type": "custommange",
+      "path": "/custommange/customerList",
+      "sameMenuPaths": [
+        "/custommange/customerAdd",
+        "/custommange/customerEdit",
+        "/custommange/customerDetail"
+      ],
+      "selected": false,
+      "authCodeList": [
+        51001001,
+        51001002,
+        51001003
+      ]
+    },
+    {
+      "name": "订单管理",
+      "count": 0,
+      "type": "systemMgr",
+      "path": "/order/list",
+      "selected": false,
+      "authCodeList": [
+        51002001,
+        51002002
+      ]
+    },
+    {
+      "name": "商品池",
+      "count": 0,
+      "type": "goodspool",
+      "path": "/goods/pool",
+      "selected": false,
+      "authCodeList": [
+        51003001,
+        51003002
+      ]
+    },
+    {
+      "name": "活动列表",
+      "count": 0,
+      "type": "promotion",
+      "path": "/promotion/promotionList",
+      "sameMenuPaths": [],
+      "selected": false,
+      "authCodeList": [
+        51004001
+      ]
+    },
+    {
+      "name": "系统管理",
+      "count": 0,
+      "type": "systemMgr",
+      "path": "/sysmgr",
+      "selected": false,
+      "authCodeList": [
+        99901001,
+        99901002,
+        99901003,
+        99901004,
+        99901005,
+        99901006,
+        99901007,
+        99901008,
+        99901009
+      ],
+      "children": [
+        {
+          "name": "用户管理",
+          "count": 0,
+          "type": "usermanage",
+          "path": "/sysmgr/user",
+          "sameMenuPaths": [
+            "/sysmgr/userdetail",
+            "/sysmgr/useradd",
+            "/sysmgr/useredit"
+          ],
+          "selected": false,
+          "authCodeList": [
+            99901001,
+            99901002,
+            99901003,
+            99901004
+          ]
+        },
+        {
+          "name": "角色管理",
+          "count": 0,
+          "type": "rolemange",
+          "path": "/sysmgr/rolelist",
+          "sameMenuPaths": [
+            "/sysmgr/roledetail",
+            "/sysmgr/roleedit",
+            "/sysmgr/roleadd"
+          ],
+          "selected": false,
+          "authCodeList": [
+            99901005,
+            99901006,
+            99901007,
+            99901008
+          ]
+        }
+      ]
+    }
+  ]
+}

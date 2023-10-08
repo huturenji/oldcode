@@ -1,0 +1,450 @@
+html,
+body {
+    height: 100%;
+}
+
+.login-pf {
+    background: none !important;
+}
+
+.login-pf body {
+    background: none !important;
+    background-color: #f8f8f8 !important;
+    display: flex;
+    align-items: center;
+}
+
+.Max_box {
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    max-width: 1920px;
+    max-height: 1080px;
+    padding: 90px;
+    margin: auto;
+}
+
+.contentBox {
+    font-size: 15px;
+    background: url(../img/logo_bg.png) no-repeat center 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border-radius: 24px;
+    display: flex;
+    box-shadow: 0 8px 20px 13px rgba(139, 175, 228, .1);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.leftContent {
+    flex: 1;
+    border-radius: 24px 0 0 24px;
+}
+
+.rightContent {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 24px 24px 0;
+}
+
+.loginBox {
+    width: 420px;
+    padding: 0 20px;
+    overflow-y: auto;
+    font-size: medium;
+}
+
+#kc-page-title {
+    /* font-size: 28px; */
+    text-align: center;
+    color: #478aee;
+    font-weight: bold;
+}
+
+.loginTip {
+    color: #666;
+    font-size: medium;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.control-label-register {
+    position: absolute;
+    left: 20px;
+    width: 90px;
+    text-align: left;
+    font-size: 16px;
+    top: 15px;
+    color: black;
+}
+
+.control-label-register::after {
+    content: "*";
+    color: red;
+}
+
+.form-Options-Wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.form-button-center {
+    line-height: 36px;
+}
+
+.form-login-2register {
+    margin-bottom: 0px;
+}
+
+.form-login-tabs {
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.form-login-tab {
+    flex: 1;
+    cursor: pointer;
+}
+
+.form-login-tab-txt {
+    color: #000;
+    text-align: center;
+    padding: 10px
+}
+
+.form-login-tab-line {
+    height: 2px;
+    background: #478aee
+}
+
+.form-VFC {
+    position: absolute;
+    right: 15px;
+    font-size: 14px;
+    color: #fff;
+    background: #478aee;
+    border-radius: 5px;
+    padding: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.form-VFC-Time {
+    position: absolute;
+    right: 15px;
+    font-size: 14px;
+    color: #fff;
+    background: #666;
+    border-radius: 5px;
+    padding: 5px 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.form-Pop-window {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+.form-Pop-window-login {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+.form-Pop-window-bk {
+    position: relative;
+    /* width: 28vw;
+    height: 25vh; */
+    width: 420px;
+    height: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 4px;
+    z-index: 11;
+}
+
+.form-Pop-window-agr-bk {
+    width: 40vw;
+    height: 60vh;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.form-Pop-loading-bk {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    z-index: 11;
+}
+
+.form-Pop-loading-img {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+.form-Pop-window-header {
+    position: absolute;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    left: 40px;
+    right: 40px;
+    top: 15px;
+    font-size: 18px;
+    line-height: 1;
+    color: #303133;
+    z-index: 12;
+}
+
+.form-Pop-window-delicon {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 15px;
+    top: 15px;
+    background: url(../img/icon_close_simple.png) no-repeat center 100%;
+    cursor: pointer;
+    z-index: 12;
+    background-size: contain;
+}
+
+.form-Pop-window-content {
+    position: absolute;
+    text-align: center;
+    padding: 10px 16px;
+    width: 100%;
+    top: 40px;
+    bottom: 70px;
+    overflow-y: auto;
+    z-index: 12;
+    display: flex;
+    border-top: 1px solid #ebeef5;
+    align-items: center;
+    justify-content: center;
+    color: #606266;
+    font-size: 14px;
+}
+
+.form-read-agreement {
+    color: #0088ce;
+    cursor: pointer;
+}
+
+.form-Pop-window-btncancel {
+    position: absolute;
+    left: 135px;
+    bottom: 25px;
+    border: 1px solid #DCDFE6;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 9px 15px;
+    color: #606266;
+    font-size: 12px;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    z-index: 12;
+}
+
+.form-Pop-window-btncancel:hover {
+    color: #478aee;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+
+.form-Pop-window-btnok {
+    position: absolute;
+    right: 135px;
+    bottom: 25px;
+    border: 1px solid #478aee;
+    color: white;
+    background: #478aee;
+    cursor: pointer;
+    padding: 9px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    z-index: 12;
+}
+
+.form-Pop-window-btnok:hover {
+    background: #66b1ff;
+    border-color: #66b1ff;
+    color: #FFF;
+}
+
+.kc-register-ok-img {
+    height: 150px;
+    margin: 10px 125px;
+}
+
+.kc-register-ok-tip {
+    text-align: center;
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.kc-register-ok-btns {
+    margin: 20px 0;
+}
+
+.kc-register-ok-atag {
+    color: white;
+    font-size: 18px;
+    padding: 7px 124px;
+}
+
+.form-control {
+    border-radius: 8px;
+    box-shadow: none;
+    border: 0;
+    font-size: 14px;
+    font-family: Verdana, \\5FAE\8F6F\96C5\9ED1, Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    background-color: #f7f7f7 !important;
+    height: 48px;
+    color: #868383 !important;
+    outline: none;
+}
+
+.form-control::placeholder {
+    font-style: normal;
+}
+
+.placeholder {
+    font-style: normal;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control-register {
+    margin-left: 110px;
+    width: 280px;
+    padding: 10px 10px 10px 10px;
+}
+
+.form-VFC-register {
+    right: 35px;
+}
+
+.form-VFC-Time-register {
+    right: 35px;
+}
+
+.pass_icon,
+.user_icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.user_icon {
+    left: 5px;
+    width: 28px;
+    height: 28px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADYUlEQVRYR+2WX4gVVRzHv78z964h+SAGC4oV9KClhiauYC3LnDnTXpYW6qFVgqC/aAihKGqKdhWDSkuCILYewih8MYRQ8e6cs9PCLirqQpimb5XaQ5HbQ+Rym/v7yWx3QWX33rmXC0vgwHAezjnf7+d85/D7DWGGH5phf9wH+P8lUCwWVWdn5zPM/AKAx9M7RESXROSYMWaEiKSRe9VQAtbaeQD6ReR5AN49RgmAY5VKZUOhULiZFSIzwPDw8Jzx8fFTIrIGwHkAh0TknFIq1egAsFlEniKi057nPev7/t9ZIDIDRFF0CMAmAEdyudxrvu+P32kQx/EDSZIcBtBHRAeMMdtaBmCtbReRqwCujY2NdfT19d2aSjyO4weTJDlHRO3lcnlRT0/PH/UgMiVQKpXWKaWOAFgfhuHntUSttRtF5FMietEYc7QlANbanSLyXqVSWVkoFEZriZZKpdVKqTNEtN0Y82GrAHaLyD7P85ZqrS/VEo2iaAWAUaXUO0EQvN8SAOfcK8z8ZZZYoyh6CcA3RPSyMebrVgE8xswXAcQjIyO9xWKRpxIWEeWcO8XMT+fz+SW+7//cEoBUJIqib9MC5Hne9iAIDk4l7JzbyswfADgahuHaeuYTVTTLoirAw0R0FsA8Eeln5o/b2tqupXPM/AgzbwHwJhH9RUTLgyC4kUU7M0AqNjQ0tKxcLp8AsBBAWoh+q5osADALwC/M/Fx3d/ePWcwbSsBa+4SIfATAAMhVDf6pjrOrY0JEUT6f39LV1fVTFohMCTjnekXksIjMJaLLaUMC8D2AyZgXiIhOCxWAxQBuep73qtb6u3oQdQGcc1pEjv/XdekTpVTx3j4waVLtBzsApO+/AHrDMExBp31qAsRx/FCSJOeJaL5S6g2t9Vf1TpTOW2vfBnBQRK4T0SpjzJ/T7asJYK3dKyJ7iKjfGPMWgEw/GyJCzrkvROR1InrXGLOvYYBqnFcAzAWwLAzDX7Oc/o7P8WiSJGnx+j2Xy6VF6a72Pblu2gSccx3MfJaIjhtjehsxn1w7MDBwUilVUEqt0lpfmEqjFsBE/VdK7Q6CYH8zANbaiSZWqy9MCzA4OLiImT8DsMsYc7pJgCdF5IDnedu01j80lEAzhs3sqVsHmhFtZM99gBlP4DZ642gwqboevAAAAABJRU5ErkJggg==) no-repeat;
+    background-size: 100%;
+}
+
+.pass_icon {
+    width: 18px;
+    height: 22px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAXCAYAAADpwXTaAAACTUlEQVQ4T9WUMWgUQRSG/zd7FwQhGPDgIGohQUSMqGcKGzW3M7sBUSuTVm0sUwliICDRQrDRUhAt5dKpILszy6qNEkxAUURCmsg1OQsLK+9unox4h4m73Grnq5Z9//vmf/veLCEnjDETzDwL4BSAnQC+ENFzIrrr+/5SVhllvKQ4jm8S0VUAWXkGcEspdQ2Ae+7HH+IkSeastTcAfGfm2+Vy+UGr1VofHh7e43neBQBXAAwR0byUciEXZozZy8wfAXhCiDO+7z/b6twYM8XMTwBYIcQB3/fXeppNzuI4vu5OJKKHUsqLed9Ta30fwCVmXgiCYD4TprV2TqastWfDMHSnZ4bW+jSApwAipdRUJswYs8TMbooTQRC8yYNFUVQTQrj8slLqWJ4zJ6iVSqXjlUplJQ+2sbFxpNvtviaiFSllbRMsTdOxTqdz79dOZa1DHpfd7llrLwdBsEppmm7rdDpvAexjZktEFkA3r7rvgkhYaz0iEgBWS6XSITLGKGaOAbx37U1OTn4bBOrloyjaLoR4BWBcCBG6bT9PRA0Ai0qp6aKgns4Y84iZZwDMDIQZYyQznyOix1JKnbHExWBpmu5qt9trRDTkrpe1diwMw8+/Aws701qPA3jXK/Y873C9XnfD6kdhmKvQWrtLP01Ei1LKuX9us8gw/srZIOB/AkuSpG6tTQB8staeGB0d/TqotV6+2WzuEEK8ALCfiBQ1Go2hkZGRZQAHi0K26ojoQ7VaPfrzDxFF0W7P8+4w80kiKheFMnMbwEsAs0qp9R84VzuisT4kTgAAAABJRU5ErkJggg==) no-repeat;
+    background-size: 100%;
+}
+
+#kc-form-buttons {
+    padding-top: 20px;
+}
+
+#kc-form-buttons .btn-primary {
+    font-size: large;
+    height: 48px;
+    background-image: none !important;
+    background-color: #478aee !important;
+    border-color: #478aee !important;
+    border-radius: 5px;
+}
+
+#kc-form-buttons .btn-primary:hover {
+    opacity: 0.8 !important;
+}
+
+#kc-form-buttons .btn-primary:focus {
+    outline: none !important;
+}
+
+#kc-form-buttons .btn-primary:disabled {
+    color: #fff !important;
+}
+
+.alert {
+    padding-left: 30px;
+    margin-bottom: 0;
+}
+
+.alert>.pficon {
+    top: 12px;
+    left: 0;
+}
+
+.bottomBox {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding-top: 35px;
+}
+
+/* @media screen and (max-width: 1000px) {
+    .Max_box{
+        padding-left: 0;
+        padding-right: 0;
+    }
+} */

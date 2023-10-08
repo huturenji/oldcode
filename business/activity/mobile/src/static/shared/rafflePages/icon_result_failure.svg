@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_result_failure</title>
+    <defs>
+        <linearGradient x1="23.805483%" y1="14.0169052%" x2="83.7211859%" y2="87.3437822%" id="linearGradient-1">
+            <stop stop-color="#FFAA82" offset="0%"></stop>
+            <stop stop-color="#EA592B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="03-手动开奖" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-现场抽奖-抽奖结果-未中奖" transform="translate(-158.000000, -398.000000)">
+            <g id="icon_result_failure" transform="translate(158.000000, 398.000000)">
+                <circle id="椭圆形" fill="url(#linearGradient-1)" cx="30" cy="30" r="30"></circle>
+                <path d="M37.4523198,44.8347751 C36.467526,41.7352424 33.5663688,39.4895493 30.1407018,39.4895493 C26.8681498,39.4895493 24.0742681,41.5389799 22.9724951,44.4244025 C22.9319238,44.5306543 22.893647,44.6380397 22.8577252,44.746498" id="路径" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+                <circle id="椭圆形" fill="#FFFFFF" cx="19.0540541" cy="25.5405405" r="3.64864865"></circle>
+                <circle id="椭圆形备份-6" fill="#FFFFFF" cx="40.9459459" cy="25.5405405" r="3.64864865"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

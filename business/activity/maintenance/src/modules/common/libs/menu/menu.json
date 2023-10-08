@@ -1,0 +1,15 @@
+{
+  "menu": [
+    {
+      "name": "权限配置",
+      "count": 0,
+      "type": "authmgr",
+      "sameMenuPaths": [],
+      "path": "/authlist",
+      "selected": false,
+      "authCodeList": [
+        99902001
+      ]
+    }
+  ]
+}

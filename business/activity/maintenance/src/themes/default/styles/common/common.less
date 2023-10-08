@@ -1,0 +1,87 @@
+@import './variables.less';
+//样式初始化,统一处理
+@import './init.less';
+@media screen and (min-width: 420px) {
+    /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+    ::-webkit-scrollbar{
+        width: 7px;
+        height: 7px;
+        border-radius: 10px;
+    }
+    /*定义滚动条的轨道，内阴影及圆角*/
+    ::-webkit-scrollbar-track{
+        background-color: #fff;
+    }
+    /*定义滑块，内阴影及圆角*/
+    ::-webkit-scrollbar-thumb{
+        width: 7px;
+        height: 7px;
+        border-radius: 10px;
+        background-color: #cccccc;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: #969696;
+    }
+}
+
+/*提示信息框PC版样式*/  
+.tipsBox{
+    display: none;
+    width: 100%;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 50%;
+    left: 0%;
+    text-align: center;
+    z-index:11001;
+}   
+.tipsBox span{
+    max-width: 60%;
+    margin: 0 auto;
+    display: inline-block;
+    border-radius: 5px;
+    padding:12px 24px;
+    font-size: 14px;
+    color: #fff;
+    background: rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 5px #b2b2b2;        
+}  
+
+.tipsBoxAll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1200;
+}
+
+.tipsBoxAll .gotoIndex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    box-shadow: 0.125em 0.125em 0.625em #222;
+    font-size: 16px;
+    width: 410px;
+    height: 180px;
+    margin: -90px 0px 0px -205px;
+    border-radius: 3px;
+    text-align: center;
+    /* line-height: 180px; */
+}
+
+.gotoIndexText {
+    line-height: 100px;
+}
+
+.gotoIndexBtn {
+    width: 134px;
+    background: #478aee;
+    padding: 8px 0;
+    border-radius: 4px;
+    color: #fff;
+    margin: 0 auto;
+    cursor: pointer;
+}
