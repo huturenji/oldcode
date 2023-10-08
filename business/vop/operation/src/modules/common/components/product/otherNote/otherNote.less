@@ -1,0 +1,32 @@
+.otherNote {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0 0 33px;
+    &_left {
+        &_dec {
+            font-style: normal;
+            font-size: 16px;
+        }
+
+        &_require {
+            color: red;
+            font-size: 14px;
+        }
+    }
+
+    &_right {
+        min-width: 400px;
+        &_note{
+            border: 1px solid #DCDFE6;
+            border-radius: 4px;
+            textarea{
+                border: none !important;
+                font-family:"Microsoft Yahei", "微软雅黑", "Hiragino Sans GB", "宋体",
+                Tahoma, Arial, Helvetica, STHeiti, sans-serif !important;;
+                margin-bottom: 20px;
+                padding: 10px 8px;
+            }
+        }
+    }
+}

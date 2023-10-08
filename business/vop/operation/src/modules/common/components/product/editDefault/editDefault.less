@@ -1,0 +1,108 @@
+.editDefault {
+    &_list {
+        border: none !important;
+    }
+
+    &_item {
+        border-left: 1px solid #EBEEF5;
+        border-top: 1px solid #EBEEF5;
+        border-right: 1px solid #EBEEF5;
+        margin-top: 20px;
+        border-radius: 8px;
+
+        &_title {
+            font-size: 14px;
+            color: #666;
+            font-weight: bold;
+            margin-left: 20px;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: inline-flex;
+                position: absolute;
+                left: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                transition: all 0.3s ease-in-out;
+                background: url(~assets/expand.png) no-repeat;
+                width: 16px;
+                height: 16px;
+
+            }
+
+            em {
+                font-style: normal;
+            }
+        }
+
+        .el-collapse-item__arrow {
+            display: none;
+        }
+
+        .el-collapse-item__header {
+            padding-left: 8px;
+            font-size: 16px;
+            font-weight: 550;
+            background-color: #F8F8F8;
+            height: 36px;
+            line-height: 36px;
+        }
+
+        &_logo {
+            width: 48px;
+            height: 48px;
+            margin-right: 12px;
+            border-radius: 6px;
+        }
+
+        &_sp {
+            width: 184px;
+            padding: 11px 16px;
+            border: 1px solid #DCDFE6;
+            box-sizing: border-box;
+            margin: 24px 72px 0 0;
+            border-radius: 6px;
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 550;
+            white-space: nowrap;
+
+            &_dec {
+                flex: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 14px;
+                font-weight: normal;
+            }
+        }
+
+        &_all {
+            font-size: 20px;
+            padding: 20px 0 0 20px;
+        }
+
+        .el-collapse-item__header {
+            background-color: #f8f8f8;
+        }
+    }
+
+    .el-collapse-item__content {
+        padding: 0 0 24px 24px;
+    }
+}
+
+.el-collapse-item__header {
+    &:not(.is-active) {
+        .editDefault_item_title {
+            &::before {
+                transform: rotateZ(-90deg) translateX(8px);
+                top: 50%;
+            }
+        }
+    }
+}

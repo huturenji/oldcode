@@ -1,0 +1,160 @@
+.previewModel {
+    &_dialog {
+        .el-dialog__header,
+        .el-dialog__body {
+            width: 100%;
+            box-sizing: border-box;
+            color: #333;
+            
+        }
+        &.el-dialog__body-wrapper {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            color: #333;
+        }
+        &__title {
+            font-size: 22px;
+        }
+    }
+    .product {
+        flex-direction: column;
+        &.previewModel_dialog {
+            min-width: 1216px;
+            max-width: 1261px;
+            position: absolute !important;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0 !important;
+            min-width: 1216px  !important;
+            max-width: 1261px  !important;
+        }
+        .el-table {
+            color: #333;
+            &.el-table--striped {
+                .el-table__body {
+                    tr.el-table__row--striped {
+                        td {
+                            background-color: #f8f8f8;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &_title {
+            text-align: left;
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        &_list {
+            width: 100%;
+            border-left: 1px solid #ebeef5;
+            border-right: 1px solid #ebeef5;
+            border-radius: 4px;
+            &.el-dialog{
+                color: #333;
+                .el-dialog__header,
+                .el-dialog__body {
+                    width: 100%;
+                    box-sizing: border-box;
+                    color: #333;
+                    
+                }
+                &.el-dialog__body-wrapper {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    color: #333;
+                }
+            }
+        }
+        &_info {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &_text {
+                flex: 1;
+                margin-left: 10px;
+                max-width: ~"calc(100% - 54px)";
+                p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            &_logo {
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+            }
+        }
+        &_tab {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            &_left {
+                flex-direction: row;
+                flex-wrap: wrap;
+                display: flex;
+                flex: 1;
+                margin-right: 10px;
+                max-height: 108px;
+                overflow-y: auto;
+            }
+            &_right {
+                font-size: 18px;
+            }
+            &_item {
+                margin: 0 20px 20px 0;
+                position: relative;
+                cursor: pointer;
+                word-break: keep-all;
+                font-size: 12px;
+                &:hover {
+                    color: #478aee;
+                    &:after {
+                        width: 100%;
+                        transition: width 0.3s ease;
+                    }
+                }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: -10px;
+                    height: 2px;
+                    width: 0;
+                    background-color: #478aee;
+                }
+            }
+            &_active {
+                color: #478aee;
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+        &_content {
+            font-size: 18px;
+            &_noResult {
+                color: #777;
+            }
+        }
+    }
+    &_dialog&.el-dialog {
+        color: #333;
+        &--center {
+            position: absolute !important;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0 !important;
+            min-width: 1216px  !important;
+            max-width: 1261px  !important;
+        }
+    }
+}

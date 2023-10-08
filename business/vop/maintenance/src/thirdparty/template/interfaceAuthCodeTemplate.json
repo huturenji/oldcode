@@ -1,0 +1,1110 @@
+[
+  {
+    "busTypeId": "01001",
+    "busTypeName": "供应商管理",
+    "permissions": [
+      {
+        "permissionId": "01001001",
+        "permissionName": "查看供应商信息",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier/get",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "01001002",
+        "permissionName": "新建供应商",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/update",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/presign/getUploadUrl",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "01001003",
+        "permissionName": "编辑供应商",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier/update",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/presign/getUploadUrl",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "01001004",
+        "permissionName": "启用/停用供应商",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier/setState",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "02001",
+    "busTypeName": "渠道管理",
+    "permissions": [
+      {
+        "permissionId": "02001001",
+        "permissionName": "查看渠道信息",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/channel/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/getSystemLogs",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "02001002",
+        "permissionName": "新建渠道",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/payment/getAvailableMethods",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/add",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/presign/getUploadUrl",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "02001003",
+        "permissionName": "编辑渠道",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/payment/getAvailableMethods",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/update",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/presign/getUploadUrl",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "02001004",
+        "permissionName": "启用/停用渠道",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/channel/setState",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/getSystemLogs",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "03001",
+    "busTypeName": "商品下架管理",
+    "permissions": [
+      {
+        "permissionId": "03001001",
+        "permissionName": "查看下架规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/listOffShelfRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getOffShelfRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getOffShelfRuleLogs",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getCategories",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getDetail",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getProductPrices",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "03001002",
+        "permissionName": "新建下架规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getCategories",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/search",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getProductPrices",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/addOffShelfRule",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "03001003",
+        "permissionName": "编辑下架规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getOffShelfRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getOffShelfRuleLogs",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getCategories",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/search",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getProductPrices",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/addOffShelfRule",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "03001004",
+        "permissionName": "启用/停用下架规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getOffShelfRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getOffShelfRuleLogs",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getCategories",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getDetail",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getProductPrices",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/enableOffShelfRule",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "03002",
+    "busTypeName": "商品定价管理",
+    "permissions": [
+      {
+        "permissionId": "03002001",
+        "permissionName": "查看定价规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/listPriceRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getPriceRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getPriceRuleLogs",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getDetail",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getProductPrices",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/search",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "03002002",
+        "permissionName": "新建定价规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getCategories",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/search",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getProductPrices",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/addPriceRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/search",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "03002003",
+        "permissionName": "编辑定价规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getPriceRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getPriceRuleLogs",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/addPriceRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/search",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getProductPrices",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getCategorise",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/search",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "03002004",
+        "permissionName": "编辑默认定价规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/list",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/updateDefaultPriceRule",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "03002005",
+        "permissionName": "启用/停用定价规则",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getPriceRule",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/getPriceRuleLogs",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getDetail",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/product/getProductPrices",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/rule/enablePriceRule",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "04001",
+    "busTypeName": "订单管理",
+    "permissions": [
+      {
+        "permissionId": "04001001",
+        "permissionName": "查看销售订单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/order/listByOperation",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/order/getDetailByOperation",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "04001002",
+        "permissionName": "修改销售订单价格状态",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/order/getDetailByOperation",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/order/updateByOperation",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "04001003",
+        "permissionName": "添加销售订单备注",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/order/getDetailByOperation",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/order/logAction",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "04001004",
+        "permissionName": "查看采购订单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier-order/listByOperation",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier-order/getDetailByOperation",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "04001005",
+        "permissionName": "添加采购订单备注",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier-order/getDetailByOperation",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier-order/logAction",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "04001006",
+        "permissionName": "导出销售订单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/order/exportOrder",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "04001007",
+        "permissionName": "导出采购订单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier-order/exportOrder",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "04001008",
+        "permissionName": "重新推单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier-order/reOrder",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "04001009",
+        "permissionName": "取消订单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/order/cancel",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "05001",
+    "busTypeName": "服务单管理",
+    "permissions": [
+      {
+        "permissionId": "05001001",
+        "permissionName": "查看服务单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/postsale/getServiceStatistics",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getSubmittingReason",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/listServiceRequest",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getServiceRequestRelatedInfo",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getServiceLogs",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier/get",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "05001002",
+        "permissionName": "加急服务单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/postsale/getServiceRequestRelatedInfo",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getServiceLogs",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier/get",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/setServiceRequestPriority",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "05001003",
+        "permissionName": "重新激活服务单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/postsale/reactivateServiceRequest",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "05002",
+    "busTypeName": "客服坐席",
+    "permissions": [
+      {
+        "permissionId": "05002001",
+        "permissionName": "查看已处理服务单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/postsale/setServiceRequestPriority",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getServiceRequestDetail",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getServiceRequestRelatedInfo",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getSubmittingReason",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getProcessedServiceRequest",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "05002002",
+        "permissionName": "领取服务单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/postsale/getPenddingServiceRequest",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "05002003",
+        "permissionName": "处理服务单",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/postsale/getServiceRequestDetail",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getServiceRequestRelatedInfo",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/rejectServiceRequest",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/submitRequestToSupplier",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/updateServiceRequestStatus",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/reSubmitServiceRequest",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/replaceProducts",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/refund",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/postsale/getRefundInfoFromSupplier",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "05002004",
+        "permissionName": "新建反馈建议",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/postsale/addFeedback",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "05002005",
+        "permissionName": "查看反馈建议",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/postsale/listFeedback",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "06001",
+    "busTypeName": "财务管理",
+    "permissions": [
+      {
+        "permissionId": "06001001",
+        "permissionName": "查看记账账户",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/finance/listAccounts",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/finance/listAccountSource",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "06001002",
+        "permissionName": "创建记账账户",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/finance/listAccountSource",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/finance/addAccount",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "06001003",
+        "permissionName": "新建记账账户明细",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/finance/addTransaction",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/finance/listTransactionType",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "06001004",
+        "permissionName": "查看记账账户明细",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/finance/listTransaction",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/finance/listTransactionType",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "06001005",
+        "permissionName": "导出记账账户明细",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/finance/exportLedger",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "06002",
+    "busTypeName": "开票管理",
+    "permissions": [
+      {
+        "permissionId": "06002001",
+        "permissionName": "查询待开票订单列表",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier-order/getUnInvoicedOrderList",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "06002002",
+        "permissionName": "开票申请",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/finance/applyInvoiceJd",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier-order/getInvoiceInfo",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier-order/updateInvoiceInfo",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier-order/getUnInvoicedOrderList",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "06002003",
+        "permissionName": "开票查询",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/finance/listApplyInvoiceJd",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/finance/getOneJd",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/finance/listInvoiceItemJd",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/finance/queryLogisticsJd",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/supplier-order/getUnInvoicedOrderList",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "06002004",
+        "permissionName": "导出开票申请",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/supplier-order/exportInvoicedOrder",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/finance/listApplyInvoiceJd",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "07001",
+    "busTypeName": "系统管理",
+    "permissions": [
+      {
+        "permissionId": "07001001",
+        "permissionName": "查看用户信息",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/searchUser",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/getUser",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "07001002",
+        "permissionName": "添加人员",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/addUser",
+            "roleDesc": "添加用户"
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/searchCompanyUser",
+            "roleDesc": "搜索公司员工"
+          }
+        ]
+      },
+      {
+        "permissionId": "07001003",
+        "permissionName": "删除人员",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/getUser",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/deleteUser",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "07001004",
+        "permissionName": "编辑人员",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/getUser",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/updateUser",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/searchCompanyUser",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "07001005",
+        "permissionName": "查看角色",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/listRole",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/getRoleDetail",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "07001006",
+        "permissionName": "添加角色",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/addRole",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/listPermission",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "07001007",
+        "permissionName": "编辑角色",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/getRoleDetail",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/updateRole",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/listPermission",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "07001008",
+        "permissionName": "删除角色",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/getRoleDetail",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/deleteRole",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "07001009",
+        "permissionName": "查看权限列表",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/zsa-adapter/listPermission",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "busTypeId": "08001",
+    "busTypeName": "运维渠道管理",
+    "permissions": [
+      {
+        "permissionId": "08001001",
+        "permissionName": "运维渠道管理",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/channel/listConfig",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/addConfig",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/updateConfig",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/addIdp",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/zsa-adapter/getIdpInfo",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "08001002",
+        "permissionName": "对公支付",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/payment/getBossPayConfig",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/payment/listBossPayConfig",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/payment/updateBossPayConfig",
+            "roleDesc": ""
+          }
+        ]
+      },
+      {
+        "permissionId": "08001003",
+        "permissionName": "推送模板配置",
+        "apiRoles": [
+          {
+            "roleName": "/mallvop/notice/addPushTemplate",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/notice/deletePushTemplate",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/notice/getPushTemplateList",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/notice/isPushTemplateExist",
+            "roleDesc": ""
+          },
+          {
+            "roleName": "/mallvop/channel/list",
+            "roleDesc": ""
+          }
+        ]
+      }
+    ]
+  }
+]

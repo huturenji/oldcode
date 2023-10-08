@@ -1,0 +1,8 @@
+{
+  "auth-server-url": "https://bplusdev.sinosun.com:18580/auth",
+"confidential-port": 0,
+"public-client": true,
+"realm": "bplusdev",
+"resource": "BBC-member",
+"ssl-required": "none"
+  }

@@ -1,0 +1,88 @@
+.commodity {
+    width: 100%;
+    height: ~'calc(100vh - 48px)';
+    min-height: 549px;
+    overflow: hidden;
+    &_filter {
+        background-color: #fff;
+        padding:24px 24px 16px;
+        margin-bottom: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        &_search {
+            width: 400px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 26px;
+            &_input {
+                input {
+                    border-radius: 8px 0 0 8px;
+                    height: 36px;
+                    line-height: 36px;
+                }
+            }
+            .el-input-group__append{
+                border: none;
+            }
+            &_button {
+                border-radius: 0 8px 8px 0 !important;
+                width: 41px;
+                height: 36px;
+                padding: 0 !important;
+            }
+            .el-input-group__append button.el-button{
+                background-color: #478aee;
+                color: #fff;
+            }
+        }
+
+        &_tip {
+            padding: 16px;
+            background-color: #F3F8FF;
+            margin-top: 20px;
+            border-radius: 4px;
+
+            &_box {
+                border-radius: 4px;
+                color: #686f73;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            &_warning {
+                color: #478aee;
+                font-size: 16px;
+            }
+
+            &_text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-left: 5px;
+                font-size:12px;
+            }
+        }
+    }
+    &_content{
+        height: ~'calc(100vh - 189px)';
+        min-height: 408px;
+    }
+    &_table {
+        background-color: #fff;
+        margin-top: 0;
+        border-radius: 0 0 8px 8px ;
+        height: ~'calc(100% - 170px)';
+    }
+
+    .priceNavBar {
+        padding-left: 30px;
+    }
+
+    .price_box {
+        min-height: 100vh;
+        background-color: #fff;
+    }
+}

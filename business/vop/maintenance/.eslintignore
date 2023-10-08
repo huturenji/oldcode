@@ -1,0 +1,11 @@
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+
+/src/assets/
+/src/route/
+/src/themes/
+/src/thirdparty/
+/src/modules/common/components/report/videoplayer

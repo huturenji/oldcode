@@ -1,0 +1,405 @@
+.priceRuleDetail {
+    width: 100%;
+    &_content {
+        background-color: #fff;
+        padding: 32px 24px;
+        margin-bottom: 0;
+    }
+
+    &_rule {
+        &_item {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            line-height: 36px;
+
+            .stopStatus {
+                color:#FB6041;
+            }
+            .startStatus {
+                color: #008000;
+            }
+
+            &_label {
+                min-width: 100px;
+                margin-right: 2px;
+                text-align: right;
+            }
+            &_dec{
+                word-break: break-all;
+                line-height: 1;
+            }
+        }
+    }
+
+    &_buttom {
+        width: 1280px;
+        margin: 0 auto 16px;
+        padding-right: 64px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box;
+        button{
+            border-radius: 6px;
+            width: 80px;
+            height: 32px;
+            padding: 0 !important;
+            &.el-button--primary{
+                background-color: transparent;
+            }
+            &.priceRuleDetail_buttom_edit{
+                background-color: #478AEE;
+                &:hover,
+                &:focus{
+                    opacity: .8;
+                }
+            }
+        }
+        &_change{
+            margin: 0 20px;
+            .el-button--danger{
+                color: #fff !important;
+                background-color: #FB6041 !important;
+                &:hover,
+                &:focus{
+                    opacity: .8;
+                }
+            }
+            .el-button--primary{
+                color: #478AEE;
+                border-color: #478aee;
+                &:hover,
+                &:focus{
+                    background-color: #DAEEFF !important;
+                    border-color: #478aee !important;
+                    color: #478AEE !important;
+                }
+            }
+        }
+        &_preview{
+            &.is-plain{
+                color: #478AEE;
+                border-color: #478aee;
+                width: 80px;
+                &:hover,
+                &:focus{
+                    background-color: #DAEEFF !important;
+                    border-color: #478aee !important;
+                    color: #478AEE !important;
+                }
+            }
+        }
+    }
+
+    &_info {
+        .el-collapse {
+            border-top: none;
+            border-bottom: none;
+        }
+        .el-collapse-item__arrow{
+            display: none;
+        }
+        .el-collapse-item__content {
+            margin: 0;
+            padding: 0
+        }
+        .el-collapse-item__wrap{
+            border-radius: 0 0 8px 8px;
+        }
+        &_item {
+            margin-top: 30px;
+            border-top: 1px solid #EBEEF5;
+            border-left: 1px solid #EBEEF5;
+            border-right: 1px solid #EBEEF5;
+            border-radius: 8px;
+            &_title{
+                em {
+                    font-style: normal;
+                    color: #666;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    margin-left: 20px;
+                    &::before {
+                        content: "";
+                        display: inline-flex;
+                        position: absolute;
+                        left: -20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 16px;
+                        height: 16px;
+                        background: url(~assets/expand.png) no-repeat;
+                        transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+
+                    }
+                }
+            }
+        }
+        .el-collapse-item__header {
+            padding-left: 8px;
+            background-color: #F8F8F8;
+            font-size: 14px;
+            font-weight: bold;
+            height: 36px;
+            line-height: 36px;
+            &:not(.is-active) {
+                .priceRuleDetail_info_item_title {
+                    em {
+                        &::before {
+                            transform: rotateZ(-90deg) translateX(8px);
+                            top: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_channel {
+        &_item {
+            list-style: none;
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 24px 0 0 32px;
+
+            &_dec {
+                font-size: 14px;
+                color: #333;
+                margin-left: 10px;
+            }
+
+            &_img {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        &_no {
+            list-style: none;
+            padding: 20px;
+        }
+
+        &_list {
+            padding-bottom: 20px;
+        }
+    }
+
+    &_range {
+        &_table {
+            margin: 20px;
+        }
+
+        &_list {
+            display: flex;
+
+            .el-table--border td {
+                border-right: none;
+            }
+
+            .el-table--border th {
+                border-right: none;
+            }
+
+            .el-table__header-wrapper {
+                .priceRuleDetail_range_header {
+                    background: #EBEEF5;
+                }
+            }
+
+            .el-table th {
+                background-color: transparent;
+            }
+        }
+
+        &_sort {
+            width: 25%;
+            max-height: 400px;
+            overflow-y: auto;
+            list-style: none;
+            border-right: 1px solid #EBEEF5;
+
+            &_item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                line-height: 45px;
+                padding: 0 10px;
+                cursor: pointer;
+
+                &_icon {
+                    font-weight: bolder;
+                    font-size: 16px;
+                }
+            }
+            &_active{
+                color: #478aee;
+            }
+            &_count {
+                padding: 10px 20px;
+                border-bottom: 1px solid #EBEEF5;
+                font-size: 16px;
+
+                &_num {
+                    color: #478aee;
+                    font-size: 20px;
+                }
+            }
+
+            &_oneTip {
+                padding: 10px 20px;
+                border-bottom: 1px solid #EBEEF5;
+                cursor: pointer;
+                &_active{
+                    background-color: #EAF2FF;
+                }
+            }
+        }
+
+        &_info {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &_img{
+                width: 48px;
+                height: 48px;
+            }
+            &_right {
+                cursor: pointer;
+                margin-left: 10px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &_note {
+        margin-top: 16px;
+        background-color: #fff;
+        padding:32px 24px;
+        &_title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 -24px 20px;
+            padding: 0 0 8px 24px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+        &_pagination{
+            display: flex;
+            justify-content: flex-end;
+            align-content:center;
+            margin: 32px 46px 0 0;
+            .number{
+                font-weight: 400 !important;
+            }
+        }
+        &_table{
+            border-left: 1px solid #EBEEF5;
+            border-right: 1px solid #EBEEF5;
+            border-radius: 8px;
+            &.el-table{
+                color: #333;
+                &.el-table--striped{
+                    .el-table__body{
+                        tr.el-table__row--striped{
+                            td{
+                                background-color: #f8f8f8;
+                            }
+                        }
+                    } 
+                } 
+                th,
+                td{
+                    &:first-child{
+                        padding-left: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tipContent {
+        text-align: center;
+        font-size:16px;
+        color: #333;
+    }
+    .noHand{
+        cursor: auto;
+    }
+    .noResult{
+        padding: 30px;
+        font-size: 20px;
+    }
+    &_remark{
+        padding:24px 32px  0;
+        em,i{
+            font-style: normal;
+        }
+        em{
+            color: #999;
+        }
+    }
+    .el-dialog{
+        &--center{
+            min-width: 560px;
+            max-width: 560px;
+            position: absolute !important;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            margin: 0 !important;
+            border-radius: 8px;
+        }
+        &__header{
+            border-bottom: 1px solid #ebebeb;
+            font-weight: 600;
+            .el-dialog__title{
+                font-size: 16px;
+            }
+        }
+        &__title{
+            color: #333;
+        }
+        &__footer{
+            margin-bottom: 40px;
+        }
+        .dialog-footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .el-button{
+                color: #fff;
+                width: 144px;
+                height: 48px;
+                line-height: normal;
+                transition: none;
+                border-radius: 8px;
+                &+.el-button{
+                    margin-left: 24px;
+                }
+            }
+            .el-button--default{
+                background-color: #c2c2c2;
+                &:hover,
+                &:focus{
+                    background-color: #478aee;
+                    opacity: .8;
+                }
+            }
+            .el-button--primary{
+                background-color: #478aee;
+                &:hover,
+                &:focus{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

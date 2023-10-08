@@ -1,0 +1,603 @@
+.context {
+  .downshelfMgr {
+      // min-height: 800px;
+      margin: auto;
+      font-size: 14px;
+
+      .downshelfMgrTitle {
+          .downshelfType {
+              display: flex;
+              height: 32px;
+              line-height: 32px;
+              padding-bottom: 20px;
+
+              .backHomeStyle {
+                  cursor: pointer;
+              }
+
+              .downshelfLi {
+                  color: #2d8cf0;
+              }
+
+              .backImg {
+                  width: 30px;
+                  height: 30px;
+              }
+          }
+
+          .backCur {
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: bold;
+              height: 32px;
+              line-height: 32px;
+              margin-left: -10px;
+          }
+      }
+
+      .editRuleType {
+          width: 1280px;
+          display: flex;
+          justify-content: flex-end;
+          margin: 8px auto 16px;
+
+          .enabledState {
+              color: #478aee;
+              border-color: #478aee;
+              background-color: #f4f4f4;
+              width: 80px;
+              height: 32px;
+              font-size: 12px;
+              border-radius: 6px;
+              cursor: pointer;
+
+              &:hover,
+              &:focus {
+                  opacity: .8;
+              }
+          }
+
+          .unabledState {
+              color: #fff;
+              border-color: #fb6041;
+              background-color: #fb6041;
+              width: 80px;
+              height: 32px;
+              font-size: 12px;
+              border-radius: 6px;
+              cursor: pointer;
+
+              &:hover,
+              &:focus {
+                  opacity: .8;
+              }
+          }
+
+          .editRuleBtn {
+              width: 80px;
+              height: 32px;
+              background-color: #478aee;
+              color: #fff;
+              font-size: 12px;
+              border-radius: 6px;
+              margin: 0 56px 0 12px;
+              cursor: pointer;
+
+              &:hover,
+              &:focus {
+                  opacity: .8;
+              }
+          }
+      }
+
+      .downshelfMgr_center {
+          background-color: #fff;
+          margin: 0 auto 16px;
+          padding: 24px;
+
+          .addRuleRange {
+              font: bold;
+              margin-top: 10px;
+          }
+
+          .addruleDefineContext {
+              .addRuleDefinecontextLine {
+                  display: flex;
+                  margin: 24px 0 8px 0;
+
+                  .textStyle {
+                      width: 450px;
+                      line-height: 32px;
+                  }
+
+                  .enableRuleConditionTitle {
+                      height: 32px;
+                      line-height: 32px;
+                      color: #999999;
+                      margin: 0 16px 0 32px;
+                  }
+              }
+
+              .addRuleDefineLine {
+                  display: flex;
+                  margin: 10px 0;
+
+                  .textStyle {
+                      width: 450px;
+                      line-height: 32px;
+                  }
+
+                  .textStateStyle_1 {
+                      color: #23b45d;
+                      height: 32px;
+                      line-height: 32px;
+                  }
+
+                  .textStateStyle_2 {
+                      color: #fb6041;
+                      height: 32px;
+                      line-height: 32px;
+                  }
+
+                  .enableRuleConditionTitle {
+                      height: 32px;
+                      line-height: 32px;
+                      color: #999999;
+                      margin: 0 16px 0 60px;
+                  }
+
+                  .addRuleConditionTitle {
+                      height: 32px;
+                      line-height: 32px;
+                      color: #999999;
+                      margin: 0 16px 0 32px;
+                  }
+
+                  .ruleNameInput {
+                      width: 300px;
+                      height: 30px;
+                  }
+
+                  .ruleNameTextarea {
+                      width: 300px;
+                  }
+              }
+          }
+
+          .addTitleLine {
+              border: 1px dashed #dcdee2;
+          }
+
+          .conditionsLine {
+              // height: 100px;
+              border: 1px solid #dcdee2;
+              border-radius: 3px;
+              margin: 10px 0 10px 20px;
+
+              .addConditionsTitle {
+                  display: flex;
+                  height: 48px;
+                  line-height: 48px;
+                  padding: 0 10px;
+                  border-bottom: 1px solid #dcdee2;
+                  background-color: #dcdee2;
+
+                  .titleIcon {
+                      margin: auto 0;
+                      cursor: pointer;
+                  }
+
+                  .addCondContext {
+                      margin-left: 10px;
+                  }
+              }
+
+              .spconditionsLine {
+                  display: flex;
+                  flex-wrap: wrap;
+                  margin-left: 15px;
+
+                  .SPItem {
+                      width: 150px;
+                      height: 60px;
+                      line-height: 60px;
+                      border: 1px solid #dcdee2;
+                      border-radius: 3px;
+                      margin: 10px 0 10px 20px;
+                      display: flex;
+                  }
+
+                  .checkedLine {
+                      border: 1px solid #2d8cf0 !important;
+                  }
+
+                  .SPImg {
+                      width: 20px;
+                      height: 20px;
+                      margin: auto 5px;
+                  }
+
+                  .addSPCondContext {
+                      width: 90px;
+                      overflow: hidden;
+                      white-space: nowrap;
+                      text-overflow: ellipsis;
+                  }
+
+                  .checkBox {
+                      width: 20px;
+                      height: 20px;
+                      margin: auto 0;
+                      cursor: pointer;
+                  }
+              }
+
+              .conditions {
+                  display: flex;
+                  height: 48px;
+                  line-height: 48px;
+                  padding: 0 10px;
+                  margin-left: 30px;
+
+                  .addCondContext {
+                      margin-left: 10px;
+                  }
+
+                  .channelSelectBox {
+                      width: 280px;
+                      height: 30px;
+                      line-height: 30px;
+                      margin-top: 10px;
+                      margin-left: 10px;
+                      border: 1px solid #dcdee2;
+                      border-radius: 3px;
+                      padding: 0 10px;
+
+                      .channelSelect {
+                          height: 30px;
+                          line-height: 30px;
+                      }
+
+                      .channelBox {
+                          height: 200px;
+                          margin-left: -10px;
+                          background-color: #fff;
+                          border: 1px solid #dcdee2;
+                          overflow-y: auto;
+                          padding: 0 10px;
+                          position: absolute;
+                          z-index: 1;
+
+                          .channelSelectBoxInput {
+                              width: 280px;
+                              height: 30px;
+                              line-height: 30px;
+                              margin-top: 10px;
+                              margin-left: 10px;
+                              border: 1px solid #dcdee2;
+                              border-radius: 3px;
+                              padding: 0 10px;
+                          }
+
+                          .emptyResult {
+                              text-align: center;
+                          }
+
+                          .channelSelectItem {
+                              display: flex;
+                              width: 295px;
+                              height: 32px;
+                              line-height: 32px;
+                              cursor: pointer;
+
+                              .selectChannelLiItem {
+                                  width: 270px;
+                                  overflow: hidden;
+                                  white-space: nowrap;
+                                  text-overflow: ellipsis;
+                              }
+
+                              .channelCheckedImg {
+                                  margin: auto 0;
+                                  width: 20px;
+                                  height: 20px;
+                              }
+                          }
+
+                          .channelSelectItem:hover {
+                              background-color: #dcdee2;
+                          }
+                      }
+                  }
+
+                  .addRuleConditionsTitle {
+                      display: flex;
+                      height: 48px;
+                      line-height: 48px;
+                      padding: 0 10px;
+                  }
+
+                  .addConditionsTitleclassify {
+                      display: flex;
+
+                      .checkBox {
+                          width: 20px;
+                          height: 20px;
+                          margin: auto 0;
+                          cursor: pointer;
+                      }
+
+                      .addCondContext {
+                          margin-left: 10px;
+                      }
+                  }
+              }
+
+              .selectedChannelLine {
+                  display: flex;
+                  flex-wrap: wrap;
+                  margin-left: 30px;
+
+                  .selectedChannelcontext {
+                      width: 150px;
+                      height: 60px;
+                      line-height: 60px;
+                      border: 1px solid #dcdee2;
+                      border-radius: 3px;
+                      margin: 10px 0 10px 20px;
+                      display: flex;
+
+                      .channelImg {
+                          width: 20px;
+                          height: 20px;
+                          margin: auto 5px;
+                      }
+
+                      .addChannelCondContext {
+                          width: 90px;
+                          overflow: hidden;
+                          white-space: nowrap;
+                          text-overflow: ellipsis;
+                      }
+
+                      .checkBox {
+                          width: 20px;
+                          height: 20px;
+                          margin: auto 0;
+                          cursor: pointer;
+                      }
+                  }
+
+                  .checkedLine {
+                      border: 1px solid #2d8cf0 !important;
+                  }
+              }
+
+              .addConditionsTitleSKU {
+                  display: flex;
+                  margin-left: 30px;
+
+                  .addCondContext {
+                      margin-left: 10px;
+                  }
+
+                  .checkBox {
+                      width: 20px;
+                      height: 20px;
+                      margin: auto 0;
+                      cursor: pointer;
+                  }
+              }
+
+              .SKUSelectBox {
+                  margin-left: 10px;
+
+                  .SKUSelect {
+                      width: 300px;
+                      height: 30px;
+                      line-height: 30px;
+                      margin-top: 10px;
+                      border: 1px solid #dcdee2;
+                      border-radius: 3px;
+                      padding: 0 10px;
+                  }
+
+                  .channelBox {
+                      height: 200px;
+                      margin-left: -10px;
+                      background-color: #fff;
+                      border: 1px solid #dcdee2;
+                      overflow-y: auto;
+                      padding: 0 10px;
+                      position: absolute;
+                      z-index: 1;
+
+                      .channelSelectBox {
+                          width: 280px;
+                          height: 30px;
+                          line-height: 30px;
+                          margin-top: 10px;
+                          margin-left: 10px;
+                          border: 1px solid #dcdee2;
+                          border-radius: 3px;
+                          padding: 0 10px;
+                      }
+
+                      .channelSelectItem {
+                          display: flex;
+                          width: 295px;
+                          height: 32px;
+                          line-height: 32px;
+                          cursor: pointer;
+
+                          .selectChannelLiItem {
+                              width: 270px;
+                              overflow: hidden;
+                              white-space: nowrap;
+                              text-overflow: ellipsis;
+                          }
+
+                          .channelCheckedImg {
+                              margin: auto 0;
+                              width: 20px;
+                              height: 20px;
+                          }
+                      }
+
+                      .SKUcontext {
+                          display: flex;
+                          align-items: center;
+
+                          .SKUImg {
+                              width: 20px;
+                              height: 20px;
+                          }
+
+                          .SKUName {
+                              width: 250px;
+                              line-height: 20px;
+                              margin-left: 10px;
+                              overflow: hidden;
+                              white-space: nowrap;
+                              text-overflow: ellipsis;
+                          }
+                      }
+
+                      .channelCheckedImg {
+                          margin: auto 0;
+                          width: 20px;
+                          height: 20px;
+                      }
+                  }
+              }
+
+              .selectedSKULine {
+                  display: flex;
+                  flex-wrap: wrap;
+                  margin-left: 30px;
+
+                  .selectedSKUcontext {
+                      display: flex;
+                      width: 300px;
+                      height: 60px;
+                      align-items: center;
+                      border: 1px solid #dcdee2;
+                      border-radius: 4px;
+                      margin: 5px 10px;
+                      padding: 0 10px;
+
+                      .SKUImg {
+                          width: 20px;
+                          height: 20px;
+                      }
+
+                      .SKUName {
+                          width: 250px;
+                          line-height: 20px;
+                          margin-left: 10px;
+                          overflow: hidden;
+                          white-space: nowrap;
+                          text-overflow: ellipsis;
+                      }
+
+                      .SKUdelImg {
+                          width: 20px;
+                          height: 20px;
+                          margin-right: -20px;
+                          margin-top: -60px;
+                          cursor: pointer;
+                      }
+                  }
+              }
+          }
+
+          .btnLine {
+              display: flex;
+              margin: 10px 0 0 20px;
+
+              .confirmBtn {
+                  width: 150px;
+                  height: 32px;
+                  line-height: 32px;
+                  text-align: center;
+                  background-color: #2d8cf0;
+                  color: #fff;
+                  border-radius: 3px;
+                  cursor: pointer;
+              }
+
+              .preViewBtn {
+                  width: 150px;
+                  height: 32px;
+                  line-height: 32px;
+                  text-align: center;
+                  margin-left: 10px;
+                  color: #2d8cf0;
+                  border: 1px solid #2d8cf0;
+                  border-radius: 3px;
+                  cursor: pointer;
+              }
+
+              .cancelBtn {
+                  width: 150px;
+                  height: 32px;
+                  line-height: 32px;
+                  text-align: center;
+                  margin-left: 10px;
+                  color: #dcdee2;
+                  border: 1px solid #dcdee2;
+                  border-radius: 3px;
+                  cursor: pointer;
+              }
+          }
+      }
+  }
+
+  .logLine {
+      .logTitle {
+          font-size: 14px;
+          font-weight: bold;
+          padding: 0 0 8px 33px;
+          border-bottom: 1px solid #eee;
+      }
+
+      .el-table th,
+      .el-table tr {
+          color: #333;
+      }
+
+      .merchupdownshelfMgr_log {
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 36px;
+      }
+  }
+
+  .logTable {
+      width: 1232px;
+      margin: 24px auto;
+
+      .el-table::before {
+          height: 0;
+      }
+
+      .el-table {
+          border-radius: 8px;
+          border: 1px solid #eee;
+      }
+
+      .el-table--striped .el-table__body tr.el-table__row--striped td {
+          background-color: #f6f6f6;
+      }
+  }
+
+  .logContext {
+      background-color: #fff;
+      padding: 16px 0 32px;
+  }
+}
+
+.classifyStyle {
+  width: 100px;
+  margin: auto 10px;
+}

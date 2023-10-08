@@ -1,0 +1,5 @@
+{
+  "realm": "bplusuat",
+  "auth-server-url": "https://bplus-uat.sinosun.com/auth",
+    "resource": "MALLVOP_operation_front"
+  }

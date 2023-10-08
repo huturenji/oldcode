@@ -1,0 +1,73 @@
+.releModel {
+    &_title {
+        font-size: 16px;
+        font-weight: 550;
+    }
+
+    &_list {
+        padding-left: 20px;
+    }
+
+    &_item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 16px;
+
+        &_left {
+            font-size: 0;
+            margin-right: 0;
+            min-width: 86px;
+            text-align: right;
+
+            &_require {
+                color: red;
+                font-size: 14px;
+                font-style: normal;
+            }
+
+            &_dec {
+                font-size: 14px;
+                font-style: normal;
+            }
+        }
+
+        &_right {
+            min-width: 500px;
+            &_time {
+                min-width: 500px;
+            }
+
+            &_selecte {
+                width: 140px !important;
+            }
+
+            &_input {
+                width: 160px !important;
+                flex: 1;
+            }
+        }
+        &_name{
+            min-width: 528px;
+        }
+        &_type {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &_stand {
+            margin: 0 10px;
+        }
+        &_tip{
+            margin-left: 10px;
+            &_icon{
+                color:#989898;
+            }
+            em{
+                font-style: normal;
+                color: #999999;
+            }
+        }
+    }
+}

@@ -1,0 +1,236 @@
+{
+  "menu": [
+    {
+      "name": "订单管理",
+      "count": 0,
+      "type": "orderMgr",
+      "selected": false,
+      "authCodeList": [
+        "49005001",
+        "49005002",
+        "49005003"
+      ],
+      "path": "/order/sale",
+      "sameMenuPaths": [
+        "/order/sale/saleparent",
+        "/order/sale/salechild",
+        "/order/sale/pageorderdetail"
+      ]
+    },
+    {
+      "name": "商品管理",
+      "count": 0,
+      "type": "productMgr",
+      "path": "/product",
+      "selected": false,
+      "authCodeList": [
+        "49003001",
+        "49003002",
+        "49003003",
+        "49003004",
+        "49004001",
+        "49004002",
+        "49004003",
+        "49004004",
+        "49010001"
+      ],
+      "children": [
+        {
+          "name": "下架管理",
+          "count": 0,
+          "type": "shelves",
+          "path": "/product/shelves",
+          "sameMenuPaths": [
+            "/product/shelves/detail",
+            "/product/shelves/add"
+          ],
+          "selected": false,
+          "authCodeList": [
+            "49003001",
+            "49003002",
+            "49003003",
+            "49003004"
+          ]
+        },
+        {
+          "name": "定价管理",
+          "count": 0,
+          "type": "price",
+          "path": "/product/price",
+          "sameMenuPaths": [
+            "/product/price/detail",
+            "/product/price/add"
+          ],
+          "selected": false,
+          "authCodeList": [
+            "49004001",
+            "49004002",
+            "49004003",
+            "49004004"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "售后管理",
+      "count": 0,
+      "type": "aftersales",
+      "sameMenuPaths": [
+        "/aftersales/seat",
+        "/aftersales/seatsdetail",
+        "/aftersales/ticketdetail",
+        "/aftersales/newproposal",
+        "/aftersales/oneKeycollar",
+        "/aftersales/feed",
+        "/aftersales/reinvoice"
+      ],
+      "path": "/aftersales",
+      "selected": false,
+      "authCodeList": [
+        "49006001",
+        "49006002"
+      ],
+      "children": [
+        {
+          "name": "服务单管理",
+          "count": 0,
+          "type": "ticket",
+          "path": "/aftersales/ticket",
+          "sameMenuPaths": [
+            "/aftersales/ticketdetail"
+          ],
+          "selected": false,
+          "authCodeList": [
+            "49006001",
+            "49006002"
+          ]
+        },
+        {
+          "name": "客服坐席",
+          "count": 0,
+          "type": "customer",
+          "path": "/aftersales/customer",
+          "sameMenuPaths": [
+            "/aftersales/ticketdetail"
+          ],
+          "selected": false,
+          "authCodeList": [
+            "49006001",
+            "49006002"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "供应商管理",
+      "count": 0,
+      "type": "supplierMgr",
+      "sameMenuPaths": [
+        "/supplier/detail",
+        "/supplier/add",
+        "/supplier/edit"
+      ],
+      "path": "/supplier",
+      "selected": false,
+      "authCodeList": [
+        "49001001",
+        "49001002",
+        "49001003"
+      ]
+    },
+    {
+      "name": "渠道管理",
+      "count": 0,
+      "type": "channelMgr",
+      "sameMenuPaths": [
+        "/channel/detail",
+        "/channel/add",
+        "/channel/edit"
+      ],
+      "path": "/channel",
+      "selected": false,
+      "authCodeList": [
+        "49002001",
+        "49002002",
+        "49002003"
+      ]
+    },
+    {
+      "name": "辅助工具",
+      "count": 0,
+      "type": "virtualsuppliers",
+      "sameMenuPaths": [
+        "/virtualsuppliers/jd",
+        "/virtualsuppliers/sn",
+        "/virtualsuppliers/xy",
+        "/tools/receivePQrcode"
+      ],
+      "path": "/virtualsuppliers/home",
+      "selected": false,
+      "authCodeList": [
+        "49009001",
+        "49009002",
+        "49009004",
+        "49009005",
+        "49009006",
+        "49009007"
+      ]
+    },
+    {
+      "name": "系统管理",
+      "count": 0,
+      "type": "systemMgr",
+      "path": "/sysmgr",
+      "selected": false,
+      "authCodeList": [
+        "99901001",
+        "99901002",
+        "99901003",
+        "99901004",
+        "99901005",
+        "99901006",
+        "99901007",
+        "99901008",
+        "99901009"
+      ],
+      "children": [
+        {
+          "name": "用户管理",
+          "count": 0,
+          "type": "usermanage",
+          "path": "/sysmgr/user",
+          "sameMenuPaths": [
+            "/sysmgr/user/adduser",
+            "/sysmgr/user/userdetails",
+            "/sysmgr/user/userinfoedit"
+          ],
+          "selected": false,
+          "authCodeList": [
+            "99901001",
+            "99901002",
+            "99901003",
+            "99901004"
+          ]
+        },
+        {
+          "name": "角色管理",
+          "count": 0,
+          "type": "rolemange",
+          "path": "/sysmgr/role",
+          "sameMenuPaths": [
+            "/sysmgr/role/addroles",
+            "/sysmgr/role/roledetails",
+            "/sysmgr/role/roleinfoedit"
+          ],
+          "selected": false,
+          "authCodeList": [
+            "99901005",
+            "99901006",
+            "99901007",
+            "99901008"
+          ]
+        }
+      ]
+    }
+  ]
+}

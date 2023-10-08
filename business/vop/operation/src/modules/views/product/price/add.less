@@ -1,0 +1,87 @@
+.addPrice {
+    min-height: 100vh;
+    width: 100%;
+    .addruleDefineContext {
+        margin: 5px 0;
+
+        .addRuleDefineLine {
+            display: flex;
+
+            .textStyle {
+                width: 450px;
+                height: 32px;
+                line-height: 32px;
+            }
+
+            .addRuleConditionTitle {
+                height: 40px;
+                line-height: 40px;
+                margin: 0 8px 0 24px;
+
+                .addRuleConditionTitle_img {
+                    color: #FB6041;
+                }
+            }
+
+            .ruleNameInput {
+                width: 400px;
+            }
+        }
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding:16px 24px 32px;
+        margin-bottom: 0;
+        &_rule {
+            padding-top: 14px;
+        }
+        &_sellerPrice{
+            margin: 15px 30px;
+        }
+
+        &_footer {
+            padding:40px 0 40px 0;
+            width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+            .footerBtn{
+                padding: 0;
+                width: 144px;
+                height: 48px;
+                border-radius: 8px;
+            }
+            .saveBtn{
+                background-color: #478aee;
+                border-color: #478aee;
+                &:hover,
+                &:focus{
+                    opacity: .7;
+                }
+            }
+            .el-button--primary.previewBtn {
+                background-color: transparent;
+                color: #478aee;
+                border-color: #478aee;
+                &:hover,
+                &:focus{
+                   background-color: #DAEEFF  !important;
+                   color: #478aee  !important;
+                }
+            }
+            .cancelBtn{
+                background-color: #C2C2C2;
+                color: #FFFFFF;
+                &:hover,
+                &:focus{
+                   background-color: #478AEE !important;
+                   border-color: transparent !important;
+                   color: #FFFFFF !important;
+                   opacity: .8;
+                   border-color: #478aee !important;
+                }
+            }
+        }
+    }
+}

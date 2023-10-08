@@ -1,0 +1,122 @@
+.finance {
+    height: 100%;
+    font-size: 14px;
+    min-width: 1280px;
+    background-color: #F4F4F4;
+    overflow: hidden;
+}
+.header{
+    height: 48px;
+}
+.finance_box {
+    // min-width: 1280px;
+    // max-width: 1280px;
+    // border-radius: 8px;
+    // margin: 0 auto 24px;
+    // overflow: hidden;
+    button {
+        font-family: 'Microsoft Yahei', '微软雅黑', 'Hiragino Sans GB', '宋体', Tahoma, Arial, Helvetica, STHeiti, sans-serif;
+    }
+    .el-button [class*=el-icon-]+span{
+        margin: 0;
+    }
+    .el-table{
+        border-radius: 4px;
+        .el-table__body{
+            tr.el-table__row--striped{
+                td{
+                    background-color: #F8F8F8;
+                }
+            }
+        }
+        .el-table__body-wrapper {
+            td{
+                padding:4px 0;
+                &:first-child{
+                    .cell{
+                        padding-left: 32px;
+                    }
+                }
+            }
+        }
+    }
+    .el-table__header-wrapper{
+        height: 36px;
+        tr{
+            th{
+                padding: 0 !important;
+                height: 36px;
+                &:first-child{
+                    .cell{
+                        padding-left: 32px;
+                    }
+                }
+                .cell{
+                    line-height: 100%;
+                }
+                &:last-child{
+                    padding: 0 !important;
+                }
+                .el-table__column-filter-trigger{
+                    line-height: 36px;
+                }
+            }
+        } 
+    }
+    
+}
+.el-select-dropdown__item{
+    color: #333 !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.el-input-group__append {
+    color: #fff;
+    background-color: #478aee !important;
+    border: 1px solid #478aee !important;
+}
+.el-tooltip__popper{
+    max-width: 90vw;
+}
+.el-table{
+    color: #333 !important;
+    // &-filter{
+    //     .el-table-filter__list-item{
+    //         &.is-active{
+    //             background-color: #478aee;
+    //         }
+    //     }
+    // }
+    thead{
+        color: #666 !important;
+    }
+    tbody{
+        td{
+            border-bottom: 0 !important;
+            height: 48px;
+        }
+    }
+    &.el-table--fit{
+        border-right: 1px solid #ebeef5;
+    }
+}
+.el-pagination{
+    font-weight: 400 !important;
+    &.is-background{
+        .el-pager{
+           li{
+               &:not(.disabled){
+                   &.active{
+                        background-color: #478aee !important;
+                   }
+               }
+           } 
+        }
+    } 
+    .el-pagination__total{
+        color: #333;
+    }
+}

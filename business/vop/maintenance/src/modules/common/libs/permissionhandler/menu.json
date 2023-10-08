@@ -1,0 +1,30 @@
+{
+    "menu": [
+        {
+            "hasChild": false,
+            "parentType": "",
+            "level": 0,
+            "openStatus": false,
+            "name": "渠道配置",
+            "count": 0,
+            "type": "service_mgr",
+            "path": "/channellist",
+            "iconName": "menu_icon_channel.png",
+            "selected": false,
+            "authCode": "49007001"
+        },
+        {
+            "hasChild": false,
+            "parentType": "",
+            "level": 0,
+            "openStatus": false,
+            "name": "权限配置",
+            "count": 0,
+            "type": "service_mgr",
+            "path": "/powermange",
+            "iconName": "menu_icon_channel.png",
+            "selected": false,
+            "authCode": "99902001"
+        }
+    ]
+}
