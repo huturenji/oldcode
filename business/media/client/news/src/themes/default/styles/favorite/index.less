@@ -1,0 +1,95 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.favorite-wrap{
+
+    //列表底部新增横线
+    /deep/ .multiDel{
+        position: relative;
+        overflow: hidden;
+    }
+    /deep/ .newsItemWrap{
+        background: #fff;
+        &:not(:last-of-type){
+            .newItemWrap{
+                .newItemContentOutWrap{
+                    .bbpx();
+                }
+            }
+        }
+    }
+    .operation{
+        width: 100%;
+        padding: 0 0.3rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: .68rem;
+        background-color: #fff;
+        .bbpx();
+        span{
+            cursor: pointer;
+            font-size: .28rem;
+        }
+    }
+
+    .list-wrap{
+        overflow: hidden;
+        position: relative;
+        .news-list{
+            height: calc(~ '100vh - 0.68rem');
+            &.showCheck{
+                height: calc(~ '100vh - 1.28rem - 0.68rem');
+            }
+            .listTemplateWrap{
+                height: 100%;
+            }
+        }
+        .emptyButWrap{
+            position: absolute;
+            top: 39%;
+            left: 0;
+            right: 0;
+            margin-top: 2.66rem;
+            text-align: center;
+            .emptyBut{
+                display: inline-block;
+                font-size: 0.28rem;
+                line-height: 0.8rem;
+                padding: 0 0.78rem;
+                border-radius: 0.8rem;
+                color: @sub-background-color;
+                background: @theme-color;
+            }
+            
+        }
+        .floatBut{
+            position: absolute;
+            z-index: 1;
+            right:0.4rem;
+            bottom:1.28rem;
+            // left: 80%;
+            // top: 73.07%;
+            width: 1.12rem;
+            height: 1.12rem;
+            box-shadow: 0 0.06rem 0.24rem 0 rgba(132,132,132,0.24);
+            background: url('~themes/default/img/personal/btn_shangyun_gengduozixun.png') no-repeat center center;
+            background-size: 100%;
+            font-size: 0.24rem;
+            border-radius: 50%;
+            padding: 0;
+            transition: all 0.3s;
+            color: @theme-color;
+            text-align: center;
+            user-select: none;
+            &.hide{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+@media screen and (min-width: @screen-sm) {
+    .floatBut{
+       right: 0.6rem!important;
+    }
+}
+    

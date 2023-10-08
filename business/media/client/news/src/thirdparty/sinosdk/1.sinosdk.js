@@ -1,0 +1,1 @@
+(window.webpackJsonpsinosdk=window.webpackJsonpsinosdk||[]).push([[1],{191:function(n,s,u){"use strict";u.r(s);var o=u(9);s.default={BRIDGE_CODE:"5",LAUNCH_PRIORITY:[{type:"url",func:o.a.LAUNCH_FUNC.APP},{type:"url",func:o.a.LAUNCH_FUNC.H5}]}}}]);

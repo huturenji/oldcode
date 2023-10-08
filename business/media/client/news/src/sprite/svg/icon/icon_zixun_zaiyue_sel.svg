@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <!-- <title>icon_zixun_zaiyue_sel</title> -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="65.4320988%" y1="100%" x2="34.5679012%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#262DD9" offset="0%"></stop>
+            <stop stop-color="#A2A9F7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="57.5617284%" y1="100%" x2="42.4382716%" y2="0%" id="linearGradient-2">
+            <stop stop-color="#262DD9" offset="0%"></stop>
+            <stop stop-color="#A2A9F7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="bin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8" transform="translate(-189.000000, -324.000000)">
+            <g id="icon_zixun_zaiyue_sel" transform="translate(189.000000, 324.000000)">
+                <rect id="矩形" x="0" y="0" width="44" height="44"></rect>
+                <g id="icon_zaiyue">
+                    <path d="M23.5555556,44 C21.3464166,44 19.5555556,42.209139 19.5555556,40 L19.5555556,40 L19.5555556,4 C19.5555556,1.790861 21.3464166,4.05812251e-16 23.5555556,0 L23.5555556,0 L40,0 C42.209139,-4.05812251e-16 44,1.790861 44,4 L44,4 L44,40 C44,42.209139 42.209139,44 40,44 L40,44 Z" id="形状结合" fill="url(#linearGradient-1)"></path>
+                    <rect id="矩形" fill="#FFFFFF" x="25" y="10" width="2" height="8" rx="1"></rect>
+                    <rect id="矩形备份" fill="#FFFFFF" x="37" y="10" width="2" height="8" rx="1"></rect>
+                    <path d="M9.57956742,0.415271113 L13.0962877,0.792062576 C15.2928549,1.02740905 16.8827383,2.99886456 16.6473919,5.19543169 C16.6460558,5.20790161 16.6446611,5.22036518 16.6432078,5.23282199 L12.5766993,40.0886091 C12.3235295,42.2586364 10.3760422,43.8241014 8.20232074,43.6049026 L4.10946181,43.1921773 C1.91146999,42.9705311 0.309325329,41.0090268 0.530971563,38.811035 C0.535259279,38.7685152 0.540228135,38.7260668 0.545876217,38.6837062 L5.18852332,3.86385285 C5.47517574,1.71395974 7.42299133,0.184209388 9.57956742,0.415271113 Z" id="路径" fill="url(#linearGradient-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

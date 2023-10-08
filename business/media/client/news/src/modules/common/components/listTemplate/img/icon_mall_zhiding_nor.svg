@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/icon/mall/zhiding_nor</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="20" cy="20" r="20"></circle>
+        <filter x="-17.5%" y="-12.5%" width="135.0%" height="135.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.823879076   0 0 0 0 0.823879076   0 0 0 0 0.823879076  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="h5-svg/icon/mall/zhiding_nor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="h5-svg/icon/mall/zhiding" transform="translate(5.000000, 2.000000)">
+            <g id="椭圆形" opacity="0.8">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <circle stroke="#C2C2C2" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" cx="20" cy="20" r="19.5"></circle>
+            </g>
+            <path d="M28,13.25 C28.4142136,13.25 28.75,13.5857864 28.75,14 C28.75,14.3796958 28.4678461,14.693491 28.1017706,14.7431534 L28,14.75 L21.684,14.75 L25.0574706,18.4982765 L25.1255672,18.5860953 C25.3276887,18.8907512 25.2816167,19.3055667 25.0017235,19.5574706 C24.693841,19.8345649 24.2196237,19.8096061 23.9425294,19.5017235 L23.9425294,19.5017235 L20.75,15.954 L20.75,29 C20.75,29.4142136 20.4142136,29.75 20,29.75 C19.6203042,29.75 19.306509,29.4678461 19.2568466,29.1017706 L19.25,29 L19.25,15.953 L16.0574706,19.5017235 C15.7803763,19.8096061 15.306159,19.8345649 14.9982765,19.5574706 C14.7183833,19.3055667 14.6723113,18.8907512 14.8744328,18.5860953 L14.9425294,18.4982765 L18.315,14.75 L12.5,14.75 C12.0857864,14.75 11.75,14.4142136 11.75,14 C11.75,13.6203042 12.0321539,13.306509 12.3982294,13.2568466 L12.5,13.25 L28,13.25 Z" id="形状结合" fill="#333333" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

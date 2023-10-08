@@ -1,0 +1,48 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.favorite-wrap{
+
+    //列表底部新增横线
+    /deep/ .multiDel{
+        position: relative;
+        overflow: hidden;
+    }
+    /deep/ .newsItemWrap{
+        background: #fff;
+        &:not(:last-of-type){
+            .newItemWrap{
+                .newItemContentOutWrap{
+                    .bbpx();
+                }
+            }
+        }
+    }
+    .operation{
+        width: 100%;
+        padding: 0 0.3rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: .68rem;
+        background-color: #fff;
+        .bbpx();
+        span{
+            cursor: pointer;
+            font-size: .28rem;
+        }
+    }
+    .list-wrap{
+        overflow: hidden;
+        .news-list{
+            height: calc(~ '100vh - 0.68rem');
+            &.showCheck{
+                height: calc(~ '100vh - 1.28rem - 0.68rem');
+            }
+            .listTemplateWrap{
+                height: 100%;
+            }
+        }
+       
+    }
+}
+    

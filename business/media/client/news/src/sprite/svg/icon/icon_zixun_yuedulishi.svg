@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <!-- <title>h5 svg/icon/zixun/yuedulishi</title> -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="83.5266525%" y1="83.3104418%" x2="20.4691906%" y2="15.0575889%" id="linearGradient-1">
+            <stop stop-color="#676D89" offset="0%"></stop>
+            <stop stop-color="#CDD1E2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="h5-svg/icon/zixun/yuedulishi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="点赞" transform="translate(0.533333, -0.466667)" fill="url(#linearGradient-1)">
+            <g id="icon/msg/record" transform="translate(0.466667, 0.466667)">
+                <g id="透明度层" transform="translate(0.000000, 1.000000)">
+                    <path d="M10,0 C15.522653,0 20,4.4771691 20,10 C20,15.5228754 15.522653,20 10,20 C4.47734703,20 0,15.5228754 0,10 C0,4.4771691 4.47736928,0 10,0 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+        <path d="M11.8233466,5.1729322 C12.2073072,5.1729322 12.5188224,5.47996146 12.5188224,5.87023848 L12.5188224,11.8215161 C12.5188224,12.3574512 12.2200506,12.7506734 11.5924236,12.7506734 L7.49033411,12.7506734 C7.10683757,12.7506734 6.79576065,12.4418653 6.79576065,12.0552234 C6.79576065,11.671005 7.10910633,11.3597218 7.49033411,11.3597218 L11.1278708,11.3597218 L11.1278708,5.87023848 C11.1278708,5.4851435 11.4366532,5.1729322 11.8233466,5.1729322 Z" id="路径" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

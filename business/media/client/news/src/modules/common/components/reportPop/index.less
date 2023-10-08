@@ -1,0 +1,64 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.reportPopWrap{
+    position: relative;
+    height: 100%;
+    background: @background-color;
+    .reportContect{
+        .tips{
+            padding: 0 0.3rem;
+            font-size: 0.26rem;
+            color: @third-text-color;
+            line-height: 0.68rem;
+        }
+    }
+    .reasonListWrap{
+        background: @sub-background-color;
+        .listWrap{
+            .lineWrap{
+                .no-wrap();
+                padding: 0.34rem 0.3rem 0.34rem 0.86rem;
+                font-size: 0.32rem;
+                line-height: 0.42rem;
+                color: @text-color;
+                background: url(./img/checkbox_nor@2x.png) no-repeat 0.3rem center;
+                background-size: 0.34rem 0.34rem;
+                &.active{
+                    background: url(./img/checkbox_nor_active@2x.png) no-repeat 0.3rem center;
+                    background-size: 0.34rem 0.34rem;
+                }
+                &:not(:last-of-type){
+                    .bbpx();
+                }
+            }
+            .inputWrap{
+                padding: 0.28rem 0.3rem;
+                .textarea{
+                    font-size: 0.3rem;
+                    height: 2.4rem;
+                }
+            }
+        }
+    }
+    .actionWrap{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.4rem 0 0.4rem;
+        .activeBut{
+            margin: 0.3rem;
+            line-height: 0.88rem;
+            background: @theme-color;
+            border-radius: 0.2rem;
+            font-size: 0.32rem;
+            text-align: center;
+            color: @sub-background-color;
+            &.disable{
+                opacity: .4;
+            }
+        }
+    }
+
+    
+}

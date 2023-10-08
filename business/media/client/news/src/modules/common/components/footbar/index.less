@@ -1,0 +1,133 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.footbarWrap{
+    .flex-box();
+    .justify-content(space-between);
+    .align-items(center);
+    .btnItem{
+        cursor:default;
+        .flex(1);
+        .flex-box();
+        .align-items(center);
+        color: @text-color;
+        min-height: 0.36rem;
+        position: relative;
+        .icon_zixun_dianzan,.icon_zixun_caiyicai,.icon_zixun_shoucang,.icon_zixun_forward{
+            fill:@text-color;
+        }
+        .icon_zixun_more{
+            fill:@secondary-text-color;
+        }
+        font-size: 0;
+        .itemWrap{
+            height: .32rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .foorbarIcon{
+                margin-right: 0.08rem;
+                &.animate{//加入收藏的动画
+                    animation: mymove 0.2s ease-in-out 0s 1;
+                    -webkit-animation: mymove 0.2s ease-in-out 0s 1; /*Safari and Chrome*/
+                }
+            }
+            .text{
+                line-height: 0.36rem;
+                font-size: 0.26rem;
+            }
+            .textDetail{
+                margin-right: 0.08rem;
+                line-height: 0.36rem;
+                font-size: 0.26rem;
+            }
+            .tipsInfoWrap{
+                position: absolute;
+                bottom: 0.6rem;
+                left: 0.5rem;
+                transform: translateX(-50%);
+                width: 5.5rem;
+                z-index: 1;
+                text-align: center;
+                .tipsInfo{
+                    display: inline-block;
+                    cursor: pointer;
+                    background: rgba(0,0,0,1);
+                    padding: 0 0.2rem;
+                    border-radius: 0.08rem;
+                    .textinfo{
+                        line-height: 0.5rem;
+                        font-size: 0.26rem;
+                        color: #fff;
+                    }
+                    .bottomBut{
+                        line-height: 0.5rem;
+                        font-size: 0.26rem;
+                        color: @warning-color-light;
+                    }
+                    .arrow{
+                        position: absolute;
+                        transform: rotate(45deg);
+                        bottom: -0.1rem;
+                        left: 50%;
+                        width: 0.2rem;
+                        height: 0.2rem;
+                        background: rgba(0, 0, 0, 1)
+                    }
+                }
+                &.list{
+                    left: 10%;
+    
+                }
+            }
+        }
+        
+        &.likeWrap{
+            .text,.textDetail{
+                &.colorActive{
+                    color: @warning-color-light;
+                }
+            }
+        }
+        &.wowWrap{
+            .text,.textDetail{
+                &.colorActive{
+                    color: @theme-color;
+                }
+            }
+        }
+        &:last-of-type{
+            .foorbarIcon{
+                margin-right: 0;
+            }
+        }
+        &.moreWrap{
+            margin-right: 0.08rem;
+            .flex(initial)
+        }
+
+    }
+
+}
+@keyframes mymove{
+    0%{
+        transform: scale(0);  /*开始为原始大小*/
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+/*Safari and Chrome*/
+@-webkit-keyframes mymove {
+    0%{
+        transform: scale(0);  /*开始为原始大小*/
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

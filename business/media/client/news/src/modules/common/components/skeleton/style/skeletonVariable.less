@@ -1,0 +1,29 @@
+@breath-in-bg: #EAEFF4;
+@breath-out-bg: #F6F9FD;
+@breath-in-btn: #FFADAD;
+@breath-out-btn: #FFADAD;
+
+@line-height: .28rem;
+@line-border-radius: .06rem;
+
+@btn-height: .28rem;
+@btn-border-radius: .22rem;
+
+
+.animated-background(@background) {
+    animation-name: placeHolderShimmer;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    background: @background;
+    position: relative;
+}
+@keyframes placeHolderShimmer {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.14;
+    }
+}

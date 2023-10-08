@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <!-- <title>icon_tpan_delect</title> -->
+    <desc>Created with Sketch.</desc>
+    <g id="icon_tpan_delect" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon_tpan_download" stroke="#979797">
+            <g id="编组" transform="translate(3.500000, 3.500000)">
+                <path d="M5.40945049,3.29919966 L5.40945049,1.07692308 C5.40945049,0.482154885 5.89160538,9.97435564e-16 6.48637357,1.33226763e-15 L10.4865691,1.33226763e-15 C11.0813373,1.22301049e-15 11.5634922,0.482154885 11.5634922,1.07692308 L11.5634922,3.29919966 L11.5634922,3.29919966" id="路径-39" stroke-width="1.2"></path>
+                <line x1="7.10542736e-15" y1="3.27617305" x2="16.9729426" y2="3.27617305" id="路径-37" stroke-width="1.3"></line>
+                <path d="M1.35758259,3.71541789 L1.35758259,15.4096245 C1.35758259,16.0043927 1.83973747,16.4865476 2.43450566,16.4865476 L14.538437,16.4865476 C15.1332052,16.4865476 15.6153601,16.0043927 15.6153601,15.4096245 L15.6153601,3.67518686 L15.6153601,3.67518686" id="路径-38" stroke-width="1.2"></path>
+                <line x1="10.9157851" y1="7.19245801" x2="10.9157851" y2="12.2083567" id="路径-40-copy" stroke-width="1.2"></line>
+                <line x1="6.05715757" y1="7.19245801" x2="6.05715757" y2="12.2083567" id="路径-40" stroke-width="1.2"></line>
+            </g>
+        </g>
+    </g>
+</svg>

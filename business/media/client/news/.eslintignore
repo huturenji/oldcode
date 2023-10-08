@@ -1,0 +1,12 @@
+/build/
+/dist/
+/newsBuild/
+/node_modules
+/tar
+
+/.gitignore
+/src/thirdparty
+/src/sprite/
+/src/modules/mock/
+/src/modules/index.js
+/src/modules/common/components/videoPlayer/video.js

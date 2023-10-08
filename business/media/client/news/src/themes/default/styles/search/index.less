@@ -1,0 +1,30 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+
+.search-page{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    .search-bar{
+        height: .88rem;
+        padding: .1rem .3rem;
+        display: flex;
+        align-items: center;
+        flex: none;
+    }
+    .hotSearch{
+        margin-top: .2rem;
+        padding-top: .4rem;
+    }
+    .shorcut{
+        flex: 1;
+        div:nth-child(2){
+            .btpx(2px, @border-color-base, .3rem, .3rem);
+        }
+    }
+    .search-list{
+        flex: 1;
+        overflow: hidden;
+        height: calc(~'100% - .88rem');
+    }
+}

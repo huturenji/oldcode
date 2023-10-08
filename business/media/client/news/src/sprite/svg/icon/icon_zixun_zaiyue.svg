@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <!-- <title>icon_zixun_zaiyue_sel</title> -->
+    <desc>Created with Sketch.</desc>
+    <g id="bin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8" transform="translate(-249.000000, -324.000000)">
+            <g id="icon_zixun_zaiyue" transform="translate(249.000000, 324.000000)">
+                <rect id="矩形" x="0" y="0" width="44" height="44"></rect>
+                <g id="icon_zaiyue" transform="translate(2.000000, 2.000000)">
+                    <path d="M22,40 C19.790861,40 18,38.209139 18,36 L18,36 L18,4 C18,1.790861 19.790861,4.05812251e-16 22,0 L22,0 L36,0 C38.209139,-4.05812251e-16 40,1.790861 40,4 L40,4 L40,36 C40,38.209139 38.209139,40 36,40 L36,40 Z" id="形状结合" stroke="#222222" stroke-width="2" stroke-linejoin="round"></path>
+                    <rect id="矩形" fill="#222222" x="23" y="9" width="2" height="8" rx="1"></rect>
+                    <rect id="矩形备份" fill="#222222" x="33" y="9" width="2" height="8" rx="1"></rect>
+                    <path d="M9.18456197,0.40116965 L11.9588251,0.690155395 C14.1560754,0.919035636 15.7517547,2.88580305 15.5228744,5.08305337 C15.5207144,5.10379005 15.5183922,5.12450954 15.5159081,5.14520991 L11.7996821,36.1137605 C11.5405038,38.2735794 9.60282359,39.8303422 7.43788903,39.6180937 L4.13747936,39.2945241 C1.93888121,39.0789753 0.331302118,37.1219225 0.546850956,34.9233243 C0.551868328,34.8721471 0.557872107,34.8210714 0.564858944,34.7701258 L4.80723153,3.83615902 C5.1005146,1.69763661 7.03763878,0.177531818 9.18456197,0.40116965 Z" id="路径" stroke="#222222" stroke-width="2" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

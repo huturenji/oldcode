@@ -1,0 +1,169 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.indexWrap{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+
+    nav{
+        position: relative;
+        height: .88rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .1rem .3rem .1rem .3rem;
+        background: #fff;
+        svg{
+            cursor: pointer;
+            flex: none;
+        }
+        .mask{
+            position: absolute;
+            top: 0;
+            left: 0.88rem;
+            right: .86rem;
+            bottom: 0;
+            width: calc(~'100% - 2.68rem');
+            height: 100%;
+            background: transparent;
+            z-index: 99;
+            cursor: pointer;
+        }
+        .search-bar{
+            // background-color: #F2F5F8;
+            margin-right: .2rem; 
+            height: 100%;
+            display: flex;
+            flex: 1;
+            align-items: center;
+            /deep/ input::placeholder{
+                text-align: center;
+            }
+            /deep/ .search-box .icon.icon_search_default{
+                left: 50%;
+                margin-left: -.7rem;
+            }
+        }
+        .reading_room{
+            width: 1.5rem;
+            height: 0.6rem;
+            background: url('~themes/default/img/index/readingroom.png') no-repeat center center;
+            background-size: 100%;
+        }
+    }
+
+    .news-tab-container{
+        .bbpx();
+        position: relative;
+        &:after{
+            z-index: 99;
+        }
+        .edit-channel{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 99;
+            width: 1.5rem;
+            height: .88rem;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background-image: linear-gradient(90deg,rgba(255,255,255,.2) 0,#fff 30%);
+
+            .btn_nav_more{
+                margin-right: .3rem;
+                fill: #081228;
+                cursor: pointer;
+                height: 100% !important;
+            }
+        }
+        .news-tab{
+            position: relative;
+            width: 100%;
+            /deep/ .tab-content{
+                width: auto;
+                margin-right: .8rem;
+                padding-bottom: .2rem;/*遮盖移动端滚动条 */
+                .tab-item{
+                    &:last-of-type{
+                        margin-right: .3rem;
+                    }
+                }
+            }
+            .placeholder{
+                width: .6rem;
+                flex: none;
+                height: .88rem;
+            }
+        }
+    }
+    .swiper-wrap{
+        width: 100%;
+      
+        height: calc(~'(100vh - 1.76rem)');
+        .flex(1);
+        display: flex;
+        flex-direction: column;
+        /deep/ .swiper-container{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            .swiper-pagination{
+                display: none;
+            }
+        }
+        .tab-swiper{
+            height: 100%;
+        }
+    }
+
+    /deep/ .vux-slider{
+        .flex(1);
+        display: flex;
+        flex-direction: column;
+        .vux-swiper{
+            flex: 1;
+        }
+        .tab-swiper{
+            height: 100%;
+        }
+    }
+}
+.empty-page{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+}
+.radiusTop.vux-popup-dialog{
+    border-radius: 0.2rem 0.2rem 0 0;
+}
+.ignorePopupDialog.vux-popup-dialog{
+    transition-duration: 0ms;
+}
+
+@media screen and (min-width: @screen-sm) {
+    /deep/ .tab-container{
+        height: auto !important;
+        .tab-content{
+            padding-bottom: 0 !important;
+        }
+    }
+    .indexWrap nav{
+        padding: 0.1rem 0.3rem;
+    }
+    /deep/.news-tab-container{
+        .news-tab{
+            .tab-content::-webkit-scrollbar {
+                height: 0px;
+            }
+        }
+    }
+}

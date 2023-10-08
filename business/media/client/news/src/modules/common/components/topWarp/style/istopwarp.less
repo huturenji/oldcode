@@ -1,0 +1,62 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+
+.topwarp{
+    width: 100%;
+    padding: .32rem 0.3rem 0 .3rem;
+    position: relative;
+    overflow: hidden;
+    background: @sub-background-color;
+    .istopwarp{
+        height: 100%;
+        .swiper-wrapper{
+            display: flex;
+            flex-direction: column;
+            .column{
+                position: relative;
+                height: 1.22rem;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                padding-bottom: 0.3rem;
+                h4{
+                    width: 100%;
+                    height: 0.48rem;
+                    font-size: .34rem;
+                    font-weight: 700;
+                    text-align: left;
+                    color: @text-color;
+                    line-height: .48rem;
+                }
+                .texts{
+                    margin-top: .1rem;
+                    display: flex;
+                    justify-content: left;
+                    p{
+                        min-width: 0.96rem;
+                        font-size: 0.24rem;
+                        font-weight: 500;
+                        line-height: 0.34rem;
+                        color: #F30300;
+                        margin-right: .2rem;
+                    }
+                    span{
+                        margin-right: .2rem;
+                        font-size: 0.24rem;
+                        font-weight: 400;
+                        line-height: 0.34rem;
+                        color: @third-text-color;
+                    }
+                }
+            }
+        }
+    }
+    .borderBottom{
+        .bbpx();
+    }
+}
+.nowarp{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,85 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.searchIndustry-wrap{
+    background-color: #fff;
+    .empty-page{
+        margin-top: 1rem;
+    }
+    .search-content{
+        padding: 0.2rem 0.3rem .3rem;
+        height: 1.08rem;
+        /deep/ .search-bar-container{
+            height: .68rem;
+            align-items: center;
+        }
+    }
+
+    .search-result{
+        padding-left: .3rem;
+        width: 100%;
+        max-height: calc(~'(100vh - 1.08rem)');
+        overflow-x: hidden;
+        overflow-y: auto;
+        .content{
+            width: 100%;
+            .industry{
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding-right: .3rem;
+                height: 1.08rem;
+                line-height: 1.08rem;
+                font-size: .3rem;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-top: 1px solid @border-color-base;
+                }
+                /deep/ .highlight{
+                    color: @theme-color;
+                }
+            }
+            ul{
+                li.resource{
+                    cursor: pointer;
+                    width: 100%;
+                    position: relative;
+                    height: 1.08rem;
+                    line-height: 1.08rem;
+                    display: flex;
+                    align-items: center;
+                    font-size: .3rem;
+                    color: @text-color;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: 0.88rem;
+                        right: 0;
+                        bottom: 0;
+                        border-top: 1px solid @border-color-base;
+                    }
+                    &:active{
+                        color: @third-text-color;
+                    }
+
+                    img{
+                        width: .72rem;
+                        height: .72rem;
+                        display: block;
+                    }
+                    span{
+                       
+                    }
+
+                }
+            }
+        }
+    }
+    
+}
+    

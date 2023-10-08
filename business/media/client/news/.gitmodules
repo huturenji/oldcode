@@ -1,0 +1,3 @@
+[submodule "build"]
+	path = build
+	url = yanggu:product/bplus/platform/frontend/build.git

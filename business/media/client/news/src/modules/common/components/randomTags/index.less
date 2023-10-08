@@ -1,0 +1,197 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.randomTagsWrap{
+    padding: 0.36rem 0 0.3rem 0;
+    position: relative;
+    height: 100%;
+    .randomTagsOut{
+        .randomTagsShow{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 8rem;
+            .randomTagsContent{
+                .flex-box(); 
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                width: 200%;
+                transition: 0.5s;
+                .listWrap{
+                    .flex(1);
+                    height: 100%;
+                    .stepWrap{
+                        .flex-box(); 
+                        .align-items(center);
+                        padding: 0 0.3rem;
+                        .titleStep{
+                            .flex(1);
+                            font-size: 0.36rem;
+                            color: @text-color;
+                            line-height:0.84rem;
+                            font-weight: bold;
+                            span{
+                                font-size: 0.6rem;
+                            }
+                        }
+                        .topBut{
+                            font-size: 0.3rem;
+                            color: @theme-color;
+                            line-height:0.36rem;
+                        }
+                    }
+                    .titleTop{
+                        .flex-box(); 
+                        .align-items(center);
+                        padding: 0 0.3rem;
+                        .title{
+                            .flex(1);
+                            font-size: 0.36rem;
+                            color: @text-color;
+                            line-height:0.5rem;
+                            font-weight: bold;
+
+                            .count{
+                                margin-left: .2rem;
+                                &:before{
+                                    content: '[';
+                                    margin-right: .1rem;
+                                }
+                                &:after{
+                                    content: ']';
+                                    margin-left: .1rem;
+                                }
+                            }
+                        }
+                    }
+                    .tips{
+                        margin-bottom: 0.6rem;
+                        padding: 0 0.3rem;
+                        font-size:0.26rem;
+                        line-height:0.36rem;
+                        color: @third-text-color;
+                    }
+                    .leftTagList,.rightTagList{
+                        position: relative;
+                        padding: 0 0.3rem;
+                        height: 5.5rem;
+                        overflow-y: auto;
+                        .tagItemWrap{
+                            margin: 0 0.1rem 0.32rem;
+                            display: inline-block;
+                            vertical-align: middle;
+                            .tagItem{
+                                cursor: pointer;
+                                position: relative;
+                                padding: 0.2rem 0.64rem 0.2rem 0.24rem;
+                                background: rgba(234,239,244,0.69);
+                                border-radius:0.16rem;
+                                min-width: 1.6rem;
+                                max-width: 2.56rem;
+                                transition: all 0.3s;
+                                .text{
+                                    .no-wrap();
+                                    font-size: 0.28rem;
+                                    color: @text-color;
+                                    line-height:0.4rem;
+                                    text-align: left;
+                                }
+                                .checkBox{
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0.24rem;
+                                    width: 0.24rem;
+                                    height: 0.24rem;
+                                    margin-top: -0.12rem;
+                                    fill: @third-text-color;
+                                }
+                                &.active{
+                                    background:linear-gradient(334deg,rgba(38,45,217,1) 0%,rgba(98,0,200,1) 100%);
+                                    box-shadow:0 0.04rem 0.3rem -0.04rem rgba(0,70,199,0.18);
+                                    .text{
+                                        color: @sub-background-color;
+                                    }
+                                    .checkBox{
+                                        fill:@sub-background-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pointWrap{
+            padding: 0 0.3rem;
+            text-align: center;
+            span{
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                background: @border-color-base;
+                border-radius: 8px;
+                margin-right: 0.2rem;
+                &.active{
+                    background:@placeholder-color;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        .changeWrap{
+            position: absolute;
+            bottom: 30vw;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 0.3rem;
+            .flex-box(); 
+            .justify-content();
+            span{
+                line-height: 0.4rem;
+                color: @theme-color;
+                font-size: 0.28rem;
+                .flex-box(); 
+                .align-items(center);
+                .refresh{
+                    fill:@theme-color;
+                }
+                &.disable{
+                    opacity: .4;
+                }
+            }
+        }
+        .actionWrap{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.4rem 0 0.4rem;
+            .activeBut{
+                margin: 0.3rem auto;
+                width: 5rem;
+                line-height: 0.88rem;
+                background: @theme-color;
+                border-radius: 0.2rem;
+                font-size: 0.32rem;
+                text-align: center;
+                color: @sub-background-color;
+                &.disable{
+                    opacity: .4;
+                }
+            }
+        }
+    }    
+
+}
+@media screen and (min-width: @screen-sm) {
+    .leftTagList .tagItemWrap{
+        .flex(0 0 25%);
+    }
+    .rightTagList .tagItemWrap{
+        .flex(0 0 33.33%);
+    }
+}

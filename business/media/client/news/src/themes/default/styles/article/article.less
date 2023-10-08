@@ -1,0 +1,109 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.articleWrap{
+    background: @sub-background-color;
+    .articleContentWrap{
+        padding: 0.3rem;
+        overflow-y: auto;
+        height: 100%;
+        .contentOutWrap{
+            color: @text-color;
+            padding-bottom: 1rem;
+            .title{
+                font-size: 0.4rem;
+                font-weight: bold;
+                line-height: 0.52rem;
+                margin-bottom: 0.32rem;
+            }
+            .authWrap{
+                margin-bottom: 0.4rem;
+                .authName{
+                    line-height: 0.4rem;
+                    font-size: 0.28rem;
+                    color: @text-color;
+
+                }
+                .publishTime{
+                    line-height: 0.34rem;
+                    font-size: 0.24rem;
+                    color: @placeholder-color;
+                }
+            }
+            .content{
+                font-size: 0.34rem;
+                line-height: 0.56rem;
+                text-align:justify;
+                &>*{
+                    margin-bottom: 0.36rem;
+                    max-width: 100%;
+                }
+                p{
+                    margin-bottom: 0.36rem;
+                }
+                img,video{
+                    height: auto!important;
+                    width: 100%;
+                    margin-bottom: 0.2rem;
+                    padding: 0.1rem 0;
+                    border-radius:0.12rem;
+                    max-width: 100% !important;
+                }
+                table,table tr th, table tr td { 
+                    width: auto;
+                    border:1px solid @placeholder-color;
+                }
+                table { 
+                    // width: 100%;
+                    text-align: center; 
+                    border-collapse: collapse;
+                    table-layout: fixed;
+                }  
+            }
+            .articleVideo{
+                width: 100%;
+                margin-bottom: 0.2rem;
+            }
+            .recommendWrap{
+                background: #fff;
+                margin: 1rem 0;
+                border: 1px solid @border-color-base;
+                /deep/ .newItemWrap{
+                    &:not(:last-of-type){
+                        .newItemContentOutWrap{
+                            .bbpx();
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footBarOutWrap{
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // padding: 0.18rem 0.6rem;
+        padding: 9px 30px 9px 10px;
+        z-index: 1;
+        background: @sub-background-color;
+        .btpx();
+        position: fixed;
+    }
+}
+.radiusTop.vux-popup-dialog{
+    border-radius: 0.2rem 0.2rem 0 0;
+}
+ol{padding-left: 20px;}
+ol li{
+    list-style-type:decimal;
+    // list-style-position:inside;
+    // p{display: inline-block;}
+}
+strong {
+    font-weight: 700;
+}
+em {
+    font-style: italic;
+}
+a{
+    color: blue;
+}

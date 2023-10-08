@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon_common_downarrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon_common_downarrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M11.568274,4.56827396 L34.715863,4.56827396 C35.977357,4.56827396 37,3.545631 37,2.28413698 C37,1.02264296 35.977357,-1.77635684e-15 34.715863,-1.77635684e-15 L9.28413698,-1.77635684e-15 C8.02264296,-1.77635684e-15 7,1.02264296 7,2.28413698 L7,27.715863 C7,28.977357 8.02264296,30 9.28413698,30 C10.545631,30 11.568274,28.977357 11.568274,27.715863 L11.568274,4.56827396 Z" id="Path" fill="#c2c2c2" fill-rule="nonzero" transform="translate(22.000000, 15.000000) rotate(-135.000000) translate(-22.000000, -15.000000) "></path>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.bootomSheetWrap{
+    background: @sub-background-color;
+    border-radius: 0.2rem 0.2rem 0 0;
+    .btnWrap{
+        padding: 0.2rem;
+        .flex-box();
+        .bbpx();
+        .btn{
+            .no-wrap();
+            .flex(0 0 20%);
+            padding-top: 1.34rem;
+            padding-bottom: 0.2rem;
+            background-repeat: no-repeat;
+            background-position: top 0.2rem center;
+            background-size: 0.9rem;
+            font-size: 0.24rem;
+            color: @third-text-color;
+            line-height:0.34rem;
+            text-align: center;
+            display: block;
+        }
+    }
+    .cancelBtn{
+        font-size: 0.32rem;
+        color: @text-color;
+        line-height:1.08rem;
+        text-align: center;
+    }
+}

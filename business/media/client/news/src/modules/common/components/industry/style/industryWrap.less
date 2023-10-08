@@ -1,0 +1,57 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.industryWrap{
+  width: 100%;
+  padding: .2rem .3rem;
+  background:linear-gradient(180deg,rgba(246,249,253,1) 0%,rgba(255,255,255,1) 100%);
+  overflow: hidden;
+  position: relative;
+
+  .content{
+    position: relative;
+    z-index: 100;
+    padding: .36rem .4rem 0.26rem .4rem;
+    border-radius: .2rem;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0.02rem .4rem 0px rgba(38,45,217,0.08);
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    /deep/ .industryItem{
+      width: 25%;
+      display: inline-block;
+    }
+
+    /deep/ .swiper-container{
+      padding-bottom: .3rem;
+      .swiper-pagination{
+        display: block;
+      }
+      .swiper-pagination-bullets{
+        bottom: -4px;
+        .swiper-pagination-bullet{
+          width: .12rem;
+          height: .12rem;
+          &.swiper-pagination-bullet-active{
+            background-color: #A4ACB2;
+          }
+        }
+      }
+    }
+  }
+
+  
+}
+
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+// .slide-fade-enter-active {
+//   transition: height .5s ease;
+// }
+
+// .slide-fade-enter, .slide-fade-leave-to {
+//   height: 0rem;
+// }
+// .slide-fade-enter-to, .slide-fade-leave {
+//   height: 2.6rem;
+// }

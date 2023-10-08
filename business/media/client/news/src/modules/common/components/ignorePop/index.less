@@ -1,0 +1,87 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.ignorePopWrap{
+    .ignorePopBg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+    }
+    .actionWrap{
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 0 0.3rem;
+        .dyjiantouup{
+            position: absolute;
+            top: -10px;
+            left: 60%;
+            width: 16px;
+            height: 10px;
+            background: url(img/icon_zixun_jiantou1.svg) no-repeat center;
+            background-size: contain;
+        }
+        .dyjiantoudown{
+            position: absolute;
+            bottom: -10px;
+            left: 60%;
+            width: 16px;
+            height: 10px;
+            background: url(img/icon_zixun_jiantou1.svg) no-repeat center;
+            background-size: contain;
+            transform:rotate(180deg);
+        }
+        .zjjiantouup{
+            position: absolute;
+            top: -10px;
+            left: 60%;
+            width: 12px;
+            height: 10px;
+            background: url(img/icon_zixun_jiantou2.svg) no-repeat center;
+            background-size: contain;
+
+        }
+        .zjjiantoudowm{
+            position: absolute;
+            bottom: -10px;
+            left: 60%;
+            width: 12px;
+            height: 10px;
+            background: url(img/icon_zixun_jiantou2.svg) no-repeat center;
+            background-size: contain;
+            transform:translateZ(10px) rotateX(180deg);
+        }
+        .buttonsWrap{
+            background: @sub-background-color;
+            border-radius: 0.2rem;
+            .actionBut{
+                &:not(:last-of-type){
+                    .bbpx();
+                    &:after{
+                        left: 0.42rem;
+                    }
+                }
+                font-size: 0.28rem;
+                color: @text-color;
+                padding: 0 0.3rem;
+                line-height: 1.08rem;
+                .flex-box();
+                .align-items(center);
+                color: @text-color;
+                cursor: pointer;
+                .icon_zixun_pingbi,.icon_zixun_jubao{
+                    fill:@text-color;
+                }
+                .icon_common_rightarrow{
+                    fill:@placeholder-color;
+                }
+                .butText{
+                    .flex(1);
+                    padding-left: 0.08rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.industryItem{
+  &.row{
+    height: 100%;
+    text-align: left;  
+    display: flex;
+    align-items: center;
+    p{
+      margin-top: 0;
+      margin-left: .16rem;
+      display: inline-block;
+      text-align: left; 
+      /deep/ .highlight{
+        color: @theme-color;
+      }
+    }
+  }
+  padding: 0 0.1rem;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  img{
+    width: .72rem;
+    height: .72rem;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  p{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .26rem;
+    margin-top: .16rem;
+    color: @secondary-text-color;
+    width: 100%;
+    /deep/ .highlight{
+      color: @theme-color;
+    }
+  }
+}

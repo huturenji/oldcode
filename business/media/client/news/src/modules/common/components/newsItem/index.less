@@ -1,0 +1,345 @@
+@import '~newsStyles/themes/default.less';
+@import '~newsStyles/mixins/mixinsStyle.less';
+.newItemWrap{
+    padding:0 0.3rem;
+    overflow: hidden;
+    .newItemContentWrap{
+        padding:0.3rem 0;
+        .flex-box();
+        .newItemContent{
+            position: relative;
+            font-size: 0;
+            .flex(1);
+            .newTitle{
+                .line-clamp(2);
+                font-size: 0.34rem;
+                color: @text-color;
+                line-height: 0.44rem;
+                max-height: 0.88rem;
+                &.noMinheight{
+                    height: auto;
+                    max-height: 0.88rem;
+                }
+                &.visited{
+                    color: @third-text-color;
+                }
+                &.detailType{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    height:1.46rem;
+                    background:linear-gradient(180deg,rgba(0,0,0,0.79) 0%,rgba(0,0,0,0) 100%);
+                    color: @sub-background-color;
+                    padding: 0.16rem 0.3rem 0;
+                    max-height: none;
+                }
+                /deep/ .highlight{
+                    color: @theme-color;
+                }
+            }
+            .top{font-weight: 500;}
+            .adMediaWrap{
+                margin-top: 0.24rem;
+                .adMedia{
+                    height: 3.88rem;
+                    background-position: center;
+                    background-size: 100% 100%;
+                    border-radius: 0.12rem;
+                    width: 100%;height: 100%;
+                    object-fit:cover;
+                }
+            }
+            .imgList{
+                .flex-box();
+                .justify-content(space-between);
+                margin-top: 0.24rem;
+                .imgItem{
+                    .flex(1);
+                    margin-right: 0.08rem;
+                    height: 1.52rem;
+                    // border-radius: 0.08rem;
+                    background: @imgBg-color url(img/icon_zixun_zhanweilogo.svg) no-repeat center;
+                    background-size: .6rem 0.6rem;
+                    &:first-child{
+                        .imgItemInWrap{border-radius: 0.16rem 0 0 0.16rem;}
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                        .imgItemInWrap{border-radius: 0 0.16rem 0.16rem 0;}
+                    }
+                    .imgItemInWrap{
+                        height: 100%;
+                        width: 100%;
+                        flex: 1;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        object-fit:cover;
+                    }
+                }
+            }
+            .videoPlayWrap{
+                margin-top: 0.24rem;
+                &.nomt{
+                    margin-top: 0;
+                }
+                .videoLazyImg{
+                    height: 3.88rem;
+                    background: @text-color;
+                }
+            }
+            .disable-video{
+                height: 3.88rem;
+                background: @text-color;
+                border-radius: .12rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                color: #fff;
+                margin-top: 0.24rem;
+                .icon{
+                    flex: none;
+                    height: .6rem;
+                    width: .6rem;
+                    background: url(img/icon_zixun_tishi_xian.svg) no-repeat center;
+                    background-size: contain;
+                    margin: 0 auto;
+                }
+                .text{
+                    font-size: .32rem;
+                    margin-top: .22rem;
+                }
+                .tips{
+                    color: rgba(255,255,255,.5);
+                    font-size: .26rem;
+                    margin-top: .08rem;
+                }
+            }
+            .infoBarWrap{
+                .flex-box();
+                .justify-content(space-between);
+                .align-items(center);
+                margin-top: 0.28rem;
+                .infoBar{
+                    .flex(1);
+                    .flex-box();
+                    font-size: 0.26rem;
+                    color: @third-text-color;
+                    line-height: 0.34rem;
+                    .top{
+                        color: #F30300;
+                        margin-right: 0.16rem;
+                    }
+                    .ad{
+                        margin-right: 0.16rem;
+                    }
+                    .auth{
+                        margin-right: 0.16rem;
+                        max-width: 1.7rem;
+                        .line-clamp(1);
+                        &.detail{
+                            width:1.7rem;
+                        }
+                        &.isGuest{
+                            max-width:4rem;
+                            overflow: hidden;
+                            text-overflow:ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                    .footbarOut{
+                        .flex(1);
+                    }
+                }
+                .rightAction{
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    .flex-box();
+                    .justify-content(center);
+                    .align-items(center);
+                    .btn_common_close{
+                        fill:@border-color-base;
+                    }
+                }
+            }
+        }
+        
+        
+        .rightImg{
+            width: 2.2rem;
+            margin-left: 0.3rem;
+            height: 1.52rem;
+            border-radius: 0.16rem;
+            background: @imgBg-color url(img/icon_zixun_zhanweilogo.svg) no-repeat center;
+            background-size: .6rem 0.6rem;
+            .rightImgInWrap{
+                border-radius: 0.16rem;
+                height: 100%;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                // object-fit:cover;
+            }
+        }
+    }
+    //阅览室专属样式
+    .newItemYlsContent{
+        .newItemContent{
+            .newTitle{
+                max-height: 1.32rem;
+                text-align: justify;
+            }
+            .imgList{
+                .imgItem{
+                    margin-right: 0.15rem;
+                }
+            }
+        }
+        .rightImg{
+            width: 2rem;
+            margin-left: 0.2rem;
+        }
+    }
+    .newItemTipsWrap{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.2rem;
+        color: @third-text-color;
+        font-size: 0.26rem;
+        
+        .infoBarWrap{
+            .flex-box();
+            .justify-content(space-between);
+            .align-items(center);
+            
+            .infoBar{
+                .flex(1);
+                .flex-box();
+                // font-size: 0.26rem;
+                
+                line-height: 0.34rem;
+                .top{
+                    color: @theme-color;
+                    margin-right: 0.16rem;
+                }
+                .ad{
+                    margin-right: 0.16rem;
+                }
+                .auth{
+                    margin-right: 0.16rem;
+                    max-width: 1.7rem;
+                    .line-clamp(1);
+                    &.detail{
+                        width:1.7rem;
+                    }
+                }
+                .footbarOut{
+                    .flex(1);
+                }
+            }       
+            .rightAction{
+                width: 0.3rem;
+                height: 0.3rem;
+                .flex-box();
+                .justify-content(center);
+                .align-items(center);
+                .btn_common_close{
+                    fill:@border-color-base;
+                }
+            }
+        }
+    }
+    //<--end-->
+    &.showWowinfo{
+        background: #fff;
+        margin: 0.1rem 0.3rem;
+        border-radius: 0.2rem;
+    }
+    .wowWrap{
+        padding: 0.2rem 0;
+        min-height: 0.76rem;
+        .btpx(@size:1px, @color: @border-color-base, @left: -0.3rem, @right: -0.3rem);
+        .floatItem{
+            font-size: 0.26rem;
+            line-height: 0.36rem;
+            vertical-align: middle;
+            float: right;
+            color: @third-text-color;
+            margin-left: 0.2rem;
+        }
+        .wowOnlineLineWrap{
+            height: 0.36rem;
+            overflow: hidden;
+            font-size: 0;
+            .align-items(center);
+            .flex-box();
+            .wowIcon{
+                width: 0.36rem;
+                margin-right: 0.1rem;
+            }
+            .namesWrap{
+                height: 0.36rem;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                line-height: 0.36rem;
+                color: @secondary-text-color;
+                font-size: 0.26rem;
+                max-width: 2.3rem;
+            }
+            .tipsLine{
+                line-height: 0.36rem;
+                color: @secondary-text-color;
+                font-size: 0.26rem;
+            }
+            .arrowIcon{
+                fill: @third-text-color;
+                margin-left: 0.05rem;
+            }
+        }
+        .wowListWrap{
+            font-size: 0;
+            .wowIcon{
+                vertical-align: middle;
+                margin-right: 0.1rem;
+            }
+            .textLine{
+                line-height: 0.36rem;
+                vertical-align: middle;
+                color: @secondary-text-color;
+                font-size: 0.26rem;
+            }
+            .tipsLine{
+                line-height: 0.36rem;
+                vertical-align: middle;
+                color: @secondary-text-color;
+                font-size: 0.26rem;
+            }
+        }
+        .cloasebut{
+            margin-top: 0.2rem;
+            color: @third-text-color;
+            font-size: 0.26rem;
+            span{
+                vertical-align: middle;
+            }
+        }
+        .arrowIcon{
+            vertical-align: middle;
+            fill: @third-text-color;
+            margin-left: 0.05rem;
+        }
+        
+    }
+
+}
+@media screen and (min-width: @screen-sm) {
+    .newItemWrap .wowWrap .wowOnlineLineWrap .namesWrap{
+        max-width: 420px;
+    }
+
+}
