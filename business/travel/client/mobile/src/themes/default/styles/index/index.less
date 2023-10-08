@@ -1,0 +1,274 @@
+@import '~themes/default/styles/common/index.less';
+body{
+    overflow: hidden;
+}
+.page-index{
+    position: relative;
+    background: #EFF2F5;
+    height: 100vh;
+    overflow-y: auto;
+    
+    &::-webkit-scrollbar{
+        display: none !important; 
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    
+    .scroll-view{
+        width: 100%;
+        min-height: 100%;
+        padding: 4.1rem .3rem .3rem ;
+        background-size: contain;
+        background: url(~themes/default/img/common/bg_plane_banner_chenjinshi.png) 0 0 no-repeat;
+        background-size: contain;
+        position: relative;
+        .top_banner{
+            width: 100%;
+            height: 4rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            cursor: pointer;
+        }
+        &.footerBar{
+            padding-bottom: 1.4rem;
+        }
+    }
+
+    .entry{
+        position: relative;
+        width: 100%;
+        min-height: 8.4rem;
+        padding: .28rem .8rem .4rem;
+        border-radius: .2rem;
+        overflow: hidden;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 51%;
+            height: 100%;
+            background-image: radial-gradient(circle at 0 1.5rem, transparent 0, transparent .18rem, #FFF .18rem, #FFF 100%);
+            z-index: 1;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 51%;
+            height: 100%;
+            background-image: radial-gradient(circle at 100% 1.5rem, transparent 0, transparent .18rem, #FFF .18rem, #FFF 100%);
+            z-index: 1;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: stretch;
+            position: relative;
+            z-index: 9;
+            .top{
+                position: relative;
+                width: 100%;
+                padding: 0 0 .3rem;
+    
+                nav{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    line-height: .48rem;
+                    font-size: .32rem;
+                    padding: 0 .45rem;
+                    
+                    .tab-button{
+                        position: relative;
+                        display: flex;
+                        align-items: flex-end;
+                        text-align: center;
+                        font-size: .28rem;
+        
+                        &.active{
+                            font-weight: bold;
+                            color: #222222;
+                            font-size: .4rem;
+                            &:after{
+                                content: '';
+                                height: .1rem;
+                                width: .54rem;
+                                border-radius: .05rem;
+                                background: #06c7c3;
+                                position: absolute;
+                                left: 50%;
+                                bottom: -.14rem;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .bottom{
+                .content{
+                    .child-component {
+                        transition: all .5s;
+                        backface-visibility: hidden;
+                        perspective: 1000;
+                    }
+                    .hot_phone{
+                        width: 100%;
+                        text-align: center;
+                        font-size: .26rem;
+                        color: #999999;
+                        margin-top: .3rem;
+                        height: .36rem;
+                        line-height: .36rem;
+                        i{
+                            &.left_line{
+                                margin-right: .1rem;
+                            }
+                            &.right_line{
+                                margin-left: .1rem;
+                            }
+                            font-style: normal;
+                            color: @info-color;
+                            font-weight: normal;
+                        }
+                        span{
+                            cursor: pointer;
+                            color: @theme-color;
+                            font-weight: 600;
+                            &:active{
+                                opacity: .8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .trip-content{
+        margin-top: .54rem;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: .28rem;
+            font-size: .34rem;
+            font-weight: bold;
+    
+            .btn{
+                cursor: pointer;
+                font-size: .26rem;
+                font-weight: normal;
+            }
+        }
+    }
+
+    /deep/ .announcement{
+        margin-bottom: .36rem;
+    }
+}
+
+// 底部导航栏的动画
+.animat{
+    animation: mymove 0.1s ease-in-out 0s 1;
+    -webkit-animation: mymove 0.1s ease-in-out 0s 1; /*Safari and Chrome*/
+}
+
+@keyframes mymove{
+    0%{
+        transform: scale(0);  /*开始为原始大小*/
+    }
+    50%{
+        transform: scale(0.53);
+    }
+    100%{
+        transform: scale(1.06);
+    }
+}
+/*Safari and Chrome*/
+@-webkit-keyframes mymove {
+    0%{
+        transform: scale(0);  /*开始为原始大小*/
+    }
+    50%{
+        transform: scale(0.53);
+    }
+    100%{
+        transform: scale(1.06);
+    }
+}
+
+.footer{
+    position: fixed;
+    max-width: @max-content-width;
+    z-index: 500;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0 0.6rem;
+    height: 1rem;
+    box-shadow:0px -4px 12px 0px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    .item{
+        cursor: pointer;
+        text-align: center;
+        font-size: 0.2rem;
+        color: #222;
+        position: relative;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+        .icon-box{
+            position: relative;
+            .iconItem{
+                height: 0.52rem;
+                width: 0.52rem;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        }
+        p{
+            line-height: 0.28rem;
+            &.active{
+                font-weight: bold;
+            }
+        }
+        
+
+        /deep/ .cart-num{
+            right: -.2rem;
+            &.middle{
+                right: -.3rem;
+            }
+            &.big{
+                right: -.46rem;
+            }
+        }
+    }
+}
+
+
+.pageFrame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 1rem);
+    z-index: 9990;
+}

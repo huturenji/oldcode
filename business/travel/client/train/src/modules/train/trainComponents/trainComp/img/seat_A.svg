@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>train/btn_train_seat_a@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="91.0001677%" y1="13.875%" x2="50%" y2="86.125%" id="linearGradient-1">
+            <stop stop-color="#F5F5F5" offset="0%"></stop>
+            <stop stop-color="#E8E8E8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="91.0001677%" y1="27.7777778%" x2="50%" y2="72.2222222%" id="linearGradient-2">
+            <stop stop-color="#D3D3D3" offset="0%"></stop>
+            <stop stop-color="#E8E8E8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="train/btn_train_seat_a" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-3" transform="translate(1.000000, 1.000000)">
+            <rect id="矩形" fill="url(#linearGradient-1)" x="2" y="0" width="20" height="17"></rect>
+            <path d="M24,23 C24,23.5522847 23.5522847,24 23,24 L1,24 C0.44771525,24 6.76353751e-17,23.5522847 0,23 L0,9.23076923 C0,8.55103415 0.5372583,8 1.2,8 L3.6,8 C4.2627417,8 4.8,8.55103415 4.8,9.23076923 L4.799,16.384 L19.2,16.384 L19.2,9 C19.2,8.44771525 19.6477153,8 20.2,8 L23,8 C23.5522847,8 24,8.44771525 24,9 L24,23 Z" id="形状结合" fill="url(#linearGradient-2)"></path>
+        </g>
+        <path d="M10.468,13 L11.304,10.8 L14.912,10.8 L15.748,13 L16.727,13 L13.636,5.146 L12.591,5.146 L9.5,13 L10.468,13 Z M14.626,10.041 L11.59,10.041 L13.097,6.114 L13.141,6.114 L14.626,10.041 Z" id="A" fill="#B7B7B7" fill-rule="nonzero"></path>
+    </g>
+</svg>

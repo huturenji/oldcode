@@ -1,0 +1,213 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+.page-index-domestic{
+    flex: none;
+    border-radius: @border-radius-base;
+    .flightWrap{
+        padding: 0 0 .4rem;
+
+        .insert-tips{
+            margin: -.6rem -0.64rem 0;
+            border-radius: @border-radius-base @border-radius-base 0 0;
+        }
+
+        .flightCityWrap{
+            .bbpx(1px, @border-color-base, 0, 0, dashed);
+            position: relative;
+            padding-bottom: .48rem;
+            .name{
+                position: relative;
+                display: flex;
+                height: .84rem;
+                justify-content: space-between;
+                font-size: .6rem;
+                font-weight: bold;
+                line-height: .84rem;
+
+                label{
+                    position: absolute;
+                    max-width: calc(~"50% - .4rem");
+                    transition: all 0.5s;
+                    &:first-of-type{
+                        left: 0;
+                        &.turndirection{
+                            left: calc(~'100% - 1.2rem');
+                            transition: none;
+                        }
+                    }
+                    &:last-of-type{
+                        right: 0;
+                        &.turndirection{
+                            right: calc(~'100% - 1.2rem');
+                            transition: none;
+                        }
+                    }
+                }
+            }
+            .title{
+                display: flex;
+                justify-content: space-between;
+                padding: .04rem;
+                margin-top: @white-space-sm;
+                font-size: .24rem;
+                line-height: .34rem;
+                color: @secondary-text-color;
+            }
+            @keyframes flightRotate {
+                0% {
+                    transform: rotate3d(0, 0, 1, 0deg);
+                }
+                100% {
+                    transform: rotate3d(0, 0, 1, 180deg);
+                }
+            }
+
+            .flight-icon{
+                position: absolute;
+                left: 50%;
+                top: .12rem;
+                transform: translateX(-50%);
+                width: .8rem;
+                height: .8rem;
+                background: url(~themes/default/img/flight/icon_plane_plane.svg) no-repeat center;
+                background-size: contain;
+                .rotation-btn{
+                    height: 100%;
+                    background: url(~themes/default/img/flight/icon_plane_circle.svg) no-repeat center;
+                    background-size: contain;
+
+                    &.turnaround{
+                        animation: flightRotate 0.5s steps(12, end) infinite;
+                    }
+                }
+            }
+        }
+
+        .dateWrap{
+            .bbpx(1px, @border-color-base, 0, 0, dashed);
+            padding: 0.26rem 0;
+
+            .dateItem{
+                .title{
+                    color: @third-text-color;
+                    font-size: .24rem;
+                }
+                .week{
+                    color: @text-color;
+                    font-size: .24rem;
+                }
+                .dateText{
+                    margin-top: @white-space-sm;
+                    font-size: .68rem;
+                    font-weight: bold;
+
+                    .label{
+                        font-size: .24rem;
+                    }
+                }
+            }
+        }
+
+        .cabin-wrap{
+            display: flex;
+            justify-content: space-between;
+            padding: .4rem 0;
+            .label{
+                font-size: .3rem;
+                color: @third-text-color;
+            }
+            .text{
+                font-size: .3rem;
+                display: flex;
+                align-items: center;
+
+                .icon{
+                    fill: @placeholder-color;
+                }
+            }
+        }
+
+        .travle-type{
+            padding-top: .38rem;
+            display: flex;
+            justify-content: space-between;
+
+            .label{
+                font-size: .3rem;
+                color: @third-text-color;
+            }
+            .text{
+                font-size: .3rem;
+                .chooseBut{
+                    display: inline-flex;
+                    align-items: center;
+                    line-height: .42rem;
+                    margin-left: .16rem;
+
+                    .icon{
+                        font-size: .4rem;
+                        fill: @theme-color;
+                        margin-left: .08rem;
+                    }
+
+                    &>span{
+                        margin-left: .12rem;
+                    }
+                }
+            }
+        }
+        .travle-standards{
+            margin-top: .2rem;
+            font-size: .26rem;
+            color: @third-text-color;
+        }
+    }
+
+    .button{
+        &.search-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            height: .8rem;
+            background-color: #222222;
+            border-radius: .4rem;
+            font-size: .3rem;
+            color: #06e0dc;
+            font-weight: bold;
+        }
+    }
+}
+.history-container{
+    padding: .4rem 0 0;
+    /deep/ .search-history{
+        padding: 0;
+    }
+}
+.roomInfoWrap {
+    background: @sub-background-color;
+    .roomTit {
+        padding: 0.3rem;
+        font-size: 0.32rem;
+        color: @text-color;
+        position: relative;
+        .btn_common_close{
+            fill: @third-text-color;
+        }
+        .but {
+            fill: @third-text-color;
+            position: absolute;
+            top: 50%;
+            right: .3rem;
+            transform: translateY(-50%);
+        }
+    }
+}
+.tips{
+    display: block;
+    background: @border-color-base;
+    color: @warning-color;
+    padding: .2rem 0;
+    padding-left: .4rem;
+    font-size: .28rem;
+}

@@ -1,0 +1,223 @@
+<!--
+ * @Description: 支付成功页面
+ * @Author: WangBinbin
+ * @LastEditTime: 2021-06-24 10:53:00
+ * @FilePath: \travel_guide\hotel\paySuccess\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>结果</title>
+    <link href="./css/orderDetail.49dbd0d1a169cca56aad.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/15.5e9a9ed033a2ba50cc7a.css">
+    <link rel="stylesheet" type="text/css" href="./css/43.05c80a24e6da662c28c6.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/sinosun_common.5664f620.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+    <style>
+        .point{
+            position: absolute;
+            top: .1rem;
+        }
+		.mask_popup{
+			width: 5.5rem;height: 4.48rem;
+			margin: 4rem auto 0;
+			position: relative;
+    		color: #fff;
+			font-size: .28rem;
+			line-height: .44rem;
+			padding: 1.65rem .3rem 0;
+			background: transparent url(../common/img/img_mall_poppay@3x.png) no-repeat center center;
+			background-size: 5.5rem 4rem;
+		}
+        .mask_popup > p{
+            line-height: 0.44rem;
+            font-size: .24rem;
+            color: #fff;
+            font-weight: 400;
+        }
+        .mask_popup > h4{
+            line-height: 0.44rem;
+            color: #fff;
+            font-size: 0.28rem;
+            font-weight: 400;
+        }
+		.mask_popup_btn{
+			background-color: #fff;
+			color: #2A31DB;
+			font-size: .28rem;
+			line-height: .4rem;
+            height: .7rem;
+			padding: .15rem .25rem;
+			border-radius: .15rem;
+			position: absolute;
+			right: .3rem;
+			font-weight: bold;
+		}
+    </style>
+    <script>
+        window.onload = function(){
+            var mask = document.getElementById("mask");
+            setTimeout(function(){
+                mask.style.display = "block"
+            },1000)
+        }
+        function nextPage(){
+            window.open("../approvalApply/index.html")
+        }
+    </script>
+</head>
+<body >
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_success">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/success</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_success_h5-svg/icon/common/success" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g id="icon_common_success_编组">
+                    <circle id="icon_common_success_椭圆形" cx="11" cy="11" r="11"></circle>
+                    <path
+                        d="M13.3420431,3.99751877 C13.6878128,3.98039749 13.9862932,4.22319109 14.0480253,4.55431822 L14.0588492,4.6466868 L14.5191483,13.9425767 C14.5361374,14.2856759 14.2970907,14.5827197 13.9690064,14.6472715 L13.8774467,14.6589723 L9.08513129,14.9488345 C8.70815472,14.9716358 8.38407069,14.6845201 8.36126934,14.3075435 C8.3403681,13.9619817 8.57988331,13.6608642 8.9103156,13.5955149 L9.0025603,13.5836816 L13.1194362,13.3347856 L12.692875,4.71432494 C12.6757538,4.36855519 12.9185474,4.07007485 13.2496745,4.00834268 L13.3420431,3.99751877 Z"
+                        id="icon_common_success_Path-2" fill="#FFFFFF" fill-rule="nonzero"
+                        transform="translate(11.440000, 9.473385) rotate(-315.000000) translate(-11.440000, -9.473385) ">
+                    </path>
+                </g>
+            </g>
+        </symbol>
+    </svg>
+    <div>
+        <div data-v-b304bc5c="" class="tab child-view">
+            <div data-v-b304bc5c="" class="orderSuc">
+                <div data-v-b304bc5c="" class="topWrap">
+                    <div data-v-b304bc5c="" class="top"><svg data-v-b304bc5c="" class="icon icon icon_common_success"
+                            style="width: 1.16rem; height: 1.16rem;">
+                            <use xlink:href="#icon_common_success"></use>
+                        </svg>
+                        <div data-v-b304bc5c="" class="tit">付款成功！</div>
+                        <div data-v-b304bc5c="" class="mt10">等待确认</div>
+                        <div data-v-b304bc5c="" class="text">稍后您将收到酒店确认短信</div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-b304bc5c="" class="btn-group"><button data-v-b304bc5c=""
+                    class="submit_btn normal-btn cursorp normal-btn bp-button bp-button-primary"><span>查看订单</span></button>
+                <div data-v-b304bc5c="" class="rightTips icon-btn cursorp"> 我的行程 </div>
+            </div>
+        </div>
+    </div>
+    <!-- 体验版背景 -->
+    <div data-v-b94e16a0="" class="water-mark">
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+    </div>
+    <div class="mask" id="mask" style="display: none;"> 
+		<div class="mask_bg"></div>
+		<div class="mask_popup">
+			<h4>酒店已经支付成功了！接来下：</h4>
+            <p>1、请按照预定时间办理入住手续</p>
+            <p>2、入住结束后可申请开具发票</p>
+            <p>3、开票后，可以快速报销哦</p>
+			<button class="mask_popup_btn" onclick="nextPage()">
+				<span >试试报销</span>
+				<div class="point"  style="left: .6rem;top: 0rem;"></div>
+			</button>
+			
+		</div>
+	</div>
+</body>
+</html>

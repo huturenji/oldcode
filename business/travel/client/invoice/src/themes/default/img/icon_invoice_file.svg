@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/icon/invoice/file</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="64.8760331%" x2="2.9755652%" y2="35.1396689%" id="linearGradient-1">
+            <stop stop-color="#262DD9" offset="0%"></stop>
+            <stop stop-color="#4B52FA" offset="99.9894426%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="h5-svg/icon/invoice/file" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="透明度层" transform="translate(0.000000, 2.500000)">
+            <path d="M5.69996151,2 L6.5499915,2.85003189 C7.29995793,3.6 8.30000269,3.99998657 9.40003044,3.99998657 L20,3.99998657 L20,6 L2,6 L2,2 L5.69996151,2 L5.69996151,2 Z M5.69997278,0 L2,0 C0.899981567,0 0,0.899980194 0,2 L0,6 C0,7.10001981 0.899981567,8 2,8 L20.0000171,8 C21.1000453,8 22,7.10001981 22,6 L22,3.99998657 C22,2.89996005 21.1000453,2 20.0000171,2 L9.35001141,2 C8.80001074,2 8.30001501,1.80004095 7.94995355,1.40005573 L7.10003064,0.550026688 C6.74996918,0.200046326 6.25000031,0 5.69997278,0 Z" id="Fill-1" fill="#262DD9"></path>
+            <path d="M22,5 L0,5 L0,15 C0,16.1691766 0.899981567,17 2,17 L20,17 C21.1000453,17 22,16.1691766 22,15 L22,5 Z" id="Fill-3" fill="url(#linearGradient-1)"></path>
+        </g>
+    </g>
+</svg>

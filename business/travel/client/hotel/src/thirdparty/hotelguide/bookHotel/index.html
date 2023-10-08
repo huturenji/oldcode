@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=yes">
+  <title>酒店详情</title>
+  <link href="./css/hotel.4c7683845d1c1100f673.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/0.a90ab929173b5599f66a.css">
+  <link rel="stylesheet" type="text/css" href="./css/6.21dd397b2869eb0e3627.css">
+  <link rel="stylesheet" type="text/css" href="../common/css/sinosun_common.5664f620.css">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <script>
+    function nextPage(){
+      window.open("../bookHotelOrder/index.html")
+    }
+  </script>
+  <style>
+      .point{
+          position: absolute;
+          right: -.2rem;
+      }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+    <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+      id="icon_common_picture">
+      <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <path
+          d="M21.6664591,3.7638716 C21.6664591,2.79374222 20.8727169,2 19.9025876,2 L2.2638716,2 C1.29374222,2 0.5,2.79374222 0.5,3.7638716 L0.5,17.8748444 C0.5,18.8449737 1.29374222,19.638716 2.2638716,19.638716 L19.9025876,19.638716 C20.8727169,19.638716 21.6664591,18.8449737 21.6664591,17.8748444 L21.6664591,3.7638716 L21.6664591,3.7638716 Z M17.080393,16.1109728 L4.29232395,16.1109728 C3.76316247,16.1109728 3.45448493,15.5377145 3.71906568,15.0967466 L7.59958317,8.34993774 C7.77597033,8.04126022 8.17284144,8.04126022 8.3492286,8.34993774 L10.6863585,12.3627456 C10.8627456,12.6273264 11.2596167,12.6714231 11.4360039,12.4068424 L13.3321659,9.67284144 C13.508553,9.40826069 13.9054241,9.40826069 14.0818113,9.67284144 L17.5654577,15.229037 C17.8300384,15.6259081 17.5654577,16.1109728 17.080393,16.1109728 L17.080393,16.1109728 Z M15.9338765,8.17355059 C14.9637471,8.17355059 14.1700049,7.37980837 14.1700049,6.40967899 C14.1700049,5.43954961 14.9637471,4.64580739 15.9338765,4.64580739 C16.9040058,4.64580739 17.697748,5.43954961 17.697748,6.40967899 C17.697748,7.37980837 16.9040058,8.17355059 15.9338765,8.17355059 Z"
+          fill-rule="nonzero"></path>
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+      id="icon_common_rightarrow">
+      <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+      <title>icon_common_leftarrow</title>
+      <desc>Created with Sketch.</desc>
+      <g id="icon_common_rightarrow_icon_common_leftarrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <path
+          d="M28.715863,11.568274 C29.977357,11.568274 31,10.545631 31,9.28413698 C31,8.02264296 29.977357,7 28.715863,7 L3.28413698,7 C2.02264296,7 1,8.02264296 1,9.28413698 L1,34.715863 C1,35.977357 2.02264296,37 3.28413698,37 C4.545631,37 5.56827396,35.977357 5.56827396,34.715863 L5.56827396,11.568274 L28.715863,11.568274 Z"
+          id="icon_common_rightarrow_Path" fill-rule="nonzero"
+          transform="translate(16.000000, 22.000000) rotate(-225.000000) translate(-16.000000, -22.000000) "></path>
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+      id="icon_common_location-fill">
+      <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <path
+          d="M11.3526403,0.846153846 C16.2205768,0.846153846 20.166819,4.79239609 20.166819,9.66033259 C20.166819,13.2910771 17.2287594,17.2566389 11.3526403,21.5570179 C5.47652112,17.2566389 2.53846154,13.2910771 2.53846154,9.66033259 C2.53846154,4.79239609 6.48470378,0.846153846 11.3526403,0.846153846 Z M11.3526403,6.62706665 C9.7099541,6.62706665 8.37829383,7.95872691 8.37829383,9.6014131 C8.37829383,11.2440993 9.7099541,12.5757596 11.3526403,12.5757596 C12.9953265,12.5757596 14.3269867,11.2440993 14.3269867,9.6014131 C14.3269867,7.95872691 12.9953265,6.62706665 11.3526403,6.62706665 Z">
+        </path>
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+      id="icon_common_check-circle">
+      <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <path
+          d="M11.0015666,1.1 C16.4700508,1.1 20.9031331,5.53308235 20.9031331,11.0015666 C20.9031331,16.4700508 16.4700508,20.9031331 11.0015666,20.9031331 C5.53308235,20.9031331 1.1,16.4700508 1.1,11.0015666 C1.1,5.53308235 5.53308235,1.1 11.0015666,1.1 Z M11.0015666,2.56666667 C6.34309999,2.56666667 2.56666667,6.34309999 2.56666667,11.0015666 C2.56666667,15.6600332 6.34309999,19.4364665 11.0015666,19.4364665 C15.6600332,19.4364665 19.4364665,15.6600332 19.4364665,11.0015666 C19.4364665,6.34309999 15.6600332,2.56666667 11.0015666,2.56666667 Z M16.3345143,7.80821224 C16.5937518,8.04983803 16.638649,8.43531744 16.4608279,8.72639061 L16.3709587,8.84466164 L10.7307195,14.8960089 C10.5076418,15.1353464 10.1591683,15.1936993 9.87547802,15.0565541 L9.73991197,14.9716228 L6.35032184,12.2960626 C6.0324177,12.0451261 5.97812965,11.5839897 6.22906609,11.2660856 C6.44863548,10.9879194 6.82913921,10.9115844 7.13380531,11.0649548 L7.25904308,11.1448298 L10.1163333,13.3998333 L15.2980649,7.84465663 C15.5742086,7.54838519 16.0382428,7.53206848 16.3345143,7.80821224 Z"
+          fill-rule="nonzero"></path>
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+      id="icon_common_uparrow">
+      <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+      <title>icon_common_uparrow</title>
+      <desc>Created with Sketch.</desc>
+      <g id="icon_common_uparrow_icon_common_uparrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <path
+          d="M11.568274,19.568274 L34.715863,19.568274 C35.977357,19.568274 37,18.545631 37,17.284137 C37,16.022643 35.977357,15 34.715863,15 L9.28413698,15 C8.02264296,15 7,16.022643 7,17.284137 L7,42.715863 C7,43.977357 8.02264296,45 9.28413698,45 C10.545631,45 11.568274,43.977357 11.568274,42.715863 L11.568274,19.568274 Z"
+          id="icon_common_uparrow_Path" fill-rule="nonzero"
+          transform="translate(22.000000, 30.000000) rotate(-315.000000) translate(-22.000000, -30.000000) "></path>
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+      id="icon_common_downarrow">
+      <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+      <title>icon_common_downarrow</title>
+      <desc>Created with Sketch.</desc>
+      <g id="icon_common_downarrow_icon_common_downarrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <path
+          d="M11.568274,4.56827396 L34.715863,4.56827396 C35.977357,4.56827396 37,3.545631 37,2.28413698 C37,1.02264296 35.977357,-1.77635684e-15 34.715863,-1.77635684e-15 L9.28413698,-1.77635684e-15 C8.02264296,-1.77635684e-15 7,1.02264296 7,2.28413698 L7,27.715863 C7,28.977357 8.02264296,30 9.28413698,30 C10.545631,30 11.568274,28.977357 11.568274,27.715863 L11.568274,4.56827396 Z"
+          id="icon_common_downarrow_Path" fill-rule="nonzero"
+          transform="translate(22.000000, 15.000000) rotate(-135.000000) translate(-22.000000, -15.000000) "></path>
+      </g>
+    </symbol>
+  </svg>
+  <div>
+    <div data-v-ccd6ab90="" class="child-view">
+      <!-- 体验版背景 -->
+      <div data-v-b94e16a0="" class="water-mark">
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+          体验版
+        </div>
+      </div>
+      <div data-v-ccd6ab90="" class="hotelDetail">
+        <div>
+          <div class="swiperWrap cursorp">
+            <div class="vux-slider">
+              <div class="vux-swiper" style="height: 180px;">
+                <div data-index="0" class="vux-swiper-item active" style="transform: translate3d(0px, 0px, 0px);"><a
+                    href="javascript:">
+                    <div class="vux-img"
+                      style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/MnybIFfUQM.jpg&quot;);">
+                    </div>
+                    <p class="vux-swiper-desc"></p>
+                  </a>
+                </div>
+              </div>
+              <div class="vux-indicator vux-indicator-right"><a href="javascript:"><i
+                    class="vux-icon-dot active"></i></a><a href="javascript:"><i class="vux-icon-dot"></i></a><a
+                  href="javascript:"><i class="vux-icon-dot"></i></a><a href="javascript:"><i
+                    class="vux-icon-dot"></i></a><a href="javascript:"><i class="vux-icon-dot"></i></a><a
+                  href="javascript:"><i class="vux-icon-dot"></i></a></div>
+            </div>
+            <div class="tipsText">
+              <div class="tipsWrap"><span class="numwrap"><span class="bigNum num-font">9.6</span>分</span>
+                <span>1248人评论</span> <svg class="icon numwrapRight icon_common_rightarrow"
+                  style="width: 0.2rem; height: 0.2rem;">
+                  <use xlink:href="#icon_common_rightarrow"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="tipsNum"><svg class="icon imgNum icon_common_picture" style="width: 0.24rem; height: 0.24rem;">
+                <use xlink:href="#icon_common_picture"></use>
+              </svg>85</div>
+          </div>
+          <div data-v-1799c585="" class="hoteItem">
+            <div data-v-1799c585="" class="itemText"><span data-v-1799c585=""
+                class="itemName">丽顿酒店(武汉高铁站科技大学青山校区店)</span><span data-v-1799c585="" class="roomType">舒适型</span></div>
+            <div data-v-1799c585="" class="itemWarp bbpxs pb40">
+              <div data-v-1799c585="" class="left">
+                <div data-v-1799c585="" class="itemTit">建设一路宝业中心</div>
+                <div data-v-1799c585="" class="itemTips"><svg data-v-1799c585=""
+                    class="icon locationFill icon_common_location-fill" style="width: 0.24rem; height: 0.24rem;">
+                    <use xlink:href="#icon_common_location-fill"></use>
+                  </svg>距您18公里</div>
+                <div data-v-1799c585="" class="itemTips">市中心</div>
+              </div>
+              <div data-v-1799c585="" class="right map cursorp normal-btn">地图/导航<svg data-v-1799c585=""
+                  class="icon numwrapRight icon_common_rightarrow" style="width: 0.24rem; height: 0.24rem;">
+                  <use xlink:href="#icon_common_rightarrow"></use>
+                </svg></div>
+            </div>
+            <div data-v-1799c585="" class="itemWarp pt40">
+              <div data-v-1799c585="" class="left">
+                <div data-v-1799c585="" class="itemTit">酒店介绍</div>
+              </div>
+              <div data-v-1799c585="" class="right map cursorp normal-btn">详情/设施<svg data-v-1799c585=""
+                  class="icon numwrapRight icon_common_rightarrow" style="width: 0.24rem; height: 0.24rem;">
+                  <use xlink:href="#icon_common_rightarrow"></use>
+                </svg></div>
+            </div>
+            <div data-v-1799c585="" class="serviceListWrap"><span data-v-1799c585="" class="serviceItem">
+                <svg data-v-1799c585="" class="icon serverIcon icon_common_check-circle"
+                  style="width: 0.24rem; height: 0.24rem;">
+                  <use xlink:href="#icon_common_check-circle"></use>
+                </svg>免费wifi</span><span data-v-1799c585="" class="serviceItem"><svg data-v-1799c585=""
+                  class="icon serverIcon icon_common_check-circle" style="width: 0.24rem; height: 0.24rem;">
+                  <use xlink:href="#icon_common_check-circle"></use>
+                </svg>免费停车场</span><span data-v-1799c585="" class="serviceItem"><svg data-v-1799c585=""
+                  class="icon serverIcon icon_common_check-circle" style="width: 0.24rem; height: 0.24rem;">
+                  <use xlink:href="#icon_common_check-circle"></use>
+                </svg>会议室</span><span data-v-1799c585="" class="serviceItem"><svg data-v-1799c585=""
+                  class="icon serverIcon icon_common_check-circle" style="width: 0.24rem; height: 0.24rem;">
+                  <use xlink:href="#icon_common_check-circle"></use>
+                </svg>酒店餐厅</span><span data-v-1799c585="" class="serviceItem"><svg data-v-1799c585=""
+                  class="icon serverIcon icon_common_check-circle" style="width: 0.24rem; height: 0.24rem;">
+                  <use xlink:href="#icon_common_check-circle"></use>
+                </svg>叫醒服务</span><span data-v-1799c585="" class="serviceItem"><svg data-v-1799c585=""
+                  class="icon serverIcon icon_common_check-circle" style="width: 0.24rem; height: 0.24rem;">
+                  <use xlink:href="#icon_common_check-circle"></use>
+                </svg>行李寄存</span></div>
+          </div>
+          <div data-v-64e20d60="" class="hotelDate normal-btn cursorp hotelDate cursorp">
+            <div data-v-64e20d60="" class="panelWrap">
+              <div data-v-64e20d60="" class="panelBox">
+                <div data-v-64e20d60="" class="panelBoxbd">
+                  <p data-v-64e20d60="" class="panelBoxLine top leftPart"><span data-v-64e20d60=""
+                      class="checkin mr10">入住</span><span data-v-64e20d60="" class="dataTips">今天</span></p>
+                  <p data-v-64e20d60="" class="panelBoxLine leftPart"><span data-v-64e20d60=""
+                      class="big64 num-font">06</span>月<span data-v-64e20d60="" class="big64 num-font">09</span>日</p>
+                </div>
+                <div data-v-64e20d60="" class="panelBoxbd">
+                  <p data-v-64e20d60="" class="panelBoxLine mid"><span data-v-64e20d60="" class="day">共1晚 </span></p>
+                </div>
+                <div data-v-64e20d60="" class="panelBoxbd">
+                  <p data-v-64e20d60="" class="panelBoxLine top rightPart"><span data-v-64e20d60=""
+                      class="checkin mr10">离店</span><span data-v-64e20d60="" class="dataTips">明天</span></p>
+                  <p data-v-64e20d60="" class="panelBoxLine rightPart"><span data-v-64e20d60=""
+                      class="big64 num-font">06</span>月<span data-v-64e20d60="" class="big64 num-font">10</span>日</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tagFilter">
+            <div class="tagItem cursorp"><span>在线付</span></div>
+            <div class="tagItem cursorp"><span>到店付</span></div>
+            <div class="tagItem cursorp"><span>含早</span></div>
+            <div class="tagItem cursorp"><span>有返现</span></div>
+            <div class="tagItem cursorp"><span>立即确认</span></div>
+            <div class="tagItem cursorp"><span>大床房</span></div>
+          </div>
+          <div data-v-13202b1b="" class="hotelRoom lineBorderB">
+            <div data-v-13202b1b="" class="panel cursorp">
+              <div data-v-13202b1b="" class="panel_attend">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="leftBg cursorp">
+                    <div data-v-13202b1b=""
+                      style="background-image: url(https://pavo.elongstatic.com/i/Hotel350_350/X0m0V9QGHu.jpg);">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">标准双床房</div>
+                    <p data-v-13202b1b="" class="left_title tips">22平米/双床1.2米</p>
+                  </div>
+                  <div data-v-13202b1b="" class="money"><span data-v-13202b1b="" class="hotArea num-font"><span
+                        data-v-13202b1b="" class="little rmb">¥</span> <span data-v-13202b1b=""
+                        class="bignum">343</span> <span data-v-13202b1b="" class="black little">起</span> <svg
+                        data-v-13202b1b="" class="icon iconDown icon_common_uparrow"
+                        style="width: 0.24rem; height: 0.24rem;">
+                        <use xlink:href="#icon_common_uparrow"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+            </div>
+            <div data-v-13202b1b="" class="panel PlistWrap" style="display: block;">
+              <div data-v-13202b1b="" class="panel_attend product cursorp" id="cursorpActived" onclick="nextPage()">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name lowTips">不含早</div>
+                    <p data-v-13202b1b="" class="left_title tips">前台+1元得单早 / 限时取消</p>
+                    <div data-v-13202b1b="" class="buttonOut">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="money">
+                    <p data-v-13202b1b="" class="hotArea"><span data-v-13202b1b="" class="little rmb">¥</span> <span
+                        data-v-13202b1b="" class="bignum num-font">343</span></p>
+                  </div>
+                  <div data-v-13202b1b="" class="right_box cursorp normal-btn">
+                    <div data-v-13202b1b="" class="title">订<div class="point" ></div></div>
+                    <div data-v-13202b1b="" class="reserve">在线付</div>
+                  </div>
+                </div>
+              </div>
+              <div data-v-13202b1b="" class="panel_attend product cursorp">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">不含早</div>
+                    <p data-v-13202b1b="" class="left_title tips">前台+1元得单早 / 免费取消</p>
+                    <div data-v-13202b1b="" class="buttonOut">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="money">
+                    <p data-v-13202b1b="" class="hotArea"><span data-v-13202b1b="" class="little rmb">¥</span> <span
+                        data-v-13202b1b="" class="bignum num-font">356</span></p>
+                  </div>
+                  <div data-v-13202b1b="" class="right_box cursorp normal-btn">
+                    <div data-v-13202b1b="" class="title">订</div>
+                    <div data-v-13202b1b="" class="reserve">到店付</div>
+                  </div>
+                </div>
+              </div>
+              <div data-v-13202b1b="" class="panel_attend product cursorp">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">含单早</div>
+                    <p data-v-13202b1b="" class="left_title tips">标准价 / 限时取消</p>
+                    <div data-v-13202b1b="" class="buttonOut">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="money">
+                    <p data-v-13202b1b="" class="hotArea"><span data-v-13202b1b="" class="little rmb">¥</span> <span
+                        data-v-13202b1b="" class="bignum num-font">364</span></p>
+                  </div>
+                  <div data-v-13202b1b="" class="right_box cursorp normal-btn">
+                    <div data-v-13202b1b="" class="title">订</div>
+                    <div data-v-13202b1b="" class="reserve">在线付</div>
+                  </div>
+                </div>
+              </div>
+              <div data-v-13202b1b="" class="panel_attend product cursorp">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">含双早</div>
+                    <p data-v-13202b1b="" class="left_title tips">标准价 / 限时取消</p>
+                    <div data-v-13202b1b="" class="buttonOut">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="money">
+                    <p data-v-13202b1b="" class="hotArea"><span data-v-13202b1b="" class="little rmb">¥</span> <span
+                        data-v-13202b1b="" class="bignum num-font">384</span></p>
+                  </div>
+                  <div data-v-13202b1b="" class="right_box cursorp normal-btn">
+                    <div data-v-13202b1b="" class="title">订</div>
+                    <div data-v-13202b1b="" class="reserve">在线付</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-v-13202b1b="" class="hotelRoom lineBorderB">
+            <div data-v-13202b1b="" class="panel cursorp">
+              <div data-v-13202b1b="" class="panel_attend">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="leftBg cursorp">
+                    <div data-v-13202b1b=""
+                      style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/X0m0Eiq1zO.jpg&quot;);">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">标准大床房</div>
+                    <p data-v-13202b1b="" class="left_title tips">28平米/大床1.8米</p>
+                  </div>
+                  <div data-v-13202b1b="" class="money"><span data-v-13202b1b="" class="hotArea num-font"><span
+                        data-v-13202b1b="" class="little rmb">¥</span> <span data-v-13202b1b=""
+                        class="bignum">382</span> <span data-v-13202b1b="" class="black little">起</span> <svg
+                        data-v-13202b1b="" class="icon iconDown icon_common_downarrow"
+                        style="width: 0.24rem; height: 0.24rem;">
+                        <use xlink:href="#icon_common_downarrow"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-v-13202b1b="" class="hotelRoom lineBorderB">
+            <div data-v-13202b1b="" class="panel cursorp">
+              <div data-v-13202b1b="" class="panel_attend">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="leftBg cursorp">
+                    <div data-v-13202b1b=""
+                      style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/X0m1ErprPi.jpg&quot;);">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">高级双床房</div>
+                    <p data-v-13202b1b="" class="left_title tips">32平米/双床1.2米</p>
+                  </div>
+                  <div data-v-13202b1b="" class="money"><span data-v-13202b1b="" class="hotArea num-font"><span
+                        data-v-13202b1b="" class="little rmb">¥</span> <span data-v-13202b1b=""
+                        class="bignum">413</span> <span data-v-13202b1b="" class="black little">起</span> <svg
+                        data-v-13202b1b="" class="icon iconDown icon_common_downarrow"
+                        style="width: 0.24rem; height: 0.24rem;">
+                        <use xlink:href="#icon_common_downarrow"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-v-13202b1b="" class="hotelRoom lineBorderB">
+            <div data-v-13202b1b="" class="panel cursorp">
+              <div data-v-13202b1b="" class="panel_attend">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="leftBg cursorp">
+                    <div data-v-13202b1b=""
+                      style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/VCoTBq459u.jpg&quot;);">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">高级大床房</div>
+                    <p data-v-13202b1b="" class="left_title tips">35平米/大床1.8米</p>
+                  </div>
+                  <div data-v-13202b1b="" class="money"><span data-v-13202b1b="" class="hotArea num-font"><span
+                        data-v-13202b1b="" class="little rmb">¥</span> <span data-v-13202b1b=""
+                        class="bignum">413</span> <span data-v-13202b1b="" class="black little">起</span> <svg
+                        data-v-13202b1b="" class="icon iconDown icon_common_downarrow"
+                        style="width: 0.24rem; height: 0.24rem;">
+                        <use xlink:href="#icon_common_downarrow"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-v-13202b1b="" class="hotelRoom lineBorderB">
+            <div data-v-13202b1b="" class="panel cursorp">
+              <div data-v-13202b1b="" class="panel_attend">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="leftBg cursorp">
+                    <div data-v-13202b1b=""
+                      style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/10VJWQyjyyQ.jpg&quot;);">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">家庭亲子房</div>
+                    <p data-v-13202b1b="" class="left_title tips">35平米/大床</p>
+                  </div>
+                  <div data-v-13202b1b="" class="money"><span data-v-13202b1b="" class="hotArea num-font"><span
+                        data-v-13202b1b="" class="little rmb">¥</span> <span data-v-13202b1b=""
+                        class="bignum">471</span> <span data-v-13202b1b="" class="black little">起</span> <svg
+                        data-v-13202b1b="" class="icon iconDown icon_common_downarrow"
+                        style="width: 0.24rem; height: 0.24rem;">
+                        <use xlink:href="#icon_common_downarrow"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-v-13202b1b="" class="hotelRoom lineBorderB">
+            <div data-v-13202b1b="" class="panel cursorp">
+              <div data-v-13202b1b="" class="panel_attend">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="leftBg cursorp">
+                    <div data-v-13202b1b=""
+                      style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/X0m1b8vjOM.jpg&quot;);">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">180°行政观景大床房</div>
+                    <p data-v-13202b1b="" class="left_title tips">38平米/大床1.8米</p>
+                  </div>
+                  <div data-v-13202b1b="" class="money"><span data-v-13202b1b="" class="hotArea num-font"><span
+                        data-v-13202b1b="" class="little rmb">¥</span> <span data-v-13202b1b=""
+                        class="bignum">516</span> <span data-v-13202b1b="" class="black little">起</span> <svg
+                        data-v-13202b1b="" class="icon iconDown icon_common_downarrow"
+                        style="width: 0.24rem; height: 0.24rem;">
+                        <use xlink:href="#icon_common_downarrow"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-v-13202b1b="" class="hotelRoom lineBorderB">
+            <div data-v-13202b1b="" class="panel cursorp">
+              <div data-v-13202b1b="" class="panel_attend">
+                <div data-v-13202b1b="" class="panel_border bbpxs">
+                  <div data-v-13202b1b="" class="leftBg cursorp">
+                    <div data-v-13202b1b=""
+                      style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/Mny2Z42xuE.jpg&quot;);">
+                    </div>
+                  </div>
+                  <div data-v-13202b1b="" class="left_box">
+                    <div data-v-13202b1b="" class="left_title name">豪华城景大床房</div>
+                    <p data-v-13202b1b="" class="left_title tips">42平米/大床1.8米</p>
+                  </div>
+                  <div data-v-13202b1b="" class="money"><span data-v-13202b1b="" class="hotArea num-font"><span
+                        data-v-13202b1b="" class="little rmb">¥</span> <span data-v-13202b1b=""
+                        class="bignum">563</span> <span data-v-13202b1b="" class="black little">起</span> <svg
+                        data-v-13202b1b="" class="icon iconDown icon_common_downarrow"
+                        style="width: 0.24rem; height: 0.24rem;">
+                        <use xlink:href="#icon_common_downarrow"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recommendWrap">
+            <div class="recommendTit">相似酒店推荐</div>
+            <div class="recommendright cursorp">10家</div>
+          </div>
+          <div class="recommenHotelWrap">
+            <div class="recommenHotelItemWrap cursorp">
+              <div class="recommenHotelItem normal-btn">
+                <div class="topbgWrap">
+                  <div class="topbg"
+                    style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/nw_TbW2NTCOre.jpg&quot;);">
+                  </div>
+                </div>
+                <div class="iteminfoWrap">
+                  <div class="itemName">喆啡酒店(武汉欢乐谷仁和路地铁站店)</div>
+                  <div class="recommenInfoWrap"><span class="left">96<span>%好评率</span></span> <span
+                      class="right"><span>距离1.8公里</span></span></div>
+                  <div class="moneyWrap"><span class="left">￥</span> <span class="middle">297</span> <span
+                      class="right">起</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="recommenHotelItemWrap cursorp">
+              <div class="recommenHotelItem normal-btn">
+                <div class="topbgWrap">
+                  <div class="topbg"
+                    style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/nw_I7ws7zX1qU.jpg&quot;);">
+                  </div>
+                </div>
+                <div class="iteminfoWrap">
+                  <div class="itemName">麗枫酒店(武汉欢乐谷仁和路地铁站店)</div>
+                  <div class="recommenInfoWrap"><span class="left">97<span>%好评率</span></span> <span
+                      class="right"><span>距离1.7公里</span></span></div>
+                  <div class="moneyWrap"><span class="left">￥</span> <span class="middle">274</span> <span
+                      class="right">起</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="recommenHotelItemWrap cursorp">
+              <div class="recommenHotelItem normal-btn">
+                <div class="topbgWrap">
+                  <div class="topbg"
+                    style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/nw_ZFzswFaTTi.jpg&quot;);">
+                  </div>
+                </div>
+                <div class="iteminfoWrap">
+                  <div class="itemName">宜尚酒店(武汉众圆广场店)</div>
+                  <div class="recommenInfoWrap"><span class="left">93<span>%好评率</span></span> <span
+                      class="right"><span>距离560米</span></span></div>
+                  <div class="moneyWrap"><span class="left">￥</span> <span class="middle">364</span> <span
+                      class="right">起</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="recommenHotelItemWrap cursorp">
+              <div class="recommenHotelItem normal-btn">
+                <div class="topbgWrap">
+                  <div class="topbg"
+                    style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/nw_0003wh5v.jpg&quot;);">
+                  </div>
+                </div>
+                <div class="iteminfoWrap">
+                  <div class="itemName">纽宾凯国际酒店(武汉徐东地铁站店)</div>
+                  <div class="recommenInfoWrap"><span class="left">94<span>%好评率</span></span> <span
+                      class="right"><span>距离4.2公里</span></span></div>
+                  <div class="moneyWrap"><span class="left">￥</span> <span class="middle">272</span> <span
+                      class="right">起</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function(){
+  // console.log($("#cursorpActived").offset().top) 
+  $("html,body").animate({scrollTop:$("#cursorpActived").offset().top - "90" + "px"}, 500);
+})
+</script>
+</html>

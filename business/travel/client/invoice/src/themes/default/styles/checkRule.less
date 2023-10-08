@@ -1,0 +1,38 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.check-rules{
+    padding: 0.4rem 0.6rem;
+    background: #fff;
+}
+.rule_item{
+    font-size: 0.32rem;
+    margin-top: 0.2rem;
+    .rule_item_title{
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+        font-size: 0.28rem;
+        color: @text-color;
+        display: flex;
+        align-items: center;
+        .icon_common_prompt{
+            fill: @text-color;
+            margin-right: .08rem;
+        }
+        .icon_common_check-circle{
+            fill: @text-color;
+            margin-right: .08rem;
+        }
+    }
+    .rule_item_des{
+        font-size: 0.26rem;
+        color: @text-color;
+        li{
+            line-height: 0.52rem;
+        }
+    }
+    &:last-child{
+        margin-bottom: 0.5rem;
+    }
+}

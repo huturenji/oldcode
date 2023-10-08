@@ -1,0 +1,183 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/hairLine.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.order-item {
+    color: @text-color;
+    padding: 0 .5rem;
+
+    &.disable {
+        div,span{
+            color: @third-text-color !important;
+        }
+    }
+    .order-person{
+        display: flex;
+        justify-content: space-between;
+        padding: .1rem 0;
+        font-size: .28rem;
+        color:#999;
+        div{
+            width:100%;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            span:nth-child(2){
+                color:@text-color;
+            }
+        }
+    }
+    .spread-person{
+        padding: .3rem 0 .1rem;
+        font-size: .28rem;
+        color:#999;
+        display: flex;
+        justify-content: space-between;
+        div{
+            width:100%;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            span:nth-child(2){
+                color:@text-color;
+            }
+        }
+    }
+    .order-summary {
+        .bbpx(1px, @border-color-base);
+        font-size: .28rem;
+        height: 1rem;
+        line-height: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            flex: auto;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                width: .36rem;
+                height: .36rem;
+                margin-right: .16rem;
+
+                &.icon-flight {
+                    background: url(~themes/default/img/indexOrder/icon_plane_plane@2x.svg) no-repeat center center;
+                    background-size: contain;
+
+                    &.disable {
+                        background: url(~themes/default/img/indexOrder/icon_plane_plane_disable@2x.svg) no-repeat center center;
+                        background-size: contain;
+                    }
+                }
+
+                &.icon-train {
+                    background: url(~themes/default/img/indexOrder/icon_train_train@2x.svg) no-repeat center center;
+                    background-size: contain;
+
+                    &.disable {
+                        background: url(~themes/default/img/indexOrder/icon_train_train_disable@2x.svg) no-repeat center center;
+                        background-size: contain;
+                    }
+                }
+
+                &.icon-hotel {
+                    background: url(~themes/default/img/indexOrder/icon_hotel_hotel@2x.svg) no-repeat center center;
+                    background-size: contain;
+
+                    &.disable {
+                        background: url(~themes/default/img/indexOrder/icon_hotel_hotel_disable@2x.svg) no-repeat center center;
+                        background-size: contain;
+                    }
+                }
+
+                &.icon-car {
+                    background: url(~themes/default/img/indexOrder/icon_car_car.svg) no-repeat center center;
+                    background-size: contain;
+
+                    &.disable {
+                        background: url(~themes/default/img/indexOrder/icon_car_car_disable.svg) no-repeat center center;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            .userType0 {
+                &:after{
+                    content: '(公)';
+                    margin-left: .1rem;
+                }
+
+                &.disable {
+                    color: @disable-color;
+                }
+            }
+
+            .userType1 {
+                &:after{
+                    content: '(私)';
+                    margin-left: .1rem;
+                }
+
+                &.disable {
+                    color: @disable-color;
+                }
+            }
+        }
+
+        .status {
+            font-size: .32rem;
+        }
+    }
+
+    .order-detail {
+        position: relative;
+        padding: .2rem 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .right-block{
+            flex: none;
+        }
+
+        .position {
+            font-weight: bold;
+            font-size: .3rem;
+            min-height: .5rem;
+            line-height: .5rem;
+        }
+
+        .roomName,
+        .time {
+            font-size: .24rem;
+            color: @secondary-text-color;
+            padding: .1rem 0;
+
+            .diff-date {
+                margin-left: .13rem;
+                color: @theme-color;
+
+                &.disable {
+                    color: @disable-color;
+                }
+            }
+        }
+
+        .amount {
+            font-size: .36rem;
+            text-align: right;
+            font-weight: bold;
+
+            &.disable {
+                color: @disable-color;
+            }
+
+            span {
+                font-size: .2rem;
+                margin-right: .05rem;
+            }
+        }
+    }
+}

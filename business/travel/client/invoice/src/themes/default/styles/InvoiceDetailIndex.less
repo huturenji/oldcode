@@ -1,0 +1,261 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+.index-wrap{
+    background-color: @theme-color
+}
+.wrap_box{
+    // background: url(~themes/default/img/bg_invoice_top@3x.png) top center no-repeat;
+    // background-size: 100% auto;
+    background-color: @theme-color;
+    padding:.4rem;
+    .banner{
+        padding: 0.1rem 0.12rem;
+        background: #EAEFF4;
+        border-radius: .26rem;
+        margin: 0 -0.12rem; 
+        opacity: 0.4;
+        
+        .line{
+            height: 0.03rem;
+            background-color: #3F00C1;
+        }
+    }
+    ul:first-of-type{
+        margin-top: -.1rem;
+    }
+    // 当不是我的发票 进来的时候（即从订单详情进来的时候，此时最后一个直接显示结尾的样式）
+    &.invoice_bottom ul.invoice:last-of-type{
+        position: relative;
+        border-bottom: none 0;
+        &:before {
+            display: none;
+        }
+        &:after {
+            position: absolute;
+            left: 0;
+            bottom: -.07rem;
+            content: '';
+            width: 100%;
+            height: .14rem;
+            background-image: url(~themes/default/img/icon_invoice_fapiaochayan_yuan@3x.png);
+            background-size: .14rem;
+            background-repeat: repeat-x;
+            z-index: 3000;
+            border-radius: 0;
+          }
+    }
+}
+.invoice {
+    background: #fff;
+    position: relative;
+    padding-bottom: .8rem;
+    border-bottom: 1px dashed @theme-color;
+    z-index: 10;
+    &:after {
+       content: '';
+       position: absolute;
+       width: .24rem;
+       height: .24rem;
+       background-color: @theme-color;
+       border-radius: 50%;
+       right: -.12rem;
+       bottom: -.12rem;
+       z-index: 100;
+    }
+    &:before {
+       content: '';
+       position: absolute;
+       width: .24rem;
+       height: .24rem;
+       background-color: @theme-color;
+       border-radius: 50%;
+       left: -.12rem;
+       bottom: -.12rem;
+       z-index: 100;
+    }
+    .title {
+      width: 100%;
+      padding: .8rem 0;
+      background: url('~themes/default/img/icon_invoice_seal@2x.svg') no-repeat center;
+      background-size: 1.52rem auto;
+      vertical-align: middle;
+      text-align: center;
+
+      span {
+        color: @price-color;
+        font-size: .3rem;
+        font-weight: bold;
+      }
+    }
+
+    .table {
+       padding: 0 .38rem;
+      .cell {
+        &.bbpx{
+            border-bottom: 1px dashed @border-color-base;
+        }
+
+        .tableLine {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: .3rem;
+          &.price{
+              margin-top: .3rem;
+          }
+
+          .name {
+            flex: 1;
+            text-align: left;
+            font-size: .28rem;
+            color: #B8804C;
+          }
+
+          .content {
+            flex: 2;
+            font-size: .28rem;
+            color: @text-color;
+            text-align: right;
+            &.money{
+              color: @price-color;
+            }
+          }
+
+          .check {
+            background: #999;
+            padding: .1rem;
+            color: #fff;
+            border-radius: .04rem;
+            &:active{
+              opacity: .8;
+            }
+          }
+          .check.checked {
+            font-size: .28rem;
+            background:@theme-color;
+            padding: .12rem .36rem;
+            color: #fff;
+            border-radius: .1rem;
+			&:active{
+              opacity: .8;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .bottom {
+    position: absolute;
+    bottom: .8rem;
+    text-align: center;
+    width: 100%;
+
+    .tel {
+      color: @theme-color;
+    }
+  }
+  .viewall{
+    width: 100%;
+    text-align: center;
+    color: @theme-color;
+    background-color: #fff;
+    font-size: .24rem;
+    padding-top: 0.1rem;
+    span{
+      cursor: pointer;
+      box-sizing: border-box;
+      i{
+        display: inline-block;
+        vertical-align: text-top;
+        width: 0.24rem;
+        height: 0.32rem;
+        background: url(~assets/img/invoice/viewall.png) right center no-repeat ;
+        background-size: 0.2rem;
+        transition: 0.3s;
+        &.close{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .invoice_tips{
+    padding: 0rem 0.4rem .4rem 0.4rem;
+    font-size: 0.26rem;
+    color: @third-text-color;
+    display: flex;
+    background-color: @theme-color;
+    line-height: .36rem;
+    span{
+      flex: 1;
+      margin-left: 0.1rem;
+    }
+    .icon_prompt{
+        margin-top: .02rem;
+    }
+    .icon_common_prompt{
+        fill: @third-text-color;
+    }
+  }
+  .invoice_phone{
+    background-color: @theme-color;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.26rem;
+    color: #fff;
+    a{
+        cursor: pointer;
+        color: @success-color;
+    }
+  }
+  .detailRow {
+    background: #fff;
+    padding: .78rem .4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    &:after {
+        position: absolute;
+        left: 0;
+        bottom: -.14rem;
+        content: '';
+        width: 100%;
+        height: .14rem;
+        background-image: url(~themes/default/img/icon_invoice_fapiaochayan_yuan@3x.png);
+        background-size: auto .06rem;
+        background-repeat: repeat-x;
+        z-index: 3000;
+      }
+    .title{
+        color: #B8804C;
+        font-size: .28rem;
+    }
+    .goOrderDetail {
+        display: flex;
+        align-items: center;
+        font-size: .28rem;
+        max-width: calc(~'100% - 100px');
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .icon_train{
+            display: flex;
+            align-items: center;
+            margin-right: .06rem;
+        }
+        .icon_right{
+            display: flex;
+            align-items: center;
+        }
+        .icon_common_rightarrow{
+            fill: @disable-color;
+        }
+        .icon_train_train{
+            fill:@theme-color
+        }
+        .icon_plane_plane{
+            fill:@theme-color
+        }
+    }
+ }

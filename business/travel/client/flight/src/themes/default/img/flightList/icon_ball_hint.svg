@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffb843;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_ball_hint" class="cls-1" d="M2811,399a36,36,0,1,1-36,36A36,36,0,0,1,2811,399Zm0,51a3,3,0,1,1,3-3A3,3,0,0,1,2811,450Zm0-10a2,2,0,0,1-2-2V418a2,2,0,0,1,4,0v20A2,2,0,0,1,2811,440Z" transform="translate(-2775 -399)"/>
+</svg>

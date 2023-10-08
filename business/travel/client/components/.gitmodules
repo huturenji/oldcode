@@ -1,0 +1,3 @@
+[submodule "announcement/src/platform"]
+	path = announcement/src/platform
+	url = yanggu:product/bplus/travel/frontend-client/platform.git

@@ -1,0 +1,210 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.queryExpress{
+    width: 100%;
+    border-radius: 0.12rem;
+    .mask{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 9;
+    }
+    .topWrap{ 
+        height: 0.8rem;
+        line-height: 0.8rem;
+        background: @sub-background-color ;
+        font-size: 0.3rem;
+        border-radius: 0.12rem;
+        padding: 0 0.31rem;
+        position: relative;
+        z-index: 99;
+        .inputWrap{
+            background: @sub-background-color;
+            height: 0.8rem;
+            
+            width: 100%;
+            .flex-box();
+            .align-items(center);
+            .expressNum{
+                .flex(1);
+                color: @text-color;
+            }
+            .sysBut{
+                width: 0.44rem;
+                height: 0.44rem;
+                background: url(~themes/default/img/expressServer/icon_qrcode.png) no-repeat center;
+                background-size: 0.4rem;
+                cursor: pointer;
+            }
+            .icon_close{
+                width: 0.33rem;
+                height: 0.33rem;
+                background: url(~themes/default/img/expressServer/close_icon.png) no-repeat center;
+                background-size: 0.33rem;
+                padding-right: 0.3rem;
+                cursor: pointer;
+            }
+            .icon_serach{
+                width: 0.44rem;
+                height: 0.44rem;
+                background: url(~themes/default/img/expressServer/search.png) no-repeat center;
+                background-size: 0.4rem;
+                padding-left: 0.3rem;
+                position: relative;
+                cursor: pointer;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width:0.02rem;
+                    height: 0.4rem;
+                    background-color: @border-color-base;
+                    left: 0rem;
+                    top: 0rem;
+                }
+            }
+            
+        }
+        .topTextWrap{
+            padding-left: 0.3rem;
+            box-sizing: border-box;
+            font-size: 0.3rem;
+            background: @sub-background-color;
+            position: absolute;
+            width: 100%;
+            border-radius: 0.12rem;
+            top: 0.8rem;
+            left: 0;
+            .textTips{
+                align-items: center;
+                line-height: 0.8rem;
+                color:@third-text-color;
+                .info_none_text_warp{
+                    text-align: left;
+                }
+            }
+            .iconWrap{
+                color: @text-color;
+                .flex-box();
+                .align-items(center);
+                .iconInwrap{
+                    width: 0.44rem;
+                    height: 0.44rem;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 0.44rem;
+                    border-radius: 0.08rem;
+                }
+                .nameText{
+                    .flex(1);
+                    padding-left: 0.18rem;
+                }
+            }
+        }
+    }
+}   
+.verifyWrap{
+    // .flex-box();
+    // .align-items(center);
+    // .justify-content(center);
+    z-index: 501;
+    .realContentWrap {
+        position: fixed;
+        z-index: 1000;
+        top: 50%;
+        left:0;
+        right: 0;
+        transform: translateY(-50%);
+        color: @text-color;        
+        padding: 0 10.67vw;
+        &.marginTop{
+            top: 10%;
+            transform: translateY(0);
+        }
+        .realContent {
+            background: @sub-background-color;
+            border-radius: .3rem;
+            padding: 0.15rem;
+            .closeWrap{
+                .flex-box();
+                .justify-content(flex-end);
+                .close{
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    background: url(~themes/default/img/expressServer/icon_close.png) no-repeat center;
+                    background-size: 0.3rem;
+                    &:active{
+                        background: url(~themes/default/img/expressServer/icon_close_pre.png) no-repeat center;
+                        background-size: 0.3rem;
+                    }
+                }
+            }
+            .titleWrap{
+                text-align: center;
+                margin-bottom: 0.37rem;
+                .title {
+                    display: inline-block;
+                    padding-left: 0.41rem;
+                    font-size: .34rem;
+                    font-weight: bold;
+                    background: url(~themes/default/img/expressServer/icon_express_verify.svg) no-repeat left;
+                    background-size: 0.34rem 0.34rem;
+                    
+                }
+            }
+            // 此处开始使用vw是为了使样式不随字号改变而改变，原样输出
+            .tipsWrap {
+                margin-bottom: 4vw;
+                padding: 0 4.67vw;
+                font-size: 15px;
+            }
+            .inputListWrap{
+                margin-bottom: 10.67vw;
+                padding: 0 6.67vw;
+                .flex-box();
+                .align-items(center);
+                .justify-content(center);
+                .verifyInputWrap{
+                    position: relative;
+                    .flex-box();
+                    .justify-content(center);
+                    padding: 4vw 0;
+                    .inputItem{
+                        box-sizing: border-box;
+                        text-align: left;
+                        width: 90%;
+                        font-size: 6.67vw;
+                        font-weight: bold;
+                        letter-spacing: 12vw;
+                    }
+                    .phone_num_line{
+                        position: absolute;
+                        width: 9.34vw;
+                        height: 0.27vw;
+                        background: @border-color-base;
+                        bottom: 0;
+                    }
+                    .phone_num_line_1{
+                        left: 0vw;
+                    }
+                    .phone_num_line_2{
+                        left: 16vw;
+                    }
+                    .phone_num_line_3{
+                        left: 32.67vw;
+                    }
+                    .phone_num_line_4{
+                        left: 48.67vw;
+                    }
+                }
+
+            }
+        }
+    }
+}
+//此处为了兼容showToast被键盘遮盖了
+/deep/.showToastBox{
+    top: 40%;
+}

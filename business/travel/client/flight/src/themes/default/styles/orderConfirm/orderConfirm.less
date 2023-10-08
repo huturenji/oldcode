@@ -1,0 +1,570 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/hairLine.less';
+.page-orderConfirm{
+    height: 100%;
+    overflow-y: auto;
+    .protocols_part{
+        padding: 0 .3rem;
+    }
+    .order-form{
+        margin-bottom: 1.28rem;
+
+        .top{
+            padding-top: @title-bar-height;
+            background: url(~themes/default/img/flightList/bg__banner@2x.png) no-repeat center;
+            background-size: cover;
+            color: #fff;
+            
+            .content{
+                padding:  .24rem .3rem .52rem;
+            }
+            
+            .flight-info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 15px;
+                .left-content{
+                    display: flex;
+                    align-items: center;
+
+                    .time{
+                        display: flex;
+                        align-items: center;
+                        margin-right: .05rem;
+                        white-space: nowrap;
+                        // flex: none;
+    
+                        .logo{
+                            margin-right: .06rem;
+                        }
+                    }
+    
+                    .airport{
+                        margin-left: .1rem;
+                        margin-right: .1rem;
+                    }
+                }
+
+                .icon{
+                    fill: #fff;
+                    flex: none;
+                }
+            }
+
+            .cabin-info{
+                margin: .3rem 0 0;
+                .cabin{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    // font-size: .6rem;
+                    font-size: 30px;
+                    .amount{
+                        margin-left: .3rem;
+
+                        .rmb{
+                            font-size: .4rem;
+                            margin-right: .04rem;
+                        }
+                    }
+                    .price_kind{
+                        padding: .04rem .06rem;
+                        font-size: .24rem;
+                        border-radius: @border-radius-sm;
+                        border: 1px dashed #fff;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: .1rem;
+                        margin-top: .06rem;
+                    }
+                }
+
+                .detail{
+                    margin-top: .05rem;
+                    font-size: .24rem;
+
+                    .rmb{
+                        margin-left: @white-space-sm;
+                    }
+                }
+            }
+
+            .notice-info{
+                background: @info-background;
+                color: #999999;
+                font-size: .24rem;
+                padding: .2rem .3rem ;
+                border-radius: @border-radius-sm;
+            }
+        }
+
+        &>section{
+            background: @sub-background-color;
+            color: @text-color;
+            overflow: hidden;
+            margin-bottom: .2rem;
+        }
+
+        .textTips{
+            color: @placeholder-color;
+        }
+
+        .icon-right{
+            fill: @placeholder-color;
+        }
+
+        .inline-loading{
+            padding: .3rem 0;
+        }
+
+        .customer-list{
+            margin-top: -.2rem;
+            border-radius: @border-radius-base @border-radius-base 0 0 ;
+
+            .psg-choose{
+                .bbpx(1px, @border-color-base, @white-space, @white-space);
+            }
+
+            .line{
+                .bbpx(1px, @border-color-base);
+            }
+
+            .customer-item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 @white-space;
+                margin: .2rem 0;
+
+                .icon-delete{
+                    fill: @danger-color-light;
+                    min-width: .44rem;
+                }
+
+                .customer-info{
+                    position: relative;
+                    text-align: left;
+                    flex: auto;
+                    margin-left: .1rem;
+
+                    .icon-right{
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    .name{
+                        font-size: .3rem;
+                        padding-right: .4rem;
+                    }
+
+                    .detail{
+                        color: @secondary-text-color;
+                        padding-right: .4rem;
+                    }
+
+                    .error-tips{
+                        color: @danger-color;
+                    }
+                }
+            }
+        }
+
+        .connector{
+            background: #fff;
+            font-size: 15px;
+            padding: @white-space;
+
+            &>.content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .title{
+                    color: @third-text-color;
+                    margin-right: .2rem;
+                }
+
+                .content{
+                    flex: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: @text-color;
+
+                    input{
+                        width: auto;
+                        flex: auto;
+                        margin-left: .2rem;
+                    }
+
+                }
+                .icon{
+                    font-size: .4rem;
+                }
+            }
+        }
+        .price_kind_tips_section{
+            margin: 0;
+            .price_kind_tips{
+                padding: .24rem @white-space;
+                font-size: .24rem;
+                color: @third-text-color;
+            }
+        }
+        .reimburse{
+            padding: 0 @white-space;
+            .switch{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 1.6rem;
+                .label{
+                    font-size: .3rem;
+
+                    .tip{
+                        margin-top: @white-space-sm;
+                        font-size: .24rem;
+                        color: @third-text-color;
+                    }
+                }
+            }
+
+            ul{
+                .btpx(1px, @border-color-base);
+
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: .32rem 0;
+                    font-size: .28rem;
+
+                    .title{
+                        position: relative;
+                        color: @third-text-color;
+
+                        .icon{
+                            position: absolute;
+                            right: -.34rem;
+                            top: 50%;
+                            font-size: .3rem;
+                            transform: translateY(-50%);
+                            fill: @third-text-color;
+                        }
+                    }
+
+                    .content{
+                        position: relative;
+                        flex: 1;
+                        margin-left: .74rem;
+                        color: @text-color;
+
+                        .amount{
+                            margin-left: .1rem;
+                        }
+
+                        .icon-right{
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        .invoice_content{
+                            padding-right: .9rem;
+                            position: relative;
+                            .importInvoice{
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                margin-top: -.2rem;
+                                right: .4rem;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bottomBar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 502;
+    height: 1rem;
+    background: @sub-background-color;
+    box-shadow:0px .06rem .2rem 0px rgba(101,112,242,0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .price-info{
+        flex: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        line-height: 1rem;
+        font-size: 18px;
+        color: @third-text-color;
+        width: 139px;
+
+        &>div{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .split{
+            .blpx(1px, @third-text-color);
+            height: .3rem;
+            margin: .12rem;
+        }
+
+        .price{
+            color: @warning-color;
+            font-size: 18px;
+
+            .rmb{
+                font-size: 14px;
+            }
+        }
+
+        .rotate{
+            transform: rotate(180deg);
+        }
+
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: @white-space-sm;
+            fill: @placeholder-color;
+        }
+    }
+
+    .submit{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 100%;
+        color: #fff;
+        font-size: 20px;
+        margin-left: 5px;
+    }
+}
+.show-detail-dom{
+    background: none;
+}
+.priceDetail{
+    border-radius: @border-radius-base @border-radius-base 0 0;
+    background: @sub-background-color;
+    margin-bottom: 1rem;
+    padding: .3rem;
+
+    .title{
+        color: @third-text-color;
+    }
+
+    .detailList{
+        font-size: .3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:not(:last-of-type){
+            margin-bottom: .68rem;
+        }
+
+        .coupon-price{
+            color: @danger-color;
+        }
+
+        .price{
+            font-size: .34rem;
+            .rmb{
+                font-size: .26rem;
+                margin-right: .08rem
+            }
+        }
+    }
+}
+.show-flight-detail{
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .flightDetailMask{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 502;
+    }
+    .flightDetailDialog{
+        width: 80%;
+        max-width: 300px;
+        border-radius: 16px;
+        z-index: 502;
+        pointer-events:all;
+        display: block;
+        position: initial;
+        border-radius: 0.2rem;
+        background-color: #FFFFFF;
+        overflow: hidden;
+        text-align: center;
+    }
+}  
+
+.flightDetail {
+    margin: .2rem;
+    text-align: center;
+    background: @sub-background-color;
+    border-radius: .1rem;
+    padding: .1rem 0 .26rem;
+
+    .header {
+        .bbpx();
+        margin: .1rem;
+
+        .date {
+            text-align: center;
+            font-size: .34rem;
+            color: @text-color;
+            font-weight: 600;
+            padding-bottom: .3rem;
+        }
+    }
+
+    .main {
+        border-radius: .1rem;
+        padding: .1rem;
+
+        .date {
+            text-align: left;
+            font-size: .28rem;
+            color: @third-text-color;
+            margin-left: .2rem;
+        }
+
+        .plane {
+            background-color: @sub-background-color;
+            line-height: .35rem;
+            display: flex;
+            font-size: .24rem;
+            color: @text-color;
+            margin-bottom: .1rem;
+            .logo{
+                flex: none;
+            }
+            span {
+                line-height: .6rem;
+                display: inline-block;
+                vertical-align: super;
+            }
+
+            .seatLevel {
+                margin-left: .2rem;
+            }
+        }
+
+        .share{
+            font-size: .18rem;
+            color: @third-text-color;
+            text-align: left;
+            padding-left: 20px;
+            margin-bottom: .15rem;
+            margin-top: -.2rem
+        }
+
+        .trip {
+            display: flex;
+            justify-content: space-between;
+
+            .station {
+                flex: auto;
+                font-size: .30rem;
+                display: flex;
+                flex-direction: column;
+
+                &:first-of-type{
+                    text-align: left;
+                    padding-left: .2rem;
+                }
+
+                &:last-of-type{
+                    text-align: right;
+                    padding-right: .2rem;
+                }
+
+                span {
+                    display: inline-block;
+                }
+
+                .airport {
+                    color: @text-color;
+                    font-size: .28rem;
+                }
+
+                .time {
+                    font-weight: bold;
+                    font-size: .4rem;
+                    height: .6rem;
+
+                    .plus {
+                        color: @danger-color;
+                    }
+                }
+            }
+
+            .arrow {
+                flex: auto;
+                text-align: center;
+                font-size: .28rem;
+                color: @secondary-text-color;
+
+                .icon{
+                    height: .5rem;
+                    background: url(~themes/default/img/common/icon_plane_jingting@2x.svg) no-repeat center;
+                    background-size: contain;
+                }
+
+                span {
+                    font-size: .24rem;
+                    padding: .1rem;
+                    color: @text-color;
+                    display: block
+                }
+            }
+        }
+    }
+
+    .price {
+        background: #feedd7;
+        border-radius: .1rem;
+        padding: .2rem;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: .32rem;
+        padding: .2rem;
+
+        span {
+            padding: 0 .4rem;
+        }
+    }
+}
+

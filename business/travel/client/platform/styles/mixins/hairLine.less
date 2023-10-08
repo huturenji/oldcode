@@ -1,0 +1,169 @@
+@import '../themes/default/index.less';
+.repixeY(@origin: 0 50%) {
+    -webkit-transform-origin: @origin;
+    transform-origin: @origin;
+
+    @media screen and (-webkit-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5) {
+        -webkit-transform: scaleY(0.7);
+        transform: scaleY(0.7);
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2) {
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 2.5),
+    (-webkit-min-device-pixel-ratio: 2.5) {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3) {
+        -webkit-transform: scaleY(0.33);
+        transform: scaleY(0.33);
+    }
+}
+
+.repixeX(@origin: 50% 0) {
+    -webkit-transform-origin: @origin;
+    transform-origin: @origin;
+
+    @media screen and (-webkit-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5) {
+        -webkit-transform: scaleX(0.7);
+        transform: scaleX(0.7);
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2) {
+        -webkit-transform: scaleX(0.5);
+        transform: scaleX(0.5);
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 2.5),
+    (-webkit-min-device-pixel-ratio: 2.5) {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3) {
+        -webkit-transform: scaleX(0.33);
+        transform: scaleX(0.33);
+    }
+}
+
+.repixe() {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    @media screen and (-webkit-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5) {
+        width: 150%;
+        height: 150%;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2) {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3) {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33);
+        transform: scale(0.33);
+    }
+}
+
+//手机端1px border-bottom
+.bbpx(@size:1px, @color: @border-color-base, @left: 0, @right: 0, @style: solid) {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: @left;
+        right: @right;
+        bottom: 0;
+        height: 1px;
+        border-bottom: @size @style @color;
+        .repixeY();
+    }
+}
+
+//手机端1px border-top
+.btpx(@size:1px, @color: @border-color-base, @left: 0, @right: 0, @style: solid) {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: @left;
+        right: @right;
+        top: 0;
+        height: 1px;
+        border-top: @size @style @color;
+        .repixeY(0 0);
+    }
+}
+
+//手机端1px border-left
+.blpx(@size:1px, @color: @border-color-base, @top: 0, @bottom: 0, @style: solid) {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: @top;
+        bottom: @bottom;
+        width: 1px;
+        border-left: @size @style @color;
+        .repixeX(0 0);
+    }
+}
+
+//手机端1px border-right
+.brpx(@size:1px, @color: @border-color-base, @top: 0, @bottom: 0, @style: solid) {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: @top;
+        bottom: @bottom;
+        width: 1px;
+        border-right: @size @style @color;
+        .repixeX(100% 100%);
+    }
+}
+
+//手机端1px border
+.bpx(@size:1px, @border-radius: @border-radius-base, @color: @border-color-base, @style: solid) {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-style: @style;
+        border-width: @size;
+        border-color: @color;
+        border-radius: 2 * @border-radius;
+        .repixe();
+    }
+}

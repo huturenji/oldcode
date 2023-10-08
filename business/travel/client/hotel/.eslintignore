@@ -1,0 +1,11 @@
+/build/
+/hotelBuild/
+/node_modules/
+/static/
+/dist/
+/src/components/
+/src/mock/
+/src/platform/
+/src/sprite/
+/src/themes/
+/src/thirdparty/

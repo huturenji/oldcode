@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=yes">
+    <title>编辑订单</title>
+    <!-- <link href="./css/hotel.4c7683845d1c1100f673.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/25.af0b2de953ff77ccd1fd.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/1.8d139099b3ee0dadb178.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/3.c9dbff8e3179c54f268e.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/6.21dd397b2869eb0e3627.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/20.a1aa3b0baac640efb4d0.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/0.a90ab929173b5599f66a.css">
+    <link rel="stylesheet" type="text/css" href="./css/21.80ca3e6e68029401a7c3.css"> 
+    <link rel="stylesheet" type="text/css" href="../common/css/sinosun_common.5664f620.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/common.css"> 
+    <style>
+        .orderBottomButWrap.buttWrap .right{position: relative;}
+        .point{
+            position: absolute;
+            top: 0.1rem;
+        }
+    </style>
+    <script>
+        function nextPage(){
+        window.open("../bookHotelOrderDetail/index.html")
+        }
+    </script>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="icon_common_calendar">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g transform="translate(1.000000, 2.000000)" fill-rule="nonzero">
+                    <path
+                        d="M3.88888889,38.9666667 C2.15678337,38.9666667 0.7,37.6266842 0.7,35.9024979 L0.7,8.43083541 C0.7,6.70664917 2.15678337,5.36666667 3.88888889,5.36666667 L38.1111111,5.36666667 C39.8432166,5.36666667 41.3,6.70664917 41.3,8.43083541 L41.3,35 C41.3,37.1907295 39.5240628,38.9666667 37.3333333,38.9666667 L3.88888889,38.9666667 Z M3.96666667,35.7 L37.3333333,35.7 C37.7199327,35.7 38.0333333,35.3865993 38.0333333,35 L38.0333333,8.63333333 L3.96666667,8.63333333 L3.96666667,35.7 Z">
+                    </path>
+                    <path
+                        d="M10.0333333,2.33333333 L10.0333333,11.2876108 C10.0333333,12.1896759 10.816835,12.9209441 11.7833333,12.9209441 C12.7498316,12.9209441 13.5333333,12.1896759 13.5333333,11.2876108 L13.5333333,2.33333333 C13.5333333,1.43126824 12.7498316,0.7 11.7833333,0.7 C10.816835,0.7 10.0333333,1.43126824 10.0333333,2.33333333 Z">
+                    </path>
+                    <path
+                        d="M28.7,2.33333333 L28.7,11.2876108 C28.7,12.1896759 29.4835017,12.9209441 30.45,12.9209441 C31.4164983,12.9209441 32.2,12.1896759 32.2,11.2876108 L32.2,2.33333333 C32.2,1.43126824 31.4164983,0.7 30.45,0.7 C29.4835017,0.7 28.7,1.43126824 28.7,2.33333333 Z"
+                        id="icon_common_calendar_calendar_Path-17-Copy"></path>
+                    <path
+                        d="M9.88500555,21.3381769 L31.8158455,21.3381769 C32.7179106,21.3381769 33.4491789,20.5546752 33.4491789,19.5881769 C33.4491789,18.6216786 32.7179106,17.8381769 31.8158455,17.8381769 L9.88500555,17.8381769 C8.98294046,17.8381769 8.25167222,18.6216786 8.25167222,19.5881769 C8.25167222,20.5546752 8.98294046,21.3381769 9.88500555,21.3381769 Z"
+                        opacity="0.7"></path>
+                    <path
+                        d="M9.88500555,29.5493102 L20.9775417,29.5493102 C21.8796068,29.5493102 22.610875,28.7658085 22.610875,27.7993102 C22.610875,26.8328119 21.8796068,26.0493102 20.9775417,26.0493102 L9.88500555,26.0493102 C8.98294046,26.0493102 8.25167222,26.8328119 8.25167222,27.7993102 C8.25167222,28.7658085 8.98294046,29.5493102 9.88500555,29.5493102 Z"
+                        opacity="0.7"></path>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_clamation-circle">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g>
+                    <g transform="translate(0.500000, 0.500000)">
+                        <path
+                            d="M10.5,0 C16.2989899,0 21,4.70101013 21,10.5 C21,16.2989899 16.2989899,21 10.5,21 C4.70101013,21 0,16.2989899 0,10.5 C0,4.70101013 4.70101013,0 10.5,0 Z M10.5,1.57142857 C5.56888616,1.57142857 1.57142857,5.56888616 1.57142857,10.5 C1.57142857,15.4311138 5.56888616,19.4285714 10.5,19.4285714 C15.4311138,19.4285714 19.4285714,15.4311138 19.4285714,10.5 C19.4285714,5.56888616 15.4311138,1.57142857 10.5,1.57142857 Z"
+                            fill-rule="nonzero"></path>
+                        <path
+                            d="M9.17320033,6.02769252 C9.17320033,5.61130279 9.32231064,5.25259405 9.62053571,4.95155552 C9.91876079,4.650517 10.2760628,4.5 10.6924526,4.5 C11.1144692,4.5 11.4717712,4.6491103 11.7643694,4.94733538 C12.0569676,5.24556046 12.2032645,5.6056759 12.2032645,6.02769252 C12.2032645,6.44970914 12.0555609,6.80982459 11.7601493,7.10804967 C11.4647376,7.40627474 11.1088423,7.55538504 10.6924526,7.55538504 C10.2591822,7.55538504 9.89766002,7.40205464 9.60787528,7.09538923 C9.31809053,6.78872382 9.17320033,6.43282848 9.17320033,6.02769252 Z M12.0175781,8.95647321 L12.0175781,14.1303711 C12.0175781,14.5580146 12.0850998,14.8520151 12.2201451,15.0123814 C12.3551904,15.1727477 12.6702914,15.2529297 13.1654576,15.2529297 L13.1654576,16.1476004 L8,16.1476004 L8,15.2529297 L8.19412667,15.2529297 C8.67241218,15.2529297 8.97485288,15.1685276 9.10145787,14.999721 C9.22806285,14.8309143 9.2913644,14.5411339 9.2913644,14.1303711 L9.2913644,11.6151646 C9.2913644,11.1987749 9.22665615,10.9075878 9.09723772,10.7415946 C8.96781929,10.5756014 8.66678529,10.492606 8.19412667,10.492606 L8,10.492606 L8,9.59793527 L12.0175781,8.95647321 Z">
+                        </path>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="icon_common_rightarrow">
+            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+            <title>icon_common_leftarrow</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_rightarrow_icon_common_leftarrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M28.715863,11.568274 C29.977357,11.568274 31,10.545631 31,9.28413698 C31,8.02264296 29.977357,7 28.715863,7 L3.28413698,7 C2.02264296,7 1,8.02264296 1,9.28413698 L1,34.715863 C1,35.977357 2.02264296,37 3.28413698,37 C4.545631,37 5.56827396,35.977357 5.56827396,34.715863 L5.56827396,11.568274 L28.715863,11.568274 Z"
+                    id="icon_common_rightarrow_Path" fill-rule="nonzero"
+                    transform="translate(16.000000, 22.000000) rotate(-225.000000) translate(-16.000000, -22.000000) ">
+                </path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="icon_common_downarrow">
+            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+            <title>icon_common_downarrow</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_downarrow_icon_common_downarrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M11.568274,4.56827396 L34.715863,4.56827396 C35.977357,4.56827396 37,3.545631 37,2.28413698 C37,1.02264296 35.977357,-1.77635684e-15 34.715863,-1.77635684e-15 L9.28413698,-1.77635684e-15 C8.02264296,-1.77635684e-15 7,1.02264296 7,2.28413698 L7,27.715863 C7,28.977357 8.02264296,30 9.28413698,30 C10.545631,30 11.568274,28.977357 11.568274,27.715863 L11.568274,4.56827396 Z"
+                    id="icon_common_downarrow_Path" fill-rule="nonzero"
+                    transform="translate(22.000000, 15.000000) rotate(-135.000000) translate(-22.000000, -15.000000) ">
+                </path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_useradd">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g>
+                    <rect opacity="0" x="0" y="0" width="22" height="22"></rect>
+                    <path
+                        d="M11.7325559,12.0128637 C14.7213614,12.0128637 17.1498554,9.6402602 17.1498554,6.70643186 C17.1498554,3.77260351 14.7213614,1.4 11.7325559,1.4 C8.74375048,1.4 6.31525645,3.77260351 6.31525645,6.70643186 C6.31525645,9.6402602 8.74375048,12.0128637 11.7325559,12.0128637 Z M11.7325559,10.8128637 C9.4003193,10.8128637 7.51525645,8.97118459 7.51525645,6.70643186 C7.51525645,4.44167912 9.4003193,2.6 11.7325559,2.6 C14.0647926,2.6 15.9498554,4.44167912 15.9498554,6.70643186 C15.9498554,8.97118459 14.0647926,10.8128637 11.7325559,10.8128637 Z"
+                        fill-rule="nonzero"></path>
+                    <path
+                        d="M11.7325559,10.8128637 C6.58141405,10.8128637 2.4,14.8980447 2.4,19.9444444 C2.4,20.2758153 2.66862915,20.5444444 3,20.5444444 C3.33137085,20.5444444 3.6,20.2758153 3.6,19.9444444 C3.6,15.5671203 7.23798287,12.0128637 11.7325559,12.0128637 C12.0639268,12.0128637 12.3325559,11.7442346 12.3325559,11.4128637 C12.3325559,11.0814929 12.0639268,10.8128637 11.7325559,10.8128637 Z"
+                        fill-rule="nonzero"></path>
+                    <path
+                        d="M13.5063094,13.6588334 L13.5757359,13.5757359 C13.7840156,13.3674563 14.1073248,13.3443141 14.3411666,13.5063094 L14.4242641,13.5757359 L16.5,15.651 L18.5757359,13.5757359 C18.7840156,13.3674563 19.1073248,13.3443141 19.3411666,13.5063094 L19.4242641,13.5757359 C19.6325437,13.7840156 19.6556859,14.1073248 19.4936906,14.3411666 L19.4242641,14.4242641 L17.349,16.5 L19.4242641,18.5757359 C19.6325437,18.7840156 19.6556859,19.1073248 19.4936906,19.3411666 L19.4242641,19.4242641 C19.2159844,19.6325437 18.8926752,19.6556859 18.6588334,19.4936906 L18.5757359,19.4242641 L16.5,17.349 L14.4242641,19.4242641 C14.2159844,19.6325437 13.8926752,19.6556859 13.6588334,19.4936906 L13.5757359,19.4242641 C13.3674563,19.2159844 13.3443141,18.8926752 13.5063094,18.6588334 L13.5757359,18.5757359 L15.651,16.5 L13.5757359,14.4242641 C13.3674563,14.2159844 13.3443141,13.8926752 13.5063094,13.6588334 L13.5757359,13.5757359 L13.5063094,13.6588334 Z"
+                        fill-rule="nonzero"
+                        transform="translate(16.500000, 16.500000) rotate(-45.000000) translate(-16.500000, -16.500000) ">
+                    </path>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="btn_conmmon_phone">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>btn_hotel_phone</title>
+            <desc>Created with Sketch.</desc>
+            <g id="btn_conmmon_phone_btn_hotel_phone" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="btn_conmmon_phone_icon/对话-copy" transform="translate(1.000000, 1.500000)">
+                    <g id="btn_conmmon_phone_Group">
+                        <rect id="btn_conmmon_phone_Rectangle" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round" x="2.34912109" y="0" width="15.7683105"
+                            height="18.4008789" rx="2"></rect>
+                        <line x1="0.78125" y1="4.47429812" x2="3.91699219" y2="4.47429812" id="btn_conmmon_phone_Path-6"
+                            stroke="#575757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="0.78125" y1="9.20043945" x2="3.91699219" y2="9.20043945"
+                            id="btn_conmmon_phone_Path-6-Copy" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="0.78125" y1="13.9265808" x2="3.91699219" y2="13.9265808"
+                            id="btn_conmmon_phone_Path-6-Copy-2" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round"></line>
+                        <path
+                            d="M12.1456152,11.3583493 C11.7009064,11.7287513 10.7402016,10.7929408 9.92810361,9.83110248 C9.11601067,8.86926583 8.35408589,7.77051049 8.79879462,7.3997222 C9.43662402,6.87090114 9.9763842,6.5570773 9.05490677,5.18787 C8.13418334,3.82206169 7.3549027,4.74580286 6.73820432,5.25765031 C6.02305041,5.85059472 6.42815394,8.32157173 8.62378045,10.9177845 C10.8190274,13.5132347 13.2013714,14.3362617 13.9127535,13.7436918 C14.5290842,13.2284497 15.5829546,12.6298477 14.3861283,11.4903603 C13.1885464,10.3516202 12.7826888,10.8261269 12.1456067,11.3583436 L12.1456152,11.3583493 Z"
+                            id="btn_conmmon_phone_Path" fill="#575757"></path>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="icon_common_uparrow">
+            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+            <title>icon_common_uparrow</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_uparrow_icon_common_uparrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M11.568274,19.568274 L34.715863,19.568274 C35.977357,19.568274 37,18.545631 37,17.284137 C37,16.022643 35.977357,15 34.715863,15 L9.28413698,15 C8.02264296,15 7,16.022643 7,17.284137 L7,42.715863 C7,43.977357 8.02264296,45 9.28413698,45 C10.545631,45 11.568274,43.977357 11.568274,42.715863 L11.568274,19.568274 Z"
+                    id="icon_common_uparrow_Path" fill-rule="nonzero"
+                    transform="translate(22.000000, 30.000000) rotate(-315.000000) translate(-22.000000, -30.000000) ">
+                </path>
+            </g>
+        </symbol>
+    </svg>
+    <div>
+        <div class="outWrapHotel child-view">
+            <div data-v-7a92ce22="" class="orderCard orderCardWrap">
+                <div data-v-7a92ce22="" class="cardWrap">
+                    <div data-v-7a92ce22="" class="titleWrap">丽顿酒店(武汉高铁站科技大学青山校区店)</div>
+                    <div data-v-7a92ce22="" class="textinfo"><svg data-v-7a92ce22=""
+                            class="icon calendar icon_common_calendar" style="width: 0.24rem; height: 0.24rem;">
+                            <use xlink:href="#icon_common_calendar"></use>
+                        </svg>
+                        06月09日入住-06月10日离店 住1晚</div>
+                    <div data-v-7a92ce22="" class="textinfo roominfo"><svg data-v-7a92ce22=""
+                            class="icon textinfoRight icon_common_clamation-circle"
+                            style="width: 0.24rem; height: 0.24rem;">
+                            <use xlink:href="#icon_common_clamation-circle"></use>
+                        </svg> <span data-v-7a92ce22="">标准双床房</span> <span data-v-7a92ce22="">| 不含早</span> <span
+                            data-v-7a92ce22="">| 免费WiFi</span></div>
+                    <div data-v-7a92ce22="" class="textinfo rightButton"><span data-v-7a92ce22=""
+                            class="normal-btn">房型详情<svg data-v-7a92ce22=""
+                                class="icon textinfoRight icon_common_rightarrow"
+                                style="width: 0.24rem; height: 0.24rem;">
+                                <use xlink:href="#icon_common_rightarrow"></use>
+                            </svg></span></div>
+                </div>
+            </div>
+            <div class="topbgOutWrap">
+                <div class="topbgWrap"
+                    style="background-image: url(&quot;https://pavo.elongstatic.com/i/Hotel350_350/MnybIFfUQM.jpg&quot;);">
+                    <div class="topbgitem"></div>
+                </div>
+            </div>
+            <div class="tab">
+                <div>
+                    <div class="tabtit bbpxs">入住信息</div>
+                    <div class="downWrap bbpxs cursorp normal-btn">
+                        <div class="text">房间数</div>
+                        <div class="middle">1间</div> <svg class="icon downWrapIcon icon_common_downarrow"
+                            style="width: 0.24rem; height: 0.24rem;">
+                            <use xlink:href="#icon_common_downarrow"></use>
+                        </svg>
+                    </div>
+                    <div class="roomNumWrap" style="display: none;">
+                        <div class="roomItem cursorp active">1间</div>
+                        <div class="roomItem cursorp">2间</div>
+                        <div class="roomItem cursorp">3间</div>
+                        <div class="roomItem cursorp">4间</div>
+                        <div class="roomItem cursorp">5间</div>
+                    </div>
+                    <div class="roomUserSumWrap notabborder">
+                        <div class="left">
+                            <div class="panel pd3 bbpxs leftColor roomUserSum bbpxs">
+                                <div class="vux-flexbox panel_flex vux-flex-row">
+                                    <div class="vux-flexbox-item" style="margin-left: 8px; flex: 0 0 25%;">
+                                        <div class="form_input_title cursorp normal-btn">
+                                            入住人1
+                                            <svg class="icon circle normal-btn icon_common_clamation-circle"
+                                                style="width: 0.28rem; height: 0.28rem;">
+                                                <use xlink:href="#icon_common_clamation-circle"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="vux-flexbox-item" style="margin-left: 8px;">
+                                        <div class="form_input"><input type="text" readonly placeholder="请输入入住人姓名" value="张三"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="right cursorp normal-btn"><svg class="icon useradd normal-btn icon_common_useradd"
+                                style="width: 0.38rem; height: 0.38rem;">
+                                <use xlink:href="#icon_common_useradd"></use>
+                            </svg></div>
+                    </div>
+                    <div class="roomUserSumWrap notabborder mb20 btpxs">
+                        <div class="left">
+                            <div class="panel pd3 leftColor roomUserSum">
+                                <div class="vux-flexbox panel_flex vux-flex-row">
+                                    <div class="vux-flexbox-item" style="margin-left: 8px; flex: 0 0 25%;">
+                                        <div class="form_input_title">联系电话</div>
+                                    </div>
+                                    <div class="vux-flexbox-item" style="margin-left: 8px;">
+                                        <div class="form_input"><input type="text" readonly maxlength="13" placeholder="用于接受预定信息" value="13111111111"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right cursorp normal-btn"><svg class="icon useradd normal-btn btn_conmmon_phone"
+                                style="width: 0.38rem; height: 0.38rem;">
+                                <use xlink:href="#btn_conmmon_phone"></use>
+                            </svg></div>
+                    </div>
+                    <div class="reimburse">
+                        <div class="reimburseTitWrap">
+                            <div class="leftWrap">
+                                <div class="tit">报销凭证</div>
+                                <div class="tip">离店后30天内可进入订单详情补开</div>
+                            </div>
+                            <div class="orderRightWrap cursorp">
+                                <div role="switch" aria-checked="false" slot="right-icon" class="sn-switch">
+                                    <div class="sn-switch-node"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reimDetail" style="display: none;">
+                            <div class="list bbpxsr">
+                                <div class="title">发票类型</div>
+                                <div class="content"><span class="text"
+                                        style="color: rgb(153, 153, 153);">增值税普通发票（电子）</span></div>
+                            </div>
+                            <div class="list bbpxsr">
+                                <div class="title">发票抬头</div>
+                                <div class="content cursorp">
+                                    <div class="text">电子发票</div>
+                                    <div class="importInvoice"><svg class="icon svg_icon_invoice_import"
+                                            style="width: 0.4rem; height: 0.4rem;">
+                                            <use xlink:href="#svg_icon_invoice_import"></use>
+                                        </svg></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                            <div class="list bbpxsr">
+                                <div class="title">发票内容</div>
+                                <div class="content"><span class="text">*旅游服务*代订酒店费</span></div>
+                            </div>
+                            <div class="list">
+                                <div class="title">发票备注</div>
+                                <div class="content"><span class="text"
+                                        style="color: rgb(153, 153, 153);"><span>注明酒店名和入离时间</span></span> <span
+                                        class="arrow cursorp active"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="protocols_part">
+                        <div data-v-2a706403="" class="protocols-container">
+                            <div data-v-2a706403="" class="agreement">点击提交订单表示您已阅读并同意<i
+                                    data-v-2a706403="">《企业商旅服务协议》</i><i data-v-2a706403="">《企业商旅服务协议》</i></div>
+                            
+                        </div>
+                    </div>
+                    <div class="line bottomTit">取消规则：</div>
+                    <div class="line bottomText">订单一经确认，不可取消，如未能如约入住，您的预付房费将不予退还</div>
+                    
+                    <div class="line bottomTit">入住离店：</div>
+                    <div class="line bottomText">入住请在当日14点以后办理，早到店可能需要等待，离店请在当日12点以前办理</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="v-transfer-dom">
+        <div class="orderBottomButWrap buttWrap">
+            <div class="left">
+                <div class="leftText num-font"><span class="rmb">￥</span>343</div> <span class="lineH"></span>
+                <div class="leftTps">
+                    共
+                    <span>1</span>间
+                </div>
+            </div>
+            <div class="middle cursorp"><span>明细</span> <svg class="icon downWrapIcon normal-btn icon_common_uparrow"
+                    style="width: 0.2rem; height: 0.2rem;">
+                    <use xlink:href="#icon_common_uparrow"></use>
+                </svg></div>
+            <div class="right" onclick="nextPage()">
+                <div class="point" style="right: .8rem;bottom: -.5rem;"></div>
+                <div class="bottombuttonWrap">
+                    <div class="subButton normal-btn linear-gra-dange">提交订单</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 体验版背景 -->
+    <div data-v-b94e16a0="" class="water-mark">
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    <div data-v-b94e16a0="" class=" water-mark-item-pc">
+        体验版
+    </div>
+    </div>
+</body>
+</html>

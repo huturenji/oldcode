@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/icon/common/delete</title>
+    <desc>Created with Sketch.</desc>
+    <g id="h5-svg/icon/common/delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组">
+            <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="22" height="22"></rect>
+            <path d="M11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 Z M11,1.2 C5.58760945,1.2 1.2,5.58760945 1.2,11 C1.2,16.4123905 5.58760945,20.8 11,20.8 C16.4123905,20.8 20.8,16.4123905 20.8,11 C20.8,5.58760945 16.4123905,1.2 11,1.2 Z M16.1,10.5 C16.4313708,10.5 16.7,10.7686292 16.7,11.1 C16.7,11.3982338 16.4824104,11.6456468 16.1973231,11.692147 L16.1,11.7 L6.1,11.7 C5.76862915,11.7 5.5,11.4313708 5.5,11.1 C5.5,10.8017662 5.71758961,10.5543532 6.00267688,10.507853 L6.1,10.5 L16.1,10.5 Z" id="形状结合" fill="#666666" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

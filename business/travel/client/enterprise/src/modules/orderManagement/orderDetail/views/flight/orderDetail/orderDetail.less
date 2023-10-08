@@ -1,0 +1,660 @@
+@charset "utf-8";
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+//为他人预定的订单样式
+@otherBookColor:#c2c2c2;
+@otherBookBorder:#c2c2c2;
+@otherBookBg:#c2c2c2;
+
+* {
+    box-sizing: border-box;
+}
+
+.fLeft {
+    float: left;
+}
+
+.fRight {
+    float: right;
+}
+
+.order-detail-container {
+    padding: 0 .3rem .92rem .3rem;
+    color: @text-color;
+    margin-bottom: .8rem;
+
+    &>div {
+        .clear;
+    }
+
+    .header{
+        margin: 0 -.3rem;
+        padding: .2rem .32rem;
+        color: #fff;
+        background: #262DD9;
+
+        .headInfo {
+            border-top: 1px solid #fff;
+            display: flex;
+            margin-top: 5px;
+            padding-top: 5px;
+
+            .infoOne {
+                text-align: left;
+                flex: auto;
+            }
+        }
+    }
+
+    .summary {
+        .clear;
+        height: .5rem;
+        font-weight: bold;
+
+        .status {
+            float: left;
+            font-size: .36rem;
+        }
+
+        .amount {
+            float: right;
+            font-size: .44rem;
+
+            .unit {
+                font-size: .3rem;
+            }
+
+            .icon-arrow {
+                margin: .1rem 0 .1rem .2rem;
+                width: .16rem;
+                height: .3rem;
+                float: right;
+                background: url(~assets/img/compment/icon_right_white.png) no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+
+    .summary-note {
+        font-size: .24rem;
+        margin: .14rem 0;
+
+        span {
+            color: #FFB843;
+        }
+    }
+
+    .order-no {
+        font-size: .26rem;
+        text-align: left;
+        margin: .1rem 0;
+
+        span {
+            margin-right: .15rem;
+        }
+    }
+
+    .order-card {
+        .clear;
+        margin-top: .2rem;
+
+        section {
+            .clear;
+            background: #fff;
+            padding: 0 .3rem;
+
+            &:last-of-type {
+                border-radius: 0 0 .1rem .1rem;
+
+                .customer-info {
+                    border-bottom-color: transparent;
+                }
+            }
+
+            .customer-info {
+                border-bottom: 1px dashed #c2c2c2;
+                padding-bottom: .37rem;
+                padding-top: .32rem;
+
+                &.disable {
+
+                    div,
+                    span {
+                        color: @third-text-color  !important;
+                    }
+                }
+
+                &>div {
+                    .clear;
+                    margin-bottom: .17rem;
+                }
+
+                .name,
+                .car-no {
+                    font-size: .32rem;
+                    color: #000;
+                }
+
+                .id-card,
+                .seat-info {
+                    font-size: .26rem;
+                    color: @third-text-color;
+
+                    .seat-lv {
+                        margin-right: .13rem;
+                    }
+
+                    .seat-amount {
+                        font-size: .28rem;
+                        color: #F83939;
+                    }
+                }
+
+                .cust-btn-group {
+                    .clear;
+                    position: relative;
+                    top: .15rem;
+
+                    .btn {
+                        float: right;
+                        width: 1.05rem;
+                        height: .49rem;
+                        margin-left: .39rem;
+                        border: .02rem solid @text-color;
+                        border-radius: .06rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .explanation {
+        float: right;
+        height: .3rem;
+        line-height: .3rem;
+        margin: .2rem;
+        font-size: .26rem;
+        text-indent: .35rem;
+        color: @theme-color;
+        background: url(~assets/img/compment/icon_about.png) no-repeat 0 center;
+        background-size: contain;
+    }
+
+    .items {
+        margin: 0 -.3rem;
+
+        li {
+            .clear;
+            font-size: .32rem;
+            background: #fff;
+            padding: .3rem;
+            margin: .2rem 0;
+
+            &.no-padding {
+                padding: 0;
+            }
+
+            div:first-of-type {
+                margin-right: .3rem;
+            }
+
+            .detail {
+                color: @third-text-color;
+                padding: 0 .35rem;
+                background: url(~assets/img/compment/icon_right.png) no-repeat right center;
+                background-size: .32rem;
+            }
+
+            .callphone {
+                color: #262DD9;
+                padding-left: 0.5rem;
+                font-size: 0.3rem;
+                background: url(~assets/img/compment/icon_phone.png) no-repeat 0 center;
+                background-size: contain;
+            }
+            div.reimburse-btn.otherBook{
+                background: @otherBookBg;
+                &:active {
+                    background-color: @otherBookBg;
+                }
+            }
+            div.reimburse-btn {
+                padding: .1rem;
+                background: @theme-color;
+                margin: 0;
+                color: #fff;
+                font-size: .24rem;
+
+                &:active {
+                    background-color: @theme-color-active;
+                }
+            }
+
+            .express-detail {
+                text-align: center;
+                padding: .1rem;
+                background: #262DD9;
+                margin: 0 auto;
+                color: #fff;
+                font-size: .24rem;
+            }
+
+            .btn-again{
+                background: #fff;
+                color: @theme-color;
+                text-align: center;
+                display: block;
+                height: .92rem;
+                line-height: .92rem;
+                &:active {
+                    color: #B5D0F9;
+                }
+            }
+            .btn-again.otherBook{
+                color: @otherBookColor;
+                &:active{
+                    color: @otherBookColor;
+                }
+            }
+        }
+
+        .reimbursementVoucher {
+            position: relative;
+            height: 1.95rem;
+            background: url(~assets/img/flightList/reimburse_line.png) #fff repeat-x;
+            background-size: 15%;
+
+            .tripInfo {
+                float: left;
+                // width: 2.07rem;
+                height: 1.24rem;
+                border: 1px solid #B5D0F8;
+                margin-top: .1rem;
+                padding: 0 .3rem;
+                text-align: center;
+                font-size: .26rem;
+                line-height: .26rem;
+                margin-right: .2rem;
+
+                .tripMsg {
+                    font-size: .28rem;
+                    line-height: .28rem;
+                    margin-right: 0;
+                    margin-bottom: .12rem;
+                    padding: .24rem 0 .12rem;
+                    border-bottom: 1px solid #B5D0F8;
+
+                    .tripIcon {
+                        display: inline-block;
+                        width: .28rem;
+                        height: .28rem;
+                        transform: translateY(2px);
+                        background: url(~assets/img/myOrder/icon_one_way.png) no-repeat;
+                        background-size: 100%;
+                    }
+                }
+            }
+
+            .mailInfo {
+                float: left;
+                margin-top: .13rem;
+
+                &.nopay {
+                    margin-top: .33rem;
+                }
+
+                .status {
+                    font-size: .32rem;
+                    line-height: .32rem;
+                    margin-bottom: .2rem;
+                    margin-right: 0;
+
+                    .statusIcon {
+                        display: inline-block;
+                        float: left;
+                        width: 0.4rem;
+                        height: 0.4rem;
+
+                        &.application {
+                            background: url(~assets/img/orderDetail/icon_application2.png) no-repeat center;
+                            background-size: 100%;
+                        }
+
+                        &.mailing {
+                            background: url(~assets/img/orderDetail/icon_mailing2.png) no-repeat center;
+                            background-size: 100%;
+                        }
+
+                        &.signing {
+                            background: url(~assets/img/orderDetail/icon_signing2.png) no-repeat center;
+                            background-size: 100%;
+                        }
+                    }
+                }
+
+                .message {
+                    font-size: .26rem;
+                    line-height: .26rem;
+                    margin-bottom: .16rem;
+                    margin-right: 0;
+                }
+
+                .time {
+                    font-size: .24rem;
+                    line-height: .24rem;
+                    color: @third-text-color;
+                }
+            }
+
+            .detail {
+                position: absolute;
+                top: 0;
+                right: .3rem;
+                width: 0.26rem;
+                height: 100%;
+                padding: 0;
+                background: url(~assets/img/compment/icon_right.png) no-repeat right center;
+                background-size: 60%;
+            }
+        }
+    }
+}
+
+.express-info {
+    padding: .3rem;
+
+    >div {
+        margin-bottom: 0.2rem;
+    }
+
+    .line {
+        padding-bottom: 0.15rem;
+        border-bottom: 1px solid #c2c2c2 !important;
+        display: flex;
+
+        .spanleft {
+            width: 1.5rem;
+            margin-right: 0.3rem;
+        }
+    }
+
+    .content {
+        margin-top: 0.3rem;
+        font-size: .26rem;
+    }
+
+    .empty {
+        text-align: center;
+    }
+
+    .close-btn {
+        width: 100%;
+        height: .62rem;
+        display: block;
+        background: url(~assets/img/compment/icon_close_nor.png) no-repeat center #fff;
+        background-size: .7rem;
+        position: fixed;
+        padding: .5rem 0;
+        box-sizing: border-box;
+        bottom: 0;
+        left: 0;
+        z-index: 100000;
+
+        &:active {
+            background: url(~assets/img/compment/icon_close_pre.png) no-repeat center #fff;
+            background-size: .7rem;
+        }
+    }
+}
+
+.price-detail-modal {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: .8rem;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, .92);
+    color: @text-color;
+    z-index: 99999;
+
+    .total-price {
+        margin: 10vh auto 0;
+        text-align: center;
+        border-bottom: .01rem solid #c2c2c2;
+
+        &>div {
+            &:first-child {
+                font-size: .32rem;
+            }
+
+            &:last-child {
+                color: #f83939;
+                font-size: .72rem;
+                font-weight: bold;
+                margin: .25rem 0 .5rem;
+
+                .unit {
+                    font-size: .47rem;
+                }
+            }
+        }
+    }
+
+    .price-detail {
+        ul {
+            margin-top: .3rem;
+            min-height: 5.2rem;
+
+            li {
+                .clear;
+                margin-bottom: .35rem;
+                font-size: .32rem;
+
+                .ft-green {
+                    color: @font-green;
+                }
+            }
+        }
+    }
+
+    .modal-close-btn {
+        cursor: pointer;
+        width: .62rem;
+        height: .62rem;
+        display: block;
+        background: url(~assets/img/compment/icon_close_nor.png) no-repeat center;
+        background-size: contain;
+        margin: .5rem auto;
+        position: fixed;
+        bottom: 0;
+        left: calc(~'50% - .3rem');
+
+        &:active {
+            background: url(~assets/img/compment/icon_close_pre.png) no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+.psg-modal {
+    padding: .3rem;
+    text-align: center;
+
+    div {
+        &:first-of-type {
+            height: 1rem;
+            line-height: 1rem;
+            border-bottom: .01rem solid @third-text-color;
+        }
+
+        &:last-of-type {
+            height: .6rem;
+            line-height: .6rem;
+            padding: .2rem 0;
+        }
+    }
+
+    .callphone {
+        color: #262DD9;
+        padding-left: 0.5rem;
+        font-size: 0.3rem;
+        background: url(~assets/img/compment/icon_phone.png) no-repeat 0 center;
+        background-size: contain;
+    }
+}
+
+.travelList {
+    .title {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        background: #f2f3f5;
+        color: #999999;
+        padding: .2rem;
+        text-align: center;
+
+        span {
+            text-align: center;
+            display: inline-block;
+            width: 25%;
+        }
+    }
+
+    .list {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        background: #f2f3f5;
+        padding: .2rem;
+
+        span {
+            text-align: center;
+            display: inline-block;
+            width: 25%;
+        }
+    }
+
+    .list:nth-child(2) {
+        color: @theme-color;
+    }
+
+    .list:nth-child(2n) {
+        background: #ffffff;
+    }
+}
+.btn-group.otherBook{
+    .btn-cancel{
+        color: @otherBookColor;
+        &:active{
+            background: #fff;
+        }
+    }
+    .btn-pay{
+        background: @otherBookBg;
+        &:active{
+            background: @otherBookBg;
+        }
+    }
+    .btn-again{
+        color: @otherBookColor;
+        &:active {
+            color: @otherBookColor;
+        }
+    }
+}
+.btn-group {
+    .flex-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: .92rem;
+    font-size: .32rem;
+
+    .btn-cancel {
+        .flex(1);
+        background: #fff;
+        text-align: center;
+    }
+
+    .btn-pay {
+        .flex(2);
+        background: @theme-color;
+        color: #fff;
+        text-align: center;
+
+        &:active {
+            background-color: @theme-color-active;
+        }
+    }
+
+    .btn-again {
+        .flex(1);
+        background: #fff;
+        color: @theme-color;
+        text-align: center;
+
+        &:active {
+            color: #B5D0F9;
+        }
+    }
+}
+
+.contact-bp {
+    height: .92rem;
+    line-height: .92rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: .32rem;
+    color: #fff;
+    text-indent: 1.89rem;
+    background: url(~assets/img/compment/contact_bp_bg.png) repeat-y left top;
+    background-size: contain;
+
+    img {
+        width: 1.11rem;
+        height: 1.11rem;
+        position: absolute;
+        left: .52rem;
+        bottom: 0;
+    }
+
+    i {
+        background: url(~assets/img/compment/icon_tishi_nor.png) no-repeat center center;
+        background-size: .32rem .32rem;
+        width: .32rem;
+        height: 100%;
+        float: right;
+        margin-right: .3rem;
+
+        &:hover {
+            background: url(~assets/img/compment/icon_tishi_pre.png) no-repeat center center;
+            background-size: .32rem .32rem;
+        }
+    }
+}
+
+.citySelect {
+    .bottom {
+        background: @theme-color;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        height: .8rem;
+        line-height: .8rem;
+    }
+}
+
+.redFont {
+    color: @danger-color-light;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/icon/common/warning</title>
+    <desc>Created with Sketch.</desc>
+    <g id="h5-svg/icon/common/warning" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="icon/common/succes">
+            <circle id="椭圆形" cx="11" cy="11" r="11"></circle>
+            <rect id="矩形" fill="#FFFFFF" x="10.2666667" y="5.5" width="1.46666667" height="7.33333333" rx="0.733333333"></rect>
+            <rect id="矩形备份" fill="#FFFFFF" x="9.9" y="14.3" width="2.2" height="2.2" rx="1.1"></rect>
+        </g>
+    </g>
+</svg>

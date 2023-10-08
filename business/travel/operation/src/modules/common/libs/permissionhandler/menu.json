@@ -1,0 +1,282 @@
+{
+    "menu": [
+        {
+            "name": "运营统计",
+            "count": 0,
+            "type": "operationStatistics",
+            "sameMenuPaths": [],
+            "path": "/statistics/operationStatisticsHome",
+            "selected": false,
+            "authCodeList": [
+                46007001
+            ]
+        },
+        {
+            "name": "邮寄报销凭证",
+            "count": 0,
+            "type": "mailTicketReceipt",
+            "sameMenuPaths": [],
+            "path": "/mail",
+            "selected": false,
+            "authCodeList": [
+                46005001
+            ]
+        },
+        {
+            "name": "订单中心",
+            "count": 0,
+            "type": "orderCenter",
+            "path": "/order",
+            "selected": false,
+            "authCodeList": [
+                "46003001",
+                "46003002",
+                "46003006",
+                "46003003",
+                "46003004",
+                "46003005"
+            ],
+            "children": [
+                {
+                    "name": "全部",
+                    "count": 0,
+                    "type": "orderCenterAll",
+                    "path": "/order/all",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46003002"
+                    ]
+                },
+                {
+                    "name": "机票",
+                    "count": 0,
+                    "type": "orderCenterFlight",
+                    "path": "/order/flight",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46003006"
+                    ]
+                },
+                {
+                    "name": "火车票",
+                    "count": 0,
+                    "type": "orderCenterTrain",
+                    "path": "/order/train",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46003003"
+                    ]
+                },
+                {
+                    "name": "酒店",
+                    "count": 0,
+                    "type": "orderCenterHotel",
+                    "path": "/order/hotel",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46003004"
+                    ]
+                },
+                {
+                    "name": "保险",
+                    "count": 0,
+                    "type": "orderCenterInsurance",
+                    "path": "/order/insurance",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46003005"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "异常单处理中心",
+            "count": 0,
+            "type": "abnormalOrder",
+            "path": "/aborder",
+            "selected": false,
+            "authCodeList": [
+                "46004001",
+                "46004002",
+                "46004003",
+                "46004004",
+                "46004005"
+            ],
+            "children": [
+                {
+                    "name": "异常机票",
+                    "count": 0,
+                    "type": "abnormalOrderFlight",
+                    "path": "/aborder/flight",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46004002"
+                    ]
+                },
+                {
+                    "name": "异常火车票",
+                    "count": 0,
+                    "type": "abnormalOrderTrain",
+                    "path": "/aborder/train",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46004003"
+                    ]
+                },
+                {
+                    "name": "异常酒店",
+                    "count": 0,
+                    "type": "abnormalOrderHotel",
+                    "path": "/aborder/hotel",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46004004"
+                    ]
+                },
+                {
+                    "name": "异常保险",
+                    "count": 0,
+                    "type": "abnormalOrderInsure",
+                    "path": "/aborder/insurance",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46004005"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "渠道管理",
+            "count": 0,
+            "type": "channelManage",
+            "path": "/channel",
+            "sameMenuPaths": [],
+            "selected": false,
+            "authCodeList": [
+                46002001
+            ]
+        },
+        {
+            "name": "财务报表",
+            "count": 0,
+            "type": "financialStatements",
+            "sameMenuPaths": [],
+            "path": "/financial",
+            "selected": false,
+            "authCodeList": [
+                46008001
+            ]
+        },
+        {
+            "name": "配置中心",
+            "count": 0,
+            "type": "configurationCenter",
+            "path": "/configurationCenter",
+            "selected": false,
+            "authCodeList": [
+                "46009001",
+                "46009002"
+            ],
+            "children": [
+                {
+                    "name": "保险配置",
+                    "count": 0,
+                    "type": "insuranceProdConfig",
+                    "path": "/configure/insurance",
+                    "sameMenuPaths": [],
+                    "selected": false,
+                    "authCodeList": [
+                        "46009002"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "服务提醒",
+            "count": 0,
+            "type": "serviceReminder",
+            "sameMenuPaths": [],
+            "path": "/notice",
+            "selected": false,
+            "authCodeList": [
+                46010001
+            ]
+        },
+        {
+            "name": "供应商配置",
+            "count": 0,
+            "type": "suppliConfiguration",
+            "sameMenuPaths": [],
+            "path": "/supplier",
+            "selected": false,
+            "authCodeList": [
+                46001001
+            ]
+        },
+        {
+            "name": "系统管理",
+            "count": 0,
+            "type": "systemMgr",
+            "path": "/sysmgr",
+            "selected": false,
+            "authCodeList": [
+                "99901001",
+                "99901002",
+                "99901003",
+                "99901004",
+                "99901005",
+                "99901006",
+                "99901007",
+                "99901008",
+                "99901009"
+            ],
+            "children": [
+                {
+                    "name": "用户管理",
+                    "count": 0,
+                    "type": "usermanage",
+                    "path": "/sysmgr/user",
+                    "sameMenuPaths": [
+                        "/sysmgr/user/adduser",
+                        "/sysmgr/user/userdetails",
+                        "/sysmgr/user/userinfoedit"
+                    ],
+                    "selected": false,
+                    "authCodeList": [
+                        "99901001",
+                        "99901002",
+                        "99901003",
+                        "99901004"
+                    ]
+                },
+                {
+                    "name": "角色管理",
+                    "count": 0,
+                    "type": "rolemange",
+                    "path": "/sysmgr/role",
+                    "sameMenuPaths": [
+                        "/sysmgr/role/addroles",
+                        "/sysmgr/role/roledetails",
+                        "/sysmgr/role/roleinfoedit"
+                    ],
+                    "selected": false,
+                    "authCodeList": [
+                        "99901005",
+                        "99901006",
+                        "99901007",
+                        "99901008"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.invocing{
+    .wrap{       
+        margin-top: .2rem;
+        
+        .list{
+            padding: .3rem;
+            background-color: #fff;
+            .bbpx();
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .right{
+                width: .92rem;
+                display: flex;
+                justify-content: flex-end;
+                .icon_common_rightarrow{
+                    fill: @disable-color;
+                }
+            }
+            .titleContent{
+                flex: 1;
+                .title{
+                    display: flex;
+                    align-items: center;
+                    .icon_plane_plane{
+                        fill: @theme-color;
+                    }
+                    .icon_train_train{
+                        fill: @theme-color;
+                    }
+                    .icon_hotel_hotel{
+                        fill: @theme-color;
+                    }
+                    font-size: .3rem;
+                    color: @text-color;
+                    span{
+                        margin-left: .1rem;
+                    }
+                }
+                .subTitle{
+                    font-size: .26rem;
+                    color: @third-text-color;
+                    line-height: .36rem;
+                    margin-top: .06rem;
+                }
+            }
+            &:active{
+                background-color: @background-color;
+            }
+        }
+    }
+    
+}
+.bottom-wrap{
+    margin-top: .2rem;
+    .list{
+        height: 1.08rem;
+        line-height: 1.08rem;
+        background-color: #fff;
+        padding: 0 .3rem;
+        font-size: .3rem;
+        .bbpx();
+        .content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .icon_common_rightarrow{
+                fill: @disable-color;
+            }
+        }
+        &:active{
+            background-color: @background-color;
+        }
+    }
+}
+
+.invocing .wrap .list:after{
+    left: .3rem;
+}
+.invocing .wrap .list:last-child:after{
+    display: none;
+}
+.invocing .bottom-wrap .list:after{
+    left: .3rem;
+}
+.invocing .bottom-wrap .list:last-child:after{
+    display: none;
+}

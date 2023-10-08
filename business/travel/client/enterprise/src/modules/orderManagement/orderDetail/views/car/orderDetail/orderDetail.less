@@ -1,0 +1,863 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+@charset "utf-8";
+@blue: #262DD9;
+@red: #FF0000;
+@yel: #F8A339;
+@success: #008000;
+@gray: #999999;
+@font-green2            : #28B159;
+@bg-yellow              : #FFB843;
+@bg-yellow2             : #FFF4D7;
+@bg-red                 : #FA6146;
+.carOrderDetail {
+    height: 100%;
+    position: relative;
+    .mapWrap{
+        height: 100%;
+    }
+}
+.carTypePositionWrap{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.carTypeOutWrap{
+    padding: 0 0.18rem 0.18rem;
+
+}
+.carTypeWrap{
+    background: #fff;
+    padding: 0.45rem 0.5rem 0.4rem;
+    box-shadow:0px 0.02rem 0.2rem 0px rgba(99,99,99,0.2);
+    border-radius:0.12rem;
+    color: @text-color;
+    .orderContectWrap{
+        text-align: center;
+        padding-bottom: 0.4rem;
+        .title{
+            font-size: 0.6rem;
+            font-weight:bold;
+            padding: 0.2rem 0;
+        }
+        .tips{
+            font-size: 0.28rem;
+        }
+    }
+    .listWrap{
+        padding: 0.3rem 0;
+        .listLine{
+            padding: 0.14rem 0;
+            .flex-box();
+            .align-items(center);
+            font-size: 0.3rem;
+            
+            .left{
+                .flex(2);
+                padding-left: 0.37rem;
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: 0.3rem 0.3rem;
+            }
+            .meddile{
+                .flex(1);
+                span{
+                    color: @danger-color-light;
+                }
+
+            }
+            .right{
+                text-align: right;
+                .flex(1);
+
+            }
+        }
+    }
+    .buttonWrap{
+        .button{
+            line-height: 0.84rem;
+            text-align: center;
+            color: #fff;
+            background: @danger-color-light;
+            font-size: 0.32rem;
+            box-shadow:0px 0.06rem 0.16rem 0px rgba(248,57,57,0.3);
+            border-radius:0.08rem;
+            &:active{
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.markerTypeBox{
+    width: 120px;
+    height: 30px;
+    padding: 0 5px;
+    position: relative;
+    top: -38px;
+    left: -53px;
+    text-align: center;
+    .markerType{
+        background-color: #fff;
+        max-width: 110px;
+        padding: 0 0.2rem;
+        display: inline-block;
+        height: 30px;
+        line-height: .6rem;
+        text-align: center;
+        border-radius: 1px;
+        color: @text-color;
+        font-size: 12px;
+        white-space: nowrap;
+        box-shadow: 0px 2px 3px 0px rgba(49, 84, 138, 0.24);
+        border-radius: 3px;
+        z-index: 210;
+        opacity: .9;
+        .markerArrow {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            margin-left: -5px;
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+        .markerArrowLine{
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }
+    }
+    &.waitTrip{
+        width: 180px;
+        left: -83px;
+        .markerType{
+            max-width:170px;
+            .markerArrowLine span{
+                color:@danger-color-light;
+            }
+            
+        }
+    }
+    &.triping{
+        width: 180px;
+        left: -83px;
+        height: auto;
+        top:-53px;
+        .markerType{
+            height:auto;
+            max-width:170px;
+            color: @third-text-color;
+            text-align: right;
+            line-height: initial;
+            .markerArrow{
+                bottom: -3px;
+            }
+            .markerArrowLine{
+                .tripLine{
+                    padding:4px 0;
+                }
+                span{
+                    color:@text-color;
+                    font-weight: bold;
+                }
+            } 
+            
+        }
+    }
+}
+
+// .markerType{
+//     background-color: #fff;
+//     width: 2.54rem;
+//     padding: 0 0.2rem;
+//     height: .6rem;
+//     line-height: .6rem;
+//     text-align: center;
+//     border-radius: 1px;
+//     color: @text-color;
+//     font-size: 12px;
+//     position: relative;
+//     top: -38px;
+//     left: -53px;
+//     white-space: nowrap;
+//     box-shadow:0px 2px 3px 0px rgba(49,84,138,0.24);
+//     border-radius:3px;
+//     z-index: 210;
+//     .markerArrow {
+//         content: '';
+//         width: 10px;
+//         height: 10px;
+//         background-color: #fff;
+//         position: absolute;
+//         bottom: -5px;
+//         left: 50%;
+//         transform: rotate(45deg);
+//         -ms-transform: rotate(45deg);
+//         -moz-transform: rotate(45deg);
+//         -webkit-transform: rotate(45deg);
+//         -o-transform: rotate(45deg);
+//     }
+//     .markerArrowLine{
+//         overflow: hidden;
+//         text-overflow:ellipsis;
+//     }
+// }
+
+
+
+.driveTypeWrap{
+    background: #fff;
+    padding: 0.45rem 0 0;
+    box-shadow:0px 0.02rem 0.2rem 0px rgba(99,99,99,0.2);
+    border-radius:0.12rem;
+    color: @text-color;
+    .driverWrap{
+        padding: 0 0.5rem 0.55rem 0.5rem;
+        .driveInfoWrap{
+            .flex-box();
+            .align-items(center);
+            .justify-content(space-between);
+            .leftWrap{
+                .flex-box();
+                .align-items(center);
+                .justify-content(space-between);
+                .photoWrap{
+                    margin: 0 0.15rem 0 0.1rem;
+                    width: 1.12rem;
+                    height: 1.12rem;
+                    border: 0.04rem solid @border-color-base;
+                    border-radius: 100%;
+                    background: url(~assets/img/car/icon_common_headviewbackgroud.svg) no-repeat center;
+                    background-size: 100% 100%;
+                }
+                // .align-items(center);
+                .left{
+                    color: @text-color;
+                    font-size: 0.26rem;
+                    .name{
+                        font-size: 0.34rem;
+                        font-weight: bold;
+                    }
+                    .score{
+                        font-weight: bold;
+                        color: @bg-yellow;
+                    }
+                    .cpy{
+                        padding-left: 0.37rem;
+                        background-repeat: no-repeat;
+                        background-position: left;
+                        background-size: 0.3rem 0.3rem;
+                        // text-align: center
+                    }
+                }
+            }
+            .rightWrap{
+                margin-right: 0.1rem;
+                .right{
+                    .carNo{
+                        line-height: 0.5rem;
+                        padding: 0 0.1rem;
+                        font-size: 0.34rem;
+                        color: @theme-color;
+                        font-weight: bold;
+                        text-align: center;
+                        background: @background-color;
+                    }
+                    .carType{
+                        padding-top: 0.3rem;
+                        text-align: right;
+                        font-size: 0.28rem;
+                        color: @text-color;
+                    }
+                }
+            }
+        }
+    }
+    .optionWrap{
+        .flex-box();
+        .align-items(center);
+        .justify-content(space-between);
+        color: @text-color;
+        font-size: 0.24rem;
+        text-align: center;
+        .option{
+            padding-top: 0.85rem;
+            padding-bottom: 0.3rem;
+            .flex(1);
+            &.police{
+                background: url(~assets/img/car/btn_taxi_alarm.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &.share{
+                background: url(~assets/img/car/btn_taxi_share.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &.cancel{
+                background: url(~assets/img/car/btn_taxi_delete.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &.phone{
+                background: url(~assets/img/car/btn_taxi_phone.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &.sevice{
+                background: url(~assets/img/car/btn_taxi_sevice.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &:active{
+                opacity: 0.8;
+            }
+            &:not(:last-child) {
+                border-right: 1px dashed #c2c2c2;
+            }
+        }
+        
+    }
+}
+.priceDataWrap{
+    background: #fff;
+    padding: 0.45rem 0 0;
+    box-shadow:0px 0.02rem 0.2rem 0px rgba(99,99,99,0.2);
+    border-radius:0.12rem;
+    color: @text-color;
+    .driverWrap{
+        padding: 0 0.5rem 0.5rem 0.5rem;
+        .driveInfoWrap{
+            .flex-box();
+            .align-items(center);
+            .justify-content(space-between);
+            .leftWrap{
+                .flex-box();
+                .align-items(center);
+                .justify-content(space-between);
+                .photoWrap{
+                    margin: 0 0.15rem 0 0.1rem;
+                    width: 1.12rem;
+                    height: 1.12rem;
+                    border: 0.04rem solid @border-color-base;
+                    border-radius: 100%;
+                    background: url(~assets/img/car/icon_common_headviewbackgroud.svg) no-repeat center;
+                    background-size: 100% 100%;
+                }
+                // .align-items(center);
+                .left{
+                    color: @text-color;
+                    font-size: 0.26rem;
+                    .name{
+                        font-size: 0.34rem;
+                        font-weight: bold;
+                    }
+                    .score{
+                        font-weight: bold;
+                        color: @bg-yellow;
+                    }
+                }
+            }
+            .rightWrap{
+                margin-right: 0.1rem;
+                .right{
+                    .carName{
+                        font-size: 0.34rem;
+                        font-weight: bold;
+                    }
+                    .carType{
+                        font-size: 0.28rem;
+                        color: @text-color;
+                    }
+                    .cpy{
+                        padding-left: 0.37rem;
+                        background-repeat: no-repeat;
+                        background-position: left;
+                        background-size: 0.3rem 0.3rem;
+                        // text-align: center
+                    }
+                }
+            }
+        }
+    }
+    .optionWrap{
+        .flex-box();
+        .align-items(center);
+        .justify-content(space-between);
+        color: @text-color;
+        font-size: 0.24rem;
+        text-align: center;
+        .optionInwrap{
+            .flex(1);
+            .flex-box();
+            .align-items(center);
+            .justify-content(center);
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            .option{
+                padding-left: 0.45rem;
+                &.police{
+                    background: url(~assets/img/car/btn_taxi_alarm.svg) no-repeat left;
+                    background-size: 0.4rem 0.4rem;
+                }
+                &.share{
+                    background: url(~assets/img/car/btn_taxi_share.svg) no-repeat left;
+                    background-size: 0.4rem 0.4rem;
+                }
+                &.cancel{
+                    background: url(~assets/img/car/btn_taxi_delete.svg) no-repeat left;
+                    background-size: 0.4rem 0.4rem;
+                }
+                &.phone{
+                    background: url(~assets/img/car/btn_taxi_phone.svg) no-repeat left;
+                    background-size: 0.4rem 0.4rem;
+                }
+            }
+            &:active{
+                opacity: 0.8;
+            }
+            &:not(:last-child) {
+                border-right: 1px dashed #c2c2c2;
+            }
+
+        }
+    }
+    .priceWrap{
+        padding: 0.14rem 0.5rem 0.5rem;
+        .pricetitle{
+            padding: 0.24rem 0;
+            font-size: 0.28rem;
+            color: @text-color;
+            text-align: center;
+            span{
+                font-size: 0.7rem;
+                font-weight: bold;
+            }
+        }
+        .priceListWrap{
+            .priceLine{
+                padding: 0.16rem 0.16rem 0.16rem 0.1rem;
+                .flex-box();
+                .justify-content(space-between);
+                font-size: 0.28rem;
+                color: @text-color;
+                .left{
+                    .flex(1);
+                }
+                .right{
+                    width: 2rem;
+                    text-align: right;
+                }
+            }
+        }
+        .buttonWrap{
+            margin-top: 0.55rem;
+            .button{
+                line-height: 0.84rem;
+                text-align: center;
+                color: #fff;
+                background: @theme-color;
+                font-size: 0.32rem;
+                box-shadow:0px 0.06rem 0.16rem 0px rgba(71,138,238,0.3);
+                border-radius:0.08rem;
+                &:active{
+                    opacity: 0.9;
+                }
+            }            
+        }
+    }
+}
+.cancelDataWrap{
+    background: #fff;
+    padding: 0.45rem 0 0;
+    box-shadow:0px 0.02rem 0.2rem 0px rgba(99,99,99,0.2);
+    border-radius:0.12rem;
+    color: @text-color;
+    .cancelWrap{
+        padding: 0 0.5rem 0.3rem 0.5rem;
+        .line{
+            padding-left: 0.44rem;
+            font-size: 0.28rem;
+            &.time{
+                margin-bottom: 0.3rem;
+                background: url(~assets/img/car/icon_taxi_time.svg) no-repeat left;
+                background-size: 0.24rem 0.24rem;
+            }
+            &.start{
+                margin-bottom: 0.3rem;
+                background: url(~assets/img/car/icon_taxi_positive1.svg) no-repeat left;
+                background-size: 0.28rem 0.28rem;
+            }
+            &.end{
+                background: url(~assets/img/car/icon_taxi_positive2.svg) no-repeat left;
+                background-size: 0.28rem 0.28rem;
+            }
+        }
+    }
+    .optionWrap{
+        .flex-box();
+        .align-items(center);
+        .justify-content(space-between);
+        color: @text-color;
+        font-size: 0.24rem;
+        text-align: center;
+        .optionInwrap{
+            .flex(1);
+            .flex-box();
+            .align-items(center);
+            .justify-content(center);
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            .option{
+                padding-left: 0.45rem;
+                &.police{
+                    background: url(~assets/img/car/btn_taxi_alarm.svg) no-repeat left;
+                    background-size: 0.4rem 0.4rem;
+                }
+                &.share{
+                    background: url(~assets/img/car/btn_taxi_share.svg) no-repeat left;
+                    background-size: 0.4rem 0.4rem;
+                }
+                &.cancel{
+                    background: url(~assets/img/car/btn_taxi_delete.svg) no-repeat left;
+                    background-size: 0.4rem 0.4rem;
+                }
+                &.phone{
+                    background: url(~assets/img/car/btn_taxi_phone.svg) no-repeat left;
+                    background-size: 0.4rem 0.4rem;
+                }
+            }
+            &:active{
+                opacity: 0.8;
+            }
+            &:not(:last-child) {
+                border-right: 1px dashed #c2c2c2;
+            }
+        }
+    }
+    .cancelInfoWrap{
+        padding: 0.14rem 0.5rem 0.5rem;
+        .canceltitle{
+            padding: 0.24rem 0;
+            font-size: 0.32rem;
+            font-weight: bold;
+            color: @text-color;
+            text-align: center;
+        }
+    }
+}
+.completedWrap{
+    background: #fff;
+    padding: 0.45rem 0 0;
+    box-shadow:0px 0.02rem 0.2rem 0px rgba(99,99,99,0.2);
+    border-radius:0.12rem;
+    color: @text-color;
+    .driverWrap{
+        padding: 0 0.5rem 0.55rem 0.5rem;
+        .driveInfoWrap{
+            .flex-box();
+            .align-items(center);
+            .justify-content(space-between);
+            .leftWrap{
+                margin: 0 0.15rem 0 0.1rem;
+                width: 1.12rem;
+                .photoWrap{
+                    width: 1.12rem;
+                    height: 1.12rem;
+                    border: 0.04rem solid @border-color-base;
+                    border-radius: 100%;
+                    background: url(~assets/img/car/icon_common_headviewbackgroud.svg) no-repeat center;
+                    background-size: 100% 100%;
+                }
+                // .align-items(center);
+
+            }
+            .rightWrap{
+                .flex(1);
+                .rightInWrapOne{
+                    .flex-box();
+                    .align-items(center);
+                    .justify-content(space-between);
+                    .left{
+                        color: @text-color;
+                        font-size: 0.26rem;
+                        .name{
+                            font-size: 0.34rem;
+                            font-weight: bold;
+                            span{
+                                font-size: 0.28rem;
+                                margin-left: 0.25rem;
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                    .right{
+                        .price{
+                            text-align: right;
+                            font-size: 0.28rem;
+                            span{
+                                font-size: 0.6rem;
+                                font-weight: bold;
+                                padding-right: 0.14rem;
+                            }
+                        }
+                    }
+                }
+                .rightInWrapTwo{
+                    .flex(1);
+                    .flex-box();
+                    .align-items(center);
+                    .justify-content(space-between);
+                    .left{
+                        color: @text-color;
+                        font-size: 0.26rem;
+                        .cpy{
+                            padding-left: 0.37rem;
+                            background-repeat: no-repeat;
+                            background-position: left;
+                            background-size: 0.3rem 0.3rem;
+                            .score{
+                                margin-left: 0.2rem;
+                                font-weight: bold;
+                                color: @bg-yellow;
+                            }
+                        }
+                    }
+                    .right{
+                        .tips{
+                            text-align: right;
+                            font-size: 0.24rem;
+                            color: @third-text-color;
+                            padding-right: 0.25rem;
+                            background: url(~assets/img/car/icon_common_rightarrow.svg) no-repeat right -0.05rem center;
+                            background-size: 0.24rem 0.24rem;
+                        }
+                    }
+                }
+                .rightInWrapThree{
+                    margin-top: 0.24rem;
+                    font-size: 0.28rem;
+                    .right{
+                        margin-left: 0.28rem;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+    .optionWrap{
+        .flex-box();
+        .align-items(center);
+        .justify-content(space-between);
+        color: @text-color;
+        font-size: 0.24rem;
+        text-align: center;
+        .option{
+            padding-top: 0.85rem;
+            padding-bottom: 0.3rem;
+            .flex(1);
+            &.police{
+                background: url(~assets/img/car/btn_taxi_alarm.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &.share{
+                background: url(~assets/img/car/btn_taxi_share.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &.sevice{
+                background: url(~assets/img/car/btn_taxi_sevice.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &.invoice{
+                background: url(~assets/img/car/btn_taxi_invoice.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &.invoiced{
+                background: url(~assets/img/car/btn_taxi_invoice2.svg) no-repeat center 0.25rem;
+                background-size: 0.5rem 0.5rem;
+            }
+            &:active{
+                opacity: 0.8;
+            }
+            &:not(:last-child) {
+                border-right: 1px dashed #c2c2c2;
+            }
+        }
+        
+    }
+}
+.PriceDetail{
+    background: #fff;
+    box-shadow:0px .02rem 0.20rem 0px rgba(99,99,99,0.2);
+    .titleWrap{
+        .flex-box();
+        .align-items(center);
+        .justify-content(space-between);
+        padding: 0.22rem 0.4rem;
+        font-size: 0.32rem;
+        color: @text-color;
+        .left{
+            width: 1rem;
+        }
+        .right{
+            width: 1rem;
+            text-align: right;
+            
+        }
+    }
+    .priceWrap{
+        padding: 0.14rem 0.5rem 0.5rem;
+        .pricetitle{
+            padding: 0.24rem 0;
+            font-size: 0.28rem;
+            color: @text-color;
+            text-align: center;
+            span{
+                font-size: 0.6rem;
+                font-weight: bold;
+            }
+        }
+        .priceListWrap{
+            .priceLine{
+                padding: 0.16rem 0.3rem;
+                .flex-box();
+                .justify-content(space-between);
+                font-size: 0.28rem;
+                color: @text-color;
+                .left{
+                    .flex(1);
+                }
+                .right{
+                    width: 2rem;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.cancelDetail{
+    color: @text-color;
+    height: 100%;
+    background: #fff;
+    .cancelContect{
+        .bg{
+            height: 3.2rem;
+            background: url(~assets/img/car/img_taxie_car.png) no-repeat center;
+            background-size: contain; 
+        }
+        .title{
+            margin-top: 0.89rem;
+            padding: 0 0.4rem;
+            font-size: 0.32rem;
+            font-weight: bold;
+        }
+        .tips{
+            margin-top: 0.3rem;
+            padding: 0 0.4rem;
+            font-size: 0.28rem;
+        }
+        .buttonsWrap{
+            margin-top: 1.6rem;
+            padding: 0 0.3rem;
+            .flex-box();
+            .justify-content(space-between);
+            .button{
+                .flex(1);
+                padding: 0.24rem 0;
+                font-size: 0.32rem;
+                background: @theme-color;
+                color: #fff;
+                border: 1px solid @theme-color;
+                border-radius: 0.08rem;
+                text-align: center;
+                &.empty{
+                    margin-right: 0.3rem;
+                    background: #fff;
+                    color: @theme-color;
+                    border: 1px solid @theme-color;
+                }
+                &:active{
+                    background: @theme-color-active;
+                    border: 1px solid @theme-color-active;
+                }
+            }
+        }
+    }
+}
+.cancelReason{
+    color: @text-color;
+    height: 100%;
+    // background: #fff;  
+    .listWrap{
+        padding-bottom: 2.04rem;
+        .tips{
+            padding: 0.15rem 0.3rem;
+            font-size: 0.32rem;
+            font-weight: bold;
+            background: @border-color-base;
+        }
+        .lineWrap{
+            background: #fff;
+            padding-left:0.3rem;
+            font-size: 0.3rem;
+            .line{
+                padding: 0.26rem 0;
+                background: url(~assets/img/car/btn_common_radio_nor.svg) no-repeat right 0.3rem center;
+                background-size: 0.48rem; 
+                &.active{
+                    background: url(~assets/img/car/btn_common_radio_sel2.svg) no-repeat right 0.3rem center;
+                    background-size: 0.48rem; 
+                }
+            }
+            &:last-of-type .lineBorderB:after{
+                display: none;
+            }
+        }
+        .texteareWrap{
+            padding: 0 0.3rem 0.4rem;
+            background: #fff;
+            .reason{
+                padding: 0.24rem 0.3rem;
+                height: 2.3rem;
+                font-size: 0.28rem;
+                background: @background-color;
+                border-radius: 0.04rem;
+                box-sizing:border-box;
+                -moz-box-sizing:border-box; /* Firefox */
+                -webkit-box-sizing:border-box; /* Safari */
+            }
+        }
+    }
+    .buttonWrap{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.7rem 0.3rem 0.5rem;
+        background: #eee;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+        .button{
+            padding: 0.24rem 0;
+            text-align: center;
+            font-size: 0.32rem;
+            color: #fff;
+            background: @theme-color;
+            border-radius: 0.08rem;
+            &:active{
+                background: @theme-color-active;
+            }
+        }
+    }  
+}
+.amap-logo,.amap-copyright{
+    display: none !important;
+}

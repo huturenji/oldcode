@@ -1,0 +1,160 @@
+@import './trainCommon.less';
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.animated-background {
+  animation-name: placeHolderShimmer;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+  background: #F6F9FD;
+  position: relative;
+}
+@keyframes placeHolderShimmer {
+  0% {
+      opacity:1;
+  }
+  100% {
+      opacity:0.14;
+  }
+}
+
+.data-wrap{
+  background: linear-gradient(360deg, #35A0FF 0%, @theme-color 100%);  
+  color: #fff;
+  padding: .26rem 1rem .7rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   
+  .start-time,
+  .end-time {
+      .flex(1);
+      .date {
+          font-size: .24rem;
+          line-height: .34rem;
+      }
+      .time {
+          font-size: .68rem;
+          font-weight: bold;
+          line-height: .8rem;
+          margin-top: .1rem;
+          margin-bottom: .1rem;
+      }
+      .station {
+          font-size: .3rem;
+          line-height: .42rem;
+      }
+  }
+  .end-time{
+      text-align: right;
+  }
+  .time-info {
+      .flex(1);
+      font-size: .14rem;
+      text-align: center;
+      .train-no {
+          font-size: .24rem;
+          line-height: .34rem;
+          color:#fff;
+      }
+      .iconWrap{
+          width: 100%;
+          height: .44rem;
+          margin: 0 auto;
+          background: url(~themes/default/img/icon_train_shikebiao@2x.svg) no-repeat center;
+          background-size: contain;        
+      }
+
+      .duration {
+          font-size: .24rem;
+          line-height: .34rem;
+          color:#fff;
+      }
+  }
+}
+
+.setSeatWrap{
+  background: #fff;
+  padding: .34rem .3rem .32rem .3rem;
+  margin-bottom: 0.2rem;
+  margin-top: -0.3rem;
+  border-radius: .2rem .2rem 0 0;
+  .seat{
+    width: 2.1rem;
+    height: .44rem;
+    background-color: #EAEFF4;
+    border-radius: .06rem;
+  }
+  .money{
+    width: 3.24rem;
+    height: .28rem;
+    background-color: #EAEFF4;
+    border-radius: .06rem;
+    margin-top: .2rem;
+  }
+}
+
+.customerList{
+  padding: .42rem .3rem;
+  background: #fff;
+  margin-bottom: 0.2rem;
+  .first{
+    width: 3.24rem;
+    height: .44rem;
+    background-color: #EAEFF4;
+    border-radius: .06rem;
+    margin-bottom: .2rem;
+  }
+  .second{
+    width: 3.24rem;
+    height: .28rem;
+    background-color: #EAEFF4;
+    border-radius: .06rem;
+    margin-bottom: .2rem;
+  }
+  .third{
+    width: 100%;
+    height: .28rem;
+    background-color: #EAEFF4;
+    border-radius: .06rem;
+    margin-bottom: 0rem;
+  }
+}
+
+.reimburse{
+  padding: .42rem .3rem;
+  background: #fff;
+  .item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.53rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .left{
+      width: 30%;
+      height: .52rem;
+      background-color: #EAEFF4;
+      border-radius: .06rem;
+    }
+    .right{
+      width: 60%;
+      p{
+        width: 100%;
+        height: .36rem;
+        background-color: #EAEFF4;
+        border-radius: .06rem;
+        margin-bottom: .28rem;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

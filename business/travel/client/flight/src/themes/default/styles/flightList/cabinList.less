@@ -1,0 +1,342 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/hairLine.less';
+.page-cabin-list{
+    overflow-y: auto;
+    .loading{
+        align-items: flex-start;
+        margin-top: @white-space;
+    }
+    
+    .top{
+        box-sizing: content-box;
+        padding-top: @title-bar-height;
+        height: 1.52rem;
+    }
+    .bottom{
+        .content{
+            padding: 0 .3rem;
+            .flight-info-card{
+                position: relative;
+                padding: .3rem;
+                border-radius: @border-radius-base;
+                background: @sub-background-color;
+                margin-top: -1.28rem;
+                box-shadow:0px .2rem 24px -.2rem rgba(125,155,250,0.12);
+
+                .main-info{
+                    min-height: 2rem;
+
+                    .plane{
+                        position: relative;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-size: .24rem;
+                        color: @third-text-color;
+                        line-height: .34rem;
+
+                        .logo{
+                            margin-right: .02rem;
+                        }
+
+                        .time{
+                            .blpx(1px, @third-text-color, .08rem, .04rem);
+                            margin-left:.1rem;
+                            padding-left:.1rem;
+                        }
+                    }
+
+                    .share-flight{
+                        position: relative;
+                        text-indent: .78rem;
+                        font-size: .24rem;
+                        color: @third-text-color;
+                        .angle-line{
+                            .blpx(1px, @placeholder-color);
+                            .bbpx(1px, @placeholder-color);
+                            position: absolute;
+                            left: .42rem;
+                            top: .08rem;
+                            width: .2rem;
+                            height: .12rem;
+                        }
+                    }
+
+                    .air-info{
+                        position: relative;
+                        color: @text-color;
+                        margin-top: .38rem;
+                        padding: 0 .2rem;
+
+                        .time{
+                            position: relative;
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 34px;
+                            font-weight: bold;
+                        }
+                        .airport{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: @white-space-sm;
+                            font-size: 15px;
+
+                            div{
+                                max-width: calc(~'50% - 1.46rem / 2');
+                            }
+                        }
+
+                        .arrow{
+                            position: absolute;
+                            top: .15rem;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 12px;
+                            color: @secondary-text-color;
+                            text-align: center;
+
+                            .icon{
+                                height: .5rem;
+                                background: url(~themes/default/img/common/icon_plane_jingting@2x.svg) no-repeat center;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+
+                .split-line{
+                    .btpx(1px, @placeholder-color, .36rem, .36rem, dashed);
+                    position: relative;
+                    margin: 0 -.32rem;
+                    margin-top: .4rem;
+                    padding-bottom: .4rem;
+
+                    .circle{
+                        position: absolute;
+                        top: -.2rem;
+                        width: .4rem;
+                        height: .4rem;
+                        border-radius: .4rem;
+                        background: @background-color;
+
+                        &.left{
+                            right: -.2rem
+                        };
+
+                        &.right{
+                            left: -.2rem
+                        };
+                    }
+                }
+
+                .sub-info{
+                    display: flex;
+                    justify-content: center;
+                    font-size: .24rem;
+                    color: @third-text-color;
+
+                    .split{
+                        .blpx(1px, @third-text-color, .08rem, .04rem);
+                        margin: 0 .1rem;
+                    }
+                }
+
+                .notice{
+                    margin-top: .3rem;
+                    background: @info-background;
+                    border-radius: @border-radius-sm;
+                    color: #999999;
+                    font-size: .24rem;
+                    overflow: hidden;
+                    padding: 0 .3rem;
+
+                    .notice-info{
+                        position: relative;
+                        margin: .2rem auto;
+
+                        &.list-item{
+                            padding-left: .24rem;
+                            &:before{
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: .12rem;
+                                width: .1rem;
+                                height: .1rem;
+                                border-radius: 50%;
+                                background: @danger-color-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .myTripList{
+            margin-top: .2rem;
+        }
+
+        .cabin-list{
+            .cabin-item{
+                position: relative;
+                margin-top: .2rem;
+                .cabin{
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: .2rem;
+                    padding: .4rem 0;
+                    background: @sub-background-color;
+
+                    .content{
+                        width: 100%;
+
+                        .price{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            color: @warning-color;
+                            font-size: 24px;
+                            .price_kind{
+                                cursor: pointer;
+                                padding: .04rem .06rem;
+                                font-size: .24rem;
+                                border-radius: @border-radius-sm;
+                                background-color: @warning-color;
+                                color: #fff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-left: .1rem;
+                                margin-top: .06rem;
+                            }
+                            .rmb{
+                                font-size: 18px;
+                            }
+
+                            .directSale {
+                                display: flex;
+                                margin-left: .1rem;
+                                font-size: .2rem;
+
+                                .company {
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 0 .08rem;
+                                    border-radius: .16rem 0 0 .03rem;
+                                    border: 1px solid @warning-color;
+                                    border-right: none;
+                                    color: @text-color;
+                                    .logo{
+                                        float: left;
+                                    }
+                                }
+
+                                .tip {
+                                    width: 1.5rem;
+                                    background: url(~themes/default/img/flightList/icon_zhiying.png) 0 0 no-repeat;
+                                    background-size: contain;
+                                }
+                            }
+                        }
+
+                        .coupon-label{
+                            margin: .12rem 0;
+                            font-size: .22rem;
+                            text-align: center;
+                            padding: 0 0.1rem;
+                            width: auto;
+                            &:active{
+                                border-radius: 0.04rem;
+                                background: #fff;
+                                color: @warning-color-light;
+                            }
+                            &::after{
+                                border-radius: 0.04rem;
+                            }
+                        }
+
+                        .cabin-info{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            font-size: 0;
+                            color: @third-text-color;
+                            margin-top: @white-space-sm;
+
+                            .guest-rule{
+                                position: relative;
+                                margin-right: .2rem;
+                                .icon{
+                                    position: absolute;
+                                    top: 50%;
+                                    right: -.2rem;
+                                    transform: translateY(-50%);
+                                }
+                            }
+
+                            span{
+                                font-size: 15px;
+                            }
+                            .rmb{
+                                margin-left: .08rem;
+                            }
+
+                            .split{
+                                .blpx(1px, @third-text-color);
+                                height: .26rem;
+                                margin-left: .1rem;
+                                padding-left: .1rem;
+                            }
+
+                            .icon{
+                                fill: @placeholder-color;
+                            }
+                        }
+                    }
+                }
+
+                .order-btn{
+                    position: absolute;
+                    right: .3rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    width: .75rem;
+                    height: .75rem;
+                    text-align: center;
+                    font-size: 15px;
+                    color: #fff;
+                    border-radius: @border-radius-sm;
+
+                    .toOrder{
+                        flex: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &.sm-font{
+                            font-size: .28rem;
+                        }
+                    }
+
+                    .leave{
+                        height: .36rem;
+                        width: 100%;
+                        background: #fff;
+                        bottom: 0;
+                        color: @warning-color;
+                        font-size: .24rem;
+                        border: 1px solid @warning-color;
+                        border-top: none;
+                        border-radius: 0 0 @border-radius-sm @border-radius-sm;
+                    }
+                }
+            }
+        }
+    }
+}
+.guest-rule-pop{
+    background: none;
+}

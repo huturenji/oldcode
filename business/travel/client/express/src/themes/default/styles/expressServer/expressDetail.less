@@ -1,0 +1,223 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.expressDetail {
+    .expressDetailInWrap{
+        padding: 0.3rem;
+        .topOutWrap{
+            margin-bottom: 0.3rem;
+            background: @sub-background-color;
+            border-radius: 0.12rem;
+            box-shadow:0px 2px 20px 0px rgba(99,99,99,0.1);
+            .iconTypeWrap{
+                padding: 0.2rem 0.45rem;
+                background: @sub-background-color;
+                .flex-box();
+                .align-items(center);
+                color: @text-color;
+                .icon{
+                    width: 0.58rem;
+                    height: 0.58rem;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 0.58rem 0.58rem;
+                    border-radius: 0.1rem;
+                }
+                .text{
+                    .flex(1);
+                    padding-left: 0.25rem;
+                    font-size: 0.32rem;
+                }
+            }
+            .textWrap{
+                padding: 0.13rem 0.45rem;
+                font-size: 0.24rem;
+                background: @background-color;
+                .expressNum{
+                    padding: 0 0.35rem;
+                }
+                .copy{
+                    color: @theme-color;
+                }
+            }
+            .bottomTextWrap{
+                padding: 0.24rem 0.45rem;
+                font-size: 0.28rem;
+                color: @text-color;
+                .bottomText{
+                    padding-right: 0.6rem;
+                    background: url(~themes/default/img/expressServer/icon_right.png) no-repeat right;
+                    background-size: 0.13rem 0.22rem;
+                }
+            }
+        }
+        .contectWrap{
+            background: @sub-background-color;
+            border-radius: 0.12rem;
+            box-shadow:0px 2px 20px 0px rgba(99,99,99,0.1);  
+            .expressTypeWrap{
+                position: relative;
+                padding: 0.4rem;
+                height: 2.1rem;
+                font-size: 0.3rem;
+                color: @text-color;
+                .linebg{
+                    position:absolute;
+                    height: 1px;
+                    left: 1rem;
+                    right: 1rem;
+                    bottom: 0.7rem;
+                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABAQMAAADdO609AAAABlBMVEXl5eX////ixexJAAAAC0lEQVQI12NgPAAAAMUAwlPvbvwAAAAASUVORK5CYII=) repeat-x center;
+                }
+                .typeNameWrap{
+                    position: absolute;
+                    left: 0.4rem;
+                    right: 0.4rem;
+                    top: 0.4rem;
+                    bottom: 0.4rem;
+                    .flex-box();
+                    .justify-content(space-between);
+                    .typeName{
+                        .typeitem{
+                            padding-bottom: 0.9rem; 
+                            &.iconOne{
+                                    background: url(~themes/default/img/expressServer/icon_expresstype1.png) no-repeat bottom;
+                                    background-size: 0.6rem 0.6rem;
+                            }
+                            &.iconTwo{
+                                    background: url(~themes/default/img/expressServer/icon_expresstype2.png) no-repeat bottom;
+                                    background-size: 0.6rem 0.6rem;
+                            } 
+                            &.iconThree{
+                                    background: url(~themes/default/img/expressServer/icon_expresstype3.png) no-repeat bottom;
+                                    background-size: 0.6rem 0.6rem;
+                            }
+                            &.iconFour{
+                                    background: url(~themes/default/img/expressServer/icon_expresstype4.png) no-repeat bottom;
+                                    background-size: 0.6rem 0.6rem;
+                            }
+                        }
+                        &.active{
+                            font-weight: bold;
+                            .iconOne{
+                                    background: url(~themes/default/img/expressServer/icon_expresstype_active1.png) no-repeat bottom;
+                                    background-size: 0.6rem 0.6rem;
+                                    color: @yellow-color;
+                            } 
+                            .iconTwo{
+                                    background: url(~themes/default/img/expressServer/icon_expresstype_active2.png) no-repeat bottom;
+                                    background-size: 0.6rem 0.6rem;
+                                    color: @theme-color ;
+                            }  
+                            .iconThree{
+                                    background: url(~themes/default/img/expressServer/icon_expresstype_active3.png) no-repeat bottom;
+                                    background-size: 0.6rem 0.6rem;
+                                    color: @theme-color ;
+                            } 
+                            .iconFour{
+                                    background: url(~themes/default/img/expressServer/icon_expresstype_active4.png) no-repeat bottom;
+                                    background-size: 0.6rem 0.6rem;
+                                    color: @yellow-color;
+                            } 
+                        }
+                       
+                    }
+
+                }
+            }
+            .buttonGroup{
+                background: @background-color;
+                font-size: 0.3rem;
+                color: @text-color;
+                padding: 0.2rem 0.3rem;
+                .flex-box();
+                .align-items(center);
+                .justify-content(space-between);
+                .courierItem{
+                    color: @placeholder-color;
+                    min-height: 0.52rem;
+                    padding-left: 0.6rem;
+                    background: url(~themes/default/img/expressServer/icon_courier.png) no-repeat 0rem center;
+                    background-size: 0.52rem 0.52rem;
+                }
+                .phoneItem{
+                    padding-left: 0.6rem;
+                    min-height: 0.52rem;
+                    background: url(~themes/default/img/expressServer/icon_phone.png) no-repeat 0rem center;
+                    background-size: 0.52rem 0.52rem;
+                }
+            }
+            .timeLineWrap{
+                padding: 0.6rem 0.6rem 0.5rem 0.4rem;
+                .timeLine{
+                    position: relative;
+                    padding-left: 0.6rem;
+                    padding-bottom: 0.5rem; 
+                    background: url(~themes/default/img/expressServer/dash-e5-line.png) repeat-y 0.2rem center;
+                    .timeLineTextWrap{
+                        position: relative;
+                        top: -0.1rem;
+                        .timeLineText{
+                            margin-bottom: 0.08rem;
+                            font-size: 0.28rem;
+                            color: @secondary-text-color;
+                        }
+                        .timeLineTips{
+                            font-size: 0.24rem;
+                            color: @third-text-color;
+                        }
+                    }
+                    &:first-child{
+                        .timeLineTextWrap .timeLineText{
+                            color: @text-color;
+                            .phone{
+                                color: @theme-color;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        background: none;
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: -0.1rem;
+                        width: 0.4rem;
+                        height: 0.4rem;
+                        background: url(~themes/default/img/expressServer/icon_expresstype0.png) no-repeat center;
+                        background-size: 0.4rem 0.4rem;
+                    }
+                    &:first-child.typeOne:before{
+                        background: url(~themes/default/img/expressServer/icon_expresstype_active1.png) no-repeat center;
+                        background-size: 0.4rem 0.4rem;
+                    }
+                    &:first-child.typeTwo:before{
+                        background: url(~themes/default/img/expressServer/icon_expresstype_active2.png) no-repeat center;
+                        background-size: 0.4rem 0.4rem;
+                    }
+                    &:first-child.typeThree:before{
+                        background: url(~themes/default/img/expressServer/icon_expresstype_active3.png) no-repeat center;
+                        background-size: 0.4rem 0.4rem;
+                    }
+                    &:first-child.typeFour:before{
+                        background: url(~themes/default/img/expressServer/icon_expresstype_active4.png) no-repeat center;
+                        background-size: 0.4rem 0.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+/deep/.expressDetail {
+    .timeLineWrap{
+        .timeLine{
+            &:first-child{
+                .timeLineTextWrap .timeLineText{
+                    .phone{
+                        color: @theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

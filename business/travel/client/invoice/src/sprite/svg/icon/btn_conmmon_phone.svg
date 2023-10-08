@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>btn_hotel_phone</title>
+    <desc>Created with Sketch.</desc>
+    <g id="btn_hotel_phone" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/对话-copy" transform="translate(1.000000, 1.500000)">
+            <g id="Group">
+                <rect id="Rectangle" stroke="#575757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" x="2.34912109" y="0" width="15.7683105" height="18.4008789" rx="2"></rect>
+                <line x1="0.78125" y1="4.47429812" x2="3.91699219" y2="4.47429812" id="Path-6" stroke="#575757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="0.78125" y1="9.20043945" x2="3.91699219" y2="9.20043945" id="Path-6-Copy" stroke="#575757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="0.78125" y1="13.9265808" x2="3.91699219" y2="13.9265808" id="Path-6-Copy-2" stroke="#575757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M12.1456152,11.3583493 C11.7009064,11.7287513 10.7402016,10.7929408 9.92810361,9.83110248 C9.11601067,8.86926583 8.35408589,7.77051049 8.79879462,7.3997222 C9.43662402,6.87090114 9.9763842,6.5570773 9.05490677,5.18787 C8.13418334,3.82206169 7.3549027,4.74580286 6.73820432,5.25765031 C6.02305041,5.85059472 6.42815394,8.32157173 8.62378045,10.9177845 C10.8190274,13.5132347 13.2013714,14.3362617 13.9127535,13.7436918 C14.5290842,13.2284497 15.5829546,12.6298477 14.3861283,11.4903603 C13.1885464,10.3516202 12.7826888,10.8261269 12.1456067,11.3583436 L12.1456152,11.3583493 Z" id="Path" fill="#575757"></path>
+            </g>
+        </g>
+    </g>
+</svg>

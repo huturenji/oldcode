@@ -1,0 +1,40 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.indexWrap {
+  height: 100%;
+  overflow-y: auto;
+  .indexbg {
+    background: url(~themes/default/img/bg_train_banner@3x.png) no-repeat;
+    background-size: 100% auto;
+  }
+  .swiperWrap{
+    position: relative;
+    margin: 0 .3rem .6rem;
+  }
+  
+}
+//pc端样式
+@media screen and (min-width: @screen-sm) { 
+  .indexWrap {
+    .indexbg {
+      background-position: center -1.2rem ;
+    }
+    .topButtonWrap {
+      height: 3.1rem;
+    }
+  }
+  
+}
+
+//移动端显示样式
+@media screen and (max-width: @screen-sm) { 
+  .indexWrap {
+    .indexbg {
+      background-position: center -.85rem ;
+    }
+    .topButtonWrap {
+      height: 2.12rem;
+    }
+  }
+  
+}

@@ -1,0 +1,93 @@
+@import './trainCommon.less';
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.login_wrap{
+    background-color: #fff;
+    padding: 0 .6rem;
+}
+.logo_part{
+    width: 100%;
+    margin-top: .74rem;
+    margin-bottom: 1.34rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo_img{
+        width: 1.2rem;
+        height: 1.2rem;
+        
+    }
+}
+.input_part{
+    .input_item{
+        border-bottom: 1px solid @border-color-base;
+        padding-bottom: .2rem;
+        margin-bottom: .3rem;
+        position: relative;
+        .icon{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: .04rem;
+            .icon_login_phone,.icon_login_password{
+                fill: @theme-color;
+            }
+          
+        }
+        .clear{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: .32rem;
+            top: .04rem;
+            .icon_common_close{
+                fill: @third-text-color;
+            }
+        }
+        input{
+            width: 100%;
+            font-size: .32rem;
+            color: @text-color;
+            padding: 0 .46rem;
+        }
+    }
+}
+.forget_pas{
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    font-size: .28rem;
+    color: @third-text-color;
+    margin-top: .4rem;
+}
+.login_btn{
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    background: @theme-color;
+    border-radius: .08rem;
+    margin-top: .5rem;
+    color: #fff;
+    font-size: .3rem;
+    cursor: pointer;
+    &:active{
+        opacity: .8;
+    }
+}
+.operation_btn{
+    margin-top: .5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .3rem;
+    color: @third-text-color;
+    p{
+        cursor: pointer;
+        &:active{
+            opacity: .8;
+        }
+    }
+   
+}

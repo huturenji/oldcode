@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f62;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="3465" y="1610" width="27" height="27" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-color="#f62" flood-opacity="0.34"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="icon_taxi_positive2" class="cls-1" d="M3478,1612a9,9,0,1,1-9,9A9,9,0,0,1,3478,1612Zm0,4a5,5,0,1,1-5,5A5,5,0,0,1,3478,1616Z" transform="translate(-3464.5 -1609.5)"/>
+</svg>

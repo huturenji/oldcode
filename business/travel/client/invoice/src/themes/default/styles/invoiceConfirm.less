@@ -1,0 +1,246 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.editDetail {
+    .top{
+        background-color: #fff;
+        padding: .48rem 0;
+        margin-bottom: .2rem;
+        .titleFee {
+            text-align: center;
+            font-size: .28rem;
+            color: @third-text-color;
+        }
+        .fee {
+            text-align: center;
+            font-size: .72rem;
+            color: @price-color;
+            span{
+                font-size: 0.48rem;
+            }
+        }
+    }
+}  
+
+
+
+.textTips{
+    color: @placeholder-color;
+    font-size: .28rem;
+    flex: 1;
+}
+.icon-right{
+    .icon_common_rightarrow{
+        fill: @disable-color;
+    }
+}
+
+
+
+.list {
+    &:active{
+        opacity: .8;
+    }
+    background: #ffffff;
+    padding: .33rem .3rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: @border-color-base;
+        bottom: 0;
+        left: 0.3rem;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        .invoice_content_flight{
+            padding-right: .8rem;
+            flex: 1;
+            position: relative;
+            .importInvoice{
+                position: absolute;
+                right: .2rem;
+                top: 50%;
+                margin-top: -.2rem;
+            }
+        }
+
+        .invoice_content_train{
+            padding-right: .8rem;
+            flex: 1;
+            position: relative;
+            .importInvoice{
+                position: absolute;
+                right: .2rem;
+                top: 50%;
+                margin-top: -.2rem;
+            }
+        }
+        .invoice_content_hotel{
+            padding-right: .8rem;
+            flex: 1;
+            position: relative;
+            .importInvoice{
+                position: absolute;
+                right: .2rem;
+                top: 50%;
+                margin-top: -.2rem;
+            }
+        }
+
+        .title {
+            position: relative;
+            font-size: .28rem;
+            color: @secondary-text-color;
+            white-space: nowrap;
+            width: 1.82rem;
+        }
+        .text {
+            font-size: .28rem;
+            flex: 1;
+            .name{
+                font-size: .28rem;
+                color: @text-color; 
+            }
+            .number{
+                font-size: .26rem;
+                color: @third-text-color; 
+            }
+        }
+        .text.placeholder{
+            color: @placeholder-color;
+        }
+        .arrow {
+            flex: 0;
+            img {
+                height: .28rem;
+            }
+        }
+    }
+    .check {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text {
+            color: @text-color;
+            font-size: .3rem;
+        }
+        .check_box {
+            .btn_common_checkbox_sel{
+                fill: @theme-color;
+            }
+            .btn_common_checkbox_nor{
+                fill: @third-text-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// 底部的按钮
+.bottomBar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    z-index: 200;
+    display: flex;
+    background: #fff;
+    box-shadow: 0px -.04rem .56rem 0px rgba(161,161,161,0.1);
+    .detail {
+        flex: 3;
+        display: flex;
+        font-size: 0.3rem;
+        .priceT{
+            margin-left: 0.87rem;
+            font-size: .24rem;
+            color: @text-color;
+            .num{
+                font-size: .3rem;
+            }
+        }
+    }
+    .submit {
+        flex: 2;
+        background: @theme-color;
+        text-align: center;
+        &:active{
+            opacity: .8;
+        }
+        span {
+            color: #ffffff;
+            font-size: .3rem;
+        }
+    }
+}
+
+
+
+
+
+.submit_btn {
+    margin: .6rem .3rem;
+    line-height: 0.88rem;
+    font-size: 0.3rem;
+    text-align: center;
+    color: #fff;
+    background: @theme-color;
+    border-radius: 0.2rem;
+    &:active{
+        opacity: .8;
+    }
+}
+
+.tipIcon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.2rem;
+    // right: 0rem;
+    width: .4rem;
+    height: .4rem;
+    vertical-align: top;
+    .icon_common_prompt{
+        fill: @price-color;
+        margin-left: .08rem;
+    }
+}
+.flightTip {
+    text-align: center;
+    margin-top: .39rem;
+    font-size: .26rem;
+    color: @info-color;
+}
+.bottomBar_flight{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .3rem;
+    .submit{
+        width: 100%;
+        background-color: @theme-color;
+        border-radius: .2rem;
+        height: .88rem;
+        line-height: .88rem;
+        color: #fff;
+        text-align: center;
+        font-size: .32rem;
+        cursor: pointer;
+    }
+}
+

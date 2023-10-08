@@ -1,0 +1,494 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/hairLine.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+//为他人预定的订单样式
+@otherBookColor:@disable-color;
+@otherBookBorder:@disable-color;
+@otherBookBg:@disable-color;
+
+.page-order-detail{
+    height: 100%;
+    &.filter-blur{
+        filter: blur(0.41rem);
+    }
+
+    .loading{
+        margin: @white-space 0;
+    }
+    .icon-btn{
+        &.right{
+            fill: @placeholder-color;
+            flex: none;
+        }
+    }
+    .order-detail-container{
+        color: @text-color;
+        padding-bottom: 1.52rem;
+
+        header{
+            padding: .3rem .4rem;
+            background: @sub-background-color;
+
+            .summary{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: .36rem;
+                font-weight: bold;
+
+                .amount{
+                    display: flex;
+                    align-items: center;
+                    font-size: .48rem;
+
+                    .content{
+                        .unit{
+                            padding: 0;
+                        }
+                    }
+
+                    .icon{
+                        margin-left: @white-space-sm;
+                    }
+                }
+            }
+
+            .summary-note{
+                font-size: .26rem;
+                margin-top: .1rem;
+                color: @third-text-color;
+
+                span{
+                    color: @danger-color-light;
+                }
+            }
+
+            .order-no{
+                font-size: .26rem;
+                margin-top: .14rem;
+                color: @third-text-color;
+                display: flex;
+                justify-content: space-between;
+                span:first-of-type{
+                    margin-right: .1rem;
+                }
+                span{
+                    padding-right: 0.32rem;
+                }
+            }
+
+            .btn-again{
+                margin-top: .4rem;
+            }
+        }
+
+        .flight-card-container{
+            padding:  0 .3rem;
+        }
+
+        .explanation{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        ul.items{
+            background: @sub-background-color;
+            margin-top: .3rem;
+
+            li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 14px;
+                padding: .32rem .3rem;
+
+                .info{
+                    color: @third-text-color;
+                }
+
+                &:not(:last-of-type){
+                    .bbpx(1px, @border-color-base, .3rem);
+                }
+
+                .insurancestit {
+                    flex: auto;
+                    &>div{
+                        display: inline-block;
+                        position: relative;
+                    }
+                    .icon-btn{
+                        fill: @success-color;
+                        position: absolute;
+                        top: 50%;
+                        right: -.38rem;
+                        transform: translateY(-50%);
+                    }
+                }
+                .insurancesWrap{
+                    margin-right: 0.16rem;
+                    .text{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        line-height: .4rem;
+                        .right{
+                            margin-left: .1rem;
+                        }
+                        &:not(:last-of-type){
+                            margin-bottom: .12rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .reimbursementTips{
+            padding: 0 .3rem;
+            margin-top: .3rem;
+            color: @warning-color;
+            text-align: left;
+        }
+
+        .customer-service{
+            margin-top: .26rem;
+            color: @third-text-color;
+            text-align: center;
+            font-size: .24rem;
+        }
+
+        .reimbursementVoucher {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: .4rem;
+            padding: 0 @white-space;
+            background: url(~assets/img/flightList/reimburse_line.png) #fff repeat-x;
+            background-size: auto .1rem;
+            position: relative;
+            height: 1.95rem;
+
+            .icon{
+                font-size: .2rem;
+                color: @placeholder-color;
+            }
+
+            .tripInfo {
+                position: relative;
+                float: left;
+                height: 1.4rem;
+                text-align: center;
+                line-height: .7rem;
+                margin-right: .2rem;
+
+                .point-icon{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    height: .18rem;
+                    width: .18rem;
+                    border-radius: .18rem;
+                    background: #D3D3D3;
+                    border: 1px solid #fff;
+                }
+
+                .tripMsg {
+                    width: 100%;
+                    background: #EFEFEF;
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding: 0 .15rem;
+                }
+
+                .label{
+                    padding: 0 .15rem;
+                    background: #F7F7F7;
+                    font-size: 14px;
+                    color: @third-text-color;
+                }
+            }
+
+            .mailInfo {
+                float: left;
+                color: @third-text-color;
+                font-size: .28rem;
+
+                &.nopay {
+                    margin-top: .33rem;
+                }
+
+                .status {
+                    font-size: 15px;
+                    margin-bottom: .2rem;
+                    margin-right: 0;
+                    color: @secondary-text-color;
+
+                    //.statusIcon {
+                        //display: inline-block;
+                        //float: left;
+                        //width: 0.4rem;
+                        //height: 0.4rem;
+
+                        //&.application {
+                        //    background: url(~assets/img/orderDetail/icon_application2.png) no-repeat center;
+                        //    background-size: 100%;
+                        //}
+                        //
+                        //&.mailing {
+                        //    background: url(~assets/img/orderDetail/icon_mailing2.png) no-repeat center;
+                        //    background-size: 100%;
+                        //}
+                        //
+                        //&.signing {
+                        //    background: url(~assets/img/orderDetail/icon_signing2.png) no-repeat center;
+                        //    background-size: 100%;
+                        //}
+                    //}
+                }
+
+                .message {
+                    font-size: 14px;
+                    line-height: 14px;
+                    margin-bottom: .16rem;
+                    margin-right: 0;
+                }
+
+                .time {
+                    font-size: 14px;
+                    line-height: 15px;
+                    
+                }
+            }
+        }
+
+        .order-again-block{
+            background: #fff;
+            color: @theme-color;
+            text-align: center;
+            display: block;
+            height: .92rem;
+            line-height: .92rem;
+            margin-top: .2rem;
+        }
+    }
+}
+
+.contact-bp{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .32rem;
+    color: #fff;
+    background:  @theme-color;
+    text-indent: 1.65rem;
+
+    .top-circle{
+        position: absolute;
+        top: -0.24rem;
+        left: .46rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
+        background: @theme-color;
+        .service{
+            fill: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .icon-tips{
+        position: absolute;
+        right: .46rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: .32rem;
+        fill: #fff;
+        z-index: 999;
+    }
+}
+
+.btn-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 1rem;
+    font-size: .3rem;
+    background: @sub-background-color;
+    text-align: center;
+    box-shadow: 0px .06rem .2rem 0px rgba(101, 112, 242, 0.12);
+
+    &>a{
+        flex: 4;
+    }
+
+    .btn-cancel{
+        color: @third-text-color;
+    }
+
+    .btn-pay{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        flex: 5;
+
+        .icon{
+            background: url(~themes/default/img/orderDetail/icon_plane_time.svg) center no-repeat;
+            background-size: contain;
+            width: .3rem;
+            height: .3rem;
+            margin: 0 .1rem 0 .38rem;
+        }
+    }
+
+    &.otherBook{
+        .btn-cancel{
+            color: @otherBookColor;
+        }
+        .btn-cancel:active {
+            background: #fff;
+        }
+        .btn-pay{
+            background: @otherBookBg;
+        }
+        .btn-pay:active {
+            background: @otherBookBg;
+        }
+        .btn-again{
+            color: @otherBookColor;
+            &:active {
+                color: @otherBookColor;
+            }
+        }
+    }
+}
+
+.price-detail-modal {
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.78);
+    z-index: 500;
+    
+    .content{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        padding: 0 .5rem;
+    }
+
+    .total-price {
+        margin: 0 auto;
+        text-align: center;
+
+        &>div {
+            color: @danger-color-light;
+            font-size: 38px;
+            font-weight: bold;
+
+            .unit {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .price-detail {
+        ul {
+            margin-top: .64rem;
+            font-size: 0.3rem;
+            line-height: .42rem;
+
+            li {
+                padding: .2rem 0;
+                .clear();
+
+                .split{
+                    margin: 0 .1rem;
+                }
+
+                .unit{
+                    font-size: .26rem;  
+                }
+
+                .ft-green {
+                    color: @success-color;
+                }
+
+                .ft-red{
+                    color: @danger-color-light;
+                }
+                &.btp{
+                    .btpx(1px, @border-color-base);
+                }
+                .redfont{
+                    color: var(--dangerColorLight);
+                }
+            }
+        }
+    }
+
+    .icon-close {
+        margin-top: 1rem;
+        fill: @third-text-color;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.pop-up{
+    background: none;
+
+    &.guest-rule-pop{
+        border-radius: @border-radius-base @border-radius-base 0 0;
+
+    }
+    
+    &.cancel-ticket-suc{
+        background: @background-color;
+    }
+    
+    &.show-endorse-info{
+        z-index: 499;
+    }
+}
+.cust-mask{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 500;
+    transition: opacity 400ms;
+}
+
+.mescroll{
+    /deep/ .mescroll-downwarp .downwarp-progress, 
+    /deep/ .mescroll-upwarp .upwarp-progress{
+        border: none;
+        background: url('~themes/default/img/loading_gray.png') center no-repeat;
+        background-size: contain;
+    }
+}

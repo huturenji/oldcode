@@ -1,0 +1,383 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/hairLine.less';
+@calendarHeight: 1.94rem;
+.page-flight-list{
+    padding-top: @title-bar-height;
+    // background-color: @theme-color;
+    height: 100%;
+    .main{
+        position: relative;
+        color: @text-color;
+        background: @background-color;
+        border-radius: @border-radius-base @border-radius-base 0 0;
+        width: 100%;
+        height: 100%;
+        padding-top: @calendarHeight;
+        .tripDate{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: @calendarHeight;
+            border-radius: @border-radius-base @border-radius-base 0 0;
+            background: @sub-background-color;
+            z-index: 499;
+            .scrollBar{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: @white-space .2rem 0;
+                .calendarScroll{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    overflow-x: scroll;
+                    flex: 1;
+                    height: 1.64rem;
+                    .calBlock{
+                        flex: none;
+                        .content{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            align-items: center;
+                            width: 0.96rem;
+                            height: 1.32rem;
+                            margin: 0 .12rem;
+                            .week,.price{
+                                font-size: .24rem;
+                            }
+                            .date{
+                                font-size: .30rem;
+                            }
+                            &.choosen{
+                                background: @theme-color;
+                                color: @sub-background-color;
+                                border-radius: @border-radius-sm;
+                                box-shadow: 0px .04rem .1rem 0px rgba(136, 147, 205, 0.68);
+                            }
+                        }
+                    }
+                }
+            }
+            .selectCal{
+                width: 1.22rem;
+                height: calc(~'100% - .6rem');
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff url('~themes/default/img/flightList/bg_plane_projection@2x.png') top left no-repeat;
+                background-size: contain;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                .icon{
+                    height: .62rem;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .loading-content{
+            position: absolute;
+            top: 2.5rem;
+            left: 0;
+            right: 0;
+        }
+        .list{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: @calendarHeight;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow-y: auto;
+            .flight{
+                position: relative;
+                margin-top: 0.2rem;
+                background: @sub-background-color;
+                .icon-low{
+                    position: absolute;
+                    top: 0;
+                    left: @white-space;
+                    width: 1.2rem;
+                    height: .34rem;
+                    border-radius: 0 0 @border-radius-sm @border-radius-sm;
+                    color: @sub-background-color;
+                    text-align: center;
+                    font-size: .24rem;
+                }
+                .content{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: .4rem .3rem;
+                    .trip{
+                        flex: auto;
+                        .air-info{
+                            position: relative;
+                            margin-right: 25px;
+                            color: @text-color;
+                            .time{
+                                position: relative;
+                                display: flex;
+                                justify-content: space-between;
+                                font-size: 22px;
+                                font-weight: bold;
+                                .plus{
+                                    position: absolute;
+                                    right: -.34rem;
+                                    top: -.1rem;
+                                    font-size: .26rem;
+                                    color: @theme-color;
+                                }
+                            }
+                            .airport{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: @white-space-sm;
+                                font-size: .28rem;
+
+                                div{
+                                    // max-width: calc(~'50% - 1.46rem / 2');
+                                    max-width: 35%;
+                                }
+                            }
+
+                            .arrow{
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 1.46rem;
+                                .icon{
+                                    height: .6rem;
+                                    background: url(~themes/default/img/common/icon_plane_jingting@2x.svg) no-repeat center;
+                                    background-size: contain;
+                                }
+                                .detail{
+                                    font-size: 12px;
+                                    color: @secondary-text-color;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .plane-info{
+                            margin-top: .22rem;
+                            .flight-info{
+                                display: flex;
+                                font-size: 12px;
+                                color: @third-text-color;
+
+                                .logo{
+                                    margin-right: .02rem;
+                                }
+
+                                .share{
+                                    color: @theme-color;
+                                    margin: 0 .02rem;
+                                }
+
+                                .split{
+                                    .blpx(1px, @third-text-color, 0, 0 );
+                                    width: 0px;
+                                    margin: 0.04rem 0.1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .price-info{
+                        flex: none;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: right;
+                        padding-left: 15px;
+                        .price{
+                            color: @warning-color;
+                            font-size: 24px;
+                            .rmb{
+                                font-size: 14px;
+                            }
+                        }
+
+                        .cabinName{
+                            margin-top: @white-space-sm;
+                            font-size: 11px;
+                            color: @third-text-color;
+                        }
+
+                        .coupon-label{
+                            margin-top: .2rem;
+                            font-size: .22rem;
+                            text-align: center;
+                            padding: 0 0.1rem;
+                            &:active{
+                                border-radius: 0.04rem;
+                                background: #fff;
+                                color: @warning-color-light;
+                            }
+                            &:after{
+                                border-radius: 0.04rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+.footerBar{
+    position: absolute;
+    left: .4rem;
+    right: .4rem;
+    bottom: .32rem;
+    height: .88rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: @sub-background-color;
+    z-index: 300;
+    box-shadow:0px 4px 26px -4px rgba(131,133,139,0.3);
+    border-radius: .54rem;
+    padding: 0 .1rem;
+    .option{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: @third-text-color;
+        text-align: center;
+        height: .36rem;
+        line-height: .36rem;
+        font-size: 0;
+        
+        .label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        img{
+            width: .28rem;
+        }
+
+        .icon{
+            display: inline-block;
+            margin-right: .08rem;
+            fill: @third-text-color;
+            &.icon_train_arrow{
+                margin: 0;
+            }
+        }
+
+        &.choosed{
+            color: @theme-color;
+            .icon{
+                fill: @theme-color;
+            }
+        }
+    }
+
+    .split{
+        .blpx(2px, @border-color-base);
+        height: .28rem;
+        margin: 0 @white-space-sm;
+    }
+}
+
+
+.popBox {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    overflow-y: hidden;
+    position: fixed;
+    top: @title-bar-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: @calendarHeight;
+    .calendar-mask {
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        flex: 1;
+    }
+    .wh_container {
+        margin: 0;
+        max-height: max-content;
+
+        .wh_content_list {
+            height: calc(~"100% - 2rem");
+        }
+    }
+    .filter{
+        background-color: @sub-background-color;
+    }
+}
+
+.approachConfirm{
+    .content{
+        padding: .36rem .4rem 0;
+        text-align: center;
+        .title{
+            background: url("~themes/default/img/flightList/icon_ball_hint.svg") center top no-repeat;
+            background-size: .72rem;
+            padding-top: .84rem;
+            color: @text-color;
+            font-size: .34rem;
+            font-weight: bold;
+            margin-bottom: .14rem;
+        }
+        article{
+            margin-top: .33rem;
+            color: @text-color;
+            font-size: .3rem;
+            text-align: left;
+            padding-left: .06rem;
+        }
+        .btn-group{
+            font-size: .32rem;
+            margin-top: .55rem;
+            &>div{
+                height: .84rem;
+                line-height: .84rem;
+                border-radius: .42rem;
+                margin-bottom: .12rem;
+                &:first-of-type{
+                    color: @sub-background-color;
+                    background: @theme-color;
+                }
+                &:last-of-type{
+                    color: @disable-color;
+                }
+            }
+        }
+    }
+}
+
+.approachConfirm .weui-dialog{
+    border-radius: .3rem;
+}
+
+.showBar-enter-active,
+.showBar-leave-active {
+    transition: all .4s ease-out;
+}
+
+.showBar-enter,
+.showBar-leave-to {
+    opacity: 0;
+}
+
+.filter-pop{
+    border-radius: @border-radius-base @border-radius-base 0 0;
+    overflow: hidden;
+}

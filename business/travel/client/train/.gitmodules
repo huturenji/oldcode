@@ -1,0 +1,6 @@
+[submodule "src/components"]
+	path = src/components
+	url = git@git.sinosun.com.cn:product/bplus/travel/frontend-client/components.git
+[submodule "src/platform"]
+	path = src/platform
+	url = git@git.sinosun.com.cn:product/bplus/travel/frontend-client/platform.git

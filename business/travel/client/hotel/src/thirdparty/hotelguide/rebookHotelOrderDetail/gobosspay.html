@@ -1,0 +1,547 @@
+<!--
+ * @Description: 
+ * @Author: WangBinbin
+ * @LastEditTime: 2021-06-24 10:48:12
+ * @FilePath: \travel_guide\hotel\rebookHotelOrderDetail\gobosspay.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>订单详情</title>
+    <link href="./css/orderDetail.49dbd0d1a169cca56aad.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/15.5e9a9ed033a2ba50cc7a.css">
+    <link rel="stylesheet" type="text/css" href="./css/loading.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/sinosun_common.5664f620.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+    <style type="text/css">
+        *[data-v-35d7a8c8] {
+            box-sizing: border-box;
+        }
+        html,body{overflow-y: hidden;}
+
+        .payType[data-v-35d7a8c8] {
+            background-color: rgba(0, 0, 0, 0) !important;
+            padding: 0.3rem;
+            z-index: 955;
+        }
+
+        .payType .pay-list[data-v-35d7a8c8] {
+            position: relative;
+        }
+
+        .payType .pay-list .lineBorderB[data-v-35d7a8c8]:last-of-type:after {
+            display: none;
+        }
+
+        .payType .content[data-v-35d7a8c8] {
+            width: auto;
+            padding: 0;
+            background: #ffffff;
+            border-radius: .1rem;
+        }
+
+        .payType .content div[data-v-35d7a8c8] {
+            padding-left: 0.3rem;
+            color: #333;
+            font-size: .32rem;
+            line-height: .99rem;
+            text-align: left;
+        }
+
+        .payType .content .paybg[data-v-35d7a8c8] {
+            padding-left: 1.2rem;
+            background-position: .3rem center;
+            background-repeat: no-repeat;
+            background-size: 0.56rem 0.56rem;
+        }
+
+        .payType .content .paybg[data-v-35d7a8c8]:active {
+            background-color: #ecf3fd;
+        }
+
+        .payType .footer[data-v-35d7a8c8] {
+            width: auto;
+            font-size: .32rem;
+            line-height: .9rem;
+            margin-top: .3rem;
+            border-radius: .1rem;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .payType .footer[data-v-35d7a8c8]:active {
+            background-color: #ecf3fd;
+        }
+
+        #alipayFrameContainer[data-v-35d7a8c8] {
+            z-index: 2;
+        }
+
+        .pay-mask[data-v-35d7a8c8] {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            z-index: -1;
+            display: block;
+            tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-transition: opacity 400ms;
+            transition: opacity 400ms;
+        }
+
+        .pay-mask.show[data-v-35d7a8c8] {
+            opacity: 1;
+            z-index: 901;
+        }
+        .point{
+            position: absolute;
+            top: .1rem;
+        }
+    </style>
+    <style type="text/css">
+        .box_bg {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .box {
+            opacity: .4;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .content_box {
+            width: 100%;
+            /* height: 4rem; */
+            /* margin: 6rem auto 0; */
+            position: absolute;
+            bottom: 0;
+            border-top-left-radius: .2rem;
+            border-top-right-radius: .2rem;
+            /* color: #fff; */
+            background: #fff;
+            font-size: .28rem;
+            line-height: .44rem;
+            /* padding: 1.65rem .3rem 0; */
+            overflow: hidden;
+
+        }
+
+        .pay_title {
+            height: .88rem;
+            text-align: center;
+            line-height: .88rem;
+            position: relative;
+            background: #f6f9fd;
+        }
+
+        .close {
+            position: absolute;
+            top: -.1rem;
+            right: .2rem;
+            font-size: .4rem;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .pay_number {
+            font-size: .56rem;
+            text-align: center;
+            margin-top: .3rem;
+            color: #ff4e3a ;
+            font-weight: bold;
+        }
+
+        .pay_tips_balance {
+            width: 6.3rem;
+            height: .9rem;
+            margin: 0 auto;
+            margin-top: .6rem;
+            line-height: .9rem;
+            border-radius: .15rem;
+            padding: 0 .3rem;
+            color: #c2c2c2;
+            background: #f6f9fd;
+        }
+
+        .pay_smtips_balance {
+            height: .34rem;
+            font-size: 13px;
+            margin: .2rem auto 0;
+            line-height: .34rem;
+            text-align: center;
+            cursor: pointer;
+            color: #262dd9;
+            padding-right: .6rem;
+            text-align: right;
+        }
+        .pay_btn {
+            width: 6.9rem;
+            height: .8rem;
+            line-height: .8rem;
+            background: #262dd9;
+            color: #fff;
+            border: 1px solid #262dd9;
+            outline: none;
+            padding: 0;
+            margin: 1rem auto .6rem;
+            border-radius: .2rem;
+            font-size: .28rem;
+            font-family: MicrosoftYaHei;
+            cursor: pointer;
+            position: relative;
+
+        }
+        .btn-primary{color: #fff;margin: 0 auto;width: 100%;background: transparent;}
+    </style>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="right">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M28.715863,11.568274 C29.977357,11.568274 31,10.545631 31,9.28413698 C31,8.02264296 29.977357,7 28.715863,7 L3.28413698,7 C2.02264296,7 1,8.02264296 1,9.28413698 L1,34.715863 C1,35.977357 2.02264296,37 3.28413698,37 C4.545631,37 5.56827396,35.977357 5.56827396,34.715863 L5.56827396,11.568274 L28.715863,11.568274 Z"
+                    fill-rule="nonzero"
+                    transform="translate(16.000000, 22.000000) rotate(-225.000000) translate(-16.000000, -22.000000) ">
+                </path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="location">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g transform="translate(5.000000, 3.000000)" fill-rule="nonzero">
+                    <g transform="translate(1.092014, 0.000000)">
+                        <path
+                            d="M16.2927868,7.75439661 C19.6421446,7.9280287 22.4734069,10.3550112 23.1330308,13.6759469 C23.8168351,17.1196481 21.9752466,20.5674644 18.7326679,21.9139584 C15.490128,23.2604974 11.7477819,22.1312653 9.79130493,19.2158822 C7.83471081,16.3006945 8.20748025,12.4096241 10.6821746,9.9186618 C11.9687535,8.62401526 13.6863237,7.85647709 15.4987939,7.75578243 L15.9185879,7.74444626 L16.2927868,7.75439661 Z M15.9136792,11.1444427 L15.5627073,11.1594581 C14.6330215,11.2406084 13.7571056,11.6478744 13.0940205,12.3151173 C11.7616115,13.6562853 11.5608908,15.7514626 12.6144468,17.321187 C13.6678858,18.8909362 15.6828658,19.4989452 17.4287307,18.7739348 C19.174723,18.0489045 20.1663357,16.1924102 19.7981593,14.33824 C19.4298335,12.4838706 17.8039369,11.1471356 15.9136792,11.1444427 Z">
+                        </path>
+                        <path
+                            d="M15.9081077,-1.7 C11.4126041,-1.7 7.11110209,0.145509158 3.98963973,3.41160064 C-2.53408676,10.2361935 -2.53408676,21.0560056 3.98976029,27.8807246 L15.9081216,40.2253195 L27.8203701,27.8868055 C34.2220062,21.1899635 34.3475478,10.6590311 28.2024998,3.81753955 L27.8262722,3.41153757 C24.7048278,0.14549906 20.4034067,-1.7 15.9081077,-1.7 Z M15.9080954,35.3302378 L6.44163285,25.5252523 C1.18000397,20.0209331 1.18000397,11.271266 6.44748809,5.76085188 C8.92866793,3.16470964 12.3426046,1.7 15.9081077,1.7 C19.2857778,1.7 22.5275354,3.01459355 24.9689803,5.36027954 L25.3684841,5.76085188 C30.6359683,11.271266 30.6359683,20.0209331 25.3684841,25.5313472 L15.9080954,35.3302378 Z">
+                        </path>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_prompt">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g>
+                    <g transform="translate(0.500000, 0.500000)">
+                        <path
+                            d="M10.5,0 C16.2989899,0 21,4.70101013 21,10.5 C21,16.2989899 16.2989899,21 10.5,21 C4.70101013,21 0,16.2989899 0,10.5 C0,4.70101013 4.70101013,0 10.5,0 Z M10.5,1.57142857 C5.56888616,1.57142857 1.57142857,5.56888616 1.57142857,10.5 C1.57142857,15.4311138 5.56888616,19.4285714 10.5,19.4285714 C15.4311138,19.4285714 19.4285714,15.4311138 19.4285714,10.5 C19.4285714,5.56888616 15.4311138,1.57142857 10.5,1.57142857 Z"
+                            fill-rule="nonzero"></path>
+                        <path
+                            d="M9.17320033,6.02769252 C9.17320033,5.61130279 9.32231064,5.25259405 9.62053571,4.95155552 C9.91876079,4.650517 10.2760628,4.5 10.6924526,4.5 C11.1144692,4.5 11.4717712,4.6491103 11.7643694,4.94733538 C12.0569676,5.24556046 12.2032645,5.6056759 12.2032645,6.02769252 C12.2032645,6.44970914 12.0555609,6.80982459 11.7601493,7.10804967 C11.4647376,7.40627474 11.1088423,7.55538504 10.6924526,7.55538504 C10.2591822,7.55538504 9.89766002,7.40205464 9.60787528,7.09538923 C9.31809053,6.78872382 9.17320033,6.43282848 9.17320033,6.02769252 Z M12.0175781,8.95647321 L12.0175781,14.1303711 C12.0175781,14.5580146 12.0850998,14.8520151 12.2201451,15.0123814 C12.3551904,15.1727477 12.6702914,15.2529297 13.1654576,15.2529297 L13.1654576,16.1476004 L8,16.1476004 L8,15.2529297 L8.19412667,15.2529297 C8.67241218,15.2529297 8.97485288,15.1685276 9.10145787,14.999721 C9.22806285,14.8309143 9.2913644,14.5411339 9.2913644,14.1303711 L9.2913644,11.6151646 C9.2913644,11.1987749 9.22665615,10.9075878 9.09723772,10.7415946 C8.96781929,10.5756014 8.66678529,10.492606 8.19412667,10.492606 L8,10.492606 L8,9.59793527 L12.0175781,8.95647321 Z">
+                        </path>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="chat">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(1.000000, 2.000000)" fill="currentColor">
+                    <path
+                        d="M6.22545005,15.0348044 L2.21999995,15.0348044 C0.993927834,15.0348044 -4.26325641e-14,14.0408765 -4.26325641e-14,12.8148044 L-4.26325641e-14,1.97999996 C-4.26325641e-14,0.886476176 0.886476176,-4.08562073e-14 1.97999996,-4.08562073e-14 L18.0199047,-4.08562073e-14 C19.1134285,-4.08562073e-14 19.9999046,0.886476176 19.9999046,1.97999996 L19.9999046,12.8148044 C19.9999046,14.0408765 19.0059768,15.0348044 17.7799047,15.0348044 L13.7057388,15.0348044 L10.5612268,18.5989593 C10.2514102,18.9501217 9.70417105,18.9510452 9.39317098,18.6009306 L6.22545005,15.0348044 Z M9.97434042,16.9061847 L12.7688243,13.73877 C12.9168917,13.5709426 13.1299168,13.4748044 13.3537247,13.4748044 L17.7799047,13.4748044 C18.1444126,13.4748044 18.4399047,13.1793123 18.4399047,12.8148044 L18.4399047,1.97999996 C18.4399047,1.74804037 18.2518643,1.55999997 18.0199047,1.55999997 L1.97999996,1.55999997 C1.74804037,1.55999997 1.55999997,1.74804037 1.55999997,1.97999996 L1.55999997,12.8148044 C1.55999997,13.1793123 1.85549202,13.4748044 2.21999995,13.4748044 L6.57588086,13.4748044 C6.79877078,13.4748044 7.01101284,13.5701584 7.15903621,13.7367988 L9.97434042,16.9061847 Z"
+                        fill-rule="nonzero"></path>
+                    <path
+                        d="M5.6689139,6.77999985 C6.32229025,6.77999985 6.85195643,7.30966603 6.85195643,7.96304238 C6.85195643,8.61641872 6.32229025,9.1460849 5.6689139,9.1460849 C5.01553756,9.1460849 4.48587138,8.61641872 4.48587138,7.96304238 C4.48587138,7.30966603 5.01553756,6.77999985 5.6689139,6.77999985 Z M9.97388307,6.77999985 C10.6272594,6.77999985 11.1569256,7.30966603 11.1569256,7.96304238 C11.1569256,8.61641872 10.6272594,9.1460849 9.97388307,9.1460849 C9.32050672,9.1460849 8.79084054,8.61641872 8.79084054,7.96304238 C8.79084054,7.30966603 9.32050672,6.77999985 9.97388307,6.77999985 Z M14.2788522,6.77999985 C14.9322286,6.77999985 15.4618948,7.30966603 15.4618948,7.96304238 C15.4618948,8.61641872 14.9322286,9.1460849 14.2788522,9.1460849 C13.6254759,9.1460849 13.0958097,8.61641872 13.0958097,7.96304238 C13.0958097,7.30966603 13.6254759,6.77999985 14.2788522,6.77999985 Z">
+                    </path>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="time">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M11,0.55 C16.7713756,0.55 21.45,5.22862436 21.45,11 C21.45,16.7713756 16.7713756,21.45 11,21.45 C5.22862436,21.45 0.55,16.7713756 0.55,11 C0.55,5.22862436 5.22862436,0.55 11,0.55 Z M11,2.2 C6.1398942,2.2 2.2,6.1398942 2.2,11 C2.2,15.8601058 6.1398942,19.8 11,19.8 C15.8601058,19.8 19.8,15.8601058 19.8,11 C19.8,6.1398942 15.8601058,2.2 11,2.2 Z M11,4.60625 C11.4487314,4.60625 11.8202239,4.93694876 11.8840595,5.36792818 L11.89375,5.5 L11.89325,10.10325 L16.5474537,10.1033301 C17.0410582,10.1033301 17.4412037,10.5034756 17.4412037,10.9970801 C17.4412037,11.4458115 17.1105049,11.817304 16.6795255,11.8811396 L16.5474537,11.8908301 L11.0474537,11.8908301 L11,11.89375 C10.5512686,11.89375 10.1797761,11.5630512 10.1159405,11.1320718 L10.10625,11 L10.10625,5.5 C10.10625,5.0063955 10.5063955,4.60625 11,4.60625 Z">
+                </path>
+            </g>
+        </symbol>
+    </svg>
+
+    <div>
+        <div data-v-32068a0e="" class="child-view">
+            <div data-v-0ad7d538="" data-v-32068a0e="" class="orderDetail">
+                <div data-v-0ad7d538="" class="tab bigPaddingt">
+                    <div data-v-0ad7d538="" class="topbgWrap">
+                        <div data-v-0ad7d538="" class="topbg"></div>
+                    </div>
+                    <div data-v-0ad7d538="" class="contectOutWrap">
+                        <div data-v-0ad7d538="" class="head">
+                            <div data-v-0ad7d538="" class="summary">
+                                <div data-v-0ad7d538="" class="status">待支付</div>
+                                <div data-v-0ad7d538="" class="amount cursorp num-font"><span data-v-0ad7d538=""
+                                        class="roomTypeTips">在线付</span> <span data-v-0ad7d538="" class="unit">￥</span>
+                                    <span data-v-0ad7d538="" class="amountNum">343</span> <svg data-v-0ad7d538=""
+                                        class="icon amountRight normal-btn right"
+                                        style="width: 0.24rem; height: 0.24rem;">
+                                        <use xlink:href="#right"></use>
+                                    </svg></div>
+                            </div>
+                            <div data-v-0ad7d538="" class="summary-note">
+                                请在<span data-v-0ad7d538="">09分44秒</span>内完成支付，超时订单将取消
+                            </div>
+                            <div data-v-0ad7d538="" class="order-no"><span data-v-0ad7d538="">订单号</span><span
+                                    data-v-0ad7d538="">188657747374080</span></div>
+                        </div>
+                        <div data-v-1d433c04="" data-v-0ad7d538="" class="hotelCard cursorp normal-btn">
+                            <div data-v-1d433c04="" class="cardWrap">
+                                <div data-v-1d433c04="" class="leftWrap">
+                                    <div data-v-1d433c04="" class="titleWrap">丽顿酒店(武汉高铁站科技大学青山校区店)</div>
+                                    <div data-v-1d433c04="" class="textinfo"><svg data-v-1d433c04=""
+                                            class="icon rightButton normal-btn location"
+                                            style="width: 0.24rem; height: 0.24rem;">
+                                            <use xlink:href="#location"></use>
+                                        </svg>建设一路宝业中心</div>
+                                </div> <svg data-v-1d433c04="" class="icon rightButton normal-btn right"
+                                    style="width: 0.24rem; height: 0.24rem;">
+                                    <use xlink:href="#right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div data-v-0ad7d538="" class="lineTextWrap cursorp normal-btn">
+                            <div data-v-0ad7d538="" class="lineInWrap">
+                                <div data-v-0ad7d538="" class="lineText nowrap">取消规则：虚拟供应商取消</div> <svg
+                                    data-v-0ad7d538="" class="icon lineTextRight normal-btn right"
+                                    style="width: 0.24rem; height: 0.24rem;">
+                                    <use xlink:href="#right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div data-v-586a4407="" data-v-0ad7d538="" class="orderCard hotelOrderCard"
+                            roomname="高级双床房-前台+1元得单早" passengers="张三" hasname="true">
+                            <div data-v-586a4407="" class="cardOutWrap bbpxs">
+                                <div data-v-586a4407="" class="cardWrap">
+                                    <div data-v-586a4407="" class="titleWrap">普通双床房-前台+1元得单早 1间</div>
+                                    <div data-v-586a4407="" class="textinfo">06月09日入住 - 06月10日离店 住1晚</div>
+                                    <div data-v-586a4407="" class="textinfo roominfo"><svg data-v-586a4407=""
+                                            class="icon roomInfoBut normal-btn icon_common_prompt"
+                                            style="width: 0.28rem; height: 0.28rem;">
+                                            <use xlink:href="#icon_common_prompt"></use>
+                                        </svg> <span data-v-586a4407="" class="roomInfoItem">免费WiFi</span> <span
+                                            data-v-586a4407="" class="roomInfoItem">免费停车场</span> <span
+                                            data-v-586a4407="" class="roomInfoItem">会议室</span> <span data-v-586a4407=""
+                                            class="roomInfoItem">不含早</span></div>
+                                </div>
+                            </div>
+                            <div data-v-586a4407="" class="buttonWrap">
+                                <div data-v-586a4407="" class="buttonitemWrap cursorp normal-btn ">
+                                    <div data-v-586a4407="" class="buttonitem brpxs"><svg data-v-586a4407=""
+                                            class="icon rightButton normal-btn chat"
+                                            style="width: 0.32rem; height: 0.32rem;">
+                                            <use xlink:href="#chat"></use>
+                                        </svg> <span data-v-586a4407="">联系酒店</span></div>
+                                </div>
+                                <div data-v-586a4407="" class="buttonitemWrap cursorp normal-btn">
+                                    <div data-v-586a4407="" class="buttonitem "><svg data-v-586a4407=""
+                                            class="icon rightButton normal-btn location"
+                                            style="width: 0.32rem; height: 0.32rem;">
+                                            <use xlink:href="#location"></use>
+                                        </svg> <span data-v-586a4407="">地图导航</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-v-0ad7d538="" class="orderCustomerInfo">
+                            <div data-v-0ad7d538="" class="textLineShow textTitle bbpxs">
+                                <div data-v-0ad7d538="" class="leftitem">预订信息</div>
+                            </div>
+                            <div data-v-0ad7d538="" class="textLineShow bbpxsl">
+                                <div data-v-0ad7d538="" class="leftitem font-info">入住人</div>
+                                <div data-v-0ad7d538="" onclick="return false" class="rightItem">
+                                    张三</div>
+                            </div>
+                            <div data-v-0ad7d538="" class="textLineShow">
+                                <div data-v-0ad7d538="" class="leftitem font-info">联系电话</div>
+                                <div data-v-0ad7d538="" onclick="return false" class="rightItem">
+                                    13111111111</div>
+                            </div>
+                        </div>
+                        <div data-v-0ad7d538="">
+                            <div data-v-0ad7d538="" class="rightWrap hotel-reimburse">
+                                <div data-v-0ad7d538="" class="left">
+                                    报销凭证
+                                </div>
+                                <div data-v-0ad7d538="">
+                                    如需报销凭证，请向酒店前台索取
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-v-0ad7d538="" class="v-transfer-dom">
+        <div data-v-0ad7d538="" class="btn-group-page"><a data-v-0ad7d538=""
+                class="btn-cancel cursorp normal-btn">取消订单</a> <a data-v-0ad7d538=""
+                class="btn-pay cursorp normal-btn">去支付<svg data-v-0ad7d538="" class="icon limitTime time"
+                    style="width: 0.3rem; height: 0.3rem;">
+                    <use xlink:href="#time"></use>
+                </svg><span data-v-0ad7d538="">09:44</span></a>
+        </div>
+    </div>
+    
+    <div id="app" class="box_bg">
+        <div  class="box"></div>
+            <div data-v-6906d682="" class="content_box">
+                <div data-v-6906d682="" class="pay_title atom_F6F9FD_background">
+                    <b data-v-6906d682="" class="atom_gray333_font">老板付支付</b>
+                    <div data-v-6906d682="" class="close atom_red_font atom_gray999_font">
+                        </div>
+                </div>
+                
+                <div data-v-6906d682="" class="pay_content">
+                    <div data-v-6906d682="" class="pay_number atom_red_sendfailed_font"><span
+                            data-v-6906d682="">¥</span>343.00</div>
+                    <div data-v-6906d682="" class="pay_tips_balance atom_gray333_font atom_F6F9FD_background">
+                        <div data-v-6906d682="" style="float: left;">可用老板付预算金额</div>
+                        <div data-v-6906d682="" style="float: right; font-size: 24px;"><b
+                                data-v-6906d682="">343.00</b><span data-v-6906d682=""
+                                style="font-size: 12px; vertical-align: middle; margin-left: 2px;">元</span></div>
+                    </div>
+                    <div data-v-6906d682="" class="pay_smtips_balance atom_primary_font" >申请老板付预算</div>
+                    <div data-v-6906d682="" class="pay_btn" onclick="nextPage()">
+                        <div class="point" style="right: 2.5rem;bottom: -.5rem;" ></div>
+                        <button data-v-6906d682=""
+                            type="button" class="btn btn-primary"
+                            style="font-size: 16px;"
+                            >支付</button>
+                    </div>
+                </div>
+                
+                
+            </div>
+        
+    </div>
+    <!-- 体验版背景 -->
+    <div data-v-b94e16a0="" class="water-mark">
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+    </div>
+    <!-- loading -->
+    <div class="weui-loading_toast vux-loading" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast"><i class="weui-loading weui-icon_toast"></i>
+            <p class="weui-toast__content">支付中</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    var loading = document.getElementsByClassName("vux-loading")[0]
+    function nextPage(){
+        loading.style.display = 'block'
+        setTimeout(()=>{
+            window.open("../paySuccess/index.html")
+            loading.style.display = 'none'
+        },1000)
+    }
+</script>
+</html>

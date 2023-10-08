@@ -1,0 +1,17 @@
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+/src/package-lock.json
+/src/package.json
+/addressBuild/
+/static/
+
+/src/assets/
+/src/components/
+/src/platform/
+/src/route/
+/src/sprite/
+/src/themes/
+/src/thirdparty/

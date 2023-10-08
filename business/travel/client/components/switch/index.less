@@ -1,0 +1,40 @@
+@import './default.less';
+
+@switch-prefix-cls: ~"@{sino-prefix}-switch";
+
+.@{switch-prefix-cls} {
+    position: relative;
+    display: inline-block;
+    width: @switch-width;
+    height: @switch-height;
+    font-size: @switch-size;
+    background-color: @switch-background-color;
+    border: @switch-border;
+    border-radius: @switch-node-size;
+    transition: background-color @switch-transition-duration;
+
+    &-node {
+        position: absolute;
+        top: (@switch-height - @switch-node-size) / 2;
+        left: (@switch-height - @switch-node-size) / 2;
+        z-index: @switch-node-z-index;
+        width: @switch-node-size;
+        height: @switch-node-size;
+        background-color: @switch-node-background-color;
+        border-radius: 100%;
+        box-shadow: @switch-node-box-shadow;
+        transition: transform @switch-transition-duration cubic-bezier(.3, 1.05, .4, 1.05);
+    }
+
+    &-on {
+        background-color: @switch-on-background-color;
+
+        .@{switch-prefix-cls}-node {
+            transform: translateX(@switch-width - @switch-height);
+        }
+    }
+
+    &-disabled {
+        opacity: @switch-disabled-opacity;
+    }
+}

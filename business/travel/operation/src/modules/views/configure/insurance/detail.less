@@ -1,0 +1,86 @@
+@import '~styles/common.less';
+@import '~styles/variables.less';
+@import '~styles/mixins/mixins.less';
+@placeholder-color: #B2B2B2;
+//订单详情
+@font-color-text1: #333333;
+//已出票
+@font-color-text2: #478aee;
+//订单号
+@font-color-text3: #7F7F7F;
+//总金额数字
+@font-color-text4: #F39800;
+//退票成功
+@font-color-text5: #25CB67;
+//顺丰速递
+@font-color-text6: #191919;
+* {
+  box-sizing: border-box;
+  color: @font-color;
+}
+
+.insuranceProductDetail {
+  margin-left: 10px;
+  height: 100%;
+  width: 100%;
+
+  .topNavigation {
+    display: flex;
+    align-content: space-between;
+
+    .topNavLeft {
+      width: 10%;
+      height: 50px;
+      line-height: 50px;
+      display: flex;
+      align-content: flex-start;
+
+      .topNavBackBtn {
+        background: url(~assets//icon_back_nor.png) no-repeat 0 0 transparent;
+        height: 24px;
+        width: 24px;
+        margin-left: 0;
+        align-self: center;
+
+        &:hover {
+          background-image: url(~assets//icon_back_hov.png);
+        }
+      }
+    }
+
+    .topNavMiddle {
+      width: 80%;
+      font-size: 24px;
+      color: @font-color-text1;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .topNavRight {
+      width: 10%;
+    }
+  }
+
+  .detailDiv {
+    margin: 10px 0px;
+    padding: 10px;
+    background: white;
+    height: 100%;
+    color: #333333;
+    .itemLine {
+      display: flex;
+      margin: 10px 0px;
+      .name {
+        width: 300px;
+        text-align: right;
+      }
+
+      .value {
+        width: 600px;
+        word-break: break-all;
+      }
+    }
+
+  }
+}

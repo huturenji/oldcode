@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/icon/common/success@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="20.0527272%" y1="6.38840798%" x2="86.3763193%" y2="90.0961004%" id="linearGradient-1">
+            <stop stop-color="#64F5E1" offset="0%"></stop>
+            <stop stop-color="#23CDA7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="h5-svg/icon/common/success" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="椭圆形" fill="url(#linearGradient-1)" cx="11" cy="11" r="10.56"></circle>
+        <path d="M15.3432994,6.16538696 C15.5833295,5.89106678 16.0002929,5.86326923 16.274613,6.10329938 C16.5317882,6.32832765 16.5722931,6.70886359 16.3785729,6.98158443 L16.3367006,7.03461304 L9.7386789,14.5752093 L5.28151987,10.6132902 C5.00908324,10.3711243 4.98454396,9.95395649 5.22670985,9.68151987 C5.45374037,9.42611053 5.83458114,9.38857972 6.10578026,9.5844246 L6.15848013,9.62670985 L9.62148,12.70456 L15.3432994,6.16538696 Z" id="路径-4" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,0 +1,305 @@
+@import '~styles//common.less';
+@import '~styles//variables.less';
+@import '~styles/mixins/mixins.less';
+
+* {
+  box-sizing: border-box;
+  color: @font-color;
+}
+
+.channel-edit-content {
+  margin-left: 10px;
+  background: #fff;
+  // height: 100%;
+  padding-bottom: 20px;
+
+  header {
+    .flex-box;
+    .align-items(center);
+
+    width: 100%;
+    height: 72px;
+    border-bottom: 1px solid @border;
+
+    .title {
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .icon-back {
+      margin: 0 20px 0 60px;
+      height: 24px;
+      width: 24px;
+      display: inline-block;
+      cursor: pointer;
+      background: url(~assets//icon_back_nor.png) no-repeat 0 0 transparent;
+
+      &:hover {
+        background-image: url(~assets//icon_back_hov.png);
+      }
+    }
+  }
+
+  section {
+    padding-top: 30px;
+    background: #fff;
+    border-radius: 5px;
+
+    .editBoxTitle {
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: 60px;
+    }
+
+    .row {
+      .clear;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #333;
+
+      .info-label {
+        color: @label-color;
+      }
+
+      .required:before {
+        content: '*';
+        color: @font-red-color;
+        font-size: 12px;
+        margin-right: 6px;
+      }
+
+      .error-msg {
+        color: @font-red-color;
+        padding-left: 10px;
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: initial;
+      }
+
+      .left {
+        float: left;
+        width: 30%;
+        height: 32px;
+        line-height: 32px;
+        text-align: right;
+        padding-right: 10px;
+      }
+
+      .leftNested {
+        width: 110px;
+      }
+
+      .leftNested1 {
+        width: auto;
+        padding-left: 10px;
+      }
+
+      .right {
+        @width: 480px;
+        width: @width;
+        min-height: 32px;
+        line-height: 32px;
+        float: left;
+        text-align: left;
+
+        .protocol {
+          width: 180px;
+
+          .customboxCheck {
+            margin: 10px 33px 0 0;
+            color: #478aee;
+            display: flex;
+            align-items: center;
+
+            .imgDiv {
+              margin-right: 5px;
+              height: 16px;
+              width: 16px;
+              background: url(~assets//icon_check.png);
+            }
+          }
+
+          .customboxNoCheck {
+            margin: 10px 33px 0 0;
+            color: #333333;
+            display: flex;
+            align-items: center;
+
+            .imgDiv {
+              margin-right: 5px;
+              height: 16px;
+              width: 16px;
+              background: url(~assets//icon_uncheck.png);
+            }
+          }
+        }
+
+        .optionClass {
+          display: flex;
+        }
+
+        .check-icon {
+          //   display: inline-block;
+          height: 18px;
+          width: 36px;
+          //   line-height: 16px;
+          margin: 8px 0;
+          //   text-indent: 26px;
+          //   text-align: left;
+          cursor: pointer;
+
+          &.uncheck {
+            background: url(~assets//icon_close.png);
+          }
+
+          &.check {
+            background: url(~assets//icon_open.png);
+          }
+
+          &:first-of-type {
+            margin-left: 12px;
+          }
+        }
+
+        input {
+          border: 1px solid @border;
+          border-radius: 2px;
+          height: 32px;
+          line-height: 32px;
+          padding-left: 10px;
+          font-size: 14px;
+          color: #333;
+
+          /* 使用webkit内核的浏览器 */
+          &::-webkit-input-placeholder {
+            font-size: 12px;
+            color: #999;
+          }
+
+          /* Firefox版本4-18 */
+          &:-moz-placeholder {
+            font-size: 12px;
+
+          }
+
+          /* Firefox版本19+ */
+          &::-moz-placeholder {
+            font-size: 12px;
+            color: #999;
+          }
+
+          /* IE浏览器 */
+          &:-ms-input-placeholder {
+            font-size: 12px;
+            color: #999;
+          }
+        }
+      }
+
+      .rightNested {
+        width: 300px;
+        position: relative;
+      }
+
+      .rightInstructions {
+        @width: 480px;
+        width: @width;
+        //      height: 32px;
+        line-height: 32px;
+        float: left;
+        text-align: left;
+        // display: flex;
+
+        textarea {
+          border: 1px solid @border;
+          border-radius: 2px;
+          height: 200px;
+          line-height: 32px;
+          padding-left: 10px;
+          font-size: 14px;
+          color: #333;
+          flex: 1;
+
+          /* 使用webkit内核的浏览器 */
+          &::-webkit-input-placeholder {
+            font-size: 12px;
+            color: #999;
+          }
+
+          /* Firefox版本4-18 */
+          &:-moz-placeholder {
+            font-size: 12px;
+
+          }
+
+          /* Firefox版本19+ */
+          &::-moz-placeholder {
+            font-size: 12px;
+            color: #999;
+          }
+
+          /* IE浏览器 */
+          &:-ms-input-placeholder {
+            font-size: 12px;
+            color: #999;
+          }
+        }
+      }
+    }
+
+    .rowNested {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+
+    .formList {
+      // display: none;
+      margin-top: 10px;
+
+      h3 {
+        margin-left: 10vw;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      .formItem {
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        padding: 15px;
+        margin: 10px 8vw;
+
+        .formBase {
+          display: flex;
+        }
+
+        .itemIcon {
+          height: 16px;
+          width: 16px;
+          margin: 0px 10px;
+        }
+
+        .check {
+          background: url(~assets//icon_check.png) 0 center no-repeat transparent;
+        }
+
+        .uncheck {
+          background: url(~assets//icon_uncheck.png) 0 center no-repeat transparent;
+        }
+      }
+    }
+  }
+
+  .save-btn {
+    width: 160px;
+    height: 32px;
+    line-height: 32px;
+    background: @primary;
+    color: #fff;
+    text-align: center;
+    border-radius: @radius;
+    margin: 68px auto;
+    cursor: pointer;
+  }
+}

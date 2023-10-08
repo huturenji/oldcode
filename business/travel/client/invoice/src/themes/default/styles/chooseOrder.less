@@ -1,0 +1,311 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.invoiceList {
+    height: calc(~ '100% - 1rem');
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.tabList {
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.3rem;
+    background: #fff;
+    display: flex;
+    padding-bottom: .2rem;
+    box-sizing: content-box;
+    color: @secondary-text-color;
+    .tabItem {
+        flex: 1;
+        text-align: center;
+        position: relative;
+    }
+    .tabItem.active{
+        color: @text-color;
+        font-weight: bold;
+    }
+    .tabItem.active::after{
+        content: '';
+        position: absolute;
+        bottom: .1rem;
+        left: 50%;
+        margin-left: -0.5rem;
+        width: 1rem;
+        height:0.05rem;
+        background: @theme-color;
+    }
+    .little{
+        font-size: 0.26rem;
+    }
+}
+.invoiceType {
+    font-size: .28rem;
+    text-align: right;
+}
+.invoiceStatus{
+    margin-bottom: 0.2rem;
+}
+.taxAmount {
+    font-size: .3rem;
+    text-align: right;
+}
+
+.hotelName {
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+.content_item{
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+.tripList {
+    background: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: .2rem 0;
+    border-radius:0.2rem;
+    padding: .4rem .5rem .4rem 0;
+    box-shadow: 0px .04rem .3rem -.04rem rgba(125,155,250,0.22);
+    .checker{
+        width: 1.06rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn_common_checkbox_sel{
+            fill: @theme-color;
+        }
+        .btn_common_checkbox_nor{
+            fill: @third-text-color;
+        }
+       
+    }
+    .content {
+        flex: 1;
+        &:active{
+            opacity: .8;
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+            font-size: .28rem;
+            div {
+                padding: .1rem
+            }
+            .type {
+                display: flex;
+            }
+       
+      
+        }
+
+        .main {
+            display: flex;
+            .detail {
+                flex: 3;
+                .trip{
+                    font-size: .3rem;
+                    color: @text-color;
+                    display: flex;
+                    align-items: flex-start;
+                    .icon_plane_plane{
+                        fill: @theme-color;
+                    }
+                    .icon_train_train{
+                        fill: @theme-color;
+                    }
+                    .icon_hotel_hotel{
+                        fill: @theme-color;
+                    }
+                    span{
+                        margin-left: .1rem;
+                    }
+                    i{
+                        margin-top: .06rem;
+                    }
+                }
+                .No {
+                    font-size: .24rem;
+                    line-height: .34rem;
+                    color: @secondary-text-color;
+                    margin-top: 0.1rem;
+                }
+                .date {
+                    font-size: .24rem;
+                    line-height: .34rem;
+                    color: @secondary-text-color;
+                    margin-top: 0.1rem;
+                }
+            }
+            .price {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: right;
+                .fee{
+                    font-size: .36rem;
+                    font-weight: bold;
+                    line-height: .5rem;
+                    .biao{
+                        font-size: .2rem;
+                    }
+                }
+                
+                .trian_tips{
+                    font-size: 0.24rem;
+                    color: @secondary-text-color;
+                }
+            }
+        }
+    }
+}
+
+.choose_list_wrap{
+    height: 100vh;
+    .choose_list_box{
+        height: calc(~'100vh - 1rem');
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+/deep/ .mescroll-empty{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+
+    .empty-icon{
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    .empty-tip{
+        color: @third-text-color;
+    }
+}
+
+/deep/ .mescroll-upwarp-nodata{
+    color: #999;
+}
+// 底部的按钮
+.bottomBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    z-index: 200;
+    display: flex;
+    background: #fff;
+    box-shadow: 0px -.04rem .56rem 0px rgba(161,161,161,0.1);
+    .detail {
+        flex: 3;
+        display: flex;
+        font-size: 0.32rem;
+        .chooseAll{
+            display: flex;
+            align-items: center;
+            margin-left: 0.3rem;
+            .text{
+                font-size: .24rem;
+                margin-left: 0.16rem;
+            }
+            .checker{
+                width: 0.4rem;
+                height: 0.4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .btn_common_checkbox_sel{
+                    fill: @theme-color;
+                }
+                .btn_common_checkbox_nor{
+                    fill: @third-text-color;
+                }
+            }
+        }
+        .priceT{
+            font-size: .24rem;
+            margin-left: 0.87rem;
+            .num{
+                color: @text-color;
+                font-size: .3rem;
+            }
+        }
+    }
+    .submit {
+        flex: 2;
+        background: @theme-color;
+        text-align: center;
+        &:active{
+            opacity: .8;
+        }
+        span {
+            color: #ffffff;
+            font-size: .3rem;
+        }
+    }
+}
+
+
+
+.vux-popup-dialog.payType {
+    width: auto;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0) !important;
+    z-index: 555;
+    .bg {
+        background-color: rgba(0, 0, 0, .5);
+        height: 100%;
+        padding: .3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        .content {
+            width: auto;
+            padding: 0;
+            background: #ffffff;
+            border-radius: .1rem;
+            div {
+                padding-left: 0.3rem;
+                color: @text-color;
+                font-size: .32rem;
+                line-height: .99rem;
+            }
+            .paybg1 {
+                padding-left: 1.2rem;
+                background: url(~assets/img/orderConfirm/365.png) no-repeat 0.3rem center;
+                background-size: 0.56rem 0.56rem;
+            }
+            .paybg2 {
+                padding-left: 1.2rem;
+                background: url(~assets/img/orderConfirm/aliPay.png) no-repeat 0.3rem center;
+                background-size: 0.56rem 0.56rem;
+            }
+            .paybg3 {
+                padding-left: 1.2rem;
+                background: url(~assets/img/orderConfirm/weChat.png) no-repeat 0.3rem center;
+                background-size: 0.56rem 0.56rem;
+            }
+        }
+    }
+    .footer {
+        width: auto;
+        font-size: .32rem;
+        line-height: .9rem;
+        margin-top: .3rem;
+        border-radius: .1rem;
+        background: #ffffff;
+        text-align: center;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=yes">
+    <title></title>
+</head>
+<style>
+html {
+    font-size: 13.33333vw;
+    user-select: none;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', '宋体', Tahoma, Arial, Helvetica, STHeiti, sans-serif;
+    font-size: 0.28rem;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    color: @text-color;
+}
+.no_wrap{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all; 
+}
+.textC{
+    text-align: center;
+}
+.textR{
+    text-align: right;
+}
+.flex_box{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex{
+    -webkit-box-flex: 1;      
+    -moz-box-flex: 1;        
+    -webkit-flex: 1;          
+    -ms-flex: 1;              
+    flex: 1;                  
+}
+.justify_content{
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+}
+.align_items{
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.topWrap{
+    background-image: linear-gradient(to bottom right, #FB9157, #F6946A);
+}
+.top{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0 0.4rem;
+    font-size: 0.38rem;
+    font-weight:bold;
+    color: #fff;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJkAAAA6CAMAAACUCgvIAAAAq1BMVEUAAAD/////3tL////3gUv///////7//fz////////739T////////84dX//////v36w6z86OH///7////739P+7OT/////7+n77OP73NT86OH81cb/////9PD/9fH4lGf76OD63dL/7OT////63dH6o3z+8Or/9fL/9PD6spD81sX5sJH/9vP/9vP+8ez82sz/19T4w6372cr6vqT6oHn8ybL/9/X6uZ36rIkKOxJlAAAAOXRSTlMAeBZzgE45MUBsRWZcflQqf05JYDp8RQ4eQFNrFzhtfEdgCCQve3hncnt8YltgVncNRXNzcF2AaXNdsr8TAAAEsElEQVRo3s3YbVvaMBSA4Sy1L1Bq11JsisBo6SxTXtRNt///y5aTE5JgAblKAZ9LWI988Pa0VhlppXTEZrNZAlHyVUqZ69nYPZSQs5ZnhGQ5offBOiN5wMvgKWfBB1aIqkvLinXEyqCk7D5iaZAwRrdkxQxYl5ZFjEV8QwUhUY5QkKWGLHUBc3nZa84/kjU/zDay+zwvlYw6ynONs0kDyg+HUsb456Vs9NF12+v1+/1XqEvOGspIvu7mayplUZZlLOBPrreN8q1vWABF5KyVjO+nJEWSZakcMyjNsmm+MFioMmUrcp1GjsHqI0vLRL9fGLlkdZePnJrsO++tfCYXjHmGq6M8NRn294WSi5SGsXb1wHVIhp35vNZ/CfUsYHwmw17apsx0oevFds11NZldT5/HrygD12eyeRU8XlaG5/Fz2aTXmw8AdyEZ3u3rff/5aNVkfb9jvYPu7DJ9t6/Lbm5ufj5q2QBlfofb3t+Dx9ZlfRV8FUNSl/F+GDvTMsv69v6ety2rCY6VDQwZ2FYXk1k30OPnO5M0R9wdGS2uKxvsk4VhOBulV5UNBgN1Nk0Z5IYz+iVknZoMCkdFi7Lg16/GsjtDhjkuS0+WIQvuWEfKBrWzGdNUy4DlQKwNGcCayTooozQN9c6uJHswZQBDGXW1zHHPI7P2yCyLv2btl/E2OztNVqSWCmV6RpkapQzbklmmbDweu42vM82ilH4iW++RPRyQcdBJ19kzhVqXuShruDNknS677fWRpmSJXFqj6wzPYjsyWBrQoDu1s7EnZOKJNWC1IZM0LUuQxlFoO35nwDpSNj8km4OsulU0/vAoLwQZz910tIzukHUg/s9G1rFgkrJX8Ro8fktZB6b5HGQ20sAmZYABGhdio+ayjgplatQyDGVykDJJE+HOJC0Mw/PJJkJ2v1s2mTw8PFQx0sDW6+HOUDQOodNlvg8PX8l8yJD5IpT5mJAtY6CBDXIoT/1xtukEmY/xL/9PyNRYocyXdbZkVTWfz5ce0MAGCRmQWpRhWoZpGVaXLTykoW0MN41oGI2BNgudKIrGWqbv8GlhHB6S9VUoU+MSZWpGmRyqaiJk3h23YVzW7Q55U3gjEImckO5YzLNxeEDWU6FMjVKm5r9Ctnmxmkwmt46DttiOYy5LuAziq3IizKW77qaFcXi07I8aFwdlSy6zHaBJXBx1edEQizZ1mXEmd/a8kTH+nSUlVd2q/giZGldC9qZmlMlhsaiqysZf2p5osQIZt2zLpkmpFranFGWsK0qayzCQxS7PQZytZNH2zpKE6Y3t31pRIsxYm61CmZ5RpkaUyWG1Wi6Xd8ZbkdViiDK0TadaVh5cGS4NzqQObbFtx7EpgwEu6ghlfMRPPAlZHOOr9mK59ODmJVutpAzXNZWBLMGzdSBCEyXTtFj19sR70/MTFKkxEjMcoWyx8Iz3vbaUQUOQyY7bWflBllHeXaPiGO768P/hMmdY35mUUSEr9ssKkqBMR3leo7jNtsMUFzGCxt2El4nM7/6Yn83azhKUNY4RM1omKuOQ7vxr2jgsxE9mUjuZ1OF5jT4cRtqLZeb1j7LmjchZY7zRx9TSP1ZsatXwH7X83HFZ6u/eAAAAAElFTkSuQmCC) no-repeat right;
+    background-size: 1.53rem 0.58rem;
+}
+.contect{
+    padding: 0.3rem 0.4rem;
+}
+.textL{
+    line-height: 0.4rem;
+}
+.date{
+    line-height: 0.6rem;
+    font-size: 0.4rem;
+    font-weight: bold;
+    padding: 0.1rem 0;
+}
+.font_big{
+    font-size: 0.52rem;
+}
+.red{
+    color: #FF4E3A;
+}
+.gray{
+    color: #999;
+}
+.green{
+    color: #23cda7;
+}
+.yellow{
+    color: #ffa501;
+}
+.blue{
+    color: #262dd9;
+}
+.lightGray{
+    color: #c2c2c2;
+}
+.pb20{
+    padding-bottom: 0.2rem;
+}
+
+.icon_warring{
+    width: 0.28rem;
+    height: 0.28rem;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 0.1rem;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAV1BMVEUDWdqwUn7/Tzr5T0DlUE7hUlHqUEfCV2b/Tjr8Tzv7Tj7+Tjv/Tjv+Tjv8Tzz/Tjr9Tzz3UEDtUUbeUmDdUUz/Tzv+TjzyUEH0UUP3Tz78Tz35Tz7/UTz81/G5AAAAHHRSTlMEC9JdIhwtEeyxet3nybz5o1U1ESj22lBIapqHKCRsKgAAAPlJREFUKM99U1tyhDAMS5w3AQLsUthW9z9noSHr0NmJfvwhW6PIjqggtbVaig94zBP5lDxN8+MfJRUB6Il6AKRu4yYAQ7cY58zSDUAwzFlCVJJVIsi+5wijroX0CDJXZ8B4edheOrsbEbKSQrzmFDC4PBuhzuroqBnfQHqWPjrbZgzFy+6LmpAD5qNM6Nj2/vbcYTpaKC3iA5ZEUmjfF9f76yeEMmp6r4VdyV2aPYBYSEerzSSH+HUjT1k2cZIsy4aYZEPlKUzyU3IITEbBIdTxSTsCaXMcXxW8jf7ExsFXK5PPPzheWXvZ7TNpH1j7NPmo1/V21M3v8AtbCxGT4Ztv4gAAAABJRU5ErkJggg==) no-repeat left;
+    background-size: 0.28rem;
+}
+.bg_radios{
+    display: inline-block;
+    padding: 0 0.2rem;
+    background: #FFF4D7;
+    font-size: 0.24rem;
+    border-radius: 0.06rem;
+}
+.bg_radios_gray{
+    display: inline-block;
+    padding: 0 0.2rem;
+    background: #f2f3f5;
+    font-size: 0.24rem;
+    border-radius: 0.06rem;
+}
+.infoWrap{
+    padding: 0 0.4rem;
+}
+.textLineWrap{
+    padding: 0.2rem 0.4rem;
+}
+.label{
+    width: 1.2rem;
+    text-align: justify;
+    text-align-last: justify;
+}
+</style>
+<body>
+	<div>
+        <div class="topWrap">
+            <div class="top no_wrap">title</div>
+        </div>
+        <div id="type1" class="contect">
+            <div class="textL red"><span class="icon_warring"></span>酒店标准价超出差旅标准</div>
+            <div class="textL red">差旅标准：￥150/晚</div>
+            <div class="textL gray no_wrap">超标原因：酒店离公司较近，只有这个房型</div>
+        </div>
+        <div id="type2" class="contect">
+            <div class="textL red bg_radios">圆角提示信息框</div>
+        </div>
+        <div class="infoWrap flex_box justify_content align_items">
+            <div class="left flex">
+                <div class="textL gray">入住 周一</div>
+                <div class="date">11月15号</div>
+            </div>
+            <div class="right textR flex">
+                <div class="textL gray">离店 周二</div>
+                <div class="date">11月16号</div>
+            </div>
+        </div>
+        <div class="textLineWrap gray">
+            <div class="flex_box align_items">
+                <div class="label">酒店名称</div>
+                <div>：</div>
+                <div class="textitem no_wrap">上海凯宾斯基上海凯宾斯基</div>
+            </div>
+            <div class="flex_box align_items">
+                <div class="label">房型</div>
+                <div>：</div>
+                <div class="textitem no_wrap">豪华房，大床、单早</div>
+            </div>
+            <div class="flex_box align_items">
+                <div class="label">地址</div>
+                <div>：</div>
+                <div class="textitem no_wrap">深圳浦东新区陆家嘴浦东新区陆家路</div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

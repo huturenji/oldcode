@@ -1,0 +1,344 @@
+@import './trainCommon.less';
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.processgoon .weui-dialog{
+  z-index: 5001;
+}
+
+.warm-tips{
+  padding: 0.4rem 0.3rem;
+  color: #999999;
+  font-size: 0.26rem;
+  line-height: .36rem;
+  div{
+    margin-bottom: .08rem;
+  }
+}
+.data-wrap{
+  background: url(~themes/default/img/bg_train_shenqinggaiqian@3x.png) top center no-repeat;   
+  background-size: 100% auto;
+  height: 2.8rem;
+  color: #fff;
+  padding: .3rem .8rem .7rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   
+  .start-time,
+  .end-time {
+      .flex(1);
+      .date {
+          font-size: .24rem;
+          line-height: .34rem;
+      }
+      .time {
+          font-size: .67rem;
+          font-weight: 600;
+          line-height: .8rem;
+          margin-top: .1rem;
+          margin-bottom: .1rem;
+      }
+      .station {
+          font-size: .3rem;
+          line-height: .42rem;
+      }
+  }
+  .end-time{
+      text-align: right;
+  }
+  .time-info {
+      .flex(1);
+      font-size: .14rem;
+      text-align: center;
+      .train-no {
+          font-size: .24rem;
+          line-height: .34rem;
+          color:#fff;
+      }
+      .iconWrap{
+          width: 100%;
+          height: .44rem;
+          margin: 0 auto;
+          background: url(~themes/default/img/icon_train_shikebiao@2x.svg) no-repeat center;
+          background-size: contain;        
+      }
+
+      .duration {
+          font-size: .24rem;
+          line-height: .34rem;
+          color:#fff;
+      }
+  }
+}
+
+
+
+
+
+
+
+
+.customerList {
+  background: #ffffff;
+  padding: .4rem .3rem;
+  .title{
+    font-size: .36rem;
+    font-weight: bold;
+    margin-bottom: .4rem;
+  }
+  .customer {    
+    .textName{
+      font-size: .3rem;
+      color: @text-color;
+      line-height: .42rem;
+    }
+    .textIdWrap{
+      font-size: .28rem;
+      color: @secondary-text-color;
+      line-height: .4rem;
+      margin-top: .04rem;
+    }
+  }
+}
+
+
+
+
+
+
+.bottomButWrap{
+    position: fixed;
+    bottom: 0.3rem;
+    left: 0rem;
+    right: 0rem;
+    padding: 0 .4rem;   
+    z-index: 400;
+    .buttWrap:active{
+      opacity: .8;
+    }
+    .buttWrap{
+      cursor: pointer;
+      border-radius: .2rem;
+      height: 0.88rem;
+      background: linear-gradient(131deg, #FFC002 0%, #FFA501 100%);
+      font-size: 0.32rem;
+      color: #fff;
+    
+        display: flex;
+        .justify-content(center);
+        .align-items(center);         
+    }
+}
+.v-transfer-dom .vux-popup-dialog{
+    z-index: 502;
+}
+
+
+
+
+
+.travelList {
+    .scrollLockWrap{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+      .title {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        background: #f2f3f5;
+        color: #999999;
+        padding: .2rem;
+        text-align: center;
+        span {
+          text-align: center;
+          display: inline-block;
+          width: 25%;
+        }
+      }
+      .list{
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        background: #f2f3f5;
+        padding: .2rem;
+        span {
+          text-align: center;
+          display: inline-block;
+          width: 25%;
+        }
+      }
+      .list:nth-child(2){
+        color: @theme-color;
+      }
+      .list:nth-child(2n) {
+        background: #ffffff;
+      }
+    }  
+}
+
+
+.confirm{
+  .weui-dialog__btn_primary{
+    color: @theme-color!important;
+  }
+}
+
+
+
+.setSeatWrap{
+    background: #fff;
+    padding: 0.4rem .3rem;
+    margin-bottom: 0.2rem;
+    margin-top: -0.3rem;
+    border-radius: .2rem .2rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    .seatInfo{
+        font-size: 0.36rem;
+        color: @text-color;
+        font-weight: bold;
+        span{
+          padding-left: 0.2rem; 
+        }
+        .symbol{
+          font-size: 0.28rem;
+        }        
+    }
+    .right{
+      font-size: 0.26rem;
+      color: @theme-color;
+      text-align: right;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      span{
+        display: flex;
+        align-items: center;
+        .icon_common_prompt{
+          fill: @theme-color;
+          margin-right: 0.08rem;
+        }
+      }
+    }
+    .right:active{
+      opacity: .8;
+    }
+}  
+
+// 下单进度条的样式开始
+.orderProgress {
+  .header {
+      background: url('~themes/default/img/icon_train_chahua@3x.png');
+      background-size: 100% 100%;
+      height:1.2rem;
+      background-repeat: no-repeat;
+  }
+  .main {
+      padding:.4rem .35rem;
+      .flightDetailNew {            
+          .date {
+              text-align: left;
+              font-size: .28rem;
+              color: #999999;
+              margin-left: .2rem;
+          }
+          .trip {
+              display: flex;
+              justify-content: space-between;
+              .station {
+                  flex: 1;    
+                  text-align: left; 
+                  &.right{
+                    text-align: right; 
+                  }       
+                  .airport {
+                    color: @text-color;
+                    font-size: .3rem;
+                    line-height: .42rem;
+                    margin-top: .1rem;
+                  }
+                  .time {
+                    font-size: .64rem;
+                    font-weight: 600;
+                    color: @text-color;
+                    display: block;
+                    line-height: .8rem;
+                  }
+              }
+              .arrow {
+                  flex: 1;
+                  text-align: center;
+                  font-size: .24rem;
+                  color: @secondary-text-color;
+                  img {
+                      display: block;
+                      width: 100%;
+                      margin: 0.05rem auto;
+                  }
+              }
+          }
+      }
+      .passenger {
+        i{
+          color: @third-text-color;
+        }
+        display: inline-block;
+        text-align: left;
+        padding: .08rem .2rem;
+        width: 100%;
+        color: @secondary-text-color;
+        background-color: #F3F6FD;
+        border-radius: .04rem;
+        font-size: .24rem;
+        margin-top: .24rem;
+        .names {
+            padding: 0 .08rem;
+        }
+      }
+  }
+  .bottom {
+      height: .88rem;
+      line-height: .88rem;
+      position: relative;
+      .bottom_tips{
+          font-size: .26rem;
+          color: @text-color;
+          text-align: center;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 11;
+          i{
+            margin-right: 0.7rem;
+          }
+      }
+      .progress{
+          background: #D4E5FF;
+          width: 0%;
+          height: .88rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 10;
+      }
+  
+  }
+} 
+

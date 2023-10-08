@@ -1,0 +1,225 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+.personl-container{
+  background: @background-color;
+  position: relative;
+  .top_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2.5rem;
+    background: url(~themes/default/img/bg_my_wodeshanglv.png) top center no-repeat;
+    background-size: 100% auto;
+  }
+  .content_part{
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    background: transparent;
+    padding: 0 .3rem;
+  }
+  &.footerBar{
+    .content_part{
+        padding: 0 .3rem 1.4rem .3rem;
+    }
+  }
+  .box_item{
+    padding: .4rem .5rem;
+    border-radius: .2rem;
+    box-shadow: 0px 6px 20px 0px rgba(101,112,242,0.12);
+    background-color: #fff;
+    margin-bottom: .3rem;
+  } 
+  .my_order{
+    .list{
+      display: flex;
+      justify-content: space-between;
+      .item{
+        cursor: pointer;
+        font-size: .24rem;
+        color: @secondary-text-color;
+        position: relative;
+        p{
+          display: flex;
+          justify-content: center;
+          &.name{
+            margin-top: .14rem;
+          }
+        }
+        &:active{
+          opacity: .8;
+        }
+        .redpPoint{
+            margin-left: 0.28rem;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 0.28rem;
+            min-width: 0.28rem;
+            padding:0 0.08rem;
+            transform: translateX(-50%);
+            background: @danger-color-light;
+            color: @sub-background-color;
+            font-size: 0.2rem;
+            text-align: center;
+            border-radius: 0.28rem;
+            border: 1px solid #fff;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .my_trip{
+    .top{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: .2rem;
+      .bbpx();
+      .title{
+        font-size: .32rem;
+        color: @text-color;
+
+      }
+      .viewMore{
+        color: @third-text-color;
+        cursor: pointer;
+        font-size: .28rem;
+        &:active{
+          opacity: .8;
+        }
+      }
+    }
+
+    .trip_content{
+      .flow_part{
+        color: @text-color;
+        .cause{
+          font-size: .36rem;
+          font-weight: 500;
+          min-height: .5rem;
+          margin: .15rem 0 .2rem;
+        }
+        .place{
+          font-size: .28rem;
+          height: .4rem;
+          margin-bottom: .1rem;
+        }
+        .date{
+          font-size: .28rem;
+          height: .4rem;
+          margin-bottom: .2rem;
+        }
+        .btn_group{
+          display: flex;
+          justify-content: space-between;
+          div{
+            width: 1.76rem;
+            height: .64rem;
+            text-align: center;
+            line-height: .64rem;
+            border-radius: .16rem;
+            border: 1px solid @theme-color;
+            font-size: .28rem;
+            color: @theme-color;
+            cursor: pointer;
+            &:active{
+              opacity: .8;
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 750px){
+        padding: 0 1.28rem;
+      }
+      .empty_part{
+        .title{
+          width: 100%;
+          margin-top: .18rem;
+          margin-bottom: .4rem;
+          font-size: .32rem;
+          color: @text-color;
+          text-align: center;
+        }
+        .content_group{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          div{
+            text-align: center;
+            cursor: pointer;
+            &:active{
+              opacity: .8;
+            }
+            .text{
+              font-size: .24rem;
+              color: @third-text-color;
+            }
+
+          }
+        }
+      }
+
+      .order_part{
+        
+      }
+
+
+    }
+
+  }
+  ul.box_item{
+    padding: .2rem .5rem;
+  }
+  .list-item{
+    .bbpx();
+    cursor: pointer;
+    &:last-of-type:after{
+      content: "";
+      display: none;
+    }
+    width: 100%;
+    height: 1.08rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    font-size: 0.3rem;
+    color: #000;
+    .title{
+      display: flex;
+      align-items: center;
+      .address{
+        fill: @third-text-color;
+      }
+      .invoice{
+        fill: @third-text-color;
+      }
+      .coupon{
+        color: @third-text-color;
+      }
+      .passenger{
+        fill: @third-text-color;
+      }
+      span{
+        margin-left: 0.2rem;
+      }
+    }
+    .icon-right{
+      .right{
+        fill: @disable-color;
+      }
+    }
+  }
+}

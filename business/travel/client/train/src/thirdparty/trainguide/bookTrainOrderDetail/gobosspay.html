@@ -1,0 +1,384 @@
+<!--
+ * @Description: 
+ * @Author: WangBinbin
+ * @LastEditTime: 2021-06-15 09:36:20
+ * @FilePath: \travel_guide\train\bookTrainOrderDetail\gobosspay.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>订单详情</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/39.836bddf604e456a44b4e.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/2.1add48a9c2ff1011b415.css"> -->
+    <link href="./css/orderDetail.49dbd0d1a169cca56aad.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/17.c627f5443734f12ff543.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/sinosun_common.5664f620.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+    <style type="text/css">
+        .box_bg {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .box {
+            opacity: .4;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .content_box {
+            width: 100%;
+            /* height: 4rem; */
+            /* margin: 6rem auto 0; */
+            position: absolute;
+            bottom: 0;
+            border-top-left-radius: .2rem;
+            border-top-right-radius: .2rem;
+            /* color: #fff; */
+            background: #fff;
+            font-size: .28rem;
+            line-height: .44rem;
+            /* padding: 1.65rem .3rem 0; */
+            overflow: hidden;
+
+        }
+
+        .pay_title {
+            height: .88rem;
+            text-align: center;
+            line-height: .88rem;
+            position: relative;
+            background: #f6f9fd;
+        }
+
+        .close {
+            position: absolute;
+            top: -.1rem;
+            right: .2rem;
+            font-size: .4rem;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .pay_number {
+            font-size: .56rem;
+            text-align: center;
+            margin-top: .3rem;
+            color: #ff4e3a ;
+            font-weight: bold;
+        }
+
+        .pay_tips_balance {
+            width: 6.3rem;
+            height: .9rem;
+            margin: 0 auto;
+            margin-top: .6rem;
+            line-height: .9rem;
+            border-radius: .15rem;
+            padding: 0 .3rem;
+            color: #c2c2c2;
+            background: #f6f9fd;
+        }
+
+        .pay_smtips_balance {
+            height: .34rem;
+            font-size: 13px;
+            margin: .2rem auto 0;
+            line-height: .34rem;
+            text-align: center;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .pay_btn {
+            width: 6.9rem;
+            height: .8rem;
+            line-height: .8rem;
+            background: #262dd9;
+            color: #fff;
+            border: 1px solid #262dd9;
+            outline: none;
+            padding: 0;
+            margin: 1rem auto .6rem;
+            border-radius: .2rem;
+            font-size: .28rem;
+            font-family: MicrosoftYaHei;
+            cursor: pointer;
+            position: relative;
+
+        }
+        .btn-primary{color: #fff;margin: 0 auto;width: 100%;background: transparent;}
+        
+
+    </style>
+    <style>
+            .btn-pay {position: relative;}
+    </style> 
+    <script>
+        function nextPage(){
+            window.open("../bosspayApply/index.html")  
+        }
+    </script>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+                <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+                id="right">
+                <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                        <path
+                        d="M28.715863,11.568274 C29.977357,11.568274 31,10.545631 31,9.28413698 C31,8.02264296 29.977357,7 28.715863,7 L3.28413698,7 C2.02264296,7 1,8.02264296 1,9.28413698 L1,34.715863 C1,35.977357 2.02264296,37 3.28413698,37 C4.545631,37 5.56827396,35.977357 5.56827396,34.715863 L5.56827396,11.568274 L28.715863,11.568274 Z"
+                        fill-rule="nonzero"
+                        transform="translate(16.000000, 22.000000) rotate(-225.000000) translate(-16.000000, -22.000000) ">
+                        </path>
+                </g>
+                </symbol>
+                <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+                id="icon_common_prompt">
+                <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                        <g>
+                        <g transform="translate(0.500000, 0.500000)">
+                                <path
+                                d="M10.5,0 C16.2989899,0 21,4.70101013 21,10.5 C21,16.2989899 16.2989899,21 10.5,21 C4.70101013,21 0,16.2989899 0,10.5 C0,4.70101013 4.70101013,0 10.5,0 Z M10.5,1.57142857 C5.56888616,1.57142857 1.57142857,5.56888616 1.57142857,10.5 C1.57142857,15.4311138 5.56888616,19.4285714 10.5,19.4285714 C15.4311138,19.4285714 19.4285714,15.4311138 19.4285714,10.5 C19.4285714,5.56888616 15.4311138,1.57142857 10.5,1.57142857 Z"
+                                fill-rule="nonzero"></path>
+                                <path
+                                d="M9.17320033,6.02769252 C9.17320033,5.61130279 9.32231064,5.25259405 9.62053571,4.95155552 C9.91876079,4.650517 10.2760628,4.5 10.6924526,4.5 C11.1144692,4.5 11.4717712,4.6491103 11.7643694,4.94733538 C12.0569676,5.24556046 12.2032645,5.6056759 12.2032645,6.02769252 C12.2032645,6.44970914 12.0555609,6.80982459 11.7601493,7.10804967 C11.4647376,7.40627474 11.1088423,7.55538504 10.6924526,7.55538504 C10.2591822,7.55538504 9.89766002,7.40205464 9.60787528,7.09538923 C9.31809053,6.78872382 9.17320033,6.43282848 9.17320033,6.02769252 Z M12.0175781,8.95647321 L12.0175781,14.1303711 C12.0175781,14.5580146 12.0850998,14.8520151 12.2201451,15.0123814 C12.3551904,15.1727477 12.6702914,15.2529297 13.1654576,15.2529297 L13.1654576,16.1476004 L8,16.1476004 L8,15.2529297 L8.19412667,15.2529297 C8.67241218,15.2529297 8.97485288,15.1685276 9.10145787,14.999721 C9.22806285,14.8309143 9.2913644,14.5411339 9.2913644,14.1303711 L9.2913644,11.6151646 C9.2913644,11.1987749 9.22665615,10.9075878 9.09723772,10.7415946 C8.96781929,10.5756014 8.66678529,10.492606 8.19412667,10.492606 L8,10.492606 L8,9.59793527 L12.0175781,8.95647321 Z">
+                                </path>
+                        </g>
+                        </g>
+                </g>
+                </symbol>
+                <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+                id="time">
+                <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                        <path
+                        d="M11,0.55 C16.7713756,0.55 21.45,5.22862436 21.45,11 C21.45,16.7713756 16.7713756,21.45 11,21.45 C5.22862436,21.45 0.55,16.7713756 0.55,11 C0.55,5.22862436 5.22862436,0.55 11,0.55 Z M11,2.2 C6.1398942,2.2 2.2,6.1398942 2.2,11 C2.2,15.8601058 6.1398942,19.8 11,19.8 C15.8601058,19.8 19.8,15.8601058 19.8,11 C19.8,6.1398942 15.8601058,2.2 11,2.2 Z M11,4.60625 C11.4487314,4.60625 11.8202239,4.93694876 11.8840595,5.36792818 L11.89375,5.5 L11.89325,10.10325 L16.5474537,10.1033301 C17.0410582,10.1033301 17.4412037,10.5034756 17.4412037,10.9970801 C17.4412037,11.4458115 17.1105049,11.817304 16.6795255,11.8811396 L16.5474537,11.8908301 L11.0474537,11.8908301 L11,11.89375 C10.5512686,11.89375 10.1797761,11.5630512 10.1159405,11.1320718 L10.10625,11 L10.10625,5.5 C10.10625,5.0063955 10.5063955,4.60625 11,4.60625 Z">
+                        </path>
+                </g>
+                </symbol>
+    </svg>
+    <div data-v-77adf666="" class="child-view">
+                <div data-v-8fd3d00e="" data-v-77adf666="">
+                <div data-v-8fd3d00e="" class="order-detail-container">
+                        <div data-v-8fd3d00e="">
+                        <div data-v-8fd3d00e="" class="header">
+                                <div data-v-8fd3d00e="" class="summary">
+                                <div data-v-8fd3d00e="" class="status">待支付
+                                </div>
+                                <div data-v-8fd3d00e="" class="amount num-font cursorp"><span data-v-8fd3d00e=""
+                                        class="unit">￥</span>527
+                                        <svg data-v-8fd3d00e="" class="icon right" style="width: 0.24rem; height: 0.24rem;">
+                                        <use xlink:href="#right"></use>
+                                        </svg>
+                                </div>
+                                </div>
+                                <div data-v-8fd3d00e="" class="summary-note">
+                                席位已锁定，请在<span data-v-8fd3d00e="">09分43秒</span>内完成支付，超时订单将取消
+                                </div>
+                                <div data-v-8fd3d00e="" class="order-no"><span data-v-8fd3d00e="">订单号</span><span
+                                        data-v-8fd3d00e="">D189378320408577</span></div>
+                        </div>
+                        <section data-v-8fd3d00e="" class="order-card">
+                                <div data-v-0379f644="" data-v-8fd3d00e="" class="train-times-container">
+                                <header data-v-0379f644="">
+                                        <div data-v-0379f644="" class="start-time">
+                                        <div data-v-0379f644="" class="date"><span data-v-0379f644="">06月10日</span><span
+                                                data-v-0379f644="">周日</span></div>
+                                        <div data-v-0379f644="" class="time num-font">06:36</div>
+                                        <div data-v-0379f644="" class="station">北京西</div>
+                                        </div>
+                                        <div data-v-0379f644="" class="time-info">
+                                        <div data-v-0379f644="" class="train-no">G507</div>
+                                        <div data-v-0379f644="" class="icon cursorp"></div>
+                                        <div data-v-0379f644="" class="duration">5小时44分钟</div>
+                                        </div>
+                                        <div data-v-0379f644="" class="end-time">
+                                        <div data-v-0379f644="" class="date"><span data-v-0379f644="">06月10日</span><span
+                                                data-v-0379f644="">周日</span></div>
+                                        <div data-v-0379f644="" class="time num-font">12:20</div>
+                                        <div data-v-0379f644="" class="station">汉口</div>
+                                        </div>
+                                </header>
+                                </div>
+                                <section data-v-8fd3d00e="" class="">
+                                <div data-v-8fd3d00e="" class="customer-info">
+                                        <div data-v-8fd3d00e="">
+                                        <div data-v-8fd3d00e="" class="name fLeft">
+                                                张三
+                                        </div>
+                                        <div data-v-8fd3d00e="" class="car-no fRight">
+                                        </div>
+                                        </div>
+                                        <div data-v-8fd3d00e="">
+                                        <div data-v-8fd3d00e="" class="id-card fLeft">
+                                                身份证:4************2
+                                        </div>
+                                        <div data-v-8fd3d00e="" class="seat-info fRight"><span data-v-8fd3d00e=""
+                                                class="seat-lv">二等座</span> <span data-v-8fd3d00e=""
+                                                class="seat-amount">￥522</span></div>
+                                        </div>
+                                        <div data-v-8fd3d00e="" class="cust-btn-group">
+                                        <div data-v-8fd3d00e="" class="fLeft">
+                                                <div data-v-8fd3d00e="" class="tips-wait">待支付</div>
+                                        </div>
+                                        </div>
+                                </div>
+                                </section>
+                        </section>
+                        <div data-v-8fd3d00e="" class="explanation fRight cursorp"><svg data-v-8fd3d00e=""
+                                class="icon icon_common_prompt" style="width: 0.32rem; height: 0.32rem;">
+                                <use xlink:href="#icon_common_prompt"></use>
+                                </svg>取票、退票、改签说明
+                        </div>
+                        </div>
+                        <ul data-v-8fd3d00e="" class="items">
+                        <li data-v-8fd3d00e="" class="clear">
+                                <div data-v-8fd3d00e="" class="fLeft">
+                                <div data-v-8fd3d00e="">购票手续费</div>
+                                </div>
+                                <div data-v-8fd3d00e="" class="fLeft">
+                                ￥5 x 1
+                                </div>
+                        </li>
+                        </ul>
+                </div>
+                </div>
+    </div>
+    <div data-v-8fd3d00e="" class="v-transfer-dom">
+        <div data-v-8fd3d00e="" class="btn-group">
+                <a data-v-8fd3d00e="" class="btn-cancel cursorp">取消订单</a> 
+                <a data-v-8fd3d00e="" class="btn-pay cursorp" >
+                        去支付
+                        <div class="point" style="top: .1rem;left: 2rem;"></div>
+                        <span data-v-8fd3d00e="" class="time">
+                                <svg data-v-8fd3d00e="" class="icon time" style="width: 0.3rem; height: 0.3rem;"><use xlink:href="#time"></use></svg>
+                                <span data-v-8fd3d00e="" class="limit-time">09:43</span>
+                        </span>
+                </a>
+        </div>
+    </div>
+    <div id="app" class="box_bg">
+        <div class="box"></div>
+        <div class="content_box">
+            <div class="pay_title atom_F6F9FD_background">
+                <b class="atom_gray333_font">老板付支付</b>
+                <strong class="close">&times;</strong>
+            </div>
+            <div class="pay_content">
+                <div class="pay_number atom_red_sendfailed_font "><span data-v-a07cf774="" class="rmb">¥</span>527.00</div>
+                <div class="pay_tips_balance atom_gray333_font atom_F6F9FD_background">
+                    <div style="float: left;">可用老板付授权余额</div>
+                    <div style="float: right; font-size: .48rem;"><b>0.00</b><span
+                            style="font-size: .24rem; vertical-align: middle; margin-left: 2px;">元</span></div>
+                </div>
+                <div class="pay_smtips_balance atom_primary_font">余额不足支付本次订单金额，请申请老板付预算</div>
+                <div class="pay_btn" onclick="nextPage()"><div class="point"  style="right: 2.5rem;bottom: -.5rem;"></div><button type="button" class="btn btn-primary" style="font-size: 16px;">申请老板付预算</button></div>
+            </div>
+        </div>
+    </div>
+    <!-- 体验版背景 -->
+    <div data-v-b94e16a0="" class="water-mark">
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+    </div>
+</body>
+</html>

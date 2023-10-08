@@ -1,0 +1,69 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/hairLine.less';
+.page-history{
+    section{
+        padding: 0 0 .3rem;
+        font-size: .24rem;
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: .1rem;
+            font-size: .26rem;
+            margin-bottom: .18rem;
+            color: @third-text-color;
+
+            .inline-btn{
+                color: @theme-color;
+                font-weight: normal;
+                font-size: .26rem;
+            }
+        }
+        .history_content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .history_item{
+                height: .56rem;
+                background: #eaeff4;
+                border-radius: .08rem;
+                margin-bottom: .24rem;
+                margin-right: .16rem;
+                
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: .28rem;
+                font-weight: 400;
+                color: #222222;
+                padding: .08rem .12rem;
+
+                .sn-button{
+                    height: .52rem;
+                    line-height: .52rem;
+                    color: @third-text-color;
+                    font-size: .24rem;
+                    padding: 0 .2rem;
+                    background-color: rgba(234, 239, 244,.6);
+                    border-radius: @border-radius-sm;
+                    &:active{
+                        background-color: @theme-color;
+                        color: #fff;
+                    }
+                    @media screen and (min-width: @screen-sm) {
+                        &:hover{
+                            background-color: @theme-color;
+                            color: #fff;
+                        }
+                    }
+                    &:after{
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

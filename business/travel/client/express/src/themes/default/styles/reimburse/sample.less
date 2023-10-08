@@ -1,0 +1,23 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+#sample {
+    background: @sub-background-color;
+}
+.item {
+    padding: .4rem .3rem .18rem;
+    font-size: .28rem;
+    background: @sub-background-color;
+    .title {
+        font-size: .3rem;
+        font-weight: bold;
+        margin-bottom: 0.18rem;
+    }
+    .description {
+        color: @secondary-text-color;
+        line-height: 1.8em;;
+        margin-bottom: 0.08rem;
+    }
+    img {
+        width: 100%;
+    }
+}

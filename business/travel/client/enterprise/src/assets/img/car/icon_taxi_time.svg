@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffb843;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_taxi_time" class="cls-1" d="M8585,2456a12,12,0,1,1-12,12A12,12,0,0,1,8585,2456Zm0,3a9,9,0,1,1-9,9A9,9,0,0,1,8585,2459Zm4.9,12.67c-0.76,1.25-1.5.56-1.9,0.33l-3-2h0a1.69,1.69,0,0,1-1-1v-6a1,1,0,0,1,2,0v5l3.6,2.54A0.806,0.806,0,0,1,8589.9,2471.67Z" transform="translate(-8573 -2456)"/>
+</svg>

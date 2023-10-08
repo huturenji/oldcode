@@ -1,0 +1,74 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.CompanyInfoWrap{
+    .roomInfoWrap {
+        background: @sub-background-color;
+        .bbpxs {
+            .bbpx(1px, @border-color-base, 0, 0, solid);
+        }
+		.roomTit {
+			padding: 0.3rem;
+            font-size: 0.32rem;
+            font-weight: bold;
+			color: @text-color;
+            position: relative;
+            text-align: center;
+			.but {
+				position: absolute;
+				top: 50%;
+				right: 0.06rem;
+				margin-top: -0.45rem;
+				width: 0.9rem;
+				height: 0.9rem;
+				background: url(~themes/default/img/expressServer/comp/icon_close.png) no-repeat right 0.3rem center;
+                background-size: 0.3rem;
+                &:active{
+                    background: url(~themes/default/img/expressServer/comp/icon_close.png) no-repeat right 0.3rem center;
+                    background-size: 0.3rem;
+                }
+			}
+		}				
+	    .roomInfoTit{
+	        padding: 0.25rem 0.3rem;
+	        font-size: 0.28rem;
+	        color: @secondary-text-color;
+	    }
+    }
+	.checkerWrap {
+        padding: 0.1rem 0.25rem 0.4rem;
+        .flex-box();
+        flex-wrap:wrap;
+        .checkItem{
+            .flex(0 0 33%);
+            .checkerDefault {
+                margin: 0 0.2rem;
+                margin-bottom: 0.2rem;
+                line-height: 0.64rem;
+                border-radius: 0.64rem;
+                background: @background-color;
+                color: @text-color;
+                text-align: center;
+                font-size: 0.28rem;
+            }	
+            .checkerDefault.check {
+                background: @theme-color;
+                color: @sub-background-color;
+            }
+        }     
+    }   
+	.bottomButWrap {
+        padding: 0.2rem 0.3rem;
+        box-shadow:0px 0px 0.1rem 0px rgba(0, 0, 0, 0.1);
+		.okButton {
+			color: @sub-background-color;
+            background: @theme-color;
+            line-height: 0.76rem;
+			font-size: 0.32rem;
+            text-align: center;
+            border-radius:0.08rem;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+		}
+	}    
+}

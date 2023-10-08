@@ -1,0 +1,621 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+::placeholder {
+  color: @placeholder-color;
+}
+.subButton{
+  background:@theme-color !important; 
+}
+.subButton:active{
+   opacity: .8;
+}
+.chooseBut {
+    padding: 0.06rem 0.27rem;
+    margin-left: 0.3rem;
+    border-radius: 0.41rem;
+    background: #fff;
+    cursor: pointer;
+    color: #999;
+    font-size: 0.26rem;
+    border: 1px solid #c2c2c2;
+    &:first-child{
+      margin-left: 0rem;
+    }
+  }
+  .choosed {
+    background: @theme-color;
+    color: #fff;
+    border: 1px solid @theme-color;
+  }
+  
+.zindexH {
+  .vux-popup-dialog {
+    z-index: 5020000;
+  }
+}
+
+//证件示例图片样式兼容显示
+@media screen and (min-width: @screen-sm) { 
+  .edit .payTypeIDTips .textcontent.IDTips{
+    height: auto;
+  }
+  .edit .IDTips .IDRule img{
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+//移动端显示样式
+@media screen and (max-width: @screen-sm) { 
+  .edit .payTypeIDTips .textcontent.IDTips{
+    height: auto;
+  }
+  .edit .IDTips .IDRule img{
+    width: 90%;
+    max-width: 90%;
+  }
+}
+@media screen and (min-width: @screen-lg) { 
+  .edit .payTypeIDTips .textcontent.IDTips{
+    height: auto;
+  }
+}
+
+.edit {
+  .lineTextWrap {
+    .weui-cell {
+      padding: 0 !important;
+    }
+  }
+
+  .toptips{
+    padding: .2rem .3rem;
+    .box{
+      border-radius:.16rem;
+      font-size:.26rem;
+      padding: .2rem .24rem;
+      line-height:.4rem;
+    }
+
+    &.add{
+      .box{
+        background: #f7e0e1;
+        color: @price-color;
+      }
+    }
+    &.edit{
+      .box{
+        background: #f7ecd9;
+        color: #333;
+        .status{
+          font-weight: bold;
+          font-size: .28rem;
+          i{
+            color: #F49939;
+            font-style: normal;
+          }
+        }
+      }
+
+      &.approved{
+        background: #d8f2f1;
+        color: #333;
+        .status{
+          font-weight: bold;
+          font-size: .28rem;
+          i{
+            color: #23CDA7;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+
+
+  .bottomtips{
+    padding: 0.4rem .3rem;
+    p{
+      line-height:.36rem;
+      color: #999999;
+      font-size:.26rem;
+      &.top{
+        margin-top: .12rem;
+        display: flex;
+        align-items: center;
+        i{
+          margin-right: .08rem;
+        }
+        .icon_common_prompt{
+          fill: @warning-color;
+        }
+      }
+    }
+  }
+
+  .vux-no-group-title {
+    margin-top: 0;
+  }
+
+
+  .T_addr_div {
+    width:1.02rem;
+    margin-left: .23rem;
+    padding-left: .23rem;
+    border-left: 1px solid @border-color-base;
+    display: flex;
+    align-items: center;
+  }
+  .T_addr_div:active {
+    opacity: .8;
+  }
+
+  .nameWrap {
+    
+    padding-right: 0.2rem;
+
+  }
+
+  .blue_clr {
+    color: @theme-color;
+  }
+
+
+  .gray_clr {
+    color: #999;
+  }
+
+  .weui-cells {
+    margin-top: 0;
+  }
+
+  .weui-dialog__btn_primary {
+    color: @theme-color !important;
+  }
+
+  .line {
+    position: relative;
+    padding: 0.18rem 0;
+
+    .icon {
+      display: inline-block;
+      position: absolute;
+      width: 0.72rem;
+      height: 0.72rem;
+      left: 0.3rem;
+      top: 50%;
+      margin-top: -0.36rem;
+      border-radius: 0.06rem;
+
+    }
+
+    .linetext {
+      font-size: 0.32rem;
+      color: #333;
+      padding-left: 1.32rem;
+      padding-right: 0.3rem;
+      line-height: 0.72rem;
+      height: 0.72rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .lineIdDes {
+    font-size: 0.24rem;
+    color: #999;
+    padding: 0.14rem 0.3rem;
+    background: @background-color;
+  }
+
+
+  .lineForm {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    line-height: 0.5rem;
+    padding: 0.3rem;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+
+    .label {
+      display: inline-block;
+      min-width: 1.75rem;
+      font-size: 0.32rem;
+      color: @secondary-text-color;
+
+      &.long-label span:first-of-type {
+        display: block;
+      }
+    }
+    .phone-text{
+      display: flex;
+    }
+    .text {
+      text-align: left;
+      flex: 1;
+      font-size: 0.32rem;
+      color: #333;
+
+      input {
+        text-align: left;
+        flex: 1;
+      }
+      .checkPhoneTipsYes{
+        width: 1.5rem;
+        text-align: right;
+        font-size: .28rem;
+        color: #FFA501;
+        &.checkPhoneTipsNo{
+          color: #23CDA7;
+        }
+      }
+    }
+  }
+
+  .lineChoose .vux-flex-row.vux-flexbox {
+    width: auto;
+    line-height: 0.5rem;
+    padding: 0.3rem;
+
+    .vux-flexbox-item:first-child {
+      display: inline-block;
+      width: 1.75rem;
+      font-size: 0.32rem;
+      color: #999;
+      -webkit-box-flex: initial;
+      -moz-box-flex: initial;
+      -webkit-flex: initial;
+      -ms-flex: initial;
+      flex: initial;
+    }
+
+    .vux-flexbox-item:nth-child(2) {
+      font-size: 0.32rem;
+      color: #333;
+      margin-left: 0 !important;
+
+      .weui-cell {
+        padding: 0;
+        padding-right: 0.3rem;
+        text-align: left;
+        .weui-cell__hd {
+          display: none;
+        }
+
+        .vux-cell-bd {
+          display: none;
+        }
+
+        .vux-cell-value {
+          color: #333;
+        }
+      }
+
+      .weui-cell_access .weui-cell__ft:after {
+        display: none;
+      }
+    }
+  }
+
+  .buttonWrap {
+    margin: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+
+    &>div{
+      width: 48%;
+      height:0.88rem;
+      line-height: 0.88rem;
+      border-radius:0.2rem;
+      text-align: center;
+      font-size: .32rem;
+      box-sizing: border-box;
+      &:active{
+        opacity: .8;
+      }
+    }
+    .delete{
+       background-color: @background-color;
+       color: @price-color;
+       border:0.02rem solid @price-color;
+    }
+    .save{
+      background-color: @theme-color;
+      color: #fff;
+     
+    }
+    .save.onlyOneBtn{
+      width: 100%;
+    }
+  }
+
+  .paddportType {
+    .weui-cell {
+      padding: 0 !important;
+    }
+
+    .weui-cell_access .weui-cell__ft:after {
+      display: none;
+    }
+
+    .weui-cell__ft .weui-cell__ft {
+      color: #333;
+      padding-right: 0.28rem;
+      font-size: 0.32rem;
+      .vux-cell-value {
+        color: #333;
+      }
+
+      .vux-datetime-value {
+        text-align: left;
+      }
+    }
+  }
+
+  .rightBut {
+
+    .vux-cell-value {
+      display: none;
+    }
+
+    .weui-cell_access {
+      .weui-cell__ft {
+        height: 0.4rem;
+        width: 0.6rem;
+      }
+    }
+  }
+
+  .lineTextWrap {
+    padding: 0.3rem;
+    font-size: 0.32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .label {
+      width: 1.75rem;
+      color: @secondary-text-color;
+      font-size: 0.32rem;
+      margin-right: 0;
+    }
+
+    .text {
+      text-align: left;
+      flex: 1;
+      color: #333;
+      display: flex;
+      align-items: center;
+      padding-right: 0.24rem;
+      .icon_common_prompt{
+        fill: @third-text-color;
+        margin-left: .08rem;
+      }
+
+    }
+
+    .text.rightBut {
+      background: url(~themes/default/img/icon_common_rightarrow.svg) no-repeat center right;
+      background-size: 0.24rem 0.24rem;
+    }
+  }
+
+  .vux-popup-dialog.payType {
+    width: auto;
+    right: 0;
+  }
+  .footerCancle {
+      background: #ffffff;
+      position: absolute;
+      z-index: 555;
+      color: @theme-color;
+      font-size: .32rem;
+      border-radius: .1rem;
+      text-align: center;
+      margin-top: 0.23rem;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      width: calc(~'100% - 0.6rem');
+      bottom: 0.5rem;
+      &:active{
+        opacity: .8;
+      }
+  }
+  .payType {
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding: 0.3rem;
+    .bg {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 500;
+    }
+
+    .textcontent {
+      position: absolute;
+      z-index: 555;
+      width: auto;
+      padding: 0;
+      background: #ffffff;
+      border-radius: .1rem;
+      bottom: 1.5rem;
+      width: calc(~'100% - 0.6rem');
+
+      div {
+        color: @theme-color;
+        font-size: 16px;
+        line-height: .99rem;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .desc {
+        color: #000;
+      }
+    }
+  }
+  .NationalityType{
+     background: #ffffff;
+    .NationalityContent {
+      position: absolute;
+      z-index: 555;
+      padding: 0;
+      
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      .NationalityItem {
+        color: #333;
+        font-size: .32rem;
+        padding:0.3rem;
+      }
+    }        
+  }
+  .payType {
+    .content {
+      div {
+        text-align: center;
+        border-radius:0.1rem;
+        overflow: hidden; 
+      }
+    }
+  }
+
+  .payTypeIDTips {
+    background-color: rgba(0, 0, 0, 0) !important;
+    .gray_close{
+      display:none;
+    }
+    .white_close{
+      display:block;
+    }
+    .footer:active .gray_close{
+      display:block;
+    }
+    .footer:active .white_close{
+      display:none;
+    }
+    /*padding: 0.3rem;*/
+    .bg {
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 500;
+    }
+
+    .textcontent {
+      position: fixed;
+      z-index: 555;
+      width: 90%;
+      max-height:1080px;
+      padding: 0;
+      background: #ffffff;
+      border-radius: .1rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+
+      div {
+        color: #333333;
+        font-size: .4rem;
+        line-height: .99rem;
+        text-align: center;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .desc {
+        color: #000;
+      }
+    }
+
+    .textcontent .footer {
+      position: absolute;
+      z-index: 555;
+      left:50%;
+      transform: translateX(-50%);
+      bottom: -0.8rem;
+      line-height: 0;
+      img {
+        width: .6rem;
+      }
+    }
+  }
+ 
+  .nameRuleClass {
+    .textcontent {
+      width: 80%;
+      max-height: 80%;
+      background: #fff;
+      border-radius: .2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .title {
+        height: 1.08rem;
+        line-height: 1.08rem;
+        text-align: center;
+        color: @text-color;
+        font-size: .32rem;
+        font-weight: 600;
+        background-color: #EAEFF4;
+        border-radius: .2rem .2rem 0 0;
+      }
+
+      .desc {
+        flex: 1;
+        overflow-y: auto;
+        color: @text-color;
+        border-bottom: 1px solid #f2f3f5;
+        padding: .24rem .4rem;
+        line-height: .48rem;
+        font-size: .28rem;
+        p{
+          line-height: .42rem;
+          margin-bottom: .2rem;
+        }
+      }
+
+      .footer {
+        background: #ffffff;
+        height: .9rem;
+        line-height: .9rem;
+        text-align: center;
+        color: @theme-color;
+        font-size: .32rem;
+        border-radius:  0 0 .2rem .2rem;
+        text-align: center;
+      }
+      .footer:active {
+        opacity: .8;
+      }
+    }
+  }
+
+  .lineBorderB {
+    padding: 0.3rem;
+    position: relative;
+    .bbpx();
+  }
+  .payType .lineBorderB:active {
+    opacity: .8;
+  }
+
+}

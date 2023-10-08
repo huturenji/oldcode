@@ -1,0 +1,6 @@
+[submodule "src/platform"]
+	path = src/platform
+	url = yanggu:product/bplus/travel/frontend-client/platform.git
+[submodule "src/components"]
+	path = src/components
+	url = yanggu:product/bplus/travel/frontend-client/components.git

@@ -1,0 +1,74 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+@charset "utf-8";
+
+html {
+    font-size: 10000/750vw;
+}
+
+body {
+    background-color: #f2f3f5;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.orderSuc {
+    .topWrap {
+        background: #fff;
+        padding: 0.3rem;
+
+        .top {
+            padding-top: 1.61rem;
+            background: url(~assets/img/hotel/bg_succ.png) no-repeat top;
+            background-size: 4.12rem 1.31rem;
+            text-align: center;
+            color: @text-color;
+            font-size: 0.32rem;
+
+            .tit {
+                color: #25cb67;
+                font-size: 0.36rem;
+                margin-bottom: 0.45rem;
+
+            }
+
+            .text {
+                font-size: 0.32rem;
+                color: #999;
+            }
+
+            .mt10 {
+                color: #191919;
+                margin-bottom: 0.1rem;
+            }
+        }
+    }
+}
+
+.tab {
+    background-color: #f2f3f5;
+}
+
+.submit_btn {
+    margin: 0.4rem;
+    line-height: 0.88rem;
+    font-size: 0.34rem;
+    text-align: center;
+    color: #fff;
+    background: #262DD9;
+    border-radius: 0.06rem;
+
+    &:active {
+        background: @theme-color-active;
+    }
+}
+
+.rightTips {
+    margin: 0.4rem;
+    font-size: 0.34rem;
+    color: #262DD9;
+    text-align: right;
+}

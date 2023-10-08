@@ -1,0 +1,112 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+
+.clearfix:after{content:".";display:block;height:0;clear:both;}
+*{
+    box-sizing: border-box;
+}
+
+.scan_it_bg{
+    width: 100%;
+    background-color: #fff;
+    padding: .96rem 0 .84rem 0;
+    text-align: center;
+
+    .tips_pc{
+        font-size: .32rem;
+        color: @text-color;
+        margin-bottom: .68rem;
+    }
+    .check_rule{
+        font-size: .28rem;
+        display: flex;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        color: @theme-color;
+        cursor: pointer;
+        .icon_common_prompt{
+            fill: @theme-color;
+            margin-right: .1rem;
+        }
+        &:active{
+            opacity: .8;
+        }
+    }
+    
+    .scan_item{
+        display: flex;
+        justify-content: center;
+        margin-bottom: .44rem;
+        cursor: pointer;
+        img{
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+        &.scan_item_pc{
+            img{
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+    .scan_item:active{
+        opacity: .8;
+    }
+}
+.input{
+    width: 100%;
+    margin-top: .2rem;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .3rem;
+    font-size: .3rem;
+    .icon_common_rightarrow{
+        fill: @disable-color;
+    }
+    .icon_common_edit{
+        fill: @warning-color;
+    }
+    .icon_invoice_check{
+        fill: @warning-color;
+    }
+    .title_part{
+        display: flex;
+        align-items: center;
+        span{
+            margin-left: .16rem;
+        } 
+    }
+    &:active{
+        opacity: .8;
+    }
+    
+    
+}
+.check_notes{
+    padding: 0 .3rem;
+    background: #fff;
+    width: 100%;
+    height: .92rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .2rem;
+    img{
+        width: .15rem;
+        height: auto;
+    }
+    .title{
+        font-size:.32rem;
+        background: url('~assets/img/invoice/record.png') left center no-repeat;
+        background-size: .4rem;
+        padding-left: 0.5rem;
+    }
+}
+.check_notes:active{
+    background: @background-color;
+}

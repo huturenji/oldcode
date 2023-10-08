@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/icon/common/success</title>
+    <desc>Created with Sketch.</desc>
+    <g id="h5-svg/icon/common/success" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="编组">
+            <circle id="椭圆形" cx="11" cy="11" r="11"></circle>
+            <path d="M13.3420431,3.99751877 C13.6878128,3.98039749 13.9862932,4.22319109 14.0480253,4.55431822 L14.0588492,4.6466868 L14.5191483,13.9425767 C14.5361374,14.2856759 14.2970907,14.5827197 13.9690064,14.6472715 L13.8774467,14.6589723 L9.08513129,14.9488345 C8.70815472,14.9716358 8.38407069,14.6845201 8.36126934,14.3075435 C8.3403681,13.9619817 8.57988331,13.6608642 8.9103156,13.5955149 L9.0025603,13.5836816 L13.1194362,13.3347856 L12.692875,4.71432494 C12.6757538,4.36855519 12.9185474,4.07007485 13.2496745,4.00834268 L13.3420431,3.99751877 Z" id="Path-2" fill="#FFFFFF" fill-rule="nonzero" transform="translate(11.440000, 9.473385) rotate(-315.000000) translate(-11.440000, -9.473385) "></path>
+        </g>
+    </g>
+</svg>

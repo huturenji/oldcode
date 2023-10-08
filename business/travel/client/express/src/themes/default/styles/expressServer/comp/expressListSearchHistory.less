@@ -1,0 +1,107 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.expressListPWrap{
+    padding: 0.3rem;
+    padding-bottom: 0rem;
+        .bbpxs {
+            .bbpx(1px, @border-color-base, 0, 0, solid);
+        }
+    &:last-child{
+        padding-bottom: 0.3rem;
+    }
+    
+    .expressListWrap{
+        box-shadow:0 0.02rem 0.2rem 0 rgba(99,99,99,0.2);
+        border-radius:0.12rem;
+        background: @sub-background-color;
+        .lineWrap {
+            padding: 0 0.4rem;
+            font-size: 14px;
+            color: @text-color;
+            .details{
+                .flex-box();
+                .align-items(center);
+                padding: 0.25rem 0;
+                .status{
+                    flex: 1;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-weight: bold;
+                    color: @text-color;
+                }
+                .des{
+                    flex: 5;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    color: @third-text-color;
+                    font-size: 12px;
+                }
+            }
+            .titWrap {
+                .flex-box();
+                .align-items(center);
+                .justify-content(space-between);
+                padding: 0.24rem 0;
+                .titLeftGroup{
+                    .flex(1);
+                    .flex-box();
+                    .align-items(center);
+                    .iconWrap{
+                        width:0.37rem;
+                        height: 0.37rem;
+                        background-repeat: no-repeat;
+                        background-position:left;
+                        background-size: 0.37rem 0.37rem;
+                        border-radius: 0.04rem;
+                    }
+                    .itemLeft {
+                        padding-left: 0.2rem;
+                    }
+                    .left{
+                        padding-right: 0.2rem;
+                        padding-left: 0.2rem;
+                    }
+                    .itemRight {
+                        padding-left: 0.2rem;
+                        background: url(~themes/default/img/expressServer/comp/base_gray.png) no-repeat left;
+                        background-size: 1px 0.18rem;
+                    }
+                }
+                .pcDelete{
+                    color: @secondary-text-color;
+                }
+            }
+      
+            &.grayList{
+                color: @placeholder-color;
+                .contectWrap .rightContect .name{
+                    color: @placeholder-color;
+                }
+                .contectWrap .leftContect .name{
+                    color: @placeholder-color;
+                }
+            }
+            &.sign{
+                background: url(~themes/default/img/expressServer/comp/icon_express_sign.svg) no-repeat top 0.27rem right 0.29rem;
+                background-size: 1.34rem 1.34rem;
+            }
+        }
+        
+    }
+    
+}
+/deep/.expressListPWrap {
+    .timeLineWrap{
+        .timeLine{
+            &:first-child{
+                .timeLineTextWrap .timeLineText{
+                    .phone{
+                        color: @theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

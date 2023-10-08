@@ -1,0 +1,614 @@
+@charset "utf-8";
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+html {
+    font-size: 10000/750vw;
+}
+
+body {
+    background: #fafafa;
+}
+
+.Pop {
+    background: #ffffff;
+
+    .content {
+        padding: .1rem;
+        color: #999999;
+
+        div {
+            margin: .1rem 0;
+        }
+    }
+}
+
+.explain {
+    padding: .2rem;
+    color: @theme-color;
+    text-align: end;
+}
+
+.detail {
+    background: #ffffff;
+    padding: .2rem;
+
+    .title {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #f2f3f5;
+
+        .block {
+            display: block;
+
+            .status {
+                font-size: .32rem;
+            }
+
+            .tips {
+                font-size: .26rem;
+                color: #999999;
+            }
+
+            .notPay {
+                color: #f8a339;
+            }
+
+            .cancel {
+                color: #999999;
+            }
+
+            .hasPay {
+                color: #25cb67;
+            }
+        }
+
+        .switch {
+            img {
+                display: inline-block;
+                width: .54rem;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .priceDetail {
+        display: block;
+
+        .title {
+            margin-top: .1rem;
+            font-size: .28rem;
+            color: #999999;
+            border: 0;
+        }
+
+        .detailList {
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            padding: .1rem 0;
+
+            .name {
+                font-size: .30rem;
+                font-weight: 600;
+                color: @text-color;
+            }
+
+            .price {
+                color: @text-color;
+
+                span {
+                    color: #f8a339;
+                }
+            }
+        }
+    }
+
+    div {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.detailCard {
+    margin: .2rem .3rem;
+    border-radius: .1rem;
+
+    .trainDetail {
+        background: #e0e7f5;
+        border-bottom: 1px solid #f2f3f5;
+
+        .stage {
+            padding: .2rem .3rem;
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+
+            .station {
+                span {
+                    display: flex
+                }
+
+                .goTime {
+                    font-weight: 600;
+                    font-size: .3rem;
+                }
+
+                .goDate {
+                    color: #999999;
+                    font-size: .26rem;
+                }
+
+                .station {
+                    font-size: .4rem;
+                }
+            }
+
+            .arrow {
+                span {
+                    text-align: center;
+                    display: block;
+                }
+
+                .goTime {
+                    font-weight: 600;
+                    font-size: .3rem;
+                }
+
+                .goDate {
+                    color: #999999;
+                    font-size: .28rem;
+                }
+
+                img {
+                    padding: .1rem;
+                    height: .34rem;
+                }
+            }
+        }
+
+        .stage2 {
+            text-align: center;
+            padding: .2rem;
+
+            .goDate {
+                color: #999999;
+            }
+
+            .goTime {
+                font-weight: 600;
+                font-size: .3rem;
+            }
+        }
+    }
+
+    .status {
+        background: #ffffff;
+        padding: .24rem;
+        border-top: 1px solid #f2f3f5;
+        text-align: center;
+    }
+}
+
+.order {
+    background-color: #ffffff;
+    margin: 0 .1rem;
+    padding: .24rem;
+
+    .title {
+        font-size: .3rem;
+        color: @third-text-color
+    }
+
+    .callphone {
+        color: #262DD9;
+        padding-left: 0.5rem;
+        font-size: 0.3rem;
+        background: url(~assets/img/trainList/icon_phone02.png) no-repeat left;
+        background-size: 0.4rem 0.4rem;
+    }
+
+    .num {
+        font-size: .3rem;
+        font-weight: 600;
+        color: @text-color;
+    }
+}
+
+.rightWrap {
+    margin: 0 .1rem;
+    padding: .24rem;
+    line-height: 0.9rem;
+    background: #fff;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    .text {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        color: #999;
+        font-size: 0.32rem;
+    }
+
+    .callphone {
+        color: #262DD9;
+        padding-left: 0.5rem;
+        font-size: 0.32rem;
+        background: url(~assets/img/trainList/icon_phone02.png) no-repeat left;
+        background-size: 0.4rem 0.4rem;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+}
+
+.passenger {
+    background-color: #ffffff;
+    padding: .24rem;
+
+    .heavy {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        font-size: .3rem;
+        font-weight: 600;
+        color: @text-color;
+    }
+
+    .light {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        padding-top: .1rem;
+        font-size: .28rem;
+        color: @third-text-color
+    }
+}
+
+.vux-popup-dialog.payType {
+    width: auto;
+    right: 0;
+}
+
+.payType {
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding: 0.3rem;
+    z-index: 555;
+
+    .content {
+        width: auto;
+        padding: 0;
+        background: #ffffff;
+        border-radius: .1rem;
+
+        div {
+            padding-left: 0.3rem;
+            color: @text-color;
+            font-size: .32rem;
+            line-height: .99rem;
+        }
+
+        .paybg1 {
+            padding-left: 1.2rem;
+            background: url(~assets/img/orderDetail/365.png) no-repeat 0.3rem center;
+            background-size: 0.56rem 0.56rem;
+        }
+
+        .paybg2 {
+            padding-left: 1.2rem;
+            background: url(~assets/img/orderDetail/aliPay.png) no-repeat 0.3rem center;
+            background-size: 0.56rem 0.56rem;
+        }
+
+        .paybg3 {
+            padding-left: 1.2rem;
+            background: url(~assets/img/orderDetail/weChat.png) no-repeat 0.3rem center;
+            background-size: 0.56rem 0.56rem;
+        }
+
+        .paybg4 {
+            padding-left: 1.2rem;
+            background: url(~assets/img/orderDetail/jinbei.png) no-repeat 0.3rem center;
+            background-size: 0.56rem 0.56rem;
+        }
+    }
+
+    .footer {
+        width: auto;
+        font-size: .32rem;
+        line-height: .9rem;
+        margin-top: .3rem;
+        border-radius: .1rem;
+        background: #ffffff;
+        text-align: center;
+    }
+}
+
+.confirmPay {
+    background: #ffffff !important;
+    text-align: center;
+
+    .title {
+        text-align: center;
+        height: .92rem;
+        font-size: .32rem;
+        line-height: .88rem;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .content {
+        border-radius: .1rem;
+
+        span {
+            font-family: Arial Narrow;
+            padding: .3rem;
+            font-size: .6rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        div {
+            padding: 1% 4%;
+            border-top: 1px solid #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            text-align: start;
+            color: #191919;
+            height: .92rem;
+            font-size: .34rem;
+            line-height: .88rem;
+
+            span:first-child {
+                color: #999999;
+            }
+        }
+    }
+
+    .footer {
+        display: inline-block;
+        width: 84%;
+        color: #ffffff;
+        height: .92rem;
+        font-size: .38rem;
+        line-height: .88rem;
+        margin: .3rem auto;
+        border-radius: .1rem;
+        background: #262DD9;
+        text-align: center;
+    }
+}
+
+.travelList {
+    .title {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        background: #f2f3f5;
+        color: #999999;
+        padding: .2rem;
+        text-align: center;
+
+        span {
+            text-align: center;
+            display: inline-block;
+            width: 25%;
+        }
+    }
+
+    .list {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        background: #f2f3f5;
+        padding: .2rem;
+
+        span {
+            text-align: center;
+            display: inline-block;
+            width: 25%;
+        }
+    }
+
+    .list:nth-child(2) {
+        color: @theme-color;
+    }
+
+    .list:nth-child(2n) {
+        background: #ffffff;
+    }
+}
+
+.Xbutton {
+    margin: 0.46rem 0.3rem;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.Xbutton button {
+    margin: 0 0rem;
+    -webkit-appearance: none;
+    border-width: 0;
+    outline: 0;
+    position: relative;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    font-size: 0.34rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #262DD9;
+    line-height: 0.92rem;
+    border-radius: 0.1rem;
+    font-family: 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '宋体', Tahoma, Arial, Helvetica, STHeiti, sans-serif;
+    cursor: pointer;
+}
+
+.Xbutton button.big-Radius {
+    border-radius: 0.92rem;
+}
+
+.Xbutton button.box-shadow {
+    box-shadow: 0 0.05rem 0.08rem #b2b2b2;
+}
+
+.Xbutton button.unAllow {
+    background: #8fbded;
+}
+
+.Xbutton button.box-shadow.unAllow {
+    box-shadow: 0 0.05rem 0.1rem #cee8ff;
+}
+
+.Xbutton i {
+    margin: -0.2em 0.2em 0 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    animation: weuiLoading 1s steps(12, end) infinite;
+    background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=") no-repeat;
+    background-size: 100%;
+}
+
+.Xbutton i {
+    display: none;
+}
+
+.Xbutton .loading i {
+    display: inline-block;
+}
+
+.Xbutton .buttons {
+    margin: 0 0.15rem;
+}
+
+@-webkit-keyframes weuiLoading {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+@keyframes weuiLoading {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+.overConfirmPay {
+    background: #f2f3f5;
+
+    .button {
+        display: block;
+        color: #ffffff;
+        font-size: .34rem;
+        line-height: .9rem;
+        margin: .3rem;
+        border-radius: .1rem;
+        background: #262DD9;
+        text-align: center;
+    }
+}
+
+.overContentWrap {
+    text-align: left;
+
+    .tips {
+        background: #fff;
+        padding: 0.25rem 0.3rem;
+        border-bottom: .01rem solid #c2c2c2;
+    }
+
+    .timeBig {
+        padding: 0.25rem 0.3rem;
+        font-size: 0.32rem;
+        color: @text-color;
+        background: #fff;
+        text-align: left;
+    }
+
+    .overTips {
+        font-size: 0.26rem;
+        color: #999;
+        padding: 0.3rem 0.3rem 0 0.3rem;
+        text-align: center;
+    }
+
+    .mt30 {
+        margin-top: 0.3rem;
+    }
+
+    .lineForm {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        line-height: 0.5rem;
+        padding: 0.25rem 0.3rem;
+        background: #fff;
+
+        .label {
+            display: inline-block;
+            width: 1.75rem;
+            font-size: 0.32rem;
+            color: #999;
+        }
+
+        .text {
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            font-size: 0.32rem;
+            color: @text-color;
+
+        }
+    }
+}

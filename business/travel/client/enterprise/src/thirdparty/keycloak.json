@@ -1,0 +1,5 @@
+{
+    "realm": "bplusdev",
+    "auth-server-url": "https://bplusdev.sinosun.com:18180/auth",
+    "resource": "TRAVEL_H5"
+  }

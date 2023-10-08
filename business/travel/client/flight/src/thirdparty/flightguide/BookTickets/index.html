@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预订机票</title>
+    <link rel="stylesheet" href="./css/BookTickets.css">
+    <link rel="stylesheet" href="../common/style/index.css">
+    <link rel="stylesheet" href="../common/style/finger.css">
+    <link rel="stylesheet" type="text/css" href="../common/style/sinosun_common.5664f620.css">
+    <style>
+        .psg_box .psg_box_title[data-v-75c9bd30] {
+            font-size: 0.36rem;
+            font-weight: bold;
+            padding: 0.4rem 0.3rem 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .psg_box .psg_box_title .title_tips[data-v-75c9bd30] {
+            font-size: 0.22rem;
+            color: var(--thirdTextColor);
+            font-weight: normal;
+        }
+
+        .psg_box ul[data-v-75c9bd30] {
+            padding: 0 0.3rem;
+            overflow: hidden;
+            padding-bottom: 0.4rem;
+            position: relative;
+        }
+
+        .psg_box ul[data-v-75c9bd30]::after {
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0.3rem;
+            bottom: 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .psg_box ul li[data-v-75c9bd30] {
+            width: 1.42rem;
+            height: 0.6rem;
+            padding: 0 0.1rem;
+            line-height: 0.6rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            float: left;
+            margin-right: 0.4rem;
+            text-align: center;
+            border: 1px solid var(--borderColorBase);
+            margin-top: 0.38rem;
+            border-radius: 0.05rem;
+            cursor: pointer;
+            font-size: 0.28rem;
+            color: var(--thirdTextColor);
+        }
+
+        .psg_box ul li.selected[data-v-75c9bd30] {
+            color: var(--themeColor);
+            border: 1px solid var(--themeColor);
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjIycHgiIGhlaWdodD0iMjJweCIgdmlld0JveD0iMCAwIDIyIDIyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNjAgKDg4MTAzKSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4NCiAgICA8dGl0bGU+aDUgc3ZnL2ljb24vcGxhbmUvc2VsZWN0QDJ4PC90aXRsZT4NCiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4NCiAgICA8ZyBpZD0iaDUtc3ZnL2ljb24vcGxhbmUvc2VsZWN0IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPHBhdGggZD0iTTIyLC05Ljc2OTk2MjYyZS0xNCBMMjIsMTkuMDY2NjY2NyBDMjIsMjAuNjg2NzAxOSAyMC42ODY3MDE5LDIyIDE5LjA2NjY2NjcsMjIgTDAsMjIgTDIyLC05Ljc2OTk2MjYyZS0xNCBaIE0xOS44OTczNTgsMTEuNDA0NjgyMyBDMTkuNTY4NTczMSwxMS4xNjgxODE1IDE5LjExMDMxODUsMTEuMjQyOTkyNSAxOC44NzM4MTc3LDExLjU3MTc3NzMgTDE4Ljg3MzgxNzcsMTEuNTcxNzc3MyBMMTQuNTA2OCwxNy42Mzk2IEwxMS45MDU0NzcxLDE2LjAyOTg3IEwxMS43ODcxODM5LDE1Ljk3MDUyMTkgQzExLjQ2MzYzODQsMTUuODQzMjIxNCAxMS4wODU0NTQyLDE1Ljk2MTIyNDkgMTAuODk1OTMzNSwxNi4yNjczMDkyIEMxMC42ODI3MjI4LDE2LjYxMTY1NCAxMC43ODkwMjc5LDE3LjA2MzY0MiAxMS4xMzMzNzI3LDE3LjI3Njg1MjcgTDExLjEzMzM3MjcsMTcuMjc2ODUyNyBMMTQuODk5NDA3OSwxOS42MDg2OTkyIEwyMC4wNjQ0NTMsMTIuNDI4MjIyNyBMMjAuMTMxODM1MiwxMi4zMTQzMTQzIEMyMC4yODExOTM3LDEyLjAwMDM0MTEgMjAuMTg5NjExMiwxMS42MTQ5MDUzIDE5Ljg5NzM1OCwxMS40MDQ2ODIzIFoiIGlkPSLlvaLnirbnu5PlkIgiIGZpbGw9IiMyNjJERDkiPjwvcGF0aD4NCiAgICA8L2c+DQo8L3N2Zz4=) right bottom no-repeat;
+            background-size: 0.3rem auto;
+        }
+
+        .psg_box ul li[data-v-75c9bd30]:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        .psg_box ul li.add_psg[data-v-75c9bd30] {
+            color: #fff;
+            background-color: var(--themeColor);
+            border: 1px solid var(--themeColor);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: normal;
+        }
+
+        .psg_box ul li.add_psg .icon_common_add[data-v-75c9bd30] {
+            fill: #fff;
+        }
+
+        .psg_box ul li.add_psg span[data-v-75c9bd30] {
+            margin-left: 0.1rem;
+        }
+
+        .psg_box ul li[data-v-75c9bd30]:active {
+            opacity: 0.5;
+        }
+
+        @media screen and (min-width: 550px) {
+            .psg_box ul li[data-v-75c9bd30]:nth-child(4n) {
+                margin-right: 0.4rem;
+            }
+        }
+
+        .finger{
+            position: absolute;
+            right: 0;
+            bottom: -.3rem;
+        }
+        .detail{
+            display: flex;
+            justify-content: start;
+        }
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="btn_common_checkbox_nor">
+            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+            <title>btn_common_checkbox_nor</title>
+            <desc>Created with Sketch.</desc>
+            <g id="btn_common_checkbox_nor_btn_common_checkbox_nor" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M4.7,0.5 L17.3,0.5 C19.6195959,0.5 21.5,2.38040405 21.5,4.7 L21.5,17.3 C21.5,19.6195959 19.6195959,21.5 17.3,21.5 L4.7,21.5 C2.38040405,21.5 0.5,19.6195959 0.5,17.3 L0.5,4.7 C0.5,2.38040405 2.38040405,0.5 4.7,0.5 Z M4.7,1.025 C2.67035354,1.025 1.025,2.67035354 1.025,4.7 L1.025,17.3 C1.025,19.3296465 2.67035354,20.975 4.7,20.975 L17.3,20.975 C19.3296465,20.975 20.975,19.3296465 20.975,17.3 L20.975,4.7 C20.975,2.67035354 19.3296465,1.025 17.3,1.025 L4.7,1.025 Z"
+                    id="btn_common_checkbox_nor_icon_checkbox_nor" fill-rule="nonzero"></path>
+            </g>
+        </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_rightarrow">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/rightarrow</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_rightarrow_h5-svg/icon/common/rightarrow" stroke="none" stroke-width="1"
+                fill-rule="evenodd">
+                <rect id="icon_common_rightarrow_矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="22" height="22">
+                </rect>
+                <path
+                    d="M7.138598,19.7295025 C6.66285881,20.2052417 6.66285881,20.9765673 7.138598,21.4523065 C7.61433719,21.9280457 8.38566281,21.9280457 8.861402,21.4523065 L18.4523065,11.861402 C18.9280457,11.3856628 18.9280457,10.6143372 18.4523065,10.138598 L8.861402,0.5476935 C8.38566281,0.0719543126 7.61433719,0.0719543126 7.138598,0.5476935 C6.66285881,1.02343269 6.66285881,1.79475831 7.138598,2.2704975 L15.8681005,11 L7.138598,19.7295025 Z"
+                    id="icon_common_rightarrow_路径"></path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_add">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/add</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_add_h5-svg/icon/common/add" stroke="none" stroke-width="1">
+                <g id="icon_common_add_编组">
+                    <path
+                        d="M11.0000004,3.57627869e-07 C17.0751326,3.57627869e-07 22.0000004,4.92486811 22.0000004,11.0000004 C22.0000004,17.0751326 17.0751326,22.0000004 11.0000004,22.0000004 C4.92486811,22.0000004 3.57627869e-07,17.0751326 3.57627869e-07,11.0000004 C3.57627869e-07,4.92486811 4.92486811,3.57627869e-07 11.0000004,3.57627869e-07 Z M11.0000004,1.20000036 C5.58760981,1.20000036 1.20000036,5.58760981 1.20000036,11.0000004 C1.20000036,16.4123909 5.58760981,20.8000004 11.0000004,20.8000004 C16.4123909,20.8000004 20.8000004,16.4123909 20.8000004,11.0000004 C20.8000004,5.58760981 16.4123909,1.20000036 11.0000004,1.20000036 Z"
+                        id="icon_common_add_Rectangle"></path>
+                    <path
+                        d="M11.0000004,5.40000036 C11.2982341,5.40000036 11.5456471,5.61758997 11.5921474,5.90267724 L11.6000004,6.00000036 L11.6000004,16.0040818 C11.6000004,16.3354526 11.3313712,16.6040818 11.0000004,16.6040818 C10.7017666,16.6040818 10.4543536,16.3864922 10.4078533,16.1014049 L10.4000004,16.0040818 L10.4000004,6.00000036 C10.4000004,5.66862951 10.6686295,5.40000036 11.0000004,5.40000036 Z"
+                        id="icon_common_add_路径-45"></path>
+                    <path
+                        d="M11.0000004,5.4 C11.2982341,5.4 11.5456471,5.61758961 11.5921474,5.90267688 L11.6000004,6 L11.6000004,16 C11.6000004,16.3313708 11.3313712,16.6 11.0000004,16.6 C10.7017666,16.6 10.4543536,16.3824104 10.4078533,16.0973231 L10.4000004,16 L10.4000004,6 C10.4000004,5.66862915 10.6686295,5.4 11.0000004,5.4 Z"
+                        id="icon_common_add_路径-45"
+                        transform="translate(11.000000, 11.000000) rotate(-270.000000) translate(-11.000000, -11.000000) ">
+                    </path>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_delete">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/delete</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_delete_h5-svg/icon/common/delete" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g id="icon_common_delete_编组">
+                    <rect id="icon_common_delete_矩形" opacity="0" x="0" y="0" width="22" height="22"></rect>
+                    <path
+                        d="M11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 Z M11,1.2 C5.58760945,1.2 1.2,5.58760945 1.2,11 C1.2,16.4123905 5.58760945,20.8 11,20.8 C16.4123905,20.8 20.8,16.4123905 20.8,11 C20.8,5.58760945 16.4123905,1.2 11,1.2 Z M16.1,10.5 C16.4313708,10.5 16.7,10.7686292 16.7,11.1 C16.7,11.3982338 16.4824104,11.6456468 16.1973231,11.692147 L16.1,11.7 L6.1,11.7 C5.76862915,11.7 5.5,11.4313708 5.5,11.1 C5.5,10.8017662 5.71758961,10.5543532 6.00267688,10.507853 L6.1,10.5 L16.1,10.5 Z"
+                        id="icon_common_delete_形状结合" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_rightarrow">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/rightarrow</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_rightarrow_h5-svg/icon/common/rightarrow" stroke="none" stroke-width="1"
+                fill-rule="evenodd">
+                <rect id="icon_common_rightarrow_矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="22" height="22">
+                </rect>
+                <path
+                    d="M7.138598,19.7295025 C6.66285881,20.2052417 6.66285881,20.9765673 7.138598,21.4523065 C7.61433719,21.9280457 8.38566281,21.9280457 8.861402,21.4523065 L18.4523065,11.861402 C18.9280457,11.3856628 18.9280457,10.6143372 18.4523065,10.138598 L8.861402,0.5476935 C8.38566281,0.0719543126 7.61433719,0.0719543126 7.138598,0.5476935 C6.66285881,1.02343269 6.66285881,1.79475831 7.138598,2.2704975 L15.8681005,11 L7.138598,19.7295025 Z"
+                    id="icon_common_rightarrow_路径"></path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="btn_conmmon_phone">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>btn_hotel_phone</title>
+            <desc>Created with Sketch.</desc>
+            <g id="btn_conmmon_phone_btn_hotel_phone" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="btn_conmmon_phone_icon/对话-copy" transform="translate(1.000000, 1.500000)">
+                    <g id="btn_conmmon_phone_Group">
+                        <rect id="btn_conmmon_phone_Rectangle" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round" x="2.34912109" y="0" width="15.7683105"
+                            height="18.4008789" rx="2"></rect>
+                        <line x1="0.78125" y1="4.47429812" x2="3.91699219" y2="4.47429812" id="btn_conmmon_phone_Path-6"
+                            stroke="#575757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="0.78125" y1="9.20043945" x2="3.91699219" y2="9.20043945"
+                            id="btn_conmmon_phone_Path-6-Copy" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="0.78125" y1="13.9265808" x2="3.91699219" y2="13.9265808"
+                            id="btn_conmmon_phone_Path-6-Copy-2" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round"></line>
+                        <path
+                            d="M12.1456152,11.3583493 C11.7009064,11.7287513 10.7402016,10.7929408 9.92810361,9.83110248 C9.11601067,8.86926583 8.35408589,7.77051049 8.79879462,7.3997222 C9.43662402,6.87090114 9.9763842,6.5570773 9.05490677,5.18787 C8.13418334,3.82206169 7.3549027,4.74580286 6.73820432,5.25765031 C6.02305041,5.85059472 6.42815394,8.32157173 8.62378045,10.9177845 C10.8190274,13.5132347 13.2013714,14.3362617 13.9127535,13.7436918 C14.5290842,13.2284497 15.5829546,12.6298477 14.3861283,11.4903603 C13.1885464,10.3516202 12.7826888,10.8261269 12.1456067,11.3583436 L12.1456152,11.3583493 Z"
+                            id="btn_conmmon_phone_Path" fill="#575757"></path>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_prompt">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/prompt</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_prompt_h5-svg/icon/common/prompt" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <rect id="icon_common_prompt_矩形" opacity="0" x="0" y="0" width="22" height="22"></rect>
+                <path
+                    d="M11,0.5 C16.7989899,0.5 21.5,5.20101013 21.5,11 C21.5,16.7989899 16.7989899,21.5 11,21.5 C5.20101013,21.5 0.5,16.7989899 0.5,11 C0.5,5.20101013 5.20101013,0.5 11,0.5 Z M11,2.07142857 C6.06888616,2.07142857 2.07142857,6.06888616 2.07142857,11 C2.07142857,15.9311138 6.06888616,19.9285714 11,19.9285714 C15.9311138,19.9285714 19.9285714,15.9311138 19.9285714,11 C19.9285714,6.06888616 15.9311138,2.07142857 11,2.07142857 Z"
+                    id="icon_common_prompt_椭圆形"></path>
+                <path
+                    d="M9.67320033,6.52769252 C9.67320033,6.11130279 9.82231064,5.75259405 10.1205357,5.45155552 C10.4187608,5.150517 10.7760628,5 11.1924526,5 C11.6144692,5 11.9717712,5.1491103 12.2643694,5.44733538 C12.5569676,5.74556046 12.7032645,6.1056759 12.7032645,6.52769252 C12.7032645,6.94970914 12.5555609,7.30982459 12.2601493,7.60804967 C11.9647376,7.90627474 11.6088423,8.05538504 11.1924526,8.05538504 C10.7591822,8.05538504 10.39766,7.90205464 10.1078753,7.59538923 C9.81809053,7.28872382 9.67320033,6.93282848 9.67320033,6.52769252 Z M12.5175781,9.45647321 L12.5175781,14.6303711 C12.5175781,15.0580146 12.5850998,15.3520151 12.7201451,15.5123814 C12.8551904,15.6727477 13.1702914,15.7529297 13.6654576,15.7529297 L13.6654576,16.6476004 L8.5,16.6476004 L8.5,15.7529297 L8.69412667,15.7529297 C9.17241218,15.7529297 9.47485288,15.6685276 9.60145787,15.499721 C9.72806285,15.3309143 9.7913644,15.0411339 9.7913644,14.6303711 L9.7913644,12.1151646 C9.7913644,11.6987749 9.72665615,11.4075878 9.59723772,11.2415946 C9.46781929,11.0756014 9.16678529,10.992606 8.69412667,10.992606 L8.5,10.992606 L8.5,10.0979353 L12.5175781,9.45647321 Z"
+                    id="icon_common_prompt_i"></path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_downarrow">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/downarrow</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_downarrow_h5-svg/icon/common/downarrow" stroke="none" stroke-width="1"
+                fill-rule="evenodd">
+                <rect id="icon_common_downarrow_蒙版" fill="#D8D8D8" opacity="0" x="0" y="0" width="22" height="22">
+                </rect>
+                <path
+                    d="M11,13.8681005 L2.2704975,5.138598 C1.79475831,4.66285881 1.02343269,4.66285881 0.5476935,5.138598 C0.0719543126,5.61433719 0.0719543126,6.38566281 0.5476935,6.861402 L10.138598,16.4523065 C10.6143372,16.9280457 11.3856628,16.9280457 11.861402,16.4523065 L21.4523065,6.861402 C21.9280457,6.38566281 21.9280457,5.61433719 21.4523065,5.138598 C20.9765673,4.66285881 20.2052417,4.66285881 19.7295025,5.138598 L11,13.8681005 Z"
+                    id="icon_common_downarrow_路径"></path>
+            </g>
+        </symbol>
+    </svg>
+    <div>
+        <!---->
+        <div data-v-02658f24="" class="child-view">
+            <div data-v-b94e16a0="" class="water-mark">
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+            </div>
+            <div data-v-785dab5b="" data-v-02658f24="" class="page-orderConfirm" style="">
+                <div data-v-785dab5b="" class="order-form">
+                    <div data-v-785dab5b="" class="top">
+                        <div data-v-785dab5b="" class="content">
+                            <div data-v-785dab5b="" class="flight-info cursorp">
+                                <div data-v-785dab5b="" class="left-content">
+                                    <div data-v-785dab5b="" class="time">
+                                        <div data-v-06c45e89="" data-v-785dab5b="" class="logo icon-flight icon-CZ">
+                                        </div>
+                                        06月11日 周五
+                                        06:40
+                                    </div>
+                                    <div data-v-785dab5b="" class="no-wrap airport">
+                                        大兴国际机场-天河机场T3
+                                    </div>
+                                </div> <svg data-v-785dab5b="" class="icon icon icon-btn icon_common_rightarrow"
+                                    style="width: 0.24rem; height: 0.24rem;">
+                                    <use xlink:href="#icon_common_rightarrow"></use>
+                                </svg>
+                            </div>
+                            <div data-v-785dab5b="" class="cabin-info">
+                                <div data-v-785dab5b="" class="cabin"><span data-v-785dab5b="" class="label">经济舱</span>
+                                    <span data-v-785dab5b="" class="amount num-font"><span data-v-785dab5b=""
+                                            class="rmb">¥</span>600</span></div>
+                                <div data-v-785dab5b="" class="detail"><span data-v-785dab5b=""
+                                        class="label">机建+燃油</span> <span data-v-785dab5b="" class="rmb">¥</span>50
+                                </div>
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+                    <section data-v-785dab5b="" class="customer-list">
+                        <div data-v-75c9bd30="" data-v-785dab5b="" class="psg-choose">
+                            <div data-v-75c9bd30="" class="psg_box">
+                                <div data-v-75c9bd30="" class="psg_box_title"><span data-v-75c9bd30=""
+                                        class="title">请选择乘机人</span> <span data-v-75c9bd30=""
+                                        class="title_tips">已选择：成人1人</span></div>
+                                <ul data-v-75c9bd30="">
+                                    <li data-v-75c9bd30="" class="selected">
+                                        李司司
+                                    </li>
+                                    <li data-v-75c9bd30="" class="add_psg"><svg data-v-75c9bd30=""
+                                            class="icon icon_common_add" style="width: 0.32rem; height: 0.32rem;">
+                                            <use xlink:href="#icon_common_add"></use>
+                                        </svg> <span data-v-75c9bd30="">新增</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-v-785dab5b="" class="" size="base">
+                            <div data-v-785dab5b="" class="customer-item"><svg data-v-785dab5b=""
+                                    class="icon icon-delete icon-btn cursorp icon_common_delete"
+                                    style="width: 0.44rem; height: 0.44rem;">
+                                    <use xlink:href="#icon_common_delete"></use>
+                                </svg>
+                                <div data-v-785dab5b="" class="customer-info cursorp">
+                                    <div data-v-785dab5b="" class="name"><span data-v-785dab5b="">李司司</span></div>
+                                    <div data-v-785dab5b="" class="detail">
+                                        身份证：4************7
+                                    </div> <svg data-v-785dab5b=""
+                                        class="icon icon-right icon-btn icon_common_rightarrow"
+                                        style="width: 0.24rem; height: 0.24rem;">
+                                        <use xlink:href="#icon_common_rightarrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div data-v-785dab5b="" class="line"></div>
+                        </div>
+                        <div data-v-785dab5b="" class="connector">
+                            <div data-v-785dab5b="" class="content">
+                                <div data-v-785dab5b="" class="title">联系电话</div>
+                                <div data-v-785dab5b="" class="content">
+                                    +86 
+                                    <input data-v-785dab5b="" type="text" maxlength="13" placeholder="请填写联系人手机"
+                                        onclick="return false" class="contactNum" value="181 6666 0645">
+                                </div> <svg data-v-785dab5b="" class="icon icon icon-btn cursorp btn_conmmon_phone"
+                                    style="width: 0.4rem; height: 0.4rem;">
+                                    <use xlink:href="#btn_conmmon_phone"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-v-785dab5b="">
+                        <div data-v-785dab5b="">
+                            <div data-v-4729d1ad="" data-v-785dab5b="">
+                                <div data-v-4729d1ad="" class="insurancetitWrap">
+                                    <div data-v-4729d1ad="" class="icon"></div>
+                                    <div data-v-4729d1ad="" class="insurancetit">
+                                        买一份保险，多一份安心</div>
+                                </div>
+                                <div data-v-4729d1ad="" class="insuranceWrap">
+                                    <div data-v-4729d1ad="" class="insurance lineBorderB">
+                                        <div data-v-4729d1ad="" class="insuranceText">
+                                            <div data-v-4729d1ad="" class="insuranceTextOut">
+                                                <div data-v-4729d1ad="" class="supplierName cursorp">华夏航意险60元1天
+                                                    <svg data-v-4729d1ad="" class="icon icon icon_common_prompt"
+                                                        style="width: 0.28rem; height: 0.28rem;">
+                                                        <use xlink:href="#icon_common_prompt"></use>
+                                                    </svg>
+                                                </div>
+                                                <div data-v-4729d1ad="" class="shortDescription">1.民航班机意外身故、意外伤残450万元；
+                                                    2.客运汽车意外身故10万元；
+                                                    3.航空意外伤害医疗5000元；</div>
+                                            </div>
+                                        </div>
+                                        <div data-v-4729d1ad="" class="insurancetips">
+                                            <div data-v-4729d1ad="" class="tipsText"><span data-v-4729d1ad=""
+                                                    class="rmb small-size">¥</span><span data-v-4729d1ad=""
+                                                    class="num-font">60</span>
+                                                /份<span data-v-4729d1ad="" class=" small-size">x0</span></div>
+                                            <div data-v-4729d1ad="" class="tipsBut cursorp">修改份数</div>
+                                        </div> <svg data-v-4729d1ad=""
+                                            class="icon icon-check cursorp btn_common_checkbox_nor"
+                                            style="width: 0.4rem; height: 0.4rem;">
+                                            <use xlink:href="#btn_common_checkbox_nor"></use>
+                                        </svg>
+                                    </div>
+                                    <div data-v-4729d1ad="" class="insurance lineBorderB">
+                                        <div data-v-4729d1ad="" class="insuranceText">
+                                            <div data-v-4729d1ad="" class="insuranceTextOut">
+                                                <div data-v-4729d1ad="" class="supplierName cursorp">华夏航意险50元1天
+                                                    <svg data-v-4729d1ad="" class="icon icon icon_common_prompt"
+                                                        style="width: 0.28rem; height: 0.28rem;">
+                                                        <use xlink:href="#icon_common_prompt"></use>
+                                                    </svg>
+                                                </div>
+                                                <div data-v-4729d1ad="" class="shortDescription">
+                                                    1、民航班机意外身故、意外伤残200万元；2、列车轮船意外身故30万元；3、客运汽车意外身故10万元；4、航空意外伤害医疗5000元；
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-v-4729d1ad="" class="insurancetips">
+                                            <div data-v-4729d1ad="" class="tipsText"><span data-v-4729d1ad=""
+                                                    class="rmb small-size">¥</span><span data-v-4729d1ad=""
+                                                    class="num-font">50</span>
+                                                /份<span data-v-4729d1ad="" class=" small-size">x0</span></div>
+                                            <div data-v-4729d1ad="" class="tipsBut cursorp">修改份数</div>
+                                        </div> <svg data-v-4729d1ad=""
+                                            class="icon icon-check cursorp btn_common_checkbox_nor"
+                                            style="width: 0.4rem; height: 0.4rem;">
+                                            <use xlink:href="#btn_common_checkbox_nor"></use>
+                                        </svg>
+                                    </div>
+                                    <div data-v-4729d1ad="" class="insurance lineBorderB">
+                                        <div data-v-4729d1ad="" class="insuranceText">
+                                            <div data-v-4729d1ad="" class="insuranceTextOut">
+                                                <div data-v-4729d1ad="" class="supplierName cursorp">华夏航意险40元1天
+                                                    <svg data-v-4729d1ad="" class="icon icon icon_common_prompt"
+                                                        style="width: 0.28rem; height: 0.28rem;">
+                                                        <use xlink:href="#icon_common_prompt"></use>
+                                                    </svg>
+                                                </div>
+                                                <div data-v-4729d1ad="" class="shortDescription">
+                                                    1、民航班机意外身故、意外伤残150万元；2、列车轮船意外身故30万元；3、客运汽车意外身故10万元；4、航空意外伤害医疗10000元；
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-v-4729d1ad="" class="insurancetips">
+                                            <div data-v-4729d1ad="" class="tipsText"><span data-v-4729d1ad=""
+                                                    class="rmb small-size">¥</span><span data-v-4729d1ad=""
+                                                    class="num-font">40</span>
+                                                /份<span data-v-4729d1ad="" class=" small-size">x0</span></div>
+                                            <div data-v-4729d1ad="" class="tipsBut cursorp">修改份数</div>
+                                        </div> <svg data-v-4729d1ad=""
+                                            class="icon icon-check cursorp btn_common_checkbox_nor"
+                                            style="width: 0.4rem; height: 0.4rem;">
+                                            <use xlink:href="#btn_common_checkbox_nor"></use>
+                                        </svg>
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                    <div data-v-4729d1ad="" class="moreInsuranceWrap cursorp">
+                                        <div data-v-4729d1ad="" class="moreInsurance">
+                                            更多保险
+                                            <svg data-v-4729d1ad="" class="icon icon icon_common_downarrow"
+                                                style="width: 0.16rem; height: 0.16rem;">
+                                                <use xlink:href="#icon_common_downarrow"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-v-785dab5b="">
+                        <div data-v-785dab5b="" class="reimburse">
+                            <div data-v-785dab5b="" class="switch">
+                                <div data-v-785dab5b="" class="label"><span data-v-785dab5b="">报销凭证</span>
+                                    <div data-v-785dab5b="" class="tip">起飞后30天内可补开报销凭证</div>
+                                </div>
+                                <div data-v-785dab5b="" role="switch" aria-checked="false" slot="right-icon"
+                                    class="cursorp sn-switch">
+                                    <div data-v-785dab5b="" class="sn-switch-node"></div>
+                                </div>
+                            </div>
+                            <!---->
+                        </div>
+                    </section>
+                    <!---->
+                    <div data-v-785dab5b="" class="protocols_part">
+                        <div data-v-2a706403="" data-v-785dab5b="" class="protocols-container">
+                            <div data-v-2a706403="" class="agreement">点击提交订单表示您已阅读并同意<i
+                                    data-v-2a706403="">《企业商旅服务协议》</i><i data-v-2a706403="">《企业商旅服务协议》</i></div>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <!---->
+    </div>
+    <div data-v-785dab5b="" class="v-transfer-dom">
+        <div data-v-785dab5b="" class="bottomBar">
+            <div data-v-785dab5b="" class="price-info">
+                <div data-v-785dab5b="">
+                    总额：
+                    <div data-v-785dab5b="" class="price num-font"><span data-v-785dab5b="" class="rmb">¥</span>650
+                    </div> <span data-v-785dab5b="" class="split"></span>
+                    共1人
+                </div>
+                <div data-v-785dab5b="" class="showDetail cursorp">
+                    明细
+
+                    <div data-v-785dab5b="" rotate="[object Object]"><svg data-v-785dab5b=""
+                            class="icon icon icon-btn icon_common_uparrow" style="width: 0.2rem; height: 0.2rem;">
+                            <use xlink:href="#icon_common_uparrow"></use>
+                        </svg></div>
+                </div>
+            </div>
+            <div data-v-785dab5b="" class="submit linear-gra-waring normal-btn cursorp" onclick="gotonextpage()">
+                <spandata-v-785dab5b="">提交订单<div class="finger"></div></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function gotonextpage(){
+        window.open("../placeorder/index.html")
+    }
+</script>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #737fa1;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_hotel_baggage" class="cls-1" d="M1539,2482h-2a2,2,0,0,1-4,0h-6a2,2,0,0,1-4,0h-2a2.006,2.006,0,0,1-2-2v-17a2.006,2.006,0,0,1,2-2h2v-4a3,3,0,0,1,3-3h8a3,3,0,0,1,3,3v4h2a2.006,2.006,0,0,1,2,2v17A2.006,2.006,0,0,1,1539,2482Zm-6-6v-9h2v9h-2Zm-7-18a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1v3h-8v-3Zm1,18h-2v-9h2v9Z" transform="translate(-1515 -2454)"/>
+</svg>

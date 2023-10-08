@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #60709e;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_hotel_parking" class="cls-1" d="M1095.61,2350.28h-3.06v6.11h-3.06v-15.28h6.12a4.249,4.249,0,0,1,4.49,4.58c0,2.49-1.16,4.58-4.18,4.58h-0.31v0.01Zm-1.61-16.29a14.005,14.005,0,1,0,14,14A14,14,0,0,0,1094,2333.99Zm1.61,10.17h-3.06v3.06h3.06c1.29,0,1.52-.34,1.52-1.53s0.08-1.53-1.22-1.53h-0.3Z" transform="translate(-1079 -2333)"/>
+</svg>

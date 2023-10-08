@@ -1,0 +1,184 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.order {
+    height: 750px;
+    .bbpxs {
+        .bbpx(1px, @border-color-base, 0.3rem, 0, solid);
+    }
+    .bbpxslz {
+        .bbpx(1px, @border-color-base, 0, 0, solid);
+    }
+    .addressWrap{
+        margin-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        background: @sub-background-color;
+        .order_textWrap {
+            .flex-box();
+            .align-items(center);
+            background: @sub-background-color;
+            font-size: 0.32rem;
+            color: @text-color;
+            padding: 0 0.3rem 0 0;
+            .textLeft{
+                width: 0.5rem;
+                height: 0.5rem;
+                line-height: 0.5rem;
+                text-align: center;
+                font-size: 0.28rem;
+                color: @sub-background-color;
+                border-radius: 0.5rem;
+                &.sender{
+                    background: @theme-color;
+                }
+                &.addressee{
+                    background: @warning-color;
+                }
+            }
+            .textMid{
+                padding: 0.25rem 0 0.25rem 0.3rem;
+                .flex(1);
+                .textInput{
+                    font-size: 0.34rem;
+                    color: @text-color;
+                }
+                .textTips{
+                    font-size: 0.28rem;
+                    color: @third-text-color;
+                }
+            }
+            .textRight{
+                width: 0.6rem;
+                .textRightBut{
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    &.arrow{
+                        background: url(~themes/default/img/expressServer/icon_right.png) no-repeat right;
+                        background-size: 0.16rem 0.3rem;
+                    }
+                }
+                
+            }
+
+        }
+    }
+    .contectWrap {
+        padding-left: 0.3rem;
+        background: @sub-background-color;
+    }
+    .choosedWrap{
+        padding: 0.15rem 0.3rem 0.15rem 0.3rem;
+        margin-bottom: 1.1rem;
+        font-size: 0.28rem;
+        color: @info-color;
+        span{
+            color: @theme-color;
+        }
+    }
+    
+}
+.orderBottomButWrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 501;
+    background: @sub-background-color;
+    box-shadow: 0 -0.05rem 0.1rem @border-color-base;
+    &.buttWrap {
+        .flex-box();
+        .justify-content(space-between);
+        .align-items(center);
+        .left {
+            .flex(1);
+            padding-left: 0.3rem;
+            .leftText {
+                .flex-box();
+                .align-items(center);
+                color: @third-text-color;
+                font-size: 12px;
+                .leftTit{
+                    .flex(1);
+                    .rmb{
+                        color: @danger-color-light;
+                    }
+                    .pricenum{
+                        color: @danger-color-light;
+                        font-size: 24px; 
+                    }
+                }
+            }
+            .leftTps {
+                color: #999999;
+                font-size: 10px;
+                span {
+                    color: @text-color;
+                }
+            }
+        }
+        .detailBut {
+            width: 1rem;
+            color: @third-text-color;
+            font-size: 14px;
+            cursor: pointer;
+            span {
+                padding-right: 0.38rem;
+                background: url(~themes/default/img/expressServer/icon_up_hov.png) no-repeat right;
+                background-size: 0.22rem 0.12rem;
+            }
+            span.active {
+                background: url(~themes/default/img/expressServer/icon_down_hov.png) no-repeat right;
+                background-size: 0.22rem 0.12rem;
+            }
+        }
+        .right {
+            width: 150px;
+            background: @theme-color;
+            color: @sub-background-color;
+            font-size: 0.32rem;
+            text-align: center;
+            line-height: 1.1rem;
+            cursor: pointer;
+            .bottombuttonWrap {
+                margin: 0;
+                .subButton {
+                    font-size: 16px;
+                    text-align: center;
+                    color: @sub-background-color;
+                    line-height: 1.1rem;
+                    background: linear-gradient(329deg, #262DD9 0%, #6764F9 100%);
+                    border-radius: 0rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.hotelPriceDetail{
+    bottom: 1.1rem;
+}
+.detailWrap{
+	background: @sub-background-color;
+	max-height: 7.5rem;
+    overflow-y: auto;
+	.tabWrap{
+		padding:0.37rem 0.37rem;
+        .lineWrap{
+	        .flex-box;
+	        .justify-content(space-between);
+	        .align-items(center);
+            font-size:0.28rem;
+            padding-bottom: 0.25rem;
+	        .left,.right{
+	        	.flex(1);
+	        	color:@text-color;
+	        }
+	        .right{
+	        	text-align:right;
+	        }
+        } 
+        .tabTipsWrap{
+            font-size: 0.26rem;
+            color:@third-text-color;
+        }      
+	}
+}

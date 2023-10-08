@@ -1,0 +1,65 @@
+@import './trainCommon.less';
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.wrap{
+    background-color: #fff;
+}
+.orderSuc {
+    .topWrap {
+        background: #fff;
+        padding: 0.52rem .3rem 0 .3rem;
+        text-align: center;
+        .top {
+            font-size: 0.32rem;
+            .icon_common_success{
+                fill:@success-color;
+            }
+            .tit {
+                color: @success-color;
+                font-size: 0.36rem;
+                margin-bottom: 0.45rem;
+                font-weight: 600;
+                margin-top: .11rem;
+
+            }
+
+            .text {
+                font-size: 0.3rem;
+                color: @text-color;
+                margin-top: .2rem;
+                margin-bottom: .08rem;
+            }
+            .tips{
+                font-size: 0.24rem;
+                color: @placeholder-color;
+             
+            }
+        }
+    }
+}
+
+.submit_btn {
+    margin: 0.6rem .3rem 0 .3rem;
+    line-height: 0.88rem;
+    font-size: 0.3rem;
+    text-align: center;
+    color: #fff;
+    background: @theme-color;
+    border-radius: .2rem;
+}
+
+.submit_btn:active {
+    opacity: .8;
+}
+
+.rightTips {
+    padding: .4rem .3rem .4rem 0;
+    margin-bottom: .2rem;
+    font-size: 0.28rem;
+    color: @theme-color;
+    text-align: right;
+    &:active {
+       opacity: .8;
+    }
+}

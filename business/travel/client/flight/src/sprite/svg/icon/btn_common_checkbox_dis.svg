@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/btn/common/checkbox_dis</title>
+    <desc>Created with Sketch.</desc>
+    <g id="h5-svg/btn/common/checkbox_dis" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.402134487">
+        <g id="icon_checkbox_nor-2" transform="translate(0.500000, 0.500000)">
+            <path d="M4.2,0 L16.8,0 C19.1195959,0 21,1.88040405 21,4.2 L21,16.8 C21,19.1195959 19.1195959,21 16.8,21 L4.2,21 C1.88040405,21 0,19.1195959 0,16.8 L0,4.2 C0,1.88040405 1.88040405,0 4.2,0 Z" id="icon_checkbox_nor" fill="#D3D3D3"></path>
+            <path d="M4.2,0 L16.8,0 C19.1195959,0 21,1.88040405 21,4.2 L21,16.8 C21,19.1195959 19.1195959,21 16.8,21 L4.2,21 C1.88040405,21 0,19.1195959 0,16.8 L0,4.2 C0,1.88040405 1.88040405,0 4.2,0 Z M4.2,0.525 C2.17035354,0.525 0.525,2.17035354 0.525,4.2 L0.525,16.8 C0.525,18.8296465 2.17035354,20.475 4.2,20.475 L16.8,20.475 C18.8296465,20.475 20.475,18.8296465 20.475,16.8 L20.475,4.2 C20.475,2.17035354 18.8296465,0.525 16.8,0.525 L4.2,0.525 Z" id="icon_checkbox_nor" fill="#999999"></path>
+        </g>
+    </g>
+</svg>

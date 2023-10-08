@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>icon_my_shanglv_refund@3x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="06我" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="01我的商旅" transform="translate(-295.000000, -149.000000)" stroke-width="1.6">
+            <g id="功能入口" transform="translate(15.000000, 129.000000)">
+                <g id="退款单" transform="translate(280.000000, 20.000000)">
+                    <g id="编组-9" transform="translate(3.000000, 3.000000)">
+                        <path d="M21,10.5 C21,4.70101013 16.2989899,0 10.5,0 C4.70101013,0 0,4.70101013 0,10.5 C0,16.2989899 4.70101013,21 10.5,21 C11.8518254,21 13.1439842,20.7445372 14.3308337,20.2792544" id="路径" stroke="#262DD9" stroke-linejoin="round"></path>
+                        <g id="编组-8" transform="translate(15.000000, 14.000000)" stroke="#F49939" stroke-linejoin="round">
+                            <polyline id="路径" transform="translate(5.707107, 2.500000) rotate(-315.000000) translate(-5.707107, -2.500000) " points="4.20710678 1 7.20710678 1 7.20710678 4"></polyline>
+                            <line x1="0" y1="2.5" x2="6" y2="2.5" id="直线"></line>
+                        </g>
+                        <g id="编组-7" transform="translate(6.500000, 6.000000)" stroke="#262DD9">
+                            <line x1="0" y1="2.8660254" x2="8" y2="2.8660254" id="直线" stroke-linejoin="round"></line>
+                            <line x1="1" y1="5.8660254" x2="7" y2="5.8660254" id="直线" stroke-linejoin="round"></line>
+                            <line x1="1" y1="5.8660254" x2="7" y2="5.8660254" id="直线" stroke-linejoin="round" transform="translate(4.000000, 5.866025) rotate(90.000000) translate(-4.000000, -5.866025) "></line>
+                            <line x1="2" y1="8.52651283e-14" x2="3" y2="1.73205081" id="直线-2"></line>
+                            <line x1="5" y1="-2.83106871e-14" x2="6" y2="1.73205081" id="直线-2" transform="translate(5.500000, 0.866025) scale(1, -1) translate(-5.500000, -0.866025) "></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

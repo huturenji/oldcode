@@ -1,0 +1,115 @@
+@import './trainCommon.less';
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.trainListWrap {
+    .checkerWrap {
+        padding: 0.2rem 0;
+    }
+    
+    .checkerDefault {
+        width: 2.7rem;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        color: @text-color;
+        margin-left: 0.6rem;
+        margin-bottom: 0.2rem;
+        font-size: 0.28rem;
+        padding-right: 0.6rem;
+        background: url(~themes/default/img/btn_common_checkbox_nor.svg) no-repeat right;
+        background-size: 0.4rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    .checkerDefault.check {
+        color:@theme-color;
+        background: url(~themes/default/img/btn_common_checkbox_sel.svg) no-repeat right;
+        background-size: 0.4rem;
+    }
+    }
+    .roomInfoWrap {
+        background: #fff;
+        .roomTit {
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            font-size: 0.32rem;
+            color: @text-color;
+            position: relative;
+            
+            .bbpx();
+            .but{
+                display: inline-block;
+                width: .24rem;
+                height: .24rem;
+                position: absolute;
+                right: .3rem;
+                top: 50%;
+                margin-top: -.12rem;
+                
+            }
+            .btn_common_close{
+                fill: @third-text-color;
+            }
+            .but:active{
+                opacity: .8;
+            }
+        }
+        .checkerScrollWrap {
+            max-height: 5rem;
+            overflow-y: auto;
+        }  
+        .checkerScrollWrap.trainlist{
+            padding-top: 0.2rem;
+        }      
+        .roomInfoTit{
+            padding: 0 0.3rem;
+            font-size: 0.3rem;
+            color: @text-color;
+        }
+        .bottomButWrapBottom {
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            box-shadow: 0px 5px 20px 0px rgba(101,112,242,0.12);
+            span {
+                flex: 1;
+                line-height: 1rem;
+                font-size: 0.32rem;
+                text-align: center;
+                color: @theme-color;
+                &:active{
+                    opacity: .8;
+                 }
+            }
+            .okButton {
+                color: #fff;
+                background:@theme-color;
+            }
+        }
+    }
+    
+    .checkerWrap {
+        padding: 0.4rem 0;
+    }
+    
+    .checkerDefault {
+        width: 2.1rem;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        border-radius: 0.03rem;
+        background: #f2f3f5;
+        color: #333;
+        margin-left: 0.3rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+        font-size: 0.28rem;
+    }
+    
+    .checkerDefault.check {
+        background:@theme-color;
+        color: #fff;
+    }

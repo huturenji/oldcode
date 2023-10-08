@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4dad38;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_logo_caocao" class="cls-1" d="M6892,1396h3v-6h-14s-8,.91-8,8v11s-0.62,7,8,7h14v-6h-3v3h-11s-5-.1-5-4v-11s0.77-5,5-5h11v3Zm-3-1h-7s-4-.06-4,4v8a3.682,3.682,0,0,0,4,4h7v-1h-7s-3-.24-3-3v-8s0.41-3,3-3h7v-1Z" transform="translate(-6869 -1388)"/>
+</svg>

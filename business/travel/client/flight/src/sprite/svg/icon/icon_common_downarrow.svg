@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/icon/common/downarrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="h5-svg/icon/common/downarrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <rect id="蒙版" fill="#D8D8D8" opacity="0" x="0" y="0" width="22" height="22"></rect>
+        <path d="M11,13.8681005 L2.2704975,5.138598 C1.79475831,4.66285881 1.02343269,4.66285881 0.5476935,5.138598 C0.0719543126,5.61433719 0.0719543126,6.38566281 0.5476935,6.861402 L10.138598,16.4523065 C10.6143372,16.9280457 11.3856628,16.9280457 11.861402,16.4523065 L21.4523065,6.861402 C21.9280457,6.38566281 21.9280457,5.61433719 21.4523065,5.138598 C20.9765673,4.66285881 20.2052417,4.66285881 19.7295025,5.138598 L11,13.8681005 Z" id="路径"></path>
+    </g>
+</svg>

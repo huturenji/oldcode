@@ -1,0 +1,266 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.statusCol {
+    display: flex;
+    background-color: @sub-background-color;
+    height: 2.18rem;
+    margin-bottom: .2rem;
+    .statusItem {
+        flex: 1;
+        text-align: center;
+        .icon {
+            position: relative;
+            display: inline-block;
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-top: .3rem;
+            margin-bottom: 0.35rem;
+            z-index: 20;
+            background: url(~themes/default/img/reimburse/reimburseDetail/icon_no_status.png) no-repeat;
+            background-size: 100%;
+            &.application {
+                background: url(~themes/default/img/reimburse/reimburseDetail/icon_application1.png) no-repeat;
+                background-size: 100%;
+            }
+            &.mailing {
+                background: url(~themes/default/img/reimburse/reimburseDetail/icon_mailing1.png) no-repeat;
+                background-size: 100%;
+            }
+            &.signing {
+                background: url(~themes/default/img/reimburse/reimburseDetail/icon_signing1.png) no-repeat;
+                background-size: 100%;
+            }
+        }
+        .text {
+            height: 0.28rem;
+            line-height: .28rem;
+            font-size: .28rem;
+            margin-bottom: .17rem;
+        }
+        .time {
+            font-size: 14px;
+            color: @third-text-color;
+        }
+    }
+    .statusItem:nth-of-type(1), .statusItem:nth-of-type(2) {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: .55rem;
+            left: 50%;
+            width: 100%;
+            height: 1px;
+            border-top: 1px dashed @placeholder-color;
+            z-index: 10;
+        }
+    }
+}
+.noMail {
+    height: 0.84rem;
+    line-height: .84rem;
+    padding: 0 .3rem;
+    margin-bottom: 0.2rem;
+    font-size: 15px;
+    color: @danger-color-light;
+    background-color: @tipsbg-color;
+    .iconRedTip {
+        display: inline-block;
+        width: 0.4rem;
+        height: 100%;
+        background: url(~themes/default/img/reimburse/reimburseDetail/icon_red_tip.png) no-repeat center;
+        background-size: 86%;
+        vertical-align: top;
+        margin-right: .1rem;
+    }
+}
+.expressInfoCol {
+    background-color: @sub-background-color;
+    padding: 0 .3rem;
+    margin-bottom: .2rem;
+    .expressInfoItem {
+        position: relative;
+        height: .92rem;
+        line-height: .92rem;
+        font-size: .32rem;
+        border-bottom: 1px solid @border-color-base;
+        .infoKey {
+            display: inline-block;
+            color: @third-text-color;
+            width: 1.84rem;
+        }
+        .invoiceDetail {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0.32rem;
+            height: 100%;
+            background: url(~themes/default/img/reimburse/reimburseDetail/icon_right.png) no-repeat right center;
+            background-size: 56%;
+        }
+        .copyNum {
+            font-size: .26rem;
+            position: absolute;
+            right: 0;
+            color: @theme-color;
+            cursor: pointer;
+        }
+    }
+}
+.logisticsInfo {
+    .logisticsItem {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: .14rem;
+            width: 1px;
+            height: 100%;
+            border-left: 1px dashed @placeholder-color;
+            z-index: 10;
+        }
+        &:last-of-type::after, &.noLine::after {
+            border-left: none;
+        }
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: .3rem;
+            height: .3rem;
+            margin-right: .28rem;
+            background: url(~themes/default/img/reimburse/reimburseDetail/icon_gray.png) no-repeat center;
+            background-size: 100%;
+            z-index: 20;
+        }
+        &:first-of-type .circle{
+            background: url(~themes/default/img/reimburse/reimburseDetail/icon_blue.png) no-repeat center;
+            background-size: 99%;
+        }
+        &:first-of-type {
+            .logisticsText {
+                color: @text-color;
+            }
+        }
+        .textInfo {
+            padding: .24rem .3rem 0.1rem .6rem;
+            color: @third-text-color;
+            .logisticsText {
+                font-size: .26rem;
+            }
+            .logisticsTime {
+                font-size: .24rem;
+            }
+        }
+        .downArrow {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-55%);
+            width: .6rem;
+            height: .6rem;
+            background: url(~themes/default/img/reimburse/reimburseDetail/openArrow.png) no-repeat center;
+            background-size: 80%;
+        }
+    }
+}
+.invoiceInfoCol {
+    background-color: @sub-background-color;
+    padding: 0 .3rem;
+    margin-bottom: .36rem;
+    .invoiceInfoItem {
+        position: relative;
+        padding: .3rem 0;
+        border-bottom: 1px solid @border-color-base;
+        font-size: .3rem;
+        &:last-of-type {
+            border: none;
+        }
+        &:nth-of-type(3), &:nth-of-type(4) {
+            padding: .24rem 0;
+        }
+        .infoKey {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .infoValue {
+            display: inline-block;
+            padding-left: 1.84rem;
+        }
+        .infoValues {
+            padding-left: 1.84rem;
+            .infoValues1 {
+                font-size: .32rem;
+            }
+            .infoValues2 {
+                font-size: .26rem;
+                color: @third-text-color;
+            }
+        }
+    }
+}
+.reimburseInfoCol {
+    padding: 0 .3rem;
+    margin-bottom: 0.3rem;
+    .title {
+        font-size: .3rem;
+        margin-bottom: 0.14rem;
+        .demo {
+            float: right;
+            color: @theme-color;
+            cursor: pointer;
+            > i {
+                display: inline-block;
+                width: 0.4rem;
+                height: 0.4rem;
+                background: url(~themes/default/img/reimburse/reimburseDetail/icon_tip.png) no-repeat center;
+                background-size: 100%;
+                vertical-align: top;
+            }
+        }
+    }
+    .reimburseInfo {
+        background-color: @sub-background-color;
+        padding: .44rem .4rem;
+        border: 1px solid @border-color-base;
+        .reimburseInfoCol1 {
+            height: .66rem;
+            border-bottom: 1px solid @border-color-base;
+            font-size: .32rem;
+            .trip {
+                float: left;
+                .tripIcon {
+                    display: inline-block;
+                    width: .28rem;
+                    height: .28rem;
+                    transform: translateY(2px);
+                    background: url(~themes/default/img/reimburse/reimburseDetail/icon_round_trip.png) no-repeat;
+                    background-size: 100%;
+                }
+            }
+            .pay {
+                float: right;
+            }
+        }
+        .reimburseInfoCol2 {
+            font-size: .3rem;
+            line-height: 0.3rem;
+            margin-top: 0.31rem;
+            .time {
+                float: left;
+            }
+            .airLine {
+                float: right;
+            }
+        }
+        .reimburseInfoCol3 {
+            font-size: .28rem;
+            margin-top: 0.24rem;
+        }
+    }
+}

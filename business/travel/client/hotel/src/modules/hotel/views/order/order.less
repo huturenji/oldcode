@@ -1,0 +1,1316 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.bbpxs {
+    .bbpx(1px, @border-color-base, 0.3rem, 0.3rem, solid);
+}
+.bbpxsr{
+    .bbpx(1px, @border-color-base, 0, 0.3rem, solid);
+}
+.bbpxd {
+    .bbpx(1px, @border-color-base, 0, 0, dashed);
+}
+.btpxs{
+    .btpx(1px, @border-color-base, 0.3rem, 0.3rem, solid);
+    &:before{
+        z-index: 1;
+    }
+}
+.protocols_part{
+    padding: .3rem .3rem 0 .3rem;
+}
+.lineOutWrap {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.32rem;
+    background: @sub-background-color;
+    padding: 0.25rem 0.3rem;
+    .label {
+        width: 1.7rem;
+    }
+    .content {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+}
+
+.orderRightWrap.weui-cell {
+    padding: 0 0.3rem ;
+    line-height: 0.8rem;
+    font-size: 0.32rem;
+    background: @sub-background-color;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    .weui-cell_access .weui-cell__ft:after {
+        display: none;
+    }
+
+    .weui-cell {
+        padding: 0.05rem 0;
+    }
+
+    .vux-cell-bd {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        color: @text-color;
+        font-size: 0.32rem;
+    }
+
+    .weui-cell__ft .weui-cell__ft {
+        color: @text-color;
+        padding-right: 0.28rem;
+        font-size: 0.32rem;
+        background: url(~assets/img/hotel/icon_right.png) no-repeat right;
+        background-size: 0.14rem 0.28rem;
+
+        .vux-cell-value {
+        color: @text-color;
+        }
+    }
+}
+
+.leftColor {
+    .form_input_title {
+        .flex-box();
+        .align-items(center);
+        color: @third-text-color;
+    }
+}
+
+.hotel_form {
+    margin-bottom: 0.2rem;
+    .form_input_title {
+        color: @third-text-color;
+    }
+}
+
+.rightButWrap {
+    padding: 0.2rem 0.3rem;
+    background: @sub-background-color;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    .text {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        color: @third-text-color;
+        font-size: 0.32rem;
+    }
+
+    .right {
+        text-align: center;
+        background: @theme-color;
+        color: @sub-background-color;
+        padding: 0.1rem;
+        font-size: 0.32rem;
+        border-radius: 0.06rem;
+    }
+}
+
+.roomUserSum {
+    position: relative;
+
+    .rightButton {
+        width: 0.64rem;
+        height: 0.6rem;
+        position: absolute;
+        right: 0.3rem;
+        top: 50%;
+        margin-top: -0.3rem;
+        background: url(~assets/img/hotel/icon_contact.png) no-repeat right;
+        background-size: 0.31rem 0.36rem;
+
+    }
+
+    .user-rightButton {
+        width: 0.64rem;
+        height: 0.6rem;
+        position: absolute;
+        right: 0.3rem;
+        top: 50%;
+        margin-top: -0.3rem;
+        background: url(~assets/img/hotel/icon_customer.png) no-repeat right;
+        background-size: 60%;
+    }
+
+    .form_input {
+        // padding-right: 0.64rem;
+    }
+}
+
+.phone {
+    margin-bottom: 0.2rem;
+    position: relative;
+    font-size: 0.32rem;
+
+    .rightButton {
+        width: 1rem;
+        height: 0.8rem;
+        font-size: 0.44rem;
+        .flex-box();
+        .align-items(center);
+        .justify-content();
+    }
+
+    .form_input {
+        padding-right: 0.64rem;
+    }
+}
+
+.tab .pd3.tipsTit,.tab .pd3.time {
+    padding: 0.2rem 0.3rem !important;
+    .panel-box_attend .panel-box_title {
+        padding-top: 0 !important;
+    }
+
+    &.panel .panel-box_time{
+        flex: none;
+        width: 0.7rem;
+    }
+    &.panel .panel-box_attend .panel-box_title{
+        white-space: normal;
+        line-height: 0.36rem;
+    }
+}
+
+.tab .pd3.tipsTit {
+     margin-top: 0.3rem;
+}
+
+.tab .panel.time .box_select {
+     padding: 0 !important;
+}
+
+.paddportType {
+    .weui-cell {
+        padding: 0 !important;
+    }
+
+    .weui-cell_access .weui-cell__ft:after {
+        display: none;
+    }
+
+    .weui-cell__ft .weui-cell__ft {
+        color: @text-color;
+        padding-right: 0.28rem;
+        font-size: 0.32rem;
+        background: url(~assets/img/hotel/icon_right.png) no-repeat right;
+        background-size: 0.14rem 0.28rem;
+
+        .vux-cell-value {
+        color: @text-color;
+        }
+    }
+}
+
+.rightBut {
+    background: url('~assets/img/hotel/icon_right_o.png') no-repeat right;
+    background-size: 0.13rem 0.22rem;
+    .vux-cell-value {
+        display: none;
+    }
+
+    .weui-cell_access {
+        .weui-cell__ft {
+        height: 0.4rem;
+        width: 0.6rem;
+        }
+    }
+}
+
+.bottomText {
+    padding: 0.15rem 0.3rem 0;
+    color: @third-text-color;
+    font-size: 0.26rem;
+
+    span {
+        color: @danger-color;
+    }
+}
+
+.bottomTit {
+    padding: 0.25rem 0.3rem 0;
+    color: @third-text-color;
+    font-size: 0.28rem;
+
+}
+
+.sumWrap {
+    padding: 0.2rem 0.3rem 0.3rem 0.3rem;
+
+    .titTextWrap {
+        text-align: right;
+        padding-right: 0.3rem;
+        background: url(~assets/img/hotel/icon_down.png) no-repeat right;
+        background-size: 0.25rem 0.12rem;
+
+        .tit {
+        font-size: 0.32rem;
+        color: @text-color;
+
+        span {
+            color: @warning-color;
+            font-size: 0.36rem;
+
+            i {
+            font-size: 0.24rem;
+            font-style: normal;
+            padding-right: 0.05rem;
+            }
+        }
+        }
+
+        .text {
+        font-size: 0.28rem;
+        color: @third-text-color;
+        }
+    }
+
+    .titTextWrap.up {
+        background: url(~assets/img/hotel/icon_up2.png) no-repeat right;
+        background-size: 0.25rem 0.12rem;
+    }
+}
+
+.bottombuttonWrap {
+    margin: 0;
+
+    .subButton {
+        text-align: center;
+        color: @sub-background-color;
+        line-height: 1.1rem;
+        background:linear-gradient(137deg,rgba(246,101,101,1) 0%,rgba(240,73,73,1) 100%);
+        border-radius: 0rem;
+        cursor: pointer;
+    }
+}
+
+.lineTextWrap {
+    padding: 0.3rem;
+    background: @sub-background-color;
+
+    .tit {
+        color: @text-color;
+        font-size: 0.32rem;
+    }
+
+    .tips {
+        margin-top: 0.2rem;
+        color: @danger-color;
+        font-size: 0.28rem;
+        padding-left: 0.4rem;
+        background: url(~assets/img/hotel/icon_tips.png) no-repeat left top 0.05rem;
+        background-size: 0.32rem;
+    }
+}
+
+.lineTextWrap.noflex {
+    display: inline-block;
+}
+
+.vux-popup-dialog.payType {
+    width: auto;
+    right: 0;
+}
+
+.payType {
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding: 0.3rem;
+
+    .content {
+        width: auto;
+        padding: 0;
+        background: @sub-background-color;
+        border-radius: .1rem;
+
+        div {
+        color: @theme-color;
+        font-size: .32rem;
+        line-height: .99rem;
+        text-align: center;
+        }
+    }
+
+    .content>div:last-child:after {
+        display: none;
+    }
+
+    .footer {
+        width: auto;
+        font-size: .32rem;
+        line-height: .9rem;
+        margin-top: .3rem;
+        border-radius: .1rem;
+        background: @sub-background-color;
+        text-align: center;
+    }
+}
+
+.subing:before {
+    content: '';
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    vertical-align: middle;
+    background: url(~assets/img/hotel/icon_subing.png) no-repeat center;
+    background-size: 0.42rem;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.buttonWrap {
+    margin: 0.6rem 0.3rem;
+
+    .weui-btn {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: border-box;
+        font-size: 0.32rem;
+        text-align: center;
+        text-decoration: none;
+        color: @sub-background-color;
+        line-height: 0.84rem;
+        border-radius: 0.05rem;
+        overflow: hidden;
+        font-family: "微软雅黑";
+    }
+}
+
+.tab {
+    .tabtit {
+        font-size: 0.3rem;
+        color: @text-color;
+        font-weight: bold;
+        background: @sub-background-color;
+        padding: 0.3rem;
+    }
+
+    .pd3 {
+        padding: 0 .3rem;
+    }
+
+    .bdbtm {
+        border-bottom: 1px solid @border-color-base;
+    }
+
+    .panel {
+        background: @sub-background-color; //margin-bottom: .1rem;
+
+        .panel_flex {
+        padding: .3rem 0;
+
+        .form_select {
+            text-align: left;
+        }
+
+        .form_input {
+            text-align: left;
+        }
+        }
+        .line_top{
+            .btpx(1px,@border-color-base, 0,0);
+        }
+        .panel-box {
+        /*padding: .1rem;*/
+        position: relative;
+        }
+
+        .box_select {
+        padding: .3rem 0;
+
+        .box_select_success {
+            color: @success-color;
+        }
+        
+        .box_select_third {
+            color: @third-text-color;
+        }
+
+        .box_select_warn {
+            color: @danger-color-light;
+        }
+        }
+
+        .panel-box_attend {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-size: .32rem;
+        }
+
+        .panel-box_hd {
+            margin-right: .1rem;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+        }
+
+        .panel-box_bd {
+            flex: 1;
+            min-width: 0;
+
+            .name {
+            font-size: 0.32rem;
+            font-weight: 500;
+            }
+
+            .address {
+            font-size: .30rem;
+            padding-top: 0;
+            }
+
+            h4 {
+            span {
+                margin-left: .15rem;
+                font-size: .25rem;
+            }
+
+            i {
+                font-size: .24rem;
+                color: @danger-color;
+                font-style: initial;
+                border: 1px solid @danger-color;
+                margin-left: .15rem;
+                padding: .01rem .06rem;
+            }
+            }
+
+            .box_commit {
+            color: @theme-color;
+            padding-top: 0.03rem;
+            text-align: right;
+            }
+
+            .order_price {
+            text-align: right;
+            font-size: .35rem;
+
+            .re_price {
+                font-size: .25rem;
+                color: @danger-color;
+            }
+
+            .price {
+                color: @danger-color;
+            }
+            }
+
+            .submit_btn {
+            text-align: center;
+            background: @theme-color;
+            color: @sub-background-color;
+            margin: .3rem .5rem;
+            padding: .2rem;
+            border-radius: .1rem;
+            }
+        }
+
+        .panel-box_img {
+            width: 80%;
+            max-height: 100%;
+            vertical-align: middle;
+            border-radius: .06rem;
+        }
+
+        .panel-box_title {
+            font-weight: 400;
+            width: auto;
+            font-size: .25rem;
+            /*overflow: hidden;*/
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: break-word;
+            word-break: break-all;
+            padding-top: .1rem;
+
+            .rate {
+            color: @warning-color-light;
+            font-weight: 600;
+            }
+
+            .comment {
+            margin-left: .2rem;
+            }
+
+            .box_title_img {
+            width: .3rem;
+            }
+
+            .icon {
+            font-size: .25rem;
+
+            img {
+                width: .24rem;
+                margin-left: .1rem;
+                margin-right: .06rem;
+            }
+
+            &:first-child {
+                img {
+                margin-left: 0;
+                }
+            }
+            }
+        }
+
+        .panel-box_money {
+            text-align: right;
+            margin-right: .12rem;
+            font-size: .36rem;
+            color: @danger-color;
+        }
+        }
+
+        .panel-box_desc {
+        color: @third-text-color;
+        font-size: .25rem;
+        line-height: 1.2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        }
+
+        .panel-box_time {
+        flex: 1;
+        -webkit-flex: 1;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        }
+
+        .box_time {
+        padding-top: 0.2rem;
+        }
+
+        .box_icon {
+            font-size: 0.44rem;
+            color: @theme-color;
+        }
+    }
+}
+.reimburseTitWrap{
+    .flex-box();
+    .align-items();
+    padding: 0.3rem 0.3rem 0.3rem 0;
+    .leftWrap{
+        .flex(1);
+        .tit{
+            font-size: 0.3rem;
+            font-weight: bold;
+            color: @text-color;
+            margin-bottom: 0.1rem;
+        }
+        .tip{
+            font-size: 0.26rem;
+            color: @third-text-color;
+            &.red{
+                color: @danger-color-light;
+            }
+        }
+    }
+    .orderRightWrap{
+        .sn-switch-on{
+            background-color: @theme-color;
+        }
+    }
+}
+
+.confirmPay {
+    background: @sub-background-color  !important;
+    text-align: center;
+
+    .title {
+        text-align: center;
+        height: .92rem;
+        font-size: .38rem;
+        line-height: .88rem;
+    }
+
+    .tips {
+        background: url(~assets/img/hotel/icon_warning.png) no-repeat center top 1.39rem;
+        background-size: 1.2rem;
+        color: @third-text-color;
+        font-size: 0.28rem;
+        padding: 2.95rem 0.3rem 1.2rem 0.3rem;
+        text-align: center;
+    }
+
+    .content {
+        width: 94%;
+        border-radius: .1rem;
+
+        div {
+        padding: 1% 4%;
+        border-top: 1px solid @border-color-base;
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+        color: @text-color;
+        height: .92rem;
+        font-size: .34rem;
+        line-height: .88rem;
+
+        span:first-child {
+            color: @third-text-color;
+        }
+        }
+    }
+
+    .footer {
+        display: block;
+        color: @sub-background-color;
+        font-size: .34rem;
+        line-height: .9rem;
+        margin: .3rem;
+        border-radius: .1rem;
+        background: @theme-color;
+        text-align: center;
+    }
+}
+
+.reimburse {
+    background: @sub-background-color;
+    padding: 0 0 0 .3rem;
+
+    .group {
+        padding-right: 0.3rem;
+        background: @sub-background-color;
+
+        .vux-no-group-title:before {
+        border: 0
+        }
+
+        .weui-cells {
+        margin: 0;
+        padding: 0;
+        }
+
+        .weui-cells:before {
+        border: 0 !important;
+        }
+
+        .weui-cells:after {
+        border: 0 !important;
+        }
+    }
+
+    .tip {
+        font-size: .28rem;
+        color: @third-text-color;
+        padding: .1rem 0.3rem .1rem 0;
+    }
+
+    .reimDetail {
+        .list {
+        padding: .3rem 0;
+        display: flex;
+        align-items: center;
+        font-size: 0.28rem;
+        .title {
+            width: 1.7rem;
+            color: @third-text-color;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-right: 0.3rem;
+            margin-left: 0.1rem;
+
+            .text {
+            flex: 1;
+            }
+
+            .text.placeholder {
+            color: @third-text-color;
+            }
+
+            .right {
+            width: 0.4rem;
+            height: .16rem;
+            background: url('~assets/img/hotel/icon_right_o.png') no-repeat right;
+            background-size: 0.13rem 0.22rem;
+            }
+            
+            .arrow {
+            width: 0.6rem;
+            height: 0.6rem;
+            background: url('~assets/img/hotel/btn_common_checkbox_nor@3x.png') no-repeat right;
+            background-size: 0.38rem 0.38rem;
+            &.active {
+                background: url('~assets/img/hotel/btn_common_checkbox_sel2@3x.png') no-repeat right;
+                background-size: 0.38rem 0.38rem;
+            }
+            }
+        }
+        }
+    }
+}
+
+.roomNumWrap {
+    padding: 0.3rem 0 0 0.3rem;
+    font-size: 0;
+
+    .roomItem {
+        display: inline-block;
+        line-height: 0.48rem;
+        color: @third-text-color;
+        width: 1.2rem;
+        text-align: center;
+        margin-right: 0.25rem;
+        margin-bottom: 0.3rem;
+        background: @sub-background-color;
+        border-radius: 0.48rem;
+        font-size: 0.26rem;
+        &:last-child{
+            margin-right: 0;
+        }		
+    }
+
+    .roomItem.active {
+        color: @sub-background-color;
+        background: @theme-color;
+    }
+}
+
+.downWrap {
+    padding: 0 0.3rem;
+    line-height: 0.9rem;
+    background: @sub-background-color;
+    font-size: 0.28rem;
+    color: @third-text-color;
+    .align-items(center);
+    .flex-box();
+
+    .text {
+        width: 1.7rem;
+    }
+
+    .middle {
+        margin-left: 0.1rem;
+        .flex(1);
+        color: @text-color;
+    }
+    .downWrapIcon{
+        fill:@placeholder-color;
+    }
+}
+
+.roomUserSumWrap {
+    .flex-box();
+    background: @sub-background-color;
+    font-size: 0.32rem;
+    .align-items(center);
+
+    .left {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        .bbpxs:last-child:after{
+            display: none;
+        }
+    }
+
+    .right {
+        width: 1rem;
+        height: 0.8rem;
+        font-size: 0.44rem;
+        .flex-box();
+        .align-items(center);
+        .justify-content();
+    }
+
+    &.mb20 {
+        margin-bottom: 0.2rem;
+    }
+    .circle{
+        fill:@third-text-color;
+    }
+    .useradd{
+        fill:@secondary-text-color;
+    }
+}
+
+.tab .notabborder .bdbtm,.tab .notabborder {
+    border-bottom: none;
+}
+
+.orderBottomButWrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: @sub-background-color;
+    box-shadow: 0px 0.06rem 0.2rem 0px rgba(101, 112, 242, 0.12);
+    z-index: 502;
+
+    &.buttWrap {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        .justify-content(space-between);
+        .align-items(center);
+
+        .left {
+        width: 139px;
+        padding-left: 0.3rem;
+
+        .leftText {
+            color:@danger-color-light;
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+            .rmb{
+                font-size: 14px;
+                padding-left: 0;
+            }
+        }
+        .lineH{
+            display: inline-block;
+            height: .2rem;
+            width: .01rem;
+            background: #c2c2c2;
+        }
+        .leftTps {
+            // color: @third-text-color;
+            color: @text-color;
+            font-size: 12px;
+            display: inline-block;
+            span {
+            color: @text-color;
+            }
+        }
+        }
+
+        .middle {
+            .flex(1);
+            .align-items(center);
+            color: @third-text-color;
+            font-size: 0.24rem;
+            // line-height: 1.1rem;
+            cursor: pointer;
+            text-align: right;
+            padding-right: 0.31rem;
+            span {
+                .flex(1);
+                .align-items(center);
+
+            }
+            .downWrapIcon{
+                fill:@placeholder-color;
+            }
+        }
+
+        .right {
+        width: 150px;
+        background: @theme-color;
+        color: @sub-background-color;
+        font-size: 0.32rem;
+        text-align: center;
+        line-height: 1.1rem;
+        cursor: pointer;
+        }
+    }
+}
+
+.outWrapHotel {
+    position: relative;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    .orderCardWrap{
+        position: relative;
+        z-index: 1;
+    }
+    .topbgOutWrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3.6rem;
+        overflow: hidden;
+        .topbgWrap{
+            background: url(~themesDefault/bg/bg_hotel_banner2@2x.png) no-repeat top;
+            background-size: 100% auto;
+            position: absolute;
+            top: 0;
+            left: -0.3rem;
+            right: -0.3rem;
+            height: 3.6rem;
+            filter: blur(0.02rem);
+            .topbgitem{
+                height: 3.6rem;
+                background: linear-gradient(180deg, rgba(38, 45, 217, 0) 0%, #fff 100%);
+                
+            }
+        }
+
+    }
+
+}
+.showPadding{
+    padding-top: 1.22rem;
+}
+.child-view {
+    overflow-y: auto;
+}
+.hotelPriceDetail,.hotelPriceDetailWrap {
+    z-index: 502;
+}
+.hotelPriceDetailWrap .vux-popup-dialog {
+    bottom: 1.1rem;
+}
+.hotelPriceDetailWrap.v-transfer-dom .vux-popup-dialog {
+    z-index: 502;
+}
+
+.v-transfer-dom .vux-popup-dialog {
+    z-index: 502;
+}
+
+.vux-flexbox .vux-flexbox-item:first-child {
+    flex: 0 0 auto !important;
+    width: 1.7rem;
+}
+.orderProgress {
+    background: @sub-background-color;
+    .header {
+        background: url('~assets/img/hotel/hotel_ordering.png') no-repeat center;
+        background-size: 100% 100%;
+        min-height: 1.2rem;
+    }
+    .main {
+        text-align: left;
+        margin: .22rem 0.4rem .4rem 0.4rem;
+
+        .hotelDetailNew {
+        background: @sub-background-color;
+        margin: 0;
+
+        .name {
+            font-size: 0.36rem;
+            font-weight: bold;
+            line-height: 0.5rem;
+        }
+
+        .room {
+            .flex-box();
+            .align-items(center);
+            font-size: 0.26rem;
+            line-height: 0.4rem;
+            padding-top: 0.08rem;
+            padding-bottom: 0.4rem;
+            color: @third-text-color;
+            .clamation-circle{
+                fill:@third-text-color;
+                margin-right: 0.1rem;
+            }
+        }
+
+        .date {
+            .flex-box();
+            .align-items(center);
+            font-size: 0.26rem;
+            line-height: 0.36rem;
+            padding-top: 0.12rem;
+
+            .common_calendar{
+                fill:@text-color;
+                margin-right: 0.1rem;
+            }
+        }
+
+        .price {
+            background: @background-color;
+            border-radius: .1rem;
+            padding: .2rem;
+
+            .No {
+            color: @warning-color-light;
+            }
+
+            div {
+            display: inline-block;
+            width: 32%;
+            text-align: center;
+
+            span {
+                color: @text-color;
+            }
+            }
+        }
+        }
+
+        .passenger {
+            text-align: left;
+            padding: .2rem;
+            color: @third-text-color;
+            background: @share-background-color;
+        .names {
+            color: @text-color;
+            padding: 0 .1rem;
+        }
+        }
+    }
+
+    .bottom {
+        height: .8rem;
+        position: relative;
+
+        .bottom_tips {
+            font-size: .26rem;
+            z-index: 100;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            line-height: .8rem;
+            text-align: center;
+        }
+
+        .progress {
+            background: @ordering-background;
+            width: 0%;
+            height: .8rem;
+            position: relative;
+        }
+
+    }
+}
+
+.inline-loading {
+    vertical-align: middle;
+    display: inline-block;
+    color: @placeholder-color;
+    font-size: 14px;
+
+    .info_none_text_warp {
+        height: auto !important;
+
+        .info_none_text {
+        margin-top: 0;
+        }
+    }
+}
+
+.payTypeNameRule {
+    top: 0;
+
+    .bg {
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 500;
+    }
+
+    .title {
+        color: @text-color;
+        font-size: 18px;
+    }
+
+    .textcontent {
+        .flex-box();
+        .align-items(center);
+        .justify-content(center);
+        position: fixed;
+        z-index: 555;
+        width: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: .1rem;
+        overflow: auto;
+
+        div {
+        background: @sub-background-color;
+        margin: 0 35px;
+        line-height: .99rem;
+        border-radius: .1rem;
+        }
+
+        .title {
+        text-align: center;
+        }
+
+        .desc {
+        color: @text-color;
+        border-bottom: 1px solid @background-color;
+        line-height: 30px;
+        font-size: 16px;
+        }
+
+        .footer {
+        background: @sub-background-color;
+        z-index: 555;
+        color: @theme-color;
+        font-size: 16px;
+        border-radius: .1rem;
+        text-align: center;
+        }
+    }
+}
+
+.progressDia{
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .hotelMask{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 502;
+    }
+    .hotelDetailDialog{
+        width: 86%;
+        max-width: 460px;
+        border-radius: 16px;
+        z-index: 502;
+        pointer-events:all;
+        display: block;
+        position: initial;
+        border-radius: 0.2rem;
+        background-color: #FFFFFF;
+        overflow: hidden;
+        text-align: center;
+    }
+} 
+
+.vux-popup-dialog.orderProgressPopup{
+    transition:none;
+}
+.group {
+    background: @third-text-color;
+
+    .vux-x-switch {
+        padding: 0
+    }
+
+    .weui-switch:checked {
+        border-color: @theme-color;
+        background-color: @theme-color;
+    }
+
+    .weui-switch:before {
+        width: 40px;
+        height: 20px;
+    }
+
+    .weui-switch {
+        width: 42px;
+        height: 22px;
+    }
+
+    .weui-switch::after {
+        width: 19px;
+        height: 19px;
+    }
+
+    .vux-no-group-title {
+        padding: 0 !important;
+    }
+
+    .weui-cell {
+        padding: 10px 0 !important;
+        ;
+    }
+
+    .weui-cells {
+        margin: 0;
+        padding: 0;
+    }
+
+    .weui-cells:before {
+        border: 0 !important;
+    }
+
+    .weui-cells:after {
+        border: 0 !important;
+    }
+}
+
+.v-transfer-dom .vux-popup-dialog {
+    z-index: 503;
+}
+
+.reimDetail {
+    .vux-no-group-title {
+        padding: 0 !important;
+    }
+
+    .weui-cell {
+        padding: 10px 0 !important;
+        ;
+    }
+}
+.vux-popup-dialog .weui-cells_radio .weui-check:checked + .weui-icon-checked:before{
+    color: @theme-color;
+}

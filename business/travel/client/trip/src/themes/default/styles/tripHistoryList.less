@@ -1,0 +1,100 @@
+
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+
+
+*{
+    box-sizing: border-box;
+}
+.noContent{
+    margin-top: 2rem;
+}
+//历史行程特殊样式处理
+.his{
+    margin-top:1.28rem; 
+    padding: 0 0.3rem;
+    .tripList .title{
+        color: @disable-color;
+    }
+    .position{
+        color: @disable-color;
+        &.flowId {
+            .position-title{
+                color: @disable-color;
+            }
+            span{
+                color: @disable-color;
+                
+            }
+        }
+        span{
+            color: @disable-color;
+        }
+    }
+    .date{
+        color: @disable-color;
+    }
+    .tripList .trip-card-list .list .type .card-date{
+        .left{
+            color: @disable-color;
+            &::before{
+                background-color: @disable-color;
+            }
+        }
+        color: @disable-color;
+    }
+
+}
+
+
+@media screen and (min-width: @screen-lg) {
+    .filter-title{
+        left: calc(~'(100vw - 960px) / 2') !important;
+    }
+}
+.filter-title{
+    &.active{
+        border-bottom: 1px solid @border-color-base;
+        background-color: #fff;
+        p{
+            color: @theme-color;
+            .icon_filter_screen{
+                fill: @theme-color;
+            }
+        }
+    }
+    cursor: pointer;
+    padding: 0.3rem;
+    background-color: @background-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 960px;
+    z-index: 495;
+   
+    p{
+        width: 100%;
+        border-radius: .2rem;
+        height: 0.68rem;
+        background-color: #fff;
+        color: @text-color;
+        font-size: 0.28rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon_filter_screen{
+            fill: @text-color;
+            margin-right: .08rem;
+        }
+    }
+    &:active{
+        opacity: .8;
+    }
+    
+}
+.vux-popup-dialog.vux-popup-top.filter_class{
+    top:1.26rem;
+    z-index: 495;
+}

@@ -1,0 +1,201 @@
+@charset "utf-8";
+@import "~themes/default/styles/common/index.less";
+/*处理chrome在输入框自动添加的黄色背景*/
+:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+body, html {
+  width: 100%;
+}
+
+body {
+  font-family: 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '宋体', Tahoma, Arial, Helvetica, STHeiti, sans-serif;
+  background: #F4F4F4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: lighter;
+}
+
+ul, ul li {
+  list-style-type: none;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+a, a:active, a:hover {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+img {
+  border: none;
+}
+
+b, strong {
+  font-weight: normal;
+}
+
+em, i {
+  font-style: normal;
+}
+
+u, del {
+  text-decoration: none;
+}
+
+input, textarea {
+  font-family: 'Hiragino Sans GB', 'Microsoft Yahei', '宋体', Tahoma, Arial, Helvetica, STHeiti, sans-serif;
+  width: 100%;
+  padding: 0;
+  outline: none;
+  border: none;
+  -webkit-touch-callout: initial; /* iOS Safari */
+  -webkit-user-select: initial; /* Chrome/Safari/Opera */
+  -khtml-user-select: initial; /* Konqueror */
+  -moz-user-select: initial; /* Firefox */
+  -ms-user-select: initial; /* Internet Explorer/Edge */
+  user-select: initial;
+}
+
+textarea {
+  resize: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  line-height: 0;
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.nowrap{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.border-box {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.flex-box {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex(@value:1) {
+  -webkit-box-flex: @value;
+  -moz-box-flex: @value;
+  -webkit-flex: @value;
+  -ms-flex: @value;
+  -o-flex: @value;
+  flex: @value;
+}
+
+.flex-flow(@row:row, @nowrap:nowrap) {
+  -moz-box-flex-flow: @arguments;
+  -webkit-flex-flow: @arguments;
+  -ms-flex-flow: @arguments;
+  -o-flex-flow: @arguments;
+  flex-flow: @arguments;
+}
+
+.justify-content(@value:center) {
+  -webkit-box-pack: @value;
+  -webkit-justify-content: @value;
+  -moz-justify-content: @value;
+  -ms-justify-content: @value;
+  -o-justify-content: @value;
+  justify-content: @value;
+}
+
+.align-items(@value:center) {
+  -ms-flex-align: @value;
+  -webkit-align-items: @value;
+  -moz-align-items: @value;
+  align-items: @value;
+}
+
+.flex-wrap(@value:nowrap) {
+  -ms-flex-wrap: @value;
+  -webkit-flex-wrap: @value;
+  -moz-flex-wrap: @value;
+  flex-wrap: @value;
+}
+
+@media screen and (min-width: @screen-sm) {
+  /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    border-radius: 10px;
+  }
+
+  /*定义滚动条的轨道，内阴影及圆角*/
+  ::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  /*定义滑块，内阴影及圆角*/
+  ::-webkit-scrollbar-thumb {
+    width: 7px;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #cccccc;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #969696;
+  }
+}
+
+/*pc放开文本选择复制功能*/
+@media screen and (min-width: 616px) {
+  * {
+    -webkit-touch-callout: text; /* iOS Safari */
+    -webkit-user-select: text; /* Chrome/Safari/Opera */
+    -khtml-user-select: text; /* Konqueror */
+    -moz-user-select: text; /* Firefox */
+    -ms-user-select: text; /* Internet Explorer/Edge */
+    user-select: text;
+  }
+}
+

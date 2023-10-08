@@ -1,0 +1,33 @@
+<svg id="icon_hotel_twinbed" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #737fa1;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: 0.32;
+      }
+
+      .cls-3 {
+        stroke: #737fa1;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <rect id="矩形_1093" data-name="矩形 1093" class="cls-1" x="2.5" y="7" width="11" height="20"/>
+  <rect id="矩形_1093_拷贝_3" data-name="矩形 1093 拷贝 3" class="cls-2" x="4.5" y="7" width="7" height="18"/>
+  <rect id="矩形_1093_拷贝_2" data-name="矩形 1093 拷贝 2" class="cls-3" x="1.5" y="11" width="13" height="13"/>
+  <rect id="矩形_1093_拷贝" data-name="矩形 1093 拷贝" class="cls-1" x="1.5" y="3" width="13" height="4" rx="1" ry="1"/>
+  <rect id="矩形_1108" data-name="矩形 1108" class="cls-4" x="5.5" y="6" width="5" height="4" rx="2" ry="2"/>
+  <rect id="矩形_1093_拷贝_4" data-name="矩形 1093 拷贝 4" class="cls-1" x="17.5" y="7" width="11" height="20"/>
+  <rect id="矩形_1093_拷贝_4-2" data-name="矩形 1093 拷贝 4" class="cls-2" x="19.5" y="7" width="7" height="18"/>
+  <rect id="矩形_1093_拷贝_4-3" data-name="矩形 1093 拷贝 4" class="cls-1" x="16.5" y="11" width="13" height="13"/>
+  <rect id="矩形_1093_拷贝_4-4" data-name="矩形 1093 拷贝 4" class="cls-1" x="16.5" y="3" width="13" height="4" rx="1" ry="1"/>
+  <rect id="矩形_1108_拷贝_2" data-name="矩形 1108 拷贝 2" class="cls-4" x="20.5" y="6" width="5" height="4" rx="2" ry="2"/>
+</svg>

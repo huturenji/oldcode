@@ -1,0 +1,26 @@
+@import '~themes/default/styles/common/index.less';
+.cabinListLable {
+    display: flex;
+    justify-content: space-between;
+
+    .mainLable {
+        padding: 0.2rem;
+        flex: 4 1 auto;
+        text-align: center;
+    }
+
+    .box {
+        padding: 0.2rem;
+        flex: 1 1 0.4rem;
+        .icon{
+            fill: @theme-color;
+        }
+    }
+
+    .selected {
+        background-image: url(~assets/img/common/icon_choosed.png);
+        height: 0.32rem;
+        width: 0.32rem;
+        background-size: 100%;
+    }
+}

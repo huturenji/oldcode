@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>h5 svg/icon/train/seat_d_sel@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="91.0001677%" y1="13.875%" x2="50%" y2="86.125%" id="linearGradient-1">
+            <stop stop-color="#FFD487" offset="0%"></stop>
+            <stop stop-color="#F2820B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="91.0001677%" y1="27.7777778%" x2="50%" y2="72.2222222%" id="linearGradient-2">
+            <stop stop-color="#FFD487" offset="0%"></stop>
+            <stop stop-color="#F49939" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="h5-svg/icon/train/seat_d_sel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-3" transform="translate(0.846154, 0.846154)">
+            <rect id="矩形" fill="url(#linearGradient-1)" x="1.69230769" y="0" width="16.9230769" height="14.3846154"></rect>
+            <path d="M20.3076923,19.4615385 C20.3076923,19.9288563 19.9288563,20.3076923 19.4615385,20.3076923 L0.846153846,20.3076923 C0.378835981,20.3076923 1.02740309e-15,19.9288563 0,19.4615385 L0,7.81065089 C0,7.23549044 0.454603177,6.76923077 1.01538462,6.76923077 L3.04615385,6.76923077 C3.60693528,6.76923077 4.06153846,7.23549044 4.06153846,7.81065089 L4.061,13.8632308 L16.246,13.8632308 L16.2461538,7.61538462 C16.2461538,7.14806675 16.6249898,6.76923077 17.0923077,6.76923077 L19.4615385,6.76923077 C19.9288563,6.76923077 20.3076923,7.14806675 20.3076923,7.61538462 L20.3076923,19.4615385 Z" id="形状结合" fill="url(#linearGradient-2)"></path>
+        </g>
+        <text id="D" font-family="PingFangSC-Regular, PingFang SC" font-size="9.30769231" font-weight="normal" fill="#FFFFFF">
+            <tspan x="8.03846154" y="10.8461538">D</tspan>
+        </text>
+    </g>
+</svg>

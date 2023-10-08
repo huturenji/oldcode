@@ -1,0 +1,133 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+div,p,ul,li,span{
+	box-sizing: border-box;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.regression_box{
+	color: @text-color;
+	font-size: 0.32rem;
+	i{
+		font-style: normal;
+	}
+	.amount_all{
+		padding:0.6rem 0 0.4rem;
+		display: flex;
+		flex-direction:column;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		// height: 0.92rem;
+		color: #999999;
+		background-color: @sub-background-color;
+		.amount_all_total{
+			color: #FF4E3A;
+			font-size: .4rem;
+			font-weight: 650;
+			.fs68{font-size: .68rem;}
+		}
+	}
+	.item_box{
+		margin-top: 0.43rem;
+	
+		.item_box_title{
+			font-weight:620;
+			padding: 0 0.3rem;
+			margin-bottom: 0.15rem;
+		}
+		.temp_box{		
+			background-color: @sub-background-color;
+			margin: 0 .3rem;
+			border-radius: .2rem;
+			.temp_title{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				i{
+					display:inline-block;
+					width: 0.38rem;
+					height: 0.38rem;
+					text-align: center;
+					line-height: 0.38rem;
+					background-color: @warning-color-light;
+					border-radius:0.06rem; 
+					color: @sub-background-color;
+					font-size: 0.28rem;
+					margin-right: 0.16rem;
+				}
+				margin: 0 0.3rem;
+				height: 0.8rem;
+				line-height: 0.8rem;
+				border-bottom: 1px solid @border-color-base;   
+				span{padding-left: .1rem;}  
+			}
+			.temp_content{
+				padding: 0.17rem 0.3rem 0.4rem 0.3rem;
+				.temp_letters{
+					font-size:0.28rem;
+					// color:@third-text-color;
+					line-height:0.4rem;
+					margin-bottom: 0.3rem;
+				}
+				.temp_time{
+					font-size: .24rem;
+					color:#aaa;
+				}
+				.temp_option{
+					ul{
+						display: flex;
+						justify-content: center;
+						li{
+							text-align: center;
+							font-size: 0.28rem;
+							img{
+								width: 0.54rem;
+								height: 0.54rem;
+							}
+							.img_icon{
+								margin-bottom: 0.2rem;
+							}
+							.time{
+								color: @third-text-color;
+								margin-top: 0.15rem;
+							}
+							&:last-child{
+								margin-left: .8rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.img_icon_first{
+	position: relative;
+}
+.img_icon_first:after{
+	content:'';
+	width: 2rem;
+	border-bottom: 1px dashed @placeholder-color;
+	position: absolute;
+	top: 0.26rem;
+	left:2rem;
+}
+.red{
+	color: @danger-color;
+}
+.state_msg{
+	margin-top: 0.32rem;
+	font-size: 0.28rem;
+	color: @text-color;
+	background: url(~assets/img/compment/icon_tips_red.png) no-repeat left top transparent;
+	background-size: .35rem;
+	text-indent: .45rem;
+}

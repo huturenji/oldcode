@@ -1,0 +1,69 @@
+.my_coupon_content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .88rem;
+
+    /deep/ .mescroll-downwarp .downwarp-progress, /deep/.mescroll-upwarp .upwarp-progress{
+        background: url('~themes/default/img/loading_gray.png') center no-repeat;
+        background-size: contain;
+        border: none;
+    }
+
+    .my_coupon_list {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        .my_coupon_pre {
+            width: 100%;
+            margin-top: .30rem;
+            position: relative;
+        }
+    }
+    
+    .no_data {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: calc((100vh - .90rem) * 0.32 - 1.28rem);
+        .imgWrap {
+            width: 2.56rem;
+            height: 2.56rem;
+            background: url('~themes/default/img/coupon/icon_defpage_zwyhq.png') center no-repeat;
+            background-size: 100%;
+        }
+    
+        .text {
+            font-size: .28rem;
+            font-weight: 400;
+            color: #999;
+            margin: 0rem 0 .48rem;
+        }
+    
+        .go_coupon_center {
+            width: 2.28rem;
+            height: .64rem;
+            background: #f30300;
+            border-radius: .32rem;
+            font-size: .28rem;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            line-height: .64rem;
+        }
+    }
+}
+
+.history_entry{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    font-size: .3rem;
+    background-color: #fff;
+    cursor: pointer;
+}

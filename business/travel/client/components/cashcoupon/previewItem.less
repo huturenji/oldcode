@@ -1,0 +1,270 @@
+
+.coupon_item {
+    position: relative;
+    height: 100%;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: stretch;
+    border-radius: .16rem;
+    overflow: hidden;
+
+    .coupon_pre_left {
+        display: flex;
+        flex-direction: column;
+        width: 1.92rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0 .08rem;
+        color: #f30300;
+        background: #fff;
+        &.grey{
+            color: #a7a7a7;
+        }
+
+        .coupon_pre_price {
+            margin-top: .19rem;
+            font-size: .28rem;
+            font-weight: bold;
+            line-height: .34rem;
+            white-space: nowrap;
+
+            .text:nth-child(2) {
+                font-size: .56rem;
+                font-weight: bold;
+            }
+        }
+
+        .coupon_pre_active {
+            font-size: .24rem;
+            font-weight: 500;
+            line-height: 100%;
+            margin-top: .18rem;
+            text-align: center;
+        }
+
+        .grey {
+            color: #333333;
+
+            .price_int {
+                color: #333333 !important;
+            }
+        }
+
+        .grey_con {
+            color: #999999;
+        }
+    }
+
+    .coupon_pre_cen {
+        display: felx;
+        flex-direction: column;
+        flex: 1;
+        padding: .22rem 0rem .22rem .10rem;
+        color: #222222;
+        background: #fff;
+        &.grey{
+            color: rgba(34,34,34,0.4);
+        }
+
+        .coupon_pre_title {
+            min-height: .72rem;
+            line-height: .36rem;
+            font-size: .28rem;
+            font-weight: bold;
+            color: #222222;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            word-break: break-all;
+            -webkit-box-orient: vertical;
+        }
+
+        .coupon_pre_time {
+            font-size: .22rem;
+            line-height: .32rem;
+            margin: .10rem 0 .02rem;
+            word-break: break-all;
+            div{
+                display: inline-block;
+            }
+        }
+
+        .coupon_pre_rules {
+            display: flex;
+            align-items: center;
+            line-height: .32rem;
+            font-size: .22rem;
+
+            .text {
+                line-height: .31rem;
+                font-size: .24rem;
+                font-weight: 500;
+                color: #999999;
+            }
+
+            .triangle {
+                width: .24rem;
+                height: .24rem;
+                margin-left: .08rem;
+                background: url('./img/btn_common_downtriangle2@2x.png') center no-repeat;
+                background-size: contain;
+                cursor: pointer;
+                .isOpen{
+                    background: url('./img/uptriangle2@2x.png') center no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
+    .coupon_pre_right {
+        width: 1.76rem;
+        .coupon_right{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+        }
+        .haveNotUse{
+            padding: .28rem 0 .24rem 0;
+            align-items: center;
+            background: linear-gradient(152deg,#FF2929 4%, #FC1C1C 100%);
+            &>view:first-child{
+                font-size: .26rem;
+            }
+            &>view:nth-child(2){
+                padding: .04rem .22rem;
+                line-height: .20px;
+                background: #fff;
+                color: #f30300;
+                border-radius: .24rem;
+                font-weight: bold;
+            }
+
+            .content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                font-size: .26rem;
+                color: #fff;
+                .btn{
+                    padding: .04rem .22rem;
+                    background-color: #fff;
+                    color: #F30300;
+                    border-radius: .48rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        .haveUse{
+            background: #E8E8E8 url('./img/icon_yhq_yishiyong.svg') center no-repeat;
+            background-size: 1.6rem;
+        }
+        .haveExpired{
+            background: #E8E8E8 url('./img/icon_yhq_yiguoqi.svg') center no-repeat;
+            background-size: 1.6rem;
+        }
+        .disabled{
+            background: #E8E8E8 url('./img/icon_common_yishixiao.svg') center no-repeat;
+            background-size: 1.6rem;
+        }
+    }
+    .kacao{
+        width: .24rem;
+        background-size: .24rem 100%;
+        &.kacao1{
+            background-image: url('./img/bg_yhq_xuxian1.1.png');
+        }
+        &.kacao2{
+            background-image: url('./img/bg_yhq_xuxian3.2.png');
+        }
+        &.kacao3{
+            background-image: url('./img/bg_yhq_xuxian2.2.png');
+        }
+    }
+}
+
+.coupon_rules {
+    width: 100%;
+    padding: .36rem .24rem .20rem;
+    text-align: justify;
+    box-sizing: border-box;
+    font-size: .22rem;
+    font-weight: 500;
+    word-break: break-all;
+    color: #666666;
+    line-height: .30rem;
+    background: linear-gradient(180deg,#f7f7f7, #ffffff);
+    margin-top: -.16rem;
+    border-radius: 0 0 .16rem .16rem;
+
+    .coupon_rules_title {
+        margin: .16rem 0 0rem;
+    }
+    .coupon_type_text{
+        color: #222222;
+    }
+}
+
+.coupon_type.fontScaleIgnore {
+    width: 1.24rem;
+    height: .36rem;
+    line-height: .36rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFE8E8;
+    font-size: .20rem;
+    font-weight: 500;
+    color: #f30300;
+    text-align: center;
+    border-radius: .16rem 0px .20rem 0px;
+    &.grey_type {
+        background: #e8e8e8;
+        color: #a7a7a7;
+    }
+    &.suiji{
+        background: #ffefe2;
+        color: #fe8224;
+    }
+    &.zhekou{
+        background: #e8edff;
+        color: #2455fe;
+    }
+}
+
+.bussiness-type{
+    border-radius: .2rem .2rem 0 0;
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        font-size: .26rem;
+        background-color: #fff;
+        li{
+            height: .88rem;
+            line-height: .88rem;
+            text-align: center;
+            font-size: .3rem;
+            cursor: pointer;
+        }
+    }
+    .btn{
+        height: .88rem;
+        margin-top: .2rem;
+        line-height: .88rem;
+        text-align: center;
+        font-size: .3rem;
+        background-color: #fff;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,151 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+// 搜索栏的样式
+.searchBar {
+    box-sizing: border-box;
+    background-color: #fff;
+    /deep/ .weui-search-bar{
+        background-color: @background-color;
+        padding: .4rem .3rem .18rem;
+        &::after{
+            display: none;
+        }
+        &::bofore{
+            display: none;
+        }
+    }
+    /deep/ .weui-search-bar__form{
+        background-color: @background-color;
+        &::after{
+            display: none;
+        }
+        line-height: .68rem;
+    }
+    /deep/ .weui-search-bar__cancel-btn{
+        line-height: .68rem;
+    }
+    /deep/ .weui-search-bar__box{
+        background-color: #fff;
+        height: .68rem;
+        line-height: .68rem;
+        border-radius: .2rem;
+        .weui-icon-search{
+            line-height: .68rem;
+        }
+        .weui-search-bar__input{
+            padding: 0;
+        }
+        .weui-icon-clear:before{
+            line-height: .68rem;
+        }
+    }
+    /deep/ .weui-search-bar__box input{
+        height: .68rem;
+        line-height: .68rem;
+    }
+    /deep/ .weui-search-bar__label{
+        border-radius: .2rem;
+        top: 0;
+        height: .68rem;
+        line-height: .68rem;
+        color: @third-text-color;
+    }
+}
+.searchFocus{
+    padding-top: 1.26rem;
+}
+.listItem /deep/ .vux-swipeout,.listItem /deep/ .vux-swipeout-content{
+    border-radius: 0.2rem;
+}
+.invoiceList {
+    padding: 0 .3rem;
+    .listItem {
+        /deep/ .vux-swipeout-button-box {
+            padding-right: 1px;
+            button{
+                border-radius: 0 .2rem .2rem 0;
+            }
+        }
+        /deep/ .vux-swipeout-button {
+            height: 96% !important;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        margin: .2rem 0;
+        
+        background-color: #fff;
+        font-size: .28rem;
+        box-shadow: 0px .04rem .3rem -.04rem rgba(125,155,250,0.22);
+        border-radius: 0.2rem;
+        .content {
+            padding: .4rem .5rem;
+            border-radius: 0.2rem;
+            box-sizing: border-box;
+            .title{
+                box-sizing: border-box;
+                color: @third-text-color;
+                width: 100%;
+                line-height: .34rem;
+                padding: .1rem 0 .2rem 0;
+                font-size: 0.24rem;
+                .bbpx();
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                span:first-of-type{
+                    margin-right: 0.1rem;
+                }
+                .deleteBtn{
+                   position: absolute;
+                   right: 0.39rem;
+                   font-weight: normal;
+                }
+            }
+            .details{
+                .content-item{
+                    width: 100%;
+                    margin-top: 0.2rem;
+                    &.content_tips{
+                        font-size: .3rem;
+                        color: @text-color;
+                        line-height: .42rem;
+                        font-weight: bold;
+                    }
+                    .content_price{
+                        font-size: .28rem;
+                        color: @text-color;
+                    }
+                    .content_title{
+                        color: @third-text-color;
+                        font-size: .24rem;
+                    }
+                    .content_des{
+                        flex: 1;
+                        font-size: .24rem;
+                        color: @third-text-color;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                    .TaxAmount{
+                        color:@warning-color;
+                        font-size: .28rem;
+                        .symbol{
+                            font-size: .2rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+}
+
+.noMore {
+    text-align: center;
+    padding-bottom: 0.3rem;
+    color: @info-color;
+    font-size: .2rem;
+}

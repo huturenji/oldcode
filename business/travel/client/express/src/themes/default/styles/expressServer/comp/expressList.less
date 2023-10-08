@@ -1,0 +1,258 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.expressListPWrap{
+    padding: 0.3rem;
+    .expressListWrap{
+        box-shadow:0 0.02rem 0.2rem 0 rgba(99,99,99,0.2);
+        border-radius:0.12rem;
+        background: @sub-background-color;
+        .bbpxs {
+            .bbpx(1px, @border-color-base, 0, 0, solid);
+        }
+        .lineWrap {
+            padding: 0 20px;
+            font-size: 14px;
+            color: @text-color;
+            .titWrap {
+                .flex-box();
+                .align-items(center);
+                .justify-content(space-between);
+                padding: 12px 0;
+                .titLeftGroup{
+                    .flex(1);
+                    .flex-box();
+                    .align-items(center);
+                    .iconWrap{
+                        width: 18px;;
+                        height: 18px;
+                        background-repeat: no-repeat;
+                        background-position:left;
+                        background-size: 18px 18px;
+                        border-radius: 2px;
+                    }
+                    .itemLeft {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    .itemRight {
+                        padding-left: 10px;
+                        background: url(~themes/default/img/expressServer/comp/base_gray.png) no-repeat left;
+                        background-size: 1px 9px;
+                    }
+                }
+                .pcDelete{
+                    color: @secondary-text-color;
+                }
+            }
+            .contectWrap {
+                .flex-box();
+                .align-items(center);
+                padding: 0.48rem 0.4rem 0.4rem;
+                .leftContect {
+                    .flex(1);
+                    .cityName{
+                        font-size: 17px;
+                        margin-bottom: 7px;
+                        font-weight: 500;
+                    }
+                    .name{
+                        font-size: 13px;
+                        color: @third-text-color;
+                    }
+                }
+                .middleContect {
+                    width: 105px;
+                    text-align: center;
+                    .typeName{
+                        font-size: 13px;
+                        margin-bottom: 0.06rem;
+                    }
+                    .arrow{
+                        margin-bottom: 0.11rem;
+                        width: 100%;
+                        height: 0.09rem;
+                        background: url(~themes/default/img/expressServer/comp/middlearr.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    .expresstype{
+                        display: inline-block;
+                        line-height: 0.45rem;
+                        padding: 0 0.14rem;
+                        font-size: 0.26rem;
+                        color: @sub-background-color;
+                        border-radius: 0.06rem;
+                        &.orange{
+                            background: @yellow-color;
+                        } 
+                        &.blue{
+                            background: @theme-color;
+                        }
+                        &.black{
+                            background: @third-text-color;
+                        }
+                        &.gray{
+                            background: @placeholder-color;
+                        }
+                    }
+                }
+                .rightContect {
+                    text-align: right;
+                    .flex(1);
+                    .cityName{
+                        font-size: 17px;
+                        margin-bottom: 7px;
+                        font-weight: 500;
+                    }
+                    .name{
+                        font-size: 0.26rem;
+                        color: @third-text-color;
+                    }
+                }
+            }
+            .expressInfoWrap{
+                .expressInfoTit{
+                    .flex-box();
+                    .align-items(center);
+                    padding: 0.15rem 0;
+                    .leftIconWrap{
+                        width: 0.36rem;
+                        height: 0.36rem;
+                        &.typeOne{
+                            background: url(~themes/default/img/expressServer/comp/icon_expresstype_active1.png) no-repeat center;
+                            background-size: 0.36rem 0.36rem;
+                        }
+                        &.typeTwo{
+                            background: url(~themes/default/img/expressServer/comp/icon_expresstype_active2.png) no-repeat center;
+                            background-size: 0.36rem 0.36rem;
+                        }
+                        &.typeThree{
+                            background: url(~themes/default/img/expressServer/comp/icon_expresstype_active3.png) no-repeat center;
+                            background-size: 0.36rem 0.36rem;
+                        }
+                        &.typeFour{
+                            background: url(~themes/default/img/expressServer/comp/icon_expresstype_active4.png) no-repeat center;
+                            background-size: 0.36rem 0.36rem;
+                        }
+                    }
+                    .text{
+                        .flex(1);
+                        padding-left: 0.08rem;
+                        font-size: 0.26rem;
+                    }
+                    .but{
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        background: url(~themes/default/img/expressServer/comp/icon_down.png) no-repeat center;
+                        background-size: 0.21rem 0.12rem;
+                        &:active{
+                            background: url(~themes/default/img/expressServer/comp/icon_down_hov.png) no-repeat center;
+                            background-size: 0.21rem 0.12rem;
+                        }
+                    }
+                }
+                .expressInfoList{
+                    padding-top: 0.32rem;
+                    .flex-box();
+                    .timeLineWrap{
+                        .flex(1);
+                        .timeLine{
+                            position: relative;
+                            padding-left: 0.6rem;
+                            padding-bottom: 0.5rem; 
+                            background: url(~themes/default/img/expressServer/comp/dash-e5-line.png) repeat-y 0.2rem center;
+                            .timeLineTextWrap{
+                                position: relative;
+                                top: -0.1rem;
+                                .timeLineText{
+                                    margin-bottom: 0.08rem;
+                                    font-size: 0.26rem;
+                                    color: @secondary-text-color;
+                                }
+                                .timeLineTips{
+                                    font-size: 0.24rem;
+                                    color: @third-text-color;
+
+                                }
+                            }
+                            &:first-child{
+                                .timeLineTextWrap .timeLineText{
+                                    color: @text-color;
+                                    .phone{
+                                        color: @theme-color;
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                background: none;
+                            }
+                            &:before{
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: -0.1rem;
+                                width: 0.36rem;
+                                height: 0.36rem;
+                                background: url(~themes/default/img/expressServer/comp/icon_expresstype0.png) no-repeat center;
+                                background-size: 0.36rem 0.36rem;
+                            }
+                            &:first-child.typeOne:before{
+                                background: url(~themes/default/img/expressServer/comp/icon_expresstype_active1.png) no-repeat center;
+                                background-size: 0.36rem 0.36rem;
+                            }
+                            &:first-child.typeTwo:before{
+                                background: url(~themes/default/img/expressServer/comp/icon_expresstype_active2.png) no-repeat center;
+                                background-size: 0.36rem 0.36rem;
+                            }
+                            &:first-child.typeThree:before{
+                                background: url(~themes/default/img/expressServer/comp/icon_expresstype_active3.png) no-repeat center;
+                                background-size: 0.36rem 0.36rem;
+                            }
+                            &:first-child.typeFour:before{
+                                background: url(~themes/default/img/expressServer/comp/icon_expresstype_active4.png) no-repeat center;
+                                background-size: 0.36rem 0.36rem;
+                            }
+                        }
+                    }
+                    .rightButWrap{
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        background: url(~themes/default/img/expressServer/comp/icon_up.png) no-repeat center;
+                        background-size: 0.21rem 0.12rem;
+                        &:active{
+                            background: url(~themes/default/img/expressServer/comp/icon_up_hov.png) no-repeat center;
+                            background-size: 0.21rem 0.12rem;
+                        }
+                    }
+                }
+            }
+            &.grayList{
+                color: @placeholder-color;
+                .contectWrap .rightContect .name{
+                    color: @placeholder-color;
+                }
+                .contectWrap .leftContect .name{
+                    color: @placeholder-color;
+                }
+            }
+            &.sign{
+                background: url(~themes/default/img/expressServer/comp/icon_express_sign.svg) no-repeat top 0.27rem right 0.29rem;
+                background-size: 1.34rem 1.34rem;
+            }
+        }
+        
+    }
+    
+}
+/deep/.expressListPWrap {
+    .timeLineWrap{
+        .timeLine{
+            &:first-child{
+                .timeLineTextWrap .timeLineText{
+                    .phone{
+                        color: @theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

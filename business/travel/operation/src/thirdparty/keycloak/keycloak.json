@@ -1,0 +1,5 @@
+{
+    "realm": "bplusdev",
+    "auth-server-url": "https://bplusdev.sinosun.com:18580/auth",
+    "resource": "TRAVEL_operation_front"
+  }

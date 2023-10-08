@@ -1,0 +1,454 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>编辑订单</title>
+    <link rel="stylesheet" type="text/css" href="./css/6.c193f62a0414cc2045be.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/sinosun_common.5664f620.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/common.css"> 
+    <style>
+        .psg_box .psg_box_title[data-v-75c9bd30] {
+                font-size: 0.36rem;
+                font-weight: bold;
+                padding: 0.4rem 0.3rem 0;
+                display: flex;
+                justify-content: space-between;
+            }
+            .psg_box .psg_box_title .title_tips[data-v-75c9bd30] {
+                font-size: 0.22rem;
+                color: var(--thirdTextColor);
+                font-weight: normal;
+            }
+            .psg_box ul[data-v-75c9bd30] {
+                padding: 0 0.3rem;
+                overflow: hidden;
+                padding-bottom: 0.4rem;
+                position: relative;
+            }
+            .psg_box ul[data-v-75c9bd30]::after {
+                content: '';
+                width: 100%;
+                position: absolute;
+                left: 0.3rem;
+                bottom: 0;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            .psg_box ul li[data-v-75c9bd30] {
+                width: 1.42rem;
+                height: 0.6rem;
+                padding: 0 0.1rem;
+                line-height: 0.6rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                float: left;
+                margin-right: 0.4rem;
+                text-align: center;
+                border: 1px solid var(--borderColorBase);
+                margin-top: 0.38rem;
+                border-radius: 0.05rem;
+                cursor: pointer;
+                font-size: 0.28rem;
+                color: var(--thirdTextColor);
+            }
+            .psg_box ul li.selected[data-v-75c9bd30] {
+                color: var(--themeColor);
+                border: 1px solid var(--themeColor);
+                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjIycHgiIGhlaWdodD0iMjJweCIgdmlld0JveD0iMCAwIDIyIDIyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNjAgKDg4MTAzKSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4NCiAgICA8dGl0bGU+aDUgc3ZnL2ljb24vcGxhbmUvc2VsZWN0QDJ4PC90aXRsZT4NCiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4NCiAgICA8ZyBpZD0iaDUtc3ZnL2ljb24vcGxhbmUvc2VsZWN0IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPHBhdGggZD0iTTIyLC05Ljc2OTk2MjYyZS0xNCBMMjIsMTkuMDY2NjY2NyBDMjIsMjAuNjg2NzAxOSAyMC42ODY3MDE5LDIyIDE5LjA2NjY2NjcsMjIgTDAsMjIgTDIyLC05Ljc2OTk2MjYyZS0xNCBaIE0xOS44OTczNTgsMTEuNDA0NjgyMyBDMTkuNTY4NTczMSwxMS4xNjgxODE1IDE5LjExMDMxODUsMTEuMjQyOTkyNSAxOC44NzM4MTc3LDExLjU3MTc3NzMgTDE4Ljg3MzgxNzcsMTEuNTcxNzc3MyBMMTQuNTA2OCwxNy42Mzk2IEwxMS45MDU0NzcxLDE2LjAyOTg3IEwxMS43ODcxODM5LDE1Ljk3MDUyMTkgQzExLjQ2MzYzODQsMTUuODQzMjIxNCAxMS4wODU0NTQyLDE1Ljk2MTIyNDkgMTAuODk1OTMzNSwxNi4yNjczMDkyIEMxMC42ODI3MjI4LDE2LjYxMTY1NCAxMC43ODkwMjc5LDE3LjA2MzY0MiAxMS4xMzMzNzI3LDE3LjI3Njg1MjcgTDExLjEzMzM3MjcsMTcuMjc2ODUyNyBMMTQuODk5NDA3OSwxOS42MDg2OTkyIEwyMC4wNjQ0NTMsMTIuNDI4MjIyNyBMMjAuMTMxODM1MiwxMi4zMTQzMTQzIEMyMC4yODExOTM3LDEyLjAwMDM0MTEgMjAuMTg5NjExMiwxMS42MTQ5MDUzIDE5Ljg5NzM1OCwxMS40MDQ2ODIzIFoiIGlkPSLlvaLnirbnu5PlkIgiIGZpbGw9IiMyNjJERDkiPjwvcGF0aD4NCiAgICA8L2c+DQo8L3N2Zz4=) right bottom no-repeat;
+                background-size: 0.3rem auto;
+            }
+            .psg_box ul li[data-v-75c9bd30]:nth-child(4n) {
+                margin-right: 0;
+            }
+            .psg_box ul li.add_psg[data-v-75c9bd30] {
+                color: #fff;
+                background-color: var(--themeColor);
+                border: 1px solid var(--themeColor);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+            }
+            .psg_box ul li.add_psg .icon_common_add[data-v-75c9bd30] {
+                fill: #fff;
+            }
+            .psg_box ul li.add_psg span[data-v-75c9bd30] {
+                margin-left: 0.1rem;
+            }
+            .psg_box ul li[data-v-75c9bd30]:active {
+                opacity: 0.5;
+            }
+            @media screen and (min-width: 550px) {
+                .psg_box ul li[data-v-75c9bd30]:nth-child(4n) {
+                    margin-right: 0.4rem;
+                }
+            }
+            .right{position: relative;}
+    </style>
+    <script>
+        function nextPage(){
+            window.open("../bookTrainOrderDetail/index.html")
+        }
+    </script>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_prompt">
+            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+            <title>icon_common_prompt</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_prompt_icon_common_prompt" stroke="none" stroke-width="1" opacity="1">
+                <g id="icon_common_prompt_详情">
+                    <g transform="translate(0.500000, 0.500000)">
+                        <path
+                            d="M10.5,0 C16.2989899,0 21,4.70101013 21,10.5 C21,16.2989899 16.2989899,21 10.5,21 C4.70101013,21 0,16.2989899 0,10.5 C0,4.70101013 4.70101013,0 10.5,0 Z M10.5,1.57142857 C5.56888616,1.57142857 1.57142857,5.56888616 1.57142857,10.5 C1.57142857,15.4311138 5.56888616,19.4285714 10.5,19.4285714 C15.4311138,19.4285714 19.4285714,15.4311138 19.4285714,10.5 C19.4285714,5.56888616 15.4311138,1.57142857 10.5,1.57142857 Z"
+                            id="icon_common_prompt_椭圆形"></path>
+                        <path
+                            d="M9.17320033,6.02769252 C9.17320033,5.61130279 9.32231064,5.25259405 9.62053571,4.95155552 C9.91876079,4.650517 10.2760628,4.5 10.6924526,4.5 C11.1144692,4.5 11.4717712,4.6491103 11.7643694,4.94733538 C12.0569676,5.24556046 12.2032645,5.6056759 12.2032645,6.02769252 C12.2032645,6.44970914 12.0555609,6.80982459 11.7601493,7.10804967 C11.4647376,7.40627474 11.1088423,7.55538504 10.6924526,7.55538504 C10.2591822,7.55538504 9.89766002,7.40205464 9.60787528,7.09538923 C9.31809053,6.78872382 9.17320033,6.43282848 9.17320033,6.02769252 Z M12.0175781,8.95647321 L12.0175781,14.1303711 C12.0175781,14.5580146 12.0850998,14.8520151 12.2201451,15.0123814 C12.3551904,15.1727477 12.6702914,15.2529297 13.1654576,15.2529297 L13.1654576,16.1476004 L8,16.1476004 L8,15.2529297 L8.19412667,15.2529297 C8.67241218,15.2529297 8.97485288,15.1685276 9.10145787,14.999721 C9.22806285,14.8309143 9.2913644,14.5411339 9.2913644,14.1303711 L9.2913644,11.6151646 C9.2913644,11.1987749 9.22665615,10.9075878 9.09723772,10.7415946 C8.96781929,10.5756014 8.66678529,10.492606 8.19412667,10.492606 L8,10.492606 L8,9.59793527 L12.0175781,8.95647321 Z"
+                            id="icon_common_prompt_i"></path>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_add">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/add</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_add_h5-svg/icon/common/add" stroke="none" stroke-width="1">
+                <g id="icon_common_add_编组">
+                    <path
+                        d="M11.0000004,3.57627869e-07 C17.0751326,3.57627869e-07 22.0000004,4.92486811 22.0000004,11.0000004 C22.0000004,17.0751326 17.0751326,22.0000004 11.0000004,22.0000004 C4.92486811,22.0000004 3.57627869e-07,17.0751326 3.57627869e-07,11.0000004 C3.57627869e-07,4.92486811 4.92486811,3.57627869e-07 11.0000004,3.57627869e-07 Z M11.0000004,1.20000036 C5.58760981,1.20000036 1.20000036,5.58760981 1.20000036,11.0000004 C1.20000036,16.4123909 5.58760981,20.8000004 11.0000004,20.8000004 C16.4123909,20.8000004 20.8000004,16.4123909 20.8000004,11.0000004 C20.8000004,5.58760981 16.4123909,1.20000036 11.0000004,1.20000036 Z"
+                        id="icon_common_add_Rectangle"></path>
+                    <path
+                        d="M11.0000004,5.40000036 C11.2982341,5.40000036 11.5456471,5.61758997 11.5921474,5.90267724 L11.6000004,6.00000036 L11.6000004,16.0040818 C11.6000004,16.3354526 11.3313712,16.6040818 11.0000004,16.6040818 C10.7017666,16.6040818 10.4543536,16.3864922 10.4078533,16.1014049 L10.4000004,16.0040818 L10.4000004,6.00000036 C10.4000004,5.66862951 10.6686295,5.40000036 11.0000004,5.40000036 Z"
+                        id="icon_common_add_路径-45"></path>
+                    <path
+                        d="M11.0000004,5.4 C11.2982341,5.4 11.5456471,5.61758961 11.5921474,5.90267688 L11.6000004,6 L11.6000004,16 C11.6000004,16.3313708 11.3313712,16.6 11.0000004,16.6 C10.7017666,16.6 10.4543536,16.3824104 10.4078533,16.0973231 L10.4000004,16 L10.4000004,6 C10.4000004,5.66862915 10.6686295,5.4 11.0000004,5.4 Z"
+                        id="icon_common_add_路径-45"
+                        transform="translate(11.000000, 11.000000) rotate(-270.000000) translate(-11.000000, -11.000000) ">
+                    </path>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="icon_common_delete">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>h5 svg/icon/common/delete</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_delete_h5-svg/icon/common/delete" stroke="none" stroke-width="1">
+                <g id="icon_common_delete_编组">
+                    <path
+                        d="M11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 Z M11,1.2 C5.58760945,1.2 1.2,5.58760945 1.2,11 C1.2,16.4123905 5.58760945,20.8 11,20.8 C16.4123905,20.8 20.8,16.4123905 20.8,11 C20.8,5.58760945 16.4123905,1.2 11,1.2 Z"
+                        id="icon_common_delete_Rectangle"></path>
+                    <path
+                        d="M11.1,5.5 C11.3982338,5.5 11.6456468,5.71758961 11.692147,6.00267688 L11.7,6.1 L11.7,16.1 C11.7,16.4313708 11.4313708,16.7 11.1,16.7 C10.8017662,16.7 10.5543532,16.4824104 10.507853,16.1973231 L10.5,16.1 L10.5,6.1 C10.5,5.76862915 10.7686292,5.5 11.1,5.5 Z"
+                        id="icon_common_delete_路径-45"
+                        transform="translate(11.100000, 11.100000) rotate(-270.000000) translate(-11.100000, -11.100000) ">
+                    </path>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22"
+            id="btn_conmmon_phone">
+            <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+            <title>btn_hotel_phone</title>
+            <desc>Created with Sketch.</desc>
+            <g id="btn_conmmon_phone_btn_hotel_phone" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="btn_conmmon_phone_icon/对话-copy" transform="translate(1.000000, 1.500000)">
+                    <g id="btn_conmmon_phone_Group">
+                        <rect id="btn_conmmon_phone_Rectangle" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round" x="2.34912109" y="0" width="15.7683105"
+                            height="18.4008789" rx="2"></rect>
+                        <line x1="0.78125" y1="4.47429812" x2="3.91699219" y2="4.47429812" id="btn_conmmon_phone_Path-6"
+                            stroke="#575757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="0.78125" y1="9.20043945" x2="3.91699219" y2="9.20043945"
+                            id="btn_conmmon_phone_Path-6-Copy" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="0.78125" y1="13.9265808" x2="3.91699219" y2="13.9265808"
+                            id="btn_conmmon_phone_Path-6-Copy-2" stroke="#575757" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round"></line>
+                        <path
+                            d="M12.1456152,11.3583493 C11.7009064,11.7287513 10.7402016,10.7929408 9.92810361,9.83110248 C9.11601067,8.86926583 8.35408589,7.77051049 8.79879462,7.3997222 C9.43662402,6.87090114 9.9763842,6.5570773 9.05490677,5.18787 C8.13418334,3.82206169 7.3549027,4.74580286 6.73820432,5.25765031 C6.02305041,5.85059472 6.42815394,8.32157173 8.62378045,10.9177845 C10.8190274,13.5132347 13.2013714,14.3362617 13.9127535,13.7436918 C14.5290842,13.2284497 15.5829546,12.6298477 14.3861283,11.4903603 C13.1885464,10.3516202 12.7826888,10.8261269 12.1456067,11.3583436 L12.1456152,11.3583493 Z"
+                            id="btn_conmmon_phone_Path" fill="#575757"></path>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="icon_common_rightarrow">
+            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+            <title>icon_common_leftarrow</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_rightarrow_icon_common_leftarrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M28.715863,11.568274 C29.977357,11.568274 31,10.545631 31,9.28413698 C31,8.02264296 29.977357,7 28.715863,7 L3.28413698,7 C2.02264296,7 1,8.02264296 1,9.28413698 L1,34.715863 C1,35.977357 2.02264296,37 3.28413698,37 C4.545631,37 5.56827396,35.977357 5.56827396,34.715863 L5.56827396,11.568274 L28.715863,11.568274 Z"
+                    id="icon_common_rightarrow_Path" fill-rule="nonzero"
+                    transform="translate(16.000000, 22.000000) rotate(-225.000000) translate(-16.000000, -22.000000) ">
+                </path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="icon_common_downarrow">
+            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+            <title>icon_common_downarrow</title>
+            <desc>Created with Sketch.</desc>
+            <g id="icon_common_downarrow_icon_common_downarrow" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M11.568274,4.56827396 L34.715863,4.56827396 C35.977357,4.56827396 37,3.545631 37,2.28413698 C37,1.02264296 35.977357,-1.77635684e-15 34.715863,-1.77635684e-15 L9.28413698,-1.77635684e-15 C8.02264296,-1.77635684e-15 7,1.02264296 7,2.28413698 L7,27.715863 C7,28.977357 8.02264296,30 9.28413698,30 C10.545631,30 11.568274,28.977357 11.568274,27.715863 L11.568274,4.56827396 Z"
+                    id="icon_common_downarrow_Path" fill-rule="nonzero"
+                    transform="translate(22.000000, 15.000000) rotate(-135.000000) translate(-22.000000, -15.000000) ">
+                </path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22" id="btn_common_checkbox_nor">
+            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+            <title>btn_common_checkbox_nor</title>
+            <desc>Created with Sketch.</desc>
+            <g id="btn_common_checkbox_nor_btn_common_checkbox_nor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M4.7,0.5 L17.3,0.5 C19.6195959,0.5 21.5,2.38040405 21.5,4.7 L21.5,17.3 C21.5,19.6195959 19.6195959,21.5 17.3,21.5 L4.7,21.5 C2.38040405,21.5 0.5,19.6195959 0.5,17.3 L0.5,4.7 C0.5,2.38040405 2.38040405,0.5 4.7,0.5 Z M4.7,1.025 C2.67035354,1.025 1.025,2.67035354 1.025,4.7 L1.025,17.3 C1.025,19.3296465 2.67035354,20.975 4.7,20.975 L17.3,20.975 C19.3296465,20.975 20.975,19.3296465 20.975,17.3 L20.975,4.7 C20.975,2.67035354 19.3296465,1.025 17.3,1.025 L4.7,1.025 Z" id="btn_common_checkbox_nor_icon_checkbox_nor" fill="#999999" fill-rule="nonzero"></path>
+            </g>
+        </symbol>
+    </svg>
+    <div>
+        <div data-v-4264b37c="" class="child-view">
+            <div data-v-4264b37c="" class="train-list-wrap">
+                <div data-v-70995f88="" data-v-4264b37c="" class="trainOrderWrap" >
+                    <div data-v-70995f88="" class="data-wrap">
+                        <header data-v-70995f88="">
+                            <div data-v-70995f88="" class="start-time">
+                                <div data-v-70995f88="" class="date">06月10日 周四</div>
+                                <div data-v-70995f88="" class="time num-font">06:36</div>
+                                <div data-v-70995f88="" class="station">北京西</div>
+                            </div>
+                            <div data-v-70995f88="" class="time-info cursorp">
+                                <div data-v-70995f88="" class="train-no">G507</div>
+                                <div data-v-70995f88="" class="iconWrap"></div>
+                                <div data-v-70995f88="" class="duration">5小时44分钟</div>
+                            </div>
+                            <div data-v-70995f88="" class="end-time">
+                                <div data-v-70995f88="" class="date">06月10日 周四</div>
+                                <div data-v-70995f88="" class="time num-font">12:20</div>
+                                <div data-v-70995f88="" class="station">汉口</div>
+                            </div>
+                        </header>
+                    </div>
+                    <div data-v-70995f88="" class="setSeatWrap cursorp">
+                        <div data-v-70995f88="" class="seatInfo">
+                            <div data-v-70995f88="">二等座<span data-v-70995f88="" class="num-font"><i
+                                        data-v-70995f88="">￥</i>522</span></div>
+                            <div data-v-70995f88="" class="accept_no_seat"><i data-v-70995f88="">接受无座</i><svg
+                                    data-v-70995f88="" class="icon btn_common_checkbox_nor"
+                                    style="width: 0.4rem; height: 0.4rem;">
+                                    <use xlink:href="#btn_common_checkbox_nor"></use>
+                                </svg></div>
+                        </div>
+                        <div data-v-70995f88="" class="seatInfoWrap">
+                            <div data-v-70995f88="" class="left">购票手续费<span data-v-70995f88="">￥5.0 / 张</span></div>
+                            <div data-v-70995f88="" class="right cursorp"><span data-v-70995f88=""><svg
+                                        data-v-70995f88="" class="icon icon_common_prompt"
+                                        style="width: 0.26rem; height: 0.26rem;">
+                                        <use xlink:href="#icon_common_prompt"></use>
+                                    </svg><i data-v-70995f88="">取票、退票、改签说明</i></span></div>
+                        </div>
+                    </div>
+                    <div data-v-70995f88="" class="customerList">
+                        <div data-v-75c9bd30="" data-v-70995f88="">
+                            <div data-v-75c9bd30="" class="psg_box">
+                                <div data-v-75c9bd30="" class="psg_box_title"><span data-v-75c9bd30=""
+                                        class="title">请选择乘车人</span> <span data-v-75c9bd30=""
+                                        class="title_tips">已选择：成人1人</span></div>
+                                <ul data-v-75c9bd30="">
+                                    <li data-v-75c9bd30="" class="selected">
+                                        张三
+                                    </li>
+                                    <li data-v-75c9bd30="" class="add_psg"><svg data-v-75c9bd30=""
+                                            class="icon icon_common_add" style="width: 0.32rem; height: 0.32rem;">
+                                            <use xlink:href="#icon_common_add"></use>
+                                        </svg> <span data-v-75c9bd30="">新增</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-v-70995f88="" class="customer lineBorderB-psg">
+                            <div data-v-70995f88="" class="customerLineWrap">
+                                <div data-v-70995f88="" class="delBut cursorp"><svg data-v-70995f88=""
+                                        class="icon icon_common_delete" style="width: 0.44rem; height: 0.44rem;">
+                                        <use xlink:href="#icon_common_delete"></use>
+                                    </svg></div>
+                                <div data-v-70995f88="" class="textLineWrap cursorp">
+                                    <div data-v-70995f88="" class="textName">张三</div>
+                                    <div data-v-70995f88="" class="textIdWrap">身份证 4************2</div>
+                                </div> <svg data-v-70995f88="" class="icon icon_common_rightarrow"
+                                    style="width: 0.24rem; height: 0.24rem;">
+                                    <use xlink:href="#icon_common_rightarrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-70995f88="" class="connector">
+                        <span data-v-70995f88="" class="label">联系电话：</span>
+                        <span data-v-70995f88="" class="beforeNum">+86</span> 
+                        <input data-v-70995f88="" type="text" maxlength="13" placeholder="请填写联系人手机" readonly value="13111111111" class="contactNum"> 
+                        <span data-v-70995f88="" class="tel-book cursorp">
+                            <svg data-v-70995f88="" class="icon btn_conmmon_phone" style="width: 0.36rem; height: 0.36rem;"> <use xlink:href="#btn_conmmon_phone"></use></svg>
+                        </span>
+                    </div>
+                    <div data-v-13572344="" data-v-70995f88="" class="choose_seat">
+                        <div data-v-13572344="" class="seat_title"><span data-v-13572344="" class="left">在线选座</span>
+                            <span data-v-13572344="" class="num">已选择：<i data-v-13572344="">0</i>/1个</span></div>
+                        <div data-v-13572344="" class="seat_all">
+                            <div data-v-13572344="" class="odd">
+                                <div data-v-13572344="" class="left"><i data-v-13572344="" class="f_i">靠窗</i> <span
+                                        data-v-13572344=""><img data-v-13572344=""
+                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+dHJhaW4vYnRuX3RyYWluX3NlYXRfYUAyeDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iOTEuMDAwMTY3NyUiIHkxPSIxMy44NzUlIiB4Mj0iNTAlIiB5Mj0iODYuMTI1JSIgaWQ9ImxpbmVhckdyYWRpZW50LTEiPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRjVGNUY1IiBvZmZzZXQ9IjAlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNFOEU4RTgiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI5MS4wMDAxNjc3JSIgeTE9IjI3Ljc3Nzc3NzglIiB4Mj0iNTAlIiB5Mj0iNzIuMjIyMjIyMiUiIGlkPSJsaW5lYXJHcmFkaWVudC0yIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0QzRDNEMyIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRThFOEU4IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9InRyYWluL2J0bl90cmFpbl9zZWF0X2EiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnvJbnu4QtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS4wMDAwMDAsIDEuMDAwMDAwKSI+CiAgICAgICAgICAgIDxyZWN0IGlkPSLnn6nlvaIiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMSkiIHg9IjIiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNyI+PC9yZWN0PgogICAgICAgICAgICA8cGF0aCBkPSJNMjQsMjMgQzI0LDIzLjU1MjI4NDcgMjMuNTUyMjg0NywyNCAyMywyNCBMMSwyNCBDMC40NDc3MTUyNSwyNCA2Ljc2MzUzNzUxZS0xNywyMy41NTIyODQ3IDAsMjMgTDAsOS4yMzA3NjkyMyBDMCw4LjU1MTAzNDE1IDAuNTM3MjU4Myw4IDEuMiw4IEwzLjYsOCBDNC4yNjI3NDE3LDggNC44LDguNTUxMDM0MTUgNC44LDkuMjMwNzY5MjMgTDQuNzk5LDE2LjM4NCBMMTkuMiwxNi4zODQgTDE5LjIsOSBDMTkuMiw4LjQ0NzcxNTI1IDE5LjY0NzcxNTMsOCAyMC4yLDggTDIzLDggQzIzLjU1MjI4NDcsOCAyNCw4LjQ0NzcxNTI1IDI0LDkgTDI0LDIzIFoiIGlkPSLlvaLnirbnu5PlkIgiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMikiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICAgICAgPHBhdGggZD0iTTEwLjQ2OCwxMyBMMTEuMzA0LDEwLjggTDE0LjkxMiwxMC44IEwxNS43NDgsMTMgTDE2LjcyNywxMyBMMTMuNjM2LDUuMTQ2IEwxMi41OTEsNS4xNDYgTDkuNSwxMyBMMTAuNDY4LDEzIFogTTE0LjYyNiwxMC4wNDEgTDExLjU5LDEwLjA0MSBMMTMuMDk3LDYuMTE0IEwxMy4xNDEsNi4xMTQgTDE0LjYyNiwxMC4wNDEgWiIgaWQ9IkEiIGZpbGw9IiNCN0I3QjciIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4="></span><span
+                                        data-v-13572344=""><img data-v-13572344=""
+                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+dHJhaW4vYnRuX3RyYWluX3NlYXRfYkAyeDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iOTEuMDAwMTY3NyUiIHkxPSIxMy44NzUlIiB4Mj0iNTAlIiB5Mj0iODYuMTI1JSIgaWQ9ImxpbmVhckdyYWRpZW50LTEiPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRjVGNUY1IiBvZmZzZXQ9IjAlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNFOEU4RTgiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI5MS4wMDAxNjc3JSIgeTE9IjI3Ljc3Nzc3NzglIiB4Mj0iNTAlIiB5Mj0iNzIuMjIyMjIyMiUiIGlkPSJsaW5lYXJHcmFkaWVudC0yIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0QzRDNEMyIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRThFOEU4IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9InRyYWluL2J0bl90cmFpbl9zZWF0X2IiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnvJbnu4QtNSI+CiAgICAgICAgICAgIDxyZWN0IGlkPSLnn6nlvaIiIHg9IjAiIHk9IjAiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+PC9yZWN0PgogICAgICAgICAgICA8ZyBpZD0i57yW57uELTQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMDAwMDAwLCAxLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC0zIj4KICAgICAgICAgICAgICAgICAgICA8cmVjdCBpZD0i55+p5b2iIiBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTEpIiB4PSIyIiB5PSIwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTciPjwvcmVjdD4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMjQsMjMgQzI0LDIzLjU1MjI4NDcgMjMuNTUyMjg0NywyNCAyMywyNCBMMSwyNCBDMC40NDc3MTUyNSwyNCA2Ljc2MzUzNzUxZS0xNywyMy41NTIyODQ3IDAsMjMgTDAsOS4yMzA3NjkyMyBDMCw4LjU1MTAzNDE1IDAuNTM3MjU4Myw4IDEuMiw4IEwzLjYsOCBDNC4yNjI3NDE3LDggNC44LDguNTUxMDM0MTUgNC44LDkuMjMwNzY5MjMgTDQuNzk5LDE2LjM4NCBMMTkuMiwxNi4zODQgTDE5LjIsOSBDMTkuMiw4LjQ0NzcxNTI1IDE5LjY0NzcxNTMsOCAyMC4yLDggTDIzLDggQzIzLjU1MjI4NDcsOCAyNCw4LjQ0NzcxNTI1IDI0LDkgTDI0LDIzIFoiIGlkPSLlvaLnirbnu5PlkIgiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMikiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8cGF0aCBkPSJNMTMuNzc5LDEzIEMxNC41ODIsMTMgMTUuMjIsMTIuODM1IDE1LjY4MiwxMi41MjcgQzE2LjIyMSwxMi4xNTMgMTYuNDk2LDExLjU4MSAxNi40OTYsMTAuODExIEMxNi40OTYsMTAuMjgzIDE2LjM0Miw5Ljg2NSAxNi4wNTYsOS41MzUgQzE1Ljc3LDkuMjA1IDE1LjM3NCw4Ljk4NSAxNC44NTcsOC44OTcgQzE1LjI1Myw4Ljc2NSAxNS41NzIsOC41NTYgMTUuODE0LDguMjcgQzE2LjA0NSw3Ljk1MSAxNi4xNjYsNy41NjYgMTYuMTY2LDcuMTI2IEMxNi4xNjYsNi41MSAxNS45NTcsNi4wMjYgMTUuNTM5LDUuNjc0IEMxNS4xMSw1LjMyMiAxNC41MjcsNS4xNDYgMTMuODAxLDUuMTQ2IEwxMC4yOTIsNS4xNDYgTDEwLjI5MiwxMyBMMTMuNzc5LDEzIFogTTEzLjU4MSw4LjU3OCBMMTEuMTk0LDguNTc4IEwxMS4xOTQsNS45MDUgTDEzLjU5Miw1LjkwNSBDMTQuMTQyLDUuOTA1IDE0LjU2LDYuMDA0IDE0Ljg0Niw2LjIyNCBDMTUuMTMyLDYuNDQ0IDE1LjI3NSw2Ljc3NCAxNS4yNzUsNy4yMTQgQzE1LjI3NSw3LjY2NSAxNS4xMjEsOC4wMDYgMTQuODM1LDguMjM3IEMxNC41NDksOC40NTcgMTQuMTMxLDguNTc4IDEzLjU4MSw4LjU3OCBaIE0xMy43MDIsMTIuMjQxIEwxMS4xOTQsMTIuMjQxIEwxMS4xOTQsOS4zMjYgTDEzLjcwMiw5LjMyNiBDMTQuMzA3LDkuMzI2IDE0Ljc2OSw5LjQzNiAxNS4wODgsOS42NzggQzE1LjQxOCw5LjkyIDE1LjU5NCwxMC4yOTQgMTUuNTk0LDEwLjggQzE1LjU5NCwxMS4zMDYgMTUuMzk2LDExLjY5MSAxNS4wMTEsMTEuOTMzIEMxNC42ODEsMTIuMTMxIDE0LjI1MiwxMi4yNDEgMTMuNzAyLDEyLjI0MSBaIiBpZD0iQiIgZmlsbD0iI0I3QjdCNyIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="></span><span
+                                        data-v-13572344=""><img data-v-13572344=""
+                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+dHJhaW4vYnRuX3RyYWluX3NlYXRfY0AyeDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iOTEuMDAwMTY3NyUiIHkxPSIxMy44NzUlIiB4Mj0iNTAlIiB5Mj0iODYuMTI1JSIgaWQ9ImxpbmVhckdyYWRpZW50LTEiPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRjVGNUY1IiBvZmZzZXQ9IjAlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNFOEU4RTgiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI5MS4wMDAxNjc3JSIgeTE9IjI3Ljc3Nzc3NzglIiB4Mj0iNTAlIiB5Mj0iNzIuMjIyMjIyMiUiIGlkPSJsaW5lYXJHcmFkaWVudC0yIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0QzRDNEMyIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRThFOEU4IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9InRyYWluL2J0bl90cmFpbl9zZWF0X2MiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnvJbnu4QtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS4wMDAwMDAsIDEuMDAwMDAwKSI+CiAgICAgICAgICAgIDxyZWN0IGlkPSLnn6nlvaIiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMSkiIHg9IjIiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNyI+PC9yZWN0PgogICAgICAgICAgICA8cGF0aCBkPSJNMjQsMjMgQzI0LDIzLjU1MjI4NDcgMjMuNTUyMjg0NywyNCAyMywyNCBMMSwyNCBDMC40NDc3MTUyNSwyNCA2Ljc2MzUzNzUxZS0xNywyMy41NTIyODQ3IDAsMjMgTDAsOS4yMzA3NjkyMyBDMCw4LjU1MTAzNDE1IDAuNTM3MjU4Myw4IDEuMiw4IEwzLjYsOCBDNC4yNjI3NDE3LDggNC44LDguNTUxMDM0MTUgNC44LDkuMjMwNzY5MjMgTDQuNzk5LDE2LjM4NCBMMTkuMiwxNi4zODQgTDE5LjIsOSBDMTkuMiw4LjQ0NzcxNTI1IDE5LjY0NzcxNTMsOCAyMC4yLDggTDIzLDggQzIzLjU1MjI4NDcsOCAyNCw4LjQ0NzcxNTI1IDI0LDkgTDI0LDIzIFoiIGlkPSLlvaLnirbnu5PlkIgiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMikiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICAgICAgPHRleHQgaWQ9IkMiIGZvbnQtZmFtaWx5PSJQaW5nRmFuZ1NDLVJlZ3VsYXIsIFBpbmdGYW5nIFNDIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjQjdCN0I3Ij4KICAgICAgICAgICAgPHRzcGFuIHg9IjkiIHk9IjEzIj5DPC90c3Bhbj4KICAgICAgICA8L3RleHQ+CiAgICA8L2c+Cjwvc3ZnPg=="></span>
+                                </div>
+                                <div data-v-13572344="" class="middle">走廊</div>
+                                <div data-v-13572344="" class="right">
+                                    <span data-v-13572344=""><img data-v-13572344=""
+                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+dHJhaW4vYnRuX3RyYWluX3NlYXRfZEAyeDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iOTEuMDAwMTY3NyUiIHkxPSIxMy44NzUlIiB4Mj0iNTAlIiB5Mj0iODYuMTI1JSIgaWQ9ImxpbmVhckdyYWRpZW50LTEiPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRjVGNUY1IiBvZmZzZXQ9IjAlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNFOEU4RTgiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI5MS4wMDAxNjc3JSIgeTE9IjI3Ljc3Nzc3NzglIiB4Mj0iNTAlIiB5Mj0iNzIuMjIyMjIyMiUiIGlkPSJsaW5lYXJHcmFkaWVudC0yIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0QzRDNEMyIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRThFOEU4IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9InRyYWluL2J0bl90cmFpbl9zZWF0X2QiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnvJbnu4QtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS4wMDAwMDAsIDEuMDAwMDAwKSI+CiAgICAgICAgICAgIDxyZWN0IGlkPSLnn6nlvaIiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMSkiIHg9IjIiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNyI+PC9yZWN0PgogICAgICAgICAgICA8cGF0aCBkPSJNMjQsMjMgQzI0LDIzLjU1MjI4NDcgMjMuNTUyMjg0NywyNCAyMywyNCBMMSwyNCBDMC40NDc3MTUyNSwyNCA2Ljc2MzUzNzUxZS0xNywyMy41NTIyODQ3IDAsMjMgTDAsOS4yMzA3NjkyMyBDMCw4LjU1MTAzNDE1IDAuNTM3MjU4Myw4IDEuMiw4IEwzLjYsOCBDNC4yNjI3NDE3LDggNC44LDguNTUxMDM0MTUgNC44LDkuMjMwNzY5MjMgTDQuNzk5LDE2LjM4NCBMMTkuMiwxNi4zODQgTDE5LjIsOSBDMTkuMiw4LjQ0NzcxNTI1IDE5LjY0NzcxNTMsOCAyMC4yLDggTDIzLDggQzIzLjU1MjI4NDcsOCAyNCw4LjQ0NzcxNTI1IDI0LDkgTDI0LDIzIFoiIGlkPSLlvaLnirbnu5PlkIgiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMikiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICAgICAgPHRleHQgaWQ9IkQiIGZvbnQtZmFtaWx5PSJQaW5nRmFuZ1NDLVJlZ3VsYXIsIFBpbmdGYW5nIFNDIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjQjdCN0I3Ij4KICAgICAgICAgICAgPHRzcGFuIHg9IjkuNSIgeT0iMTMiPkQ8L3RzcGFuPgogICAgICAgIDwvdGV4dD4KICAgIDwvZz4KPC9zdmc+"></span><span
+                                        data-v-13572344=""><img data-v-13572344=""
+                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+dHJhaW4vYnRuX3RyYWluX3NlYXRfZkAyeDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iOTEuMDAwMTY3NyUiIHkxPSIxMy44NzUlIiB4Mj0iNTAlIiB5Mj0iODYuMTI1JSIgaWQ9ImxpbmVhckdyYWRpZW50LTEiPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRjVGNUY1IiBvZmZzZXQ9IjAlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNFOEU4RTgiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI5MS4wMDAxNjc3JSIgeTE9IjI3Ljc3Nzc3NzglIiB4Mj0iNTAlIiB5Mj0iNzIuMjIyMjIyMiUiIGlkPSJsaW5lYXJHcmFkaWVudC0yIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0QzRDNEMyIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRThFOEU4IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9InRyYWluL2J0bl90cmFpbl9zZWF0X2YiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnvJbnu4QtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS4wMDAwMDAsIDEuMDAwMDAwKSI+CiAgICAgICAgICAgIDxyZWN0IGlkPSLnn6nlvaIiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMSkiIHg9IjIiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNyI+PC9yZWN0PgogICAgICAgICAgICA8cGF0aCBkPSJNMjQsMjMgQzI0LDIzLjU1MjI4NDcgMjMuNTUyMjg0NywyNCAyMywyNCBMMSwyNCBDMC40NDc3MTUyNSwyNCA2Ljc2MzUzNzUxZS0xNywyMy41NTIyODQ3IDAsMjMgTDAsOS4yMzA3NjkyMyBDMCw4LjU1MTAzNDE1IDAuNTM3MjU4Myw4IDEuMiw4IEwzLjYsOCBDNC4yNjI3NDE3LDggNC44LDguNTUxMDM0MTUgNC44LDkuMjMwNzY5MjMgTDQuNzk5LDE2LjM4NCBMMTkuMiwxNi4zODQgTDE5LjIsOSBDMTkuMiw4LjQ0NzcxNTI1IDE5LjY0NzcxNTMsOCAyMC4yLDggTDIzLDggQzIzLjU1MjI4NDcsOCAyNCw4LjQ0NzcxNTI1IDI0LDkgTDI0LDIzIFoiIGlkPSLlvaLnirbnu5PlkIgiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMikiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICAgICAgPHRleHQgaWQ9IkYiIGZvbnQtZmFtaWx5PSJQaW5nRmFuZ1NDLVJlZ3VsYXIsIFBpbmdGYW5nIFNDIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjQjdCN0I3Ij4KICAgICAgICAgICAgPHRzcGFuIHg9IjEwIiB5PSIxMyI+RjwvdHNwYW4+CiAgICAgICAgPC90ZXh0PgogICAgPC9nPgo8L3N2Zz4="></span>
+                                    <i data-v-13572344="" class="l_i">靠窗</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-70995f88="" class="reimburse">
+                        <div data-v-70995f88="" class="switch">
+                            <div data-v-70995f88="" class="label"><span data-v-70995f88="">报销凭证</span>
+                                <div data-v-70995f88="" class="tip">购票手续费发票（下单后30天内可进入订单详情补开）</div>
+                            </div>
+                            <div data-v-70995f88="" role="switch" aria-checked="false" slot="right-icon"
+                                class="cursorp sn-switch">
+                                <div data-v-70995f88="" class="sn-switch-node"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-70995f88="" class="protocols_part">
+                        <div data-v-2a706403="" data-v-70995f88="" class="protocols-container">
+                            <div data-v-2a706403="" class="agreement">点击提交订单表示您已阅读并同意<i
+                                    data-v-2a706403="">《企业商旅服务协议》</i><i data-v-2a706403="">《企业商旅服务协议》</i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-v-70995f88="" class="v-transfer-dom">
+        <div data-v-70995f88="" class="bottomButWrap">
+            <div data-v-70995f88="" class="buttWrap">
+                <div data-v-70995f88="" class="left"><span data-v-70995f88="" class="leftText num-font"><i
+                            data-v-70995f88="" class="title">总额:</i><span data-v-70995f88=""><i data-v-70995f88=""
+                                class="symbol">￥</i><i data-v-70995f88="" class="money">527</i></span> <span
+                            data-v-70995f88="" class="leftTps">共<span data-v-70995f88="">1</span>人</span></span></div>
+                <div data-v-70995f88="" class="middle cursorp"><span data-v-70995f88="">明细<svg data-v-70995f88=""
+                            class="icon icon_common_downarrow" style="width: 0.2rem; height: 0.2rem;">
+                            <use xlink:href="#icon_common_downarrow"></use>
+                        </svg></span></div>
+                <div data-v-70995f88="" class="right blue-btn cursorp" onclick="nextPage()"><div class="point" style="top: .1rem;left: 1rem;"></div> 提交订单</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 体验版背景 -->
+    <div data-v-b94e16a0="" class="water-mark">
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+        <div data-v-b94e16a0="" class=" water-mark-item-pc">
+            体验版
+        </div>
+    </div>
+</body>
+</html>

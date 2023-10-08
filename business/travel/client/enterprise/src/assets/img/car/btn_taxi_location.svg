@@ -1,0 +1,17 @@
+<svg id="btn_taxi_location" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #478aee;
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        fill: #666;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="椭圆_41_拷贝" data-name="椭圆 41 拷贝" class="cls-1" cx="20" cy="20" r="11"/>
+  <path id="矩形_2884_拷贝_2" data-name="矩形 2884 拷贝 2" class="cls-2" d="M4100,1060a20,20,0,1,1-20,20A19.994,19.994,0,0,1,4100,1060Zm0,3a17,17,0,1,1-17,17A17,17,0,0,1,4100,1063Zm0,3a1,1,0,0,1,1,1v5a1,1,0,0,1-2,0v-5A1,1,0,0,1,4100,1066Zm0,21a1,1,0,0,1,1,1v5a1,1,0,0,1-2,0v-5A1,1,0,0,1,4100,1087Zm8-8h5a1,1,0,0,1,0,2h-5A1,1,0,0,1,4108,1079Zm-21,0h5a1,1,0,0,1,0,2h-5A1,1,0,0,1,4087,1079Z" transform="translate(-4080 -1060)"/>
+</svg>

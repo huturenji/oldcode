@@ -1,0 +1,82 @@
+@import '~styles/common.less';
+@mainWidth: 1280px;
+@bannerHeight: 72px;
+@menuWidth: 200px;
+@f16: 14px;
+
+body {
+  background-color: #F4F4F4;
+  color: @font-color;
+}
+
+select {
+  background-color: initial;
+}
+
+#main {
+  background: #f4f4f4;
+  // min-width: 1400px;
+  .flex-box;
+  .flex-flow(column, nowrap);
+}
+
+.header {
+  background: #478aee;
+  padding: 0 50px;
+  margin: 1px;
+}
+
+.main-container {
+  .flex(1 0 auto);
+  .flex-box;
+  .flex-flow(row, no-wrap);
+
+  // width: @mainWidth;
+  // margin: 0 auto;
+  .sider {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    position: fixed;
+    bottom: 0;
+    top: 50px;
+    left: 0;
+    overflow: auto;
+    background: #fff;
+
+    .menuTop {
+      padding: 14px 0;
+      background: #fff;
+      display: flex;
+      color: black;
+      font-weight: 700;
+      border-right: 1px solid #DCDEE2;
+
+      .homeicon {
+        width: 18px;
+        height: 18px;
+        margin: 0 3px 0 3px;
+      }
+    }
+  }
+
+  .content {
+    .flex(1 1 auto);
+    // background: #fff;
+    position: fixed;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+    top: 50px;
+
+    .pageContent {
+      overflow: auto;
+      width: auto;
+      position: fixed;
+      top: 100px;
+      left: 200px;
+      right: 0;
+      height: calc(~"100% - 92px");
+    }
+  }
+}

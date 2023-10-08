@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/placeorder.css">
+    <link rel="stylesheet" href="./css/placeordertwo.css">
+    <link rel="stylesheet" href="../common/style/finger.css">
+    <link rel="stylesheet" type="text/css" href="../common/style/sinosun_common.5664f620.css">
+    <style>
+        .pay-mask[data-v-35d7a8c8] {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            z-index: -1;
+            display: block;
+            tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-transition: opacity 400ms;
+            transition: opacity 400ms;
+        }
+
+        .pay-mask.show[data-v-35d7a8c8] {
+            opacity: 1;
+            z-index: 901;
+        }
+        .finger{
+            position: absolute;
+            top:.1rem ;
+            right: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44"
+            id="right">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                    d="M28.715863,11.568274 C29.977357,11.568274 31,10.545631 31,9.28413698 C31,8.02264296 29.977357,7 28.715863,7 L3.28413698,7 C2.02264296,7 1,8.02264296 1,9.28413698 L1,34.715863 C1,35.977357 2.02264296,37 3.28413698,37 C4.545631,37 5.56827396,35.977357 5.56827396,34.715863 L5.56827396,11.568274 L28.715863,11.568274 Z"
+                    fill-rule="nonzero"
+                    transform="translate(16.000000, 22.000000) rotate(-225.000000) translate(-16.000000, -22.000000) ">
+                </path>
+            </g>
+        </symbol>
+    </svg>
+    <div>
+        <!---->
+        <div data-v-030cb643="" class="child-view">
+            <div data-v-b94e16a0="" class="water-mark">
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+                <div data-v-b94e16a0="" class=" water-mark-item-pc">
+                    体验版
+                </div>
+            </div>
+            <div data-v-0813b95e="" data-v-030cb643="" class="page-order-detail">
+                <div data-v-0813b95e="" class="order-detail-container">
+                    <div data-v-0813b95e="">
+                        <header data-v-0813b95e="">
+                            <div data-v-0813b95e="" class="summary">
+                                <div data-v-0813b95e="" class="status">待支付
+                                    <!---->
+                                </div>
+                                <div data-v-0813b95e="" class="amount num-font cursorp"><span data-v-0813b95e=""
+                                        class="content"><span data-v-0813b95e="" class="unit rmb">¥</span>650</span>
+                                    <svg data-v-0813b95e="" class="icon icon icon-btn cursorp right"
+                                        style="width: 0.24rem; height: 0.24rem;">
+                                        <use xlink:href="#right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div data-v-0813b95e="" class="summary-note">
+                                舱位已锁定，请在<span data-v-0813b95e="">05分42秒</span>内完成支付，超时订单将取消
+                            </div>
+                            <!---->
+                            <div data-v-0813b95e="" class="order-no"><span data-v-0813b95e="">订单号</span><span
+                                    data-v-0813b95e="">F189047914110976</span></div>
+                            <!---->
+                        </header>
+                        <div data-v-0813b95e="" class="flight-card-container">
+                            <div data-v-29a80ef5="" data-v-0813b95e="" class="page-flight-card">
+                                <section data-v-29a80ef5="" class="order-card">
+                                    <div data-v-36660180="" data-v-29a80ef5="" class="page-flight-times flight-times">
+                                        <header data-v-36660180="" class="linear-gra-primary-light">
+                                            <div data-v-36660180="" class="airline-info">
+                                                <div data-v-06c45e89="" data-v-36660180=""
+                                                    class="icon icon-flight icon-CZ"></div> <span data-v-36660180=""
+                                                    class="lable">南方航空CZ6606</span> <span data-v-36660180=""
+                                                    class="lable">06月11日</span> <span data-v-36660180=""
+                                                    class="lable">周五</span>
+                                            </div>
+                                            <!---->
+                                            <div data-v-36660180="" class="air-info">
+                                                <div data-v-36660180="" class="time num-font">
+                                                    <div data-v-36660180="">06:40</div>
+                                                    <div data-v-36660180="">09:00</div>
+                                                </div>
+                                                <div data-v-36660180="" class="airport">
+                                                    <div data-v-36660180="">大兴国际机场</div>
+                                                    <div data-v-36660180="">天河机场T3</div>
+                                                </div>
+                                                <div data-v-36660180="" class="arrow">
+                                                    <div data-v-36660180="">约2小时20分钟</div>
+                                                    <div data-v-36660180="" class="icon"></div>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <div data-v-36660180="" class="airline-info-bottom"><span
+                                                    data-v-36660180="">波音738(中机型)</span> <span data-v-36660180=""
+                                                    class="split"></span> <span data-v-36660180="">有餐饮</span></div>
+                                        </header>
+                                    </div>
+                                    <!---->
+                                    <section data-v-29a80ef5="">
+                                        <div data-v-29a80ef5="" class="psg-info">
+                                            <div data-v-29a80ef5="" class="customer-list">
+                                                <div data-v-29a80ef5="" class="customer-info">
+                                                    <div data-v-29a80ef5="">李司司</div>
+                                                    <div data-v-29a80ef5="">身份证:4************7</div>
+                                                </div>
+                                                <div data-v-29a80ef5="" class="cabin-info">
+                                                    [经济舱]
+                                                </div>
+                                            </div>
+                                            <div data-v-29a80ef5="" class="cust-btn-group clear">
+                                                
+                                                <div data-v-29a80ef5="" class="tips-wait">待支付</div>
+                                                
+                                            </div>
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <ul data-v-0813b95e="" class="items">
+                        <li data-v-0813b95e="" class="cursorp">
+                            <div data-v-0813b95e="" class="explanation fr cursorp">
+                                退改签 / 行李额详情
+                            </div> <svg data-v-0813b95e="" class="icon icon icon-btn right"
+                                style="width: 0.24rem; height: 0.24rem;">
+                                <use xlink:href="#right"></use>
+                            </svg>
+                        </li>
+                        <!---->
+                        <!---->
+                    </ul>
+                    <div data-v-0813b95e="" class="reimbursementVoucher cursorp">
+                        <div data-v-0813b95e="">
+                            <div data-v-0813b95e="" class="tripInfo">
+                                <div data-v-0813b95e="" class="tripMsg">
+                                    北京 - 武汉
+                                </div>
+                                <div data-v-0813b95e="" class="label">报销凭证</div>
+                                <div data-v-0813b95e="" class="point-icon"></div>
+                            </div>
+                            <div data-v-0813b95e="" class="mailInfo nopay">
+                                <div data-v-0813b95e="" class="message">邮寄报销凭证，快递费￥15</div>
+                                <div data-v-0813b95e="" class="time">申请时间：2021/06/10 16:08:25</div>
+                            </div>
+                        </div> <svg data-v-0813b95e="" class="icon icon icon-btn right"
+                            style="width: 0.24rem; height: 0.24rem;">
+                            <use xlink:href="#right"></use>
+                        </svg>
+                    </div>
+                    <!---->
+                    <!---->
+                </div>
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <div data-v-35d7a8c8="" data-v-0813b95e="" class="pay-container">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                </div>
+                <div data-v-03bef4fa="" data-v-0813b95e="" class="pay-container">
+                    <!---->
+                    <!---->
+                    <!---->
+                </div>
+                <!---->
+                <!---->
+                <!---->
+            </div>
+        </div>
+        <div data-v-0813b95e="" class="v-transfer-dom">
+            <div data-v-0813b95e="" class="btn-group"><a data-v-0813b95e=""
+                    class="btn-cancel normal-btn cursorp">取消订单</a>
+                <a data-v-0813b95e="" class="btn-pay normal-btn linear-gra-waring cursorp" onclick="geotonextpage()">
+                    <div class="finger"></div>
+                    去支付
+                    <i data-v-0813b95e="" class="time icon"></i> <span data-v-0813b95e="">09:16</span></a>
+            </div>
+        </div>
+</body>
+<script>
+    function geotonextpage(){
+        window.open("../placeorderTwo/index.html")
+    }
+</script>
+</html>

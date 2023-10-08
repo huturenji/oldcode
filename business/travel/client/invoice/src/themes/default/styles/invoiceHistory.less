@@ -1,0 +1,207 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+.content_item{
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+.tripList {
+   
+    background: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: .2rem 0;
+    border-radius: 0.2rem;
+    box-shadow: 0px .04rem .3rem -.04rem rgba(125,155,250,0.22);
+    
+    .content {
+        
+        flex: 1;
+        padding: .4rem .5rem;
+        &:active{
+            opacity: .8;
+        }
+
+        .main {
+            display: flex;
+            .detail {
+                flex: 3;
+                .trip{
+                    font-size: .3rem;
+                    line-height: .42rem;
+                    color: @text-color;
+                    display: flex;
+                    align-items: flex-start;
+                    .icon_plane_plane{
+                        fill: @theme-color;
+                    }
+                    .icon_train_train{
+                        fill: @theme-color;
+                    }
+                    .icon_hotel_hotel{
+                        fill: @theme-color;
+                    }
+                    span{
+                        margin-left: .1rem;
+                    }
+                    i{
+                        margin-top: .06rem;
+                    }
+                    
+                }
+                .No {
+                    font-size: .24rem;
+                    line-height: .34rem;
+                    color: @secondary-text-color;
+                    margin-top: 0.1rem;
+                }
+                .date {
+                    font-size: .24rem;
+                    color: @secondary-text-color;
+                    line-height: .34rem;
+                    margin-top: 0.1rem;
+                }
+                .bgStart{
+                    padding-left: 0.39rem;
+                    background: url(~assets/img/myOrder/icon_taxi_positive1.svg) no-repeat left top 0.07rem;
+                    background-size: 0.28rem 0.28rem;
+                }
+                .bgEnd{
+                    padding-left: 0.39rem;
+                    background: url(~assets/img/myOrder/icon_taxi_positive2.svg) no-repeat left top 0.07rem;
+                    background-size: 0.28rem 0.28rem;
+                }
+                .bgTime{
+                    padding-left: 0.39rem;
+                    background: url(~assets/img/myOrder/icon_taxi_time.svg) no-repeat left;
+                    background-size: 0.24rem 0.24rem;
+                }
+            }
+            .price {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                text-align: right;
+                .fee{
+                    font-size: .36rem;
+                    font-weight: bold;
+                    line-height: .5rem;
+                    .biao{
+                        font-size: .2rem;
+                    }
+                }
+                
+                .trian_tips{
+                    font-size: 0.24rem;
+                }
+            }
+        }
+    }
+}
+
+.is_PC{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3rem 0.5rem;
+    .bbpx();
+    &>div{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .delete{
+            &:hover{
+                color: @theme-color;
+            }
+        }
+    }
+}
+.invoice-history-wrap{
+    overflow: hidden;
+    .invoiceList{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .content_item{
+            flex: 1;
+            max-height: 99%;
+            overflow-y: auto;
+        }
+    }
+}
+.tabList {
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.3rem;
+    background: #fff;
+    display: flex;
+    padding-bottom: .2rem;
+    box-sizing: content-box;
+    color: @secondary-text-color;
+    .tabItem {
+        flex: 1;
+        text-align: center;
+        position: relative;
+    }
+    .tabItem.active{
+        color: @text-color;
+        font-weight: bold;
+    }
+    .tabItem.active::after{
+        content: '';
+        position: absolute;
+        bottom: .1rem;
+        left: 50%;
+        margin-left: -0.37rem;
+        width: .74rem;
+        height: .04rem;
+        background: @theme-color;
+    }
+}
+.invoiceType {
+    font-size: .28rem;
+    text-align: right;
+    line-height: .4rem;
+}
+.taxtitle{
+    font-size: .24rem;
+    text-align: right;
+    line-height: .34rem;
+    color: @secondary-text-color;
+}
+
+
+.tripList {
+    /deep/ .vux-swipeout-content{
+        border-radius: 0.2rem;
+    }
+    /deep/ .vux-swipeout-button-box {
+      padding-right: 1px;
+    }
+    /deep/ .vux-swipeout-button-box{
+        button{
+            border-radius:0 0.2rem 0.2rem 0; 
+        }
+    }
+     /*
+    处理IOS会有红线的情况
+    */
+    /deep/ .vux-swipeout-button {
+        height: 96% !important;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    &:active{
+        opacity: .8;
+    }
+}
+.hotelName {
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+
+
+
+

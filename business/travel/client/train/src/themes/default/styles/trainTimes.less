@@ -1,0 +1,334 @@
+@import './trainCommon.less';
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+// 12306登录部分的样式
+.login_12306{
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1.2rem;
+    background-color: #fff;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .3rem;
+    .icon{
+        width: .72rem;
+        height: .72rem;
+        overflow: hidden;
+    }
+    .text{
+        flex: 1;
+        margin-left: .24rem;
+        font-size: .3rem;
+        color: @text-color
+    }
+    .login_btn{
+        color: #fff;
+        cursor: pointer;
+        width: 1.32rem;
+        height: .6rem;
+        line-height: .6rem;
+        text-align: center;
+        border-radius: .08rem;
+        background: linear-gradient(131deg, #8186FF 0%, @theme-color 100%);
+        &:active{
+            opacity: .8;
+        }
+    }
+}
+.container{
+    padding-bottom: 1.2rem;
+}
+.container.child-view{
+    /deep/ .noInfo{
+        height: 3.5rem;
+        margin-bottom: 0.3rem;
+    }
+    overflow: auto;
+    .top{
+        position: absolute;
+        background: @theme-color;
+        height: 1.7rem;
+        width: 100%;
+        top: 0;
+    }
+    .data-wrap{
+        position: relative;
+        z-index: 100;
+        margin: .47rem .3rem .4rem .3rem;
+        padding: .4rem .6rem;
+        background: #fff;
+        border-radius: .2rem;
+        box-shadow: 0px 4px 24px -4px rgba(125,155,250,0.12);
+        color: @text-color;
+        .notice-tips{
+            margin: 0 -.3rem;
+        }
+    }
+}
+
+.seats li.warn_tips{
+    color: @price-color;
+    font-size: 0.24rem;
+    line-height: 0.7rem;
+    margin-top: -0.2rem;
+}
+
+header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    
+    
+    .start-time,
+    .end-time {
+        .flex(1);
+        .date {
+            font-size: .24rem;
+            line-height: .34rem;
+        }
+        .time {
+            font-size: .67rem;
+            font-weight: 600;
+            line-height: .8rem;
+            margin-top: .1rem;
+            margin-bottom: .1rem;
+        }
+        .station {
+            font-size: .3rem;
+            line-height: .42rem;
+        }
+    }
+    .end-time{
+        text-align: right;
+    }
+    .time-info {
+        .flex(1);
+        font-size: .14rem;
+        text-align: center;
+        .train-no {
+            font-size: .24rem;
+            line-height: .34rem;
+            color: @secondary-text-color;
+        }
+        .iconWrap{
+            width: 100%;
+            height: .44rem;
+            margin: 0 auto;
+            background: url(~themes/default/img/icon_train_shikebiao3@2x.svg) no-repeat center;
+            background-size: contain;        
+        }
+
+        .duration {
+            font-size: .24rem;
+            line-height: .34rem;
+            color: @secondary-text-color;
+        }
+    }
+}
+
+
+.seat-wrap{
+    margin: 0 .3rem 0.3rem .3rem;
+    border-radius: .2rem;
+    box-shadow: 0px -4px 30px -4px rgba(125,155,250,0.12);
+}
+
+
+.calendar_new {
+    padding: 0 .3rem;
+    background: #fff;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-radius: .2rem .2rem 0 0;
+    // .bbpx();
+    .flex-box;
+    .justify-content(space-between);
+    .pre-btn,
+    .next-btn {
+        flex: 1;
+        color: @text-color;
+        font-size: 0.28rem; 
+        display: flex;
+        align-items: center;
+    }
+    .pre-btn{
+        justify-content: flex-start;
+        .icon_common_leftarrow{
+            fill: @third-text-color;
+        }
+    }
+    .next-btn{
+        justify-content: flex-end;
+        .icon_common_rightarrow{
+            fill: @third-text-color;
+        }
+    }
+    .pre-btn:active{
+        color: @third-text-color;
+    }
+    .next-btn:active{
+        color: @third-text-color;
+    }
+    .calendar-component-wrap {
+        flex: 2;
+        text-align: center;
+       
+        .calendar-component{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.3rem; 
+            color:  @text-color;
+            // padding-right: 0.4rem;
+            // background: url(~assets/img/trainList/icon_down.png) no-repeat right;
+            // background-size: 0.3rem 0.16rem;
+            svg{
+                margin-right: .12rem;
+            }
+        } 
+        .calendar-component:active{
+            color: @third-text-color;
+        }	           
+    }
+}
+.notice-info {
+    background: @info-background;
+    color: #999999;
+    font-size: .24rem;
+    padding: 0.2rem .24rem;
+    border-radius: .08rem; 
+    line-height: .36rem;
+    margin-top: .28rem;
+    i{
+        color: @price-color;
+        font-weight: 600;
+    }
+}
+.seats {
+    background: #fff;
+    border-radius:0 0 .2rem .2rem;
+    ul{
+       padding: 0 0.3rem; 
+       font-size: 0.3rem;
+       .btpx();
+    }
+   
+  
+    li {
+        height: 1.32rem;
+        line-height: 1.32rem;
+        .flex-box;
+        .justify-content(space-between);
+        .align-items(center);
+        div{
+           .flex(1); 
+        }
+        div.last{
+            text-align: right;
+        }
+        span {
+            .btn {
+                width: 1.4rem;
+                height: .6rem;
+                line-height: 0.6rem;
+                color: #fff;
+                text-align: center;
+                border-radius: .08rem;
+                display: inline-block;
+                font-size: .3rem;
+            }
+            
+            .btn.noauth{
+                color: #fff!important;
+               
+            }
+            
+        }
+        .gray{
+            color: @disable-color;
+        }
+        .red{
+            color: @price-color;
+        }
+        .price {
+            flex: 2;
+            i{
+                font-size: .28rem;
+                font-weight: normal;
+            }
+            color: @warning-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: .48rem;
+            font-weight: bold;
+            .coupon-label{
+                font-size: .2rem;
+                color: @warning-color;
+                text-align: center;
+                border-radius: .04rem;
+                border: 1px solid @warning-color;
+                min-width: 1.36rem;
+                padding: 0 .08rem;
+            }
+        }  
+        .leave{
+            font-size: .26rem;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: .2rem;
+        }      
+
+    }
+}
+.travelList {
+    .scrollLockWrap{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        .title {
+            display: flex;
+            justify-content: space-between;
+            background: #f2f3f5;
+            color: #999999;
+            padding: .2rem;
+            text-align: center;
+            span {
+                text-align: center;
+                display: inline-block;
+                width: 25%;
+            }
+        }
+        .list {
+            display: flex;
+            justify-content: space-between;
+            background: #f2f3f5;
+            border-bottom: 1px #dadada;
+            padding: .2rem;
+            span {
+                text-align: center;
+                display: inline-block;
+                width: 25%;
+            }
+        }
+        .list:nth-child(2) {
+            color: @theme-color;
+        }
+        .list:nth-child(2n) {
+            background: #ffffff;
+        }        
+    }
+    
+}
+
+    

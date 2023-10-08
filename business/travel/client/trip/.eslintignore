@@ -1,0 +1,11 @@
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+/src/assets
+/src/components
+/src/platform
+/src/sprite
+/src/themes
+/src/thirdparty

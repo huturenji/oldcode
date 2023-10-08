@@ -1,0 +1,116 @@
+@import '~themes/default/styles/common/index.less';
+
+.page-index{
+    padding-top: @title-bar-height;
+    .top_banner{
+        width: 100%;
+        height: 3.8rem;
+        cursor: pointer;
+        background: url(~themes/default/img/index/bg_plane_banner_jiu.png) 0 0 no-repeat;
+        background-size: 100% auto;
+    }
+    &.footerBar{
+        padding-bottom: 1.4rem;
+    }
+    .top{
+        padding: 0 .3rem;
+        position: relative;
+        width: 100%;
+        height: .88rem;
+        margin: -.38rem 0 .2rem;
+
+        .redPocket{
+            position: absolute;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            height: 100%;
+            line-height: .8rem;
+            background: #FFFFFF;
+            border-radius: @border-radius-base;
+            opacity: 0.78;
+
+            .split{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                height: .24rem;
+                width: .02rem;
+                background-color: @info-color;
+            }
+
+            .tab-button{
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+                text-align: center;
+                font-size: .28rem;
+                // transition: font-size .5s linear;
+                // transform-origin: center center;
+
+                &.active{
+                    font-weight: bold;
+                    color: @theme-color;
+                    font-size: .32rem;
+                    &:after{
+                        content: '';
+                        height: .04rem;
+                        width: .52rem;
+                        background: @theme-color;
+                        position: absolute;
+                        left: 50%;
+                        bottom: .04rem;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom{
+        padding: 0 .3rem 1.24rem;
+        .content{
+            .child-component {
+                transition: all .5s;
+                backface-visibility: hidden;
+                perspective: 1000;
+            }
+            .hot_phone{
+                width: 100%;
+                text-align: center;
+                font-size: .26rem;
+                color: #999999;
+                margin-top: .3rem;
+                height: .36rem;
+                line-height: .36rem;
+                i{
+                    &.left_line{
+                        margin-right: .1rem;
+                    }
+                    &.right_line{
+                        margin-left: .1rem;
+                    }
+                    font-style: normal;
+                    color: @info-color;
+                    font-weight: normal;
+                }
+                span{
+                    cursor: pointer;
+                    color: @theme-color;
+                    font-weight: 600;
+                    &:active{
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+    }
+
+    .insert-tips{
+        margin: 0 -.64rem;
+    }
+}

@@ -1,0 +1,643 @@
+
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.card-shadow{
+    box-shadow:0rem 0.04rem 0.30rem -0.04rem rgba(0,70,199,0.18);
+    border-radius: .2rem;
+    overflow: hidden;
+}
+.linear-gra-flight{
+    background:linear-gradient(337deg, #0500A3 0%, #3991F7 100%);
+}
+.linear-gra-hotel{
+    background: linear-gradient(337deg, #0092A3 0%, #00C882 100%);
+}
+.linear-gra-train{
+    background: linear-gradient(337deg, #0061D7 0%, #72D3F6 100%);
+}
+.linear-gra-car{
+    background: linear-gradient(140deg, #FFC601 0%, #FF810E 100%);
+}
+
+
+
+
+
+/*******************火车票显示时刻表信息部分样式开始****************/
+@keyframes vicp {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+.mask{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 510;
+}
+.wrap.wrap_container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 521;
+    padding: 0 7%;
+}
+.time-box{
+    border-radius: 0.3rem;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    -webkit-animation: vicp .2s ease-in;
+    animation: vicp .2s ease-in;
+    .content{
+        max-height: calc(~'70vh - 1rem');
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-bottom: 0.3rem;
+    }
+    .title{
+        padding-top: 0.4rem;
+        margin-bottom: 0.2rem;
+        font-size: 0.32rem;
+        color: #333;
+        text-align: center;
+        font-weight: 600;
+        position: relative;
+        .closeicon{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0.54rem;
+            height: 0.54rem;
+            background: url(~assets/img/trip/icon_close.png) center no-repeat;
+            background-size: 0.54rem;
+            &:active{
+                background: url(~assets/img/trip/icon_active_close.png) center no-repeat;
+                background-size: 0.54rem;
+            }
+        }
+      
+    }
+    .header{
+        font-weight: 600;
+    }
+    .selected.flex{
+        color: @theme-color;
+    }
+    .flex{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 0.72rem;
+        line-height: 0.72rem;
+        font-size: 0.28rem;
+        li{
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 0.48rem;
+            box-sizing: border-box;
+        }
+    }
+    .content ul:nth-child(2n-1){
+        background-color: #F2F3F5;
+    }
+}
+/*******************火车票显示时刻表信息部分样式结束****************/
+
+
+
+
+
+//左滑删除的按钮样式
+
+.delete_btn{
+    .delete_part{
+        width: .6rem;
+        height: .6rem;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+        .icon_mall_delete{
+            fill: @text-color;
+        }
+        &:active{
+            opacity: .8;
+        }
+    }
+}
+.noInfo{
+    height: auto!important;
+}
+// pc端订单的删除
+.delete_order{
+    margin-top: .1rem;
+    width: .8rem;
+    text-align: right;
+    font-size: 0.24rem;
+    cursor: pointer;
+    color: @third-text-color;
+    &:active{
+        opacity: .8;
+    }
+
+}
+.noMore {
+    width: 100%;
+    height: 0.8rem;
+    text-align: center;
+    line-height: 0.8rem;
+    margin-top: -0.1rem;
+    position: relative;
+    font-size: 0.24rem;
+    color: @third-text-color;
+}
+@media screen and (max-width: @screen-sm) {
+    .weui-toast{
+      transform: translateX(-50%)!important;
+      width:7.6em!important;
+      left: 50%!important;
+    }
+  }
+.trip-container{
+    .trip-list-container{
+        padding: 0 0.3rem;
+    }
+    .hisHead{
+        cursor: pointer;
+        overflow: hidden;
+        padding: .4rem .3rem;
+        text-align: center;
+        
+        top: 0;
+        width: 100%;
+        .history{
+            border-radius: .2rem;
+            font-size: .28rem;
+            background: #fff;
+            color: @text-color;
+            height: 0.68rem;
+            line-height: 0.68rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon_time{
+                fill: @text-color;
+            }
+            span{
+                margin-left: .1rem;
+            }
+            &:active{
+                opacity: .8;
+            }
+        }
+    }
+    
+ }
+ .footerBar .trip-container .trip-list-container{
+    padding: 0 0.3rem 1.4rem 0.3rem;
+ }
+ .tripList {
+    margin-bottom: .7rem;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 12;
+    .is_self{
+        display: flex;
+        margin-top: .2rem;
+        .clr_red{
+            color:@third-text-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i{
+                display: flex;
+                align-items: center;
+               
+                .icon_common_prompt{
+                    fill: @third-text-color;
+                    margin-right: .06rem;
+                }
+            }
+            .name{
+                font-weight: bold;
+                color: @text-color;
+            }
+        }
+    }
+    &:first-child{
+        margin-top: 0rem;
+    }
+
+
+    // 带有FlowId
+    .position{
+        font-size: 0;
+        font-weight: bold; 
+        position: relative;
+        span{
+            font-size: 0.36rem;
+            color: @text-color;
+            display: inline-block;
+            vertical-align: middle;
+        }     
+    }
+    // 不带有FlowId
+    .position.flowId{
+        font-size: 0; 
+        position: relative;
+        line-height: .4rem;
+        span{
+            font-size: .28rem;
+            color: @text-color;
+            font-weight: normal;
+        }
+        .position-title{
+            font-size: 0.28rem;
+            color: @text-color;
+        }
+        .for-public{
+            display: inline-block;
+            width:0.72rem;
+            height:.34rem;
+            line-height: .34rem;
+            text-align: center;
+            background:#fff;
+            border-radius:0.06rem;
+            font-size: 0.24rem;
+            color: @warning-color-light;
+            margin-left: 0.16rem;
+        }
+    }
+   
+  
+    .round {
+        img {
+            width: .4rem;
+        }
+    }
+    .title {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: .32rem;
+        .title_content{
+            font-weight: bold;
+            font-size: .36rem;
+            flex: 1;
+        }
+        .delete_trip{
+            width: .6rem;
+            height: .6rem;
+            background:#fff;
+            border-radius:50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            .icon_mall_delete{
+                fill: @secondary-text-color;
+            }
+            &:active{
+                opacity: .8;
+            }
+        }
+        
+    }
+    .date {
+        font-size: .28rem;
+        color: @text-color;
+        margin: .1rem 0;
+        line-height: .4rem;
+
+        .date-title{
+        }
+        .split{
+           
+        }
+    }
+    .detailCard {
+        border-radius: .2rem;
+        position: relative;
+        z-index: 100;
+        .content{
+            
+            position: relative;
+            color: #fff;
+        }
+        .content-train{
+            padding: .26rem .35rem .54rem .35rem;
+        }
+      
+        .content-flight{
+            padding: .26rem .35rem .54rem .35rem;
+        }
+        .content-hotel{
+            padding: .26rem .35rem .28rem .35rem;
+        }
+    }
+
+    .trip-card-list{
+        position: relative;
+        z-index: 100;
+        //左侧的那边线
+        &::before{
+            content: "";
+            position: absolute;
+            top: .65rem;
+            bottom: 0;
+            left: .24rem;
+            width : .02rem;
+            background-color: #D8D8D8;
+            z-index: 10;
+        }
+
+        .list {
+            
+
+            .type {
+                .clear;
+                .card-date{
+                    &.flowId{
+                        margin-top: .6rem;
+                    }
+                    margin: .32rem 0;
+                    position: relative;
+                    font-size: .28rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    .left{
+                        padding: 0 .26rem 0 .46rem;
+                        position: relative;
+                        z-index: 100;
+                        background-color: #fff;
+                        height: .52rem;
+                        line-height: .52rem;
+                        padding: 0 .26rem 0 .46rem;
+                        border-radius: .42rem;
+                        color: @text-color;
+                        position: relative;
+                        box-shadow: 0px -.04rem .56rem 0px rgba(130,131,155,0.1);
+                        &::before{
+                            content:"";
+                            position: absolute;
+                            width: .12rem;
+                            height: .12rem;
+                            border-radius: 50%;
+                            background-color: @text-color;
+                            top: 50%;
+                            margin-top: -.06rem;
+                            left: .2rem;
+                        }
+                    }
+                    .week{
+                        margin-left: .14rem;
+                    }
+                   
+                }
+                .line{
+                    margin: 0 auto;
+                    padding: 0;
+                    height: 100%;
+                    width: 1px;
+                    background:#f2f3f5;
+                }
+            }
+            .full {
+                position: relative;
+                z-index: 100;
+                /deep/ .vux-swipeout-content{
+                    border-radius: .2rem;
+                }
+                position: relative;
+              
+                .trainDetail{
+                   color: #fff;
+                }
+                .carDetail{
+                    
+                }
+                .hotelDetail{
+                    color: #fff;
+                }
+                .flightDetail{
+                    color: #fff;
+                }
+                
+                .leave{
+                    height: 1.02rem;
+                    line-height: 1.02rem;
+                    font-size: 16px;
+                    margin: 0rem .25rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px dashed @border-color-base;
+                    &>div{
+                        display: flex;
+                        align-items: center;
+                        .icon_train_train{
+                            fill: #fff;
+                        }
+                        .icon_hotel_hotel{
+                            fill: #fff;
+                        }
+                        .icon_plane_plane{
+                            fill: #fff;
+                        }
+                    }
+                    .air_logo{
+                        display: inline-block;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        width: .42rem;
+                        height: .42rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: .12rem;
+                        /deep/ .logo {
+                            border-radius: 50%;
+                            background-size: 100% auto;
+                        }
+                    }
+                    .code{
+                        display: flex;
+                        align-items: center;
+                        i{
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                    .time{
+                        font-size: 15px;
+                    }
+                         
+                    .icon {
+                        width: .3rem;
+                        height: auto;
+                        margin-right: 0.1rem;
+                    }
+                    .icon.icon-car {
+                        width: .36rem;
+                        height: auto;
+                        margin-right: 0.1rem;
+                    }
+                }
+            }
+        }
+    }
+    .rightBut {
+        position: absolute;
+        right: 0.3rem;
+        top: 0rem;
+        height: 0.6rem;
+        width: 0.6rem;
+        background: url(~assets/img/trip/del.png) no-repeat center;
+        background-size: 0.38rem;
+        cursor: pointer;
+    }
+    .haveApply{
+        text-align: center;
+        color: #478aee;
+        border: 1px solid #478aee;
+        border-radius: 0.05rem;
+        cursor: pointer;
+        font-size: 0.3rem;
+        padding: 0.02rem 0.15rem;
+            
+    }
+    .applying{
+        text-align: center;
+        color: @warning-color-light;
+        font-size: .36rem;     
+        font-weight: normal; 
+        font-weight: bold; 
+    }
+    
+
+    .orderList {
+        margin-top: .32rem;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        
+        .order {
+            width: 1.76rem;
+            height: .64rem;
+            line-height: .64rem;
+            border-radius: 0.16rem;
+            font-size: .28rem;
+            box-sizing: border-box;
+            background-color: #fff;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid @theme-color;
+            color: @theme-color;
+            &:active{
+                background-color: @theme-color;
+                color: #fff;
+            }
+        }
+        
+
+
+        .orderCar.disabledCar{
+            border-color: @disable-color;
+            color: @disable-color;
+            &:active{
+                opacity: .8;
+            }
+        }
+
+
+        .textDisabled{
+            color:@disable-color  ;
+            border: 1px solid @disable-color;
+            &:active{
+                background-color: #fff;
+                color: @disable-color  ;
+            }           
+        }
+    }
+}
+
+
+/****审批的界面样式开始*****/
+.approve-box{
+    .approve-content{
+       box-sizing: border-box;
+       background-color: #fff;
+       padding: 1rem 0 1.6rem 0;
+       text-align: center;
+        img{
+            width: 1rem;
+            height: auto;
+        }
+       .tips{
+           font-size: .34rem;
+           margin-top: .29rem;
+           &.colorYellow{
+               color: @warning-color;
+           }
+           &.colorGreen{
+               color: #28b159;
+           }
+           &.colorRed{
+               color: @price-color;
+           }
+           &.colorGray{
+               color: #c2c2c2;
+           }
+       }
+       
+       .des{
+           font-size:.28rem;
+            margin-top: .3rem;
+       }
+    }
+   .confirmBtn{
+       width: 92%;
+       height: 0.88rem;
+       line-height: 0.88rem;
+       text-align: center;
+       color: #fff;
+       background-color: @theme-color;
+       cursor: pointer;
+       border-radius:0.2rem;
+       margin: 1rem auto;
+       font-size:0.3rem;
+       &:active{
+           opacity: .8;;
+       }
+   }
+   .confirmBtn.huaxingStyle{   
+       background-color: #AB2029;
+       &:active{
+           background-color: #AB2029;
+       }
+   }
+}
+/****审批的界面样式结束*****/

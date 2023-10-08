@@ -1,0 +1,20 @@
+<svg id="icon_route_circle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #478aee;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="椭圆_844" data-name="椭圆 844" class="cls-1" cx="12" cy="12" r="11"/>
+  <path id="椭圆_609_拷贝_4" data-name="椭圆 609 拷贝 4" class="cls-2" d="M2929,1060a12,12,0,1,1-12,12A12,12,0,0,1,2929,1060Zm0,2a10,10,0,1,1-10,10A10,10,0,0,1,2929,1062Z" transform="translate(-2917 -1060)"/>
+  <circle id="椭圆_609_拷贝" data-name="椭圆 609 拷贝" class="cls-3" cx="12" cy="12" r="6"/>
+</svg>

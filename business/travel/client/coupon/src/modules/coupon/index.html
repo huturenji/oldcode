@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        //index.js加载失败重载页面
+        function error(){
+            try {
+                let key = "bp_reloadPageTime";
+                let nowTime = new Date().getTime();
+                let reloadTime = localStorage.getItem(key) || 0;
+                if(0===reloadTime || (nowTime - reloadTime > 1000)){
+                    window.localStorage.setItem(key,nowTime);
+                    sinosdk.sino.clearWebViewCache();
+                    window.location.reload(true);
+                };
+            } catch (error) {
+                
+            }
+        }
+    </script>
+	<meta http-equiv="Cache-Control" content="max-age=0" />
+    <meta http-equiv="expires" content="Fri, 22 Aug 2019 00:52:49 GMT" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="icon" href="data:;base64,=">
+	<title></title>
+</head>
+<body ontouchstart="">
+	<div id="coupon"></div>
+	<!-- 错误404页面相关的DOM -->
+	<script type="text/javascript" src="./thirdparty/WebViewJavascriptBridge.js"></script>
+	<script type="text/javascript" src="./thirdparty/vue.js"></script>
+	<script type='text/javascript' src='<%=htmlWebpackPlugin.options.path%>swplib/bp/lib/index/swp-utils.js?t=<%=htmlWebpackPlugin.options.data%>'> </script>
+    <script type='text/javascript' src='<%=htmlWebpackPlugin.options.path%>swplib/bp/sinosdk/sinosdk.js?t=<%=htmlWebpackPlugin.options.data%>'> </script>
+    <script type='text/javascript' src='<%=htmlWebpackPlugin.options.path%>swplib/bp/lib/travel/swp-travel.js?t=<%=htmlWebpackPlugin.options.data%>'> </script>
+</body>
+</html>

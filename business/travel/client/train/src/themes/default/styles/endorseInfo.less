@@ -1,0 +1,197 @@
+@import './trainCommon.less';
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+
+.content .vux-x-switch.weui-cell_switch{
+    width: 100%;
+    padding: 0;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .right-des:active{
+    opacity: .8;
+  }
+  .right-des{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0.3rem;
+    padding-top: 0.3rem;
+    font-size: 0.26rem;
+    color: @theme-color;
+    text-align: right;
+    cursor: pointer;
+    .icon_common_prompt{
+        fill: @theme-color;
+        margin-right: .08rem;
+    }
+    span{
+        display: flex;
+        align-items: center;
+    }
+    &:active{
+        opacity: .8;
+    }
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+
+  .endorse-container{
+    font-size: .32rem;
+    height: 100%;
+    color: @text-color;
+    background: @background-color;
+    ul.content{
+      width: 100%;
+      padding: 0 .3rem;
+      background: #fff;
+      li{
+        height: 1.1rem;
+        line-height: 1.1rem;
+        font-size: .32rem;
+        border-bottom: 1px solid @border-color-base;
+        .flex-box;
+        .justify-content(space-between);
+        align-items: center;
+        &:last-of-type{
+          border: none;
+         }
+
+        span{
+          &:first-of-type{
+             width: 2.5rem;
+             color: @secondary-text-color;
+           }
+          &:last-of-type{
+            max-width: calc(~"100% - 1.5rem");
+            color: @text-color;
+            text-align: right;
+            &.blue{
+              color: @theme-color;
+              .icon_common_rightarrow{
+                  fill: @disable-color;
+              }
+             }
+           }
+        }
+      }
+    }
+
+    .description{
+      padding: .3rem;
+      height: .3rem;
+      line-height: .3rem;
+      text-align: right;
+      color: @theme-color;
+      font-size: .26rem;
+
+      .icon{
+        height: .3rem;
+        width: .3rem;
+        margin: 0 .2rem;
+        background: url(~assets/img/compment/icon_about.png) no-repeat 0 center;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: bottom;
+      }
+    }
+
+    .search-btn{
+      width: 100%;
+      height: .88rem;
+      line-height: .88rem;
+      color: #fff;
+      padding: 0 .3rem;
+      margin-top: .5rem;
+      text-align: center;
+      font-size: .32rem;
+      div{
+        background: @theme-color;
+        border-radius: .2rem;
+      }
+    }
+     .search-btn div:active{
+       opacity: .8;
+     }
+  }
+
+  .showCabinPop{
+    background: #fff;
+    .title{
+      height: .92rem;
+      line-height: .92rem;
+      padding: 0 .1rem 0 .3rem;
+      border-bottom: 1px solid #e5e5e5;
+        .icon-close{
+          background: url(~assets/img/compment/icon_close_simple.png) center no-repeat;
+          background-size: contain;
+          height: .6rem;
+          width: .6rem;
+          margin: .16rem 0;
+          float: right;
+          display: inline-block;
+          vertical-align: bottom;
+        }
+    }
+  .tips-container{
+    text-align: center;
+    .tips{
+      display: inline-block;
+      height: .92rem;
+      line-height: .92rem;
+      font-size: .26rem;
+      color: #F83939;
+      background: url(~assets/img/compment/icon_tips_red.png) left center no-repeat;
+      background-size: .4rem;
+      text-indent: .56rem;
+    }
+  }
+
+  ul{
+      li{
+        margin-left: .62rem;
+        height: .92rem;
+        line-height: .92rem;
+        font-size: .32rem;
+        border-bottom: 1px solid #e5e5e5;
+        text-align: left;
+         &.selected{
+           color: @theme-color;
+           background: url(~assets/img/compment/icon_choosed.png) center right .6rem no-repeat;
+           background-size: .4rem;
+         }
+        &.disable{
+           color: #C2C2C2;
+         }
+      }
+    }
+  }
+
+  .mask{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    tap-highlight-color: transparent;
+    z-index: 501;
+    transition: opacity .4s;
+  }
+
+  .endorse-notice{
+      color: @third-text-color;
+      font-size: .26rem;
+      padding: 0 .3rem;
+      margin: .2rem 0 1rem;
+      .title{
+        font-weight: bold;
+        font-size: .28rem;
+        margin-bottom: .15rem;
+      }
+    }

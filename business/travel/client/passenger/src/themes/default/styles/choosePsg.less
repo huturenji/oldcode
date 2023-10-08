@@ -1,0 +1,87 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+// 乘客新增按UE改
+.psg_box{
+  .psg_box_title{
+    font-size: 0.36rem;
+    font-weight: bold;
+    padding: 0.4rem 0.3rem 0;
+    display: flex;
+    justify-content: space-between;
+    .title_tips{
+      font-size: 0.22rem;
+      color: @third-text-color;
+      font-weight: normal;
+    }
+  }
+  ul{
+    padding:0 0.3rem;
+    overflow: hidden;
+    padding-bottom: 0.4rem;
+    position: relative;
+    &::after{
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0.3rem;
+      bottom: 0;
+      border-bottom:1px solid #e5e5e5;
+    }
+    li{ 
+      width: 1.42rem;
+      height: 0.6rem;
+      padding: 0 0.1rem;
+      line-height: 0.6rem;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      float: left;
+      margin-right: 0.4rem;
+      text-align: center;
+      border: 1px solid @border-color-base;
+      margin-top: 0.38rem;
+      border-radius: 0.05rem;
+      cursor: pointer;
+      font-size: 0.28rem;
+      color: @third-text-color;
+    }
+    li.selected{
+      color: @theme-color;
+      border: 1px solid @theme-color;
+      background: url('~themes/default/img/icon_plane_select@2x.svg') right bottom no-repeat;
+      background-size: 0.3rem auto;
+    }
+    li:nth-child(4n){
+      margin-right: 0;
+    }
+    li.add_psg{
+      color: #fff; 
+      background-color: @theme-color;
+      border:1px solid @theme-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      line-height: normal;   
+      .icon_common_add{
+        fill: #fff;
+      }
+      span{
+        margin-left: .1rem;
+      }
+    }
+    li:active{
+        opacity: .5;
+    }
+  }
+}
+   // pc端
+  @media screen and (min-width: @screen-sm) { 
+    .psg_box{
+      ul{
+         li:nth-child(4n){
+          margin-right: 0.4rem;
+        }
+      }
+    }
+  }

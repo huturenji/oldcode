@@ -1,0 +1,127 @@
+@import 'base.less';
+:root{
+    //css变量在这里定义
+    --themeColor: @base-theme-color;
+    --themeColorActive: @base-theme-color-active;
+    --priceColor: @base-price-color;
+    --yellowColor: @base-yellow-color;
+    --dangerColorLight: @base-danger-color-light;
+    --successColor: @base-success-color;
+    --infoColor: @base-info-color;
+    --warningColor: @base-warning-color;
+    --warningColorLight: @base-warning-color-light;
+    --dangerColor: @base-danger-color;
+    --dangerColorLight: @base-danger-color-light;
+    --normalColor: @base-normal-color;
+    --textColor: @base-text-color;
+    --secondaryTextColor: @base-secondary-text-color;
+    --thirdTextColor: @base-third-text-color;
+    --placeholderColor: @base-placeholder-color;
+    --disableColor: @base-disable-color;
+    --backgroundColor: @base-background-color;
+    --shareBackgroundColor: @base-share-background-color;
+    --subBackgroundColor: @base-sub-background-color;
+    --infoBackground: @base-info-background;
+    --orderingBackground: @base-ordering-background;
+    --borderColorBase: @base-border-color-base;
+    --shadowColor: @base-shadow-color;
+    --tipsbgColor: @base-tipsbg-color;
+    --linearDangerColorStart: @base-linear-danger-color-start;
+    --linearDangerColorEnd: @base-linear-danger-color-end;
+    --linearPrimaryColorStart: @base-linear-primary-color-start;
+    --linearPrimaryColorEnd: @base-linear-primary-color-end;
+    --linearPrimaryLightColorStart: @base-linear-primary-light-color-start;
+    --linearPrimaryLightColorEnd: @base-linear-primary-light-color-end;
+    --linearDisableColorStart: @base-linear-disable-color-start;
+    --linearDisableColorEnd: @base-linear-disable-color-end;
+    --linearWaringColorStart: @base-linear-waring-color-start;
+    --linearWaringColorEnd: @base-linear-waring-color-end;
+    --linearSuccessColorStart: @base-linear-success-color-start;
+    --linearSuccessColorEnd: @base-linear-success-color-end;
+    --linearSuccessLightColorStart: @base-linear-success-light-color-start;
+    --linearSuccessLightColorEnd: @base-linear-success-light-color-end;
+
+}
+
+// 组件命名前缀
+@sino-prefix: sn;
+
+// 主题色
+@theme-color: ~"var(--themeColor)";
+@theme-color-active: ~"var(--themeColorActive)";
+// 通用颜色
+@price-color: ~"var(--priceColor)";
+@yellow-color: ~"var(--yellowColor)";
+@success-color: ~"var(--successColor)";
+@info-color: ~"var(--infoColor)";
+@warning-color: ~"var(--warningColor)";
+@warning-color-light: ~"var(--warningColorLight)";
+@danger-color: ~"var(--dangerColor)";
+@danger-color-light: ~"var(--dangerColorLight)";
+@normal-color: ~"var(--normalColor)";
+@text-color: ~"var(--textColor)";
+@secondary-text-color: ~"var(--secondaryTextColor)";
+@third-text-color: ~"var(--thirdTextColor)";
+@placeholder-color: ~"var(--placeholderColor)";
+@disable-color: ~"var(--disableColor)";
+@background-color: ~"var(--backgroundColor)";
+@share-background-color: ~"var(--shareBackgroundColor)";
+@sub-background-color: ~"var(--subBackgroundColor)";
+@info-background: ~"var(--infoBackground)";
+@ordering-background: ~"var(--orderingBackground)";
+@border-color-base: ~"var(--borderColorBase)";
+@shadow-color: ~"var(--shadowColor)";
+@tipsbg-color:~"var(--tipsbgColor)";
+//渐变色
+@linear-danger-color-start: ~"var(--linearDangerColorStart)";
+@linear-danger-color-end: ~"var(--linearDangerColorEnd)";
+@linear-primary-color-start: ~"var(--linearPrimaryColorStart)";
+@linear-primary-color-end: ~"var(--linearPrimaryColorEnd)";
+@linear-primary-light-color-start: ~"var(--linearPrimaryLightColorStart)";
+@linear-primary-light-color-end: ~"var(--linearPrimaryLightColorEnd)";
+@linear-disable-color-start: ~"var(--linearDisableColorStart)";
+@linear-disable-color-end: ~"var(--linearDisableColorEnd)";
+@linear-waring-color-start: ~"var(--linearWaringColorStart)";
+@linear-waring-color-end: ~"var(--linearWaringColorEnd)";
+@linear-success-color-start: ~"var(--linearSuccessColorStart)";
+@linear-success-color-end: ~"var(--linearSuccessColorEnd)";
+@linear-success-light-color-start: ~"var(--linearSuccessLightColorStart)";
+@linear-success-light-color-end: ~"var(--linearSuccessLightColorEnd)";
+
+// 通用字体大小
+@font-size-base: .3rem;
+
+//留白
+@white-space: .3rem;
+@white-space-sm: .08rem;
+
+// 通用行高
+@line-height: 1.4;
+
+// 通用圆角大小
+@border-radius-base: .2rem;
+@border-radius-lg: .26rem;
+@border-radius-sm: .08rem;
+
+// 动画
+@ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+@animation-duration-base: 300ms;
+
+
+// 屏幕尺寸
+@screen-sm: 616px;
+@screen-md: 768px;
+@screen-lg: 960px;
+
+// PC通用内边距
+@pc-padding-base: 30px;
+@pc-padding-lg: 50px;
+@pc-padding-sm: 15px;
+
+// dom最大宽度
+@max-content-width: 960px;
+
+// title栏高度
+@title-bar-height: var(--titleBarHeight, 0);

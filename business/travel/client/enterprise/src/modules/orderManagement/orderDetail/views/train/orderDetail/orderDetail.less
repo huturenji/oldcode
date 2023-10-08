@@ -1,0 +1,668 @@
+@charset "utf-8";
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+//为他人预定的订单样式
+@otherBookColor:#c2c2c2;
+@otherBookBorder:#c2c2c2;
+@otherBookBg:#c2c2c2;
+
+* {
+    box-sizing: border-box;
+}
+
+.header{
+    margin: 0 -.3rem;
+    padding: .2rem .32rem;
+    color: #fff !important;
+    background: #262DD9;
+
+    .headInfo {
+        border-top: 1px solid #fff;
+        display: flex;
+        margin-top: 5px;
+        padding-top: 5px;
+
+        .infoOne {
+            text-align: left;
+            flex: auto;
+        }
+    }
+}
+
+
+.refund_change {
+    overflow: hidden;
+}
+
+.fLeft {
+    float: left;
+}
+
+.f1Right {
+    float: right;
+    width: .16rem;
+    height: .3rem;
+    background: url(~assets/img/compment/icon_right.png) no-repeat center;
+    background-size: .14rem .22rem;
+    ;
+}
+
+.option-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.3rem;
+
+    &>div {
+        width: 47%;
+        height: 0.76rem;
+        line-height: 0.76rem;
+        text-align: center;
+        border-radius: 0.08rem;
+        background-color: @theme-color;
+        color: #fff;
+        cursor: pointer;
+        font-size: 0.3rem;
+    }
+
+    .cancel-option {
+        background-color: #fff;
+        border: 1px solid  @theme-color;
+        color: @theme-color;
+    }
+    .cancel-option.otherBook{
+        color: @otherBookColor;
+        border-color: @otherBookBorder;
+        &:active{
+            background-color: #fff;
+        }
+    }
+    .confirm-option.otherBook{
+        background-color: @otherBookBg;
+        &:active{
+            background-color: @otherBookBg;
+        }
+    }
+
+    .confirm-option:active {
+        background-color: @theme-color-active;
+    }
+}
+
+.fRight {
+    float: right;
+
+    .icon-arrow {
+        margin: .1rem .2rem;
+        width: .16rem;
+        height: .3rem;
+        float: right;
+        background: url(~assets/img/compment/icon_right.png) no-repeat center;
+        background-size: contain;
+    }
+}
+.fRight.otherBook{
+    color: @otherBookColor;
+}
+.order-detail-container {
+    padding: 0 .3rem .92rem .3rem;
+    margin-bottom: .8rem;
+
+    &>div {
+        .clear;
+    }
+
+    .summary {
+        height: .5rem;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        .justify-content(space-between);
+        .align-items(center);
+        font-weight: bold;
+
+        .status {
+            font-size: .36rem;
+        }
+
+        .amount {
+            font-size: .44rem;
+
+            .unit {
+                font-size: .3rem;
+            }
+
+            .icon-arrow {
+                margin: .1rem 0 .1rem .2rem;
+                width: .16rem;
+                height: .3rem;
+                float: right;
+                background: url(~assets/img/compment/icon_right_white.png) no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+
+    .summary-note {
+        font-size: .24rem;
+        margin: .14rem 0;
+
+        span {
+            color: #FFB843;
+        }
+    }
+
+    .order-no {
+        font-size: .26rem;
+        text-align: left;
+        margin: .1rem 0;
+
+        span {
+            margin-right: .15rem;
+        }
+    }
+
+    .order-card {
+        .clear;
+        margin-top: .2rem;
+
+        section {
+            .clear;
+            background: #fff;
+            padding: 0 .3rem;
+
+            &:last-of-type {
+                border-radius: 0 0 .1rem .1rem;
+
+                .customer-info {
+                    border-bottom-color: transparent;
+                }
+            }
+
+            .customer-info {
+                border-bottom: 1px dashed #c2c2c2;
+                padding-bottom: .37rem;
+                padding-top: .32rem;
+
+                &.disable {
+
+                    div,
+                    span {
+                        color: @third-text-color  !important;
+                    }
+                }
+
+                &>div {
+                    .clear;
+                    margin-bottom: .1rem;
+                }
+
+                .name,
+                .car-no {
+                    font-size: .32rem;
+                    color: @text-color;
+                }
+
+                .id-card,
+                .seat-info {
+                    font-size: .28rem;
+                    color: @third-text-color;
+
+                    .seat-lv {
+                        margin-right: .13rem;
+                    }
+
+                    .seat-amount {
+                        font-size: .28rem;
+                        font-weight: 500;
+                        color: #F83939;
+                    }
+                }
+
+                .cust-btn-group {
+                    .clear;
+                    position: relative;
+                    top: .15rem;
+
+
+                    // 改签成功后一系列状态展示样式开始
+                    .change-tips-success{
+                        color: @font-green;
+                        line-height: .53rem;
+                        float: left;
+                    }
+
+                    .change-tips-failed{
+                        color: @danger-color-light;
+                        line-height: .53rem;
+                        float: left;
+                    }
+                    .change-tips-wait{
+                        color: @font-yellow;
+                        line-height: .53rem;
+                        float: left;
+                    }
+                    // 改签成功后一系列状态展示样式结束
+                    .btn {
+                        float: right;
+                        width: 1.05rem;
+                        height: .49rem;
+                        margin-left: .39rem;
+                        border: 1px solid @text-color;
+                        border-radius: .06rem;
+                        text-align: center;
+                        &.disable {
+                            border-color: #c2c2c2 !important;
+                            color: #c2c2c2 !important;
+                        }
+
+                    }
+                    .otherBook.btn{
+                        color: @otherBookColor;
+                        border-color: @otherBookBorder !important;
+                    }
+                    .tips-wait {
+                        color: @font-green;
+                        line-height: .53rem;
+                        float: left;
+                    }
+
+                    .tips-failed {
+                        color: @danger-color-light;
+                        line-height: .53rem;
+                        float: left;
+                    }
+
+                    .tips-cancel {
+                        color: #c2c2c2;
+                        line-height: .53rem;
+                        float: left;
+                    }
+
+                    .psg-status {
+                        float: left;
+                        line-height: .53rem;
+                    }
+                }
+
+                .status-message {
+                    color: @text-color;
+                    background: url(~assets/img/compment/icon_tips_red.png) no-repeat left top transparent;
+                    background-size: .35rem;
+                    margin: .24rem 0 0;
+                    line-height: .4rem;
+                    text-indent: .45rem;
+
+                    &:before {
+                        display: none;
+                    }
+
+                    a {
+                        color: @theme-color;
+                        cursor: pointer;
+                    }
+                }
+                .status-message-gai {
+                    color: @text-color;
+                    margin: .24rem 0 0;
+                    line-height: .4rem;
+                    &:before {
+                        display: none;
+                    }
+
+                    a {
+                        color: @theme-color;
+                        cursor: pointer;
+                    }
+                }
+
+                .change-info {
+                    color: @danger-color-light;
+                }
+                .change-info-green {
+                    color: @font-green;
+                }
+            }
+        }
+    }
+
+    .explanation {
+        float: right;
+        height: .3rem;
+        line-height: .3rem;
+        margin: .2rem;
+        font-size: .26rem;
+        text-indent: .4rem;
+        color: @theme-color;
+        background: url(~assets/img/compment/icon_about.png) no-repeat 0 center;
+        background-size: .38rem;
+    }
+
+
+    .items {
+        margin: 0 -.3rem;
+
+        li {
+            .clear;
+            font-size: .32rem;
+            background: #fff;
+            padding: .3rem;
+            margin: .2rem 0;
+
+            &.no-padding {
+                padding: 0;
+            }
+
+            div:first-of-type {
+                margin-right: .3rem;
+            }
+
+            .detail {
+                color: @third-text-color;
+                padding-right: .35rem;
+                background: url(~assets/img/compment/icon_right.png) no-repeat right center;
+                background-size: .32rem;
+            }
+
+            div.reimburse-btn {
+                padding: .1rem;
+                background: @theme-color;
+                margin: 0;
+                color: #fff;
+                font-size: .24rem;
+            }
+            div.reimburse-btn:active {
+                background: @theme-color-active;
+            }
+            div.reimburse-btn.otherBook {
+                background: @otherBookBg;
+            }
+            div.reimburse-btn.otherBook:active {
+                background: @otherBookBg;
+            }
+
+            
+
+            .callphone {
+                cursor: pointer;
+                color: @theme-color;
+                padding-left: 0.5rem;
+                font-size: 0.3rem;
+                background: url(~assets/img/compment/icon_phone.png) no-repeat 0 center;
+                background-size: contain;
+            }
+
+            .btn-again{
+                background: #fff;
+                color: @theme-color;
+                text-align: center;
+                display: block;
+                height: .92rem;
+                line-height: .92rem;
+                &:active {
+                    color: #B5D0F9;
+                }
+            }
+            .btn-again.otherBook{
+                color: @otherBookColor;
+            }
+        }
+    }
+
+
+}
+
+.price-detail-modal {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: .8rem;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, .92);
+    color: @text-color;
+    z-index: 99999;
+
+    .total-price {
+        margin: 10vh auto 0;
+        text-align: center;
+        border-bottom: .01rem solid #c2c2c2;
+
+        &>div {
+            &:first-child {
+                font-size: .32rem;
+            }
+
+            &:last-child {
+                color: #f83939;
+                font-size: .72rem;
+                font-weight: bold;
+                margin: .25rem 0 .5rem;
+
+                .unit {
+                    font-size: .47rem;
+                }
+            }
+        }
+    }
+
+    .price-detail {
+        ul {
+            margin-top: .3rem;
+
+            li {
+                .clear;
+                margin-bottom: .35rem;
+                font-size: .32rem;
+            }
+        }
+    }
+
+    .modal-close-btn {
+        cursor: pointer;
+        width: .62rem;
+        height: .62rem;
+        display: block;
+        background: url(~assets/img/compment/icon_close_nor.png) no-repeat center;
+        background-size: contain;
+        position: fixed;
+        bottom: 0;
+        left: calc(~'50% - .3rem');
+        margin: .5rem auto;
+
+        &:active {
+            background: url(~assets/img/compment/icon_close_pre.png) no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+.travelList {
+    .title {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        background: #f2f3f5;
+        color: #999999;
+        padding: .2rem;
+        text-align: center;
+
+        span {
+            text-align: center;
+            display: inline-block;
+            width: 25%;
+        }
+    }
+
+    .list {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        background: #f2f3f5;
+        padding: .2rem;
+
+        span {
+            text-align: center;
+            display: inline-block;
+            width: 25%;
+        }
+    }
+
+    .list:nth-child(2) {
+        color: @theme-color;
+    }
+
+    .list:nth-child(2n) {
+        background: #ffffff;
+    }
+}
+.btn-group.otherBook{
+    .btn-cancel{
+        color: @otherBookColor;
+    }
+    .btn-cancel:active {
+        background: #fff;
+    }
+    .btn-pay{
+        background: @otherBookBg;
+    }
+    .btn-pay:active {
+        background: @otherBookBg;
+    }
+    .btn-again{
+        color: @otherBookColor;
+        &:active {
+            color: @otherBookColor;
+        }
+    }
+}
+.btn-group {
+    .flex-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: .92rem;
+    font-size: .32rem;
+
+    .btn-cancel {
+        .flex(1);
+        background: #fff;
+        text-align: center;
+    }
+
+
+    .btn-pay {
+        .flex(2);
+        background: @theme-color;
+        color: #fff;
+        text-align: center;
+    }
+
+    .btn-pay:active {
+        background: @theme-color-active;
+    }
+
+    .btn-again {
+        .flex(1);
+        background: #fff;
+        color: @theme-color;
+        text-align: center;
+
+        &:active {
+            color: #B5D0F9;
+        }
+    }
+}
+
+.contact-bp {
+    height: .92rem;
+    line-height: .92rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: .32rem;
+    color: #fff;
+    text-indent: 1.89rem;
+    background: url(~assets/img/compment/contact_bp_bg.png) repeat-y left top;
+    background-size: contain;
+
+    img {
+        width: 1.11rem;
+        height: 1.11rem;
+        position: absolute;
+        left: .52rem;
+        bottom: 0;
+    }
+
+    i {
+        background: url(~assets/img/compment/icon_tishi_nor.png) no-repeat center center;
+        background-size: .32rem .32rem;
+        width: .32rem;
+        height: 100%;
+        float: right;
+        margin-right: .3rem;
+
+        &:hover {
+            background: url(~assets/img/compment/icon_tishi_pre.png) no-repeat center center;
+            background-size: .32rem .32rem;
+        }
+    }
+}
+
+.unableCancelTicketPop {
+    .title {
+        font-size: .32rem;
+        text-align: center;
+    }
+}
+
+.refundDetail {
+    background: #fff;
+    color: @text-color;
+
+    .title {
+        font-size: .32rem;
+        margin: 0 auto .3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ul {
+        font-size: .32rem;
+
+        li {
+            .flex-box;
+            .align-items(center);
+            .justify-content(space-between);
+            height: .8rem;
+            text-align: left;
+        }
+    }
+
+    .tips {
+        color: #f83939;
+        height: .4rem;
+        line-height: .4rem;
+        margin: .24rem 0 0;
+        text-align: left;
+        font-size: .32rem;
+
+        .icon {
+            height: .3rem;
+            width: .3rem;
+            margin: .05rem .1rem .05rem 0;
+            float: left;
+            background: url(~assets/img/compment/icon_tips_red.png) no-repeat left center;
+            background-size: contain;
+        }
+    }
+}

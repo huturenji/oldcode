@@ -1,0 +1,47 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.page-history{
+    
+    .search-history{
+      margin-top: .4rem;
+    }
+    .trip-history{
+      margin-top: .2rem;
+    }
+    section{
+        .title{
+          color: @third-text-color;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: .18rem;
+          font-size: .26rem;
+          .inline-btn{
+            color: @theme-color;
+          }
+        }
+
+        ul{
+            li{
+                float: left;
+                margin-right: .16rem;
+                margin-bottom: .16rem;
+
+              .btn{
+                padding: 0rem .14rem;
+                border-radius: .08rem;
+                color: @text-color;
+                background: #EAEFF4;
+                height: 0.52rem;
+                line-height: 0.52rem;
+                font-size: 0.24rem;
+                display: inline-block;
+                width: auto;
+                position: relative;
+                text-align: center;
+                white-space: nowrap;
+              }
+            }
+        }
+    }
+}

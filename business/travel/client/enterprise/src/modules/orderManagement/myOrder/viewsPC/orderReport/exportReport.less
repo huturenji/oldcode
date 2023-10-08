@@ -1,0 +1,170 @@
+@import '../common/common.less';
+@line-height: 0.28rem * 2;
+@text-color: #191919;
+@placeholder-color: #B2B2B2;
+
+.export-report-list {
+    padding: 0 .12rem * 2 !important;
+    background: #fff;
+    overflow-x: scroll;
+
+    .list_content {
+        margin: 0 auto;
+    }
+
+    .list_content_full_screen {
+        width: 9.36rem * 2;
+    }
+
+    // .list_content_pc {
+    //     //     width:5.04rem * 2 ;
+    // }
+
+    //导出订单列表框
+    .exportOrders {
+        width: 100%;
+        padding: 0.1rem * 2;
+        color: #7F7F7F;
+        background: #fff;
+
+        .conditions {
+            display: flex;
+            justify-content: space-between;
+            // border-bottom: 1px solid #7f7f7f;
+            padding: 0.1rem * 2 0;
+            align-items: baseline;
+
+            .detail {
+                display: flex;
+
+                span {
+                    margin-right: 0.1rem * 2;
+                }
+            }
+
+        }
+
+        .action {
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+            white-space: nowrap;
+            line-height: 0.32rem * 2;
+            width: 5rem * 2;
+            margin: 0 auto;
+            height: 0.32rem * 2;
+            font-size: 0.14rem * 2;
+            color: #fff;
+            background: #4667f3;
+            margin-top: 0.5rem * 2;
+
+            a {
+                padding: 0.1rem * 2 2rem * 2;
+            }
+
+            &:hover,
+            &:active {
+                background-color: #262DD9;
+            }
+        }
+
+        @media screen and (max-width: @screen-md) {
+            .actionNormal {
+                width: 2rem * 2;
+
+                a {
+                    padding: 0.1rem * 2 0.6rem * 2;
+                }
+            }
+        }
+
+        .content-result {
+            flex-grow: 1;
+            //  padding: 20px 0px;
+            // margin-top: -0.07rem * 2;
+            position: relative;
+
+            //无结果时
+            .empty-message {
+                .flex(auto);
+                .flex-box;
+                .flex-flow(column);
+                .align-items(center);
+                padding-top: 1.2rem * 2;
+                font-size: 0.14rem * 2;
+                color: @placeholder-color;
+                text-align: center;
+
+                .icon {
+                    display: block;
+                    width: 0.81rem * 2;
+                    height: 0.92rem * 2;
+                    background: url(~assets/imagesPc/common/icon_empty.png) no-repeat 0 0 transparent;
+                    margin-bottom: 0.16rem * 2;
+                }
+            }
+
+            .no-empty-content {
+                width: 100%;
+
+                table {
+                    border-right: 1px solid #e5e5e5;
+                    border-bottom: 1px solid #e5e5e5
+                }
+
+                table td {
+                    border-left: 1px solid #e5e5e5;
+                    border-top: 1px solid #e5e5e5
+                }
+
+                .orderList {
+                    width: 100%;
+
+                    .listLine {
+                        width: 100%;
+                        color: @text-color;
+
+                        >td {
+                            max-width: 1.1rem * 2;
+                            text-align: left;
+                            padding: 0.05rem * 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+
+                            .wraper {
+                                position: relative;
+
+                                .dialog {
+                                    position: fixed;
+                                    display: none;
+                                    margin-top: 5px;
+                                    margin-left: 0px;
+                                    border: 1px solid;
+                                    background: #f2f3f5;
+                                    border-radius: 2px;
+                                    padding: 0px 2px;
+                                    z-index: 2;
+                                }
+                            }
+
+                            .wraper:hover .dialog {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    >tr:first-child {
+                        font-weight: bold;
+                        background: #f2f3f5
+                    }
+                }
+
+                .exportPage {
+                    height: 0.4rem * 2;
+                    font-size: inherit;
+                }
+            }
+        }
+    }
+}

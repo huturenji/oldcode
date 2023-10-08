@@ -1,0 +1,113 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/hairLine.less';
+.psg-card-container {
+    max-height: 8.1rem;
+    overflow-y: hidden;
+    background: #ffffff;
+    padding-bottom: 1rem;
+    position: relative;
+    border-radius: @border-radius-base @border-radius-base 0 0;
+
+    .psg-list {
+        max-height: 6rem;
+        overflow-y: auto;
+    }
+
+    .psgLable {
+        &:not(:last-of-type){
+            .bbpx(1px, @border-color-base);
+        }
+        display: flex;
+        height: 1.28rem;
+        margin-left: .62rem;
+        font-size: .32rem;
+        justify-content: space-between;
+
+
+        &.disable {
+            .icon-check {
+                fill: @disable-color;
+                cursor: no-drop;
+            }
+
+            .info-label,
+            .psg-name {
+                color: #C2C2C2;
+                .statu{
+                    margin-left: .2rem;
+                }
+            }
+        }
+
+        .psg-name {
+            margin: .15rem 0 .08rem;
+            color: @text-color;
+        }
+
+        .info-label {
+            font-size: .28rem;
+            color: @third-text-color;
+
+            .cardNo {
+                margin-left: .2rem;
+            }
+        }
+
+        .icon-check {
+            fill: @theme-color;
+            margin: .3rem .62rem .3rem .3rem;
+            display: block;
+        }
+    }
+
+    .title {
+        .bbpx(1px, @border-color-base);
+        font-size: .32rem;
+        height: 1rem;
+        line-height: 1rem;
+        padding: 0 .3rem;
+        color: @text-color;
+        text-align: center;
+        font-weight: bold;
+
+        .close {
+            fill: @third-text-color;
+            position: absolute;
+            top: 50%;
+            right: .3rem;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.sn-wing-blank button{
+    max-width: initial;
+}
+
+.btn-group{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px .06rem .2rem 0px rgba(101, 112, 242, 0.12);
+
+    .btn{
+        flex: 1;
+        text-align: center;
+        font-size: .32rem;
+
+        &.cancel-btn{
+            background: #fff;
+            color: @theme-color;
+        }
+        &.normal-btn{
+            background: @theme-color;
+            color: #fff;
+        }
+    }
+}

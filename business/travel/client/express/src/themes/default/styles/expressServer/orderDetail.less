@@ -1,0 +1,172 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.orderDetailWrap {
+    background: url(~themes/default/img/expressServer/base_blue.png) no-repeat top;
+    background-size: 100% 2rem;
+    padding: 0.3rem 0.4rem 0.5rem;
+    .topWrap{
+        margin-bottom: 0.2rem;
+        padding: 0 0.25rem 0.4rem;
+        background: @sub-background-color;
+        font-size: 0.28rem;
+        color: @text-color;
+        border-radius: 0.12rem;
+        .topTit{
+            .flex-box();
+            .align-items(center);
+            .leftImg{
+                width: 0.37rem;
+                height: 0.37rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 0.37rem 0.37rem;
+                border-radius: 0.04rem;
+            }
+            .rightText{
+                .flex(1);
+                padding-left: 0.2rem;
+                line-height: 0.85rem;
+            }            
+        }
+        .orderTypeWrap{
+            padding: 0 0.25rem;
+            .topOrderType{
+                margin-bottom: 0.1rem;
+                padding-top: 0.75rem;
+                font-size: 0.34rem;
+                text-align: center;
+                font-weight: bold;
+                &.type1{
+                    background: url(~themes/default/img/expressServer/icon_ordertype1.svg) no-repeat top;
+                    background-size: 0.6rem 0.6rem;
+                }
+                &.type2{
+                    background: url(~themes/default/img/expressServer/icon_ordertype2.svg) no-repeat top;
+                    background-size: 0.6rem 0.6rem;
+                }
+                &.type3{
+                    background: url(~themes/default/img/expressServer/icon_ordertype3.svg) no-repeat top;
+                    background-size: 0.6rem 0.6rem;
+                }
+                &.type4{
+                    background: url(~themes/default/img/expressServer/icon_ordertype4.svg) no-repeat top;
+                    background-size: 0.6rem 0.6rem;
+                }
+            }
+            .orderTypeInfo{
+                text-align: center;
+                .phone{
+                    color: @theme-color;
+                }
+                .order_textWrap {
+                    text-align: left;
+                    .flex-box();
+                    .align-items(center);
+                    background: @sub-background-color;
+                    font-size: 0.32rem;
+                    color: @text-color;
+                    padding: 0 0.3rem 0 0;
+                    .textLeft{
+                        width: 0.4rem;
+                        height: 0.4rem;
+                        line-height: 0.4rem;
+                        text-align: center;
+                        font-size: 0.26rem;
+                        color: @sub-background-color;
+                        &.typeOne{
+                            background: url(~themes/default/img/expressServer/icon_expresstype_active1.png) no-repeat center;
+                            background-size: 0.4rem 0.4rem;
+                        }
+                        &.typeTwo{
+                            background: url(~themes/default/img/expressServer/icon_expresstype_active2.png) no-repeat center;
+                            background-size: 0.4rem 0.4rem;
+                        }
+                        &.typeThree{
+                            background: url(~themes/default/img/expressServer/icon_expresstype_active3.png) no-repeat center;
+                            background-size: 0.4rem 0.4rem;
+                        }
+                        &.typeFour{
+                            background: url(~themes/default/img/expressServer/icon_expresstype_active4.png) no-repeat center;
+                            background-size: 0.4rem 0.4rem;
+                        }
+                    }
+                    .textMid{
+                        padding: 0.25rem 0 0.25rem 0.3rem;
+                        .flex(1);
+                        .textInput{
+                            font-size: 0.28rem;
+                            color: @text-color;
+                            .phone{
+                                color: @theme-color;
+                            }
+                        }
+                        .textTips{
+                            font-size: 0.24rem;
+                            color: @third-text-color;
+                        }
+                    }
+                    .textRight{
+                        width: 0.6rem;
+                        .textRightBut{
+                            width: 0.6rem;
+                            height: 0.6rem;
+                            &.arrow{
+                                background: url(~themes/default/img/expressServer/icon_right.png) no-repeat right;
+                                background-size: 0.16rem 0.3rem;
+                            }
+                        }
+                        
+                    }
+
+                }
+
+            }
+        }
+        .cancelOrderButWrap{
+            padding-top: 0.35rem;
+            text-align: center;
+            .cancelOrderBut{
+                display: inline-block;
+                padding: 0 0.5rem;
+                line-height:0.6rem;
+                border:1px solid @placeholder-color;
+                border-radius:0.06rem;
+            }
+            .reOrderBut{
+                display: inline-block;
+                padding: 0 0.5rem;
+                line-height:0.6rem;
+                border:1px solid @theme-color;
+                border-radius:0.06rem;
+                color: @sub-background-color;
+                background: @theme-color;
+            }
+        }
+    }
+    .contectWrap{
+        padding: 0.15rem 0.4rem 0.4rem;
+        background: @sub-background-color;
+        font-size: 0.28rem;
+        color: @text-color;
+        border-radius: 0.12rem;
+        .contectTit{
+            padding: 0.18rem 0  0.18rem 0.12rem;
+            font-size: 0.32rem;
+            font-weight: bold;
+            background: url(~themes/default/img/expressServer/base_blue.png) no-repeat left;
+            background-size: 0.04rem 0.28rem;
+        }
+        .contectGroup{
+            &.pt15{
+                padding-top: 0.15rem;
+            }
+            &.pb15{
+                padding-bottom: 0.15rem;
+            }
+        }
+    }   
+}
+/deep/.orderTypeInfo .phone{
+    padding: 0 0.05rem;
+    color: @theme-color;
+}

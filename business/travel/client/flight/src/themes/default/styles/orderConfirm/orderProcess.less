@@ -1,0 +1,180 @@
+@import '~themes/default/styles/common/index.less';
+
+.orderProgress {
+    .header {
+        background: url('~themes/default/img/orderConfirm/icon_plane_chahua@2x.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+        min-height: 1.2rem;
+        background-repeat: no-repeat;
+    }
+
+    .main {
+        margin: .3rem .4rem .4rem;
+
+        .flightDetailNew {
+            width: 100%;
+            margin-left: -4%;
+            text-align: center;
+            background: #ffffff;
+            margin: 0;
+
+            .content {
+                border-radius: .1rem;
+                padding: 0;
+
+                .date {
+                    text-align: left;
+                    font-size: .28rem;
+                    color: #999999;
+                    margin-left: .2rem;
+                }
+
+                .info{
+                    .plane{
+                        height: .7rem;
+                        color: @text-color;
+                        display: flex;
+                        font-size: .24rem;
+                        align-items: center;
+                        .logo {
+                            margin: .1rem;
+                            display: inline-block;
+                        }
+                        .split{
+                            border: .01rem solid rgba(0, 0, 0, 0.2);
+                            height: .15rem;
+                            margin: 0 .1rem;
+                        }
+                        span {
+                            line-height: .4rem;
+                            display: inline-block;
+                            vertical-align: super;
+                        }
+                    }
+                    .share-flight{
+                        background: url(~assets/img/flightList/travelBy-gray.png) left center no-repeat;
+                        background-size: .32rem;
+                        font-size: .24rem;
+                        text-align: left;
+                        text-indent: .49rem;
+                        margin-left:  calc(~'0.1rem + 29px');
+                        margin-bottom: .15rem;
+                        margin-top: -.2rem;
+                    }
+                }
+                .plane-type {
+                    font-size: .24rem;
+                    text-align: center;
+                    padding: .1rem 0 0;
+                    margin: .1rem 0 0;
+
+                    .split {
+                        margin: 0 .19rem;
+                    }
+                }
+                .trip {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .station {
+                        flex: 1;
+                        font-size: .30rem;
+
+                        span {
+                            text-align: center;
+                            display: inline-block;
+                        }
+
+                        .airport {
+                            font-size: .24rem;
+                        }
+
+                        .time {
+                            font-weight: 600;
+                            text-align: center;
+                            font-size: .44rem;
+                            font-weight: 600;
+                            color: #191919;
+                            display: block;
+
+                            .plus {
+                                color: @danger-color
+                            }
+                        }
+                    }
+
+                    .arrow {
+                        flex: auto;
+                        text-align: center;
+                        font-size: .2rem;
+                        color: @secondary-text-color;
+
+                        .icon{
+                            height: .5rem;
+                            background: url(~themes/default/img/common/icon_plane_xuxianarrow@2x.svg) no-repeat center;
+                            background-size: contain;
+                        }
+
+                        span {
+                            display: block
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .passenger {
+            display: inline-block;
+            text-align: left;
+            margin-top: .24rem;
+            width: 100%;
+            color: @third-text-color;
+            background: #F3F6FD;
+            line-height: .52rem;
+            padding: 0 .2rem;
+            font-size: .24rem;
+            border-radius: .04rem;
+
+            .names {
+                color: @secondary-text-color;
+                padding-right: .1rem;
+            }
+        }
+    }
+
+    .bottom {
+        height: .88rem;
+        position: relative;
+        font-size: .26rem;
+
+        .precent{
+            position: absolute;
+            right: .4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 101;
+        }
+
+        .bottom_tips {
+            line-height: .88rem;
+            color: @text-color;
+            z-index: 100;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .progress {
+            background: #bad5ff;
+            width: 0%;
+            height: 100%;
+            position: relative;
+            transition: width 10s linear;
+
+            &.grow-process{
+                width: 100%;
+            }
+        }
+    }
+}

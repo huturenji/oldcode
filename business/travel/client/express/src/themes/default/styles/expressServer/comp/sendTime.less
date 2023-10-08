@@ -1,0 +1,85 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.SendTimeWrap{
+    .roomInfoWrap {
+        background: @sub-background-color;
+        .bbpxs {
+            .bbpx(1px, @border-color-base, 0, 0, solid);
+        }
+		.roomTit {
+			padding: 0.3rem;
+            font-size: 0.32rem;
+            font-weight: bold;
+			color: @text-color;
+            position: relative;
+            text-align: center;
+			.but {
+				position: absolute;
+				top: 50%;
+				right: 0.06rem;
+				margin-top: -0.45rem;
+				width: 0.9rem;
+				height: 0.9rem;
+				background: url(~themes/default/img/expressServer/comp/icon_close.png) no-repeat right 0.3rem center;
+                background-size: 0.3rem;
+                &:active{
+                    background: url(~themes/default/img/expressServer/comp/icon_close_pre.png) no-repeat right 0.3rem center;
+                    background-size: 0.3rem;
+                }
+			}
+        }
+        .sendTimeListWrap{
+            .flex-box();
+            font-size: 15px;
+            color: @text-color;
+            background: @background-color;
+            min-height: 5.3rem;
+            .leftWrap{
+                width: 2.55rem;
+                .tabMenu{
+                    line-height: 0.88rem;
+                    text-align: center;
+                    &.active{
+                        color: @theme-color;
+                        background: @sub-background-color;
+                    }
+                }
+            }
+            .rightWrap{
+                .flex(1);
+                padding-left: 0.45rem;
+                background: @sub-background-color;
+                .itemMenu{
+                    line-height: 0.88rem;
+                    background: url(~themes/default/img/expressServer/comp/icon_uncheck.png) no-repeat right 0.5rem center;
+                    background-size: 0.38rem;
+                    &.active{
+                        color: @theme-color;
+                        background: url(~themes/default/img/expressServer/comp/icon_check.png) no-repeat right 0.5rem center;
+                        background-size: 0.38rem;
+                    }
+                    &.Unselectable{
+                        color: @placeholder-color;
+                        background: url(~themes/default/img/expressServer/comp/icon_unselect.png) no-repeat right 0.5rem center;
+                        background-size: 0.38rem;
+                    }
+                }
+            }
+        }				
+    }
+	.bottomButWrap {
+        .flex-box();
+        box-shadow:0px 0px 0.1rem 0px rgba(0, 0, 0, 0.1);
+		span {
+			.flex(1);
+			line-height: 1rem;
+			font-size: 0.32rem;
+			text-align: center;
+            color: @text-color;
+		}
+		.okButton {
+			color: @sub-background-color;
+            background: @theme-color;
+		}
+	}    
+}

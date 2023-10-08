@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    
+    <g id="06我" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01我的商旅" transform="translate(-39.000000, -607.000000)">
+            <g id="编组-2" transform="translate(15.000000, 424.000000)">
+                <g id="icon_客服" transform="translate(24.000000, 183.000000)">
+                    <g id="icon_my_shanglv_service" transform="translate(1.000000, 1.000000)">
+                        <g>
+                            <rect id="矩形" x="0" y="0" width="20" height="20"></rect>
+                            <g id="icon_客服" transform="translate(1.818182, 3.181818)" stroke-width="1.6">
+                                <path d="M14.5454545,7.09090909 C14.5454545,3.07429273 11.6963575,1.13686838e-13 8.18181818,1.13686838e-13 C4.66727886,1.13686838e-13 1.81818182,3.07429273 1.81818182,7.09090909" id="椭圆形" stroke="#979797" stroke-linecap="round"></path>
+                                <rect id="矩形" stroke="#979797" x="0.8" y="7.16363636" width="2.94545455" height="3.85454545" rx="1.47272727"></rect>
+                                <path d="M7.40909091,15.3181818 C8.27988088,14.8734551 8.95454545,13.6353468 8.95454545,12.5613272 C8.95454545,11.4565142 8.32059654,10.2922604 7.40909091,9.86363636" id="椭圆形" stroke="#B7B7B7" stroke-linecap="round" transform="translate(8.181818, 12.590909) rotate(90.000000) translate(-8.181818, -12.590909) "></path>
+                                <rect id="矩形备份" stroke="#979797" x="12.6181818" y="7.16363636" width="2.94545455" height="3.85454545" rx="1.47272727"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,1405 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+* {
+    -webkit-touch-callout: text;
+    /* iOS Safari */
+    -webkit-user-select: text;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: text;
+    /* Konqueror */
+    -moz-user-select: text;
+    /* Firefox */
+    -ms-user-select: text;
+    /* Internet Explorer/Edge */
+    user-select: text;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #d2d2d2;
+    border-collapse: collapse;
+
+    th,
+    td {
+        height: 40px;
+        vertical-align: middle;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        text-overflow: ellipsis;
+        border: 1px solid #d2d2d2;
+        background: none;
+        font-weight: 500;
+    }
+}
+
+.child-view {
+    position: relative !important;
+}
+
+.cust-btn-group {
+    .clear;
+    position: relative;
+
+    .btn {
+        float: right;
+        width: 1dpx;
+        height: 49px;
+        margin-left: 39px;
+        border: 2px solid @text-color;
+        border-radius: 6;
+        text-align: center;
+
+        &.disable {
+            border-color: #c2c2c2 !important;
+            color: #c2c2c2 !important;
+        }
+    }
+
+    .tips-wait {
+        color: #25cb67;
+        line-height: 53px;
+        float: left;
+    }
+
+    .tips-failed {
+        color: #F83939;
+        line-height: 53px;
+        float: left;
+    }
+
+    .psg-status {
+        float: left;
+        line-height: 53px;
+    }
+}
+
+.status-message {
+    background: #fff4d9;
+    color: #f83939;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 0 15px;
+    line-height: 28px;
+    height: 28px;
+
+    .link-btn {
+        color: @theme-color;
+        float: right;
+        cursor: pointer;
+    }
+
+    &:before {
+        display: none;
+    }
+}
+
+.gai-process-info {
+    padding-top: 10px;
+    font-size: 14px;
+    color: #f83939;
+    border-top: 1px dashed #c2c2c2;
+}
+
+.refundDetail {
+    background: #fff;
+    color: @text-color;
+
+    .title {
+        font-size: 24px;
+        margin: 0 auto 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ul {
+        li {
+            .flex-box;
+            .align-items(center);
+            .justify-content(space-between);
+            height: 30px;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (min-width: 616px) and (max-width: 1100px) {
+    .detailContainer {
+        width: 100%;
+        margin: 0 auto;
+        overflow: auto;
+
+        .detailContent {
+            background: #fff;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 20px;
+            overflow: hidden;
+
+            .detailHead {
+                .headState {
+                    font-size: 14px;
+                    border-bottom: 1px #d2d2d2 dashed;
+
+                    .stateOne {
+                        font-size: 22px;
+                        color: #27d06d;
+                    }
+
+                    .stateTwo {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .money {
+                            font-size: 18px;
+                            color: red;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                        }
+
+                        .detail {
+                            color: #262DD9;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .headInfo {
+                    display: flex;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+
+                    .infoOne {
+                        text-align: left;
+                        flex: auto;
+
+                        .left {
+                            color: #7f7f7f;
+                        }
+                    }
+                }
+            }
+
+            .detailCenterFly {
+                position: relative;
+                margin-bottom: 20px;
+
+                .centerState {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    img {
+                        width: 51px;
+                        height: 47px;
+                    }
+                }
+
+                .centerTop {
+                    background: #262DD9;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    display: flex;
+                    color: #fff;
+                    font-size: 18px;
+
+                    .topBorder {
+                        height: 60px;
+                        width: 2px;
+                        background: #fff;
+                        margin-top: 38px;
+                    }
+
+                    .topLeft,
+                    .topRight {
+                        flex: 1;
+                        text-align: center;
+
+                        .stateOne {
+                            margin: 10px auto;
+                        }
+
+                        .smFont {
+                            font-size: 14px;
+                        }
+
+                        .stateTwo {
+                            margin: 0 auto;
+                            padding: 10px 0;
+
+                            .infoOne {
+                                padding-top: 10px;
+
+                                .left {
+                                    margin-right: 10px;
+                                }
+
+                                .center {
+                                    font-size: 14px;
+                                    width: 115px;
+                                    display: inline-block;
+                                }
+
+                                .jtBg {
+                                    background: url(~assets/img/myOrder/jt.png) no-repeat center 23px;
+                                    padding-bottom: 25px;
+                                }
+
+                                .right {
+                                    margin-left: 10px;
+                                }
+
+                                .smColor {
+                                    padding: 2px 5px;
+                                    background: #fff;
+                                    color: #fb3631;
+                                    border-radius: 2px;
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .infoSec {
+                                margin-top: -30px;
+                                .flex-box();
+
+                                span {
+                                    .flex(1);
+                                }
+                            }
+                        }
+                    }
+
+                    .airline-info {
+                        text-align: left;
+
+                        .stateOne {
+                            margin: 20px 0 0 30px;
+                            height: 24px;
+                            line-height: 24px;
+
+                            img {
+                                width: 20px;
+                                float: left;
+                                margin: 2px 5px 2px 0;
+                            }
+                        }
+
+                        .stateTwo {
+                            padding: 0;
+                            margin: 10px 30px;
+                            border-right: 1px solid #fff;
+
+                            .infoOne {
+                                .flex-box();
+                            }
+
+                            span {
+                                .flex(1);
+                            }
+                        }
+                    }
+                }
+
+                .centerBot {
+                    border: 1px solid #d2d2d2;
+                    font-size: 14px;
+
+                    //display: flex;
+                    //justify-content: space-between;
+                    .border {
+                        //border-right: 1px #d2d2d2 dashed;
+                        //display: none;
+                        border-top: 1px #d2d2d2 dashed;
+                    }
+
+                    .backTicket {
+                        color: #7f7f7f !important;
+
+                        .stateThree {
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: #fff4d8;
+                            margin-top: 10px;
+                            padding: 5px;
+                            color: #f83939;
+
+                            .detailTips2 {
+                                color: #262DD9;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .botLeft,
+                    .botRight {
+                        //flex: auto;
+                        padding: 20px 0;
+                        border-bottom: 1px dashed #c2c2c2;
+                        margin: 0 30px;
+
+                        &:last-of-type {
+                            border-bottom-color: transparent;
+                        }
+
+                        .stateOne {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            .state {
+                                color: #27d06d;
+                            }
+                        }
+
+                        .stateTwo {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            .infoOne {
+                                flex: auto;
+
+                                .left {
+                                    color: #7f7f7f;
+                                }
+                            }
+
+                            .infoSec {
+                                margin-top: -30px;
+                                .flex-box();
+
+                                span {
+                                    .flex(1);
+                                }
+                            }
+                        }
+
+                        .botTabel {
+                            &.disable {
+                                color: #c2c2c2;
+                            }
+
+                            .disCount {
+                                font-size: 14px;
+                            }
+
+                            .tipsImg {
+                                cursor: pointer;
+                                position: relative;
+                                top: 2px;
+                                margin-left: 5px;
+                            }
+                        }
+
+                        &.disable {
+
+                            div,
+                            span {
+                                color: #c2c2c2 !important;
+                            }
+
+                            .btn {
+                                border-color: #c2c2c2 !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailCenterTrain {
+                position: relative;
+                margin-bottom: 20px;
+
+                .centerState {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    img {
+                        width: 51px;
+                        height: 47px;
+                    }
+                }
+
+                .centerTop {
+                    background: #262DD9;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    display: flex;
+                    color: #fff;
+                    height: 140px;
+
+                    .topBorder {
+                        height: 60px;
+                        width: 2px;
+                        background: #fff;
+                        margin-top: 38px;
+                    }
+
+                    .topLeft,
+                    .topRight {
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+
+                        .stateOne {
+                            margin: 20px auto 10px;
+                        }
+
+                        .stateTwo {
+                            .infoOne {
+                                padding: 5px 0;
+                                display: flex;
+                                justify-content: space-between;
+                                position: relative;
+
+                                .BigFone {
+                                    font-size: 18px;
+                                }
+
+                                .left {
+                                    margin-right: 10px;
+                                }
+
+                                .center {
+                                    font-size: 14px;
+                                    width: 115px;
+                                    display: inline-block;
+                                }
+
+                                .jtBg {
+                                    position: absolute;
+                                    top: -10px;
+                                    left: 70px;
+                                }
+
+                                .right {
+                                    margin-left: 10px;
+                                }
+
+                                .smColor {
+                                    padding: 2px 5px;
+                                    background: #fff;
+                                    color: #fb3631;
+                                    border-radius: 2px;
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .infoSec {
+                                margin-top: -30px;
+                                .flex-box();
+
+                                span {
+                                    .flex(1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .centerBot {
+                    border: 1px solid #d2d2d2;
+                    font-size: 14px;
+
+                    //display: flex;
+                    //justify-content: space-between;
+                    .border {
+                        //display: none;
+                        border-top: 1px #d2d2d2 dashed;
+                    }
+
+                    .backTicket {
+                        color: #7f7f7f !important;
+
+                        .stateThree {
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: #fff4d8;
+                            margin-top: 10px;
+                            padding: 5px;
+                            color: #f83939;
+
+                            .detailTips2 {
+                                color: #262DD9;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .botLeft,
+                    .botRight {
+                        flex: 1;
+                        padding: 20px 0;
+                        border-bottom: 1px dashed #c2c2c2;
+                        margin: 0 30px;
+
+                        &:last-of-type {
+                            border-bottom-color: transparent;
+                        }
+
+                        .stateOne {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            .state {
+                                color: #27d06d;
+                            }
+                        }
+
+                        .stateTwo {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            .infoOne {
+                                flex: auto;
+
+                                .left {
+                                    color: #7f7f7f;
+                                }
+                            }
+
+                            .infoSec {
+                                margin-top: -30px;
+                                .flex-box();
+
+                                span {
+                                    .flex(1);
+                                }
+                            }
+                        }
+
+                        .botTabel {
+                            &.disable {
+                                color: #c2c2c2;
+                            }
+
+                            .disCount {
+                                font-size: 14px;
+                            }
+
+                            .tipsImg {
+                                cursor: pointer;
+                                position: relative;
+                                top: 2px;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailCenterHotel {
+                border-radius: 3px;
+                border: 1px solid #d2d2d2;
+
+                .centerHotel {
+                    margin: 20px;
+
+                    .hotelTop {
+                        border-bottom: 1px #d2d2d2 dashed;
+                        padding-bottom: 10px;
+
+                        .top1 {
+                            font-size: 18px;
+                        }
+
+                        .top2 {
+                            color: #7f7f7f;
+                        }
+                    }
+
+                    .hotelLeft {
+                        margin-top: 10px;
+
+                        .stateOne {
+                            margin-bottom: 5px;
+
+                            .info11 {
+                                color: #7f7f7f;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .stateTwo {
+                            margin-bottom: 5px;
+
+                            .infoOne,
+                            .infoTwo {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+
+                            .infoOne {
+                                color: #7f7f7f;
+                            }
+
+                            .infoTwo {
+                                font-size: 18px;
+
+                                .center {
+                                    border: 1px #d2d2d2 dashed;
+                                    padding: 3px 10px;
+                                    border-radius: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailTips {
+                text-align: right;
+                color: #262DD9;
+                margin-top: 15px;
+                cursor: pointer;
+
+                img {
+                    margin-right: 5px;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+
+            .detailFootHotel {
+                margin: 15px auto 20px;
+                display: flex;
+                border-radius: 3px;
+                border: 1px solid #d2d2d2;
+
+                .footHotelLeft {
+                    flex: 1;
+                    margin: 15px;
+
+                    .title {
+                        font-size: 16px;
+                    }
+
+                    .content {
+                        font-size: 14px;
+
+                        .infoOne {
+                            padding: 5px 0;
+
+                            .left {
+                                margin-left: 20px;
+
+                                img {
+                                    width: 18px;
+                                    height: 20px;
+                                    position: relative;
+                                    top: 3px;
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            .right {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-left: 48px;
+                                margin-top: 10px;
+
+                                .infoR {
+                                    flex: 1;
+
+                                    .tel {
+                                        color: #7f7f7f;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailFoot {
+                margin: 15px auto 20px;
+                //display: flex;
+                //justify-content: space-around;
+                border-radius: 3px;
+                border: 1px solid #d2d2d2;
+
+                .border {
+                    border-top: 1px #d2d2d2 dashed;
+                }
+
+                .footLeft,
+                .footRight {
+                    //flex: 1;
+                    margin: 0 15px;
+                    padding: 15px 0;
+                    border-bottom: 1px dashed #d2d2d2;
+
+                    &:last-of-type {
+                        border-bottom-color: transparent;
+                    }
+
+                    .title {
+                        font-size: 16px;
+                    }
+
+                    .content {
+                        font-size: 14px;
+
+                        .infoOne {
+                            display: flex;
+                            padding: 5px 0;
+
+                            .left {
+                                flex: 0 0 80px;
+                                color: #7f7f7f;
+                                text-align: right;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailBtn {
+                text-align: center;
+                margin: 0 auto 40px;
+
+                .tel {
+                    color: #262DD9;
+                    cursor: pointer;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .detailContainer {
+        width: 1100px;
+        margin: 0 auto;
+        overflow: auto;
+
+        .detailContent {
+            background: #fff;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 20px;
+            overflow: hidden;
+
+            .detailHead {
+                .headState {
+                    font-size: 14px;
+                    border-bottom: 1px #d2d2d2 dashed;
+
+                    .stateOne {
+                        font-size: 22px;
+                        color: #27d06d;
+                    }
+
+                    .stateTwo {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .money {
+                            font-size: 18px;
+                            color: red;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                        }
+
+                        .detail {
+                            color: #262DD9;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .headInfo {
+                    display: flex;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+
+                    .infoOne {
+                        text-align: left;
+                        flex: auto;
+
+                        .left {
+                            color: #7f7f7f;
+                        }
+                    }
+                }
+            }
+
+            .detailCenterFly {
+                position: relative;
+                margin-bottom: 20px;
+
+                .centerState {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    img {
+                        width: 51px;
+                        height: 47px;
+                    }
+                }
+
+                .centerTop {
+                    background: #262DD9;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    display: flex;
+                    color: #fff;
+                    font-size: 18px;
+
+                    .topBorder {
+                        height: 60px;
+                        width: 2px;
+                        background: #fff;
+                        margin-top: 38px;
+                    }
+
+                    .topLeft,
+                    .topRight {
+                        flex: 1;
+                        text-align: center;
+
+                        .stateOne {
+                            margin: 10px auto;
+                        }
+
+                        .smFont {
+                            font-size: 14px;
+                        }
+
+                        .stateTwo {
+                            margin: 0 auto;
+                            padding: 10px 0;
+
+                            .infoOne {
+                                padding-top: 10px;
+
+                                .left {
+                                    margin-right: 10px;
+                                }
+
+                                .center {
+                                    font-size: 14px;
+                                    width: 115px;
+                                    display: inline-block;
+                                }
+
+                                .jtBg {
+                                    background: url(~assets/img/myOrder/jt.png) no-repeat center 23px;
+                                    padding-bottom: 25px;
+                                }
+
+                                .right {
+                                    margin-left: 10px;
+                                }
+
+                                .smColor {
+                                    padding: 2px 5px;
+                                    background: #fff;
+                                    color: #fb3631;
+                                    border-radius: 2px;
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .infoSec {
+                                margin-top: -30px;
+                                .flex-box();
+
+                                span {
+                                    .flex(1);
+                                }
+                            }
+                        }
+                    }
+
+                    .airline-info {
+                        text-align: left;
+
+                        .stateOne {
+                            margin: 20px 0 0 30px;
+                            height: 24px;
+                            line-height: 24px;
+
+                            img {
+                                width: 20px;
+                                float: left;
+                                margin: 2px 5px 2px 0;
+                            }
+                        }
+
+                        .stateTwo {
+                            padding: 0;
+                            margin: 10px 30px;
+                            border-right: 1px solid #fff;
+
+                            .infoOne {
+                                .flex-box();
+                            }
+
+                            span {
+                                .flex(1);
+                            }
+                        }
+                    }
+                }
+
+                .centerBot {
+                    border: 1px solid #d2d2d2;
+                    font-size: 14px;
+
+                    //                  display: flex;
+                    //                  justify-content: space-between;
+                    .border {
+                        border-right: 1px #d2d2d2 dashed;
+                    }
+
+                    .backTicket {
+                        color: #7f7f7f !important;
+
+                        .stateThree {
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: #fff4d8;
+                            margin-top: 10px;
+                            padding: 5px;
+                            color: #f83939;
+
+                            .detailTips2 {
+                                color: #262DD9;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .botLeft,
+                    .botRight {
+                        flex: 1;
+                        padding: 20px 0;
+                        border-bottom: 1px dashed #c2c2c2;
+                        margin: 0 30px;
+
+                        &:last-of-type {
+                            border-bottom-color: transparent;
+                        }
+
+                        .stateOne {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            .state {
+                                color: #27d06d;
+                            }
+                        }
+
+                        .stateTwo {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            .infoOne {
+                                flex: auto;
+
+                                .left {
+                                    color: #7f7f7f;
+                                }
+                            }
+                        }
+
+                        .botTabel {
+                            &.disable {
+                                color: #c2c2c2;
+                            }
+
+                            .disCount {
+                                font-size: 14px;
+                            }
+
+                            .tipsImg {
+                                cursor: pointer;
+                                position: relative;
+                                top: 2px;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+
+                &.disable {
+
+                    div,
+                    span {
+                        color: #c2c2c2 !important;
+                    }
+
+                    .btn {
+                        border-color: #c2c2c2 !important;
+                    }
+                }
+            }
+
+            .detailCenterTrain {
+                position: relative;
+                margin-bottom: 20px;
+
+                .centerState {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    img {
+                        width: 51px;
+                        height: 47px;
+                    }
+                }
+
+                .centerTop {
+                    background: #262DD9;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    display: flex;
+                    color: #fff;
+                    height: 140px;
+
+                    .topBorder {
+                        height: 60px;
+                        width: 2px;
+                        background: #fff;
+                        margin-top: 38px;
+                    }
+
+                    .topLeft,
+                    .topRight {
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+
+                        .stateOne {
+                            margin: 20px auto 10px;
+                        }
+
+                        .stateTwo {
+                            .infoOne {
+                                padding: 5px 0;
+                                display: flex;
+                                justify-content: space-between;
+                                position: relative;
+
+                                .BigFone {
+                                    font-size: 18px;
+                                }
+
+                                .left {
+                                    margin-right: 10px;
+                                }
+
+                                .center {
+                                    font-size: 14px;
+                                    width: 115px;
+                                    display: inline-block;
+                                }
+
+                                .jtBg {
+                                    position: absolute;
+                                    top: -10px;
+                                    left: 70px;
+                                }
+
+                                .right {
+                                    margin-left: 10px;
+                                }
+
+                                .smColor {
+                                    padding: 2px 5px;
+                                    background: #fff;
+                                    color: #fb3631;
+                                    border-radius: 2px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .centerBot {
+                    border: 1px solid #d2d2d2;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .border {
+                        border-right: 1px #d2d2d2 dashed;
+                    }
+
+                    .backTicket {
+                        color: #7f7f7f !important;
+
+                        .stateThree {
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: #fff4d8;
+                            margin-top: 10px;
+                            padding: 5px;
+                            color: #f83939;
+
+                            .detailTips2 {
+                                color: #262DD9;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .botLeft,
+                    .botRight {
+                        flex: 1;
+                        padding: 20px 0;
+                        border-bottom: 1px dashed #c2c2c2;
+                        margin: 0 30px;
+
+                        &:last-of-type {
+                            border-bottom-color: transparent;
+                        }
+
+                        .stateOne {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            .state {
+                                color: #27d06d;
+                            }
+                        }
+
+                        .stateTwo {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            .infoOne {
+                                flex: auto;
+
+                                .left {
+                                    color: #7f7f7f;
+                                }
+                            }
+                        }
+
+                        .botTabel {
+                            &.disable {
+                                color: #c2c2c2;
+                            }
+
+                            .disCount {
+                                font-size: 14px;
+                            }
+
+                            .tipsImg {
+                                cursor: pointer;
+                                position: relative;
+                                top: 2px;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailCenterHotel {
+                border-radius: 3px;
+                border: 1px solid #d2d2d2;
+
+                .centerHotel {
+                    margin: 20px;
+
+                    .hotelTop {
+                        border-bottom: 1px #d2d2d2 dashed;
+                        padding-bottom: 10px;
+
+                        .top1 {
+                            font-size: 18px;
+                        }
+
+                        .top2 {
+                            color: #7f7f7f;
+                        }
+                    }
+
+                    .hotelLeft {
+                        margin-top: 10px;
+
+                        .stateOne {
+                            margin-bottom: 5px;
+
+                            .info11 {
+                                color: #7f7f7f;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .stateTwo {
+                            margin-bottom: 5px;
+
+                            .infoOne,
+                            .infoTwo {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+
+                            .infoOne {
+                                color: #7f7f7f;
+                            }
+
+                            .infoTwo {
+                                font-size: 18px;
+
+                                .center {
+                                    border: 1px #d2d2d2 dashed;
+                                    padding: 3px 10px;
+                                    border-radius: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailTips {
+                text-align: right;
+                color: #262DD9;
+                margin-top: 15px;
+                cursor: pointer;
+
+                img {
+                    margin-right: 5px;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+
+            .detailFootHotel {
+                margin: 15px auto 20px;
+                display: flex;
+                border-radius: 3px;
+                border: 1px solid #d2d2d2;
+
+                .footHotelLeft {
+                    flex: 1;
+                    margin: 15px;
+
+                    .title {
+                        font-size: 16px;
+                    }
+
+                    .content {
+                        font-size: 14px;
+
+                        .infoOne {
+                            padding: 5px 0;
+
+                            .left {
+                                margin-left: 20px;
+
+                                img {
+                                    width: 18px;
+                                    height: 20px;
+                                    position: relative;
+                                    top: 3px;
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            .right {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-left: 48px;
+                                margin-top: 10px;
+
+                                .infoR {
+                                    flex: 1;
+
+                                    .tel {
+                                        color: #7f7f7f;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailFoot {
+                margin: 15px auto 20px;
+                display: flex;
+                justify-content: space-around;
+                border-radius: 3px;
+                border: 1px solid #d2d2d2;
+
+                .border {
+                    border-right: 1px #d2d2d2 dashed;
+                }
+
+                .footLeft,
+                .footRight {
+                    flex: 1;
+                    margin: 0 15px;
+                    padding: 15px 0;
+                    border-bottom: 1px dashed #d2d2d2;
+
+                    &:last-of-type {
+                        border-bottom-color: transparent;
+                    }
+
+                    .title {
+                        font-size: 16px;
+                    }
+
+                    .content {
+                        font-size: 14px;
+
+                        .infoOne {
+                            display: flex;
+                            padding: 5px 0;
+
+                            .left {
+                                flex: 0 0 80px;
+                                color: #7f7f7f;
+                                text-align: right;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailBtn {
+                text-align: center;
+                margin: 0 auto 40px;
+
+                .tel {
+                    color: #262DD9;
+                    cursor: pointer;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

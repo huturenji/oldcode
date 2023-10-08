@@ -1,0 +1,19 @@
+<svg id="icon_orderdetail_reminder" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffb843;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="形状_1" data-name="形状 1" class="cls-1" d="M2076,822a36,36,0,1,0,36,36,36,36,0,0,0-36-36h0Zm0,16a4,4,0,1,0,4,4,4,4,0,0,0-4-4h0Zm0,13.333a4,4,0,0,0-4,4V874a4,4,0,0,0,8,0V855.333a4,4,0,0,0-4-4h0Z" transform="translate(-2040 -822)"/>
+  <path id="形状_1_拷贝_3" data-name="形状 1 拷贝 3" class="cls-2" d="M2076,838a4,4,0,1,0,4,4,4,4,0,0,0-4-4h0Zm0,13.333a4,4,0,0,0-4,4V874a4,4,0,0,0,8,0V855.333a4,4,0,0,0-4-4h0Z" transform="translate(-2040 -822)"/>
+</svg>

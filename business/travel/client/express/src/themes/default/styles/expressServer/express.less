@@ -1,0 +1,144 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.expressWrap{
+    background: @sub-background-color;
+}
+.express{
+    background: url(~themes/default/img/expressServer/bg_express_topbg@2x.png) no-repeat top;
+    background-size: 100% 2.3rem;   
+    height: 100%;
+    .flex-box();
+    flex-direction: column;
+    .topWrap{ 
+        padding: 0.5rem 0.3rem 0.6rem 0.3rem;
+        .inputWrap{
+            background: @sub-background-color;
+            border-radius: 0.12rem;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            .flex-box();
+            .align-items(center);
+            .expressNum{
+                padding: 0 0.12rem 0 0.3rem;
+                font-size: 0.3rem;
+                .flex(1);
+                color: @text-color;
+            }
+            .sysBut{
+                width: 0.8rem;
+                height: 0.8rem;
+                background: url(~themes/default/img/expressServer/icon_qrcode.png) no-repeat center;
+                background-size: 0.42rem;
+            }
+        }
+    }
+    .expressListOutWrap{
+        // margin-bottom: 0.4rem;
+        .expressListWrap{  
+            &:before,&:after{
+                content: '';
+            }
+            .flex-box();   
+            .justify-content(space-between);
+            flex-wrap: wrap;  
+            padding: 0.5rem 0rem 0.4rem 0rem;
+            background: @sub-background-color;
+            border-top-left-radius: 0.2rem;
+            border-top-right-radius: 0.2rem;
+            .expressItem{
+                width: 162px;
+                height: 90px;
+                background-repeat:  no-repeat;
+                background-position: center center;
+                background-size: cover;
+                margin-right: 0rem;
+                border-radius: 8px;
+                box-shadow: 0 0.08rem 0.3rem -0.04rem rgba(0, 70, 199, 0.18);
+                .textWrap{
+                    padding-top: 18px;
+                    padding-left: 68px;
+                    font-size: 17px;
+                    line-height: 25px;
+                    color: @sub-background-color;
+                    margin-bottom: 4px;
+                }
+                .textTips{
+                    padding-left: 68px;
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: rgba(255,255,255,0.6);
+                }
+
+            }
+        }
+    }
+    
+    .adOutWrap{
+        padding: 0 0.3rem;
+        margin-bottom: 0.45rem;
+        .adWrap{
+            height: 2.2rem;
+            padding: 0 0.3rem;
+            border-radius: 0.12rem;
+            background: url(~themes/default/img/expressServer/ad.png) no-repeat center;
+            background-size: 100% auto;
+        }
+    }
+    .navWrap{
+        .navWrapTab{
+            .vux-tab-container{
+                padding: 0 0.3rem;
+            }
+        }
+        .vux-tab .vux-tab-item{
+            font-size: 0.3rem;
+            background: none;
+            font-weight: bold;
+        }
+    }
+    .listOutWrap{
+        flex:1;
+        position: relative;
+        //广告位屏蔽，此处不要删除
+        // top: 7.3rem;
+        // top: 4.65rem;
+        // left: 0;
+        // bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        .bigListWrap{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            .flex-box(); 
+            width: 300%;
+            transition: 0.5s;
+            .listWrap{
+                overflow-y: auto;
+                .flex(1);
+                height: 100%;
+                .nomore{
+                    padding-bottom: 0.3rem;
+                    font-size: 0.26rem;
+                    color: @third-text-color;
+                    text-align: center;
+                    
+                }
+            }
+            &.active{
+                left: -100%;
+            }
+        }
+
+    }
+
+}
+/deep/.navWrap{
+    .navWrapTab{
+        .vux-tab-container{
+            padding: 0 0.3rem;
+        }
+    }
+}

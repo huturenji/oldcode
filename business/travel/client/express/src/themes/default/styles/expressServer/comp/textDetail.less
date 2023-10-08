@@ -1,0 +1,29 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.textDetail {
+    .bp_textWrap {
+        .flex-box();
+        .align-items(baseline);
+        background: @sub-background-color;
+        font-size: 0.32rem;
+        color: @text-color;
+        padding: 0.25rem 0;
+        .textLeft{
+            padding: 0 0;
+            width: 1.7rem;
+            padding-right: 0.1rem;
+            .textLeftInput{
+                color: @third-text-color;
+            }
+        }
+        .textMid{
+            padding: 0 0;
+            .flex(1);
+            .textInput{
+                &.colorNomorl{
+                    color: @third-text-color;
+                }
+            }
+        }
+    }    
+}

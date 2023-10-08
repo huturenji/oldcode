@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #F30300;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="btn_common_close">
+    <path id="圆角矩形_10" data-name="圆角矩形 10" class="cls-1" d="M712.621,370.5l10.253,10.253a1.5,1.5,0,0,1-2.121,2.121L710.5,372.621l-10.253,10.253a1.5,1.5,0,0,1-2.121-2.121L708.379,370.5l-10.253-10.253a1.5,1.5,0,0,1,2.121-2.121L710.5,368.379l10.253-10.253a1.5,1.5,0,0,1,2.121,2.121Z" transform="translate(-688 -349)"/>
+  </g>
+</svg>

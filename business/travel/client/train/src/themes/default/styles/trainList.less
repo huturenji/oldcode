@@ -1,0 +1,484 @@
+@import './trainCommon.less';
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+
+.noData {
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 1rem;
+    text-align: center;
+    color: #999999;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+	.trainListEmpty{
+		margin-top: 1.05rem;
+    }
+    .loading-wrap{
+        margin-top: 1.2rem
+    }
+    .tripDate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        z-index: 499;
+        top: 0;
+        width: 100%;
+        color: @text-color;
+        background: #fff;
+        height: 1.1rem;
+        .arrow {
+            padding-left: 0.3rem;
+            width: 1.6rem;
+            font-size: .28rem;
+            .icon_common_leftarrow, .icon_common_rightarrow{
+                fill: @third-text-color;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .arrow:active{
+            color: @third-text-color;
+        }
+        .arrow.none {
+            color:@third-text-color;
+        }
+        .arrow.right {
+            text-align: right;
+            padding-left: 0;
+            padding-right: 0.3rem;
+            justify-content: flex-end;
+        }
+        .date:active{
+            color: @third-text-color;
+        }
+        .date {
+            &>div{
+
+                display: flex;
+                align-items: center;
+            }
+            .calendar{
+                fill:@secondary-text-color;
+                margin-right: .12rem;
+            }
+            display: flex;
+            justify-content: center;
+            .flex(1);
+            text-align: center;
+            font-size: 0.3rem;
+            div {
+                margin: 0 .02rem
+            }
+            img{
+                width: .28rem;
+                padding-left: .04rem
+            }
+        }
+        .forbid {
+            color: #999999;
+        }
+    }
+    .list {
+        padding-top: 0.2rem;
+        padding-bottom: 1.2rem;
+        position: absolute;
+        top: 1.1rem;
+        bottom: .1rem;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .nearAlert {
+            text-align: start;
+            font-size: .24rem;
+            margin-top: .16rem;
+            color: @price-color;
+        }
+        .banning {
+            background-color: #ffffff;
+            font-size: .24rem;
+            color: @third-text-color;
+            margin-top: .18rem;
+            &>div{
+                width: 100%;
+            }
+            .ticNum {
+                color: @third-text-color;
+                &.leave{
+                    color: @text-color;
+                }
+            }
+            .ticPrice{
+                color: @warning-color;
+            }
+            .ticPrice.gray{
+                color: @disable-color;
+            }
+            .ticNum.gray {
+                color: @disable-color;
+            }
+            .ticNum.red {
+                color: @warning-color;
+            }
+            img {
+                display: inline-block;
+                height: .34rem;
+                vertical-align: middle;
+            }
+            
+            span {
+                &.seatAbout{
+                    width: 25%;
+                    padding: 0;
+                    display: inline-block;
+                    font-size: 0;
+                    margin-top: 0.08rem;
+                    span{
+                        font-size: 0.24rem;
+                    }
+
+                    &:nth-child(1n){
+                        text-align: left;
+                    }
+                    &:nth-child(2n), &:nth-child(3n){
+                        text-align: center;
+                    }
+                    &:nth-child(4n){
+                        text-align: right;
+                    }
+                }
+                &.seatAbout.seatAboutShort{
+                    width: 30%;
+                }
+            }
+
+
+        }
+
+
+    }
+    .footerBar {
+        display: flex;
+        height: .88rem;
+        bottom: 0.32rem;
+        padding: 0 .4rem;
+        width: 92%;
+        left: 4%;
+        border-radius: .53rem;
+        position: fixed;
+        background-color: #fff;
+        z-index: 501;
+        box-shadow: 0px 4px 26px -4px rgba(131,133,139,0.3);
+        // 火车票筛选第一个
+        .option.first{
+            flex: 2;
+            .icon_filter_screen{
+                fill: @third-text-color;
+            }
+            .icon_filter_screen_sel{
+                fill: @theme-color;
+            }
+        }
+        .option.first:active div{
+            color: @theme-color; 
+        }
+
+
+        // 火车票发车
+        .option.second:active div{
+            color: @theme-color;
+        }
+        .option.second{
+            .icon_train_sort{
+                fill: @third-text-color;
+            }
+            .icon_train_sort_sel{
+                fill: @theme-color;
+            }
+        }
+
+
+        // 火车票耗时
+        .option.third:active div{
+            color: @theme-color;
+        }
+
+        .option.third{
+            .icon_time{
+                fill: @third-text-color;
+            }
+            .icon_time_sel{
+                fill: @theme-color;
+            }
+        }
+
+    
+        .option {
+            color: @third-text-color;
+            text-align: center;
+            flex: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg{
+                margin-right: .06rem;
+            }
+            .isSelected{
+                color: @theme-color;
+            }
+            .arrow {
+                position: relative;
+                width: .2rem;
+                top: -.05rem;
+            }
+            img {
+                width: .42rem;
+            }
+            div {
+                padding: .02rem;
+               
+                font-size: .26rem;
+            }
+            .direct{
+                font-size: .2rem;
+            }
+        }
+        .priceOption{
+            flex: 3;
+            .icon_train_price{
+                fill: @third-text-color;
+            }
+        }
+    }
+}
+
+.train {
+    cursor: pointer;
+    background: #ffffff;
+    .trainLabel:active{
+        background:@background-color;
+    }
+    .trainLabel:active .banning{
+        background:@background-color;
+    }
+    .trainLabel {
+        background: #ffffff;
+        margin-bottom: .2rem;
+        padding: .4rem .3rem;
+        .trainDetail {
+
+            display: flex;
+            justify-content: space-between;
+            .station {
+                flex: 4;
+                
+                div {
+                    color: @text-color;
+                    &.station{
+                        font-size: .28rem;
+                        height: .4rem;
+                        line-height: .4rem;
+                        margin-top: .12rem;
+                    }
+                }
+                .time {
+                    position: relative;
+                    font-size: .44rem;
+                    height: .52rem;
+                    line-height: .52rem;
+                    .plus {
+                        position: absolute;
+                        top: 0;
+                        right: -0.3rem;
+                        font-size: .2rem;
+                        color: #f83939
+                    }
+                }
+            }
+            .toRight{
+                text-align: right;
+            }
+            .station.center div {
+                text-align: center;
+            }
+            .arrow {
+                flex: 5;
+                text-align: center;
+                font-size: .24rem;
+                color: #999999;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                div {
+                    color: #999999;
+                    display: block
+                }
+                .code {
+                    font-size: 0.22rem;
+                    color: @secondary-text-color;
+                }
+                .time {
+                    font-size: 0.22rem;
+                    color: @secondary-text-color;
+                }
+            }
+            .miniPrice {
+                flex: 5;
+                color: @warning-color; 
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                span {
+                    &:first-child{
+                        font-size: .28rem;
+                    }
+                    &:nth-child(2){
+                        font-size: .48rem;
+                        font-weight: bold;
+                    }
+                    
+                }
+                span.coupon-label{
+                    font-size: .2rem;
+                    color: #f83939;
+                    text-align: center;
+                    border-radius: .04rem;
+                    border: 1px solid #f83939;
+                    min-width: 1.36rem;
+                    padding: 0 .08rem;
+                  }
+            }
+        }
+    }
+}
+
+.isNearGo {
+    .trainLabel {
+        .code {
+            color: #999 !important;
+        }
+        .time {
+            color: #999 !important;
+        }
+        .miniPrice {
+            color: #999 !important;
+        }
+    }
+}
+
+.popBox2 {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    .cityMusk2 {
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        flex: 1;
+    }
+    .filter {
+        height: 100%;
+        background-color: #ffffff !important;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -moz-flex-direction: column;
+        /* firefox */
+        -webkit-flex-direction: column;
+        /* safair,opera,chorme */
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        .wh_container {
+            margin: 0
+        }
+        .popup-header {
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            height: .5rem;
+            justify-content: space-between;
+            padding: .2rem .3rem;
+            border-bottom: 1px #f2f3f5 solid;
+            .left {
+                font-size: .3rem;
+                color: #333;
+            }
+            .right {
+                img {
+                    width: .28rem;
+                }
+            }
+        }
+        .main {
+            padding: .14rem;
+            width: 96%;
+            position: inherit;
+            overflow-y: scroll;
+            .title {
+                font-size: .28rem;
+                color: #999999;
+            }
+            .optionList {
+                .unselected {
+                    text-align: center;
+                    padding: 5px 5px;
+                }
+                .selected {
+                    text-align: center;
+                }
+            }
+        }
+        .footer {
+            bottom: 0;
+            width: 100%;
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-around;
+            background: #ffffff;
+            .reset {
+                flex: 1;
+                text-align: center;
+                line-height: 0.92rem;
+                font-size: .34rem;
+                border-top: 1px solid #f2f3f5;
+                display: inline-block;
+            }
+            .confirm {
+                flex: 1;
+                text-align: center;
+                line-height: 0.92rem;
+                font-size: .34rem;
+                display: inline-block;
+                background-color: #478aee;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.unselected {
+    width: 26%;
+    padding: .22rem;
+    margin: .1rem;
+    font-size: .28rem;
+    background-color: #f2f3f5;
+    color: #191919;
+}
+
+
+
+.selected {
+    background-color: @theme-color;
+    color: #fff;
+}
+

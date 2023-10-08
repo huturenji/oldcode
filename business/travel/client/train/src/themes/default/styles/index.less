@@ -1,0 +1,295 @@
+@import '~styles/core/common.less';
+@import '~styles/mixins/mixinsStyle.less';
+.index-wrap{
+  &.footerBar{
+      padding-bottom: 1.4rem;
+  }
+}
+div.trainDiv{
+    background-color: #fff;
+    border-radius: 0.2rem;
+    padding: .6rem .54rem .6rem .54rem;
+    box-shadow: 0px -4px 56px 0px rgba(161,161,161,0.1);
+    .insertTips_container{
+        position: absolute;
+        top:0;
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+        border-top-left-radius: .1rem;
+        border-top-right-radius: .1rem;
+    }
+    .boxBlock{
+        height: .45rem;
+        background: #fff;
+    }
+
+   
+}
+.hot_phone{
+  width: 100%;
+  text-align: center;
+  font-size: .26rem;
+  color: #999999;
+  margin-top: .3rem;
+  height: .36rem;
+  line-height: .36rem;
+  i{
+    &.left_line{
+      margin-right: .1rem;
+    }
+    &.right_line{
+      margin-left: .1rem;
+    }
+    font-style: normal;
+    color: @info-color;
+    font-weight: normal;
+  }
+  span{
+    cursor: pointer;
+    color: @theme-color;
+    font-weight: 600;
+   
+    &:active{
+      opacity: .8;
+    }
+  }
+}
+  
+.tips {
+  display: block;
+  background: #ffffff;
+  color: #f8a339;
+  padding: .2rem 0;
+  padding-left: .4rem;
+  font-size: .289rem;
+}
+
+.trainDiv {
+  height: 100%;
+  overflow-y: auto;
+
+
+
+
+
+
+  .flightWrap.pt45 {
+    height: 6.6rem;
+    position: relative;
+  }
+
+  .flightWrap {
+    .flightCityWrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: .48rem;
+      .itemWrap {
+        flex: 1;
+        .itemTit {
+          font-size: 0.24rem;
+          height: .34rem;
+          line-height: .34rem;
+          margin-top: 0.08rem;
+          color: @secondary-text-color;
+        }
+        .itemName {
+          width: 2.5rem;
+          line-height: .84rem;
+          height: .84rem;
+          font-size: 0.6rem;
+          color: @text-color;
+          font-weight: bold;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          position: absolute;
+          transition: all 0.5s;
+        }
+        .itemName.itemName_start{
+          left: 0;
+        }
+        .itemName.itemName_end{
+          right: 0;
+        }
+        .itemName.itemName_start.turndirection{
+          left: calc(~'100% - 2.5rem');
+          text-align: right;
+          transition: none;
+        }
+        .itemName.itemName_end.turndirection{
+          right: calc(~'100% - 2.5rem');
+          text-align: left;
+          transition: none;
+        }
+        .itemNameNew{
+          height: 0.84rem;
+        }
+      }
+
+      .itemWrap.right {
+        text-align: right;
+      }
+
+      .changeButWrap {
+        position: relative;
+        width: 0.8rem;
+        height: 0.8rem;
+        cursor: pointer;
+      }
+
+      .changeButWrap .outside {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: url(~themes/default/img/icon_plane_circle.svg) no-repeat center;
+        background-size: 100% auto;
+
+      }
+
+      .changeButWrap .outside.turnaround {
+        animation: weuiLoading 0.5s steps(12, end) infinite;
+      }
+
+      @-webkit-keyframes weuiLoading {
+        0% {
+          transform: rotate3d(0, 0, 1, 0deg);
+        }
+
+        100% {
+          transform: rotate3d(0, 0, 1, 180deg);
+        }
+      }
+
+      @keyframes weuiLoading {
+        0% {
+          transform: rotate3d(0, 0, 1, 0deg);
+        }
+
+        100% {
+          transform: rotate3d(0, 0, 1, 180deg);
+        }
+      }
+
+      .changeButWrap .train {
+        height: 100%;
+        width: 100%;
+        background: url(~themes/default/img/icon_train_train.svg) no-repeat center;
+        background-size: 100% auto;
+      }
+    }
+
+    p.xg7 {
+      height: 1px;
+      width: 100%;
+      overflow: hidden;
+      background: url(~assets/img/trainList/dash-e5.png) repeat center;
+    }
+
+    .dateWrap {
+      padding: 0.3rem 0 .22rem 0;
+      .dateItemWrap {
+        .dateItem {
+          .dateText {
+            height: .8rem;
+            font-size: 0.24rem;
+            color: #333;
+            margin-top: 0.06rem;
+            .num{
+                font-size: 0.68rem;
+                font-weight: 600;
+            }
+          }
+
+          .dateTips {
+            font-size: 0.24rem;
+            height: .34rem;
+            line-height: .34rem;
+            color: @third-text-color;
+            .day{
+                color: @text-color;
+            }
+          }
+        }
+      }
+    }
+
+    .lineTextWrap {     
+      .only{
+        padding: .4rem 0;
+        font-size: 0.3rem;
+        color: @text-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .label {
+        color: #999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: .38rem;
+        .content{
+            display: flex;
+            align-items: center;
+            span{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                color: #081228;
+                &:first-child{
+                    margin-right: .18rem;
+                }
+                i{
+                    font-style: normal;
+                    margin-left: .06rem;
+                }
+            }
+        }
+      }
+
+      .btn_common_radio_nor{
+          color: @third-text-color;
+      }
+      .btn_common_radio_sel2{
+          color: @theme-color;
+      }
+    }
+    .trainSeat{
+      font-size:.26rem;
+      font-weight:400;
+      margin-top: .2rem;
+      color:@third-text-color;
+      div{
+        display: flex;
+        .seatType{
+          flex: 1;
+        }
+      }
+    }
+
+
+    .searchButton:active{
+      opacity: 0.8;
+    }
+    .searchButton {
+      width: 100%;
+      margin-top: .56rem;  
+      line-height: 0.84rem;
+      background: @theme-color;
+      color: #fff;
+      font-size: 0.32rem;
+      border-radius: 0.2rem;
+      text-align: center;
+    }
+  }
+}
+
+
+
+

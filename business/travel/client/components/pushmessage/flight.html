@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=yes">
+    <title></title>
+</head>
+<style>
+html {
+    font-size: 13.33333vw;
+    user-select: none;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', '宋体', Tahoma, Arial, Helvetica, STHeiti, sans-serif;
+    font-size: 0.28rem;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    color: @text-color;
+}
+.no_wrap{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all; 
+}
+.textR{
+    text-align: right;
+}
+.flex_box{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex{
+    -webkit-box-flex: 1;      
+    -moz-box-flex: 1;        
+    -webkit-flex: 1;          
+    -ms-flex: 1;              
+    flex: 1;                  
+}
+.justify_content{
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+}
+.align_items{
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.topWrap{
+    background-image: linear-gradient(to bottom right, #6AD3C9, #64D1C3);
+}
+.top{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0 0.4rem;
+    font-size: 0.38rem;
+    font-weight:bold;
+    color: #fff;
+}
+.top.typePlane{
+    background: url(data:image/png;base64,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) no-repeat right 0.3rem;
+    background-size: 1.65rem 0.75rem;
+}
+.contect{
+    padding: 0.3rem 0.4rem;
+}
+.textL{
+    line-height: 0.4rem;
+}
+.date{
+    line-height: 0.6rem;
+    font-size: 0.52rem;
+    font-weight: bold;
+    padding: 0.1rem 0;
+}
+.font_big{
+    font-size: 0.52rem;
+}
+.red{
+    color: #FF4E3A;
+}
+.gray{
+    color: #999;
+}
+.green{
+    color: #23cda7;
+}
+.yellow{
+    color: #ffa501;
+}
+.blue{
+    color: #262dd9;
+}
+.pb20{
+    padding-bottom: 0.2rem;
+}
+.icon_warring{
+    width: 0.28rem;
+    height: 0.28rem;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 0.1rem;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAV1BMVEUDWdqwUn7/Tzr5T0DlUE7hUlHqUEfCV2b/Tjr8Tzv7Tj7+Tjv/Tjv+Tjv8Tzz/Tjr9Tzz3UEDtUUbeUmDdUUz/Tzv+TjzyUEH0UUP3Tz78Tz35Tz7/UTz81/G5AAAAHHRSTlMEC9JdIhwtEeyxet3nybz5o1U1ESj22lBIapqHKCRsKgAAAPlJREFUKM99U1tyhDAMS5w3AQLsUthW9z9noSHr0NmJfvwhW6PIjqggtbVaig94zBP5lDxN8+MfJRUB6Il6AKRu4yYAQ7cY58zSDUAwzFlCVJJVIsi+5wijroX0CDJXZ8B4edheOrsbEbKSQrzmFDC4PBuhzuroqBnfQHqWPjrbZgzFy+6LmpAD5qNM6Nj2/vbcYTpaKC3iA5ZEUmjfF9f76yeEMmp6r4VdyV2aPYBYSEerzSSH+HUjT1k2cZIsy4aYZEPlKUzyU3IITEbBIdTxSTsCaXMcXxW8jf7ExsFXK5PPPzheWXvZ7TNpH1j7NPmo1/V21M3v8AtbCxGT4Ztv4gAAAABJRU5ErkJggg==) no-repeat left;
+    background-size: 0.28rem;
+}
+.bg_radios{
+    display: inline-block;
+    padding: 0 0.2rem;
+    background: #FFF4D7;
+    font-size: 0.24rem;
+    border-radius: 0.06rem;
+}
+.bg_radios_gray{
+    display: inline-block;
+    padding: 0 0.2rem;
+    background: #f2f3f5;
+    font-size: 0.24rem;
+    border-radius: 0.06rem;
+}
+.planeInfoWrap{
+    padding: 0 0.4rem 0.1rem;
+}
+.middle{
+    width: 1.66rem;
+    text-align: center;
+}
+.bg_plane{
+    width: 1.58rem;
+    height: 0.32rem;
+    padding: 0.1rem 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAAsCAMAAAD7JmIuAAAAXVBMVEUAAAA1NTU1NTUzMzM5OTk1NTU0NDQ0NDQ3NzczMzM0NDQzMzMzMzM0NDQ8PDwzMzM0NDQzMzMzMzMzMzM0NDQzMzM6OjozMzMzMzM0NDQ0NDQ1NTUzMzM0NDQzMzMARAmNAAAAHnRSTlMAMCDsDBudKBb7PPS+SQaRU86zcNiGE97HY0M1o3wDQn1aAAABL0lEQVRYw+3Xy66CMBSF4S0XpUDlroDH//0f82iDgeMxccKgO+k3Wh00aZome1WCIAj80BnDIMokBZCLMgNwTUSXrAB+RJmKh1p0iQwQp6LLkYdSdDnx1In3ciurlofiJL4rua+LA0/NWTw3YG5vV+3/YKyhT9bHAigYjBFQbV8LGgZjAdglJ2mHMx4X1d36+MJLIG7Lpo8LPopz2c3BOW/CyYXkU4j+housKr7pZfHanm1C6kK6CZkL0SZclrDfoSe+ue516P1UfGE87FA9cLzls63raepanCJe9OXg4YC8AONZXhpQUPVqd8R15VjxW4XJ5e2iK/Fcs62iVklhsrOsRiXVdMvyNIkqI/r+47OKgvehOpmbqJIr+dX+u+hWdMmBOBNdWmOKWYIgCHz0C5JKKCE/zB/JAAAAAElFTkSuQmCC) no-repeat center;
+    background-size: 1.58rem 0.32rem;
+}
+.middle .textL{
+    font-size: 0.24rem;
+}
+</style>
+<body>
+	<div>
+        <div class="topWrap">
+            <div class="top typePlane no_wrap">title</div>
+        </div>
+        <div id="type1" class="contect">
+            <div class="textL red"><span class="icon_warring"></span>机票舱位商务舱超出差旅标准</div>
+            <div class="textL red">差旅标准：经济舱</div>
+            <div class="textL gray no_wrap">超标原因：有事情需要高铁一等做陪同客户参</div>
+        </div>
+        <div id="type2" class="contect">
+            <div class="textL red bg_radios">圆角提示信息框</div>
+        </div>
+        <div id="type3" class="contect">
+            <div class="textL gray bg_radios_gray">圆角灰色系提示信息框</div>
+        </div>
+        <div class="planeInfoWrap flex_box justify_content align_items">
+            <div class="left flex">
+                <div class="textL gray">深圳宝安T3</div>
+                <div class="date">00:50</div>
+                <div class="textL gray">11月07日</div>
+            </div>
+            <div class="middle">
+                <div class="textL gray">深航C1234次</div>
+                <div class="bg_plane"></div>
+                <div class="textL gray">经停 乌鲁木齐 60分钟</div>
+            </div>
+            <div class="right textR flex">
+                <div class="textL gray">浦东T2</div>
+                <div class="date">14:55</div>
+                <div class="textL gray">预计11月30日</div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

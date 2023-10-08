@@ -1,0 +1,108 @@
+@import '~themes/default/styles/common/index.less';
+@import '~styles/mixins/hairLine.less';
+@import '~styles/mixins/mixinsStyle.less';
+.page-flight-times{
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        color: #fff;
+        padding: .2rem;
+        border-radius: @border-radius-base @border-radius-base 0 0;
+
+        
+        &.linear-gra-primary-light{
+            background: linear-gradient(337deg, #0500A3 0%, #3991F7 100%);
+        }
+        
+        &.linear-gra-waring{
+            background: linear-gradient(142deg, #FFC10E 0%, #FFA501 100%);
+        }
+        
+        &.disable{
+            .linear-gra-disable();
+        }
+
+        .airline-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 17px;
+
+            .icon{
+                margin-right: @white-space-sm;
+            }
+
+            .lable{
+                margin-right: .1rem;
+            }
+        }
+
+        .share-flight{
+            position: relative;
+            text-indent: .28rem;
+            font-size: 17px;
+            margin-left: -.5rem;
+            .angle-line{
+                .blpx(1px, #fff);
+                .bbpx(1px, #fff);
+                position: absolute;
+                left: 0;
+                top: .08rem;
+                width: .2rem;
+                height: .12rem;
+            }
+        }
+
+        .air-info{
+            color: #fff;
+            width: 100%;
+            position: relative;
+            // padding: 0 .2rem;
+
+            .time{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .airport{
+                display: flex;
+                justify-content: space-between;
+                margin-top: @white-space-sm;
+                font-size: 15px;
+
+                div{
+                    max-width: calc(~'50% - 1.6rem / 2');
+                }
+            }
+
+            .arrow{
+                position: absolute;
+                top: .15rem;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: .24rem;
+                text-align: center;
+
+                .icon{
+                    height: .5rem;
+                    background: url(~themes/default/img/orderDetail/icon_plane_jingting@2x.svg) no-repeat center;
+                    background-size: contain;
+                }
+            }
+        }
+
+        .airline-info-bottom{
+            font-size: .2rem;
+
+            .split{
+                .blpx(1px, #fff, .08rem, .04rem);
+                margin: 0 .1rem;
+            }
+        }
+    }
+}

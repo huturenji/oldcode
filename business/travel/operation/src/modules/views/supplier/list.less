@@ -1,0 +1,96 @@
+@import '~styles/common.less';
+@import '~styles/variables.less';
+@import '~styles/mixins/mixins.less';
+@placeholder-color: #B2B2B2;
+
+* {
+    box-sizing: border-box;
+    color: @font-color;
+  }
+
+  .marketPage{
+    margin-left: 10px;
+    height: 100%;
+
+    .header{
+        .flex-box;
+        .justify-content(space-between);
+        .align-items(center);
+        width: 100%;
+        background: #fff;
+        padding: 30px 30px 10px 30px;
+
+        .title{
+            font-size: 16px;
+            // margin-bottom: 20px;
+            font-weight: bold;
+        }
+      }
+      .headerTips{
+        background: #fff;
+        padding:0 30px 30px 30px;
+        .smallTip{
+          font-size: 16px;
+        }
+        .tip{
+          font-size: 14px;
+          margin: 10px 0;
+        }
+      }
+
+    .list{
+        padding: 40px 24px;
+        margin-top: 10px;
+        background: #fff;
+
+        .listTitle{
+            display: flex;
+            justify-content: space-between;
+            background: #E7E7EA;
+            padding: 10px 0px;
+            color: #333333;
+            font-size: 13px;
+
+            .listTitleCell{
+                flex: 0 0 20%;
+                text-align: center;
+                //强制换行
+                word-wrap: break-word;
+                word-break: break-all;
+            }
+        }
+        .listItem{
+            // margin-top: 20px;
+            margin: 10px 0 10px 0;
+
+            .itemFirstLine {
+                display: flex;
+                position:relative;
+                justify-content: space-between;
+                border-bottom: 1px solid #e2e2e2;
+      
+                .itemFirstLineCell {
+                  flex: 0 0 20%;
+                  text-align: center;
+                  padding: 10px 0;
+                  word-wrap: break-word;
+                  word-break: break-all;
+
+                  .imgDivT {
+                    height: 18px;
+                    width: 36px;
+                    margin: 0 auto;
+                    background: url(~assets//icon_open.png) 0 center no-repeat transparent;
+                  }
+      
+                  .imgDivF {
+                    height: 18px;
+                    width: 36px;
+                    margin: 0 auto;
+                    background: url(~assets//icon_close.png) 0 center no-repeat transparent;
+                  }
+                }
+            }
+        }
+    }
+  }

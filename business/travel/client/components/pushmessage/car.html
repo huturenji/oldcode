@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=yes">
+    <title></title>
+</head>
+<style>
+html {
+    font-size: 13.33333vw;
+    user-select: none;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', '宋体', Tahoma, Arial, Helvetica, STHeiti, sans-serif;
+    font-size: 0.28rem;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    color: @text-color;
+}
+.no_wrap{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all; 
+}
+.textC{
+    text-align: center;
+}
+.textR{
+    text-align: right;
+}
+.flex_box{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex{
+    -webkit-box-flex: 1;      
+    -moz-box-flex: 1;        
+    -webkit-flex: 1;          
+    -ms-flex: 1;              
+    flex: 1;                  
+}
+.justify_content{
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+}
+.align_items{
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.topWrap{
+    background-image: linear-gradient(to bottom right, #6BA7F9, #424CDD);
+}
+.top{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0 0.4rem;
+    font-size: 0.38rem;
+    font-weight:bold;
+    color: #fff;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAABECAMAAADUWgvnAAAA51BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////9SXN3///////////////////9SXd7////c3PtTYuRYZeX///9jcOj///9XYuB4hOtcaefs7fxve+qan+qPl+3Axfbu8P1JWOSLk+51e+GjqvLN0ffDx/OEjexfauS+wvS7vvJmbd+DjezT1viaovDh4/lodehueejz9P2or/KIku2psPBteuimq/CrsfPJzvdTYuS8v/I+StooG8zuAAAAS3RSTlMAQQsQegQaFiCVgIgwRyp1aFA3YpBvqIyZJO9ZO75eVdSfQtTJt+Cj5MvUhNe0wKiN/OXRsprlx8KY5t22f6ZjzJ+Wk5FM5uRpbjHhPGlRAAAHx0lEQVRo3t2bCV+bMBiHQ0IAKXeL2mPtus1qj7Xq6tTd9/39P8/epLBAAl0zcdfz+01oLNiHf/ImoEO7QxwvGRiDxHMI+n+gzsAQDByK/gsyrf9ODXuGiofRvw7J4hpFaWiGaTTKQvvXh1rmNQzNnHBocP4aM0xsm2CqeRD3GnEtoTbimWn1RtsbGImFUfMQy7LBjGidm3o8LlOGh+ZpXKTg1qoOtjKx2tAoxRjT8jcd4VVh5qBdcYycpOEeTK1cDKg0o5hRTpQOWD80q+C9ke76040CduOBcbG6zCjmcO/yhQ4rxUKdyCyjSKOZkVyMgyvMN5QTZYG1TU4v4+nl3OS02ZDRGGGCpMlxZpfFqBKYEBNmpBAYKD0CnvZ6J9ebyDQufiKsmu6MluiKPxWDt4ieODJzsYd8e33SeypG2W59kUpi3SZrRzkxvEVMRMZqfSSJmQ97PZMTsYr/S2IevQ0xWxVTE8M/elAqiy1zsZQNF41Z/lbEsF5iNvlRO8LarhjuXD0s47bEqKU5xjZiBsAdRPE4geJxkTUZgH5gQNCgl7O9KtKfJ5bxaDk3tRLjy7JbKh6g9ZMxRvHOYwzQGWPCq/nEbMex5DGmBEZLieH6qghoVcXAUBjQZgqHw8Sc0hjDtOylJFY3j3F05jHLqMBpqCOqiZXMKFUSI1SsPFQxnZVHYlRhNRMYiDnSGCuYUU4pMZtgsVZUxHTWikTINJ0ZcaoSA4SYkhjI4WZW95ZRA25ETB1jAC2JZTAnnhk3o4bG/ZiemN2EGFCRGK1LjKvZNtW4g9YXIw2NMat2jFE5McDmYk0887AlH+me7P2Tr1+fvP81MSoVD0ARw4XEuDoXa+IpFRy/rSyCF5g1Uu5tpdzXJEZEWbvJc0Vva1H8yrnRBC0nVoiUg+XEsMaTYN1671HL84ep29qItdx06AdEPzJlHpPnZ0ypnBjWeHavF1kcua3O8b7CuBVpTtykLjFhpowxUhqlipfGc8+uUcAfuuOjO3eO9ms4dmNH4yZTncekyNQxhpv6/RgpHDls7d/hgNn4wI36PnPtp61xUc4c4ButPH6SWEO/0RRhj1ywyrQOQ4/Q4slHICTsOjHewau7bR5TExOrYAVxx6zvFe0dZVJjc+grc6AHQRHHSHO5PZ+i7eBut3IeE2aUqonZwkxfTJ2e/fT4R1SjfJTKYummhrpspAGt5CezMxNT5zFhRmndPHZzMZpwrXCfOR0dHZujujWVd3wMYpwgGh9zUmt7YHJXlMVqVx74xmKEp7V/xOm01UWVEBuPUzE9tQ/HjL3Blr7QVbqiLcQoeNUlBlBtMbXSR2NutW/GW282g/E4QgLS73C1CNcO3prEVDE1MTHMNMWo7RnxhvSQ0YktjNk5LY4DwOcKAI+RJEn/8LA1FPRH5iHHjY2BR6quGSDfj6liuCoxAP+CmGW03b3DMnutg85ezqE2B22rRgyoSYzWJwYQXTHbSPeaYlXY7/jK9VO7ol0tpiYG6IkF7YO9apaVrW8u39R7vZmUXo7kuiQVD7kqZlZqYvpiQdqpYzWtbF4uO/WsFh3Bm+XC15rHahPT7opWdMBZrderA5lLaFJZLU4P6rlci/11b7FqOVJkkpi88tg6xnavigO3BVwsJx/OzyenrTKnpZaTb8AJ7ExXcpvgYjoVxywmF/A1ksdz7TyGgK1VEe88j8WbD/Ph/Mnjx+fTlsT6slUhdrFQ2jinF6vlYrEW31xm18WRzWoSy+KoT4ygXcV813VPLz98fPz48ZPzxakrMb12K7hcq22n6+lksrhcXxQbe9krX73hqLsf275WpLuKBfBT54tz0Pp4Pnk4d90wNF3BfAJNgi2tDyfL67lrhmGp9SzbtivuNOXElNtMOTGt1T17Ojc9fwJWixdzs51YmLJbEDPjempKVLfOp9O5GcZdgrHtjUT72XyzTZEKtoWY8Nr2lErnfiwKw3AymUxfPA/D1MtbsRFuePEsrODZC6UF3jeyUYbTztt7zzdbJqZCMbE3YmxellCfBIO6hlgKPE8ZbQKDOoljnz3s8VLOs7dpBdNrqeHtqzSF09OuEcdsgYzjdMOrF5ttVP/sQ1Q6CSkxpqUh1o5ywIsaEWcYgBnfe/U8qmAmt8Lb4OzWKOL4cKZs9+1ss+1rionQNvBEtcT67Zwuon47x4Mj2HbWVlFb3161RxQ5w/x1nyCSvTh5xjeGnpiAitlNT+zs7Gz2uQ9AQU76AgsRtpn1r+7KXL2c9YvNV/3X7/pdREbiaJ/mJ/t8Mnv3st/v/nYxP45f348BB9lxAfhogzh+OYtV1NarT8yk2AKe+ZvfzeDi4d8uZvi+3/vk+wZGnl/ERg58nfkqausD30O41DKA6+ILAvTbxQbQfvXOMBL5j6bgmrNv3QceyNxn/4pAJbTlX3oG0iOS3yzG7u0/3U+SAMSKQAPO9u5VkpSwkVVuIMgRLzD6A2KMs/ce1ESvCDRgb3cIsuUGK98NMPoDYt0AeP06ADG2K7AQDnaHIFJuwMjKT0TRnxBzGO/vOw5FVrcIQdjZHRuuSxF2Ogew2If+I2KU84VS9jOKUER14H/gKyCbMyMNGhNTIZYA638ES2ALpebF9KFEgPTB4ui/7T9yUUw24F87/G/1+pE8/dWjqXq0Pt8B3mwYm6VOnJIAAAAASUVORK5CYII=) no-repeat right 0.3rem center;
+    background-size: 2.16rem 0.68rem;
+}
+.contect{
+    padding: 0.3rem 0.4rem;
+}
+.textL{
+    line-height: 0.4rem;
+}
+.date{
+    line-height: 0.6rem;
+    font-size: 0.52rem;
+    font-weight: bold;
+    padding: 0.1rem 0;
+}
+.font_big{
+    font-size: 0.52rem;
+}
+.red{
+    color: #FF4E3A;
+}
+.gray{
+    color: #999;
+}
+.green{
+    color: #23cda7;
+}
+.yellow{
+    color: #ffa501;
+}
+.blue{
+    color: #262dd9;
+}
+.lightGray{
+    color: #c2c2c2;
+}
+.pb20{
+    padding-bottom: 0.2rem;
+}
+.icon_warring{
+    width: 0.28rem;
+    height: 0.28rem;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 0.1rem;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAV1BMVEUDWdqwUn7/Tzr5T0DlUE7hUlHqUEfCV2b/Tjr8Tzv7Tj7+Tjv/Tjv+Tjv8Tzz/Tjr9Tzz3UEDtUUbeUmDdUUz/Tzv+TjzyUEH0UUP3Tz78Tz35Tz7/UTz81/G5AAAAHHRSTlMEC9JdIhwtEeyxet3nybz5o1U1ESj22lBIapqHKCRsKgAAAPlJREFUKM99U1tyhDAMS5w3AQLsUthW9z9noSHr0NmJfvwhW6PIjqggtbVaig94zBP5lDxN8+MfJRUB6Il6AKRu4yYAQ7cY58zSDUAwzFlCVJJVIsi+5wijroX0CDJXZ8B4edheOrsbEbKSQrzmFDC4PBuhzuroqBnfQHqWPjrbZgzFy+6LmpAD5qNM6Nj2/vbcYTpaKC3iA5ZEUmjfF9f76yeEMmp6r4VdyV2aPYBYSEerzSSH+HUjT1k2cZIsy4aYZEPlKUzyU3IITEbBIdTxSTsCaXMcXxW8jf7ExsFXK5PPPzheWXvZ7TNpH1j7NPmo1/V21M3v8AtbCxGT4Ztv4gAAAABJRU5ErkJggg==) no-repeat left;
+    background-size: 0.28rem;
+}
+.bg_radios{
+    display: inline-block;
+    padding: 0 0.2rem;
+    background: #FFF4D7;
+    font-size: 0.24rem;
+    border-radius: 0.06rem;
+}
+.bg_radios_gray{
+    display: inline-block;
+    padding: 0 0.2rem;
+    background: #f2f3f5;
+    font-size: 0.24rem;
+    border-radius: 0.06rem;
+}
+.infoWrap{
+    padding: 0 0.4rem;
+}
+.textLineWrap{
+    padding: 0.2rem 0.4rem;
+}
+.label{
+    text-align: justify;
+    text-align-last: justify;
+}
+</style>
+<body>
+	<div>
+        <div class="topWrap">
+            <div class="top no_wrap">title</div>
+        </div>
+        <div id="type1" class="contect">
+            <div class="textL red"><span class="icon_warring"></span>用车预估费用超出差旅标准</div>
+            <div class="textL red">差旅标准：￥50/次  [经济型、商务型]</div>
+            <div class="textL gray no_wrap">超标原因：夜间打车贵</div>
+        </div>
+        <div class="infoWrap flex_box justify_content align_items">
+            <div class="left flex">
+                <div class="textL gray">车型</div>
+                <div class="date">经济型</div>
+            </div>
+            <div class="right textR flex">
+                <div class="textL gray">费用</div>
+                <div class="date">￥45.00</div>
+            </div>
+        </div>
+        <div class="textLineWrap gray">
+            <div class="flex_box align_items">
+                <div class="label">起点</div>
+                <div>：</div>
+                <div class="textitem no_wrap">深业泰然大厦</div>
+            </div>
+            <div class="flex_box align_items">
+                <div class="label">终点</div>
+                <div>：</div>
+                <div class="textitem no_wrap">宝安机场</div>
+            </div>
+            <div class="flex_box align_items">
+                <div class="label">时间</div>
+                <div>：</div>
+                <div class="textitem no_wrap">12月25日 18：00</div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
