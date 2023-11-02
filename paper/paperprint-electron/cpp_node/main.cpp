@@ -81,6 +81,17 @@ private:
     std::ofstream outfile_;
 };
 
+/**
+ * 获取当前时间毫秒数
+*/
+std::time_t getTimeStamp()
+{
+    std::chrono::time_point<std::chrono::system_clock,std::chrono::milliseconds> tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
+    auto tmp=std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch());
+    std::time_t timestamp = tmp.count();
+    return timestamp;
+
+}
 /*获取格式化时间
 */
 string GetFormattedCurrentDate(const char* format){
@@ -1047,8 +1058,16 @@ Napi::Value Verify_Reflex(const Napi::CallbackInfo& info){//反射纸纹核验�
 		retCode = -999;
 	}else{
 		Log_Printf("Verify_Reflex:DLL_CompareImg start");
+
+		std::time_t start = getTimeStamp();
+		Log_Printf(("Verify_Reflex start:" + to_string(start)).c_str());
 		//retCode -2表示没有找到图片
 		retCode = DLL_CompareImg(regImagePath.c_str(),verifyImgPath.c_str(),&result,verifyJ1FilePath);
+		std::time_t end = getTimeStamp();
+
+		Log_Printf(("Verify_Reflex end:" + to_string(end)).c_str());
+		Log_Printf(("Verify_Reflex time is:" + to_string(end-start)).c_str());
+
 		std::string CompareImg_log = "Verify_Reflex:DLL_CompareImg result is: " + std::to_string(retCode);
 		Log_Printf(CompareImg_log.c_str());
 	}
@@ -1057,14 +1076,14 @@ Napi::Value Verify_Reflex(const Napi::CallbackInfo& info){//反射纸纹核验�
 }
 
 
-//透视核验所需参数
+//透射核验所需参数
 int Perspective_result = -999;
 std::mutex mtx;
 std::condition_variable cv;
 
 
 /**
- * 透视核验方法回调
+ * 透射核验方法回调
 */
 void verify_cb(int code,int result){
 	if(code==0){
@@ -1098,17 +1117,6 @@ unsigned char * loadfile(const std::string &file, int &size)
     fs.close();
     data[size] = 0;//todo 内存没有释放
     return (unsigned char *)data;
-}
-/**
- * 获取当前时间毫秒数
-*/
-std::time_t getTimeStamp()
-{
-    std::chrono::time_point<std::chrono::system_clock,std::chrono::milliseconds> tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
-    auto tmp=std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch());
-    std::time_t timestamp = tmp.count();
-    return timestamp;
-
 }
 
 /**
@@ -1155,7 +1163,7 @@ Napi::Value GetAreaRatio(const Napi::CallbackInfo& info){
 
 }
 
-//透视纸纹核验
+//透射纸纹核验
 Napi::Value Verify_Transmit(const Napi::CallbackInfo& info){
 	Napi::Env env = info.Env();
 
