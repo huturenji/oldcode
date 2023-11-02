@@ -1,0 +1,40 @@
+.DS_Store
+package-lock.json
+/build
+node_modules
+dist_electron
+out
+dist
+config.json
+.history
+uvb
+logs
+ppMcu.log
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+ah100sdk.log
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+package-lock.json
+captured_image.jpg
+preview_temp.jpg
+captured_image_small.jpg
+qrcode.jpg
+/src/db/register.db
+/python/__pycache__
+/python/build
+/python/dist
+/cpp_node/build
+/cpp_node/deps

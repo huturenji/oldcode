@@ -1,0 +1,56 @@
+
+.entry[data-v-1bcb43a7] {
+  position: relative;
+  background: white url(../../static/img/background.cd7640b.png) no-repeat;
+  background-size: cover;
+}
+.entry .logoWrap[data-v-1bcb43a7] {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  width: 199px;
+  height: 56px;
+  background-size: 100%;
+}
+.gridbox[data-v-1bcb43a7] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: wrap;
+          flex-flow: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  min-width: 1080px;
+  padding-top: 107px;
+}
+.lotterybox[data-v-1bcb43a7] {
+  width: 337px;
+  height: 424px;
+  cursor: pointer;
+}
+.lotterybox.register[data-v-1bcb43a7] {
+  background: url(../../static/img/btn_input_nor.98e98d4.png) left center no-repeat;
+  background-size: 100%;
+}
+.lotterybox.register[data-v-1bcb43a7]:hover {
+  background: url(../../static/img/btn_input_hover.c4fc34c.png) left center no-repeat;
+  background-size: 100%;
+}
+.lotterybox.verify[data-v-1bcb43a7] {
+  background: url(../../static/img/btn_verifica_nor.c809902.png) left center no-repeat;
+  background-size: 100%;
+}
+.lotterybox.verify[data-v-1bcb43a7]:hover {
+  background: url(../../static/img/btn_verifica_hover.dce54cf.png) left center no-repeat;
+  background-size: 100%;
+}
+.lotterybox.registerList[data-v-1bcb43a7] {
+  background: url(../../static/img/btn_view_nor.151558e.png) left center no-repeat;
+  background-size: 100%;
+}
+.lotterybox.registerList[data-v-1bcb43a7]:hover {
+  background: url(../../static/img/btn_view_hover.382d74e.png) left center no-repeat;
+  background-size: 100%;
+}
+
