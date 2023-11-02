@@ -1,0 +1,34 @@
+# 设备信息
+device:
+  # 平台名称：是Android还是iOS
+  platformName: iOS
+  # App平台原生自动化测试引擎
+  automationName: XCUITest
+  # 系统版本[只连接一台手机时可以不写，多台就要加上]
+  platformVersion: '12.4.8'
+  # 连接的设备名称
+  deviceName: iPhone6
+  # 被测试的应用ID
+  bundleId: com.sinosun.bizmate.newace
+  # iOS手机设备号
+  udid: 0ef0a776a3f6b0c9a0ebda0f1f1a1b2b81c12d4d
+  # Team ID
+  xcodeOrgId: D222W82U7H
+  xcodeSigningId: iPhone Developer
+  preventWDAAttachments: False
+  # 调起webview调试
+  startIWDP: True
+  # appium显示手机的日志
+  # showIOSLog: True
+  # Appium最新版本中noreset=false，意思是清除session信息，不会记录登录状态
+  noReset: False
+
+# API信息
+sit_api:
+  channelId: 9729
+  companyId: d27c3129-a754-4278-90a6-92021a535b63
+  uaId: 2229@bizmatesit
+  userId: c632b29e-e35d-4897-a07e-b35298a7d71f
+  url_token: https://bplussit.sinosun.com:18680/auth/realms/bplussit/protocol/openid-connect/token
+  url_sit: https://bplussit.sinosun.com:18380/
+
