@@ -23,6 +23,9 @@ HWND child_hwnd;
 bool shouldExit = false;
 int camera_index = 	0;
 int result_preview = -1;
+int light_ids[4]={-1};
+int light_lenght=1;//灯个数
+int light_brights[4]={-1};
 
 P_INT__FUN__VOID Dll_OpenDevice;
 P_INT__FUN__VOID Dll_CloseDevice;
@@ -215,7 +218,6 @@ int loadCompareDll(){
 	{	 
 		int dwError = GetLastError();
 		return dwError;
-		// return -1;
 	}
 	DLL_CompareImg = (P_INT__FUN__INT_STRUCT)GetProcAddress(m_hinstLib,"compare");
 	if (NULL == DLL_CompareImg)
@@ -242,97 +244,107 @@ int loadCompareDll(){
 /**
  * 加载摄像头dll
 */
+HINSTANCE m_hinstLib_imagecapture;
 int LoadCameraDll()
-{
-	HINSTANCE m_hinstLib = LoadLibrary(_T("dll\\ImgCapture.dll"));
-	if (NULL == m_hinstLib)
+{	
+	if(NULL == m_hinstLib_imagecapture){
+		Log_Printf("m_hinstLib_imagecapture is NULL");
+	}else{
+		Log_Printf("m_hinstLib_imagecapture is NOT NULL");
+	}
+	
+	m_hinstLib_imagecapture = LoadLibrary(_T("dll\\ImgCapture.dll"));
+	if (NULL == m_hinstLib_imagecapture)
 	{
-		return -1;
+		FreeLibrary(m_hinstLib_imagecapture);//释放动态链接库
+		int dwError = GetLastError();
+		Log_Printf(("LoadLibrary is error result is"+ std::to_string(dwError)).c_str());
+		return dwError;
 	}
 
-	Dll_OpenDevice = (P_INT__FUN__VOID)GetProcAddress(m_hinstLib, "OpenDevice");
+	Dll_OpenDevice = (P_INT__FUN__VOID)GetProcAddress(m_hinstLib_imagecapture, "OpenDevice");
 	if (NULL == Dll_OpenDevice)
 	{
 		return -10;
 	}
 
-	Dll_CloseDevice = (P_INT__FUN__VOID)GetProcAddress(m_hinstLib, "CloseDevice");
+	Dll_CloseDevice = (P_INT__FUN__VOID)GetProcAddress(m_hinstLib_imagecapture, "CloseDevice");
 	if (NULL == Dll_CloseDevice)
 	{
 		return -11;
 	}
 
-	Dll_OpenCamera = (P_INT__FUN__INT)GetProcAddress(m_hinstLib, "OpenCamera");
+	Dll_OpenCamera = (P_INT__FUN__INT)GetProcAddress(m_hinstLib_imagecapture, "OpenCamera");
 	if (NULL == Dll_OpenCamera)
 	{
 		return -12;
 	}
 
-	Dll_CloseCamera = (P_INT__FUN__INT)GetProcAddress(m_hinstLib, "CloseCamera");
+	Dll_CloseCamera = (P_INT__FUN__INT)GetProcAddress(m_hinstLib_imagecapture, "CloseCamera");
 	if (NULL == Dll_CloseCamera)
 	{
 		return -13;
 	}
 
-	Dll_TurnOffLight = (P_INT__FUN__AINT_INT)GetProcAddress(m_hinstLib, "TurnOffLight");
+	Dll_TurnOffLight = (P_INT__FUN__AINT_INT)GetProcAddress(m_hinstLib_imagecapture, "TurnOffLight");
 	if (NULL == Dll_TurnOffLight)
 	{
 		return -14;
 	}
 
-	Dll_TurnOnLight = (P_INT__FUN__2AINT_INT)GetProcAddress(m_hinstLib, "TurnOnLight");
+	Dll_TurnOnLight = (P_INT__FUN__2AINT_INT)GetProcAddress(m_hinstLib_imagecapture, "TurnOnLight");
 	if (NULL == Dll_TurnOnLight)
 	{
 		return -15;
 	}
 
-	Dll_GetCameraParameter = (P_INT__FUN__INT_PCHAR_AINT_PINT)GetProcAddress(m_hinstLib, "GetCameraParameter");
+	Dll_GetCameraParameter = (P_INT__FUN__INT_PCHAR_AINT_PINT)GetProcAddress(m_hinstLib_imagecapture, "GetCameraParameter");
 	if (NULL == Dll_GetCameraParameter)
 	{
 		return -16;
 	}
 
-	Dll_SetCameraParameter = (P_INT__FUN__INT_PCHAR_AINT_INT)GetProcAddress(m_hinstLib, "SetCameraParameter");
+	Dll_SetCameraParameter = (P_INT__FUN__INT_PCHAR_AINT_INT)GetProcAddress(m_hinstLib_imagecapture, "SetCameraParameter");
 	if (NULL == Dll_SetCameraParameter)
 	{
 		return -17;
 	}
 
-	Dll_TakePicAsyn = (P_INT__FUN__INT_CB)GetProcAddress(m_hinstLib, "TakePicAsyn");
+	Dll_TakePicAsyn = (P_INT__FUN__INT_CB)GetProcAddress(m_hinstLib_imagecapture, "TakePicAsyn");
 	if (NULL == Dll_TakePicAsyn)
 	{
 		return -18;
 	}
 
-	Dll_TakePicSyn = (P_INT__FUN__INT_PCHAR_3PINT)GetProcAddress(m_hinstLib, "TakePicSyn");
+	Dll_TakePicSyn = (P_INT__FUN__INT_PCHAR_3PINT)GetProcAddress(m_hinstLib_imagecapture, "TakePicSyn");
 	if (NULL == Dll_TakePicSyn)
 	{
 		return -19;
 	}
 
-	Dll_SetPreviewHwnd = (P_INT__FUN__INT__HWND)GetProcAddress(m_hinstLib, "SetPreviewHwnd");
+	Dll_SetPreviewHwnd = (P_INT__FUN__INT__HWND)GetProcAddress(m_hinstLib_imagecapture, "SetPreviewHwnd");
 	if (NULL == Dll_SetPreviewHwnd)
 	{
 		return -110;
 	}
 
-	Dll_StartPreview = (P_INT__FUN__INT)GetProcAddress(m_hinstLib, "StartPreview");
+	Dll_StartPreview = (P_INT__FUN__INT)GetProcAddress(m_hinstLib_imagecapture, "StartPreview");
 	if (NULL == Dll_StartPreview)
 	{
 		return -111;
 	}
 
-	Dll_StopPreview = (P_INT__FUN__INT)GetProcAddress(m_hinstLib, "StopPreview");
+	Dll_StopPreview = (P_INT__FUN__INT)GetProcAddress(m_hinstLib_imagecapture, "StopPreview");
 	if (NULL == Dll_StopPreview)
 	{
 		return -112;
 	}
-	DLL_VerifyImg = (P_INT__FUN__STRUCT_STRUCT_CB)GetProcAddress(m_hinstLib, "Verify");
+	DLL_VerifyImg = (P_INT__FUN__STRUCT_STRUCT_CB)GetProcAddress(m_hinstLib_imagecapture, "Verify");
 	if (NULL == DLL_VerifyImg)
 	{
 		return -113;
 	}
-	DLL_GetForeGroundAreaRatio = (P_INT__FUN_STRUCT_FLOAT)GetProcAddress(m_hinstLib, "GetForeGroundAreaRatio");
+	DLL_GetForeGroundAreaRatio = (P_INT__FUN_STRUCT_FLOAT)GetProcAddress(m_hinstLib_imagecapture, "GetForeGroundAreaRatio");
 	if(NULL == DLL_GetForeGroundAreaRatio){
 		return -114;
 	}
@@ -344,11 +356,7 @@ int LoadCameraDll()
 */
 Napi::Value LoadDLL(const Napi::CallbackInfo &info){
 	Napi::Env env = info.Env();
-	Log_Printf("load ImgCapture start");
-	int ret = LoadCameraDll();//加载摄像头dll
-	std::string loadCameraDll_result_log = "load ImgCapture result is : " + std::to_string(ret);
-	Log_Printf(loadCameraDll_result_log.c_str());
-	Log_Printf("load ImgCapture end");
+	
 
 	Log_Printf("load SinoPaperprint start");
 	int retcomparedll = loadCompareDll();//加载图片对比程序dll
@@ -356,19 +364,20 @@ Napi::Value LoadDLL(const Napi::CallbackInfo &info){
 	Log_Printf(loadCompareDll_result_log.c_str());
 	Log_Printf("load SinoPaperprint end");
 
-	return Napi::Number::New(env,retcomparedll);
+	Log_Printf("load ImgCapture start");
+	int ret = LoadCameraDll();//加载摄像头dll
+	std::string loadCameraDll_result_log = "load ImgCapture result is : " + std::to_string(ret);
+	Log_Printf(loadCameraDll_result_log.c_str());
+	Log_Printf("load ImgCapture end");
+
+	return Napi::Number::New(env,ret);
 }
 
 /**
  * 开灯
 */
-int turnOnLight(int type, int lev){
-
-	int ids[1], bright[1];
-	ids[0] = type;
-	bright[0] = lev;
-
-	return Dll_TurnOnLight(ids, bright, 1);
+int turnOnLight(int ids[], int bright[],int len){
+	return Dll_TurnOnLight(ids, bright, len);
 }
 
 /**
@@ -422,7 +431,7 @@ LRESULT CALLBACK ViewfinderProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpara
 /**
  * 开始预览视频流
 */
-int PreviewCamera(HWND hwnd){
+int PreviewCamera(HWND hwnd,int ids[],int brights[]){
 
 	//打开设备之前先关闭设备
 	Dll_CloseDevice();
@@ -446,7 +455,7 @@ int PreviewCamera(HWND hwnd){
 	std::cout << "result_opendevice1 is: " << result_opendevice << std::endl;
 	Log_Printf("turnOnLight start");
 	//开启灯光
-	turnOnLight(0,80);
+	turnOnLight(ids,brights,light_lenght);
 
 
 	Log_Printf("turnOnLight successed!");
@@ -477,10 +486,22 @@ int PreviewCamera(HWND hwnd){
 Napi::Value OpenCameraDevice(const Napi::CallbackInfo &info)
 {
 	Napi::Env env = info.Env();
-
-	Dll_CloseDevice();
 	//打开设备
 	Log_Printf("OpenCameraDevice start");
+	//关闭设备
+	Log_Printf("closedevice start");
+	if(NULL == m_hinstLib_imagecapture){
+		int ret = LoadCameraDll();
+		if(ret!=0){
+			Log_Printf("LoadCameraDll failed");
+			return  Napi::Number::New(env,-1);
+		}
+	}
+
+	int result_closedivece = Dll_CloseDevice();
+	std::string result_closedivece_log = "result_closedivece result is : " + std::to_string(result_closedivece);
+	Log_Printf(result_closedivece_log.c_str());
+	Log_Printf("closedevice end");
 	int result_opendevice = Dll_OpenDevice();
 	std::string result_opendevice_result_log = "OpenCameraDevice result is : " + std::to_string(result_opendevice);
 	Log_Printf(result_opendevice_result_log.c_str());
@@ -495,20 +516,32 @@ Napi::Value OpenCameraDevice(const Napi::CallbackInfo &info)
 Napi::Value CreateChildWindow(const Napi::CallbackInfo &info)
 {
  	Napi::Env env = info.Env();
+
+	//窗口句柄
+ 	Napi::Buffer<void *> wndHandle = info[0].As<Napi::Buffer<void *>>();
+
 	if(!info[1].IsArray()){//窗口位置参数
 		Napi::TypeError::New(env, "Array expected").ThrowAsJavaScriptException();
         return env.Null();
 	}
 
-	if(!info[2].IsBoolean()){// 是否需要取景框
-		Napi::TypeError::New(env, "Boolean expected").ThrowAsJavaScriptException();
+
+	if(!info[2].IsArray()){//窗口位置参数
+		Napi::TypeError::New(env, "Array expected").ThrowAsJavaScriptException();
         return env.Null();
 	}
-	
 
-	
-   
-    Napi::Buffer<void *> wndHandle = info[0].As<Napi::Buffer<void *>>();
+	if(!info[3].IsArray()){//窗口位置参数
+		Napi::TypeError::New(env, "Array expected").ThrowAsJavaScriptException();
+        return env.Null();
+	}
+
+	if(!info[4].IsBoolean()){// 是否需要取景框
+		Napi::TypeError::New(env, "Boolean expected").ThrowAsJavaScriptException();
+        return env.Null();
+	}	     
+
+
     HWND hwndParent = static_cast<HWND>(*reinterpret_cast<void **>(wndHandle.Data()));
     HWND hwndD3D = FindWindowEx(hwndParent, nullptr, "Intermediate D3D Window" , nullptr);
     //下面几行是关键代码，没这几行不行
@@ -568,8 +601,22 @@ Napi::Value CreateChildWindow(const Napi::CallbackInfo &info)
         int height = MulDiv(child_height,dpi,USER_DEFAULT_SCREEN_DPI);
         SetWindowPos(hwnd, HWND_BOTTOM, x, y, width, height, SWP_FRAMECHANGED);
     // }
-	
- 	result_preview = PreviewCamera(hwnd);
+	Napi::Array light_ids_array = info[2].As<Napi::Array>();//灯光ids
+	Napi::Array light_bright_array = info[3].As<Napi::Array>();//灯光亮度
+	size_t len = light_ids_array.Length();
+	for(size_t i=0;i<len;i++){
+		Napi::Value ele = light_ids_array.Get(i);
+		if(ele.IsNumber()){
+			light_ids[i] = ele.As<Napi::Number>().Int32Value();
+			
+		}
+		Napi::Value e = light_bright_array.Get(i);
+		if(e.IsNumber()){
+			light_brights[i] = e.As<Napi::Number>().Int32Value();
+		}
+	}
+	light_lenght = len;
+ 	result_preview = PreviewCamera(hwnd,light_ids,light_brights);
 
 	if(result_preview!=0){//只有返回45060或者0才表示打开设备成功
 		if(hwnd != NULL){
@@ -582,7 +629,7 @@ Napi::Value CreateChildWindow(const Napi::CallbackInfo &info)
     SetParent(hwnd, hwndParent);
 
 
-	boolean needViewWindow = info[2].As<Napi::Boolean>();
+	boolean needViewWindow = info[4].As<Napi::Boolean>();
 	if(needViewWindow){
 		//注册取景框窗口
 		WNDCLASSEXW wcViewfinder = {};
@@ -611,7 +658,9 @@ Napi::Value CreateChildWindow(const Napi::CallbackInfo &info)
 	//     //默认不显示窗口
     // ShowWindow(hwnd, SW_HIDE);
     // UpdateWindow(hwnd);
-
+	std::string CreateChildWindow_result_log = "CreateChildWindow result is : " + std::to_string(result_preview);
+	Log_Printf(CreateChildWindow_result_log.c_str());
+	
 	return Napi::Number::New(env,result_preview);
 }
 
@@ -619,10 +668,8 @@ Napi::Value CreateChildWindow(const Napi::CallbackInfo &info)
 /**
  * 关灯
 */
-int turnOffLight(int type){
-	int ids[1];
-	ids[0] = type;
-	return Dll_TurnOffLight(ids, 1);
+int turnOffLight(int ids[],int len){
+	return Dll_TurnOffLight(ids, len);
 }
 
 /**
@@ -663,11 +710,17 @@ Napi::Value ShowChildWindow(const Napi::CallbackInfo &info){
 */
 Napi::Value CloseChildWindow(const Napi::CallbackInfo &info){
 	Napi::Env env = info.Env();
+	int result = 0;
 	Log_Printf("CloseChildWindow start");
 	 if(hwnd != NULL){
         PostMessage(hwnd,WM_CLOSE,0,0);
     }else{
-		return Napi::Number::New(env,-1);
+		result = -1;
+	}
+	if(child_hwnd!=NULL){
+		PostMessage(child_hwnd,WM_CLOSE,0,0);
+	}else{
+		result = -1;
 	}
 	Log_Printf("CloseWindow end");
 
@@ -677,7 +730,7 @@ Napi::Value CloseChildWindow(const Napi::CallbackInfo &info){
 	Log_Printf("Dll_CloseCamera end");
 
 	Log_Printf("turnOffLight start");
-	int rlight = turnOffLight(0);
+	int rlight = turnOffLight(light_ids,light_lenght);
 	std::string turnOffLight_log = "turnOffLight result is : " + std::to_string(rlight);
 	Log_Printf(turnOffLight_log.c_str());
 	Log_Printf("turnOffLight end");
@@ -685,10 +738,20 @@ Napi::Value CloseChildWindow(const Napi::CallbackInfo &info){
 	Log_Printf("Dll_CloseDevice success");
     Dll_StopPreview(camera_index);
 	Log_Printf("Dll_StopPreview success");
+	// FreeLibrary(m_hinstLib_imagecapture);//释放动态链接库
 	Log_Printf("CloseChildWindow end");
-	return Napi::Number::New(env,0);
+	return Napi::Number::New(env,result);
    
 }
+
+/**
+ * 退出app
+*/
+// Napi::Value ExitApp(const Napi::CallbackInfo &info){
+// 	CloseChildWindow(info);
+// 	FreeLibrary(m_hinstLib_imagecapture);//释放动态链接库
+// }
+
 
 /**
  * 写jpg图片
@@ -1221,7 +1284,8 @@ Napi::Object Init(Napi::Env env, Napi::Object exports)
 	exports.Set(Napi::String::New(env, "loadDll"), Napi::Function::New(env, LoadDLL));//加载dll
 	exports.Set(Napi::String::New(env, "openDevice"), Napi::Function::New(env, OpenCameraDevice));//打开摄像头
     exports.Set(Napi::String::New(env, "createChildWindow"), Napi::Function::New(env, CreateChildWindow));//创建摄像头窗口 
-    exports.Set(Napi::String::New(env, "closeChildWindow"), Napi::Function::New(env, CloseChildWindow));//关闭摄像头窗口
+	// exports.Set(Napi::String::New(env, "exitApp"), Napi::Function::New(env, ExitApp));//退出app
+	exports.Set(Napi::String::New(env, "closeChildWindow"), Napi::Function::New(env, CloseChildWindow));//关闭摄像头窗口
     exports.Set(Napi::String::New(env, "showChildWindow"), Napi::Function::New(env, ShowChildWindow));//显示摄像头窗口
     exports.Set(Napi::String::New(env, "hideChildWindow"), Napi::Function::New(env, HideChildWindow));//隐藏摄像头窗口
 	exports.Set(Napi::String::New(env, "takePhoto"), Napi::Function::New(env, TakePhoto));//拍照

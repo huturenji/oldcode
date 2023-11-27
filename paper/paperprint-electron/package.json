@@ -47,7 +47,8 @@
             "!uvb/**/*",
             "!ah100sdk.log",
             "!captured_image.jpg",
-            "!preview_temp.jpg"
+            "!preview_temp.jpg",
+            "!AH200配置/**/*"
         ],
         "extraResources": [
             {
@@ -116,11 +117,12 @@
     "dependencies": {
         "fs-extra": "^11.1.1",
         "log4js": "^6.9.1",
+        "moment": "^2.29.4",
         "node-gyp": "^9.4.0",
         "ref-array-napi": "^1.2.2",
         "ref-napi": "^2.1.2",
         "ref-struct-napi": "^1.1.1",
         "sqlite": "^5.0.1",
-        "sqlite3": "^5.0.0"
+        "sqlite3": "5.0.0"
     }
 }

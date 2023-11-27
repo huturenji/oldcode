@@ -60,7 +60,7 @@ async function verify_reflex_core(register_path,file_path,verifyOption){
  */
 async function verify_py(id,file_path,server_url,static_server_url){
     let result = {};
-    let fileId = await file.upload(file_path);
+    let fileId = await file.upload_py(server_url,file_path);
     if(fileId){
         const options = {
             method:'POST',
@@ -99,4 +99,54 @@ async function verify_py(id,file_path,server_url,static_server_url){
 }
 
 
-module.exports = {reflex,verify_py}
+/**
+ * 图片核验
+ * @param {核验图匹配根路径} root_path 
+ * @param {核验图路径} file_path 
+ * @param {注册服务地址} server_url 
+ * @param {注册服务静态资源地址}static_server_url
+ * @param {string} type 文件存储类型，0：临时存储，1：永久存储  一般0用来表示注册  1用来表示核验
+ * @param {string} appId 接入应用的appId 默认为10000
+ * @returns 
+ */
+async function verify_server(id,file_path,server_url,static_server_url,type,appId){
+    let result = {};
+    let filePath = await file.upload(server_url,file_path,type,appId);
+    if(fileId){
+        const options = {
+            method:'POST',
+            url:`${server_url}verify`,
+            headers: {
+                'Content-Type': 'application/json'
+              },
+            json: true,
+            body:{
+                fileId:fileId
+            }
+        }
+        let data = await Request(options);
+        if(0==data.code){//核验程序成功
+            let labelHash = crypto.createHash('md5').update(id?id:fileId).digest('hex');
+            let detailUrl = `${static_server_url}/paperprint/pages/index.html#/report?registId=${data.data.qrCodeHash}&verifyId=${fileId}`;
+            result = {
+                code:data.code,
+                data:{labelHash,result:data.data.status,detailUrl:detailUrl},
+                message:data.message
+            }
+        }else{
+            result = {
+                code: data.code,
+                message:'verify failed, verify_server failed'
+            }
+        }
+        
+    }else{
+        result = {
+            code: -1,
+            message:'verify failed, upload failed'
+        }
+    }
+    return result;
+}
+
+module.exports = {reflex,verify_py,verify_server}

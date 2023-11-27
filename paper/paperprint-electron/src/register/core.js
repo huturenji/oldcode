@@ -93,7 +93,7 @@ function getRegiterPath(id,root_path,file_path,use_perspective,is_qrcode_verify)
  * --type 值为register执行注册流程 值为verify执行核验流程
  */
 /**
- * 图片注册
+ * 图片注册使用python服务
  * @param {注册图路径} file_path 
  * @param {注册图id} file_id 
  * @param {注册服务地址} server_url 
@@ -101,7 +101,7 @@ function getRegiterPath(id,root_path,file_path,use_perspective,is_qrcode_verify)
  */
 async function register_py(id,file_path,server_url,static_server_url){
     let result = {};
-    let fileId = await file.upload(server_url,file_path);
+    let fileId = await file.upload_py(server_url,file_path);
     if(fileId){
         const options = {
             method:'POST',
@@ -139,6 +139,53 @@ async function register_py(id,file_path,server_url,static_server_url){
 }
 
 /**
+ * 图片注册使用JAVA服务
+ * @param {注册图路径} file_path 
+ * @param {注册图id} file_id 
+ * @param {注册服务地址} server_url 
+ * @param {string} type 文件存储类型，0：临时存储，1：永久存储  一般0用来表示注册  1用来表示核验
+ * @param {string} appId 接入应用的appId 默认为10000
+ * @returns 
+ */
+async function register_server(id,file_path,server_url,static_server_url,type,appId){
+    let result = {};
+    let filePath = await file.upload(server_url,file_path,type,appId);
+    if(fileId){
+        const options = {
+            method:'POST',
+            url:`${server_url}register`,
+            headers: {
+                'Content-Type': 'application/json'
+              },
+            json: true,
+            body:{
+                fileId:fileId
+            }
+        }
+        let data = await http.Request(options);
+        if(0==data.code){
+            let labelHash = crypto.createHash('md5').update(id?id:fileId).digest('hex');
+            result = {
+                code:data.code,
+                data:{labelHash,registerImg:`${static_server_url}${data.data.filePath}`},
+                message:data.message
+            }
+        }else{
+            result = {
+                code: data.code,
+                message:'register failed, register_server failed'
+            }
+        }
+        
+    }else{
+        result = {
+            code: -1,
+            message:'register failed, upload failed'
+        }
+    }
+    return result;
+}
+/**
  * 判断文件是否存在
  * @param {文件路径} path 
  * @returns 
@@ -161,6 +208,6 @@ function checkFileExist(ret){
 }
 
 
-module.exports = {register,register_py,checkFileExist,getRegiterPath}
+module.exports = {register,register_py,register_server,checkFileExist,getRegiterPath}
 
 

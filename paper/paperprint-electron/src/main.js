@@ -25,10 +25,16 @@ let is_qrcode_verify = false;
 let bisConfig = null;
 //核验参数
 let verifyOption = {};
+//window子窗口句柄
+let winBuffer;
+
 //python服务地址
 let python_server_url = 'https://bizmatedev.sinosun.com:17280/paper/';
 //python服务静态资源地址
 let python_static_url = 'https://bizmatedev.sinosun.com:17280/bizmate/static';
+
+let server_url = 'https://bizmatesit.sinosun.com:17280/paperprint/common/';
+let static_server_url = 'https://bizmatesit.sinosun.com:17280/paperprint/common/getFile'
 
 //核验参数key枚举，用于从配置文件中读取
 const VERIFYOPTIONENUM = [
@@ -58,17 +64,23 @@ const PY_VERIFYOPTIONENUM = [
  * 监听子进程消息，调用dll
  */
 function on_main_dispatch_dll(){
-    let winBuffer = win.getNativeWindowHandle();
+    winBuffer = win.getNativeWindowHandle();
     device.on({
-        use_perspective,resolution,winBuffer
+        use_perspective,resolution,winBuffer,light_ids,light_brights
     });
     register.on({
-        is_qrcode_verify,python_server_url,python_static_url,use_python,use_perspective,area_radio
+        is_qrcode_verify,server_url,static_server_url,server_appid,use_server,
+        python_server_url,python_static_url,use_python,use_perspective,area_radio
     });
     verify.on({
-        is_qrcode_verify,python_server_url,python_static_url,use_python,use_perspective,area_radio,
+        is_qrcode_verify,server_url,static_server_url,server_appid,use_server,
+        python_server_url,python_static_url,use_python,use_perspective,area_radio,
         verifyOption
     });
+    setTimeout(() => {
+        loadDll();//win加载完成后再延迟3000ms加载dll，避免出现dll持有导致加载不成功
+    }, 3000);
+    
 }
 
 /**
@@ -113,12 +125,25 @@ function readProperties(){
                 python_static_url = properties['PY_STATIC_URL'];
                 //是否使用python程序
                 use_python = properties['USE_PYTHON'];
+                //是否使用java程序
+                use_server = properties['USE_SERVER'];
+                //java服务地址
+                server_url=properties['SERVER_URL'];
+                //java服务静态资源地址
+                static_server_url=properties['STATIC_SERVER_URL'];
+                //接入应用对应的appId
+                server_appid=properties['SERVER_APPID'];
                 //核验方式为透射
                 use_perspective = properties['USE_PERSPECTIVE']
                 //设备分辨率
                 resolution = properties['RESOLUTION']
                 //图片内容占背景比例
                 area_radio = properties['AREA_RADIO']
+
+                //灯光id集合
+                light_ids = properties['LIGHT_IDS']
+                //灯光亮度集合
+                light_brights = properties['LIGHT_BRIGHTS']
 
                 res(true);
             }
@@ -222,7 +247,6 @@ if(!isSingleInstance){
      */
     app.on('ready', async function () {
         await readProperties();
-        loadDll();
         createWindow(); 
         await initSqlite();
         on_main_dispatch_dll();//监听子进程消息，并且调用dll方法
@@ -231,13 +255,20 @@ if(!isSingleInstance){
     //app关闭时通知python结束进程
     app.on('window-all-closed', async() => {
         logger.info('window-all-closed-----------');
+        
+        logger.info('winBuffer is '+winBuffer);
+
+        await closeChildWindow(winBuffer);
+
         if(use_python){
             socketClient.connected && socketClient.write('.exit.');
             socketClient.end();
             child_python.kill();
         }
-        closeChildWindow(win.getNativeWindowHandle());
+
         app.quit();
+
+       
     });
     // 第二次打开实例时 聚焦主窗口
     app.on('second-instance',()=>{

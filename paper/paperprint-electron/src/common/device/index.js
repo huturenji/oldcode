@@ -8,22 +8,24 @@ function on(params){
     winBuffer = params.winBuffer;
     use_perspective = params.use_perspective;
     resolution = params.resolution;
+    light_ids = params.light_ids;
+    light_brights = params.light_brights;
     //打开设备
     ipcMain.on('openDevice', (event, someArgument) => {
         let res = nativemodule.openDevice();
         event.returnValue = res;
     });
     //初始化dll
-    ipcMain.on('createNativeWindow', async(event, option) => {
+    ipcMain.on('createNativeWindow', async(event, position) => {
         /**
          * 创建子窗口
          * 第一个参数为窗口句柄 类型为buffer
          * 第二个参数为窗口位置 类型为数组
          * 第三个参数为是否需要取景框 类型为Boolean 默认为需要 透射算法不需要取景框
          */
-        let res = nativemodule.createChildWindow(winBuffer,option,!use_perspective);  
+        let res = nativemodule.createChildWindow(winBuffer,position,light_ids,light_brights,!use_perspective);  
         // let windowHanlder = win.getNativeWindowHandle();
-        // let res = await createChildWindow(windowHanlder,option,use_perspective);//todo 通过子线程调用会导致页面卡死 创建窗口是不是只能在主线程调用？
+        // let res = await createChildWindow(windowHanlder,position,use_perspective);//todo 通过子线程调用会导致页面卡死 创建窗口是不是只能在主线程调用？
         event.returnValue = res;
         if((res==0) && resolution){//设置摄像头分辨率
             nativemodule.setCameraParam('resolution',resolution);

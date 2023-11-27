@@ -1,0 +1,27 @@
+
+.namedcomp[data-v-6048f69a] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px;
+  word-break: break-all;
+}
+.namedcomp .compNameA[data-v-6048f69a] {
+  margin-right: 15px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 110px;
+          flex: 0 0 110px;
+  text-align: right;
+}
+.namedcomp .long[data-v-6048f69a] {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 170px;
+          flex: 0 0 170px;
+}
+.namedcomp .require[data-v-6048f69a]:before {
+  content: "*";
+  color: red;
+  font-size: 12px;
+  margin-right: 6px;
+}
+

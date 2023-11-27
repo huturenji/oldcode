@@ -1,0 +1,224 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "纸纹后台服务"
+basePath: "/"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+  
+tags: 
+  - name: "commonbase"
+  - name: "verify"
+paths:
+  # /login:
+  #   post:
+  #     operationId: "login"
+  #     tags: 
+  #       - "commonbase"
+  #     consumes:
+  #       - "application/json"
+  #     produces:
+  #       - "application/json"
+  #     parameters:
+  #       - in: "body"
+  #         name: "request"
+  #         required: true
+  #         schema:
+  #           $ref: "#/definitions/GetTokenRequest"
+  #     responses:
+  #       "200":
+  #         description: "response of 200"
+  #         schema:
+  #           $ref: "#/definitions/ApiResponseGetTokenResponse"
+            
+  /fileUpload:
+    post:
+      operationId: "fileUpload"
+      tags: 
+        - "commonbase" 
+      consumes:
+        - "multipart/form-data"
+      parameters:
+      - name: "file"
+        in: "formData"
+        type: "file"
+        required: true
+      - name: "type"
+        in: "formData"
+        type: "integer"
+        format: "int32"
+        required: true
+        description: "文件存储类型，0：临时存储，1：永久存储"
+      - name: "appId"
+        in: "formData"
+        type: "string"
+        required: true
+        description: "接入应用的appId"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "response of 200"
+          schema:
+            $ref: "#/definitions/ApiResponseFileUploadResponse"
+
+            
+  /verify:
+    post:
+      operationId: "verify"
+      tags: 
+        - "verify"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "request"
+          required: true
+          schema:
+            $ref: "#/definitions/VerifyRequest"
+      responses:
+        "200":
+          description: "response of 200"
+          schema:
+            $ref: "#/definitions/ApiResponseVerifyReponse"
+  
+definitions:
+  ApiResponse:
+    type: "object"
+    required: 
+      - "resultCode"
+    properties:
+      resultCode:
+        type: "integer"
+        format: "int32"
+        description: "错误码，0-成功"
+      resultMessage:
+        type: "string"
+        description: "错误描述"
+      result:
+        type: "object"
+        
+  FileUploadResponse:
+    type: "object"
+    properties:
+      filePath:
+        type: "string"
+        description: "文件地址"
+        
+        
+  ApiResponseFileUploadResponse:
+    type: "object"
+    required:
+      - "resultCode"
+    properties:
+      resultCode:
+        type: "integer"
+        format: "int32"
+        description: "错误码，0-成功"
+      resultMessage:
+        type: "string"
+        description: "错误描述"
+      result:
+        $ref: "#/definitions/FileUploadResponse"
+        
+  VerifyRequest:
+    type: "object"
+    required: 
+      - "issueFilePath"
+      - "verifyFilePath"
+    properties:
+      issueFilePath:
+        type: "string"
+        description: "注册图地址,文件上传接口返回的filePath"
+      verifyFilePath:
+        type: "string"
+        description: "验证图地址,文件上传接口返回的filePath"
+      type:
+        type: "integer"
+        format: "int32"
+        description: "验证类型，默认值0，反射纸纹-0，透射指纹-1"
+      algParams:
+        $ref: "#/definitions/AlgParams"
+  
+  AlgParams:
+    type: "object"
+    properties:
+      cutHeight:
+        type: "integer"
+        format: "int32"
+        description: "裁剪纸纹图的短边高度: 负整数表示block的倍数，如-2，-5，正整数表示指定的大小比如30 50"
+      cutPadding:
+        type: "integer"
+        format: "int32"
+        description: "裁剪纸纹图距离二维码的距离:负整数表示block的倍数，如-1，正整数表示指定的大小比如10"
+      matchPosition:
+        type: "integer"
+        format: "int32"
+        description: "裁剪的纸纹图比对的位移像素个数"
+      qrcodeAlginForce:
+        type: "boolean"
+        description: "配准方式: 0 优先orb配准, 1 强制二维码配准"
+      qrcodeWidth:
+        type: "integer"
+        format: "int32"
+        description: "透视变换时二维码基准边长：-1 表示以注册图大小为准，否则以指定值为基准,如200、300"
+      compareType:
+        type: "integer"
+        format: "int32"
+        description: "1 纸纹比对, 2 边缘比对, 4 特征点比对"
+    description: "算法参数（可选）"  
+        
+  VerifyResult:
+    type: "object"
+    properties:
+      status:
+        type: "integer"
+        format: "int32"
+        description: "1 图片为假图， 0 图片为真图"
+      compareType:
+        type: "integer"
+        format: "int32"
+        description: "1 纸纹比对, 2 边缘比对, 4 特征点比对"
+      compareResult:
+        type: "string"
+        description: "JSON.string({resultsFalse:[0.02, 0.075, -0.02, 0.018, -0.006, 0.044, -0.118, -0.012, -0.011, -0.007, 0, 0.032],resultsTrue: [0.322, 0.39, -0.165, 0.127]})"
+            
+  VerifyReponse:
+    type: "object"
+    properties:
+      status:
+        type: "integer"
+        format: "int32"
+        description: "1 图片为假图， 0 图片为真图（result数组中一个为1，则为1）"
+      filePath:
+        type: "string"
+        description: "图片在服务器中的地址"
+      qrCodeHash:
+        type: "string"
+        description: "图片中二维码内容的hash值"
+      result:
+        type: "array"
+        items:
+          $ref: "#/definitions/VerifyResult"
+          
+  ApiResponseVerifyReponse:
+    type: "object"
+    required:
+      - "resultCode"
+    properties:
+      resultCode:
+        type: "integer"
+        format: "int32"
+        description: "错误码，0-成功"
+      resultMessage:
+        type: "string"
+        description: "错误描述"
+      result:
+        $ref: "#/definitions/VerifyReponse"
+        
+      
+  

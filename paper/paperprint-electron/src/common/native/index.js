@@ -24,13 +24,31 @@ function openDevice(){
 /**
  * 创建窗口
  * @param {窗口句柄} buffer 
- * @param {窗口参数} option 
+ * @param {窗口参数} position 
+ * @param {窗口参数} ids 灯光集合 
+ * @param {窗口参数} brights 灯光亮度集合
  * @param {是否透射} use_perspective 
  */
-function createChildWindow(buffer,option,use_perspective){
-    return nativemodule.createChildWindow(buffer,option,use_perspective)
+function createChildWindow(buffer,position,ids,brights,use_perspective){
+    let res = -1;
+    try {
+        res = nativemodule.createChildWindow(buffer,position,ids,brights,use_perspective);
+    } catch (error) {
+        console.log(error)
+        return -1;
+    }
+    return res;
 }
 
+
+/**
+ * 退出程序
+ * @param {窗口句柄} buffer 
+ * @returns 
+ */
+function exitApp(){
+    return nativemodule.exitApp();
+ }
 /**
  * 关闭窗口
  * @param {窗口句柄} buffer 
@@ -93,5 +111,5 @@ function parseQrCodeImage(path){
     return nativemodule.parseQrCodeImage(path);
 }
 
-module.exports = {nativemodule,nativePath,loadDll,openDevice,createChildWindow,closeChildWindow,takePhoto,hideChildWindow,showChildWindow,
+module.exports = {nativemodule,nativePath,loadDll,openDevice,createChildWindow,closeChildWindow,exitApp,takePhoto,hideChildWindow,showChildWindow,
     setCameraParam,getCameraParam,parseQrCodeImage}
