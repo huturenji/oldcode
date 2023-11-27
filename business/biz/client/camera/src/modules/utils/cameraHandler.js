@@ -12,6 +12,10 @@ class CameraHandler{
         this.isShow = false;//是否打开
 
         this.options = {};
+
+        this.retry = 5;//重试次数
+
+        this.intervalTime = 1500;//重试间隔时间ms
     }
    
     /**
@@ -19,35 +23,60 @@ class CameraHandler{
      * @returns 
      */
     init(options){
+        this.retry = 5;//初始化时，将重试次数还原为5次
         this.options = options;
         this.options.defaultCameraOption = JSON.parse(JSON.stringify(this.options.cameraOptions));
         
-        return new Promise((reslove,reject)=>{
+        return new Promise(async(reslove,reject)=>{
             try {
-                this.cameraInterval = setInterval(async()=>{//TODO值没有返回
-                    let res = await  ipcRenderer.sendSync('openDevice');
-                    if(res==0){
-                        this.cameraInterval&&clearInterval(this.cameraInterval);
-                        let result = await this.createNativeWindow(this.options.cwnd);
-                        if(0==result){
-                            this.setDefaultOption(this.options.defaultCameraOption);
-                            reslove(result);
+                let res = await this.openDevice();  //直接调用该方法会导致上一个页面关闭设置于打开设备的时序问题，导致程序崩溃  //TODO使用路由守卫解决该问题，等待上一个页面的关闭操作完成后，再调往下一个页面
+                if(res!=0){//没有成功 重试5次后给出提示
+                    this.cameraInterval = setInterval(async()=>{
+                        console.log(`opendevice failed retry`,this.retry)
+                        if(this.retry>0){
+                            let result = await this.openDevice();
+                            if(result==0){//初始化成功后返回
+                                console.log(`opendevice success `)
+                                reslove(result)
+                            }
+                            this.retry--;
                         }else{
-                            reslove(result);
+                            this.cameraInterval&&clearInterval(this.cameraInterval)&&(this.cameraInterval=null);
+                            reslove(-999);//重试5次后，还没有成功，则返回失败
                         }
-                        const event = new CustomEvent('cameraInit',{detail:{//TODO 将结果通过事件抛给业务 ，业务监听事件
-                            type:this.options.type,
-                            created:!!!result
-                        }});
-                        window.dispatchEvent(event);
-                    }else{
-                        reslove(res);
-                    }
-                },1500);
+                    },this.intervalTime)
+                }else{
+                    reslove(res);
+                }
             } catch (error) {
                 reslove(-999);
             }
         })
+    }
+    /**
+     * 打开设备并且初始化摄像头
+     */
+    async openDevice(){
+        if(window.closePromise){
+            await window.closePromise;
+            window.closePromise = null;
+        }
+        let res = await  ipcRenderer.sendSync('openDevice');
+        if(res==0){
+            this.cameraInterval&&clearInterval(this.cameraInterval)&&(this.cameraInterval=null);
+            let result = await this.createNativeWindow(this.options.cwnd);
+            if(0==result){
+                this.retry = 0;//初始化成功后，结束重试
+                this.setDefaultOption(this.options.defaultCameraOption);
+                const event = new CustomEvent('cameraInit',{detail:{//将结果通过事件抛给业务 ，业务监听事件
+                    type:this.options.type,
+                    created:!!!result
+                }});
+                window.dispatchEvent(event);
+            }
+            return result;
+        }
+        return res;
     }
      /**
       * 创建纸纹仪窗口
@@ -201,10 +230,18 @@ class CameraHandler{
      /**
       * 关闭纸纹仪
       */
-     async close(){
+     async close(type){
         this.cameraInterval&&clearInterval(this.cameraInterval);
-        await this.hide();
-        await ipcRenderer.sendSync('closeNativeWindow');
+        window.closePromise = new Promise(async(reslove)=>{
+            await this.hide();
+            await ipcRenderer.sendSync('closeNativeWindow');
+            reslove();
+        });
+        // const event = new CustomEvent('cameraClosed',{detail:{//将结果通过事件抛给业务 ，业务监听事件
+        //     type:type,
+        // }});
+        // window.dispatchEvent(event);
+        return true;
     }
 
     /**

@@ -120,6 +120,7 @@ export default {
                 nickName:'admin'
             }
             sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
+            
             this.$router.replace('/entry');
         }
     }

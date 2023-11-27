@@ -136,14 +136,16 @@ export default {
     },
     mounted() {
         //页面开始执行初始化
+        window.addEventListener('cameraInit',this.cameraInitHandler);
+        // window.addEventListener('cameraClosed',this.cameraClosedHandler);
         this.getAppEnv();
-        this.deviceInit();
+        this.deviceInit();//TODO要等到上一个页面的camera close之后才能进行初始化
         
     },
     beforeDestroy(){
         !!this.timer && clearInterval(this.timer);
         Message.closeAll();
-        cameraHandler.close();//关闭纸纹仪
+        cameraHandler.close('verify');//关闭纸纹仪
     },
     watch:{
         tagName(nVal,oVal){
@@ -166,20 +168,29 @@ export default {
         },
         //页面初始化
         async deviceInit(){
-            window.addEventListener('cameraInit',this.cameraInitHandler);
             let result = await cameraHandler.init({
                 type:'verify',
                 cwnd:this.PREVIEW_OPTIONS,
                 cameraOptions:this.appEnv.defaultCameraOptions
             });
             if(0!=result){//初始化失败  初始化失败后，会重新初始化，如果直接返回成功或者失败，重试成功则没有返回，故使用事件监听返回成功
-                this.alert('未发现纸纹仪，请检查设备是否正常','warning');
+                this.confirm('确认',`<div class='coverText'><span>未检测到纸纹仪，请检查纸纹仪是否连接正常</span></div>`,'warning',this.deviceInit,true,'',true,null,'',false);
             }
         },
         cameraInitHandler(e){
             e.target.removeEventListener('cameraInit',this.cameraInitHandler);//移除事件监听，避免监听多次
             if(e.detail.created&&e.detail.type=='verify'){//初始化成功 需要加上type 否则事件会触发到核验那边
                 this.bisInit();
+            }
+        },
+        /**
+         * 监听设备关闭成功
+         */
+         cameraClosedHandler(e){
+            e.target.removeEventListener('cameraClosed',this.cameraClosedHandler);//移除事件监听，避免监听多次
+            alert('verify-----------'+e.detail.type)
+            if(e.detail.type!='verify'){//非注册页面关闭之后，才能进行初始化 设备关闭成功 需要加上type 否则事件会触发到核验那边  
+                this.deviceInit();
             }
         },
         /**
