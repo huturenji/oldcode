@@ -10,11 +10,11 @@
                 :bisType="bisType"
                 @verifyFun="toggleBisType"
             ></headBreadcrumb>
-            <div class="contcentWrap"
+            <div class="contentWrap"
                 :element-loading-text="loadingText"
                 element-loading-spinner="el-icon-loading"
                 element-loading-background="rgba(0, 0, 0, 0.7)">
-                <div class="concent">
+                <div class="content">
                     <div class="videoWrap ">
                         <div class="videoContent"  :class="{gradientWrapper:gradientWrapper,fadeAway:fadeAway}">
                             <div class="scanBaseImgWrap" id="scanBaseImgWrap">
@@ -116,9 +116,9 @@ export default {
         //页面开始执行初始化
         this.getAppEnv();
         window.addEventListener('cameraInit',this.cameraInitHandler);
-        // window.addEventListener('cameraClosed',this.cameraClosedHandler);
-        this.deviceInit();//TODO要等到上一个页面的camera close之后才能进行初始化
-
+        setTimeout(() => {//需要将设备初始化放到异步宏任务重，因为初始化设备会持有窗口句柄导致预览页面出现在前一个页面
+            this.deviceInit();//TODO要等到上一个页面的camera close之后才能进行初始化
+        }, 0);
     },
     beforeDestroy(){
         !!this.timer && clearInterval(this.timer);
@@ -165,16 +165,6 @@ export default {
             e.target.removeEventListener('cameraInit',this.cameraInitHandler);//移除事件监听，避免监听多次
             if(e.detail.created&&e.detail.type=='register'){//初始化成功 需要加上type 否则事件会触发到核验那边
                 this.bisInit();
-            }
-        },
-        /**
-         * 监听设备关闭成功
-         */
-        cameraClosedHandler(e){
-            e.target.removeEventListener('cameraClosed',this.cameraClosedHandler);//移除事件监听，避免监听多次
-            alert('register---------'+ e.detail.type)
-            if(e.detail.type!='register'){//非注册页面关闭之后，才能进行初始化 设备关闭成功 需要加上type 否则事件会触发到核验那边  
-                this.deviceInit();
             }
         },
          /**
@@ -233,7 +223,11 @@ export default {
             try {
                 let beforeType = this.haveCamera;
                 this.takenPhotoing = true;
-                !beforeType && await cameraHandler.init(this.PREVIEW_OPTIONS);
+                !beforeType && await cameraHandler.init({
+                    type:'register',
+                    cwnd:this.PREVIEW_OPTIONS,
+                    cameraOptions:this.appEnv.defaultCameraOptions
+                });
                 if(this.haveCamera){
                     //标签名称校验
                     if (!this.tagName.trim().length) {
@@ -510,7 +504,7 @@ export default {
     animation: move-light 3s linear;
 }
 
-.contcentWrap{
+.contentWrap{
     height: calc(100vh - 45px);
 }
 .registerWrap{
@@ -519,12 +513,10 @@ export default {
     background-size: cover;
 
 }
-.concent{
-    margin-top: 32px;
+.content{
     width: 480px;
-    // margin: 0px auto;
-    padding: 23px 0 0;
-    margin-left: 300px;
+    margin: 0px auto;
+    padding: 40px 0 0;
 }
 .videoWrap{
     width: 480px;

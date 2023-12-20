@@ -27,6 +27,12 @@ const commonRouter = [
         },
     },
     {
+        path: '/gather',
+        component: resolve => require(['modules/views/gather/index.vue'], resolve),
+        name: 'gather',
+        meta: { requiresAuth: false, title: '注册纸纹' }
+    },
+    {
         path: '/register',
         component: resolve => require(['modules/views/register/index.vue'], resolve),
         name: 'register',

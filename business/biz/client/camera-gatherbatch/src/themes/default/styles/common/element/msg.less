@@ -1,0 +1,53 @@
+.el_msg{
+    display: flex;
+    flex-direction: column; /* 将子元素在垂直方向上堆叠 */
+    top: 260px !important;
+    min-width: 160px;
+    height: 129px;
+    background-color: white;
+    .el-icon-success{
+        background: url('../../../img/icon_toast_success.png') center center no-repeat;
+        font-size: 0;
+        width: 60px;
+        height:62px;
+    }
+    .el-icon-error{
+        background: url('../../../img/icon_toast_error.png') center center no-repeat;
+        font-size: 0;
+        width: 60px;
+        height:62px;
+    }
+    .el-message {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .el-message__content{
+        color:#23CDA7;
+        margin-top: 16px;
+    }
+}
+.el-message--success{
+    .el-message__content{
+        color:#23CDA7;
+        margin-top: 16px;
+    }
+}
+.el-message--error{
+    border-color:#fff;
+    .el-message__content{
+        color:#FF3C3C;
+        margin-top: 16px;
+    }
+}
+.message_box_alert{
+    width: 160px;
+    height: 130px;
+    .el-icon-success{
+        background: url('../../../img/icon_toast_success.png') center center no-repeat;
+        font-size: 0;
+        width: 16px;
+        height:16px;
+    }
+
+}

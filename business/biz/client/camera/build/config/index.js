@@ -78,7 +78,7 @@ module.exports = {
         index: path.join(path.resolve(__dirname, '../../dist'), process.env.BP_APPNAME || '', 'index.html'),
 
         // Paths
-        assetsRoot: "D:\\git\\paperprint\\ReflectPaperprint\\frontend\\paperprint-electron\\src\\assets",//path.join(path.resolve(__dirname, '../../dist'), process.env.BP_APPNAME || ''),
+        assetsRoot: path.join(path.resolve(__dirname, '../../dist'), process.env.BP_APPNAME || ''),
         assetsSubDirectory: 'static',
         assetsPublicPath: process.env.BP_PREHTML ? '../' : './',
 

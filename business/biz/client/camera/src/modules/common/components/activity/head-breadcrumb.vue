@@ -6,10 +6,16 @@
                 <i class="el-icon-arrow-left icon"></i>
                 <p>{{ title }}</p>
             </div>
-           
             <!-- <p class="line"></p> -->
-            <p class="tips" v-if="tips" :class="{blue: bisType=='register'}" @click="registerFun">{{ tips }}</p>
-            <p class="bistips" :class="{blue: bisType=='verify'}" v-if="bistips" @click="verifyFun">{{ bistips }}</p>
+            <div class="tipsWrap">
+                <div class="tipsDiv">
+                    <p class="tips" v-if="tips" :class="{blue: bisType=='register'}" @click="registerFun">{{ tips }}</p>
+                    <p class="bistips" :class="{blue: bisType=='verify'}" @click="verifyFun">{{ bistips }}</p>
+                </div>
+            </div>
+               
+           
+           
         </div>
         <el-button v-show="showbtn" :type="type" @click="tabClick">{{btnName}}</el-button>
     </div>
@@ -84,15 +90,13 @@ export default {
     background:url('@/themes/default/img/line_tab_verify.png') center no-repeat;
 }
 .headbreadcrumb {
-    margin-top: 26px;
-    display: flex;
-    align-items: center;
+    height: 60px;
+    background-position-y: 20px;
+    margin-top: 40px;
     justify-content: space-between;
-    padding: 16px 32px;
     font-size: 20px;
     color: #222;
-    
-    background-position: 0 40px;
+    padding-left: 32px;
     .blue{
         color:#0B95EC;
     }
@@ -108,15 +112,13 @@ export default {
             background-size: 100%;
         }
         .tips{
-            margin-left: 325px;
             font-weight: 600;
         }
         .bistips{
             margin-left: 65px;
             font-weight: 600;
         }
-    }
-    .lefttit {
+        .lefttit {
         display: flex;
         align-items: center;
         font-weight: 600;
@@ -125,5 +127,16 @@ export default {
             padding-right: 10px;
         }
     }
+    }
+    .tipsWrap{
+        flex: auto;
+        text-align: center;
+        .tipsDiv{
+            width: 360px;
+            display: inline-flex;
+        }
+       
+    }
+
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="verifyWrap" :class="{zoomStyle:zoomStyle}">
-        <canvas id="myCanvas" width="1020" height="360" style="position:absolute;top:139px;left:29px;z-index: 500;"></canvas>
-        <div class="card_box">
+        <canvas id="myCanvas" width="1020" height="360" style="position:absolute;top:139px;left:29px;z-index: 500;" ></canvas>
+        <div class="headerWrap">
             <headBreadcrumb
                 :title="'首页'"
                 :tips="title"
@@ -11,16 +11,20 @@
                 @goback="gotoBack"
                 @registerFun="toggleBisType"
             ></headBreadcrumb>
-            <div class="contcentWrap"
-                :element-loading-text="loadingText"
-                element-loading-spinner="el-icon-loading"
-                element-loading-background="rgba(0, 0, 0, 0.7)">
-                <div class="textDiv">
-                    <span class="register_span vspan">注册凭证</span>
-                    <span class="verify_span vspan">待测凭证</span>
-                </div>
-                <div class="concent">
-                    <div class="registerWrap" :class="{gradientWrapper:gradientWrapper,fadeAway:fadeAway}">
+        </div>
+        <div class="contentWrap"
+            :element-loading-text="loadingText"
+            element-loading-spinner="el-icon-loading"
+            element-loading-background="rgba(0, 0, 0, 0.7)">
+            
+            <div class="content">
+                <!-- 注册模块 -->
+                <div class="registerWrap" :class="{gradientWrapper:gradientWrapper,fadeAway:fadeAway}">
+                    <div class="textDiv">
+                        <span class="vspan">注册凭证</span>
+                    </div>
+                    
+                    <div class="registerImgWrap">
                         <div class="scanBaseImgWrap" id="scanBaseImgWrap">
                             <div v-if="register_scan_base_img" class='scanBaseImg' :style="{backgroundImage: 'url(' + register_scan_base_img + ')'}"></div>
                         </div>
@@ -28,53 +32,62 @@
                         <span v-if="!registerImgData" class="registerTips">输入凭证号后，将显示注册图</span>
                         <div v-else class="registerImg" :style="{backgroundImage: 'url(' + registerImgData + ')'}"></div>
                     </div>
+                </div>
+                <!-- 中间分隔线 -->
+                <div class="vertical-div">
                     <p class="vertical-line"></p>
-                    <div class="videoWrap">
-                        <div class="videoContent" :class="{gradientWrapper:gradientWrapper,fadeAway:fadeAway}">
-                            <div class="scanBaseImgWrap" id="scanBaseImgWrap">
-                                <div v-if="verify_scan_base_img" class='scanBaseImg' :style="{backgroundImage: 'url(' + verify_scan_base_img + ')'}"></div>
+                </div>
+                <!-- 待测模块 -->
+                <div class="sampleWrap">
+                    <div class="textDiv">
+                        <span class="vspan">待测凭证</span>
+                    </div>
+                    <div class="videoContent" :class="{gradientWrapper:gradientWrapper,fadeAway:fadeAway}">
+                        <div class="scanBaseImgWrap" id="scanBaseImgWrap">
+                            <div v-if="verify_scan_base_img" class='scanBaseImg' :style="{backgroundImage: 'url(' + verify_scan_base_img + ')'}"></div>
+                        </div>
+                        <img class="scan cameraScan" id="scanLight" v-if='scanLight' :src="scanLight" /> 
+                        <div v-if="coveImgData" id="coveImg" :style="{backgroundImage: 'url(' + coveImgData + ')'}"></div>
+                        <div class="optionsWrap" v-if="optionsWrapShow">
+                            <div class="line">
+                                <div class="label">曝光：</div>
+                                <el-slider class="slider" v-model="options.exposure" :min="-13" :max="0" :step="1" @change="(val)=>{setCameraOption('exposure',[val])}"></el-slider>
+                                <span class="sliderRightText">{{options.exposure}}</span>
                             </div>
-                            <img class="scan cameraScan" id="scanLight" v-if='scanLight' :src="scanLight" /> 
-                            <div v-if="coveImgData" id="coveImg" :style="{backgroundImage: 'url(' + coveImgData + ')'}"></div>
-                            <div class="optionsWrap" v-if="optionsWrapShow">
-                                <div class="line">
-                                    <div class="label">曝光：</div>
-                                    <el-slider class="slider" v-model="options.exposure" :min="-13" :max="0" :step="1" @change="(val)=>{setCameraOption('exposure',[val])}"></el-slider>
-                                    <span class="sliderRightText">{{options.exposure}}</span>
-                                </div>
-                                <div class="line">
-                                    <div class="label">自动曝光</div>
-                                    <el-slider class="slider" v-model="options.exposure_auto" :min="0" :max="1" :step="1" @change="(val)=>{setCameraOption('exposure_auto',[val])}"></el-slider>
-                                    <span class="sliderRightText">{{options.exposure_auto}}</span>
-                                </div>
-                                <div class="line">
-                                    <div class="label">白平衡</div>
-                                    <el-slider class="slider" v-model="options.whitebalance" :min="2700" :max="6500" :step="100" @change="(val)=>{setCameraOption('whitebalance',[val])}"></el-slider>
-                                    <span class="sliderRightText">{{options.whitebalance}}</span>
-                                </div>
-                                <div class="line">
-                                    <div class="label">自动白平衡</div>
-                                    <el-slider class="slider" v-model="options.whitebalance_auto" :min="0" :max="1" :step="1" @change="(val)=>{setCameraOption('whitebalance_auto',[val])}"></el-slider>
-                                    <span class="sliderRightText">{{options.whitebalance_auto}}</span>
-                                </div>
-                                <div class="bottomBar">
-                                    <div class="reset" @click="reset()">重置</div>
-                                    <div class="getList" @click="closeOptionsContent()">确认</div>
-                                </div>
+                            <div class="line">
+                                <div class="label">自动曝光</div>
+                                <el-slider class="slider" v-model="options.exposure_auto" :min="0" :max="1" :step="1" @change="(val)=>{setCameraOption('exposure_auto',[val])}"></el-slider>
+                                <span class="sliderRightText">{{options.exposure_auto}}</span>
+                            </div>
+                            <div class="line">
+                                <div class="label">白平衡</div>
+                                <el-slider class="slider" v-model="options.whitebalance" :min="2700" :max="6500" :step="100" @change="(val)=>{setCameraOption('whitebalance',[val])}"></el-slider>
+                                <span class="sliderRightText">{{options.whitebalance}}</span>
+                            </div>
+                            <div class="line">
+                                <div class="label">自动白平衡</div>
+                                <el-slider class="slider" v-model="options.whitebalance_auto" :min="0" :max="1" :step="1" @change="(val)=>{setCameraOption('whitebalance_auto',[val])}"></el-slider>
+                                <span class="sliderRightText">{{options.whitebalance_auto}}</span>
+                            </div>
+                            <div class="bottomBar">
+                                <div class="reset" @click="reset()">重置</div>
+                                <div class="getList" @click="closeOptionsContent()">确认</div>
                             </div>
                         </div>
                     </div>
-                    <div class="formArea">
-                            <namedcomp :compName="`${sourceTypeName}号`">
-                            <div slot="component">
-                                <el-input class="formAreaInpurt" v-model.trim="tagName" clearable maxlength="50" :disabled="inputDisabled" @input="handleInput($event)" :placeholder="`请输入${sourceTypeName}号（必填）`" />
-                            </div>
-                        </namedcomp>
-                    </div>
-                    <div class="bisBottomBar">
-                        <div class="bisButton" :class="{active:active}"  @click="verify()">{{verifyBtn}}</div>
-                    </div>
                 </div>
+            </div>
+             <!-- 凭证号 -->
+             <div class="formArea">
+                    <namedcomp :compName="`${sourceTypeName}号`">
+                    <div slot="component">
+                        <el-input class="formAreaInpurt" v-model.trim="tagName" clearable maxlength="50" :disabled="inputDisabled" @input="handleInput($event)" :placeholder="`请输入${sourceTypeName}号（必填）`" />
+                    </div>
+                </namedcomp>
+            </div>
+            <!-- 按钮 -->
+            <div class="bisBottomBar">
+                <div class="bisButton" :class="{active:active}"  @click="verify()">{{verifyBtn}}</div>
             </div>
         </div>
         <!-- <div class="optionsBottomBar">
@@ -137,10 +150,10 @@ export default {
     mounted() {
         //页面开始执行初始化
         window.addEventListener('cameraInit',this.cameraInitHandler);
-        // window.addEventListener('cameraClosed',this.cameraClosedHandler);
         this.getAppEnv();
-        this.deviceInit();//TODO要等到上一个页面的camera close之后才能进行初始化
-        
+        setTimeout(() => {//需要将设备初始化放到异步宏任务重，因为初始化设备会持有窗口句柄导致预览页面出现在前一个页面
+            this.deviceInit();//TODO要等到上一个页面的camera close之后才能进行初始化
+        }, 0);
     },
     beforeDestroy(){
         !!this.timer && clearInterval(this.timer);
@@ -161,9 +174,9 @@ export default {
                 this.localAssetsPreStr = this.appEnv.isPackaged?'../../../../':'../../';
             }
             if(this.appEnv.preview_model){
-                this.PREVIEW_OPTIONS = [570,139,480,360];
+                this.PREVIEW_OPTIONS = [568,139,480,360];
             }else{
-                this.PREVIEW_OPTIONS = [570,139,0,0];
+                this.PREVIEW_OPTIONS = [568,139,0,0];
             }
         },
         //页面初始化
@@ -181,16 +194,6 @@ export default {
             e.target.removeEventListener('cameraInit',this.cameraInitHandler);//移除事件监听，避免监听多次
             if(e.detail.created&&e.detail.type=='verify'){//初始化成功 需要加上type 否则事件会触发到核验那边
                 this.bisInit();
-            }
-        },
-        /**
-         * 监听设备关闭成功
-         */
-         cameraClosedHandler(e){
-            e.target.removeEventListener('cameraClosed',this.cameraClosedHandler);//移除事件监听，避免监听多次
-            alert('verify-----------'+e.detail.type)
-            if(e.detail.type!='verify'){//非注册页面关闭之后，才能进行初始化 设备关闭成功 需要加上type 否则事件会触发到核验那边  
-                this.deviceInit();
             }
         },
         /**
@@ -242,7 +245,11 @@ export default {
             }
             try {
                 cameraHandler.takenPhotoing = true;
-                !this.haveCamera && await await cameraHandler.init(this.PREVIEW_OPTIONS);
+                !this.haveCamera && await  cameraHandler.init({
+                    type:'verify',
+                    cwnd:this.PREVIEW_OPTIONS,
+                    cameraOptions:this.appEnv.defaultCameraOptions
+                });
                 if(this.haveCamera){
                     //标签名称校验
                     if (!this.tagName.trim().length) {
@@ -594,6 +601,7 @@ export default {
                         registerImg = this.localAssetsPreStr+registerImg;
                     }
                     this.registerImgData = `${registerImg}?t=${new Date().getTime()}`;
+                    console.log(`this.registerImgData  is ${this.registerImgData }`)
                 }else{
                     this.scanIndex = utils.getScanIndex(this.labelId);
                     this.registerImgData = require(`@/themes/default/img/scan/${this.scanIndex}/register.png`);//左边注册图
@@ -672,25 +680,30 @@ export default {
 }
 
 
-.contcentWrap{
+.contentWrap{
     height: calc(100vh - 45px);
+    .content{
+        display: flex;
+        justify-content: center;
+    }
 }
+
 
 .verifyWrap{
     height: 100%;
     background: white url('@/themes/default/img/background.png') no-repeat;
     background-size: cover;
 }
-.concent{
-    padding: 23px 0 0;
-}
 .registerWrap{
+    width: 480px;
+    height: 414px;
+}
+.registerImgWrap{
     position: absolute;
     display: flex;
     width: 480px;
     height: 360px;
     float: left;
-    margin-left: 30px;
     background: url('@/themes/default/img/bg_register.png') center no-repeat;
     background-size: 100%;
 }
@@ -709,37 +722,31 @@ export default {
     margin: auto;
 }
 .textDiv{
-    height: 32px;
-    margin-left: 30px;
+    height: 40px;
+    text-align: center;
     .vspan{
         font-size: 16px;
         color: #222;
         font-weight: 600;
-    
-        margin-top: 20px;
         display: inline-block;
-    }
-    .register_span{
-        margin-left: 208px;
-    }
-    .verify_span{
-        margin-left: 468px;
     }
 }
 
-   
-/*垂直竖线*/
-.vertical-line {
-    margin-left: 530px;
-    width: 10px;
+.vertical-div{
+    width: 56px;
+    padding-top: 40px;
+    .vertical-line {
+    width: 0px;
+    margin-left: 28px;
     height: 360px;
-    float: left;
     border-right: dashed #499CFE 2px;
 }
-.videoWrap{
+}  
+/*垂直竖线*/
+
+.sampleWrap{
     width: 480px;
-    height: 360px;
-    margin-left: 570px;
+    height: 414px;
 }
 .zoomStyle{
     .formArea{
@@ -748,7 +755,8 @@ export default {
 }
 .formArea {
     padding: 40px 30px;
-    margin-left: 300px;
+    display: flex;
+    justify-content: center;
     .formAreaInpurt{
         width: 320px;
     }
