@@ -8,10 +8,11 @@
                 <span>请把二维码放置在取景框中间</span>
             </div>
             <div class="viewfinderWrap" >
-                <img :src="registerImg"/>
-                <div class="focus">
-                </div>
+                <!-- 使用v-if判断去除img默认的灰色边框 -->
+                <img :src="registerImg" v-if="registerImg"/>
                 <div class="viewfinder">
+                </div>
+                <div class="focus">
                 </div>
             </div>
             <div>
@@ -87,9 +88,9 @@ export default {
         let time = SnUtils.getUserPara('interval');
         await this.getPreviewImg();
          //程序启动后直接获取预览图片
-        this.interval_preview = setInterval(async()=>{
-            await this.getPreviewImg();
-        },time||300)
+        // this.interval_preview = setInterval(async()=>{
+        //     await this.getPreviewImg();
+        // },time||150)
     },
     destroyed(){
         this.interval_preview&&clearInterval(this.interval_preview);
@@ -106,9 +107,7 @@ export default {
             this.active=true;
             this.registerStatus='registering';
             this.scan_light_img=require(`@/themes/default/img/gather/scan.png`);
-            let sendPost = request.post('/api/v1/capture/get',{//采集一张纸纹图 参见接口3.9
-                            LabelId:102030
-                        })
+            let sendPost = request.post('/api/v1/capture/get')//采集一张纸纹图 参见接口3.9
             this.interval = setInterval(async() => {
                 if(this.progress<MAX_PROSES){
                     this.progress++
@@ -155,14 +154,12 @@ export default {
     }
 }
 .gather{
-    background: url('@/themes/default/img/gather/bg.png') no-repeat;
-    background-size: cover;
     width: 1280px;
     height: 720px;
     position: static;
     margin: auto;
     .registerWrap{
-        width: 480px;
+        width: 540px;
         margin:auto;
         text-align: center;
         .title{
@@ -186,32 +183,46 @@ export default {
         }
         .viewfinderWrap{
             margin: 40px 0 0 0;
-            background-color: #FFF;
             border-radius: 8.5px;
-            width: 480px;
+            width: 100%;
             height: 360px;
             background-size: 100%;
             img{
                 display: block;
                 position: absolute;
-                width: 480px;
+                width: 540px;
                 height: 360px;
                 padding: 6px;
             }
             .viewfinder{
-                width: 480px;
+                width: 540px;
                 height: 360px;
-                background: url('@/themes/default/img/gather/viewfinder.png') no-repeat;
+                position: absolute;
+                background: rgba(0,0,0,0.3);
+                -webkit-mask: linear-gradient(to right,black 170px, rgba(0, 0, 0, 0) 170px, rgba(0, 0, 0, 0) 370px,black 370px),
+                                  linear-gradient(to bottom,black 87px, rgba(0, 0, 0, 0) 87px, rgba(0, 0, 0, 0) 287px,black 287px);
+                mask:linear-gradient(to right,black 170px, rgba(0, 0, 0, 0) 170px, rgba(0, 0, 0, 0) 370px,black 370px),
+                                  linear-gradient(to bottom,black 87px, rgba(0, 0, 0, 0) 87px, rgba(0, 0, 0, 0) 287px,black 287px);
+                border:6px solid rgba(0, 29, 113, 0.5);
+                border-radius:8.5px
             }
             
             .focus{
                 float:left;
                 position: relative;
-                top:110px;
+                top:87px;
                 left: 170px;
-                width: 140px;
-                height: 140px;
-                background: url('@/themes/default/img/gather/focus.png') no-repeat;
+                width: 200px;
+                height: 200px;
+                background:linear-gradient(to right,#fff,#fff) left top no-repeat,
+                linear-gradient(to bottom,#fff,#fff) left top no-repeat,
+                linear-gradient(to right,#fff,#fff) left bottom no-repeat,
+                linear-gradient(to bottom,#fff,#fff) left bottom no-repeat,
+                linear-gradient(to right,#fff,#fff) right top no-repeat,
+                linear-gradient(to bottom,#fff,#fff) right top no-repeat,
+                linear-gradient(to right,#fff,#fff) right bottom no-repeat,
+                linear-gradient(to bottom,#fff,#fff) right bottom no-repeat;
+                background-size: 3px 16px,16px 3px;
             }
         }
         .button{

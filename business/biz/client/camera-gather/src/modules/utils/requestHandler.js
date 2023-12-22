@@ -18,6 +18,7 @@ class request{
         for (const key in header) {
             headers.append(key,header[key])
         }
+
         return new Promise((res,rej)=>{
             fetch(url,{
                 method:'POST',
@@ -25,7 +26,7 @@ class request{
                 headers:headers
             }).then(response=>{
                 if(response.ok){
-                    if(header['Content-Type']=='image/jpeg'){
+                    if(header&&header['Content-Type']=='image/jpeg'){
                         return response.blob();
                     }else{
                         return response.json();
