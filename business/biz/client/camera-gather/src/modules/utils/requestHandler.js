@@ -18,7 +18,6 @@ class request{
         for (const key in header) {
             headers.append(key,header[key])
         }
-
         return new Promise((res,rej)=>{
             fetch(url,{
                 method:'POST',
@@ -31,8 +30,6 @@ class request{
                     }else{
                         return response.json();
                     }
-                   
-                   
                 }else{
                     throw new Error(response.statusText)
                 }}).then(json=>res(json)).catch(err=>rej(err))

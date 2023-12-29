@@ -88,9 +88,9 @@ export default {
         let time = SnUtils.getUserPara('interval');
         await this.getPreviewImg();
          //程序启动后直接获取预览图片
-        // this.interval_preview = setInterval(async()=>{
-        //     await this.getPreviewImg();
-        // },time||150)
+        this.interval_preview = setInterval(async()=>{
+            await this.getPreviewImg();
+        },time||150)
     },
     destroyed(){
         this.interval_preview&&clearInterval(this.interval_preview);
