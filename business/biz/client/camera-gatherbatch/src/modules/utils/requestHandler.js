@@ -10,24 +10,30 @@ class request{
                     return response.json();
                 }else{
                     throw new Error(response.statusText)
-                }}).then(json=>res(json)).catch(err=>rej(err))
+                }}).then(json=>res(json)).catch(err=>res(err))
         })
     }
     post(url,params,header){
+        let headers = new Headers();
+        for (const key in header) {
+            headers.append(key,header[key])
+        }
         return new Promise((res,rej)=>{
             fetch(url,{
                 method:'POST',
-                body:JSON.stringify(params)
-            })
-            .then(response=>{
+                body:JSON.stringify(params),
+                headers:headers
+            }).then(response=>{
                 if(response.ok){
-                    return response.json();
+                    if(header&&header['Content-Type']=='image/jpeg'){
+                        return response.blob();
+                    }else{
+                        return response.json();
+                    }
                 }else{
-                    return Promise.reject(response.statusText)
-                 }})
-            .then(json=>res(json))
-            .catch(err=>rej(err))
+                    throw new Error(response.statusText)
+                }}).then(json=>res(json)).catch(err=>res(err))
         })
     }
 }
-export default new request(); 
+export default new request();

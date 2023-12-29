@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <Modal :show.sync="showModal" cancelText="取消" confirmText="确认" @confirm="check" class="modal-detail">
+        <Modal :show.sync="showModal" cancelText="取消" confirmText="确认" @confirm="check" @close="close" class="modal-detail">
             <div class="tips">
                 {{confirmTips[operationState]}}
             </div>
@@ -224,6 +224,12 @@ export default {
                 path:'gather'
             })
         },
+        /**
+         * 关闭弹框
+         */
+        close(){
+           this.showModal = false;
+        }
     }
 }
 </script>

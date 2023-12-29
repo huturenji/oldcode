@@ -49,21 +49,19 @@ export default {
         }
     },
     watch:{
-        show(val){
-        }
     },
     methods:{
         cancel(){
-            this.close();
+            //修改父组件传递过来的show字段
+            this.$emit('update:show',false );
             this.$emit('cancel',false)
         },
         confirm(){
-            this.close();
+            //修改父组件传递过来的show字段
+            this.$emit('update:show',false );
             this.$emit('confirm',false)
         },
-        close(){
-            this.show = this.showCancel||this.showConfirm?true:false;
-            this.$emit('update:show',this.show );//修改父组件传递过来的show方法
+        close(){ 
             this.$emit('close',false)
         }
     }

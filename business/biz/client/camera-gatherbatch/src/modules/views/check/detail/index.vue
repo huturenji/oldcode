@@ -41,7 +41,7 @@
             </div>
         </div>
         <el-image-viewer v-if="showViewer" :on-close="closeViewer" :url-list="[imageUrl]"/>
-        <Modal :show.sync="showModal" cancelText="取消" confirmText="确认" @confirm="check" class="modal-detail">
+        <Modal :show.sync="showModal" cancelText="取消" confirmText="确认" @confirm="check" @close="close"  class="modal-detail">
             <div class="tips">
                 {{confirmTips[operationState]}}
             </div>
@@ -272,6 +272,12 @@ export default {
                 })
             }
         },
+        /**
+         * 关闭弹框
+         */
+         close(){
+           this.showModal = false;
+        }
     }
 }
 </script>

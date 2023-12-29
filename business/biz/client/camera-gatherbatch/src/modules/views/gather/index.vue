@@ -51,8 +51,6 @@ export default {
             labelPageSize:100,//每页数据量
             pageCount:1,//页数计数器 用来判断是否为最后一页 默认为1
             loading:false,//loading
-            interval:null,//采集动画定时器
-            interval_status:null//轮询采集状态
         }
     },
     computed:{
@@ -85,7 +83,6 @@ export default {
         }
     },
     destroyed(){
-        this.interval&&clearInterval(this.interval);
     },
     methods:{
         /**
@@ -106,11 +103,9 @@ export default {
             }else{
                 this.loading = false;
                 this.gatherInfo.titleText = '采集失败'
-                this.gatherInfo.gatherTips = response.ErrMsg
+                this.gatherInfo.gatherTips = response.ErrMsg || response
                 this.gatherInfo.confirmText = null
             }
-            
-           
         },
         /**
          * 查询采集状态
@@ -135,7 +130,7 @@ export default {
                 this.loading = false;
                 this.gatherCount = 0;
                 this.gatherInfo.titleText = '采集失败'
-                this.gatherInfo.gatherTips = response.ErrMsg
+                this.gatherInfo.gatherTips = response.ErrMsg || response
                 this.gatherInfo.confirmText = null
             }
         },
@@ -150,9 +145,6 @@ export default {
                             TotalLabelNum:totalLabelNum
                         });
         },
-        close(){
-            this.interval&&clearInterval(this.interval)
-        },
         /**
          * 提交审核
          */
@@ -160,6 +152,12 @@ export default {
             this.$router.push({
                 path:'check'
             })
+        },
+        /**
+         * 关闭弹框
+         */
+        close(){
+            this.loading == false?this.showModal = false:'';
         }
     }
 }
